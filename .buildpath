@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="vendor/nikic/php-parser/lib"/>
+	<buildpathentry kind="src" path="vendor/symfony/dom-crawler"/>
+	<buildpathentry excluding="deprecated/" kind="src" path="vendor/filp/whoops/src"/>
+	<buildpathentry kind="src" path="vendor/symfony/translation"/>
+	<buildpathentry kind="src" path="vendor/symfony/process"/>
+	<buildpathentry kind="src" path="app/database/migrations"/>
+	<buildpathentry kind="src" path="vendor/composer"/>
+	<buildpathentry excluding="Illuminate/Queue/|Illuminate/Support/" kind="src" path="vendor/laravel/framework/src"/>
+	<buildpathentry kind="src" path="vendor/symfony/routing"/>
+	<buildpathentry kind="src" path="vendor/symfony/browser-kit"/>
+	<buildpathentry kind="src" path="vendor/symfony/css-selector"/>
+	<buildpathentry kind="src" path="vendor/symfony/security-core"/>
+	<buildpathentry kind="src" path="vendor/swiftmailer/swiftmailer/lib"/>
+	<buildpathentry kind="src" path="vendor/predis/predis/lib"/>
+	<buildpathentry kind="src" path="vendor/symfony/finder"/>
+	<buildpathentry kind="src" path="app/database/seeds"/>
+	<buildpathentry excluding="Crypt/" kind="src" path="vendor/phpseclib/phpseclib/phpseclib"/>
+	<buildpathentry kind="src" path="vendor/laravel/framework/src/Illuminate/Support"/>
+	<buildpathentry kind="src" path="vendor/laravel/framework/src/Illuminate/Queue"/>
+	<buildpathentry kind="src" path="vendor/nesbot/carbon/src"/>
+	<buildpathentry kind="src" path="app/commands"/>
+	<buildpathentry excluding="Symfony/Component/HttpFoundation/Resources/stubs/" kind="src" path="vendor/symfony/http-foundation"/>
+	<buildpathentry kind="src" path="vendor/symfony/http-kernel"/>
+	<buildpathentry kind="src" path="vendor/symfony/event-dispatcher"/>
+	<buildpathentry kind="src" path="app/controllers"/>
+	<buildpathentry kind="src" path="vendor/classpreloader/classpreloader/src"/>
+	<buildpathentry kind="src" path="vendor/d11wtq/boris/lib"/>
+	<buildpathentry kind="src" path="vendor/symfony/console"/>
+	<buildpathentry kind="src" path="vendor/filp/whoops/src/deprecated"/>
+	<buildpathentry kind="src" path="vendor/symfony/debug"/>
+	<buildpathentry kind="src" path="app/models"/>
+	<buildpathentry kind="src" path="vendor/symfony/filesystem"/>
+	<buildpathentry kind="src" path="vendor/jeremeamia/SuperClosure/src"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="vendor/monolog/monolog/src/Monolog"/>
+	<buildpathentry kind="src" path="vendor/patchwork/utf8/class"/>
+	<buildpathentry kind="src" path="vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs"/>
+	<buildpathentry kind="src" path="vendor/psr/log"/>
+	<buildpathentry kind="src" path="vendor/phpseclib/phpseclib/phpseclib/Crypt"/>
+	<buildpathentry kind="src" path="app/tests"/>
+	<buildpathentry kind="src" path="vendor/stack/builder/src"/>
+	<buildpathentry kind="src" path="vendor/ircmaxell/password-compat/lib"/>
+</buildpath>

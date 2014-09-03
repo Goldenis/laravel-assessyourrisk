@@ -41,6 +41,7 @@ return array(
 			'prefix'   => '',
 			'schema'   => 'public',
 		),
+
 	),
 
 );

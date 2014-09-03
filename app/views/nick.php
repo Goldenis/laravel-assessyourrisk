@@ -22,7 +22,7 @@
 			margin-left: -150px;
 			margin-top: -100px;
 		}
-
+		
 		a, a:visited {
 			text-decoration:none;
 		}
@@ -36,6 +36,8 @@
 <body>
 	<div class="welcome">
 		<h1>Nicks Route</h1>
+		<h1><?php echo App::environment();?> </h1>
+		<h1><?php echo getenv('TEST')?> </h1>
 	</div>
 </body>
 </html>

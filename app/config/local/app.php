@@ -26,6 +26,6 @@ return array(
 	 |
 	 */
 	
-	'url' => 'http://localhost:8000',
+	'url' => 'http://laravel-heroku-brighten.app:8000',
 		
 );

@@ -38,6 +38,7 @@
 		<h1>Nicks Route</h1>
 		<h1><?php echo App::environment();?> </h1>
 		<h1><?php echo getenv('TEST')?> </h1>
+		<h1><?php echo gethostname()?> </h1>
 	</div>
 </body>
 </html>

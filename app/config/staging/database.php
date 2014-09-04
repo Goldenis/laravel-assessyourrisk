@@ -1,5 +1,7 @@
 <?php
 
+$url = parse_url(getenv("DATABASE_URL"));
+
 return array(
 
 	/*
@@ -17,7 +19,7 @@ return array(
 	| choice installed on your machine before you begin development.
 	|
 	*/
-
+	
 	'connections' => array(
 		/*
 		'mysql' => array(
@@ -32,16 +34,15 @@ return array(
 		),
 		*/
 		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'homestead',
-			'username' => 'homestead',
-			'password' => 'secret',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		),
-
+            'driver'   => 'pgsql',
+            'host'     => $url["host"],
+            'database' => substr($url["path"], 1),
+            'username' => $url["user"],
+            'password' => $url["pass"],
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ),
 	),
 
 );

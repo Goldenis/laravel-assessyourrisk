@@ -23,20 +23,24 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+/*
 $env = $app->detectEnvironment(array(
 
 	'local' => array('homestead'),
 	'staging' => array('http://brighten-staging.herokuapp.com')
 ));
+*/
 
-/*
+
 $env = $app->detectEnvironment(function()
 {
-// 	return $_SERVER['ENV_ID'];
-	return getenv('ENV_ID');
+	if ( getenv('ENV_ID') ) {
+		return getenv('ENV_ID');
+	} else {
+		return 'local';
+	}
 });
-*/
+
 
 
 /*

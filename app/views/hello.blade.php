@@ -1,4 +1,4 @@
-<?php include_once 'header.php' ?>	
+@include('partials.header')	 	
 
 			
 			<section id="Intro" class="flex-container vertical-container">
@@ -256,7 +256,7 @@
 					
 		
 		
-<?php include_once 'footer.php' ?>	
+@include('partials.footer')	
 			
 			<!-- <section class="risk scrollpane">
 

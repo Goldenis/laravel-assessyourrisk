@@ -1,0 +1,3 @@
+//PNG Sequence Fire
+/* Author: Nick Jones
+*/$(document).ready(function(){var e=$(window),t=$(document),n=!1;Modernizr.cssfilters&&(blurEnabled=!0);var r,i,s=0,o=0,u=0,a=0,f={init:function(){function o(t){r=e.height();i=e.width();n=!0}function u(){s=Math.floor(t.scrollTop()/20);a=s;$(".sequence").css({left:-s*i})}e.bind("resize",o);e.mouseup(function(){e.unbind("mousemove")});e.bind("mousewheel",function(e,t){u()});o()}};f.init()});

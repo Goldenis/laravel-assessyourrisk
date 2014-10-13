@@ -484,6 +484,24 @@ article {
     max-width: 50em;
     margin: 0 auto; }
 
+#smoking-sequence-container {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 400px;
+  right: 0; }
+
+#running-sequence-container {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 400px;
+  right: 0; }
+
+#birth-control-wrap {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white; }
+
 .sequence-container {
   position: relative;
   width: 100%;
@@ -523,7 +541,7 @@ article {
   right: 0;
   z-index: 2;
   color: white;
-  background-color: rgba(215, 0, 109, 0.5); }
+  background-color: rgba(204, 204, 204, 0.5); }
   .sequence-overlay-content .action {
     margin: 26em auto 0; }
     .sequence-overlay-content .action:hover {
@@ -532,12 +550,12 @@ article {
 .video-text-overlay {
   position: absolute;
   z-index: 500;
-  padding: 0 5em;
+  padding: 0 60px;
   opacity: 0;
-  max-width: 50em;
+  max-width: 25em;
   color: white;
-  text-align: center;
-  font-size: 2.5em;
+  text-align: left;
+  font-size: 2em;
   font-family: 'itc_avant_garde_pro_mdbold', helvetica-neue, helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-transition-duration: .5s;
@@ -545,6 +563,8 @@ article {
   -ms-transition-duration: .5s;
   -o-transition-duration: .5s;
   transition-duration: .5s; }
+  .video-text-overlay h1, .video-text-overlay h2, .video-text-overlay h3 {
+    text-align: left !important; }
   .video-text-overlay.visible {
     opacity: 1; }
 

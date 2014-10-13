@@ -19,7 +19,8 @@
 		<style>
 		#birth-control-wrap{position:fixed;top:15%;left:400px;right:0;}
 		#birth-control{position:relative;
-			margin: 0 auto;
+			float:right;
+			margin:60px;
 			width: 260px;
 }
 		#birth-control-disc{
@@ -71,19 +72,22 @@
 			
 		}
 		.text-blocks{
-			margin:0 60px;
+			margin:60px 60px;
+			max-width:50%;
+			float:left;
 		}
 		h1,h2,h3{
 			text-align:left!important;
 		}
 		#birth-control-intro{
-			margin:10em auto;
+			margin:10em 180px;
 			z-index:900;
 		}
 		
 		small{
 			font-size:50%;
 		}
+	
 				
 		</style>
 		
@@ -158,7 +162,7 @@
 						data-300="opacity:1;margin-bottom:0;transform:scale(1,1);"
 						data-700="opacity:1;"
 						data-900="opacity:0;"
-						> taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h2>
+						> Taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h2>
 					
 					
 					
@@ -220,6 +224,97 @@
 				
 				</section>
 			</section>
+			
+			
+			
+			<section id="smoking-sequence-container" 
+			data-3500="opacity:0;"
+			data-3550="opacity:1;"
+			data-5000="opacity:1;"
+			data-5050="opacity:0;"
+			>
+				<section class="sequence-container">
+				
+					<div 
+					data-3500="opacity:0;"
+					data-3550="opacity:1;"
+					data-3900="opacity:1;"
+					data-3950="opacity:0;"
+					id="video-overlay-1" class="video-text-overlay">
+					Smoking may increase the risk of breast cancer.
+					</div>
+				
+					<div 
+					data-4100="opacity:0;"
+					data-4150="opacity:1;"
+					data-5000="opacity:1;"
+					data-5050="opacity:0;"
+					id="video-overlay-2" class="video-text-overlay">
+						We know how hard it can be to quit, but if you smoke, we ask that you commit to quit today and take advantage of Bright Pink’s smoke cessation resources online.
+					</div>
+			
+					<div class="sequence-overlay-content">
+						<button class="action">Pledge to Quit</button>
+					</div>
+				
+					<div class="sequence-wrap">
+					
+						<div id="smoking-sequence" class="sequence clearfix">
+							<img src="img/modules/sequence-1.jpg" alt="Sequence 1">
+							<img src="img/modules/sequence-2.jpg" alt="Sequence 2">
+							<img src="img/modules/sequence-3.jpg" alt="Sequence 3">
+							<img src="img/modules/sequence-4.jpg" alt="Sequence 4">
+						</div>
+						<!-- <img class="sequence" src="img/modules/scrollsequence.gif" alt="Scrollsequence"> -->
+					</div>
+				</section>
+			</section>
+
+			<section id="running-sequence-container" 
+			data-5100="opacity:0;"
+			data-5150="opacity:1;"
+			data-5750="opacity:1;"
+			data-5800="opacity:0;"
+			>
+				<section class="sequence-container">
+	
+					<div 
+					data-5100="opacity:0;"
+					data-5150="opacity:1;"
+					data-5300="opacity:1;"
+					data-5350="opacity:0;"
+					id="video-overlay-1" class="video-text-overlay">
+						Women who get regular exercise may have a lower risk of breast cancer
+					</div>
+				
+					<div 
+					data-5400="opacity:0;"
+					data-5450="opacity:1;"
+					data-5750="opacity:1;"
+					data-5800="opacity:0;"
+					id="video-overlay-2" class="video-text-overlay">
+						Although not all studies show this benefit, when the evidence is looked at as a whole, regular exercise appears to lower breast cancer risk by about 10 to 20 percent
+					</div>
+				
+					<div class="sequence-overlay-content">
+						<button class="action">Pledge to Exercise</button>
+					</div>
+				
+				
+					<div class="sequence-wrap">
+					
+						<div id="running-sequence" class="sequence clearfix">
+							<img src="img/modules/girl1.jpg" alt="Girl1">
+							<img src="img/modules/girl2.jpg" alt="Girl2">
+							<img src="img/modules/girl3.jpg" alt="Girl3">
+							<img src="img/modules/girl4.jpg" alt="Girl4">
+						
+						</div>
+						<!-- <img class="sequence" src="img/modules/scrollsequence.gif" alt="Scrollsequence"> -->
+					</div>
+				</section>
+				
+			</section>
 		
 		</section>
 
@@ -229,6 +324,7 @@
 		<script src="js/skrollr.min.js"></script>
 
         <script src="js/plugins.js"></script>
+		<script src="js/sequence.js"></script>
         <script src="js/main.js"></script>
 		
 		

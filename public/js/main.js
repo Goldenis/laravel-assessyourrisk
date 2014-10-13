@@ -147,35 +147,35 @@ $(document).ready(function () {
 	 // Show & Hide Video Overlay Scrolls
 	 
      //$("#video-overlay-1").addClass('closed');
-     $(window).scroll(function() {
-         var y_scroll_pos = window.pageYOffset;
-         var scroll_pos_test = 200;             
-     	// set to whatever you want it to be
-         if(y_scroll_pos > scroll_pos_test) {
-     	   $("#video-overlay-1").addClass('visible');
-         }
-     	else
-     	{
-  		$("#video-overlay-1").removeClass('visible');
-     	}
-		
-		if(y_scroll_pos > 400){
-			$("#video-overlay-1").removeClass('visible');
-		}
-		
-        if(y_scroll_pos > scroll_pos_test+300) {
-    	   $("#video-overlay-2").addClass('visible');
-        }
-     	else
-     	{
-  		$("#video-overlay-2").removeClass('visible');
-     	}
-		
-		if(y_scroll_pos > 600){
-			$("#video-overlay-2").removeClass('visible');
-		}
-		
-     });
+    // $(window).scroll(function() {
+    //     var y_scroll_pos = window.pageYOffset;
+    //     var scroll_pos_test = 2800;             
+    // 	// set to whatever you want it to be
+    //     if(y_scroll_pos > scroll_pos_test) {
+    // 	   $("#video-overlay-1").addClass('visible');
+    //     }
+    // 	else
+    // 	{
+  	//	$("#video-overlay-1").removeClass('visible');
+    // 	}
+	//	
+	//	if(y_scroll_pos > 3000){
+	//		$("#video-overlay-1").removeClass('visible');
+	//	}
+	//	
+    //    if(y_scroll_pos > scroll_pos_test+300) {
+    //	   $("#video-overlay-2").addClass('visible');
+    //    }
+    // 	else
+    // 	{
+  	//	$("#video-overlay-2").removeClass('visible');
+    // 	}
+	//	
+	//	if(y_scroll_pos > 3200){
+	//		$("#video-overlay-2").removeClass('visible');
+	//	}
+	//	
+    // });
 
 
 

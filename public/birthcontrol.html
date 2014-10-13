@@ -17,7 +17,7 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 		
 		<style>
-		#birth-control-wrap{position:fixed;top:10%;left:0;right:0;}
+		#birth-control-wrap{position:fixed;top:15%;left:400px;right:0;}
 		#birth-control{position:relative;
 			margin: 0 auto;
 			width: 260px;
@@ -66,90 +66,162 @@
 		
 		.education-frame{
 			border:none!important;
+			text-align:left!important;
+			padding:0 60px;
+			
+		}
+		.text-blocks{
+			margin:0 60px;
+		}
+		h1,h2,h3{
+			text-align:left!important;
+		}
+		#birth-control-intro{
+			margin:10em auto;
+			z-index:900;
+		}
+		
+		small{
+			font-size:50%;
 		}
 				
 		</style>
 		
     </head>
     <body>
-
-		<section id="zero" class="education-frame">
-			
-			<section class="vertically-centered">
-				
-				
-				
-			</section>
-		</section>
 		
-		<section id="one" class="education-frame">
+		<nav id="education-nav">
+			<ul class="clearfix">
+				<li> <a href="#Lifestyle" class="active">Lifestyle</a> </li>
+				<li> <a href="#FamilyHistory">Family History</a> </li>
+				<li> <a href="#KnowYourNormal">Know Your Normal</a> </li>
+			</ul>
+		</nav>
+
+		<section id="back-to-assess">
 			
-			<section class="vertically-centered">
+			<h2>
+			Assess<br> 
+			Your Risk<br>
+			&larr;
+			</h2>
 			
-				
-				<div 
-				data-2100="top:10%; opacity:1;"
-				data-2400=" opacity:0;"
-				
-				 id="birth-control-wrap">
-					<h1 data-smooth-scrolling="off"
-					data-anchor-target="#two"
-					data-100="opacity:0;margin-bottom:-2em;transform:scale(.9,.9)"
-					data-300="opacity:1;margin-bottom:0;transform:scale(1,1)"
-					data-700="opacity:1;"
-					data-900="opacity:0;"
-					>Test Fade In.</h1>
+			<div id="back-overlay">			
+				<div id="back">
+					B<br>
+					A<br>
+					C<br>
+					K<br>
+				</div>
+				<div id="question">
 					
-					<div id="birth-control">
-						<img src="img/modules/birthcontrolcase.png" width="260" height="400" alt="Birthcontrolcase">
-						<div id="birth-control-disc" data-0="transform:rotate(0deg);transform-origin:center;" data-2000="transform:rotate(360deg);">
-							
-						</div>
-					</div>
-					
-					<h2 data-smooth-scrolling="off"
-					data-anchor-target="#two"
-					data-1000="opacity:0;padding-top:.25em;transform:scale(.9,.9);"
-					data-1150="opacity:1;padding-top:.75em;transform:scale(1,1);"
-					data-1800="opacity:1;"
-					data-2000="opacity:0;"
-					>A lot more content about birth control.</h2>
+					<p class="count">2/15</p>
+					<p class="question">How many drinks do you have each day?</p>
 					
 				</div>
-				
-			</section>
+			</div>
 			
 		</section>
-		
-		<section id="two" class="education-frame">
+
+		<section id="education-wrap">
 			
-			<section class="vertically-centered">
-				
-				
-				
+			<section id="zero" class="education-frame">
+			
+				<section class="vertically-centered">
+					 <div id="birth-control-intro">
+						<h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk.<br>
+						</h3>
+						<h1>
+							However<br>
+							&darr;
+						</h1>
+					 </div>
+				</section>
 				
 			</section>
-		</section>
 		
-		<section id="three" class="education-frame">
+			<section id="one" class="education-frame">
 			
-			<section class="vertically-centered">
-				
-				
-				
-			</section>
-		</section>
-		
-		<section id="four" class="education-frame">
+				<section class="vertically-centered">
 			
-			<section class="vertically-centered">
 				
+					<div 
+					data-200="top:10%; opacity:0;"
+					data-300="opacity:1;"
+					data-2200="opacity:1;"
+					data-2400=" opacity:0;"
 				
+					 id="birth-control-wrap">
+						<h2 class="text-blocks" data-smooth-scrolling="off"
+						data-anchor-target="#two"
+						data-200="opacity:0;margin-bottom:-2em;transform:scale(.9,.9);"
+						data-300="opacity:1;margin-bottom:0;transform:scale(1,1);"
+						data-700="opacity:1;"
+						data-900="opacity:0;"
+						> taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h2>
+					
+					
+					
+
+					
+					
+						<div id="birth-control">
+							<img src="img/modules/birthcontrolcase.png" width="260" height="400" alt="Birthcontrolcase">
+							<div id="birth-control-disc" data-0="transform:rotate(0deg);transform-origin:center;" data-2000="transform:rotate(360deg);">
+							
+							</div>
+						</div>
+					
+						<div class="text-blocks" data-smooth-scrolling="off"
+						data-anchor-target="#two"
+						data-1000="opacity:0;padding-top:.25em;transform:scale(.9,.9);"
+						data-1150="opacity:1;padding-top:.75em;transform:scale(1,1);"
+						data-1800="opacity:1;"
+						data-2000="opacity:0;"
+						>
+						<h2> 5 years do not have to be consecutive-<br>just any time in your 20s and 30s</h2>
+							
+						<p>Risk can be reduced by up to 50%<br>
+						(reduction by half is not guaranteed and depends on multiple other factors)
+						</p>
+						</div>
+					
+					
+					</div>
 				
+				</section>
+			
 			</section>
+		
+			<section id="two" class="education-frame">
+			
+				<section class="vertically-centered">
+				
+				
+				
+				
+				</section>
+			</section>
+		
+			<section id="three" class="education-frame">
+			
+				<section class="vertically-centered">
+				
+				
+				
+				</section>
+			</section>
+		
+			<section id="four" class="education-frame">
+			
+				<section class="vertically-centered">
+				
+				
+				
+				</section>
+			</section>
+		
 		</section>
-		
-		
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

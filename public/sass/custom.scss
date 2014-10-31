@@ -627,6 +627,90 @@ nav {
 
 /*======================================================  WITHIN EDUCATION MODULES SECTION */
 
+
+#back-to-assess{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	width:280px;
+	background-color:$pink;
+	color:$white;
+	padding:60px;
+	h1,h2{
+		text-align:left;
+		font-family: 'itc_avant_garde_pro_mdbold', helvetica-neue, helvetica, sans-serif;
+		-webkit-font-smoothing:antialiased;
+		font-size:2em;
+	}
+	#back-overlay{
+		
+		font-family:'itc_avant_garde_gothic_proMd', helvetica-neue, helvetica, sans-serif;
+		-webkit-font-smoothing:antialiased;
+		background-color:rgba(0,0,0,.15);
+		//-webkit-background-blend-mode:multiply;
+		//-webkit-blend-mode:multiply;
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:-2em;
+		top:40%;
+		padding:2em 3em;
+		#back{font-family: 'itc_avant_garde_pro_mdbold', helvetica-neue, helvetica, sans-serif; position:absolute; top:2em; right:.5em;}
+		.count{margin-top:0; font-size:2em;margin-bottom:0;}
+		.question{ margin-top:.5em;font-size:1.5em;}
+	}
+}
+#education-wrap{
+	position:relative;
+	margin-left:400px;
+	float:left;
+}
+#education-nav{
+	position:fixed;
+	top:0;
+	left:400px;
+	right:0;
+	z-index:1000;
+	font-family: 'itc_avant_garde_pro_mdbold', 'itc_avant_garde_gothic_proMd', helvetica-neue, helvetica, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	font-weight:normal;
+	ul{
+		list-style-type:none;
+		width:100%;
+		display:flex;
+		display:-webkit-flex;
+		li{
+			float:left;
+			flex:1;
+			border-left:1px solid $white;
+		}
+		a{	
+			
+			font-size:.9em;
+			display:block;
+			letter-spacing:.04em;
+			padding:1em 1.5em;
+			color:$white;
+			background-color:$light-grey;
+			box-sizing:border-box;
+		    -moz-box-sizing:border-box;
+		    -webkit-box-sizing:border-box;
+			
+			&.active{
+				font-family:'itc_avant_garde_pro_mdbold';
+				color:$pink;
+				background-color:$white;
+				padding-bottom:.75em;
+				border-bottom:.25em solid $pink;
+				box-sizing:border-box;
+			    -moz-box-sizing:border-box;
+			    -webkit-box-sizing:border-box;
+			}
+		}
+	}
+}
+
 #Education-Intro{
 	background-color:$light-grey;
 	color:$grey;

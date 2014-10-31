@@ -50,9 +50,14 @@ $(document).ready(function() {
 			}
 			function scrollHandler(){
 				frame = Math.floor(doc.scrollTop()/20);
-						sequenceScroll = frame;
-						$('.sequence').css({
-							left:-frame*WIN_W
+				//console.log(frame);
+						sequenceScrollSmoking = frame-190;
+						$('#smoking-sequence').css({
+							left:-sequenceScrollSmoking*(WIN_W-400)
+						})
+						sequenceScrollRunning = frame-240;
+						$('#running-sequence').css({
+							left:-sequenceScrollRunning*(WIN_W-400)
 						})
 					}
 			}

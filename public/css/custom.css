@@ -10,21 +10,18 @@
   src: url("../fonts/itcavantgardepro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/itcavantgardepro-bold-webfont.woff2") format("woff2"), url("../fonts/itcavantgardepro-bold-webfont.woff") format("woff"), url("../fonts/itcavantgardepro-bold-webfont.ttf") format("truetype"), url("../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'itc_avant_garde_gothic_proMd';
   src: url("../fonts/itcavantgardepro-md-webfont.eot");
   src: url("../fonts/itcavantgardepro-md-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/itcavantgardepro-md-webfont.woff2") format("woff2"), url("../fonts/itcavantgardepro-md-webfont.woff") format("woff"), url("../fonts/itcavantgardepro-md-webfont.ttf") format("truetype"), url("../fonts/itcavantgardepro-md-webfont.svg#itc_avant_garde_gothic_proMd") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'AlexBloom';
   src: url("../fonts/AlexBloom.eot?-it6lup");
   src: url("../fonts/AlexBloom.eot?#iefix-it6lup") format("embedded-opentype"), url("../fonts/AlexBloom.woff?-it6lup") format("woff"), url("../fonts/AlexBloom.ttf?-it6lup") format("truetype"), url("../fonts/AlexBloom.svg?-it6lup#AlexBloom") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 [class^="icon-"], [class*="icon-"] {
   font-family: 'AlexBloom';
   speak: none;
@@ -1730,7 +1727,6 @@ nav a {
 
   @page {
     margin: 0.5cm; }
-
   p,
   h2,
   h3 {

@@ -417,31 +417,7 @@ nav {
 		}
 	}			
 }
-.risk-warnings{
-	list-style:none;
-	text-align:center;
-	margin:1em 0;
-	padding:0;
-	width:100%;
-	li{
-		display:inline-block;
-		float:left;
-		//background-color:$white;
-		width:6.6667%;
-	}
-	.dot{
-		display:block;
-		width:.75em;
-		height:.75em;
-		margin:0 auto;
-		background-color:$light-grey;
-		border-radius:1em;
-		opacity:.25;
-		border:1px solid $grey;
-		&.green{background-color:$green;opacity:1;border:1px solid $black}
-		&.red{background-color:$red;opacity:1;border:1px solid $black}
-	}
-}
+
 #Assessment-Counter{
 	font-family: 'itc_avant_garde_pro_mdbold', /*'itc_avant_garde_gothic_proMd',*/ helvetica-neue, helvetica, sans-serif;
 	-webkit-font-smoothing:antialiased;

@@ -10,28 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/style.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-
-        
-		<header id="site-header" class="flex-container">
-				<a id="logo" class="flex-none circle" href="index.php">
-					<img src="img/brightpink_logo.png" alt="Brightpink Logo">
-				</a>			
-		</header>
-		
-		<nav id="site-nav" class="flex-container">
-			<div class="bar-module" class="flex1"> 
-				<p class="bar-title"><a id="Risk-Toggle" class="toggle-link" href="#Risk-Assessment">Assess Your Risk</a></p>
-			</div>
-			<div class="bar-module" class="flex1"> 
-				<p class="bar-title"><a id="Education-Toggle" class="toggle-link" href="#Education-Modules">Educate Yourself</a></p>
-			</div>
-		</nav>
-		
-			<section id="main" class="flex-container full-screen-container">
+		<p class="bar-title">Assess Your Risk</p>

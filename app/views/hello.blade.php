@@ -1,417 +1,390 @@
-@include('partials.header')	 	
+<!-- 
+@include('partials.header')
+@include('partials.intro')
+@include('partials.assessment')
+@include('partials.understand')
+@include('partials.facts')
+@include('partials.education')
+@include('partials.footer')  -->
 
-			
-			<section id="Intro" class="flex-container vertical-container">
-				<section class="full-screen-content">
-					<h1>1 in 8 women get cancer. Pretend you are the 1.</h1>
-					
-					<a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Begin </button> </a>
-				</section>
-			</section>
-			
-			<!-- LEFT -->
-			<section id="Risk-Assessment" class="scrollpane">
-				
-				<section id="Assessment-Intro" class="vertical-container">
-					<div class="vertically-centered">
-						<a id="Launch-Assessment" href="#assess-step-1">
-						<h3 class="mobile-hide"> Bright Pink created an assessment to help you understand your personal level of cancer risk.</p> <p>This information can be life saving.</h3>
-						<!-- <p class=""><strong>Let's assume you have cancer until you...</strong></p> -->
-						<!-- <h1>Assess Your Risk</h1> -->
-							<button class="action"> Assess Your Risk  </button>
-						</a>
-					</div>		
-				</section>
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
 
-				<div id="Risk-Meter">
-					<!-- <p>Your overall risk:</p> -->
-					<!-- <div class="bargraph clearfix">
-						<div class="bar-one"></div>
-						<div class="bar-two"></div>
-						<div class="bar-three"></div>
-					</div> -->
-					
-					
-					<ul class="risk-warnings clearfix">
-						<li> <span class="tooltip-bottom dot green" data-tooltip="You made a good choice. Keep it up."> </span> </li>
-						<li> <span class="tooltip-bottom dot red" data-tooltip="You don't know this portion. This poses significant risk."> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						<li> <span class="tooltip dot"> </span> </li>
-						
-						<li> <span class="dot"> </span> </li>
-					</ul>	
-						
-					<div id="Assessment-Counter">
-						<sup id="Assess-Count">1</sup><span class="slash">&frasl;</span><sub>15</sub>
-					</div>
-				</div>
-				
-				<div class="assessment-wrap">
-					
-					<section id="assess-step-1" class="vertical-container assess anchor">
-						<div class="vertically-centered">
-							<span class="number-icon">1</span>
+    <!-- INTRO -->
 
-							<p class="prompt">Do you have breasts and/or ovaries?</p>
-							<a href="#assess-step-2"><button class="action"> Yes </button></a>
-						</div>
-					</section>
+    <section id="intro" class="flex-container vertical-container">
+      <h1>1 in 8 women get cancer. Pretend you are the 1.</h1>
+      
+      <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Begin </button> </a>
+    </section>
 
-					<section id="assess-step-2" class="vertical-container assess anchor">
-						<div class="vertically-centered">
-							<span class="number-icon">2</span>
-							<p class="prompt"> How many drinks do you have per day? </p>
-							<div id="drink-slider">
-								<input class="slidebar" type="range"  min="0" max="10" step="1"/>
-								<!-- <img class="drinkicon" src="img/assessment/drinkicon.png" alt="Drinkicon"> -->
-								<ul class="numbers clearfix">
-									<li>0 </li>
-									<li>1 </li>
-									<li>2 </li>
-									<li>3 </li>
-									<li>4 </li>
-									<li>5 </li>
-									<li>6 </li>
-									<li>7 </li>
-									<li>8 </li>
-									<li>9 </li>
-									<li>10</li>
-								</ul>
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      <!-- UNDERSTAND -->
+      
+      <div class="understand-box">
+        Understand Your Risk
+        <div class="arrow"></div>
+      </div>
 
-							</div>
-							<a href="#assess-step-3"><button class="action"> Submit </button> </a>
-						</div>
-					</section>
+      <!-- FACTS -->
 
-					<section id="assess-step-3" class="vertical-container assess anchor">
-						<div class="vertically-centered padded">
-							<span class="number-icon">3</span>
-							<p class="prompt">Have you or any of your immediate family members (parent; sibling; grandparent; aunt) had any of the following... </p>
+      <div class="fact-group">
+        <div class="fact">
+          <p> <span class="data-number">12%</span> - or - <span class="data-number">1 in 8 Women</span> <br>
+            will develop breast cancer at some point in their lifetime.
+          </p>
+        </div>
+        <span class="icon-right"></span>
+      </div>
+    </div>
 
-							<form>
-								<input type="checkbox"> Breast cancer diagnosed at age 50 or under </input><br>
-								<input type="checkbox"> Triple negative (ER/PR/her2-) breast cancer</input><br>
-								<input type="checkbox"> More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</input><br>
-								<input type="checkbox"> Male breast cancer </input><br>
-								<input type="checkbox"> A genetic mutation that increases breast cancer risk (Ex. BRCA1/2, PTEN, p53)? </input>
-							</form>
+    <!-- ASSESSMENT-->
+    <section id="assessment" class="scrollpane">    
+      <section class="intro" class="vertical-container">
+        <div class="vertically-centered">
+          <h3 class="mobile-hide"> Bright Pink created an assessment to help you understand your personal level of cancer risk.</p> <p>This information can be life saving.</h3>
+          <!-- <p class=""><strong>Let's assume you have cancer until you...</strong></p> -->
+          <!-- <h1>Assess Your Risk</h1> -->
+            <button class="action"> Assess Your Risk  </button>
+        </div>
+      </section>
+      <div class="assessment-wrap">
+        <div class="dots">
+          <div class="dot"><span class="tooltip-bottom dot" data-tooltip="You made a good choice. Keep it up."></span></div>
+          <div class="dot"><span class="tooltip-bottom dot" data-tooltip="You don't know this portion. This poses significant risk."></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+          <div class="dot"><span class="tooltip"></span></div>
+        </div>
+        <div class="question">
+          <div class="prompt">Do you have breasts and/or ovaries?</div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+          </div>
+        </div>
 
 
-							<a href="#assess-step-4"><input type="submit" class="action" value="Submit"></a>
-							<input type="submit" class="action" value="Help Me Ask Them">
-							<input type="submit" class="action" value="Remind Me">
-						</div>
-					</section>
+        <div class="question">
+          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9?</div>
+          <div class="visual">
+            <div class="prompt">What is your weight?</div>
 
-					<section id="assess-step-4" class="vertical-container assess anchor">
-						<div class="vertically-centered">
-							<span class="number-icon">4</span>
-							<p class="prompt">Do you have one or more immediate family members (parent; sibling; grandparent; aunt) that have had breast cancer at age 50 or older?</p>
-							<input type="submit" class="action" value="Submit">
-							<input type="submit" class="action" value="Help Me Ask Them">
-							<input type="submit" class="action" value="Remind Me">
-						</div>
-					</section>
+            <slider>10-400+lbs</slider>
+            <div class="prompt">What is your height?</div>
 
-					<section id="assess-step-5"> </section>
-				</div>
-				<div id="Facts-Container" class="flex-container">
-					<div id="fact-logo" class="flex-none ">
-						<div class="flex-container">
-							<p class="vertically-centered">
-								FACT
-							</p>
-						</div>
-					</div>
-					<div id="fact-info" class="flex1">
-						<p> <span class="data-number">12%</span> - or - <span class="data-number">1 in 8 Women</span> <br>
-							will develop breast cancer at some point in their lifetime.
-						</p>
-					</div>
-					<div id="fact-action" class="flex-none">
-						<div  id="open-education" class="flex-container"> 
-							 <span class="icon-right"></span>  
-						</div>
-					</div>
-				</div>
-				
-			</section>
-			
-			<!-- RIGHT -->
-			<section id="Education-Modules" class="scrollpane flex-column">
-				
-				<section id="Education-Intro" class="vertical-container">
-					<div class="vertically-centered">
-						<a id="Launch-Education" href="#Lifestyle">
-						<h3 class="mobile-hide"> Learn about the ways in which you can help understand your risk.</h3>
-
-							<button class="action"> Educate Yourself </button>
-						</a>
-					</div>		
-				</section>
-	
-				<section id="Lifestyle" class="flex1">					
-					<header class="photo-bg">
-						<a href="#l-color" id="l-color" class="education-header-link vertical-container">
-							<div class="vertically-centered box">
-								<h1>Lifestyle</h1>
-							</div>
-						</a>
-					</header>
-					<section id="" class="content-wrapper">
-						<p>Content</p>
-					</section>
-				</section>
-				<section id="FamilyHistory" class="flex1">
-					<header class="photo-bg">
-						<div id="fh-color" class="education-header-link vertical-container">
-								<div class="vertically-centered box">
-									<h1>Family History</h1>
-										<div class="education-prompt">
-											<p class="intro">Your family history is the biggest factor in understanding your risk.</p>
-											 <a href="#fh-frame-1" id="fh-module-link">
-											<button class="action" href="#Content-FamilyHistory">
-												Begin Module
-											</button>
-											</a> 		
-										</div>							
-								</div>
-						</div>
-						
-						
-						
-					</header>
-<!--Family History Content -->
-					<section id="Content-FamilyHistory" class="content-wrapper clearfix">
-						
-						<section id="fh-frame-1" class="education-frame fh-frame vertical-container">
-							<div class="vertically-centered">
-								<p>If a woman has a family history or carries a genetic pre-disposition, her breast cancer risk could be as high as 87% and her risk for ovarian cancer could be as as high as 54%.</p> 
-
-								<button class="action">HOW TO ASK RELATIVES</button>
-							</div>
-						</section>
-						<section id="fh-frame-2" class="education-frame fh-frame vertical-container">
-							<div class="vertically-centered">
-								<p>Family history and genetic pre-disposition do not always go hand in hand. If a first degree relative had breast cancer, your risk is elevated even if testing does not reveal a genetic pre-disposition.</p>
-
-								<button id="ask-relatives-genetic" class="action">
-									<a href="mailto:?subject=Cancer%20History%20&body=message%20goes%20here"target=_blank>HOW TO ASK RELATIVES</a>
-								</button>
-							</div>
-							
-						</section>
-						<section id="fh-frame-3" class="education-frame fh-frame vertical-container">
-							<div class="vertically-centered">
-								<p>Remember to collect health history on both your mother and father’s sides. Make sure to note who had cancer, how old the person was at the time of diagnosis and what type of cancer was detected. While breast and ovarian cancer history is important, other types of cancer can also be indicators—so capture everything you can. </p>
-
-								<h4>HERE ARE SOME TOOLS TO HELP YOU</h4>
-								<ul>
-									<li> <a href="#"target=_blank> LINK 1 </a> </li>
-									<li> <a href="#"target=_blank> LINK 2 </a> </li>
-									<li> <a href="#"target=_blank> LINK 3 </a> </li>
-								</ul>
-							</div>
-						</section>
-						<section id="fh-frame-4" class="education-frame fh-frame vertical-container">
-							<div class="vertically-centered">
-								<img src="img/modules/family-history-module.gif" alt="Family History Module">
-							</div>
-						</section>
-						<section id="fh-frame-5" class="education-frame fh-frame vertical-container">
-						
-						</section>
-						<section id="fh-frame-6" class="education-frame fh-frame vertical-container">
-						
-						</section>
-						<section id="fh-frame-7" class="education-frame fh-frame vertical-container">
-						
-						</section>
-					</section>
-				</section>
-				<section id="KnowYourNormal" class="flex1">
-					<header class="photo-bg">
-						<a href="#kyn-color" id="kyn-color" class="education-header-link vertical-container">
-							<div class="vertically-centered box">
-								<h1>Know Your Normal</h1>
-							</div>
-						</a>
-					</header>
-					<section id="" class="content-wrapper">
-						<p>Content</p>
-					</section>
-				</section>
-			</section>
-					
-		
-		
-@include('partials.footer')	
-			
-			<!-- <section class="risk scrollpane">
-
-				<section id="assess-intro" class="vertical-container assess anchor">
-					<div class="vertically-centered">
-						<h1>Assess Your Risk</h1>
-						<p> Bright Pink created the ‘Assess Your Risk’ tool to help you understand your personal level of cancer risk.</p>
-						<p>This information can be life saving</p>
-						<p class="intro">
-							Let's assume you have cancer until you...
-						</p>
-						<a id="launch-assess" href="#assess-step-1" >
-							<button class="action"> Understand Your Risk  </button>
-						</a>
-					</div>
-				</section>
-
-				<section id="assess-step-1" class="vertical-container assess anchor">
-					<div class="vertically-centered">
-						<span class="number-icon">1</span>
-
-						<p class="prompt">Do you have breasts and/or ovaries?</p>
-						<a href="#assess-step-2"><button class="action"> Yes </button></a>
-					</div>
-				</section>
-
-				<section id="assess-step-2" class="vertical-container assess anchor">
-					<div class="vertically-centered">
-						<span class="number-icon">2</span>
-						<p class="prompt"> Drag drink icon to the number of drinks per day you have. </p>
-						<div id="drink-slider">
-							<input class="slidebar" type="range"  min="0" max="10" step="1"/>
-							<img class="drinkicon" src="img/assessment/drinkicon.png" alt="Drinkicon">
-							<ul class="numbers clearfix">
-								<li>0 </li>
-								<li>1 </li>
-								<li>2 </li>
-								<li>3 </li>
-								<li>4 </li>
-								<li>5 </li>
-								<li>6 </li>
-								<li>7 </li>
-								<li>8 </li>
-								<li>9 </li>
-								<li>10</li>
-							</ul>
-
-						</div>
-						<a href="#assess-step-3"><button class="action"> Submit </button> </a>
-					</div>
-				</section>
-
-				<section id="assess-step-3" class="vertical-container assess anchor">
-					<div class="vertically-centered padded">
-						<span class="number-icon">3</span>
-						<p class="prompt">Have you or any of your immediate family members (parent; sibling; grandparent; aunt) had any of the following... </p>
-
-						<form>
-							<input type="checkbox"> Breast cancer diagnosed at age 50 or under </input><br>
-							<input type="checkbox"> Triple negative (ER/PR/her2-) breast cancer</input><br>
-							<input type="checkbox"> More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</input><br>
-							<input type="checkbox"> Male breast cancer </input><br>
-							<input type="checkbox"> A genetic mutation that increases breast cancer risk (Ex. BRCA1/2, PTEN, p53)? </input>
-						</form>
+            <slider>12-96"</slider>
+          </div>
+        
+          <div class="answers">
+            <div class="answer"># lbs</div>
+            <div class="answer"># "</div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Lifestyle Fact</div>
+        </div>
 
 
-						<a href="#assess-step-4"><input type="submit" class="action" value="Submit"></a>
-						<input type="submit" class="action" value="Help Me Ask Them">
-						<input type="submit" class="action" value="Remind Me">
-					</div>
-				</section>
+        <div class="question">
+          <div class="prompt">Drag drink icon to the number of drinks per day you have. </div>
+          <div class="visual">Slider</div>
+        
+          <div class="answers">
+            <div class="answer">0</div>
+            <div class="answer">1</div>
+            <div class="answer">2</div>
+            <div class="answer">3</div>
+            <div class="answer">4</div>
+            <div class="answer">5</div>
+            <div class="answer">6</div>
+            <div class="answer">7</div>
+            <div class="answer">8</div>
+            <div class="answer">9</div>
+            <div class="answer">10</div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Lifestyle Fact</div>
+        </div>
 
-				<section id="assess-step-4" class="vertical-container assess anchor">
-					<div class="vertically-centered">
-						<span class="number-icon">4</span>
-						<p class="prompt">Do you have one or more immediate family members (parent; sibling; grandparent; aunt) that have had breast cancer at age 50 or older?</p>
-						<input type="submit" class="action" value="Submit">
-						<input type="submit" class="action" value="Help Me Ask Them">
-						<input type="submit" class="action" value="Remind Me">
-					</div>
-				</section>
 
-				<section id="assess-step-5">
+        <div class="question">
+          <div class="prompt">Do you smoke?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
 
-				</section>
+        <div class="question">
+          <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
 
-					<nav class="scrollnav scrollpane">
-						<ul id="lifestyle-nav">
-							<li> <a class="scrollnav-link" href="#assess-intro"> </a> </li>
-							<li> <a class="scrollnav-link" href="#assess-step-1"> </a> </li>
-							<li> <a class="scrollnav-link" href="#assess-step-2"> </a> </li>
-							<li> <a class="scrollnav-link" href="#assess-step-3"> </a> </li>
-							<li> <a class="scrollnav-link" href="#assess-step-4"> </a> </li>
-						</ul>
-						<ul id="familyhistory-nav">
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-						</ul>
-						<ul id="knowyournormal-nav">
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-							<li> <a href="#"> </a> </li>
-						</ul>
-					</nav>
-			</section> -->
-			<!-- <div id="fixed-messages">
-				<div class="fact-callout">
-					DID <br>
-					YOU <br>
-					KNOW
-				</div>
-				<div class="fact">
-					<p> <span class="data-number">12%</span> - or - <span class="data-number">1 in 8</span> <br>
-						women will develop breast cancer at some point in their lifetime.
-					</p>
-					<button class="action" id="open-education"> Deep Dive Lifestyle Facts <span class="icon-right"></span> </button>
-				</div>
-			</div> -->
-			<!-- <section class="education scrollpane">
-				<section class="lifestyle">
-					<header class="photo-bg">
-						<div class="pink-bg vertical-container">
-							<div class="vertically-centered">
-								<h1>Lifestyle</h1>
-							</div>
-						</div>
-					</header>
-				</section>
-				<section class="family-history">
-					<header class="photo-bg">
-						<a href="familyhistory.html">
-						<div class="red-bg vertical-container">
+        <div class="question">
+          <div class="prompt">Do you follow a diet that’s low in fat and includes a mix of fruits, vegetables, whole grains, fat-free or low-fat dairy products, and lean proteins?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
 
-								<div class="vertically-centered">
-									<h1>Family History</h1>
-								</div>
+        <div class="question">
+          <div class="prompt">Have you taken oral contraceptives (birth control pills) for five years (does not have to be consecutive) during your 20s or 30s?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
 
-						</div>
-						</a>
-					</header>
-				 </section>
-				<section class="know-your-normal">
-					<header class="photo-bg">
-						<div class="nude-bg vertical-container">
-							<div class="vertically-centered">
-								<h1>Know Your Normal</h1>
-							</div>
-						</div>
-					</header>
-				 </section>
-				<section class=""> </section>
-			</section> -->
-		
+        <div class="question">
+          <div class="prompt">Have you ever been pregnant?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you or any of your immediate family members (parent; sibling; grandparent; aunt) had any of the following...</div>
+          <div class="visual"></div>
+        <input type="checkbox"> Breast cancer diagnosed at age 50 or under </input><br>
+        <input type="checkbox"> Triple negative (ER/PR/her2-) breast cancer</input><br>
+        <input type="checkbox"> More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</input><br>
+        <input type="checkbox"> Male breast cancer </input><br>
+        <input type="checkbox"> A genetic mutation that increases breast cancer risk (Ex. BRCA1/2, PTEN, p53)? </input>
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+          <div class="button">Remind me</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you or any family members had ovarian cancer?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+          <div class="button">Remind me</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Ovarian cancer</div>
+            <div class="answer">Pancreatic cancer</div>
+            <div class="answer">Thyroid cancer</div>
+            <div class="answer">Uterine cancer</div>
+            <div class="answer">Sarcoma cancer</div>
+            <div class="answer">Leukemia or Lymphoma</div>
+            <div class="answer">Melanoma cancer</div>
+            <div class="answer">Adrenocortical Carcinoma</div>
+            <div class="answer">Stomach cancer</div>
+            <div class="answer">Brain Cancer</div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Do you have a relative with both breast cancer and one of the following cancers?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Ovarian cancer</div>
+            <div class="answer">Pancreatic cancer</div>
+            <div class="answer">Thyroid cancer</div>
+            <div class="answer">Uterine cancer</div>
+            <div class="answer">Sarcoma cancer</div>
+            <div class="answer">Leukemia or Lymphoma</div>
+            <div class="answer">Melanoma cancer</div>
+            <div class="answer">Adrenocortical Carcinoma</div>
+            <div class="answer">Stomach cancer</div>
+            <div class="answer">Brain Cancer</div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Are you of Ashkenazi (Eastern European) Jewish ancestry with breast, ovarian, or pancreatic cancer in the family?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer"></div>
+            <div class="answer"></div>
+          </div>
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+          <div class="button">Remind me</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Did you receive any radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+          <div class="button">Continue</div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Do you have one or more immediate family members (parent; sibling; grandparent; aunt) that have had breast cancer at age 50 or older?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">Yes</div>
+            <div class="answer">No</div>
+          </div>
+
+          <div class="button">Continue</div>
+          <div class="button">Help me ask them</div>
+          <div class="button">Remind me</div>
+        </div>
+        <div class="question">
+          <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
+          <div class="visual"></div>
+        
+          <div class="answers">
+            <div class="answer">No</div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="vignette">
+        <div class="video">Woman Running</div>
+        <div class="headlines">
+          <div class"headline">Women who get regular exercise may have a lower risk of breast cancer</div>
+          <div class"headline">Although not all studies show this benefit, when the evidence is looked at as a whole, regular exercise appears to lower breast cancer risk by about 10 to 20 percent</div>
+        </div>
+        <div class="headlines">
+          These women have all pledged to _____. Join or encourage them!
+        </div>
+        <div class="visual">Image Grid</div>
+
+        <div class="button">Pledge to Exercise</div>
+        <div class="button">Facebook</div>
+        <div class="button">Twitter</div>
+      </div>
+
+
+
+      <div class="vignette">
+        <div class="video">Fries or Vegetables</div>
+        <div class="headlines">
+          <div class"headline">Maintain a healthy weight and reduce your fat intake. </div>
+          <div class"headline">There is a clear link between obesity and breast cancer because extra fatty tissue leads to extra estrogen production, which leads to an increased risk of breast cancer.</div>
+        </div>
+        <div class="button">Pledge to lose weight</div>
+      </div>
+
+      <div class="vignette">
+        <div class="video">Bottle breaking</div>
+        <div class="headlines">
+          <div class"headline">There is a known link between alcohol and breast cancer.</div>
+          <div class"headline">Limit alcohol to one drink per day, or avoid it completely.</div>
+        </div>
+        <div class="button">Pledget to Drink Less</div>
+      </div>
+
+      <div class="vignette">
+        <div class="video">Breastfeeding</div>
+        <div class="headlines">
+          <div class"headline">If it makes sense for you, breastfeeding for 1-2 years, not necessarily consecutively, may lower your breast cancer risk by decreasing the number of periods you have over the course of your life.</div>
+        </div>
+        <div class="button">Pledge to Breastfeed</div>
+      </div>
+
+      <div class="vignette">
+        <div class="video">Cigarette out</div>
+        <div class="headlines">
+          <div class"headline">Smoking may increase the risk of breast cancer. </div>
+          <div class"headline">We know how hard it can be to quit, but if you smoke, we ask that you commit to quit today and take advantage of Bright Pink’s smoke cessation resources online.</div>
+        </div>
+        <div class="button">Pledge to quit</div>
+      </div>
+
+      <div class="vignette">
+        <div class="video">Birth control dial</div>
+        <div class="headlines">
+          <div class"headline">There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</div>
+          <div class"headline"> 5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</div>
+        </div>
+        <div class="button">Pledge to start birth control</div>
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    </div><footer id="site-footer" class="flex-container">
+      <div class="flex-none">
+        <a href="#"><span class="icon-facebook"></span></a>
+        <a href="#"><span class="icon-twitter"></span></a>
+      </div>
+    </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/script.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html> 

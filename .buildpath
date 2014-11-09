@@ -18,6 +18,7 @@
 	<buildpathentry kind="src" path="vendor/jeremeamia/SuperClosure/src"/>
 	<buildpathentry kind="src" path="vendor/laravel/framework/src/Illuminate/Queue"/>
 	<buildpathentry kind="src" path="app/tests"/>
+	<buildpathentry kind="src" path="vendor/panique/laravel-sass"/>
 	<buildpathentry kind="src" path="vendor/d11wtq/boris/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/debug"/>
 	<buildpathentry excluding="Crypt/" kind="src" path="vendor/phpseclib/phpseclib/phpseclib"/>
@@ -34,6 +35,7 @@
 	<buildpathentry kind="src" path="vendor/symfony/finder"/>
 	<buildpathentry kind="src" path="vendor/symfony/browser-kit"/>
 	<buildpathentry excluding="deprecated/" kind="src" path="vendor/filp/whoops/src"/>
+	<buildpathentry kind="src" path="vendor/leafo/scssphp"/>
 	<buildpathentry kind="src" path="vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs"/>
 	<buildpathentry kind="src" path="vendor/patchwork/utf8/class"/>
 	<buildpathentry kind="src" path="vendor/swiftmailer/swiftmailer/lib"/>

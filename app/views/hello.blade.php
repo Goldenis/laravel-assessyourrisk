@@ -19,7 +19,7 @@
       <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-	<div class="logo"><img src="img/brightpink_logo.jpg"></div>
+  <div class="logo"><img src="img/brightpink_logo.jpg"></div>
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">
@@ -32,9 +32,15 @@
     <div class="right-column">
       <!-- UNDERSTAND -->
       
-      <div class="understand-box">
-        <h4>Understand<br>Your Risk<br>></h4>
-        <div class="arrow"></div>
+      <div class="toggle-box">
+        <div class="understand">
+          <h4>Understand<br>Your Risk<br></h4>
+          <div class="arrow">></div>
+        </div>
+        <div class="assess">
+          <h4>Assess<br>Your Risk<br></h4>
+          <div class="arrow"><</div>
+        </div>
       </div>
 
       <!-- FACTS -->
@@ -128,7 +134,6 @@
 
         <div class="question">
           <div class="prompt">Do you smoke?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -138,7 +143,6 @@
 
         <div class="question">
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -148,7 +152,6 @@
 
         <div class="question">
           <div class="prompt">Do you follow a diet that’s low in fat and includes a mix of fruits, vegetables, whole grains, fat-free or low-fat dairy products, and lean proteins?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -158,7 +161,6 @@
 
         <div class="question">
           <div class="prompt">Have you taken oral contraceptives (birth control pills) for five years (does not have to be consecutive) during your 20s or 30s?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -168,7 +170,6 @@
 
         <div class="question">
           <div class="prompt">Have you ever been pregnant?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -178,19 +179,22 @@
 
         <div class="question">
           <div class="prompt">Have you or any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt</div> had any of the following...</div>
-          <div class="visual"></div>
-        <input type="checkbox"> Breast cancer diagnosed at age 50 or under </input><br>
-        <input type="checkbox"> Triple negative (ER/PR/her2-) breast cancer</input><br>
-        <input type="checkbox"> More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</input><br>
-        <input type="checkbox"> Male breast cancer </input><br>
-        <input type="checkbox"> A genetic mutation that increases breast cancer risk (Ex. BRCA1/2, PTEN, p53)? </input><br>
+          <div class="checkbox-list">
+            <div class="checkbox"><input type="checkbox"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">More than one breast cancer<span class="asterisk">*</span><div class="definition">cancer in both breasts, or two separate breast cancers in one breast</div> </div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">A genetic mutation that increases breast cancer risk<span class="asterisk">*</span><div class="definition">(Ex. BRCA1/2, PTEN, p53)</div>?</div></div>
+          </div>
+          <br>
+          <br>
+          <button>Continue</button>
           <button class="sub">Help me ask them</button>
           <button class="sub">Remind me</button>
         </div>
 
         <div class="question">
           <div class="prompt">Have you or any family members had ovarian cancer?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -202,46 +206,50 @@
 
         <div class="question">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers?</div>
-          <div class="visual"></div>
-        
-          <div class="answers">
-            <input type="checkbox">Ovarian cancer</input><br>
-            <input type="checkbox">Pancreatic cancer</input><br>
-            <input type="checkbox">Thyroid cancer</input><br>
-            <input type="checkbox">Uterine cancer</input><br>
-            <input type="checkbox">Sarcoma cancer</input><br>
-            <input type="checkbox">Leukemia or Lymphoma</input><br>
-            <input type="checkbox">Melanoma cancer</input><br>
-            <input type="checkbox">Adrenocortical Carcinoma</input><br>
-            <input type="checkbox">Stomach cancer</input><br>
-            <input type="checkbox">Brain Cancer</input><br>
+          <div class="checkbox-list half">        
+            <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Sarcoma cancer</div></div>
           </div>
+          <div class="checkbox-list half">
+            <div class="checkbox"><input type="checkbox"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Brain Cancer</div></div>
+          </div>          
+          <br>
+          <br>
+          <button>Continue</button>
           <button class="sub">Help me ask them</button>
         </div>
 
         <div class="question">
           <div class="prompt">Do you have a relative with both breast cancer and one of the following cancers?</div>
-          <div class="visual"></div>
-        
-          <div class="answers">
-           <input type="checkbox">Ovarian cancer</input>
-           <input type="checkbox">Pancreatic cancer</input>
-           <input type="checkbox">Thyroid cancer</input>
-           <input type="checkbox">Uterine cancer</input>
-           <input type="checkbox">Sarcoma cancer</input>
-           <input type="checkbox">Leukemia or Lymphoma</input>
-           <input type="checkbox">Melanoma cancer</input>
-           <input type="checkbox">Adrenocortical Carcinoma</input>
-           <input type="checkbox">Stomach cancer</input>
-           <input type="checkbox">Brain Cancer</input>
+          <div class="checkbox-list half">
+            <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Sarcoma cancer</div></div>
           </div>
+          <div class="checkbox-list half">     
+            <div class="checkbox"><input type="checkbox"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Brain Cancer</div></div>
+          </div>          
+          <br>
+          <br>
+          <button>Continue</button>
           <button class="sub">Help me ask them</button>
         </div>
 
         <div class="question">
           <div class="prompt">Are you of Ashkenazi (Eastern European) Jewish ancestry with breast, ovarian, or pancreatic cancer in the family?</div>
-          <div class="visual"></div>
-        
           <div class="answers">
             <button></button>
             <button></button>
@@ -252,7 +260,6 @@
 
         <div class="question">
           <div class="prompt">Did you receive any radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -262,7 +269,6 @@
 
         <div class="question">
           <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><span class="definition">parent, sibling, grandparent or aunt</span> that have had breast cancer at age 50 or older?</div>
-          <div class="visual"></div>
         
           <div class="answers">
             <button>Yes</button>
@@ -274,9 +280,8 @@
         </div>
         <div class="question">
           <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
-          <div class="visual"></div>
-        
           <div class="answers">
+            <button>Yes</button>
             <button>No</button>
           </div>
       </div>

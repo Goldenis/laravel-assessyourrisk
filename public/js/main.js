@@ -61,11 +61,11 @@
     $('.asterisk').on('mouseleave',function(){
       $(this).next().removeClass("show")
     })
-    $('.understand-box').on('click',function(){
-      $('.assessment').removeClass('in');
-      $('.right-column').addClass('left');
-      $('.education').addClass('in');
-      $('.vignette').eq(_currentVignette).addClass('in');
+    $('.toggle-box').on('click',function(){
+      toggleColumn();
+    })
+    $('.assess').on('click',function(){
+      
     })
     _$window.bind('resize', _pageResize);
     _$window.on('mousewheel',function(e,deltaY){
@@ -75,7 +75,14 @@
       _scrollHandler();
     });
   }
+  function toggleColumn() {
+    $('.assessment').toggleClass('in');
+    $('.right-column').toggleClass('left');
+    $('.education').toggleClass('in');
+    $('.vignette').eq(_currentVignette).toggleClass('in');
+  }
   function answerQuestion(){
+    $('.question').eq(_currentQuestion).addClass('out')
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
     _currentQuestion++;

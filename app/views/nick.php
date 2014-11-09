@@ -15,13 +15,11 @@ body {
 	position: relative;
     -webkit-mask: url(/img/assessment/scale/scale_mask.png) no-repeat;
     -webkit-mask-position: 0px 0px;
-    
-    
-    -webkit-mask-image: url(img/assessment/scale/scale_mask.png);
-	-o-mask-image: url(img/assessment/scale/scale_mask.png);
-	-moz-mask-image: url(img/assessment/scale/scale_mask.png);
+    /*
+	-o-mask: url(img/assessment/scale/scale_mask.png);
+	-moz-mask: url(img/assessment/scale/scale_mask.png);
 	mask-image: url(img/assessment/scale/scale_mask.png);
-    
+    */
     overflow: hidden;
 }
 
@@ -48,9 +46,6 @@ body {
 </style>
 </head>
 <body>
-
-
-
 	<div class="scale-container">
 		<div id="scale-base"></div>
 		<div id="scale-overlay"></div>
@@ -67,7 +62,6 @@ body {
 		src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
 	<script
 		src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-
 
 	<script src="js/jam.js"></script>
 

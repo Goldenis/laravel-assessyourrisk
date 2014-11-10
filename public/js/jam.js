@@ -9,32 +9,45 @@ $(document).ready(
 			scaleBase = $('#scale-base'),
 			rot = 0;
 
-			$('.scale-container').bind('touchstart', function(e) {
+			$('.scale-container').bind('touchstart, mousedown', function(e) {
 				e.preventDefault();
-				// isTouchDevice = true;
 				moved = 0;
-				var touch = e.originalEvent.touches[0]
-						|| e.originalEvent.changedTouches[0];
+				var touch;
+				if (e.type == 'mousedown') {
+					touch = e;
+				} else {
+					touch = e.originalEvent.touches[0]
+					|| e.originalEvent.changedTouches[0];
+				}
 				touchStartPos = touch.pageX;
 				startTrackingTouch();
 			})
 			
 			function startTrackingTouch() {
-				$('body').bind('touchmove', function(e) {
+				$('body').bind('touchmove, mousemove', function(e) {
 					e.preventDefault();
-					var touch = e.originalEvent.touches[0]
-							|| e.originalEvent.changedTouches[0];
+					var touch;
+					if (e.type == 'mousemove') {
+						touch = e;
+					} else {
+						touch = e.originalEvent.touches[0]
+						|| e.originalEvent.changedTouches[0];
+					}
 					var currentX = touch.pageX;
 					moved = currentX - touchStartPos;
 					rot += moved/2;
 					rotate(scaleBase, rot);
 					touchStartPos = currentX;
 				});
-				$(window).bind('touchend', function(e) {
+				$(window).bind('touchend, mouseup', function(e) {
 					e.preventDefault();
-					var touch = e.originalEvent.touches[0]
-							|| e.originalEvent.changedTouches[0];
-//					console.log(moved);
+					var touch;
+					if (e.type == 'mouseup') {
+						touch = e;
+					} else {
+						touch = e.originalEvent.touches[0]
+						|| e.originalEvent.changedTouches[0];
+					}
 					endTrackingTouch();
 				})
 			}

@@ -15,8 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-Route::get('/nick', function()
+Route::get('/bmi', function()
 {
-	//
-	return View::make('nick');
+	return View::make('scale');
 });
+
+

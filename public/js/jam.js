@@ -10,9 +10,7 @@ $(document).ready(
 			rot = 0;
 
 			$('.scale-container').bind('touchstart, mousedown', function(e) {
-				console.log(e.type);
 				e.preventDefault();
-				// isTouchDevice = true;
 				moved = 0;
 				var touch;
 				if (e.type == 'mousedown') {
@@ -50,7 +48,6 @@ $(document).ready(
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 					}
-//					console.log(moved);
 					endTrackingTouch();
 				})
 			}

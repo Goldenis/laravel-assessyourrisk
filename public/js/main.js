@@ -20,14 +20,51 @@
 
   var _currentQuestion = 0;
   var _currentVignette = 0;
+  var _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
+  var _myL = 0;
 
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
   var DESKTOP_WIDTH = "1350";
 
-  function _scrollHandler(deltaY){
-    _currentFrame = Math.max(0,_$window.scrollTop());
-  }
+  $(window).on('scroll',function(e){
+    e.preventDefault();
+  });
+  $(window).on('mousewheel',function (eventData,deltaY) {
+    if(_isTouchDevice){
+      eventData.preventDefault();
+    }else{
+      _currentFrame -= deltaY;
+      _currentFrame = Math.max(0,_currentFrame);
+      _scrollHandler();
+      eventData.preventDefault();
+    }
+  })
+  $(window).bind('touchstart',function(e){
+    isTouchDevice = true;
+    moved = 0;
+    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    touchStartY = touch.pageY;
+    clearInterval(inertiaInterval);
+  })
+  $(window).bind('touchmove',function(e){
+    e.preventDefault();
+    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    moved = touch.pageY-touchStartY;
+    _currentFrame -= moved/40;
+    _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    touchStartY = touch.pageY;
+  })
+  $(window).bind('touchend',function(e){
+    var inertiaInterval = setInterval(function(){
+      moved*=.9;
+      _currentFrame -= moved/20;
+      _currentFrame = Math.floor(Math.max(_currentFrame,0));
+      if(Math.abs(moved) < .2){
+        clearInterval(inertiaInterval)
+      }
+    },10)
+  })
   function _pageResize () {
     _winH = _$window.height();
     _winW = _$window.width();
@@ -38,6 +75,20 @@
          _scrollHandler();
       });
     }
+  }
+  function _scrollHandler(){
+    // scene 1
+    _myL = Math.max((18681*-4)+1245.5,-1245.5*Math.floor(_currentFrame/2));
+
+    $('.vignette').eq(_currentVignette).find($('.video img')).css({
+      '-webkit-transform':"translateX("+(_myL)+"px)"
+    })
+    _currentHeadline.removeClass('active');
+    _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(Math.floor(_currentFrame/50));
+    _currentHeadline.addClass('active').css({
+      //'-webkit-transform': 'translateX('+-_currentFrame+'px)'
+    })
+  
   }
   function _registerEventListeners() {
     $('.intro').on('click',function(){
@@ -51,6 +102,7 @@
     $('.assessment-intro button').on('click',function() {
       $('.assessment-intro').removeClass('in');
       $('.question').eq(0).addClass('in');
+      $('.dot').eq(_currentQuestion).addClass('active')
     })
     $('.question button').on('click',function(){
       answerQuestion();
@@ -67,27 +119,37 @@
     $('.assess').on('click',function(){
       
     })
+    $('.module').on('click',function(){
+      expandModule();
+    })
+    $('.vignette').on('click',function(){
+      nextVignette();
+    })
     _$window.bind('resize', _pageResize);
-    _$window.on('mousewheel',function(e,deltaY){
-      _scrollHandler(deltaY);
-    });
-    _$window.on('scroll',function(e){
-      _scrollHandler();
-    });
+  }
+  function expandModule(){
+    _currentFrame = 0;
+    $('.education-menu').addClass('out');
+    $('.vignette').eq(_currentVignette).toggleClass('in');
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');
+    $('.logo-white').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
-    $('.vignette').eq(_currentVignette).toggleClass('in');
   }
   function answerQuestion(){
-    $('.question').eq(_currentQuestion).addClass('out')
+    $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
     _currentQuestion++;
     $('.dot').eq(_currentQuestion).addClass('active')
     $('.question').eq(_currentQuestion).addClass('in')
+  }
+  function nextVignette(){
+    $('.vignette').eq(_currentVignette).toggleClass('in');
+    _currentVignette++;
+    $('.vignette').eq(_currentVignette).toggleClass('in');
   }
 
   $(document).ready(function() {

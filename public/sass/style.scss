@@ -117,7 +117,7 @@ $borderColor: #494547;
   padding: 0;
   -webkit-font-smoothing:antialiased;
 }
-html { font-size: 100%; width: 100%; height:100%; background:$bgColor; -webkit-font-smoothing:antialiased;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:optimizeLegibility}
+html { font-size: 100%; width: 100%; height:100%; background: $bgColor; -webkit-font-smoothing:antialiased;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:optimizeLegibility}
 html, button, input, select, textarea { @include body-font(1em); color: $darkColor; }
 body { overflow-y: scroll; margin: 0; width: 100%; height:100%; font-size: 1em; line-height: 1.4; @include body-font(16px);
 }
@@ -170,19 +170,20 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 }
 .dot{
   color: #ccc;
-  display: block;
+  display: inline-block;
   position: relative;
   width: 7px;
   height: 7px;
-  @include rounded(7px);
+  @include rounded(50%);
   background: #ccc;
-  float: left;
-  margin-right: 30px;
-  @include transition(.2s);
+  margin-right: 20px;
+  @include transition(.7s);
+  vertical-align: center;
   &.active{
     background: $pink;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    top: 5px;
   }
 }
 header{
@@ -196,7 +197,7 @@ h1,h2,h3,h4,h5{
   font-weight: normal;
 }
 h1{
-  font-size: 6em;
+  font-size: 5em;
 }
 h2{
  font-size: 5em; 
@@ -212,7 +213,7 @@ h5{
 }
 button{
   padding: 15px 35px;
-  background: $red;
+  background: $pink;
   outline: none;
   border: none;
   color: #fff;
@@ -226,16 +227,16 @@ button{
   cursor: pointer;
   @include transition(.2s);
   &:hover{
-    background: $pink;
+    background: $red;
   }
   &.sub{
     font-size: .8em;
-    color: $red;
+    color: $pink;
     background: #fff;
-    border: 3px solid $red;
+    border: 3px solid $pink;
     &:hover{
-      color: $pink;
-      border-color: $pink;
+      color: $red;
+      border-color: $red;
     }
   }
 }
@@ -248,16 +249,30 @@ button{
 }
 .checkbox{
   margin: 1em 0;
+  .label{
+
+  }
 }
 input[type="checkbox"]{
   margin: 0 8px 0 2px;
   top: 4px;
   float: left;
+  z-index: 20;
 }
 .logo{
   position: absolute;
   bottom: 50px;
   left: 60px;
+  opacity: 0;
+  @include transition(.5s);
+}
+.logo-white{
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  opacity: 0;
+  z-index: 2000;
+  @include transition(.5s);
 }
 .asterisk{
   color: $red;
@@ -289,6 +304,7 @@ input[type="checkbox"]{
 .section-title{
   font-size: 1em;
   font-family: "avg_bold";
+  z-index: 2;
 }
 .intro{
   width: 100%;
@@ -309,6 +325,7 @@ input[type="checkbox"]{
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  width: 70%;
   @include transition(.4s);
   top: 150px;
 }
@@ -318,6 +335,51 @@ input[type="checkbox"]{
   height: 100%;
   top: 0;
   left: 100%;
+  .education-menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    @include transition(1s,ease-in-out);
+    &.out{
+      left: 100%;
+    }
+  }
+  .module{
+    width: 100%;
+    background: $darkColor;
+    color: #fff;
+    padding: 5% 10%;
+    height: 33.333%;
+    cursor: pointer;
+    border-left: 10px solid #fff;
+    border-top: 10px solid #fff;
+    @include transition(.2s);
+    &:last-of-type{
+      border-bottom: 10px solid #fff;
+    }
+    &:hover{
+      background: $red;
+    }
+    .how{
+      font-size: 1em;
+    }
+    h1{
+      color: #fff;
+    }
+  }
+  .section-title{
+    color: #fff;
+    left: 10%;
+    top: 10%;
+  }
+  .pledge{
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    bottom: 55px;
+  }
   .vignette{
     width: 100%;
     height: 800px;
@@ -326,30 +388,43 @@ input[type="checkbox"]{
   .video{
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 500px;
-    background: $darkColor;
+    width: 100000px;
+    overflow: hidden;
+    height: 700px;
+    background: $pink;
+    img{
+      opacity: .9;
+      display: inline;
+      height: 100%;
+    }
   }
   .headlines{
     color: #fff;
     position: absolute;
     width: 100%;
     z-index: 12;
-    top: 0;
+    top: 260px;
+    height: 100%;
     h3{
-      font-size: 2em;
+      font-size: 2.5em;
       position: absolute;
       visibility: hidden;
-      top: 20px;
-      left: 20px;
-      &:first-of-type{
+      opacity: 0;
+      left: 10%;
+      width: 80%;
+      @include transition(.4s);
+      &.active{
         visibility: visible;
+        opacity: 1;
       }
     }
   }
   &.in{
     left: 30%;
   }
+}
+.arrow{
+  margin-top: 1em;
 }
 .right-column{
   position: absolute;
@@ -358,12 +433,13 @@ input[type="checkbox"]{
   width: 30%;
   height: 100%;
   color: #fff;
+  z-index: 2;
   @include transition(.5s,ease-in-out);
   .toggle-box{
     width: 100%;
-    padding: 10%;
+    padding: 0 10%;
     background: $red;
-    height: 30%;
+    height: 40%;
     overflow: hidden;
     width: 100%;
     @include transition(.2s,ease-out);
@@ -375,8 +451,9 @@ input[type="checkbox"]{
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 10%;
-      top: 30px;
+      padding: 45px;
+      padding-top: 30px;
+      top: 0;
       left: 0;
       @include transition(1s,ease-in-out);
     }
@@ -384,10 +461,39 @@ input[type="checkbox"]{
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 10%;
+      background: $nude;
+      color: $pink;
+      padding: 45px;
       left: -100%;
-      top: 30px;
+      top: 0;
+      padding-top: 30px;
       @include transition(1s,ease-in-out);
+    }
+  }
+  .fact-group{
+    float: right;
+    padding: 45px;
+    background: $pink;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    .education-facts,
+    .assessment-facts{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding: 45px;
+      @include transition(1s,ease-in-out);
+    }
+    .education-facts{
+      left: -100%;
+    }
+    .fact{
+      h4{
+
+      }
     }
   }
   &.in{
@@ -403,18 +509,19 @@ input[type="checkbox"]{
       position: absolute;
       width: 100%;
       left: 0;
-      top: 30px;
     }
-  }
-}
-.fact-group{
-  float: right;
-  padding: 10%;
-  background: $pink;
-  height: 70%;
-  .fact{
-    h4{
+    .fact-group{
+      .assessment-facts{
+        left: 100%;
+      }
+      .education-facts{
+        left: 0;
+      }
+      .fact{
+        h4{
 
+        }
+      }
     }
   }
 }
@@ -426,7 +533,6 @@ input[type="checkbox"]{
   opacity: 0;
   width: 100%;
   height: 100%;
-  @include transform(translateY(50px));
   @include transition(.5s,ease-out);
   .prompt{
     width: 80%;
@@ -439,15 +545,16 @@ input[type="checkbox"]{
   padding: 60px 0;
 }
 .question{
+  @include transform(translateY(50px));
   top: 0px;
 }
-&.in{
+.in{
   visibility: visible;
   opacity: 1;
   @include transform(translateY(0));
   @include transition(1s,ease-out);
 }
-&.out{
+.out-up{
   visibility: hidden;
   opacity: 0;
   @include transform(translateY(-40px));

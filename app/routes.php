@@ -19,3 +19,5 @@ Route::get('/bmi', function()
 {
 	return View::make('scale');
 });
+
+

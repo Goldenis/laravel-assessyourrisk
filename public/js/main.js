@@ -114,7 +114,7 @@
     $('.asterisk').on('mouseleave',function(){
       $(this).next().removeClass("show")
     })
-    $('.toggle-box').on('click',function(){
+    $('.toggle-box, .fact-group').on('click',function(){
       toggleColumn();
     })
     $('.assess').on('click',function(){
@@ -149,9 +149,12 @@
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
+    _currentFrame = 0;
     $('.vignette').eq(_currentVignette).toggleClass('in');
     _currentVignette++;
     $('.vignette').eq(_currentVignette).toggleClass('in');
+    _scrollHandler();
+    $('.scroll').show();
   }
 
   $(document).ready(function() {

@@ -50,6 +50,7 @@
       <div class="fact-group">
         <div class="assessment-facts">
           <div class="fact">
+            <img src="img/donut.png"><br><br>
             <h5><span class="data-number">1 in 8 Women</span> <br>will develop breast cancer at some point in her lifetime.</h5>
           </div>
         </div>
@@ -295,9 +296,10 @@
       </div>
       </div>
     </section>
-
     <!-- EDUCATION -->
     <section class="education">
+      <div class="scroll">SCROLL</div>
+      <button class="btn-continue">CONTINUE</button>
       <div class="education-menu">
         <div class="module">
           <div class="how">Understand How</div>

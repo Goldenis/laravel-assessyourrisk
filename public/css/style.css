@@ -401,6 +401,22 @@ input[type="checkbox"] {
   top: 0;
   left: 100%;
 }
+.education .btn-continue, .education .scroll {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 35px;
+}
+.education .scroll {
+  font-size: 2em;
+  font-family: 'avg_bold';
+  color: #d7006d;
+  bottom: 120px;
+}
 .education .education-menu {
   position: absolute;
   left: 0;
@@ -421,9 +437,9 @@ input[type="checkbox"] {
 }
 .education .module {
   width: 100%;
-  background: #555558;
+  background: #f6323e;
   color: #fff;
-  padding: 5% 10%;
+  padding: 50px 10%;
   height: 33.333%;
   cursor: pointer;
   border-left: 10px solid #fff;
@@ -441,10 +457,17 @@ input[type="checkbox"] {
   border-bottom: 10px solid #fff;
 }
 .education .module:hover {
-  background: #f6323e;
+  background: #d7006d;
 }
 .education .module .how {
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.education .module .how, .education .module .effect {
   font-size: 1em;
+  line-height: 1em;
+  font-family: 'avg_bold';
 }
 .education .module h1 {
   color: #fff;
@@ -462,11 +485,11 @@ input[type="checkbox"] {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: 58px;
+  bottom: 20%;
 }
 .education .vignette {
   width: 100%;
-  height: 800px;
+  height: 100%;
   padding-top: 600px;
 }
 .education .video {
@@ -474,14 +497,16 @@ input[type="checkbox"] {
   top: 0;
   width: 100000px;
   overflow: hidden;
-  height: 700px;
+  height: 80%;
+  max-height: 700px;
+  min-height: 500px;
   background: #d7006d;
   border-left: 10px solid #fff;
 }
 .education .video img {
   opacity: 0.9;
   display: inline;
-  height: 100%;
+  height: 700px;
 }
 .education .headlines {
   color: #fff;
@@ -637,9 +662,13 @@ input[type="checkbox"] {
 .right-column .fact-group .education-facts {
   font-size: 1.4em;
   left: calc(-100% - 10px);
+  cursor: pointer;
 }
 .right-column .fact-group .education-facts .q-num {
   font-family: 'avg_bold';
+}
+.right-column .fact-group .education-facts:hover {
+  background-color: #f6323e;
 }
 .right-column.in {
   right: 0;
@@ -729,10 +758,10 @@ input[type="checkbox"] {
   opacity: 0;
   -webkit-transform-origin: 50% 200%;
   -moz-transform-origin: 50% 200%;
-  -webkit-transform: perspective(1000px) translate3d(0, 0px, -100px);
-  -moz-transform: perspective(1000px) translate3d(0, 0px, -100px);
-  -o-transform: perspective(1000px) translate3d(0, 0px, -100px);
-  transform: perspective(1000px) translate3d(0, 0px, -100px);
+  -webkit-transform: perspective(1000px) translateY(-40px);
+  -moz-transform: perspective(1000px) translateY(-40px);
+  -o-transform: perspective(1000px) translateY(-40px);
+  transform: perspective(1000px) translateY(-40px);
   -webkit-transition: all 0.5s 0 ease-in;
   -moz-transition: all 0.5s 0 ease-in;
   -o-transition: all 0.5s 0 ease-in;

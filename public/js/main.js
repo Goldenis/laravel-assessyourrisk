@@ -17,6 +17,7 @@
   var containerTop = 0;
   var _frameRange;
   var touchInterval;
+  var touchStartY;
 
   var _currentQuestion = 0;
   var _currentVignette = 0;
@@ -41,7 +42,7 @@
     }
   })
   $(window).bind('touchstart',function(e){
-    isTouchDevice = true;
+    _isTouchDevice = true;
     moved = 0;
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     touchStartY = touch.pageY;
@@ -51,15 +52,17 @@
     e.preventDefault();
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     moved = touch.pageY-touchStartY;
-    _currentFrame -= moved/40;
+    _currentFrame -= moved/3;
     _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    _scrollHandler();
     touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
     var inertiaInterval = setInterval(function(){
       moved*=.9;
-      _currentFrame -= moved/20;
+      _currentFrame -= moved/3;
       _currentFrame = Math.floor(Math.max(_currentFrame,0));
+      _scrollHandler();
       if(Math.abs(moved) < .2){
         clearInterval(inertiaInterval)
       }
@@ -84,6 +87,7 @@
   }
   function _scrollHandler(){
     // scene 1
+    console.log(_currentFrame)
     _myL = Math.max((18681*-4)+1245.5,-1245.5*Math.floor(_currentFrame/2));
     if(_smallScreen){
       _myL -= 220;

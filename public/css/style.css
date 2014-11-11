@@ -423,6 +423,7 @@ input[type="checkbox"] {
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: 143;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;

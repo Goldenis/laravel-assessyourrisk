@@ -365,7 +365,7 @@ input[type="checkbox"]{
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 13;
+    z-index: 143;
     @include transition(1s,ease-in-out);
     &.out{
       left: 100%;

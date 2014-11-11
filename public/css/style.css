@@ -242,7 +242,7 @@ button {
   border: none;
   color: #fff;
   font-family: "avg_bold";
-  margin: 1em 0.5em 1em 0;
+  margin: 2em 0.5em 1em 0;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
@@ -363,6 +363,7 @@ input[type="checkbox"] {
 .intro {
   width: 100%;
   padding: 10%;
+  z-index: 2;
 }
 .assessment {
   width: 70%;
@@ -781,9 +782,64 @@ footer {
   height: 100px;
   border: 1px solid #555558;
   display: none;
+}
+@media (max-width: 1000px) {
   /* =============================================================================
    Non-Semantic Helper Classes
-   ========================================================================== */
+   ========================================================================== */  body {
+    font-size: 0.6em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .education, .assessment {
+    width: 100%;
+  }
+  .assessment {
+    padding: 30px;
+  }
+  .education .video {
+    height: 62%;
+    min-height: 200px;
+  }
+  .education .headlines {
+    top: 100px;
+  }
+  .education.in {
+    left: 0;
+  }
+  .right-column {
+    left: 95%;
+  }
+  .right-column.left {
+    left: 95%;
+  }
+  .dots {
+    left: 30px;
+    bottom: 120px;
+  }
+  .dot {
+    width: 2px;
+    height: 2px;
+    margin-right: 4px;
+    border-width: 3px;
+  }
+  .dot.active {
+    border-width: 5px;
+  }
+  .logo {
+    left: 30px;
+    bottom: 20px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .logo-white {
+    display: none;
+  }
 }
 .ir {
   display: block;

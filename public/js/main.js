@@ -69,7 +69,13 @@
     _winH = _$window.height();
     _winW = _$window.width();
     _scrollHandler(0);
-  }  function redraw() {
+    if(_winW < 1000){
+      _smallScreen = true;
+    }else{
+      _smallScreen = false;
+    }
+  }  
+  function redraw() {
     if(_isTouchDevice){
       window.requestAnimationFrame(function() {
          _scrollHandler();
@@ -79,6 +85,9 @@
   function _scrollHandler(){
     // scene 1
     _myL = Math.max((18681*-4)+1245.5,-1245.5*Math.floor(_currentFrame/2));
+    if(_smallScreen){
+      _myL -= 220;
+    }
 
     $('.vignette').eq(_currentVignette).find($('.video img')).css({
       '-webkit-transform':"translateX("+(_myL)+"px)"

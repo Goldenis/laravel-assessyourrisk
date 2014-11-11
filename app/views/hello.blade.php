@@ -5,7 +5,8 @@
 @include('partials.understand')
 @include('partials.facts')
 @include('partials.education')
-@include('partials.footer')  -->
+@include('partials.footer')  
+-->
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title></title>
       <meta name="description" content="">
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=0, minimal-ui" />
       <link rel="stylesheet" href="css/style.css">
       <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>

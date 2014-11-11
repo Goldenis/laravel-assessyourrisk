@@ -94,7 +94,8 @@
     $('.intro').on('click',function(){
       $(this).addClass('hidden')
       $('.right-column').addClass('in')
-      $('.assessment').addClass('in')
+      $('.assessment').addClass('in');
+      $('.border').addClass('white');
     })
     $('.dot').on('click',function(){
 
@@ -131,6 +132,7 @@
     _currentFrame = 0;
     $('.education-menu').addClass('out');
     $('.vignette').eq(_currentVignette).toggleClass('in');
+    $('.education .section-title').toggleClass('in');
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');

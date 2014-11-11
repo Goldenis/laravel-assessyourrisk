@@ -97,8 +97,10 @@ $headline-font: 'avg_bold', sans-serif;
 $bgColor: #fff;
 $darkColor: #555558;
 $pink: #D7006D;
+$pink-light: #fdd5ce;
 $nude: #FFB4AA;
 $red: #F6323E;
+$light-gray: #ccc;
 
 $darkColor50: rgba(6, 6, 6, .50);
 $highlightColor: red;
@@ -155,6 +157,18 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
    Author: Nick Jones / The Experiment
    ========================================================================== */
 
+.border{
+  position: fixed;
+  border: 15px solid $light-gray;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  @include transition(.3s);
+  &.white{
+    border: 10px solid #fff;
+  }
+}
 .content{
   position: relative;
   width: 100%;
@@ -166,7 +180,6 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
   position: absolute;
   bottom: 180px;
   left: 60px;
-
 }
 .dot{
   color: #ccc;
@@ -175,15 +188,13 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
   width: 7px;
   height: 7px;
   @include rounded(50%);
-  background: #ccc;
+  background: $light-gray;
   margin-right: 20px;
-  @include transition(.7s);
-  vertical-align: center;
+  border: 5px solid $light-gray;
+  @include transition(.4s);
   &.active{
     background: $pink;
-    width: 20px;
-    height: 20px;
-    top: 5px;
+    border: 10px solid $pink;
   }
 }
 header{
@@ -373,12 +384,13 @@ input[type="checkbox"]{
     color: #fff;
     left: 10%;
     top: 10%;
+    opacity: 0;
   }
   .pledge{
     position: absolute;
     left: 50%;
     @include transform(translateX(-50%));
-    bottom: 55px;
+    bottom: 58px;
   }
   .vignette{
     width: 100%;
@@ -392,6 +404,7 @@ input[type="checkbox"]{
     overflow: hidden;
     height: 700px;
     background: $pink;
+    border-left: 10px solid #fff;
     img{
       opacity: .9;
       display: inline;
@@ -424,6 +437,8 @@ input[type="checkbox"]{
   }
 }
 .arrow{
+  @include transition(.3s,ease-out);
+  left: 0;
   margin-top: 1em;
 }
 .right-column{
@@ -434,28 +449,32 @@ input[type="checkbox"]{
   height: 100%;
   color: #fff;
   z-index: 2;
-  @include transition(.5s,ease-in-out);
+  @include transition(1s,ease-in-out);
   .toggle-box{
     width: 100%;
     padding: 0 10%;
-    background: $red;
     height: 40%;
     overflow: hidden;
     width: 100%;
+    background: #fff;
     @include transition(.2s,ease-out);
     cursor: pointer;
-    &:hover{
-      background-color: $pink;
-    }
     .understand{
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 45px;
-      padding-top: 30px;
+      padding: 55px 45px;
+      background: $red;
       top: 0;
       left: 0;
       @include transition(1s,ease-in-out);
+      border-bottom: 10px solid #fff;
+      &:hover{
+        background-color: $pink;
+        .arrow{
+          left: 10px;
+        }
+      }
     }
     .assess{
       position: absolute;
@@ -464,21 +483,28 @@ input[type="checkbox"]{
       background: $nude;
       color: $pink;
       padding: 45px;
-      left: -100%;
+      left: calc(-100% - 10px);
+      border-bottom: 10px solid #fff;
       top: 0;
-      padding-top: 30px;
+      padding-top: 50px;
       @include transition(1s,ease-in-out);
+      &:hover{
+        background-color: $pink-light;
+        .arrow{
+          left: -10px;
+        }
+      }
     }
   }
   .fact-group{
     float: right;
     padding: 45px;
-    background: $pink;
     height: 60%;
     width: 100%;
     overflow: hidden;
     .education-facts,
     .assessment-facts{
+      background: $pink;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -488,7 +514,11 @@ input[type="checkbox"]{
       @include transition(1s,ease-in-out);
     }
     .education-facts{
-      left: -100%;
+      font-size: 1.4em;
+      left: calc(-100% - 10px);
+      .q-num{
+        font-family: 'avg_bold';
+      }
     }
     .fact{
       h4{
@@ -503,7 +533,7 @@ input[type="checkbox"]{
     right: 70%;
     @include transition(1s,ease-in-out);
     .understand{
-      left: 100%;
+      left: calc(100% + 10px);
     }
     .assess{
       position: absolute;
@@ -512,7 +542,7 @@ input[type="checkbox"]{
     }
     .fact-group{
       .assessment-facts{
-        left: 100%;
+        left: calc(100% + 10px);
       }
       .education-facts{
         left: 0;
@@ -550,14 +580,15 @@ input[type="checkbox"]{
 }
 .in{
   visibility: visible;
-  opacity: 1;
+  opacity: 1 !important;
   @include transform(translateY(0));
-  @include transition(1s,ease-out);
+  @include transition(1s,ease-in-out);
 }
 .out-up{
   visibility: hidden;
   opacity: 0;
-  @include transform(translateY(-40px));
+  @include transform-origin(50% 200%);
+  @include transform(perspective(1000px) translateY(-40px) rotateX(20deg));
   @include transition(.5s,ease-in);
 }
 footer{

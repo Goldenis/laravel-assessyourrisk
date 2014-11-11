@@ -19,6 +19,7 @@
       <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+      <div class="border"></div>
   <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
   <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
     <!-- INTRO -->
@@ -54,7 +55,7 @@
         </div>
         <div class="education-facts">
           <div class="fact">
-            <h5><span class="data-number">Q: 1 of 15</span> <br>Do you have breasts and/or ovaries?</h5>
+            <span class="q-num">Q: 1 of 15</span> <br>Do you have breasts and/or ovaries?
           </div>
         </div>
       </div>
@@ -334,7 +335,7 @@
           <h3>Maintain a healthy weight and reduce your fat intake. </h3>
           <h3>There is a clear link between obesity and breast cancer because extra fatty tissue leads to extra estrogen production, which leads to an increased risk of breast cancer.</h3>
         </div>
-        <button class="pledge">Pledge to lose weight</button>
+        <button class="pledge">Pledge to maintain a healthy weight</button>
       </div>
 
       <div class="vignette">
@@ -351,7 +352,7 @@
         <div class="headlines">
           <h3>If it makes sense for you, breastfeeding for 1-2 years, not necessarily consecutively, may lower your breast cancer risk by decreasing the number of periods you have over the course of your life.</h3>
         </div>
-        <button class="sub">Pledge to Breastfeed</button>
+        <button class="pledge">Pledge to Breastfeed</button>
       </div>
 
       <div class="vignette">

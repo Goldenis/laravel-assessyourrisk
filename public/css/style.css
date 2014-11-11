@@ -154,6 +154,25 @@ img {
    Author: Nick Jones / The Experiment
    ========================================================================== */
 }
+.border {
+  position: fixed;
+  border: 15px solid #ccc;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.border.white {
+  border: 10px solid #fff;
+}
 .content {
   position: relative;
   width: 100%;
@@ -177,21 +196,19 @@ img {
   border-radius: 50%;
   background: #ccc;
   margin-right: 20px;
-  -webkit-transition: all 0.7s 0 ;
-  -moz-transition: all 0.7s 0 ;
-  -o-transition: all 0.7s 0 ;
-  -ms-transition: all 0.7s 0 ;
-  transition: all 0.7s 0 ;
-  -moz-transition-duration: 0.7s;
+  border: 5px solid #ccc;
+  -webkit-transition: all 0.4s 0 ;
+  -moz-transition: all 0.4s 0 ;
+  -o-transition: all 0.4s 0 ;
+  -ms-transition: all 0.4s 0 ;
+  transition: all 0.4s 0 ;
+  -moz-transition-duration: 0.4s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  vertical-align: center;
 }
 .dot.active {
   background: #d7006d;
-  width: 20px;
-  height: 20px;
-  top: 5px;
+  border: 10px solid #d7006d;
 }
 header {
   width: 100%;
@@ -436,6 +453,7 @@ input[type="checkbox"] {
   color: #fff;
   left: 10%;
   top: 10%;
+  opacity: 0;
 }
 .education .pledge {
   position: absolute;
@@ -444,7 +462,7 @@ input[type="checkbox"] {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: 55px;
+  bottom: 58px;
 }
 .education .vignette {
   width: 100%;
@@ -458,6 +476,7 @@ input[type="checkbox"] {
   overflow: hidden;
   height: 700px;
   background: #d7006d;
+  border-left: 10px solid #fff;
 }
 .education .video img {
   opacity: 0.9;
@@ -496,6 +515,15 @@ input[type="checkbox"] {
   left: 30%;
 }
 .arrow {
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  left: 0;
   margin-top: 1em;
 }
 .right-column {
@@ -506,22 +534,22 @@ input[type="checkbox"] {
   height: 100%;
   color: #fff;
   z-index: 2;
-  -webkit-transition: all 0.5s 0 ease-in-out;
-  -moz-transition: all 0.5s 0 ease-in-out;
-  -o-transition: all 0.5s 0 ease-in-out;
-  -ms-transition: all 0.5s 0 ease-in-out;
-  transition: all 0.5s 0 ease-in-out;
-  -moz-transition-duration: 0.5s;
+  -webkit-transition: all 1s 0 ease-in-out;
+  -moz-transition: all 1s 0 ease-in-out;
+  -o-transition: all 1s 0 ease-in-out;
+  -ms-transition: all 1s 0 ease-in-out;
+  transition: all 1s 0 ease-in-out;
+  -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
 .right-column .toggle-box {
   width: 100%;
   padding: 0 10%;
-  background: #f6323e;
   height: 40%;
   overflow: hidden;
   width: 100%;
+  background: #fff;
   -webkit-transition: all 0.2s 0 ease-out;
   -moz-transition: all 0.2s 0 ease-out;
   -o-transition: all 0.2s 0 ease-out;
@@ -532,15 +560,12 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
   cursor: pointer;
 }
-.right-column .toggle-box:hover {
-  background-color: #d7006d;
-}
 .right-column .toggle-box .understand {
   position: absolute;
   height: 100%;
   width: 100%;
-  padding: 45px;
-  padding-top: 30px;
+  padding: 55px 45px;
+  background: #f6323e;
   top: 0;
   left: 0;
   -webkit-transition: all 1s 0 ease-in-out;
@@ -551,6 +576,13 @@ input[type="checkbox"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  border-bottom: 10px solid #fff;
+}
+.right-column .toggle-box .understand:hover {
+  background-color: #d7006d;
+}
+.right-column .toggle-box .understand:hover .arrow {
+  left: 10px;
 }
 .right-column .toggle-box .assess {
   position: absolute;
@@ -559,9 +591,10 @@ input[type="checkbox"] {
   background: #ffb4aa;
   color: #d7006d;
   padding: 45px;
-  left: -100%;
+  left: calc(-100% - 10px);
+  border-bottom: 10px solid #fff;
   top: 0;
-  padding-top: 30px;
+  padding-top: 50px;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;
@@ -571,15 +604,21 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
+.right-column .toggle-box .assess:hover {
+  background-color: #fdd5ce;
+}
+.right-column .toggle-box .assess:hover .arrow {
+  left: -10px;
+}
 .right-column .fact-group {
   float: right;
   padding: 45px;
-  background: #d7006d;
   height: 60%;
   width: 100%;
   overflow: hidden;
 }
 .right-column .fact-group .education-facts, .right-column .fact-group .assessment-facts {
+  background: #d7006d;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -596,7 +635,11 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .right-column .fact-group .education-facts {
-  left: -100%;
+  font-size: 1.4em;
+  left: calc(-100% - 10px);
+}
+.right-column .fact-group .education-facts .q-num {
+  font-family: 'avg_bold';
 }
 .right-column.in {
   right: 0;
@@ -613,7 +656,7 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .right-column.left .understand {
-  left: 100%;
+  left: calc(100% + 10px);
 }
 .right-column.left .assess {
   position: absolute;
@@ -621,7 +664,7 @@ input[type="checkbox"] {
   left: 0;
 }
 .right-column.left .fact-group .assessment-facts {
-  left: 100%;
+  left: calc(100% + 10px);
 }
 .right-column.left .fact-group .education-facts {
   left: 0;
@@ -667,16 +710,16 @@ input[type="checkbox"] {
 }
 .in {
   visibility: visible;
-  opacity: 1;
+  opacity: 1 !important;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: all 1s 0 ease-out;
-  -moz-transition: all 1s 0 ease-out;
-  -o-transition: all 1s 0 ease-out;
-  -ms-transition: all 1s 0 ease-out;
-  transition: all 1s 0 ease-out;
+  -webkit-transition: all 1s 0 ease-in-out;
+  -moz-transition: all 1s 0 ease-in-out;
+  -o-transition: all 1s 0 ease-in-out;
+  -ms-transition: all 1s 0 ease-in-out;
+  transition: all 1s 0 ease-in-out;
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
@@ -684,10 +727,12 @@ input[type="checkbox"] {
 .out-up {
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translateY(-40px);
-  -moz-transform: translateY(-40px);
-  -o-transform: translateY(-40px);
-  transform: translateY(-40px);
+  -webkit-transform-origin: 50% 200%;
+  -moz-transform-origin: 50% 200%;
+  -webkit-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
+  -moz-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
+  -o-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
+  transform: perspective(1000px) translateY(-40px) rotateX(20deg);
   -webkit-transition: all 0.5s 0 ease-in;
   -moz-transition: all 0.5s 0 ease-in;
   -o-transition: all 0.5s 0 ease-in;

@@ -97,8 +97,10 @@ $headline-font: 'avg_bold', sans-serif;
 $bgColor: #fff;
 $darkColor: #555558;
 $pink: #D7006D;
+$nude-light: #fdd5ce;
 $nude: #FFB4AA;
 $red: #F6323E;
+$light-gray: #ccc;
 
 $darkColor50: rgba(6, 6, 6, .50);
 $highlightColor: red;
@@ -117,8 +119,10 @@ $borderColor: #494547;
   padding: 0;
   -webkit-font-smoothing:antialiased;
 }
-html { font-size: 100%; width: 100%; height:100%; background:$bgColor; -webkit-font-smoothing:antialiased;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:optimizeLegibility}
-html, button, input, select, textarea { @include body-font(1em); color: $darkColor; }
+html { font-size: 100%; width: 100%; height:100%; background: $bgColor; -webkit-font-smoothing:antialiased;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:optimizeLegibility}
+html, button, input, select, textarea { 
+  @include body-font(1em); color: $darkColor;
+}
 body { overflow-y: scroll; margin: 0; width: 100%; height:100%; font-size: 1em; line-height: 1.4; @include body-font(16px);
 }
 
@@ -155,6 +159,18 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
    Author: Nick Jones / The Experiment
    ========================================================================== */
 
+.border{
+  position: fixed;
+  border: 15px solid $light-gray;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  @include transition(.3s);
+  &.white{
+    border: 10px solid #fff;
+  }
+}
 .content{
   position: relative;
   width: 100%;
@@ -166,23 +182,21 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
   position: absolute;
   bottom: 180px;
   left: 60px;
-
 }
 .dot{
   color: #ccc;
-  display: block;
+  display: inline-block;
   position: relative;
   width: 7px;
   height: 7px;
-  @include rounded(7px);
-  background: #ccc;
-  float: left;
-  margin-right: 30px;
-  @include transition(.2s);
+  @include rounded(50%);
+  background: $light-gray;
+  margin-right: 20px;
+  border: 5px solid $light-gray;
+  @include transition(.4s);
   &.active{
     background: $pink;
-    width: 10px;
-    height: 10px;
+    border: 10px solid $pink;
   }
 }
 header{
@@ -196,7 +210,7 @@ h1,h2,h3,h4,h5{
   font-weight: normal;
 }
 h1{
-  font-size: 6em;
+  font-size: 5em;
 }
 h2{
  font-size: 5em; 
@@ -212,12 +226,12 @@ h5{
 }
 button{
   padding: 15px 35px;
-  background: $red;
+  background: $pink;
   outline: none;
   border: none;
   color: #fff;
   font-family: "avg_bold";
-  margin: 1em .5em 1em 0;
+  margin: 2em .5em 1em 0;
   @include rounded(30px);
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -226,16 +240,16 @@ button{
   cursor: pointer;
   @include transition(.2s);
   &:hover{
-    background: $pink;
+    background: $red;
   }
   &.sub{
     font-size: .8em;
-    color: $red;
+    color: $pink;
     background: #fff;
-    border: 3px solid $red;
+    border: 3px solid $pink;
     &:hover{
-      color: $pink;
-      border-color: $pink;
+      color: $red;
+      border-color: $red;
     }
   }
 }
@@ -248,16 +262,30 @@ button{
 }
 .checkbox{
   margin: 1em 0;
+  .label{
+
+  }
 }
 input[type="checkbox"]{
   margin: 0 8px 0 2px;
   top: 4px;
   float: left;
+  z-index: 20;
 }
 .logo{
   position: absolute;
   bottom: 50px;
   left: 60px;
+  opacity: 0;
+  @include transition(.5s);
+}
+.logo-white{
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  opacity: 0;
+  z-index: 2000;
+  @include transition(.5s);
 }
 .asterisk{
   color: $red;
@@ -287,12 +315,17 @@ input[type="checkbox"]{
   }
 }
 .section-title{
+  display: inline-block;
   font-size: 1em;
   font-family: "avg_bold";
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(25,25,25,.2);
+  z-index: 2;
 }
 .intro{
   width: 100%;
   padding: 10%;
+  z-index: 2;
 }
 .assessment{
   width: 70%;
@@ -309,6 +342,7 @@ input[type="checkbox"]{
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  width: 70%;
   @include transition(.4s);
   top: 150px;
 }
@@ -318,38 +352,124 @@ input[type="checkbox"]{
   height: 100%;
   top: 0;
   left: 100%;
+  .btn-continue,
+  .scroll{
+    opacity: 1;
+    position: absolute;
+    @include centerH;
+    bottom: 35px;
+  }
+  .scroll{
+    font-size: 2em;
+    font-family: 'avg_bold';
+    color: $pink;
+    bottom: 120px;
+  }
+  .education-menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 143;
+    @include transition(1s,ease-in-out);
+    &.out{
+      left: 100%;
+    }
+  }
+  .module{
+    width: 100%;
+    background: $red;
+    color: #fff;
+    padding: 50px 10%;
+    height: 33.333%;
+    cursor: pointer;
+    border-left: 10px solid #fff;
+    border-top: 10px solid #fff;
+    @include transition(.2s);
+    &:last-of-type{
+      border-bottom: 10px solid #fff;
+    }
+    &:hover{
+      background: $pink;
+    }
+    .how{
+      border-bottom: 2px solid rgba(255,255,255,.2);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    .how,.effect{
+      font-size: 1em;
+      line-height: 1em;
+      font-family: 'avg_bold';
+    }
+    h1{
+      color: #fff;
+    }
+  }
+  .section-title{
+    color: #fff;
+    left: 10%;
+    top: 10%;
+    opacity: 0;
+    border-bottom: 2px solid rgba(255,255,255,.2);
+  }
+  .pledge{
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    bottom: 20%;
+  }
   .vignette{
     width: 100%;
-    height: 800px;
+    height: 100%;
     padding-top: 600px;
   }
   .video{
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 500px;
-    background: $darkColor;
+    width: 100000px;
+    overflow: hidden;
+    height: 80%;
+    max-height: 700px;
+    min-height: 500px;
+    background: $pink;
+    border-left: 10px solid #fff;
+    img{
+      opacity: .9;
+      display: inline;
+      height: 700px;
+    }
   }
   .headlines{
     color: #fff;
     position: absolute;
     width: 100%;
     z-index: 12;
-    top: 0;
+    top: 260px;
+    height: 100%;
     h3{
-      font-size: 2em;
+      font-size: 2.5em;
       position: absolute;
       visibility: hidden;
-      top: 20px;
-      left: 20px;
-      &:first-of-type{
+      opacity: 0;
+      left: 10%;
+      width: 80%;
+      @include transition(.4s);
+      &.active{
         visibility: visible;
+        opacity: 1;
       }
     }
   }
   &.in{
     left: 30%;
   }
+}
+.arrow{
+  @include transition(.3s,ease-out);
+  left: 0;
+  margin-top: 1em;
 }
 .right-column{
   position: absolute;
@@ -358,36 +478,86 @@ input[type="checkbox"]{
   width: 30%;
   height: 100%;
   color: #fff;
-  @include transition(.5s,ease-in-out);
+  z-index: 2;
+  @include transition(1s,ease-in-out);
   .toggle-box{
     width: 100%;
-    padding: 10%;
-    background: $red;
-    height: 30%;
+    padding: 0 10%;
+    height: 40%;
     overflow: hidden;
     width: 100%;
+    background: #fff;
     @include transition(.2s,ease-out);
     cursor: pointer;
-    &:hover{
-      background-color: $pink;
-    }
     .understand{
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 10%;
-      top: 30px;
+      padding: 55px 45px;
+      background: $red;
+      top: 0;
       left: 0;
       @include transition(1s,ease-in-out);
+      border-bottom: 10px solid #fff;
+      &:hover{
+        background-color: $pink;
+        .arrow{
+          left: 10px;
+        }
+      }
     }
     .assess{
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 10%;
-      left: -100%;
-      top: 30px;
+      background: $nude;
+      color: $pink;
+      padding: 45px;
+      left: calc(-100% - 10px);
+      border-bottom: 10px solid #fff;
+      top: 0;
+      padding-top: 50px;
       @include transition(1s,ease-in-out);
+      &:hover{
+        background-color: $nude-light;
+        .arrow{
+          left: -10px;
+        }
+      }
+    }
+  }
+  .fact-group{
+    float: right;
+    padding: 45px;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    .education-facts,
+    .assessment-facts{
+      background: $pink;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding: 45px;
+      @include transition(1s,ease-in-out);
+    }
+    .education-facts{
+      font-size: 1.4em;
+      left: calc(-100% - 10px);
+      cursor: pointer;
+      .q-num{
+        font-family: 'avg_bold';
+      }
+      &:hover{
+        background-color: $red;
+      }
+    }
+    .fact{
+      h4{
+
+      }
     }
   }
   &.in{
@@ -397,24 +567,25 @@ input[type="checkbox"]{
     right: 70%;
     @include transition(1s,ease-in-out);
     .understand{
-      left: 100%;
+      left: calc(100% + 10px);
     }
     .assess{
       position: absolute;
       width: 100%;
       left: 0;
-      top: 30px;
     }
-  }
-}
-.fact-group{
-  float: right;
-  padding: 10%;
-  background: $pink;
-  height: 70%;
-  .fact{
-    h4{
+    .fact-group{
+      .assessment-facts{
+        left: calc(100% + 10px);
+      }
+      .education-facts{
+        left: 0;
+      }
+      .fact{
+        h4{
 
+        }
+      }
     }
   }
 }
@@ -426,7 +597,7 @@ input[type="checkbox"]{
   opacity: 0;
   width: 100%;
   height: 100%;
-  @include transform(translateY(50px));
+  padding: 60px 0;
   @include transition(.5s,ease-out);
   .prompt{
     width: 80%;
@@ -436,21 +607,22 @@ input[type="checkbox"]{
   &.in{
     @include transition(1s,ease-out,all,.5s);
   }
-  padding: 60px 0;
 }
 .question{
+  @include transform(translateY(50px));
   top: 0px;
 }
-&.in{
+.in{
   visibility: visible;
-  opacity: 1;
+  opacity: 1 !important;
   @include transform(translateY(0));
-  @include transition(1s,ease-out);
+  @include transition(1s,ease-in-out);
 }
-&.out{
+.out-up{
   visibility: hidden;
   opacity: 0;
-  @include transform(translateY(-40px));
+  @include transform-origin(50% 200%);
+  @include transform(perspective(1000px) translateY(-40px));
   @include transition(.5s,ease-in);
 }
 footer{
@@ -460,6 +632,77 @@ footer{
   display: none;
 }
 
+@media (max-width: 1000px){
+  body{
+    font-size: .6em;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  .intro{
+    padding-top: 15%;
+  }
+  .education,
+  .assessment{
+    width: 100%;
+  }
+  .assessment{
+    padding: 30px;
+  }
+  .question{
+    padding-top: 30px;
+  }
+  .assessment-intro{
+    top: 70px;
+  }
+  .education{
+    .video{
+      height: 62%;
+      min-height: 200px;
+    }
+    .headlines{
+      top: 100px;
+      h3{
+        font-size: 2em;
+      }
+    }
+    &.in{
+      left: 0;
+    }
+  }
+  .right-column{
+    left: 95%;
+    &.left{
+      left: 95%;
+    }
+  }
+  .dots{
+    left: 30px;
+    bottom: 100px;
+  }
+  .dot{
+    width: 2px;
+    height: 2px;
+    margin-right: 4px;
+    border-width: 3px;
+    &.active{
+      border-width: 5px;
+    }
+  }
+  .logo{
+    left: 30px;
+    bottom: 20px;
+    img{
+      width: 100px;
+    }
+  }
+  .logo-white{
+    display: none;
+  }
+}
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */

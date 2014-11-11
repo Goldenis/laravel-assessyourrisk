@@ -801,6 +801,12 @@ footer {
   .assessment {
     padding: 30px;
   }
+  .question {
+    padding-top: 30px;
+  }
+  .assessment-intro {
+    top: 70px;
+  }
   .education .video {
     height: 62%;
     min-height: 200px;
@@ -817,12 +823,9 @@ footer {
   .right-column.left {
     left: 95%;
   }
-  .right-column .question {
-    padding-top: 30px;
-  }
   .dots {
     left: 30px;
-    bottom: 120px;
+    bottom: 100px;
   }
   .dot {
     width: 2px;

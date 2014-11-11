@@ -353,8 +353,11 @@ input[type="checkbox"] {
   padding: 20px 30px;
 }
 .section-title {
+  display: inline-block;
   font-size: 1em;
   font-family: "avg_bold";
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(25, 25, 25, .2);
   z-index: 2;
 }
 .intro {
@@ -478,6 +481,7 @@ input[type="checkbox"] {
   left: 10%;
   top: 10%;
   opacity: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 .education .pledge {
   position: absolute;

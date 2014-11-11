@@ -92,7 +92,7 @@
   }
   function _registerEventListeners() {
     $('.intro').on('click',function(){
-      $(this).addClass('hidden')
+      $(this).addClass('out-up')
       $('.right-column').addClass('in')
       $('.assessment').addClass('in');
       $('.border').addClass('white');
@@ -101,6 +101,7 @@
 
     });
     $('.assessment-intro button').on('click',function() {
+      $('.assessment-intro').addClass('out-up');
       $('.assessment-intro').removeClass('in');
       $('.question').eq(0).addClass('in');
       $('.dot').eq(_currentQuestion).addClass('active')

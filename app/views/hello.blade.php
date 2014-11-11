@@ -346,7 +346,7 @@
           <h3>There is a known link between alcohol and breast cancer.</h3>
           <h3>Limit alcohol to one drink per day, or avoid it completely.</h3>
         </div>
-        <button class="pledge">Pledget to Drink Less</button>
+        <button class="pledge">Pledge to Drink Less</button>
       </div>
 
       <div class="vignette">

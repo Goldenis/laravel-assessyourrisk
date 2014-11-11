@@ -1,28 +1,18 @@
-<!-- 
-@include('partials.header')
-@include('partials.intro')
-@include('partials.assessment')
-@include('partials.understand')
-@include('partials.facts')
-@include('partials.education')
-@include('partials.footer')  
--->
-
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title></title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=0, minimal-ui" />
-      <link rel="stylesheet" href="css/style.css">
-      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-      <div class="border"></div>
-  <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
-  <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=0, minimal-ui" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <div class="border"></div>
+    <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
+    <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">

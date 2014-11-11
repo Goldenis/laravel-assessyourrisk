@@ -729,10 +729,10 @@ input[type="checkbox"] {
   opacity: 0;
   -webkit-transform-origin: 50% 200%;
   -moz-transform-origin: 50% 200%;
-  -webkit-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
-  -moz-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
-  -o-transform: perspective(1000px) translateY(-40px) rotateX(20deg);
-  transform: perspective(1000px) translateY(-40px) rotateX(20deg);
+  -webkit-transform: perspective(1000px) translate3d(0, 0px, -100px);
+  -moz-transform: perspective(1000px) translate3d(0, 0px, -100px);
+  -o-transform: perspective(1000px) translate3d(0, 0px, -100px);
+  transform: perspective(1000px) translate3d(0, 0px, -100px);
   -webkit-transition: all 0.5s 0 ease-in;
   -moz-transition: all 0.5s 0 ease-in;
   -o-transition: all 0.5s 0 ease-in;

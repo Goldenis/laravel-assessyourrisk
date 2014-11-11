@@ -588,7 +588,7 @@ input[type="checkbox"]{
   visibility: hidden;
   opacity: 0;
   @include transform-origin(50% 200%);
-  @include transform(perspective(1000px) translateY(-40px) rotateX(20deg));
+  @include transform(perspective(1000px) translateY(-40px));
   @include transition(.5s,ease-in);
 }
 footer{

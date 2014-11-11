@@ -1,59 +1,69 @@
 $(document).ready(
 		
 		function() {
-
-			// Touch events
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove
-			isTouchDevice = false, // set to true on touchstart
 			scaleBase = $('#scale-base'),
 			rot = 0;
-
-			$('.scale-container').bind('touchstart, mousedown', function(e) {
+			var touch;
+			
+			$('.scale-container').mousedown (function(e) {
 				e.preventDefault();
 				moved = 0;
-				var touch;
-				if (e.type == 'mousedown') {
-					touch = e;
-				} else {
-					touch = e.originalEvent.touches[0]
-					|| e.originalEvent.changedTouches[0];
-				}
+				touch = e;
 				touchStartPos = touch.pageX;
-				startTrackingTouch();
-			})
+				startTrackingTouch(false);
+			});
 			
-			function startTrackingTouch() {
-				$('body').bind('touchmove, mousemove', function(e) {
-					e.preventDefault();
-					var touch;
-					if (e.type == 'mousemove') {
-						touch = e;
-					} else {
+			$('.scale-container').bind('touchstart', function(e) {
+				e.preventDefault();
+				moved = 0;
+				touch = e.originalEvent.touches[0]
+					|| e.originalEvent.changedTouches[0];
+				touchStartPos = touch.pageX;
+				startTrackingTouch(true);
+			});
+			
+			function startTrackingTouch(isTouch) {
+				var currentX;
+				
+				if (isTouch) {
+					$(window).bind('touchmove', function(e) {
+						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
-					}
-					var currentX = touch.pageX;
-					moved = currentX - touchStartPos;
-					rot += moved/2;
-					rotate(scaleBase, rot);
-					touchStartPos = currentX;
-				});
-				$(window).bind('touchend, mouseup', function(e) {
-					e.preventDefault();
-					var touch;
-					if (e.type == 'mouseup') {
+						currentX = touch.pageX;
+						moved = currentX - touchStartPos;
+						rot += moved/2;
+						rotate(scaleBase, rot);
+						touchStartPos = currentX;
+					});
+					
+					$(window).bind('touchend', function(e) {
+						e.preventDefault();
+						endTrackingTouch();
+					});
+					
+				} else {
+					
+					$(window).mousemove(function(e) {
+						e.preventDefault();
 						touch = e;
-					} else {
-						touch = e.originalEvent.touches[0]
-						|| e.originalEvent.changedTouches[0];
-					}
-					endTrackingTouch();
-				})
+						currentX = touch.pageX;
+						moved = currentX - touchStartPos;
+						rot += moved/2;
+						rotate(scaleBase, rot);
+						touchStartPos = currentX;
+					});
+					
+					$(window).mouseup(function(e) {
+						e.preventDefault();
+						endTrackingTouch();
+					});
+				}
 			}
 			
 			function endTrackingTouch() {
-				$( "body" ).unbind();
 				$( window ).unbind();
 			}
 			

@@ -597,6 +597,7 @@ input[type="checkbox"]{
   opacity: 0;
   width: 100%;
   height: 100%;
+  padding: 60px 0;
   @include transition(.5s,ease-out);
   .prompt{
     width: 80%;
@@ -606,7 +607,6 @@ input[type="checkbox"]{
   &.in{
     @include transition(1s,ease-out,all,.5s);
   }
-  padding: 60px 0;
 }
 .question{
   @include transform(translateY(50px));
@@ -649,6 +649,12 @@ footer{
   .assessment{
     padding: 30px;
   }
+  .question{
+    padding-top: 30px;
+  }
+  .assessment-intro{
+    top: 70px;
+  }
   .education{
     .video{
       height: 62%;
@@ -669,7 +675,7 @@ footer{
   }
   .dots{
     left: 30px;
-    bottom: 120px;
+    bottom: 100px;
   }
   .dot{
     width: 2px;

@@ -712,6 +712,7 @@ input[type="checkbox"] {
   opacity: 0;
   width: 100%;
   height: 100%;
+  padding: 60px 0;
   -webkit-transition: all 0.5s 0 ease-out;
   -moz-transition: all 0.5s 0 ease-out;
   -o-transition: all 0.5s 0 ease-out;
@@ -720,7 +721,6 @@ input[type="checkbox"] {
   -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  padding: 60px 0;
 }
 .question .prompt, .vignette .prompt {
   width: 80%;
@@ -816,6 +816,9 @@ footer {
   }
   .right-column.left {
     left: 95%;
+  }
+  .right-column .question {
+    padding-top: 30px;
   }
   .dots {
     left: 30px;

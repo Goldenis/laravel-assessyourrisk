@@ -68,7 +68,7 @@ $(document).ready(
 				currentY = touch.pageY;
 				moved = currentY - touchStartPos;
 				slide += moved;
-				slideH(heightBase, slide, .3);
+				slideH(heightBase, slide, 1);
 				touchStartPos = currentY;
 			}
 			

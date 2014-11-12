@@ -34,11 +34,7 @@ $(document).ready(
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
-						currentX = touch.pageX;
-						moved = currentX - touchStartPos;
-						rot += moved/2;
-						rotate(weightBase, rot, .3);
-						touchStartPos = currentX;
+						move(touch);
 					});
 					
 					$(window).bind('touchend', function(e) {
@@ -51,11 +47,7 @@ $(document).ready(
 					$(window).mousemove(function(e) {
 						e.preventDefault();
 						touch = e;
-						currentX = touch.pageX;
-						moved = currentX - touchStartPos;
-						rot += moved/2;
-						rotate(weightBase, rot, .3);
-						touchStartPos = currentX;
+						move(touch);
 					});
 					
 					$(window).mouseup(function(e) {
@@ -63,6 +55,14 @@ $(document).ready(
 						endTrackingTouch();
 					});
 				}
+			}
+			
+			function move(touch) {
+				currentX = touch.pageX;
+				moved = currentX - touchStartPos;
+				rot += moved/2;
+				rotate(weightBase, rot, 1);
+				touchStartPos = currentX;
 			}
 			
 			function endTrackingTouch() {

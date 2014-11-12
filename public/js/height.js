@@ -8,15 +8,18 @@ $(document).ready(
 			totalHeight = 1298,
 			inc = 35,
 			startPos = topPos - (inc * 14),
+			bottomPos = topPos - (inc * 36),
 			slide = startPos,
 			moved;
 			var touch;
-			
+			var spots = [];
+			for (var i=0; i<36; i++) {
+				spots.push(topPos - (inc * i));
+			}
 			
 			TweenLite.to(heightBase, 1, {css:{top:startPos}, ease:Power3.easeOut});
 			
 			heightOverlay.mousedown (function(e) {
-				console.log('heightOverlay.mousedown');
 				e.preventDefault();
 				moved = 0;
 				touch = e;
@@ -59,9 +62,27 @@ $(document).ready(
 					
 					$(window).mouseup(function(e) {
 						e.preventDefault();
+						//slide
+						if (slide > topPos) {
+							slide = topPos;
+						} else if (slide < bottomPos) {
+							slide = bottomPos;
+						} else {
+							slide = closestMatch(slide);
+						}
+						slideH(heightBase, slide, 1);
 						endTrackingTouch();
 					});
 				}
+			}
+			
+			function closestMatch(slide) {
+				var goal = slide;
+				var closest = spots.reduce(function (prev, curr) {
+				  return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
+				});
+				
+				return closest;
 			}
 			
 			function move(touch) {
@@ -79,7 +100,6 @@ $(document).ready(
 			function slideH(obj, degree, time) {
 				TweenLite.killTweensOf(obj);
 				TweenLite.to(obj, time, {css:{top:degree}, ease:Power3.easeOut});
-				console.log(degree);
 	        }
 			
 		});

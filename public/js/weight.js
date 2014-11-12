@@ -9,7 +9,6 @@ $(document).ready(
 			var touch;
 			
 			weightOverlay.mousedown (function(e) {
-				console.log('weightOverlay.mousedown');
 				e.preventDefault();
 				moved = 0;
 				touch = e;

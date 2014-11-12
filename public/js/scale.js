@@ -4,10 +4,12 @@ $(document).ready(
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove
 			scaleBase = $('#scale-base'),
+			scaleOverlay = $('#scale-overlay'),
 			rot = 0;
 			var touch;
 			
-			$('.scale-container').mousedown (function(e) {
+			scaleOverlay.mousedown (function(e) {
+				console.log('scaleOverlay.mousedown');
 				e.preventDefault();
 				moved = 0;
 				touch = e;
@@ -15,7 +17,7 @@ $(document).ready(
 				startTrackingTouch(false);
 			});
 			
-			$('.scale-container').bind('touchstart', function(e) {
+			scaleOverlay.bind('touchstart', function(e) {
 				e.preventDefault();
 				moved = 0;
 				touch = e.originalEvent.touches[0]
@@ -35,7 +37,7 @@ $(document).ready(
 						currentX = touch.pageX;
 						moved = currentX - touchStartPos;
 						rot += moved/2;
-						rotate(scaleBase, rot);
+						rotate(scaleBase, rot, .3);
 						touchStartPos = currentX;
 					});
 					
@@ -52,7 +54,7 @@ $(document).ready(
 						currentX = touch.pageX;
 						moved = currentX - touchStartPos;
 						rot += moved/2;
-						rotate(scaleBase, rot);
+						rotate(scaleBase, rot, .3);
 						touchStartPos = currentX;
 					});
 					
@@ -67,8 +69,9 @@ $(document).ready(
 				$( window ).unbind();
 			}
 			
-			function rotate(obj, degree) {
-				TweenLite.to('#scale-base', 1, {css:{rotation:degree}, ease:Power3.easeOut});
+			function rotate(obj, degree, time) {
+				TweenLite.killTweensOf(obj);
+				TweenLite.to(obj, time, {css:{rotation:degree}, ease:Power3.easeOut});
 	        }
 			
 		});

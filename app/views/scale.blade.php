@@ -12,7 +12,9 @@ body {
 .scale-container {
 	width: 590px;
 	height: 590px;
-	position: relative;
+	left: -130px;
+	top: 0px;
+	position: absolute;
     -webkit-mask: url(/img/assessment/scale/scale_mask.png) no-repeat;
     -webkit-mask-position: 0px 0px;
     /*
@@ -41,6 +43,7 @@ body {
     bottom:0;
     background-repeat:no-repeat;
     background-image: url(img/assessment/scale/scale_overlay.png);
+    z-index: 1000;
 }
 
 </style>
@@ -67,7 +70,7 @@ body {
 	<script
 		src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
-	<script src="js/jam.js"></script>
+	<script src="js/scale.js"></script>
 
 </body>
 </html>

@@ -49,6 +49,7 @@ $(document).ready(
 					
 					$(window).bind('touchend', function(e) {
 						e.preventDefault();
+						endInteraction();
 						endTrackingTouch();
 					});
 					
@@ -62,15 +63,7 @@ $(document).ready(
 					
 					$(window).mouseup(function(e) {
 						e.preventDefault();
-						//slide
-						if (slide > topPos) {
-							slide = topPos;
-						} else if (slide < bottomPos) {
-							slide = bottomPos;
-						} else {
-							slide = closestMatch(slide);
-						}
-						slideH(heightBase, slide, 1);
+						endInteraction();
 						endTrackingTouch();
 					});
 				}
@@ -91,6 +84,17 @@ $(document).ready(
 				slide += moved;
 				slideH(heightBase, slide, 1);
 				touchStartPos = currentY;
+			}
+			
+			function endInteraction() {
+				if (slide > topPos) {
+					slide = topPos;
+				} else if (slide < bottomPos) {
+					slide = bottomPos;
+				} else {
+					slide = closestMatch(slide);
+				}
+				slideH(heightBase, slide, 1);
 			}
 			
 			function endTrackingTouch() {

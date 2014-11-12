@@ -3,13 +3,13 @@ $(document).ready(
 		function() {
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove
-			scaleBase = $('#scale-base'),
-			scaleOverlay = $('#scale-overlay'),
+			weightBase = $('#weight-base'),
+			weightOverlay = $('#weight-overlay'),
 			rot = 0;
 			var touch;
 			
-			scaleOverlay.mousedown (function(e) {
-				console.log('scaleOverlay.mousedown');
+			weightOverlay.mousedown (function(e) {
+				console.log('weightOverlay.mousedown');
 				e.preventDefault();
 				moved = 0;
 				touch = e;
@@ -17,7 +17,7 @@ $(document).ready(
 				startTrackingTouch(false);
 			});
 			
-			scaleOverlay.bind('touchstart', function(e) {
+			weightOverlay.bind('touchstart', function(e) {
 				e.preventDefault();
 				moved = 0;
 				touch = e.originalEvent.touches[0]
@@ -37,7 +37,7 @@ $(document).ready(
 						currentX = touch.pageX;
 						moved = currentX - touchStartPos;
 						rot += moved/2;
-						rotate(scaleBase, rot, .3);
+						rotate(weightBase, rot, .3);
 						touchStartPos = currentX;
 					});
 					
@@ -54,7 +54,7 @@ $(document).ready(
 						currentX = touch.pageX;
 						moved = currentX - touchStartPos;
 						rot += moved/2;
-						rotate(scaleBase, rot, .3);
+						rotate(weightBase, rot, .3);
 						touchStartPos = currentX;
 					});
 					

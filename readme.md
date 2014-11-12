@@ -1,1 +1,1 @@
-[ ![Codeship Status for TheExperiment/brighten](https://www.codeship.io/projects/1d99b190-3131-0132-6b2a-06ddeb2be7b5/status)](https://www.codeship.io/projects/40015)
+[ ![Codeship Status for TheExperiment/brighten](https://codeship.com/projects/9d8ab1b0-4cdb-0132-617b-0a390dea4bee/status)](https://codeship.com/projects/47266)

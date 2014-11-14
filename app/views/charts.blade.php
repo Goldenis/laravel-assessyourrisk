@@ -12,8 +12,8 @@
 </head>
 <body>
 	
-	<div id="donut-chart"></div>
-	
+	<div id="donut-chart1"></div>
+
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
@@ -23,18 +23,26 @@
 		src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
 	<script
 		src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+<!-- 	<script -->
+<!-- 		src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script> -->
 	<script
-		src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-		
+		src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>	
 	<script src="//d3js.org/d3.v3.min.js"></script>
-	<script src="js/chartbuilder.js"></script>
-
+	<script src="js/svg/DonutChartBuilder.js"></script>
+	<script src="js/svg/SVGHelper.js"></script>
+	
 </body>
 	<script type="text/javascript">
 		
 		$( document ).ready(function() {
-			//var im = new IntroModule();
-			//im.init('#numbers-svg-container');
+			var a = new DonutChartBuilder('#donut-chart1',
+						50, 
+						[100, 20, 30], 
+						['#f00', '#0f0', '#00f'], 
+						['10', '20', '30'], true);
+			$( window ).resize(function() {
+				a.updateDims();
+			});
 		});
 	</script>
 </html>

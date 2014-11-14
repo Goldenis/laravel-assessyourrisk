@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+@import "mixins";
+@import "typography";
+@import "modules";
+
+body{
+	font: 10px sans-serif $darkColor;
+	background-color: $white;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+#donut-chart {
+	width: 600px;
+	height: 400px;
+}

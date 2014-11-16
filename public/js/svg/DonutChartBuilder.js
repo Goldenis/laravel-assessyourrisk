@@ -11,7 +11,7 @@
 		values: [1],
 		colors: ['#ccc'],
 		labels: [''],
-		doTransitionIn: false
+		transitionType: false
 	};
 	
 	/*
@@ -25,17 +25,24 @@
      * @param doTransitionIn - Bool - do or dont transition in arc
      */
 	
-	var DonutChartBuilder = function(trg, thickness, values, colors, labels, doTransitionIn) {
+	var DonutChartBuilder = function(trg, thickness, values, colors, labels, transitionType) {
+		
 		this._trg = trg || defaults.trg;
 	    this._thickness = thickness || defaults.thickness;
 	    this._values = values || defaults.values;
 	    this._colors = colors || defaults.colors;
+	    SVGHelper.setAllRgb(this._colors); // inline converts to RGB objects
 	    this._labels = labels || defaults.labels;
-	    this._doTransitionIn = doTransitionIn || defaults.doTransitionIn;
+	    this._transitionType = transitionType || defaults.transitionType;
 	    this._width = $(this._trg).width();
 	    this._height = $(this._trg).height();
 	    this._radius = Math.min(this._width, this._height) / 2;
-	    this._process();
+	    
+	    if (transitionType) {
+	    	
+	    } else {
+	    	this._process();
+	    }
 	};
 	
 	/*
@@ -45,11 +52,38 @@
 
 	DonutChartBuilder.prototype.updateDims = function()  {
 		
+	}
+	
+	/*
+     * @public
+     * Update the dims on resize
+     */
+
+	DonutChartBuilder.prototype.updateDims = function()  {
 		this._width = $(this._trg).width();
 	    this._height = $(this._trg).height();
 	    this._radius = Math.min(this._width, this._height) / 2;
-	    $(this._trg).empty();
 	    this._process();
+	}
+	
+	/*
+     * @public
+     * 
+     * @param values - Array - values to be mapped to the chart
+ 
+     * Transition to values
+     */
+
+	DonutChartBuilder.prototype.transitionToValues = function(dur, thickness, values, colors)  {
+		
+		TweenLite.to(this, dur, {_thickness:thickness, onUpdate:this._process.bind(this)});
+		TweenLite.to(this._values, dur, values);
+		SVGHelper.setAllRgb(colors);
+		for (var i=0; i<this._colors.length; i++) {
+			var trg = this._colors[i];
+			var rep = colors[i];
+			TweenMax.to(trg, dur, {r:rep.r, g:rep.g, b:rep.b, roundProps:"r,g,b"});
+		}
 	}
 
 	/*
@@ -58,9 +92,10 @@
      */
 
 	DonutChartBuilder.prototype._process = function()  {
+		$(this._trg).empty();
 		
-		var scope = this;
-		this._colorRange = d3.scale.ordinal().range(this._colors);
+//		this._colorRange = d3.scale.ordinal().range(this._colors);
+		
 		this._arc = d3.svg.arc().outerRadius(this._radius).innerRadius(this._radius - this._thickness);
 		this._pie = d3.layout.pie().sort(null).value(function(d) {
 			return d.value;
@@ -72,17 +107,18 @@
 				"translate(" + this._width / 2 + "," + this._height / 2 + ")");
         
         this._data = this._getDataObj();
-
         this._g = this._svg.selectAll(".arc").data(this._pie(this._data)).enter().append("g").attr("class", "arc");
 
         this._g.append("path").attr("d", this._arc).style("fill",
-			function(d) {
-				return scope._colorRange(d.data.value);
-			});
-        
+			function(d, i) {
+        		return SVGHelper.rgbObjToRgbString(d.data.color);
+//        		return hexToRgbString(this._colors[i]);
+//        		return this._colors[i];
+//				return this._colorRange(d.data.value);
+			}.bind(this));
         this._g.append("text").attr("transform", function(d) {
-			return "translate(" + scope._arc.centroid(d) + ")";
-		}).attr("dy", ".35em").style("text-anchor", "middle")
+			return "translate(" + this._arc.centroid(d) + ")";
+		}.bind(this)).attr("dy", ".35em").style("text-anchor", "middle")
 				.text(function(d) {
 					return d.data.label;
 				});
@@ -94,6 +130,7 @@
     		var a = {};
     		a.label = this._labels[i % this._labels.length];
     		a.value = this._values[i % this._values.length];
+    		a.color = this._colors[i % this._colors.length];
     		d.push(a);
     	}
     	return d;

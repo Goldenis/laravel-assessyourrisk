@@ -1,4 +1,4 @@
-$(document).ready(
+var height = $(document).ready(
 		
 		function() {
 			var touchStartPos,
@@ -98,7 +98,8 @@ $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				$( window ).unbind();
+				// $( window ).unbind('mousemove');
+    //     $( window ).unbind('touchmove');
 			}
 			
 			function slideH(obj, degree, time) {

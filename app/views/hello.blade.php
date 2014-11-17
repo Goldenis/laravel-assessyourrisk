@@ -98,37 +98,36 @@
           <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9?</div>
           <div class="visual">
             <div class="prompt">What is your weight?</div>
-
-            <slider>10-400+lbs</slider>
-            <div class="prompt">What is your height?</div>
-
-            <slider>12-96"</slider>
+				<div class="weight-container">
+					<div id="weight-base"></div>
+					<div id="weight-overlay"></div>
+				</div>
+				<div class="height-container">
+					<div id="height-base"></div>
+					<div id="height-overlay"></div>
+				</div>
           </div>
-        
-          <div class="answers">
-            <button># lbs</button>
-            <button># "</button>
-          </div>
+          <br>
+          <button>Continue</button>
         </div>
 
 
         <div class="question">
-          <div class="prompt">Drag drink icon to the number of drinks per day you have. </div>
-          <div class="visual">Slider</div>
-        
-          <div class="answers">
-            <button>0</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>10</button>
+          <div class="prompt">Drag drink icon to the average number of drinks per day you have. (weekend included)</div>
+          <div class="bottle"><img src="img/assessment/bottle.png"></div>
+          <div class="answers drinks">
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink"><img src="img/assessment/drink_fill.png"></div>
           </div>
+          <button>Continue</button>
         </div>
 
 
@@ -310,7 +309,7 @@
       </div>
       <div class="section-title">Understand Your Risk / Lifestyle</div>
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>Women who get regular exercise may have a lower risk of breast cancer</h3>
           <h3>Although not all studies show this benefit, when the evidence is looked at as a whole, regular exercise appears to lower breast cancer risk by about 10 to 20 percent</h3>
@@ -323,7 +322,7 @@
 
 
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>Maintain a healthy weight and reduce your fat intake. </h3>
           <h3>There is a clear link between obesity and breast cancer because extra fatty tissue leads to extra estrogen production, which leads to an increased risk of breast cancer.</h3>
@@ -332,36 +331,40 @@
       </div>
 
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>There is a known link between alcohol and breast cancer.</h3>
           <h3>Limit alcohol to one drink per day, or avoid it completely.</h3>
+          <h3>These women have all pledged to drink less. Join or encourage them!</h3>
         </div>
         <button class="pledge">Pledge to Drink Less</button>
       </div>
 
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>If it makes sense for you, breastfeeding for 1-2 years, not necessarily consecutively, may lower your breast cancer risk by decreasing the number of periods you have over the course of your life.</h3>
+          <h3>These women have all pledged to breastfeed. Join or encourage them!</h3>
         </div>
         <button class="pledge">Pledge to Breastfeed</button>
       </div>
 
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>Smoking may increase the risk of breast cancer. </h3>
           <h3>We know how hard it can be to quit, but if you smoke, we ask that you commit to quit today and take advantage of Bright Pink’s smoke cessation resources online.</h3>
+          <h3>These women have all pledged to quit smoking. Join or encourage them!</h3>
         </div>
         <button class="pledge">Pledge to quit</button>
       </div>
 
       <div class="vignette">
-        <div class="video"><img src="img/modules/girl1.jpg"><img src="img/modules/girl2.jpg"><img src="img/modules/girl3.jpg"><img src="img/modules/girl4.jpg"></div>
+        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
           <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
           <h3> 5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
+          <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
         </div>
         <button class="pledge">Pledge to start birth control</button>
       </div>
@@ -377,9 +380,13 @@
     </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
         <script src="js/plugins.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/weight.js"></script>
+		<script src="js/height.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

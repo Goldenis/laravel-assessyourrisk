@@ -541,18 +541,19 @@ input[type="checkbox"] {
 .education .module {
   width: 100%;
   background: #f6323e;
+  background-size: cover;
   color: #fff;
   padding: 50px 10%;
   height: 33.333%;
   cursor: pointer;
   border-left: 10px solid #fff;
   border-top: 10px solid #fff;
-  -webkit-transition: all 0.2s 0 ;
-  -moz-transition: all 0.2s 0 ;
-  -o-transition: all 0.2s 0 ;
-  -ms-transition: all 0.2s 0 ;
-  transition: all 0.2s 0 ;
-  -moz-transition-duration: 0.2s;
+  -webkit-transition: all 0.4s 0 ease-out;
+  -moz-transition: all 0.4s 0 ease-out;
+  -o-transition: all 0.4s 0 ease-out;
+  -ms-transition: all 0.4s 0 ease-out;
+  transition: all 0.4s 0 ease-out;
+  -moz-transition-duration: 0.4s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
@@ -561,6 +562,8 @@ input[type="checkbox"] {
 }
 .education .module:hover {
   background: #d7006d;
+  border-left: 20px solid #fff;
+  border-top: 20px solid #fff;
 }
 .education .module .how {
   border-bottom: 2px solid rgba(255, 255, 255, .2);
@@ -574,6 +577,18 @@ input[type="checkbox"] {
 }
 .education .module h1 {
   color: #fff;
+}
+.education .module:nth-of-type(1) {
+  background: url('../img/education/lifestyle.jpg') center center;
+  background-size: cover;
+}
+.education .module:nth-of-type(2) {
+  background: url('../img/education/familyhistory.jpg') center center;
+  background-size: cover;
+}
+.education .module:nth-of-type(3) {
+  background: url('../img/education/knowyournormal.jpg') center center;
+  background-size: cover;
 }
 .education .section-title {
   color: #fff;

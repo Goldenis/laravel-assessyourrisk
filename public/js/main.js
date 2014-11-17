@@ -166,6 +166,7 @@
     })
     $('.module').on('click',function(){
       expandModule();
+      preRoll();
     })
     $('.vignette').on('click',function(){
       nextVignette();

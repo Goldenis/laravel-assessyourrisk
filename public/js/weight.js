@@ -1,5 +1,4 @@
-$(document).ready(
-		
+var weight = $(document).ready(
 		function() {
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove
@@ -65,7 +64,8 @@ $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				$( window ).unbind();
+				$( window ).unbind('mousemove');
+        $( window ).unbind('touchmove');
 			}
 			
 			function rotate(obj, degree, time) {

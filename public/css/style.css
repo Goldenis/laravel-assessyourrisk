@@ -373,6 +373,68 @@ input[type="checkbox"] {
   padding: 10%;
   z-index: 2;
 }
+.weight-container {
+  position: relative;
+  width: 590px;
+  height: 590px;
+  left: -130px;
+  top: 0px;
+  margin-top: 20px;
+  float: left;
+  -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+  -webkit-mask-position: 0px 0px;
+  overflow: hidden;
+}
+#weight-base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/assessment/scales/weight_base.png");
+}
+#weight-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/assessment/scales/weight_overlay.png");
+  z-index: 1000;
+}
+.height-container {
+  width: 146px;
+  height: 1298px;
+  left: -210px;
+  top: 0px;
+  margin-top: 40px;
+  position: relative;
+  float: left;
+  -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
+  -webkit-mask-position: 0px 0px;
+  overflow: hidden;
+}
+#height-base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/assessment/scales/height_base.png");
+}
+#height-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/assessment/scales/height_overlay.png");
+  z-index: 1001;
+}
 .assessment {
   width: 70%;
   height: 100%;
@@ -388,6 +450,42 @@ input[type="checkbox"] {
   -ms-transition: all 0.4s 0 ;
   transition: all 0.4s 0 ;
   -moz-transition-duration: 0.4s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.assessment .bottle {
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  left: 50px;
+}
+.assessment .drinks {
+  margin-top: 80px;
+}
+.assessment .drink {
+  width: 43px;
+  height: 78px;
+  background: url('../img/assessment/drink.png');
+  margin-right: 10px;
+  display: inline-block;
+}
+.assessment .drink:first-of-type {
+  opacity: 0.2;
+}
+.assessment .drink:first-of-type img {
+  visibility: hidden;
+}
+.assessment .drink img {
+  left: 7px;
+  top: 15px;
+  opacity: 0;
+  -webkit-transition: all 0.5s 0 ;
+  -moz-transition: all 0.5s 0 ;
+  -o-transition: all 0.5s 0 ;
+  -ms-transition: all 0.5s 0 ;
+  transition: all 0.5s 0 ;
+  -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
@@ -451,18 +549,19 @@ input[type="checkbox"] {
 .education .module {
   width: 100%;
   background: #f6323e;
+  background-size: cover;
   color: #fff;
   padding: 50px 10%;
   height: 33.333%;
   cursor: pointer;
   border-left: 10px solid #fff;
   border-top: 10px solid #fff;
-  -webkit-transition: all 0.2s 0 ;
-  -moz-transition: all 0.2s 0 ;
-  -o-transition: all 0.2s 0 ;
-  -ms-transition: all 0.2s 0 ;
-  transition: all 0.2s 0 ;
-  -moz-transition-duration: 0.2s;
+  -webkit-transition: all 0.4s 0 ease-out;
+  -moz-transition: all 0.4s 0 ease-out;
+  -o-transition: all 0.4s 0 ease-out;
+  -ms-transition: all 0.4s 0 ease-out;
+  transition: all 0.4s 0 ease-out;
+  -moz-transition-duration: 0.4s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
@@ -471,6 +570,8 @@ input[type="checkbox"] {
 }
 .education .module:hover {
   background: #d7006d;
+  border-left: 20px solid #fff;
+  border-top: 20px solid #fff;
 }
 .education .module .how {
   border-bottom: 2px solid rgba(255, 255, 255, .2);
@@ -484,6 +585,18 @@ input[type="checkbox"] {
 }
 .education .module h1 {
   color: #fff;
+}
+.education .module:nth-of-type(1) {
+  background: url('../img/education/lifestyle.jpg') center center;
+  background-size: cover;
+}
+.education .module:nth-of-type(2) {
+  background: url('../img/education/familyhistory.jpg') center center;
+  background-size: cover;
+}
+.education .module:nth-of-type(3) {
+  background: url('../img/education/knowyournormal.jpg') center center;
+  background-size: cover;
 }
 .education .section-title {
   color: #fff;

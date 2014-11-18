@@ -18,12 +18,13 @@
   var _frameRange;
   var touchInterval;
   var touchStartY;
+  var preRollInterval;
 
   var _currentQuestion = 0;
   var _currentVignette = 0;
   var _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
   var _myL = 0;
-  var _oneInEightSVG;
+  var _preL = 0;
 
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
@@ -33,6 +34,7 @@
     e.preventDefault();
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
+    console.log(_isTouchDevice)
     if(_isTouchDevice){
       eventData.preventDefault();
     }else{
@@ -69,13 +71,6 @@
       }
     },10)
   })
-  function _initUIElements () {
-	  _oneInEightSVG = new DonutChartBuilder('.donut-png',
-				11,
-				[1, 1, 1, 1, 1, 1, 1, 1], 
-				['#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffffff'], 
-				null, LoadTransitions.None);
-  }
   function _pageResize () {
     _winH = _$window.height();
     _winW = _$window.width();
@@ -93,10 +88,38 @@
       });
     }
   }
+  function preRoll(){
+    // scene 1
+    var _myFrame = 0;
+    var dir = 'forward';
+    _preL = 0;
+    clearInterval(preRollInterval)
+    preRollInterval = setInterval(function(){
+      _preL = Math.max(-1186*79,-1186*Math.floor(_myFrame/2));
+      if(_smallScreen){
+        _preL -= 220;
+      }
+
+      $('.vignette').eq(_currentVignette).find($('.video img')).css({
+        '-webkit-transform':"translateX("+(_preL)+"px)"
+      })
+      if(_myFrame >= 50){
+        dir = "backward"
+      }
+      if(dir == "forward"){
+        _myFrame++;
+      }else{
+        _myFrame--;
+      }
+      if(_myFrame <= 0){
+        clearInterval(preRollInterval);
+      }
+    },20)
+     
+  }
   function _scrollHandler(){
     // scene 1
-    console.log(_currentFrame)
-    _myL = Math.max((18681*-4)+1245.5,-1245.5*Math.floor(_currentFrame/2));
+    _myL = Math.max(-1186*79,-1186*Math.floor(_currentFrame/2));
     if(_smallScreen){
       _myL -= 220;
     }
@@ -104,12 +127,11 @@
     $('.vignette').eq(_currentVignette).find($('.video img')).css({
       '-webkit-transform':"translateX("+(_myL)+"px)"
     })
-    _currentHeadline.removeClass('active');
-    _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(Math.floor(_currentFrame/50));
-    _currentHeadline.addClass('active').css({
-      //'-webkit-transform': 'translateX('+-_currentFrame+'px)'
-    })
-  
+    if(_currentHeadline.index() < $('.vignette').eq(_currentVignette).find($('h3')).length-1){
+      _currentHeadline.removeClass('active');
+      _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(Math.floor(_currentFrame/50));
+      _currentHeadline.addClass('active');
+    }
   }
   function _registerEventListeners() {
     $('.intro').on('click',function(){
@@ -144,9 +166,38 @@
     })
     $('.module').on('click',function(){
       expandModule();
+      preRoll();
     })
     $('.vignette').on('click',function(){
       nextVignette();
+    })
+    $('.bottle').on('mousedown',function(e){
+      e.preventDefault();
+      var x = e.pageX;
+      var moved = 0;
+      var l;
+      var currentGlass;
+      _$window.bind('mousemove',function(e){
+        moved = x-e.pageX;
+        l = Math.max(50,$('.bottle').position().left-moved);
+        l = Math.min(l,550);
+        currentGlass = Math.floor((l-5)/59);
+        $('.drink img').eq(currentGlass).css({
+          opacity: 1
+        })
+        $('.drink img').eq(currentGlass+1).css({
+          opacity: 0
+        })
+        $('.bottle').css({
+          left: l,
+          //'-webkit-transform': 'rotate('+moved+'deg)'
+        })
+        x = e.pageX;
+        moved = 0;
+      })
+    })
+    _$window.on('mouseup',function () {
+      _$window.unbind('mousemove');
     })
     _$window.bind('resize', _pageResize);
   }
@@ -171,9 +222,11 @@
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
+    preRoll();
     _currentFrame = 0;
     $('.vignette').eq(_currentVignette).toggleClass('in');
     _currentVignette++;
+    _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
     $('.vignette').eq(_currentVignette).toggleClass('in');
     _scrollHandler();
     $('.scroll').show();
@@ -185,7 +238,6 @@
     _$window = $(window);
     _$document = $(window.document);
     _registerEventListeners();
-    _initUIElements();
     _pageResize();
   });
 })(jQuery);

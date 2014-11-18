@@ -23,6 +23,7 @@
   var _currentVignette = 0;
   var _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
   var _myL = 0;
+  var _oneInEightSVG;
 
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
@@ -68,6 +69,13 @@
       }
     },10)
   })
+  function _initUIElements () {
+	  _oneInEightSVG = new DonutChartBuilder('.donut-png',
+				11,
+				[1, 1, 1, 1, 1, 1, 1, 1], 
+				['#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffb5a6','#ffffff'], 
+				null, LoadTransitions.None);
+  }
   function _pageResize () {
     _winH = _$window.height();
     _winW = _$window.width();
@@ -177,6 +185,7 @@
     _$window = $(window);
     _$document = $(window.document);
     _registerEventListeners();
+    _initUIElements();
     _pageResize();
   });
 })(jQuery);

@@ -12,6 +12,9 @@
 		colors: ['#ccc'],
 		labels: [''],
 		transitionType: false
+//		svg_stroke_width : 0,
+//		svg_stroke_opacity : 0,
+//		svg_stroke_color : 0
 	};
 	
 	/*
@@ -37,9 +40,12 @@
 	    this._width = $(this._trg).width();
 	    this._height = $(this._trg).height();
 	    this._radius = Math.min(this._width, this._height) / 2;
+//	    this._svg_stroke_width = $(this._trg).css("svg-stroke-width") || defaults.svg_stroke_width;
+//	    this._svg_stroke_opacity = $(this._trg).css("svg-stroke-opacity") || defaults.svg_stroke_opacity;
+//	    this._svg_stroke_color = $(this._trg).css("svg-stroke-color") || defaults.svg_stroke_color;
 	    
 	    if (transitionType) {
-	    	
+	    	this.setupTransIn(); // working on transitions here
 	    } else {
 	    	this._process();
 	    }
@@ -50,8 +56,8 @@
      * Update the dims on resize
      */
 
-	DonutChartBuilder.prototype.updateDims = function()  {
-		
+	DonutChartBuilder.prototype.setupTransIn = function()  {
+		this._process();
 	}
 	
 	/*
@@ -116,6 +122,10 @@
 //        		return this._colors[i];
 //				return this._colorRange(d.data.value);
 			}.bind(this));
+//				.attr('stroke', this._svg_stroke_color)
+//				.attr('stroke-width', this._svg_stroke_width)
+//				.attr('stroke-opacity', this._svg_stroke_opacity);
+        
         this._g.append("text").attr("transform", function(d) {
 			return "translate(" + this._arc.centroid(d) + ")";
 		}.bind(this)).attr("dy", ".35em").style("text-anchor", "middle")

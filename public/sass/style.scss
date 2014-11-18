@@ -158,6 +158,14 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 /* ===== Primary Styles ========================================================
    Author: Nick Jones / The Experiment
    ========================================================================== */
+.donut-png{
+	width: 100px;
+  	height: 100px;
+  	overflow: visible;
+  	svg-stroke-width: 5px;
+  	svg-stroke-opacity: 1;
+  	svg-stroke-color: $highlightColor;
+}
 
 .border{
   position: fixed;

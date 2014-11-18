@@ -41,7 +41,8 @@
       <div class="fact-group">
         <div class="assessment-facts">
           <div class="fact">
-            <img src="img/donut.png"><br><br>
+<!--             <img src="img/donut.png"><br><br> -->
+            <div class="donut-png"></div><br><br>
             <h5><span class="data-number">1 in 8 Women</span> <br>will develop breast cancer at some point in her lifetime.</h5>
           </div>
         </div>
@@ -377,7 +378,21 @@
     </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
+		
+		<!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
+		<script
+			src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+		<script
+			src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+		<script
+			src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+			
+		<!--d3 and our wrapper classes-->
+		<script src="//d3js.org/d3.v3.min.js"></script>
+		<script src="js/svg/DonutChartBuilder.js"></script>
+		<script src="js/svg/SVGHelper.js"></script>
+		<script src="js/svg/LoadTransitions.js"></script>
+	
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

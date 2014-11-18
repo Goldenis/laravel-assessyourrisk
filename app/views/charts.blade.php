@@ -38,13 +38,21 @@
 		$( document ).ready(function() {
 			var a = new DonutChartBuilder('#donut-chart1',
 						30,
+						1,
 						[100, 20, 30], 
 						['#f00', '#0f0', '#00f'], 
 						['10', '20', '30'], LoadTransitions.None);
+
 			$( window ).resize(function() {
 				a.updateDims();
 			});
-			a.transitionToValues (1, 80, [23,55,100], ['#ccc', '#ddd', '#eee']);
+			
+// 			a.transitionToValues (1, 80, null, null);
+// 			a.transitionToValues (1, 80, [23,55,100], null);
+// 			a.transitionToValues (1, 80, [23,55,100], ['#ccc', '#ddd', '#eee']);
+// 			a.transitionToValues (1, 80, null, ['#ccc', '#ddd', '#eee']);
+			a.transitionToValues (1, null, null, ['#ccc', '#ddd', '#eee']);
+// 			a.transitionToValues (1, null, [23,55,100], null);
 		});
 	</script>
 </html>

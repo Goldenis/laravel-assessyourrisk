@@ -8,13 +8,11 @@
 	var defaults = {
 		trg: 'body',
 		thickness: 100,
+		gap: 0,
 		values: [1],
 		colors: ['#ccc'],
 		labels: [''],
 		transitionType: false
-//		svg_stroke_width : 0,
-//		svg_stroke_opacity : 0,
-//		svg_stroke_color : 0
 	};
 	
 	/*
@@ -28,10 +26,11 @@
      * @param doTransitionIn - Bool - do or dont transition in arc
      */
 	
-	var DonutChartBuilder = function(trg, thickness, values, colors, labels, transitionType) {
+	var DonutChartBuilder = function(trg, thickness, gap, values, colors, labels, transitionType) {
 		
 		this._trg = trg || defaults.trg;
 	    this._thickness = thickness || defaults.thickness;
+	    this._gap = gap || defaults.gap;
 	    this._values = values || defaults.values;
 	    this._colors = colors || defaults.colors;
 	    SVGHelper.setAllRgb(this._colors); // inline converts to RGB objects
@@ -40,9 +39,7 @@
 	    this._width = $(this._trg).width();
 	    this._height = $(this._trg).height();
 	    this._radius = Math.min(this._width, this._height) / 2;
-//	    this._svg_stroke_width = $(this._trg).css("svg-stroke-width") || defaults.svg_stroke_width;
-//	    this._svg_stroke_opacity = $(this._trg).css("svg-stroke-opacity") || defaults.svg_stroke_opacity;
-//	    this._svg_stroke_color = $(this._trg).css("svg-stroke-color") || defaults.svg_stroke_color;
+	    this._accountForGap(values);
 	    
 	    if (transitionType) {
 	    	this.setupTransIn(); // working on transitions here
@@ -57,7 +54,7 @@
      */
 
 	DonutChartBuilder.prototype.setupTransIn = function()  {
-		this._process();
+		
 	}
 	
 	/*
@@ -72,6 +69,20 @@
 	    this._process();
 	}
 	
+	DonutChartBuilder.prototype._accountForGap = function(data)  {
+		if (this._gap > 0) {
+			var numSegments = data.length;
+			var sumOfSegments = data.reduce(function(a, b) { return a + b; }, 0);
+			var aValueDegree = sumOfSegments/360 * this._gap;
+			data.forEach(function(entry) {
+				entry -= aValueDegree;
+			});
+			for (var i=0; i<numSegments; i++) {
+				data.splice(i*2, 0, aValueDegree);
+			}
+		}
+	}
+	
 	/*
      * @public
      * 
@@ -82,14 +93,20 @@
 
 	DonutChartBuilder.prototype.transitionToValues = function(dur, thickness, values, colors)  {
 		
-		TweenLite.to(this, dur, {_thickness:thickness, onUpdate:this._process.bind(this)});
-		TweenLite.to(this._values, dur, values);
-		SVGHelper.setAllRgb(colors);
-		for (var i=0; i<this._colors.length; i++) {
-			var trg = this._colors[i];
-			var rep = colors[i];
-			TweenMax.to(trg, dur, {r:rep.r, g:rep.g, b:rep.b, roundProps:"r,g,b"});
+		if (thickness) TweenLite.to(this, dur, {_thickness:thickness});
+		if (values) {
+			this._accountForGap(values);
+			TweenLite.to(this._values, dur, values);
 		}
+		if (colors) {
+			SVGHelper.setAllRgb(colors);
+			for (var i=0; i<this._colors.length; i++) {
+				var trg = this._colors[i];
+				var rep = colors[i];
+				TweenMax.to(trg, dur, {r:rep.r, g:rep.g, b:rep.b, roundProps:"r,g,b"});
+			}
+		}
+		TweenLite.to(this, dur, {onUpdate:this._process.bind(this)});
 	}
 
 	/*
@@ -113,18 +130,26 @@
 				"translate(" + this._width / 2 + "," + this._height / 2 + ")");
         
         this._data = this._getDataObj();
-        this._g = this._svg.selectAll(".arc").data(this._pie(this._data)).enter().append("g").attr("class", "arc");
+        this._g = this._svg.selectAll(".arc")
+        			.data(this._pie(this._data))
+        			.enter().append("g")
+        			.attr("class", "arc");
 
-        this._g.append("path").attr("d", this._arc).style("fill",
+        this._g.append("path")
+        .attr("d", this._arc).style("fill",
 			function(d, i) {
         		return SVGHelper.rgbObjToRgbString(d.data.color);
-//        		return hexToRgbString(this._colors[i]);
-//        		return this._colors[i];
 //				return this._colorRange(d.data.value);
-			}.bind(this));
-//				.attr('stroke', this._svg_stroke_color)
-//				.attr('stroke-width', this._svg_stroke_width)
-//				.attr('stroke-opacity', this._svg_stroke_opacity);
+			}.bind(this))
+		.attr('fill-opacity', 
+			function(d, i) {
+				if (this._gap > 0) {
+					return i%2;
+				} else {
+					return 1;
+				}
+			}.bind(this))
+		.attr('stroke-opacity', 0);
         
         this._g.append("text").attr("transform", function(d) {
 			return "translate(" + this._arc.centroid(d) + ")";

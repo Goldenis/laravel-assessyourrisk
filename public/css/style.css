@@ -157,10 +157,10 @@ img {
 .donut-png {
   width: 100px;
   height: 100px;
-/*   overflow: visible;
+  overflow: visible;
   svg-stroke-width: 5px;
   svg-stroke-opacity: 1;
-  svg-stroke-color: red; */
+  svg-stroke-color: red;
 }
 .border {
   position: fixed;
@@ -570,8 +570,8 @@ input[type="checkbox"] {
 }
 .education .module:hover {
   background: #d7006d;
-  border-left: 20px solid #fff;
-  border-top: 20px solid #fff;
+  border-left: 18px solid #fff;
+  border-top: 18px solid #fff;
 }
 .education .module .how {
   border-bottom: 2px solid rgba(255, 255, 255, .2);

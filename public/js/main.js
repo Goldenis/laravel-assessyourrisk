@@ -165,8 +165,11 @@
       
     })
     $('.module').on('click',function(){
-      expandModule();
+      changeModule($(this));
       preRoll();
+    })
+    $('.nav-item').on('click',function () {
+      changeModule($(this));
     })
     $('.vignette').on('click',function(){
       nextVignette();
@@ -201,7 +204,15 @@
     })
     _$window.bind('resize', _pageResize);
   }
-  function expandModule(){
+  function changeModule(e){
+    var $this = e;
+    var i = $this.index();
+    expandModule(i);
+  }
+  function expandModule(num){
+    $('.nav').addClass('in');
+    $('.nav-item').removeClass('active');
+    $('.nav-item').eq(num).addClass('active');
     _currentFrame = 0;
     $('.education-menu').addClass('out');
     $('.vignette').eq(_currentVignette).toggleClass('in');

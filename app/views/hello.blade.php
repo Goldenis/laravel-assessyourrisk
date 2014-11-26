@@ -16,15 +16,14 @@
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">
-      <h1>1 in 8 women get cancer. Pretend you are the 1.</h1>
+      <img class="wheel" src="img/wheel.png">
       
-      <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Begin </button> </a>
+      <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
     </section>
 
     <!-- RIGHT COLUMN -->
     <div class="right-column">
       <!-- UNDERSTAND -->
-      
       <div class="toggle-box">
         <div class="understand">
           <h4>Understand<br>Your Risk<br></h4>
@@ -288,6 +287,11 @@
     </section>
     <!-- EDUCATION -->
     <section class="education">
+    	 <div class="nav">
+      	<div class="nav-item">LIFESTYLE</div>
+      	<div class="nav-item">FAMILY HISTORY</div>
+      	<div class="nav-item">YOUR NORMAL</div>
+      </div>
       <div class="scroll">SCROLL</div>
       <button class="btn-continue">CONTINUE</button>
       <div class="education-menu">
@@ -307,7 +311,7 @@
           <div class="effect">Can Effect Your Risk</div>
         </div>
       </div>
-      <div class="section-title">Understand Your Risk / Lifestyle</div>
+      <div class="section-title">Understand Your Risk</div>
       <div class="vignette">
         <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">

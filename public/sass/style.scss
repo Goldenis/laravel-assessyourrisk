@@ -93,6 +93,38 @@ $headline-font: 'avg_bold', sans-serif;
   font-size: $size;
   font-family: 'avg', 'Helvetica', sans-serif;
 }
+@mixin animation($props){
+  -webkit-animation: $props;
+  -moz-animation: $props;
+  animation: $props;
+}
+@-webkit-keyframes rotate-in{
+  0%{
+    @include transform(rotate(-90deg));
+  }
+  100%{
+    opacity: 1;
+    @include transform(rotate(0deg));
+  }
+}
+@-moz-keyframes rotate-in{
+  0%{
+    @include transform(rotate(-90deg));
+  }
+  100%{
+    opacity: 1;
+    @include transform(rotate(0deg));
+  }
+}
+@keyframes rotate-in{
+  0%{
+    @include transform(rotate(-90deg));
+  }
+  100%{
+    opacity: 1;
+    @include transform(rotate(0deg));
+  }
+}
 
 $bgColor: #fff;
 $darkColor: #555558;
@@ -327,6 +359,12 @@ input[type="checkbox"]{
   padding: 10%;
   z-index: 2;
 }
+.wheel{
+  margin-right: 100px;
+  @include transform(rotate(-90deg));
+  opacity: 0;
+  @include animation(rotate-in 2s 0s forwards);
+}
 // WEIGHT
 
 .weight-container {
@@ -454,6 +492,41 @@ input[type="checkbox"]{
   height: 100%;
   top: 0;
   left: 100%;
+  .nav{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: absolute;
+    top: -60px;
+    z-index: 2000;
+    color: $nude;
+    font-family: 'avg_bold';
+    letter-spacing: .1em;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid #fff;
+    @include transition(1s);
+    &.in{
+      top: 0;
+    }
+    .nav-item{
+      float: left;
+      padding: 22px 0px 15px 30px;
+      width: 33.333%;
+      height: 50px;
+      background: #fff;
+      border-right: 1px solid $nude;
+      font-size: .8em;
+      @include transition(.2s);
+      cursor: pointer;
+      &:hover{
+        color: $pink;
+      }
+      &.active{
+        color: #fff;
+        background: $nude;
+      }
+    }
+  }
   .btn-continue,
   .scroll{
     opacity: 1;
@@ -527,7 +600,7 @@ input[type="checkbox"]{
   .section-title{
     color: #fff;
     left: 10%;
-    top: 10%;
+    top: 13%;
     opacity: 0;
     border-bottom: 2px solid rgba(255,255,255,.2);
   }

@@ -19,5 +19,9 @@ Route::get('/bmi', function()
 {
 	return View::make('scale');
 });
+Route::get('/charts', function()
+{
+	return View::make('charts');
+});
 
 

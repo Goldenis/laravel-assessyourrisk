@@ -215,8 +215,17 @@
     $('.nav-item').eq(num).addClass('active');
     _currentFrame = 0;
     $('.education-menu').addClass('out');
-    $('.vignette').eq(_currentVignette).toggleClass('in');
-    $('.education .section-title').toggleClass('in');
+    $('.vignette').eq(_currentVignette).removeClass('in');
+    $('.family-history').removeClass('in');
+    $('.normal').removeClass('in');
+    if(num == 0){
+      $('.vignette').eq(_currentVignette).toggleClass('in');
+    }else if(num == 1){
+      $('.family-history').addClass('in');
+    }else if(num == 2){
+      $('.normal').toggleClass('in');
+    }
+    $('.education .section-title').addClass('in');
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');

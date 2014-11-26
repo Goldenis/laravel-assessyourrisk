@@ -567,6 +567,23 @@ input[type="checkbox"] {
   top: 0;
   left: 100%;
 }
+.education .family-history, .education .normal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffb4aa;
+  color: #fff;
+  font-family: "avg_bold";
+  font-size: 3em;
+  visibility: hidden;
+  padding: 190px 10% 100px 10%;
+  border-left: 10px solid #fff;
+}
+.education .family-history.in, .education .normal.in {
+  visibility: visible;
+}
 .education .nav {
   width: 100%;
   height: 60px;

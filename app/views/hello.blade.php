@@ -312,6 +312,11 @@
         </div>
       </div>
       <div class="section-title">Understand Your Risk</div>
+      <div class="family-history">If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</div>
+      <div class="normal">Every body is different.  
+In order to know what’s up with your bod, you have to be self aware.
+It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.
+		</div>
       <div class="vignette">
         <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
@@ -373,6 +378,7 @@
         <button class="pledge">Pledge to start birth control</button>
       </div>
     </div>
+	
 
     <!-- FOOTER -->
 

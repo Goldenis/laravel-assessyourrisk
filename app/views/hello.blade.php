@@ -94,9 +94,8 @@
 
 
         <div class="question">
-          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9?</div>
+          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your weight?</div>
           <div class="visual">
-            <div class="prompt">What is your weight?</div>
 				<div class="weight-container">
 					<div id="weight-base"></div>
 					<div id="weight-overlay"></div>
@@ -107,7 +106,7 @@
 				</div>
           </div>
           <br>
-          <button>Continue</button>
+          <button class="btn-wrap">Continue</button>
         </div>
 
 

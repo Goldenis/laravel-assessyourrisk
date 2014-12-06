@@ -326,6 +326,12 @@ button.sub:hover {
   color: #f6323e;
   border-color: #f6323e;
 }
+.btn-wrap {
+  left: 0;
+  position: absolute;
+  left: 0px;
+  top: 350px;
+}
 .checkbox-list {
   margin: 1em 0 1em;
 }

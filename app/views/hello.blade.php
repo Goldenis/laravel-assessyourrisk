@@ -43,7 +43,8 @@
       <div class="fact-group">
         <div class="assessment-facts">
           <div class="fact">
-            <img src="img/donut.png"><br><br>
+<!--             <img src="img/donut.png"><br><br> -->
+            <div class="chart-1"></div>
             <h5><span class="data-number">1 in 8 Women</span> <br>will develop breast cancer at some point in her lifetime.</h5>
           </div>
         </div>
@@ -59,11 +60,11 @@
 	    <div class="dashboard">
   			<!-- <div class="label">MY PROGRESS</div> -->
         <div class="progress">
-          <div class="chart">20%</div>
+          <div class="chart chart-2">20%</div>
           <h6>ASSESSMENT</h6>
         </div>
         <div class="progress">
-          <div class="chart">68%</div>
+          <div class="chart chart-3">68%</div>
           <h6>EDUCATION</h6>
         </div>
   		</div>
@@ -460,13 +461,16 @@ It’s important to know what’s normal for you — that way, you’re equipped
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-<!--    
+ 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-		<script src="js/weight.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<!--   	<script src="js/weight.js"></script>
 		<script src="js/height.js"></script>-->
-
+		<script src="//d3js.org/d3.v3.min.js"></script>
+		<script src="js/svg/DonutChartBuilder.js"></script>
+		<script src="js/svg/SVGHelper.js"></script>
+	
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

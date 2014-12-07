@@ -30,6 +30,10 @@
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
   var DESKTOP_WIDTH = "1350";
+  
+  var chart1;
+  var chart2;
+  var chart3;
 
   $(window).on('scroll',function(e){
     e.preventDefault();
@@ -137,6 +141,48 @@
       _currentHeadline.addClass('active');
     }
   }
+  
+  function addCharts() {
+	  chart1 = new DonutChartBuilder('.chart-1',
+				10,
+				3,
+				[1,.01,.01,.01,.01,.01,.01,.01], 
+				['#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF'], 
+				null);
+	  chart2 = new DonutChartBuilder('.chart-2',
+				8,
+				0,
+				[.01,.99], 
+				['#D7006D','#FFFFFF'], 
+				null);
+	  chart3 = new DonutChartBuilder('.chart-3',
+				8,
+				0,
+				[.01,.99], 
+				['#D7006D','#FFFFFF'], 
+				null);
+	  setTimeout(transCharts, 1000);
+	/* Only use this if it needs to watch the container and resize with the div
+	$( window ).resize(function() {
+		a.updateDims();
+	});
+	*/
+  }
+  function transCharts() {
+	  chart1.transitionToValues (5,
+				10,
+				[1,1,1,1,1,1,1,1], 
+				['#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FFFFFF']);
+	  chart2.transitionToValues (5,
+				8,
+				[.2, .8], 
+				['#D7006D','#FFFFFF']);
+	  chart3.transitionToValues (5,
+				8,
+				[.68, .32], 
+				['#D7006D','#FFFFFF']);
+  }
+  
   function _registerEventListeners() {
     $('.intro').on('click',function(){
       $(this).addClass('out-up')
@@ -151,11 +197,14 @@
     $('.dot').on('click',function(){
 
     });
+    $('#Begin').on('click',function(){
+    	addCharts();
+    });
     $('.assessment-intro button').on('click',function() {
       $('.assessment-intro').addClass('out-up');
       $('.assessment-intro').removeClass('in');
       $('.question').eq(0).addClass('in');
-      $('.dot').eq(_currentQuestion).addClass('active')
+      $('.dot').eq(_currentQuestion).addClass('active');
     })
     $('.question button').on('click',function(){
       answerQuestion($(this));

@@ -37,39 +37,24 @@
 		
 		$( document ).ready(function() {
 			var a = new DonutChartBuilder('#donut-chart1',
-						50,
-						0,
-						[0, 1], 
-						['#f00', '#0f0'], 
+						10,
+						3,
+						[1,1,1,1,1,1,1,1], 
+						['#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FFFFFF'], 
 						null, LoadTransitions.None);
 
 			$( window ).resize(function() {
 				a.updateDims();
 			});
 
-// 			var aa = a.transitionToValues (1, 80, null, null);
-// 			var bb = a.transitionToValues (1, 80, [23,55,100], null);
-// 			var cc = a.transitionToValues (1, 80, [23,55,100], ['#ccc', '#ddd', '#eee']);
-// 			var dd = a.transitionToValues (1, 80, null, ['#ccc', '#ddd', '#eee']);
-// 			var ee = a.transitionToValues (1, null, null, ['#ccc', '#ddd', '#eee']);
-// 			var ff = a.transitionToValues (1, null, [23,55,100], null);
+// 			a.transitionToValues (1, 80, null, null);
+// 			a.transitionToValues (1, 80, [23,55,100], null);
+			a.transitionToValues (1, 20, [1,2,3,4,5,6,7,8], ['#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FFFFFF']);
+// 			a.transitionToValues (1, 80, null, ['#ccc', '#ddd', '#eee']);
+// 			a.transitionToValues (1, null, null, ['#ccc', '#ddd', '#eee']);
+// 			a.transitionToValues (1, null, [23,55,100], null);
 			
-			//https://reserve.thegrid.io/serial/f6a4bd8d-55ec-4c3a-9ccd-9c5f3df80802/latest
-			
-			function getSessionResults() {
-		      resp = $.ajax({
-		        type : "GET",
-		        cache: false,
-		        url : "http://reserve.thegrid.io/serial/f6a4bd8d-55ec-4c3a-9ccd-9c5f3df80802/latest",
-		      }).done(function(data) {
-		        console.log(parseInt(data));
-		    	  a.transitionToValues (5, 50, [10000 - (parseInt(data) + 1), 10], ['#f00', '#0f0']);
-		    	  $('#count').html('<b>' + (parseInt(data) + 1) + '</b>');
-		      }).fail(function(data) {
-		        console.log(data);
-		      });
-		    }
-			
+
 			/*
 			var params = [
 				[1, 80, null, null],
@@ -87,7 +72,6 @@
 				i++;
 			}
 			*/
-			setInterval (getSessionResults, 5000);
 			
 			
 			

@@ -314,7 +314,8 @@ button{
   border: none;
   color: #fff;
   font-family: "avg_bold";
-  margin: 2em .5em .5em 0;
+  margin: 1em .5em .5em 0;
+  top: 1em;
   @include rounded(30px);
   text-transform: uppercase;
   letter-spacing: .1em;

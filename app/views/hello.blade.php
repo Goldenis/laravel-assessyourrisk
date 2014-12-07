@@ -112,9 +112,19 @@
             <button>No</button>
           </div>
         </div>
+
+        <div class="question">
+          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
+        
+          <div class="answers">
+            <button>Breast cancer</button>
+            <button>Ovarian cancer</button>
+            <button>None</button>
+          </div>
+        </div>
 		
-		<div class="question">
-          <div class="prompt">Which gene mutation have your or your relative(s) been diagnosed with?</div>
+        <div class="question">
+          <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
             <button>Yes, I've tested positive for a specific gene mutation</button>
@@ -124,8 +134,8 @@
           </div>
         </div>
 
-		<div class="question">
-          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
+		    <div class="question">
+          <div class="prompt">Which gene mutation have your or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list">
             <div class="checkbox"><input type="checkbox"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
@@ -134,7 +144,7 @@
           </div>
           <br>
           <br>
-          <button>Continue</button>          
+          <button>Continue</button>
         </div>
 
         <div class="question">

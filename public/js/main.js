@@ -19,6 +19,7 @@
   var touchInterval;
   var touchStartY;
   var preRollInterval;
+  var vidW = 1271;
 
   var _currentQuestion = 0;
   var _currentVignette = 0;
@@ -80,6 +81,9 @@
     }else{
       _smallScreen = false;
     }
+    $('.vignette .headlines h3, .prompt').css({
+      'font-size': Math.max(2,2.2*((_winW*_winH)/1440000))+"em"
+    })
   }  
   function redraw() {
     if(_isTouchDevice){
@@ -95,7 +99,7 @@
     _preL = 0;
     clearInterval(preRollInterval)
     preRollInterval = setInterval(function(){
-      _preL = Math.max(-1186*79,-1186*Math.floor(_myFrame/2));
+      _preL = Math.max(-vidW*79,-vidW*Math.floor(_myFrame/2));
       if(_smallScreen){
         _preL -= 220;
       }
@@ -119,7 +123,7 @@
   }
   function _scrollHandler(){
     // scene 1
-    _myL = Math.max(-1186*79,-1186*Math.floor(_currentFrame/2));
+    _myL = Math.max(-vidW*79,-vidW*Math.floor(_currentFrame/2));
     if(_smallScreen){
       _myL -= 220;
     }
@@ -140,6 +144,10 @@
       $('.assessment').addClass('in');
       $('.border').addClass('white');
     })
+    $('.overlay .close-btn').on('click',function () {
+      $('.overlay').removeClass("in");
+      //$('.logo-white').toggleClass('in');
+    })
     $('.dot').on('click',function(){
 
     });
@@ -150,7 +158,7 @@
       $('.dot').eq(_currentQuestion).addClass('active')
     })
     $('.question button').on('click',function(){
-      answerQuestion();
+      answerQuestion($(this));
     })
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show")
@@ -171,7 +179,7 @@
     $('.nav-item').on('click',function () {
       changeModule($(this));
     })
-    $('.vignette').on('click',function(){
+    $('.vignette, .btn-continue').on('click',function(){
       nextVignette();
     })
     $('.bottle').on('mousedown',function(e){
@@ -229,11 +237,27 @@
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');
-    $('.logo-white').toggleClass('in');
+    //$('.logo-white').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }
-  function answerQuestion(){
+  function answerQuestion(answer){
+    switch (_currentQuestion){  
+      case 0:
+        if(answer.html() == "Yes"){
+          $('.tooltip-bottom').html('Then this could save your life.')
+        }else{
+          $('.overlay').addClass('in');
+          //$('.logo-white').toggleClass('in');
+        }
+        break;
+      case 1:
+        if(answer.html() == "Yes"){
+          $('.overlay').addClass('in');
+        }
+        break;
+
+    }
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
@@ -249,7 +273,6 @@
     _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
     $('.vignette').eq(_currentVignette).toggleClass('in');
     _scrollHandler();
-    $('.scroll').show();
   }
 
   $(document).ready(function() {

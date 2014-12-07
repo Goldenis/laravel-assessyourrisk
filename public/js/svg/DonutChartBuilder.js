@@ -27,10 +27,10 @@
      */
 	
 	var DonutChartBuilder = function(trg, thickness, gap, values, colors, labels, transitionType) {
-		
+		this._gap = gap || defaults.gap;
+		this._accountForGap(values, colors, labels);
 		this._trg = trg || defaults.trg;
 	    this._thickness = thickness || defaults.thickness;
-	    this._gap = gap || defaults.gap;
 	    this._values = values || defaults.values;
 	    this._colors = colors || defaults.colors;
 	    SVGHelper.setAllRgb(this._colors); // inline converts to RGB objects
@@ -39,7 +39,6 @@
 	    this._width = $(this._trg).width();
 	    this._height = $(this._trg).height();
 	    this._radius = Math.min(this._width, this._height) / 2;
-	    this._accountForGap(values);
 	    
 	    if (transitionType) {
 	    	this.setupTransIn(); // working on transitions here
@@ -69,16 +68,35 @@
 	    this._process();
 	}
 	
-	DonutChartBuilder.prototype._accountForGap = function(data)  {
+	DonutChartBuilder.prototype._accountForGap = function(values, colors, labels)  {
 		if (this._gap > 0) {
-			var numSegments = data.length;
-			var sumOfSegments = data.reduce(function(a, b) { return a + b; }, 0);
-			var aValueDegree = sumOfSegments/360 * this._gap;
-			data.forEach(function(entry) {
-				entry -= aValueDegree;
-			});
-			for (var i=0; i<numSegments; i++) {
-				data.splice(i*2, 0, aValueDegree);
+			// Fill value data gaps
+			
+			if (values) {
+				var numSegments = values.length;
+				var sumOfSegments = values.reduce(function(a, b) { return a + b; }, 0);
+				var aValueDegree = sumOfSegments/360 * this._gap;
+				values.forEach(function(entry) {
+					entry -= aValueDegree;
+				});
+			}
+			if (values) {
+				var c = values.length;
+				for (var i=0; i<c; i++) {
+					values.splice(i*2, 0, aValueDegree);
+				}
+			}
+			if (labels) {
+				var c = labels.length;
+				for (var i=0; i<c; i++) {
+					labels.splice(i*2, 0, '');
+				}
+			}
+			if (colors) {
+				var c = colors.length;
+				for (var i=0; i<c; i++) {
+					colors.splice(i*2, 0, '#000');
+				}
 			}
 		}
 	}
@@ -93,11 +111,10 @@
 
 	DonutChartBuilder.prototype.transitionToValues = function(dur, thickness, values, colors)  {
 		
+		this._accountForGap(values, colors, null);
+		
 		if (thickness) TweenLite.to(this, dur, {_thickness:thickness});
-		if (values) {
-			this._accountForGap(values);
-			TweenLite.to(this._values, dur, values);
-		}
+		if (values) TweenLite.to(this._values, dur, values);
 		if (colors) {
 			SVGHelper.setAllRgb(colors);
 			for (var i=0; i<this._colors.length; i++) {
@@ -154,9 +171,9 @@
         this._g.append("text").attr("transform", function(d) {
 			return "translate(" + this._arc.centroid(d) + ")";
 		}.bind(this)).attr("dy", ".35em").style("text-anchor", "middle")
-				.text(function(d) {
+				.text(function(d, i) {
 					return d.data.label;
-				});
+				}.bind(this));
     };
     
     DonutChartBuilder.prototype._getDataObj = function()  {

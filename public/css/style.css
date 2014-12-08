@@ -89,7 +89,7 @@ html, button, input, select, textarea {
   color: #555558;
 }
 body {
-  overflow-y: scroll;
+  overflow: hidden;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -216,9 +216,9 @@ img {
   color: #fff;
   width: 100%;
   height: 100%;
-  text-align: center;
-  padding: 15%;
+  padding: 10% 15%;
   border: 20px solid #ffb4aa;
+  overflow-y: scroll;
   -webkit-transition: all 1s 0 ease-out;
   -moz-transition: all 1s 0 ease-out;
   -o-transition: all 1s 0 ease-out;
@@ -228,7 +228,63 @@ img {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.overlay h1 {
+.overlay.in {
+  top: 0;
+}
+.overlay.in .close-btn {
+  display: block;
+}
+.progress-overlay {
+  overflow: hidden;
+  padding: 0;
+}
+.progress-overlay .section-title {
+  border-color: #fff !important;
+}
+.progress-overlay .questions {
+  padding: 8%;
+  width: 50%;
+  overflow-y: scroll;
+  height: 100%;
+  float: left;
+}
+.progress-overlay .questions .progress-question {
+  margin-top: 2em;
+  width: 100%;
+  cursor: pointer;
+}
+.progress-overlay .questions .progress-question b {
+  font-weight: 100;
+  font-family: "avg_bold";
+}
+.progress-overlay .questions .progress-question:hover {
+  opacity: 0.8;
+}
+.progress-overlay .vignettes {
+  padding: 8%;
+  width: 50%;
+  overflow-y: scroll;
+  height: 100%;
+  float: left;
+}
+.progress-overlay .vignettes h3 {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.progress-overlay .vignettes h3:hover {
+  opacity: 0.8;
+}
+.progress-overlay .close-btn {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  z-index: 2;
+}
+.male-overlay {
+  text-align: center;
+}
+.male-overlay h1 {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -236,16 +292,16 @@ img {
   transform: translateY(-50%);
   font: 4.4rem/1.5 "avg_bold";
 }
-.overlay a {
+.male-overlay a {
   border-bottom: 6px solid #ffb4aa;
   padding: 0;
   line-height: 0.4em;
 }
-.overlay a:hover {
+.male-overlay a:hover {
   color: #fff;
   border-color: #fff;
 }
-.overlay .close-btn {
+.male-overlay .close-btn {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -253,9 +309,6 @@ img {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 40px;
-}
-.overlay.in {
-  top: 0;
 }
 .donut-png {
   width: 100px;
@@ -268,6 +321,7 @@ img {
 .chart-1 {
   width: 98px;
   height: 98px;
+  margin-top: 12px;
 }
 .border {
   position: fixed;
@@ -325,12 +379,13 @@ img {
   background: #d7006d;
   border: 10px solid #d7006d;
 }
-.tooltip {
-  width: 60%;
-  background: #d7006d;
-  color: #fff;
+.tooltip-bottom {
+  width: auto;
   font-size: 1rem;
-  padding: 15px;
+  top: -32px;
+  border-top: 2px solid #555558;
+  position: absolute;
+  padding-top: 4px;
 }
 header {
   width: 100%;
@@ -639,7 +694,7 @@ input[type="checkbox"] {
 }
 .education {
   position: absolute;
-  width: 75%;
+  width: calc(75% - 10px);
   height: 100%;
   top: 0;
   left: 100%;
@@ -709,6 +764,9 @@ input[type="checkbox"] {
 .education .nav .nav-item.active {
   color: #fff;
   background: #ffb4aa;
+}
+.education button {
+  top: auto;
 }
 .education .btn-continue, .education .scroll {
   opacity: 1;
@@ -820,6 +878,10 @@ input[type="checkbox"] {
   bottom: 190px;
   border-color: #fff;
 }
+.education .pledge:hover {
+  background: #f6323e;
+  color: #fff;
+}
 .education .vignette {
   width: 100%;
   height: 100%;
@@ -836,7 +898,7 @@ input[type="checkbox"] {
 }
 .education .video img {
   position: relative;
-  opacity: 0.9;
+  opacity: 0.8;
   display: inline;
   height: 750px;
 }
@@ -870,7 +932,7 @@ input[type="checkbox"] {
   opacity: 1;
 }
 .education.in {
-  left: 25%;
+  left: calc(25% + 10px);
 }
 .arrow {
   -webkit-transition: all 0.3s 0 ease-out;
@@ -1002,41 +1064,73 @@ input[type="checkbox"] {
   background-color: #f6323e;
 }
 .right-column .dashboard {
-  position: relative;
+  position: absolute;
+  bottom: 10px;
   width: 100%;
   height: 16.666%;
+  min-height: 128px;
   background: #fff;
   background: #ffb4aa;
+  color: #d7006d;
   border-top: 10px solid #fff;
   text-align: center;
+  padding-right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s 0 linear;
+  -moz-transition: all 0.2s 0 linear;
+  -o-transition: all 0.2s 0 linear;
+  -ms-transition: all 0.2s 0 linear;
+  transition: all 0.2s 0 linear;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.right-column .dashboard .label {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  top: 50%;
+  margin-top: -7px;
+  left: -20px;
+  letter-spacing: 0.02rem;
+  border-bottom: 2px solid #d7006d;
+  line-height: 1.2rem;
 }
 .right-column .dashboard .progress {
   position: relative;
-  width: 50%;
+  width: 45%;
   height: 100%;
-  padding: 20px 45px;
+  top: 16%;
+  left: 10%;
   float: left;
-  /* .chart{
-        width: 70px;
-        height: 70px;
-        text-align: center;
-        padding-top: 15px;
-        border: 8px solid $pink;
-        left: 12px;
-        @include centerH;
-        @include rounded(50%);
-        margin-bottom: 9px; */
-  color: #d7006d;
+}
+.right-column .dashboard .progress .percentage {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .right-column .dashboard .progress .chart {
   width: 70px;
   height: 70px;
+  margin: auto;
+  margin-bottom: 9px;
+}
+.right-column .dashboard:hover {
+  background: #fdd5ce;
 }
 .right-column.in {
   right: 0;
 }
 .right-column.left {
-  right: 75%;
+  right: calc(75% - 10px);
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;

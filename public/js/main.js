@@ -20,6 +20,7 @@
   var touchStartY;
   var preRollInterval;
   var vidW = 1271;
+  var overlayOpen;
 
   var _currentQuestion = 0;
   var _currentVignette = 0;
@@ -36,10 +37,15 @@
   var chart3;
 
   $(window).on('scroll',function(e){
+    if(overlayOpen){
+      return;
+    }
     e.preventDefault();
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
-    console.log(_isTouchDevice)
+    if(overlayOpen){
+      return;
+    }
     if(_isTouchDevice){
       eventData.preventDefault();
     }else{
@@ -50,6 +56,9 @@
     }
   })
   $(window).bind('touchstart',function(e){
+    if(overlayOpen){
+      return;
+    }
     _isTouchDevice = true;
     distance = 0;
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
@@ -57,6 +66,9 @@
     clearInterval(inertiaInterval);
   })
   $(window).bind('touchmove',function(e){
+    if(overlayOpen){
+      return;
+    }
     e.preventDefault();
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     distance = touch.pageY-touchStartY;
@@ -66,6 +78,9 @@
     touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
+    if(overlayOpen){
+      return;
+    }
     var inertiaInterval = setInterval(function(){
       distance*=.9;
       _currentFrame -= distance/3;
@@ -190,9 +205,13 @@
       $('.assessment').addClass('in');
       $('.border').addClass('white');
     })
-    $('.overlay .close-btn').on('click',function () {
-      $('.overlay').removeClass("in");
-      //$('.logo-white').toggleClass('in');
+    $('.male-overlay .close-btn').on('click',function () {
+      overlayOpen = false;
+      $('.male-overlay').removeClass("in");
+    })
+    $('.progress-overlay .close-btn').on('click',function () {
+      overlayOpen = false;
+      $('.progress-overlay').removeClass("in");
     })
     $('.dot').on('click',function(){
 
@@ -224,6 +243,26 @@
     $('.module').on('click',function(){
       changeModule($(this));
       preRoll();
+    })
+    $('.progress-overlay .vignettes h3').on('click',function(){
+      changeModule($(this));
+      overlayOpen = false;
+      $('.progress-overlay').removeClass("in");
+      $('.assessment').removeClass('in');
+      $('.right-column').addClass('left');
+      $('.education').addClass('in');
+    })
+    $('.progress-overlay .questions h4').on('click',function() {
+      overlayOpen = false; 
+      $('.progress-overlay').removeClass("in");
+      $('.assessment').addClass('in');
+      $('.right-column').removeClass('left');
+      $('.education').removeClass('in');
+    })
+    $('.progress').on('click',function(){
+      $('.progress-overlay').addClass('in');
+      overlayOpen = true;
+
     })
     $('.nav-item').on('click',function () {
       changeModule($(this));
@@ -264,6 +303,9 @@
   function changeModule(e){
     var $this = e;
     var i = $this.index();
+    $('.progress-overlay .vignettes h3').eq(i).css({
+      opacity: .3
+    })
     expandModule(i);
   }
   function expandModule(num){
@@ -291,22 +333,28 @@
     $('.education').toggleClass('in');
   }
   function answerQuestion(answer){
+
     switch (_currentQuestion){  
       case 0:
         if(answer.html() == "Yes"){
           $('.tooltip-bottom').html('Then this could save your life.')
         }else{
-          $('.overlay').addClass('in');
+          $('.male-overlay').addClass('in');
+          overlayOpen = true;
           //$('.logo-white').toggleClass('in');
         }
         break;
       case 1:
         if(answer.html() == "Yes"){
-          $('.overlay').addClass('in');
+          $('.male-overlay').addClass('in');
+          overlayOpen = true;
         }
         break;
 
     }
+    $('.progress-overlay .progress-question').eq(_currentQuestion).css({
+      opacity: .3
+    })
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
@@ -323,12 +371,19 @@
     $('.vignette').eq(_currentVignette).toggleClass('in');
     _scrollHandler();
   }
-
+  function createProgressOverlay() {
+    var html = "<div class='section-title'>Risk Assessment</div>";
+    for(var i=0;i < $('.prompt').length-1;i++){
+      html += "<div class='progress-question'><b>Q" + (i+1) + ":</b><br><h4>" + $('.prompt').eq(i).html() + "</h4></div>"
+    }
+    $('.progress-overlay .questions').append(html);
+  }
   $(document).ready(function() {
 
     //position the header to be 90%;
     _$window = $(window);
     _$document = $(window.document);
+    createProgressOverlay();
     _registerEventListeners();
     _pageResize();
   });

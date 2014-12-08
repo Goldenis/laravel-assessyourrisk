@@ -13,9 +13,23 @@
     <div class="border"></div>
     <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
     <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
-    <div class="overlay">
-    	<button class="close-btn">✕ &nbsp; close</button>
-    	<h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
+    
+    <div class="overlay male-overlay">
+      <button class="close-btn">✕ &nbsp; close</button>
+      <h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
+    </div>
+
+    <div class="overlay progress-overlay">
+      <button class="close-btn">✕ &nbsp; close</button>
+      <div class="questions"></div>
+      <div class="vignettes">
+      	<div class='section-title'>Education</div>
+      	<div>
+      		<h3>Lifestyle</h3>
+      		<h3>Family History</h3>
+      		<h3>Your Normal</h3>
+      	</div>
+      </div>
     </div>
     <!-- INTRO -->
 
@@ -44,8 +58,8 @@
         <div class="assessment-facts">
           <div class="fact">
 <!--             <img src="img/donut.png"><br><br> -->
-            <div class="chart-1"></div>
             <h5><span class="data-number">1 in 8 Women</span> <br>will develop breast cancer at some point in her lifetime.</h5>
+            <div class="chart-1"></div>
           </div>
         </div>
         <div class="education-facts">
@@ -57,17 +71,19 @@
 
       <!-- DASH -->
 
-	    <div class="dashboard">
-  			<!-- <div class="label">MY PROGRESS</div> -->
+      <div class="dashboard">
+        <h6 class="label">MY PROGRESS</h6>
         <div class="progress">
-          <div class="chart chart-2">20%</div>
+          <div class="percentage">20%</div>
+          <div class="chart chart-2"></div>
           <h6>ASSESSMENT</h6>
         </div>
         <div class="progress">
-          <div class="chart chart-3">68%</div>
+          <div class="percentage">68%</div>
+          <div class="chart chart-3"></div>
           <h6>EDUCATION</h6>
         </div>
-  		</div>
+      </div>
     </div>
     <!-- ASSESSMENT-->
     <section class="assessment scrollpane"> 
@@ -81,29 +97,29 @@
         </div>
       </section>
       <div class="dots">
-    		<div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-	        <div class="dot"></div>
-		    <div class="tooltip-bottom"></div>
+      	<div class="tooltip-bottom"></div><br>
+        <div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question">
@@ -124,7 +140,7 @@
             <button>None</button>
           </div>
         </div>
-		
+    
         <div class="question">
           <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
@@ -136,7 +152,7 @@
           </div>
         </div>
 
-		    <div class="question">
+        <div class="question">
           <div class="prompt">Which gene mutation have your or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list">
@@ -164,7 +180,7 @@
           <button class="sub">Help me ask them</button>          
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
           <div class="checkbox-list half">        
             <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
@@ -187,7 +203,7 @@
           <button class="sub">Help me ask them</button>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Did you receive any radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
         
           <div class="answers">
@@ -196,7 +212,7 @@
           </div>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
@@ -205,7 +221,7 @@
           </div>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Have you ever had an abnormal breast biopsy?</div>
         
           <div class="answers">
@@ -214,15 +230,15 @@
           </div>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">How old are you?</div>
         
           <div class="answers">
-          	<button>Under 20</button>
-			<button>20-30</button>
-			<button>31-35</button>
-			<button>36-40</button>
-			<button>40+</button>
+            <button>Under 20</button>
+      <button>20-30</button>
+      <button>31-35</button>
+      <button>36-40</button>
+      <button>40+</button>
           </div>
         </div>
 
@@ -230,14 +246,14 @@
         <div class="question">
           <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your weight?</div>
           <div class="visual">
-				<div class="weight-container">
-					<div id="weight-base"></div>
-					<div id="weight-overlay"></div>
-				</div>
-				<div class="height-container">
-					<div id="height-base"></div>
-					<div id="height-overlay"></div>
-				</div>
+        <div class="weight-container">
+          <div id="weight-base"></div>
+          <div id="weight-overlay"></div>
+        </div>
+        <div class="height-container">
+          <div id="height-base"></div>
+          <div id="height-overlay"></div>
+        </div>
           </div>
           <br>
           <button class="btn-wrap">Continue</button>
@@ -289,7 +305,7 @@
           </div>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
         
           <div class="answers">
@@ -344,7 +360,7 @@
           </div>
         </div>
 
-		<div class="question">
+    <div class="question">
           <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
         
           <div class="answers">
@@ -356,10 +372,10 @@
     </section>
     <!-- EDUCATION -->
     <section class="education">
-    	 <div class="nav">
-      	<div class="nav-item">LIFESTYLE</div>
-      	<div class="nav-item">FAMILY HISTORY</div>
-      	<div class="nav-item">YOUR NORMAL</div>
+       <div class="nav">
+        <div class="nav-item">LIFESTYLE</div>
+        <div class="nav-item">FAMILY HISTORY</div>
+        <div class="nav-item">YOUR NORMAL</div>
       </div>
       <div class="scroll"><!-- SCROLL --></div>
       <button class="btn-continue">CONTINUE</button>
@@ -385,7 +401,7 @@
       <div class="normal">Every body is different.  
 In order to know what’s up with your bod, you have to be self aware.
 It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.
-		</div>
+    </div>
       <div class="vignette">
         <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
         <div class="headlines">
@@ -447,7 +463,7 @@ It’s important to know what’s normal for you — that way, you’re equipped
         <button class="pledge sub">Pledge to start birth control</button>
       </div>
     </div>
-	
+  
 
     <!-- FOOTER -->
 
@@ -462,14 +478,14 @@ It’s important to know what’s normal for you — that way, you’re equipped
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
  
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	   	<script src="js/weight.js"></script>
-		<script src="js/height.js"></script>
-		<script src="//d3js.org/d3.v3.min.js"></script>
-		<script src="js/svg/DonutChartBuilder.js"></script>
-		<script src="js/svg/SVGHelper.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+      <script src="js/weight.js"></script>
+    <script src="js/height.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="js/svg/DonutChartBuilder.js"></script>
+    <script src="js/svg/SVGHelper.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

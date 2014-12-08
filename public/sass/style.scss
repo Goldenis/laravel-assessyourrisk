@@ -234,6 +234,10 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
   	svg-stroke-opacity: 1;
   	svg-stroke-color: $highlightColor;
 }
+.chart-1{
+	width: 98px;
+  	height: 98px;
+}
 
 .border{
   position: fixed;
@@ -845,7 +849,7 @@ input[type="checkbox"]{
       padding: 20px 45px;
       float: left;      
       color: $pink;
-      .chart{
+      /* .chart{
         width: 70px;
         height: 70px;
         text-align: center;
@@ -854,7 +858,10 @@ input[type="checkbox"]{
         left: 12px;
         @include centerH;
         @include rounded(50%);
-        margin-bottom: 9px;
+        margin-bottom: 9px; */
+        .chart{
+	        width: 70px;
+	        height: 70px;
       }
     }
   }  

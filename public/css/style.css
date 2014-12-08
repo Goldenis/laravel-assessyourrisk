@@ -265,6 +265,10 @@ img {
   svg-stroke-opacity: 1;
   svg-stroke-color: red;
 }
+.chart-1 {
+  width: 98px;
+  height: 98px;
+}
 .border {
   position: fixed;
   border: 15px solid #ccc;
@@ -1012,24 +1016,21 @@ input[type="checkbox"] {
   height: 100%;
   padding: 20px 45px;
   float: left;
+  /* .chart{
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        padding-top: 15px;
+        border: 8px solid $pink;
+        left: 12px;
+        @include centerH;
+        @include rounded(50%);
+        margin-bottom: 9px; */
   color: #d7006d;
 }
 .right-column .dashboard .progress .chart {
   width: 70px;
   height: 70px;
-  text-align: center;
-  padding-top: 15px;
-  border: 8px solid #d7006d;
-  left: 12px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  margin-bottom: 9px;
 }
 .right-column.in {
   right: 0;

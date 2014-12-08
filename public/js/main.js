@@ -47,7 +47,7 @@
   })
   $(window).bind('touchstart',function(e){
     _isTouchDevice = true;
-    moved = 0;
+    distance = 0;
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     touchStartY = touch.pageY;
     clearInterval(inertiaInterval);
@@ -55,19 +55,19 @@
   $(window).bind('touchmove',function(e){
     e.preventDefault();
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    moved = touch.pageY-touchStartY;
-    _currentFrame -= moved/3;
+    distance = touch.pageY-touchStartY;
+    _currentFrame -= distance/3;
     _currentFrame = Math.floor(Math.max(_currentFrame,0));
     _scrollHandler();
     touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
     var inertiaInterval = setInterval(function(){
-      moved*=.9;
-      _currentFrame -= moved/3;
+      distance*=.9;
+      _currentFrame -= distance/3;
       _currentFrame = Math.floor(Math.max(_currentFrame,0));
       _scrollHandler();
-      if(Math.abs(moved) < .2){
+      if(Math.abs(distance) < .2){
         clearInterval(inertiaInterval)
       }
     },10)
@@ -185,12 +185,12 @@
     $('.bottle').on('mousedown',function(e){
       e.preventDefault();
       var x = e.pageX;
-      var moved = 0;
+      var distance = 0;
       var l;
       var currentGlass;
       _$window.bind('mousemove',function(e){
-        moved = x-e.pageX;
-        l = Math.max(50,$('.bottle').position().left-moved);
+        distance = x-e.pageX;
+        l = Math.max(50,$('.bottle').position().left-distance);
         l = Math.min(l,550);
         currentGlass = Math.floor((l-5)/59);
         $('.drink img').eq(currentGlass).css({
@@ -201,10 +201,10 @@
         })
         $('.bottle').css({
           left: l,
-          //'-webkit-transform': 'rotate('+moved+'deg)'
+          //'-webkit-transform': 'rotate('+distance+'deg)'
         })
         x = e.pageX;
-        moved = 0;
+        distance = 0;
       })
     })
     _$window.on('mouseup',function () {

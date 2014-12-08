@@ -81,26 +81,27 @@
       </section>
       <div class="dots">
     		<div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
 		    <div class="tooltip-bottom"></div>
       </div>
       <div class="assessment-wrap">
@@ -460,12 +461,12 @@ It’s important to know what’s normal for you — that way, you’re equipped
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-<!--    
+    
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 		<script src="js/weight.js"></script>
-		<script src="js/height.js"></script>-->
+		<script src="js/height.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

@@ -12,7 +12,7 @@
   <body>
     <div class="border"></div>
     <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
-    <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
+    <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
     
     <div class="overlay male-overlay">
       <button class="close-btn">✕ &nbsp; close</button>
@@ -21,29 +21,55 @@
 
     <div class="overlay progress-overlay">
       <button class="close-btn">✕ &nbsp; close</button>
-      <div class="questions"></div>
+      <div class="questions">
+        
+      </div>
       <div class="vignettes">
       	<div class='section-title'>Education</div>
       	<div>
-      		<h3>Lifestyle</h3>
-      		<h3>Family History</h3>
-      		<h3>Your Normal</h3>
+      		<h4>Lifestyle</h4>
+      		<h4>Family History</h4>
+      		<h4>Your Normal</h4>
       	</div>
       </div>
     </div>
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">
-      <img class="wheel" src="img/wheel.png">
-      
-      <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
+      <div class="wheel"><img src="img/wheel.png"></div>
+      <div class="intro-message">
+        <p>1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.
+          <br>
+          <br>
+    		  Your body. Your life.<br>
+    		  Don’t leave it up to chance.
+    		</p>
+        <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
+      </div>
     </section>
     <!-- RIGHT COLUMN -->
     <div class="right-column">
+
+      <!-- DASH -->
+
+      <div class="dashboard">
+        <h6 class="label">MY PROGRESS</h6>
+        <div class="progress">
+          <div class="percentage">20%</div>
+          <div class="chart chart-2"></div>
+          <h6>ASSESSMENT</h6>
+        </div>
+        <div class="progress">
+          <div class="percentage">68%</div>
+          <div class="chart chart-3"></div>
+          <h6>EDUCATION</h6>
+        </div>
+      </div>
+
       <!-- UNDERSTAND -->
       <div class="toggle-box">
         <div class="understand">
-          <h4>Understand<br>Your Risk<br></h4>
+          <h3>Understand<br>Your Risk<br></h3>
           <div class="arrow"><img src="img/arrow_right.png"></div>
         </div>
         <div class="assess">
@@ -68,58 +94,38 @@
           </div>
         </div>
       </div>
-
-      <!-- DASH -->
-
-      <div class="dashboard">
-        <h6 class="label">MY PROGRESS</h6>
-        <div class="progress">
-          <div class="percentage">20%</div>
-          <div class="chart chart-2"></div>
-          <h6>ASSESSMENT</h6>
-        </div>
-        <div class="progress">
-          <div class="percentage">68%</div>
-          <div class="chart chart-3"></div>
-          <h6>EDUCATION</h6>
-        </div>
-      </div>
     </div>
     <!-- ASSESSMENT-->
     <section class="assessment scrollpane"> 
       <div class="section-title">Assess Your Risk</div>
       <section class="assessment-intro in">
-        <div class="vertically-centered">
-          <h4 class="mobile-hide"> Bright Pink created an assessment to help you understand your personal level of cancer risk.</p> <p>This information can be life saving.</h4>
-          <!-- <p class=""><strong>Let's assume you have cancer until you...</strong></p> -->
-          <!-- <h1>Assess Your Risk</h1> -->
-            <button class="action"> Assess Your Risk</button>
-        </div>
+        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about what actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
+        <button class="action">Let’s Go.</button>
       </section>
       <div class="dots">
       	<div class="tooltip-bottom"></div><br>
         <div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
+    		<div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question">
@@ -132,119 +138,19 @@
         </div>
 
         <div class="question">
-          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
-        
-          <div class="answers">
-            <button>Breast cancer</button>
-            <button>Ovarian cancer</button>
-            <button>None</button>
-          </div>
-        </div>
-    
-        <div class="question">
-          <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
-        
-          <div class="answers">
-            <button>Yes, I've tested positive for a specific gene mutation</button>
-            <button>Yes, a relative has but I've tested negative for that mutation</button>
-            <button>Yes, a relative has, but I've not yet been tested</button>
-            <button>No</button>
-          </div>
-        </div>
-
-        <div class="question">
-          <div class="prompt">Which gene mutation have your or your relative(s) been diagnosed with?</div>
-        
-          <div class="checkbox-list">
-            <div class="checkbox"><input type="checkbox"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
-          </div>
-          <br>
-          <br>
-          <button>Continue</button>
-        </div>
-
-        <div class="question">
-          <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
-        
-          <div class="checkbox-list">
-            <div class="checkbox"><input type="checkbox"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">VUS<div class="definition">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)/div> </div></div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Male breast cancer</div></div>
-          </div>
-          <br>
-          <br>
-          <button>Continue</button>
-          <button class="sub">Help me ask them</button>          
-        </div>
-
-    <div class="question">
-          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
-          <div class="checkbox-list half">        
-            <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Pancreatic cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Thyroid cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Sarcoma cancer</div></div>
-          </div>
-          <div class="checkbox-list half">
-            <div class="checkbox"><input type="checkbox"><div class="label">Leukemia or Lymphoma</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Melanoma cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Adrenocortical Carcinoma</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox"><input type="checkbox"><div class="label">Brain Cancer</div></div>
-            <div class="checkbox"><input type="checkbox" checked><div class="label">None</div></div>
-          </div>     
-          <br>
-          <br>
-          <button>Continue</button>
-          <button class="sub">Help me ask them</button>
-        </div>
-
-    <div class="question">
-          <div class="prompt">Did you receive any radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-    <div class="question">
-          <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-    <div class="question">
-          <div class="prompt">Have you ever had an abnormal breast biopsy?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-    <div class="question">
           <div class="prompt">How old are you?</div>
         
           <div class="answers">
             <button>Under 20</button>
-      <button>20-30</button>
-      <button>31-35</button>
-      <button>36-40</button>
-      <button>40+</button>
+            <button>20-30</button>
+            <button>31-35</button>
+            <button>36-40</button>
+            <button>40+</button>
           </div>
         </div>
 
-
         <div class="question">
-          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your weight?</div>
+          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
           <div class="visual">
         <div class="weight-container">
           <div id="weight-base"></div>
@@ -259,8 +165,7 @@
           <button class="btn-wrap">Continue</button>
         </div>
 
-
-        <div class="question">
+       <div class="question">
           <div class="prompt">Drag drink icon to the number of drinks per day you have — don’t forget to count the weekends!</div>
           <div class="bottle"><img src="img/assessment/bottle.png"></div>
           <div class="answers drinks">
@@ -278,35 +183,9 @@
           <button>Continue</button>
         </div>
 
+
         <div class="question">
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-        <div class="question">
-          <div class="prompt">Have you taken birth control pills for five years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-        <div class="question">
-          <div class="prompt">Have you ever given birth?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-    <div class="question">
-          <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
         
           <div class="answers">
             <button>Yes</button>
@@ -324,7 +203,7 @@
         </div>
 
         <div class="question">
-          <div class="prompt">Do you smoke?</div>
+          <div class="prompt">Have you ever been Vitamin D deficient?</div>
         
           <div class="answers">
             <button>Yes</button>
@@ -333,7 +212,7 @@
         </div>
 
         <div class="question">
-          <div class="prompt">Have you ever been told by a doctor that you have "dense breasts”?</div>
+          <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
         
           <div class="answers">
             <button>Yes</button>
@@ -342,17 +221,7 @@
         </div>
 
         <div class="question">
-          <div class="prompt">Have you ever been told that you have a Vitamin D deficiency?</div>
-        
-          <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-
-
-        <div class="question">
-          <div class="prompt">How old were you when you got your first period</div>
+          <div class="prompt">How old were you when you first got your period?</div>
         
           <div class="answers">
             <button>Under 12</button>
@@ -360,7 +229,149 @@
           </div>
         </div>
 
-    <div class="question">
+        <div class="question">
+          <div class="prompt">Have you taken birth control pills for five years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you ever given birth?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
+        
+          <div class="answers">
+            <button>Breast cancer</button>
+            <button>Ovarian cancer</button>
+            <button>Neither</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
+        
+          <div class="checkbox-list">
+            <div class="checkbox"><input type="checkbox"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">None of the above</div></div>
+          </div>
+          <br>
+          <br>
+          <button>Continue</button>
+          <button class="sub">Help me ask them</button>          
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
+        
+          <div class="answers">
+            <button>Yes, I've tested positive for a specific gene mutation</button>
+            <button>Yes, a relative has but I've tested negative for that mutation</button>
+            <button>Yes, a relative has, but I've not yet been tested</button>
+            <button>No</button>
+            <button>I don’t know</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
+        
+          <div class="checkbox-list">
+            <div class="checkbox"><input type="checkbox"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Other specific mutation</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
+            <div class="checkbox"><input type="checkbox" checked><div class="label">I’m not sure</div></div>
+          </div>
+          <br>
+          <br>
+          <button>Continue</button>
+        </div>
+    
+        <div class="question">
+          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
+          <div class="checkbox-list half">        
+            <div class="checkbox"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Sarcoma cancer</div></div>
+          </div>
+          <div class="checkbox-list half">
+            <div class="checkbox"><input type="checkbox"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">Brain Cancer</div></div>
+            <div class="checkbox"><input type="checkbox"><div class="label">None of the above</div></div>
+            <div class="checkbox"><input type="checkbox" checked><div class="label">I’m not sure</div></div>
+          </div>     
+          <br>
+          <br>
+          <button>Continue</button>
+          <button class="sub">Help me ask them</button>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Are you of Ashkenazi (Eastern European) Jewish ancestry with breast, ovarian, or pancreatic cancer in the family?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Did you receive radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+            <button class="sub">Help me ask them</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="prompt">Have you ever had an abnormal breast biopsy?</div>
+        
+          <div class="answers">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+  
+        <div class="question">
           <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
         
           <div class="answers">
@@ -372,100 +383,320 @@
     </section>
     <!-- EDUCATION -->
     <section class="education">
-       <div class="nav">
+      <div class="nav">
         <div class="nav-item">LIFESTYLE</div>
-        <div class="nav-item">FAMILY HISTORY</div>
         <div class="nav-item">YOUR NORMAL</div>
+        <div class="nav-item">FAMILY HISTORY</div>
       </div>
       <div class="scroll"><!-- SCROLL --></div>
       <button class="btn-continue">CONTINUE</button>
       <div class="education-menu">
-        <div class="module">
+        <div class="module-hero">
           <div class="how">Understand How</div>
-          <h2>Lifestyle</h2>
-          <div class="effect">Can Effect Your Risk</div>
+          <h1>Lifestyle</h1>
+          <div class="effect">Affects Your Risk</div>
         </div>
-        <div class="module">
+        <div class="module-hero">
           <div class="how">Understand How</div>
-          <h2>Family History</h2>
-          <div class="effect">Can Effect Your Risk</div>
-        </div>
-        <div class="module">
+          <h1>Knowing Your Normal</h1>
+          <div class="effect">Affects Your Risk</div>
+        </div>        
+        <div class="module-hero">
           <div class="how">Understand How</div>
-          <h2>Your Normal</h2>
-          <div class="effect">Can Effect Your Risk</div>
+          <h1>Family & Health History</h1>
+          <div class="effect">Affects Your Risk</div>
         </div>
       </div>
       <div class="section-title">Understand Your Risk</div>
-      <div class="family-history">If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</div>
-      <div class="normal">Every body is different.  
-In order to know what’s up with your bod, you have to be self aware.
-It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.
+<!-- LIFESTYLE -->
+      <div class="module lifestyle">
+        <div class="vignette main">
+          <div class="headlines">
+            <div class="headline">
+              <h2>Turns out, life affects your life:</h2>
+              <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Women who get regular exercise may have a lower risk of breast cancer.</h3>
+            </div>
+            <div class="headline">
+              <h3>Get moving: 30 minutes on most days, and you might reduce your risk by as much as 10-20 percent.</h3>
+            </div>
+            <div class="headline">
+              <h3>123 women have pledged to move regularly. Join Them.</h3>
+            </div>
+          </div>
+
+          <button class="pledge sub"></button>
+        </div>
+
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
+            </div>
+            <div class="headline">
+              <h3>234 women have pledged to watch their fat intake. Join them.</h3>
+            </div>
+          </div>
+          <button class="pledge sub">Me Too.</button>
+        </div>
+
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Cut back on cocktails — there’s a known link between alcohol and breast cancer.</h3>
+            </div>
+            <div class="headline">
+              <h3>Every drink you throw back affects your health. Limit your drinking wherever you can to stay on the safe side.</h3>
+            </div>
+            <div class="headline">
+              <h3>345 women have pledged to tee-total. Join them.</h3>
+            </div>
+          </div>
+          <button class="pledge sub">I’m Onboard.</button>
+        </div>
+
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
+            </div>
+            <div class="headline">
+              <h3>No excuses: if you don’t give up your smokes, you’re putting out a welcome sign for cancer.</h3>
+            </div>
+            <div class="headline">
+              <h3>456 women have pledged to go smoke-free. Support or join them.</h3>
+            </div>
+          </div>
+          <button class="pledge sub">I’m All About It.</button>
+        </div>
+
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
+            </div>
+            <div class="headline">
+              <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
+            </div>
+            <div class="headline">
+              <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
+            </div>
+          </div>
+          <button class="pledge sub">Pledge to start birth control</button>
+        </div>
+      </div>
+<!-- KNOW YOUR NORMAL -->
+      <div class="module normal">
+        <div class="vignette main">
+          <div class="headlines">
+            <div class="headline">
+              <h2>Every body is different.</h2>
+              <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
+              <ul>
+                <li>Look & touch from many angles with different pressures.</li>
+                <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
+                <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
+                <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
+                <li>If a change persists or worsens, get to a doc</li>
+              </ul>
+            </h3>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>A few examples of abnormal symptoms:</h3>
+              <ul>
+                <li>Warmth or redness</li>
+                <li>Nipple discharge</li>
+                <li>Swelling</li>
+                <li>Soreness</li>
+                <li>Scaly, sore, or rash on breast</li>
+                <li>Changes in breast size or shape</li>
+                <li>Itching or bumps</li>
+                <li>Lump </li>
+              </ul>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Let’s talk lumps.</h3>
+              <ul>
+                <li>The most common symptom of breast cancer is a lump.</li>
+                <li>But, some women have naturally lumpy breasts.  </li>
+                <li>Soft, mobile lumps that come and go are normal.</li>
+                <li>A lump that feels like a frozen pea is not.</li>
+                <li>A lump that gets bigger and doesn’t go away for 2-3 weeks is not.</li>
+                <li>Don’t panic — 80% of lumps aren’t cancerous — but make sure to go to your doctor.</li>
+              </ul>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Don’t forget to take care.</h3>
+            </div>
+            <div class="headline">
+              <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
+              <button>Text Me.</button>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>There is currently no effective test for ovarian cancer.</h3>
+            </div>
+            <div class="headline">
+              <h3>The signs and symptoms can be easily mistaken for other issues — like PMS.</h3>
+            </div>
+            <div class="headline">
+              <h3>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:
+              <ul>
+                <li><h4>Primary:</h4></li>
+                <li>Pelvic or abdominal pain</li>
+                <li>Feeling the need to urinate frequently</li>
+                <li>Prolonged bloating</li>
+                <li>Difficulty eating or feeling full quickly</li>
+                <li>(If you had Chinese food last night and are feeling bloated, this isn’t what we’re talking about.)</li>
+                <li><h4>Secondary:</h4></li>
+                <li>Constipation</li>
+                <li>Menstrual changes</li>
+                <li>Back pain</li>
+                <li>Upset stomach, heartburn</li>
+                <li>Pain during intercourse</li>
+                <li><br>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
+                <li>But if they persist or worsen for 2-3 weeks, see your doctor and ask—could it be my ovaries?</li>
+              </ul>
+              <ul>
+                <li>See a doctor annually for a well woman’s exam.</li>
+                <li>Ask for a physical breast exam.</li>
+                <li>Remember: pap smears don’t check for ovarian cancer.</li>
+                <li>Mammograms should begin at 40, unless your family history says otherwise.</li>
+                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
+                <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
+                <li>You see your doctor once a year.  The other 364 days are up to you.</li>
+              </ul>
+            </h3>
+          </div>
+              
+          </div>
+        </div>
+      </div>
+
+<!-- FAMILY HISTORY -->
+      <div class="module family-history">
+        <div class="vignette main">
+          <div class="headlines">
+            <div class="headline">
+              <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
+            </div>
+            <div class="headline">
+              <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
+            </div>
+          </div>
+          <div class="data-viz">
+            <h1>87%</h1><h1>54%</h1>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Your personal health history and choices have a big effect as well.</h3>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>        
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Your personal health history and choices have a big effect as well.</h3>
+            </div>
+            <div class="headline"></div>
+          </div>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
+            </div>
+            <div class="headline">
+              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts.  The earlier this transformation happens, the lower the risk of breast cancer.  Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
+            </div>
+            <div class="headline">
+              <h3>567 women have pledged to breastfeed. Support them.</h3>
+            </div>
+          </div>
+          <button class="pledge sub">Count me in.</button>
+        </div>
+        <div class="vignette">
+          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+            </div>
+            <div class="headline">              
+              <h3>678 women have pledged to consider oral contraceptives. Support or join them.</h3>
+            </div>
+          </div>
+          <button class="pledge sub">Done & Done.</button>
+        </div>
+
+      </div>
     </div>
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>Women who get regular exercise may have a lower risk of breast cancer</h3>
-          <h3>Although not all studies show this benefit, when the evidence is looked at as a whole, regular exercise appears to lower breast cancer risk by about 10 to 20 percent</h3>
-          <h3>These women have all pledged to excercise. Join or encourage them!</h3>
-        </div>
-
-        <button class="pledge sub">Pledge to Exercise</button>
-      </div>
-
-
-
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>Maintain a healthy weight and reduce your fat intake. </h3>
-          <h3>There is a clear link between obesity and breast cancer because extra fatty tissue leads to extra estrogen production, which leads to an increased risk of breast cancer.</h3>
-        </div>
-        <button class="pledge sub">Pledge to maintain a healthy weight</button>
-      </div>
-
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>There is a known link between alcohol and breast cancer.</h3>
-          <h3>Limit alcohol to one drink per day, or avoid it completely.</h3>
-          <h3>These women have all pledged to drink less. Join or encourage them!</h3>
-        </div>
-        <button class="pledge sub">Pledge to Drink Less</button>
-      </div>
-
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>If it makes sense for you, breastfeeding for 1-2 years, not necessarily consecutively, may lower your breast cancer risk by decreasing the number of periods you have over the course of your life.</h3>
-          <h3>These women have all pledged to breastfeed. Join or encourage them!</h3>
-        </div>
-        <button class="pledge sub">Pledge to Breastfeed</button>
-      </div>
-
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>Smoking may increase the risk of breast cancer. </h3>
-          <h3>We know how hard it can be to quit, but if you smoke, we ask that you commit to quit today and take advantage of Bright Pink’s smoke cessation resources online.</h3>
-          <h3>These women have all pledged to quit smoking. Join or encourage them!</h3>
-        </div>
-        <button class="pledge sub">Pledge to quit</button>
-      </div>
-
-      <div class="vignette">
-        <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
-        <div class="headlines">
-          <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
-          <h3> 5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
-          <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
-        </div>
-        <button class="pledge sub">Pledge to start birth control</button>
-      </div>
+  </div>
     </div>
+  </div>
+  
+    </div>
+  </div>
   
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 
     </div><footer id="site-footer" class="flex-container">
       <div class="flex-none">

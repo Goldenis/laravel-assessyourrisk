@@ -76,6 +76,8 @@
 html {
   font-size: 100%;
   width: 100%;
+  font-size: 16px;
+  font-family: 'avg', 'Helvetica', sans-serif;
   height: 100%;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -95,11 +97,9 @@ body {
   height: 100%;
   font-size: 1em;
   line-height: 1.4;
-  font-size: 16px;
-  font-family: 'avg', 'Helvetica', sans-serif;
 }
 a {
-  color: #ffb4aa;
+  color: #d7006d;
   text-decoration: none;
   font-size: 1em;
   -webkit-transition: all 0.2s 0 linear;
@@ -207,6 +207,71 @@ img {
    Author: Nick Jones / The Experiment
    ========================================================================== */
 }
+header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #555558;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'avg_bold', sans-serif;
+  font-weight: normal;
+}
+h1 {
+  font-size: 5em;
+}
+h2 {
+  font-size: 4em;
+}
+h3 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 2em;
+}
+h5 {
+  font-size: 1.5em;
+}
+button {
+  padding: 1em 1.8em;
+  background: #d7006d;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-family: "avg_bold";
+  margin: 1em 0.5em 0.5em 0;
+  top: 1em;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: auto;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.2s 0 ;
+  -moz-transition: all 0.2s 0 ;
+  -o-transition: all 0.2s 0 ;
+  -ms-transition: all 0.2s 0 ;
+  transition: all 0.2s 0 ;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+button:hover {
+  background: #f6323e;
+}
+button.sub {
+  font-size: 0.8em;
+  color: #d7006d;
+  background: #fff;
+  border: 3px solid #d7006d;
+  cursor: pointer;
+}
+button.sub:hover {
+  color: #f6323e;
+  border-color: #f6323e;
+}
 .overlay {
   position: fixed;
   left: 0;
@@ -261,17 +326,17 @@ img {
   opacity: 0.8;
 }
 .progress-overlay .vignettes {
-  padding: 8%;
+  padding: 6rem;
   width: 50%;
   overflow-y: scroll;
   height: 100%;
   float: left;
 }
-.progress-overlay .vignettes h3 {
-  margin-top: 2rem;
+.progress-overlay .vignettes h4 {
+  margin-top: 2em;
   cursor: pointer;
 }
-.progress-overlay .vignettes h3:hover {
+.progress-overlay .vignettes h4:hover {
   opacity: 0.8;
 }
 .progress-overlay .close-btn {
@@ -311,16 +376,16 @@ img {
   top: 40px;
 }
 .donut-png {
-  width: 100px;
-  height: 100px;
+  width: 8rem;
+  height: 8rem;
   overflow: visible;
   svg-stroke-width: 5px;
   svg-stroke-opacity: 1;
   svg-stroke-color: red;
 }
 .chart-1 {
-  width: 98px;
-  height: 98px;
+  width: 8rem;
+  height: 8rem;
   margin-top: 12px;
 }
 .border {
@@ -351,8 +416,8 @@ img {
 }
 .dots {
   position: absolute;
-  bottom: 180px;
-  left: 60px;
+  bottom: 3rem;
+  left: 3rem;
 }
 .dot {
   color: #ccc;
@@ -381,76 +446,11 @@ img {
 }
 .tooltip-bottom {
   width: auto;
-  font-size: 1rem;
+  font-size: 1em;
   top: -32px;
   border-top: 2px solid #555558;
   position: absolute;
   padding-top: 4px;
-}
-header {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  border: 1px solid #555558;
-}
-h1, h2, h3, h4, h5 {
-  font-family: 'avg_bold', sans-serif;
-  font-weight: normal;
-}
-h1 {
-  font-size: 5em;
-}
-h2 {
-  font-size: 5em;
-}
-h3 {
-  font-size: 4em;
-}
-h4 {
-  font-size: 2em;
-}
-h5 {
-  font-size: 1.5em;
-}
-button {
-  padding: 15px 35px;
-  background: #d7006d;
-  outline: none;
-  border: none;
-  color: #fff;
-  font-family: "avg_bold";
-  margin: 1em 0.5em 0.5em 0;
-  top: 1em;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  width: auto;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition: all 0.2s 0 ;
-  -moz-transition: all 0.2s 0 ;
-  -o-transition: all 0.2s 0 ;
-  -ms-transition: all 0.2s 0 ;
-  transition: all 0.2s 0 ;
-  -moz-transition-duration: 0.2s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
-}
-button:hover {
-  background: #f6323e;
-}
-button.sub {
-  font-size: 0.8em;
-  color: #d7006d;
-  background: #fff;
-  border: 3px solid #d7006d;
-  cursor: pointer;
-}
-button.sub:hover {
-  color: #f6323e;
-  border-color: #f6323e;
 }
 .btn-wrap {
   left: 0;
@@ -476,8 +476,9 @@ input[type="checkbox"] {
 }
 .logo {
   position: absolute;
-  bottom: 50px;
-  left: 53px;
+  top: 2rem;
+  left: 3rem;
+  margin-left: -6px;
   opacity: 0;
   -webkit-transition: all 0.5s 0 ;
   -moz-transition: all 0.5s 0 ;
@@ -488,20 +489,9 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.logo-white {
-  position: absolute;
-  bottom: 50px;
-  left: 52px;
-  opacity: 0;
-  z-index: 2000;
-  -webkit-transition: all 0.5s 0 ;
-  -moz-transition: all 0.5s 0 ;
-  -o-transition: all 0.5s 0 ;
-  -ms-transition: all 0.5s 0 ;
-  transition: all 0.5s 0 ;
-  -moz-transition-duration: 0.5s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
+.logo img {
+  width: 11rem;
+  max-width: 147px;
 }
 .asterisk {
   color: #f6323e;
@@ -541,25 +531,49 @@ input[type="checkbox"] {
   display: inline-block;
   font-size: 1em;
   font-family: "avg_bold";
-  padding-bottom: 6px;
-  border-bottom: 2px solid rgba(25, 25, 25, .2);
+  padding-top: 6px;
+  border-top: 2px solid rgba(25, 25, 25, .2);
   z-index: 2;
 }
 .intro {
   width: 100%;
-  padding: 10%;
+  height: 100%;
   z-index: 2;
 }
-.wheel {
-  margin-right: 100px;
+.intro .wheel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.intro .wheel img {
+  opacity: 0;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  opacity: 0;
   -webkit-animation: rotate-in 2s 0s forwards;
   -moz-animation: rotate-in 2s 0s forwards;
   animation: rotate-in 2s 0s forwards;
+  width: 30rem;
+  max-width: 564px;
+}
+.intro .intro-message {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 6rem;
+  width: calc(100% - 1300px);
+  min-width: 250px;
+}
+.intro p {
+  font-size: 16px;
 }
 .weight-container {
   position: relative;
@@ -627,7 +641,7 @@ input[type="checkbox"] {
   width: 75%;
   height: 100%;
   float: left;
-  padding: 60px;
+  padding: 7rem 3rem 0;
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -690,31 +704,32 @@ input[type="checkbox"] {
   -moz-transition-duration: 0.4s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  top: 150px;
+  top: 13rem;
 }
 .education {
   position: absolute;
+  top: 0;
   width: calc(75% - 10px);
   height: 100%;
-  top: 0;
   left: 100%;
 }
-.education .family-history, .education .normal {
+.education .module {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: #ffb4aa;
-  color: #fff;
-  font-family: "avg_bold";
-  font-size: 3em;
   visibility: hidden;
-  padding: 190px 10% 100px 10%;
-  border-left: 10px solid #fff;
 }
-.education .family-history.in, .education .normal.in {
+.education .module.in {
   visibility: visible;
+}
+.education .module .main {
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 100%;
+  background: #d7006d;
+  color: #fff;
 }
 .education .nav {
   width: 100%;
@@ -809,12 +824,12 @@ input[type="checkbox"] {
 .education .education-menu.out {
   left: 100%;
 }
-.education .module {
+.education .module-hero {
   width: 100%;
   background: #f6323e;
   background-size: cover;
   color: #fff;
-  padding: 50px 10%;
+  padding: 3.5em 5rem;
   height: 33.333%;
   cursor: pointer;
   border-left: 10px solid #fff;
@@ -828,45 +843,45 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.education .module:last-of-type {
+.education .module-hero:last-of-type {
   border-bottom: 10px solid #fff;
 }
-.education .module:hover {
+.education .module-hero:hover {
   background: #d7006d;
   border-left: 18px solid #fff;
   border-top: 18px solid #fff;
 }
-.education .module .how {
+.education .module-hero .how {
   border-bottom: 2px solid rgba(255, 255, 255, .2);
   display: inline-block;
   padding-bottom: 6px;
 }
-.education .module .how, .education .module .effect {
+.education .module-hero .how, .education .module-hero .effect {
   font-size: 1em;
   line-height: 1em;
   font-family: 'avg_bold';
 }
-.education .module h1 {
+.education .module-hero h1 {
   color: #fff;
 }
-.education .module:nth-of-type(1) {
+.education .module-hero:nth-of-type(1) {
   background: url('../img/education/lifestyle.jpg') center center;
   background-size: cover;
 }
-.education .module:nth-of-type(2) {
+.education .module-hero:nth-of-type(2) {
   background: url('../img/education/familyhistory.jpg') center center;
   background-size: cover;
 }
-.education .module:nth-of-type(3) {
+.education .module-hero:nth-of-type(3) {
   background: url('../img/education/knowyournormal.jpg') center center;
   background-size: cover;
 }
 .education .section-title {
   color: #fff;
-  left: 10%;
-  top: 15%;
+  left: 8rem;
+  top: 8rem;
   opacity: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  border-top: 2px solid rgba(255, 255, 255, .2);
 }
 .education .pledge {
   position: absolute;
@@ -885,14 +900,14 @@ input[type="checkbox"] {
 .education .vignette {
   width: 100%;
   height: 100%;
-  padding-top: 600px;
+  padding-top: 52rem;
 }
 .education .video {
   position: absolute;
   top: 0;
   width: 100000px;
   overflow: hidden;
-  height: calc(100% - 225px);
+  height: calc(100% - 220px);
   background: #d7006d;
   border-left: 10px solid #fff;
 }
@@ -905,19 +920,18 @@ input[type="checkbox"] {
 .education .headlines {
   color: #fff;
   position: absolute;
-  width: 100%;
+  width: 80%;
   z-index: 12;
   top: 22%;
   height: 100%;
   pointer-events: none;
+  left: 8rem;
 }
-.education .headlines h3 {
-  font-size: 2.5em;
+.education .headlines .headline {
   position: absolute;
+  width: 100%;
   visibility: hidden;
   opacity: 0;
-  left: 10%;
-  width: 80%;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -927,9 +941,12 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.education .headlines h3.active {
+.education .headlines .headline.active {
   visibility: visible;
   opacity: 1;
+}
+.education .headlines ul, .education .headlines p {
+  font-size: 1.4rem;
 }
 .education.in {
   left: calc(25% + 10px);
@@ -984,8 +1001,8 @@ input[type="checkbox"] {
   position: absolute;
   height: 100%;
   width: 100%;
-  padding: 55px 45px;
-  background: #f6323e;
+  padding: 3em 3em;
+  background: #ffb4aa;
   top: 0;
   left: 0;
   -webkit-transition: all 1s 0 ease-in-out;
@@ -1008,11 +1025,10 @@ input[type="checkbox"] {
   height: 100%;
   width: 100%;
   background: #ffb4aa;
-  color: #d7006d;
-  padding: 45px;
+  color: #fff;
+  padding: 3em 3em;
   left: calc(-100% - 10px);
   top: 0;
-  padding-top: 50px;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;
@@ -1023,26 +1039,26 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .right-column .toggle-box .assess:hover {
-  background-color: #fdd5ce;
+  background-color: #d7006d;
 }
 .right-column .toggle-box .assess:hover .arrow {
   left: -10px;
 }
 .right-column .fact-group {
-  padding: 45px;
+  padding: 3em 3em;
   height: 50%;
   width: 100%;
   overflow: hidden;
   border-top: 10px solid #fff;
 }
 .right-column .fact-group .education-facts, .right-column .fact-group .assessment-facts {
-  background: #d7006d;
+  background: #ffb4aa;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  padding: 45px;
+  padding: 3em 3em;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;
@@ -1051,6 +1067,9 @@ input[type="checkbox"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+}
+.right-column .fact-group .education-facts {
+  padding-left: 2.2em;
 }
 .right-column .fact-group .education-facts {
   font-size: 1.4em;
@@ -1064,15 +1083,15 @@ input[type="checkbox"] {
   background-color: #f6323e;
 }
 .right-column .dashboard {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
   width: 100%;
-  height: 16.666%;
+  height: 18.666%;
+  margin-top: 6px;
   min-height: 128px;
   background: #fff;
   background: #ffb4aa;
   color: #d7006d;
-  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
   text-align: center;
   padding-right: 10px;
   cursor: pointer;
@@ -1086,6 +1105,7 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .right-column .dashboard .label {
+  font-size: 12px;
   position: absolute;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -1096,9 +1116,10 @@ input[type="checkbox"] {
   top: 50%;
   margin-top: -7px;
   left: -20px;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.02em;
   border-bottom: 2px solid #d7006d;
-  line-height: 1.2rem;
+  line-height: 1.2em;
+  padding-bottom: 4px;
 }
 .right-column .dashboard .progress {
   position: relative;
@@ -1110,7 +1131,7 @@ input[type="checkbox"] {
 }
 .right-column .dashboard .progress .percentage {
   position: absolute;
-  top: 24px;
+  top: 2.5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -1118,8 +1139,8 @@ input[type="checkbox"] {
   transform: translateX(-50%);
 }
 .right-column .dashboard .progress .chart {
-  width: 70px;
-  height: 70px;
+  width: 6rem;
+  height: 6rem;
   margin: auto;
   margin-bottom: 9px;
 }
@@ -1162,7 +1183,7 @@ input[type="checkbox"] {
   opacity: 0;
   width: 100%;
   height: 100%;
-  padding: 60px 0;
+  padding: 3rem 0;
   -webkit-transition: all 0.5s 0 ease-out;
   -moz-transition: all 0.5s 0 ease-out;
   -o-transition: all 0.5s 0 ease-out;
@@ -1236,16 +1257,7 @@ footer {
 @media (max-width: 1000px) {
   /* =============================================================================
    Non-Semantic Helper Classes
-   ========================================================================== */  body {
-    font-size: 0.6em;
-  }
-  h1 {
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 3.4em;
-  }
-  .intro {
+   ========================================================================== */  .intro {
     padding-top: 15%;
   }
   .education, .assessment {
@@ -1267,9 +1279,6 @@ footer {
   .education .headlines {
     top: 20%;
   }
-  .education .headlines h3 {
-    font-size: 2em;
-  }
   .education.in {
     left: 0;
   }
@@ -1281,7 +1290,7 @@ footer {
   }
   .dots {
     left: 30px;
-    bottom: 100px;
+    bottom: 2rem;
   }
   .dot {
     width: 2px;
@@ -1291,16 +1300,6 @@ footer {
   }
   .dot.active {
     border-width: 5px;
-  }
-  .logo {
-    left: 30px;
-    bottom: 20px;
-  }
-  .logo img {
-    width: 100px;
-  }
-  .logo-white {
-    display: none;
   }
 }
 .ir {

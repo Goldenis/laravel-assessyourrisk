@@ -22,9 +22,10 @@
   var vidW = 1271;
   var overlayOpen;
 
+  var _currentModule = 0;
   var _currentQuestion = 0;
   var _currentVignette = 0;
-  var _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
+  var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
   var _myL = 0;
   var _preL = 0;
 
@@ -100,10 +101,24 @@
     }else{
       _smallScreen = false;
     }
-    $('.vignette .headlines h3, .prompt').css({
-      'font-size': Math.max(2,2.2*((_winW*_winH)/1440000))+"em"
+    // setFontScale($('.vignette .headlines h3, .prompt',2,2.2)
+    // setFontScale($('h1'),3,5);
+    // setFontScale($('h2'),3,4);
+    // setFontScale($('h3'),2,3);
+    // setFontScale($('h4'),1,2);
+    // setFontScale($('h5'),.8,1.5);
+    // setFontScale($('p'),.8,1.5);
+    // setFontScale($('button'),.8,1.5);
+    // setFontScale($('checkbox'),.8,1);
+    setFontScale($('html'),11,16,'px');
+  }
+  function setFontScale (el,min,max,type){
+    type = typeof type !== "undefined" ? type : "em";
+    console.log(_winW*_winH)
+    el.css({
+      'font-size': Math.min(max,Math.max(min,max*((_winW*_winH)/1348438)))+type
     })
-  }  
+  }
   function redraw() {
     if(_isTouchDevice){
       window.requestAnimationFrame(function() {
@@ -123,7 +138,7 @@
         _preL -= 220;
       }
 
-      $('.vignette').eq(_currentVignette).find($('.video img')).css({
+      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
         '-webkit-transform':"translateX("+(_preL)+"px)"
       })
       if(_myFrame >= 50){
@@ -147,12 +162,12 @@
       _myL -= 220;
     }
 
-    $('.vignette').eq(_currentVignette).find($('.video img')).css({
+    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
       '-webkit-transform':"translateX("+(_myL)+"px)"
     })
-    if(_currentHeadline.index() < $('.vignette').eq(_currentVignette).find($('h3')).length-1){
+    if(_currentHeadline.index() < $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length-1){
       _currentHeadline.removeClass('active');
-      _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(Math.floor(_currentFrame/50));
+      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/50));
       _currentHeadline.addClass('active');
     }
   }
@@ -187,7 +202,7 @@
 	  chart1.transitionToValues (5,
 				10,
 				[1,1,1,1,1,1,1,1], 
-				['#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FEB6A8','#FFFFFF']);
+				['#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#FFFFFF']);
 	  chart2.transitionToValues (5,
 				8,
 				[.2, .8], 
@@ -240,11 +255,11 @@
     $('.assess').on('click',function(){
       
     })
-    $('.module').on('click',function(){
+    $('.module-hero').on('click',function(){
       changeModule($(this));
       preRoll();
     })
-    $('.progress-overlay .vignettes h3').on('click',function(){
+    $('.progress-overlay .vignettes .headline').on('click',function(){
       changeModule($(this));
       overlayOpen = false;
       $('.progress-overlay').removeClass("in");
@@ -303,27 +318,29 @@
   function changeModule(e){
     var $this = e;
     var i = $this.index();
-    $('.progress-overlay .vignettes h3').eq(i).css({
+    _currentModule = i;
+    $('.progress-overlay .vignettes .headline').eq(i).css({
       opacity: .3
     })
     expandModule(i);
   }
   function expandModule(num){
+    _currentModule = num;
+    _currentVignette = 0;
     $('.nav').addClass('in');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
     _currentFrame = 0;
     $('.education-menu').addClass('out');
-    $('.vignette').eq(_currentVignette).removeClass('in');
-    $('.family-history').removeClass('in');
-    $('.normal').removeClass('in');
-    if(num == 0){
-      $('.vignette').eq(_currentVignette).toggleClass('in');
-    }else if(num == 1){
-      $('.family-history').addClass('in');
-    }else if(num == 2){
-      $('.normal').toggleClass('in');
-    }
+
+    $('.module').removeClass('in');
+    $('.vignette').removeClass('in');
+
+    $('.module').eq(num).addClass('in');
+
+    $('.module').eq(num).find($('.vignette')).eq(_currentVignette).addClass('in');
+    $('.module').eq(num).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0).addClass('active');
+    
     $('.education .section-title').addClass('in');
   }
   function toggleColumn() {
@@ -333,15 +350,14 @@
     $('.education').toggleClass('in');
   }
   function answerQuestion(answer){
-
+    if(_currentQuestion == $('.question').length){
+      $('.progress-overlay').addClass('in');
+    }
     switch (_currentQuestion){  
       case 0:
-        if(answer.html() == "Yes"){
-          $('.tooltip-bottom').html('Then this could save your life.')
-        }else{
+        if(answer.html() != "Yes"){
           $('.male-overlay').addClass('in');
           overlayOpen = true;
-          //$('.logo-white').toggleClass('in');
         }
         break;
       case 1:
@@ -350,7 +366,6 @@
           overlayOpen = true;
         }
         break;
-
     }
     $('.progress-overlay .progress-question').eq(_currentQuestion).css({
       opacity: .3
@@ -365,11 +380,12 @@
   function nextVignette(){
     preRoll();
     _currentFrame = 0;
-    $('.vignette').eq(_currentVignette).toggleClass('in');
+    $('.vignette').removeClass('in');
     _currentVignette++;
-    _currentHeadline = $('.vignette').eq(_currentVignette).find($('h3')).eq(0);
-    $('.vignette').eq(_currentVignette).toggleClass('in');
+    _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
     _scrollHandler();
+    console.log(_currentModule,_currentVignette,_currentHeadline)
   }
   function createProgressOverlay() {
     var html = "<div class='section-title'>Risk Assessment</div>";

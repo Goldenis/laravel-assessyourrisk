@@ -433,7 +433,7 @@
             </div>
           </div>
 
-          <button class="pledge sub"></button>
+          <button class="pledge sub">I get it.</button>
         </div>
 
         <div class="vignette">

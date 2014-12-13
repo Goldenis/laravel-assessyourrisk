@@ -202,7 +202,7 @@
 	  chart1.transitionToValues (5,
 				10,
 				[1,1,1,1,1,1,1,1], 
-				['#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#D7006D','#FFFFFF']);
+				['#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#D7006D']);
 	  chart2.transitionToValues (5,
 				8,
 				[.2, .8], 

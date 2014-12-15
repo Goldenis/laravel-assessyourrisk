@@ -905,11 +905,15 @@ input[type="checkbox"] {
 .education .video {
   position: absolute;
   top: 0;
-  width: 100000px;
+  width: 100%;
   overflow: hidden;
   height: calc(100% - 220px);
   background: #d7006d;
   border-left: 10px solid #fff;
+}
+.education .video video {
+  opacity: 0.9;
+  height: 100%;
 }
 .education .video img {
   position: relative;

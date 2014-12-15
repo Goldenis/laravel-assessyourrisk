@@ -25,12 +25,12 @@
         
       </div>
       <div class="vignettes">
-      	<div class='section-title'>Education</div>
-      	<div>
-      		<h4>Lifestyle</h4>
-      		<h4>Family History</h4>
-      		<h4>Your Normal</h4>
-      	</div>
+        <div class='section-title'>Education</div>
+        <div>
+          <h4>Lifestyle</h4>
+          <h4>Family History</h4>
+          <h4>Your Normal</h4>
+        </div>
       </div>
     </div>
     <!-- INTRO -->
@@ -41,9 +41,9 @@
         <p>1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.
           <br>
           <br>
-    		  Your body. Your life.<br>
-    		  Don’t leave it up to chance.
-    		</p>
+          Your body. Your life.<br>
+          Don’t leave it up to chance.
+        </p>
         <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
     </section>
@@ -83,8 +83,110 @@
       <div class="fact-group">
         <div class="assessment-facts">
           <div class="fact">
-<!--             <img src="img/donut.png"><br><br> -->
-            <h5><span class="data-number">1 in 8 Women</span> <br>will develop breast cancer at some point in her lifetime.</h5>
+            <h5>You—and the 52 million women in the United States between 18 and 45 who have not been diagnosed with breast or ovarian cancer—are at risk simply because you have breasts and/or ovaries.</h5>
+          </div>
+
+          <div class="fact">
+            <h5>TBD</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>There is a clear link between obesity and breast cancer — extra fatty tissue creates extra estrogen which increases breast cancer risk. Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Research shows a 10% increase in breast cancer risk for every 10g of alcohol—that’s one standard drink—consumed each day. Limit alcohol to one drink per day or eliminate it entirely.</div>
+          </div>
+
+          <div class="fact">
+            <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>What you eat affects your health. Research shows a 12% increase in cancer risk for every 50g of red meat consumed each day.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Studies have shown a 2.5x increase in the risk of breast cancer associated with Vitamin D deficiency, and a possible increase in ovarian cancer risk.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Younger women have denser breast tissue, which can make it harder to see tumors on mammograms. </h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Starting your period young increases risk for breast cancer because it raises total lifestyle exposure to estrogen.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.  With less cellular division, there’s less opportunity for cells to “go rogue.”</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Pregnancy minimizes risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Breastfeeding for 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful—2/3 of women diagnosed with ovarian cancer will die from their disease.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Breast and ovarian cancers can run in some families. Sometimes this is because mutated genes have been passed down to you from your mother or father. These genes dramatically increase the risk of developing cancer. Other times, there may be a strong family history, but no known genetic mutation.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Getting a genetic test is as simple as taking a blood test.  The Affordable Care Act requires coverage of genetic testing for women who qualify. </h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>One of the most common mutations — BRCA ½ — is present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Nothing has a greater effect on a woman’s level of risk than her family history.  Background information from BOTH sides of your family is important.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Women of certain races, lineages, and backgrounds may have an increased risk of developing breast and ovarian cancer. For example, breast cancer is the most common cancer diagnosis among African American women. People of Ashkenazi Jewish ancestry are more likely to carry BRCA gene mutations, which puts them at higher risk.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin disease or non-Hodgkin lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>80% of breast cancers in young women are found by young women themselves.</h5>
             <div class="chart-1"></div>
           </div>
         </div>
@@ -103,29 +205,29 @@
         <button class="action">Let’s Go.</button>
       </section>
       <div class="dots">
-      	<div class="tooltip-bottom"></div><br>
+        <div class="tooltip-bottom"></div><br>
         <div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
-    		<div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question">
@@ -420,7 +522,9 @@
         </div>
 
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Women who get regular exercise may have a lower risk of breast cancer.</h3>
@@ -437,7 +541,9 @@
         </div>
 
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
@@ -450,7 +556,9 @@
         </div>
 
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Cut back on cocktails — there’s a known link between alcohol and breast cancer.</h3>
@@ -466,7 +574,9 @@
         </div>
 
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
@@ -482,7 +592,9 @@
         </div>
 
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"><img src="img/modules/yoga2.jpg"><img src="img/modules/yoga3.jpg"><img src="img/modules/yoga4.jpg"><img src="img/modules/yoga5.jpg"><img src="img/modules/yoga6.jpg"><img src="img/modules/yoga7.jpg"><img src="img/modules/yoga8.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>

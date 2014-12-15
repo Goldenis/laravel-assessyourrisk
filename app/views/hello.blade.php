@@ -27,9 +27,9 @@
       <div class="vignettes">
         <div class='section-title'>Education</div>
         <div>
-          <h4>Lifestyle</h4>
-          <h4>Family History</h4>
-          <h4>Your Normal</h4>
+          <h3>Lifestyle</h3>
+          <h3>Family History</h3>
+          <h3>Your Normal</h3>
         </div>
       </div>
     </div>

@@ -787,11 +787,15 @@ input[type="checkbox"]{
   .video{
     position: absolute;
     top: 0;
-    width: 100000px;
+    width: 100%;
     overflow: hidden;
     height: calc(100% - 220px);
     background: $pink;
     border-left: 10px solid #fff;
+    video{
+      opacity: .9;
+      height: 100%;
+    }
     img{
       position: relative;
       opacity: .8;
@@ -916,6 +920,13 @@ input[type="checkbox"]{
       }
     }
     .fact{
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+    }
+    .fact:nth-of-type(1){
+      display: block;
     }
   }
   .dashboard{

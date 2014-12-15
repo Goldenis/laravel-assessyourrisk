@@ -127,32 +127,32 @@
     }
   }
   function preRoll(){
-    // scene 1
-    var _myFrame = 0;
-    var dir = 'forward';
-    _preL = 0;
-    clearInterval(preRollInterval)
-    preRollInterval = setInterval(function(){
-      _preL = Math.max(-vidW*79,-vidW*Math.floor(_myFrame/2));
-      if(_smallScreen){
-        _preL -= 220;
-      }
+    // // scene 1
+    // var _myFrame = 0;
+    // var dir = 'forward';
+    // _preL = 0;
+    // clearInterval(preRollInterval)
+    // preRollInterval = setInterval(function(){
+    //   _preL = Math.max(-vidW*79,-vidW*Math.floor(_myFrame/2));
+    //   if(_smallScreen){
+    //     _preL -= 220;
+    //   }
 
-      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
-        '-webkit-transform':"translateX("+(_preL)+"px)"
-      })
-      if(_myFrame >= 50){
-        dir = "backward"
-      }
-      if(dir == "forward"){
-        _myFrame++;
-      }else{
-        _myFrame--;
-      }
-      if(_myFrame <= 0){
-        clearInterval(preRollInterval);
-      }
-    },20)
+    //   $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
+    //     '-webkit-transform':"translateX("+(_preL)+"px)"
+    //   })
+    //   if(_myFrame >= 50){
+    //     dir = "backward"
+    //   }
+    //   if(dir == "forward"){
+    //     _myFrame++;
+    //   }else{
+    //     _myFrame--;
+    //   }
+    //   if(_myFrame <= 0){
+    //     clearInterval(preRollInterval);
+    //   }
+    // },20)
      
   }
   function _scrollHandler(){
@@ -167,7 +167,7 @@
     })
     if(_currentHeadline.index() < $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length-1){
       _currentHeadline.removeClass('active');
-      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/50));
+      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
       _currentHeadline.addClass('active');
     }
   }
@@ -353,6 +353,9 @@
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
+    $('.fact').eq(_currentQuestion).css({
+      display: 'none'
+    })
     switch (_currentQuestion){  
       case 0:
         if(answer.html() != "Yes"){
@@ -374,6 +377,9 @@
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
     _currentQuestion++;
+    $('.fact').eq(_currentQuestion).css({
+      display: 'block'
+    })
     $('.dot').eq(_currentQuestion).addClass('active')
     $('.question').eq(_currentQuestion).addClass('in')
   }
@@ -384,8 +390,9 @@
     _currentVignette++;
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
+    // $('.bg-video').get(_currentVignette).currentTime = 0;
+    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     _scrollHandler();
-    console.log(_currentModule,_currentVignette,_currentHeadline)
   }
   function createProgressOverlay() {
     var html = "<div class='section-title'>Risk Assessment</div>";

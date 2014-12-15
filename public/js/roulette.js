@@ -28,17 +28,17 @@ var wheel = $(document).ready(
 			var ids = ['you', 'girl', 'work', 'sister', 'mom', 'maid', 'friend', 'partner'];
 			
 			function highlightByRotation() {
-				var r1 = wheelBase[0]._gsTransform.rotation % 360 + 12;
+				var r1 = wheelBase[0]._gsTransform.rotation % 360;
 				var pos = 0;
 				for (var i=0; i<locations.length; i++) {
-					var l1 = (locations[i] + 12) % 360;
-					var l2 = (locations[(i+1) % locations.length] + 12) % 360;
+					var l1 = (locations[i]);
+					var l2 = (locations[(i+1) % locations.length]);
 					if (r1 >= l1 && r1 <= l2) {
 						pos = i;
 						break;
 					}
 				}
-				doSetHighlighted(ids[i]);
+				doSetHighlighted(ids[pos]);
 			}
 			
 			function doSetHighlighted(segmentId) {

@@ -23,5 +23,8 @@ Route::get('/charts', function()
 {
 	return View::make('charts');
 });
-
+Route::get('/roulette', function()
+{
+	return View::make('roulette');
+});
 

@@ -1086,6 +1086,15 @@ input[type="checkbox"] {
 .right-column .fact-group .education-facts:hover {
   background-color: #f6323e;
 }
+.right-column .fact-group .fact {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.right-column .fact-group .fact:nth-of-type(1) {
+  display: block;
+}
 .right-column .dashboard {
   position: relative;
   width: 100%;

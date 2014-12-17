@@ -816,7 +816,7 @@ input[type="checkbox"]{
     top: 0;
     width: 100%;
     overflow: hidden;
-    height: calc(100% - 220px);
+    height: 100% ;
     background: $pink;
     border-left: 10px solid #fff;
     video{
@@ -1136,6 +1136,12 @@ footer{
     }
   }
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */

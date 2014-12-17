@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="border"></div>
-    <div class="logo in">
+    <div class="logo">
     <img src="img/brightpink_logo.jpg">
     </div>
     <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->

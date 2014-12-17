@@ -480,17 +480,43 @@ input[type="checkbox"]{
   width: 100%;
   height: 100%;
   z-index: 2;
-  .wheel{
+  // .wheel{
+  //   position: absolute;
+  //   @include center;
+  //   img{
+  //     opacity: 0;
+  //     @include transform(rotate(-90deg));
+  //     @include animation(rotate-in 2s 0s forwards);
+  //     width: 30rem;
+  //     max-width: 564px;
+  //   }
+  // }
+  .wheel-container {
+    width: 400px;
+    height: 400px;
     position: absolute;
-    @include center;
-    img{
-      opacity: 0;
-      @include transform(rotate(-90deg));
-      @include animation(rotate-in 2s 0s forwards);
-      width: 30rem;
-      max-width: 564px;
-    }
+    overflow: hidden;
+    //@include center;
+    top: 20%;
+    left: 20%;
   }
+  #wheel-base {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background-repeat:no-repeat;
+      background-image: url(../img/roulette/spin_base.png);
+  }
+  #wheel-overlay {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      pointer-events:none;
+  }  
   .intro-message{
     position: absolute;
     @include centerV;

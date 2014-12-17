@@ -11,7 +11,9 @@
   </head>
   <body>
     <div class="border"></div>
-    <div class="logo in"><img src="img/brightpink_logo.jpg"></div>
+    <div class="logo in">
+    <img src="img/brightpink_logo.jpg">
+    </div>
     <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
     
     <div class="overlay male-overlay">
@@ -36,7 +38,10 @@
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">
-      <div class="wheel"><img src="img/wheel.png"></div>
+      <div class="wheel-container">
+        <div id="wheel-base"></div>
+        <div id="wheel-overlay"></div>
+      </div>
       <div class="intro-message">
         <p>1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.
           <br>
@@ -821,6 +826,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
  
+     <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -829,6 +835,18 @@
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="js/svg/DonutChartBuilder.js"></script>
     <script src="js/svg/SVGHelper.js"></script>
+
+    <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
+    <script
+      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js">
+    </script>
+    <script
+      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js">
+    </script>
+    <script
+      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
+    </script>
+    <script src="js/roulette.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

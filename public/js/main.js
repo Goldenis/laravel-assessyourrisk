@@ -214,8 +214,8 @@
   }
   
   function _registerEventListeners() {
-    $('.intro').on('click',function(){
-      $(this).addClass('out-up')
+    $('#Begin').on('click',function(){
+      $('.intro').addClass('out-up')
       $('.right-column').addClass('in')
       $('.assessment').addClass('in');
       $('.border').addClass('white');

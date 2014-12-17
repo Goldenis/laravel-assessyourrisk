@@ -1,10 +1,5 @@
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
-/* CSS Document */
 @charset "utf-8";
-/* =============================================================================
-   HTML5 Boilerplate CSS: h5bp.com/css
-   ========================================================================== */
-@font-face {
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -18,7 +13,7 @@
   font-weight: normal;
   font-style: normal;
 }
-@-webkit-keyframes rotate-in {
+/* CSS Document */@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -63,7 +58,9 @@
     transform: rotate(0deg);
   }
 }
-* {
+/* =============================================================================
+ HTML5 Boilerplate CSS: h5bp.com/css
+ ========================================================================== */* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -203,11 +200,10 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
-  /* ===== Primary Styles ========================================================
-   Author: Nick Jones / The Experiment
-   ========================================================================== */
 }
-header {
+/* ===== Primary Styles ========================================================
+ Author: Nick Jones / The Experiment
+ ========================================================================== */header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -540,26 +536,30 @@ input[type="checkbox"] {
   height: 100%;
   z-index: 2;
 }
-.intro .wheel {
+.intro .wheel-container {
+  width: 400px;
+  height: 400px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  overflow: hidden;
+  top: 20%;
+  left: 20%;
 }
-.intro .wheel img {
-  opacity: 0;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-animation: rotate-in 2s 0s forwards;
-  -moz-animation: rotate-in 2s 0s forwards;
-  animation: rotate-in 2s 0s forwards;
-  width: 30rem;
-  max-width: 564px;
+.intro #wheel-base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/roulette/spin_base.png);
+}
+.intro #wheel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 .intro .intro-message {
   position: absolute;
@@ -1270,9 +1270,7 @@ footer {
   display: none;
 }
 @media (max-width: 1000px) {
-  /* =============================================================================
-   Non-Semantic Helper Classes
-   ========================================================================== */  .intro {
+  .intro {
     padding-top: 15%;
   }
   .education, .assessment {
@@ -1317,7 +1315,9 @@ footer {
     border-width: 5px;
   }
 }
-.ir {
+/* =============================================================================
+ Non-Semantic Helper Classes
+ ========================================================================== */.ir {
   display: block;
   border: 0;
   text-indent: -999em;

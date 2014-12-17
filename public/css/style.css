@@ -548,8 +548,20 @@ input[type="checkbox"] {
   overflow: hidden;
   top: 20%;
   left: 20%;
+  opacity: 0;
 }
-.intro #wheel-base {
+.intro .wheel-container.in {
+  opacity: 1;
+  -webkit-transition: all 0.7s 1s ease-out;
+  -moz-transition: all 0.7s 1s ease-out;
+  -o-transition: all 0.7s 1s ease-out;
+  -ms-transition: all 0.7s 1s ease-out;
+  transition: all 0.7s 1s ease-out;
+  -moz-transition-duration: 0.7s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 1s;
+}
+.intro .wheel-container #wheel-base {
   position: absolute;
   top: 0;
   left: 0;
@@ -558,7 +570,7 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-image: url(../img/roulette/spin_base.png);
 }
-.intro #wheel-overlay {
+.intro .wheel-container #wheel-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -576,9 +588,21 @@ input[type="checkbox"] {
   right: 6rem;
   width: calc(100% - 1300px);
   min-width: 250px;
+  opacity: 0;
+}
+.intro .intro-message.in {
+  opacity: 1;
+  -webkit-transition: all 0.6s 2.4s ease-out;
+  -moz-transition: all 0.6s 2.4s ease-out;
+  -o-transition: all 0.6s 2.4s ease-out;
+  -ms-transition: all 0.6s 2.4s ease-out;
+  transition: all 0.6s 2.4s ease-out;
+  -moz-transition-duration: 0.6s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 2.4s;
 }
 .intro p {
-  font-size: 16px;
+  font-size: 22px;
 }
 .weight-container {
   position: relative;

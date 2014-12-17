@@ -500,8 +500,12 @@ input[type="checkbox"]{
     //@include center;
     top: 20%;
     left: 20%;
-  }
-  #wheel-base {
+    opacity: 0;
+    &.in{
+      opacity: 1;
+      @include transition(.7s, ease-out, all, 1s);
+    }
+    #wheel-base {
       position: absolute;
       top:0;
       left:0;
@@ -509,24 +513,30 @@ input[type="checkbox"]{
       bottom:0;
       background-repeat:no-repeat;
       background-image: url(../img/roulette/spin_base.png);
-  }
-  #wheel-overlay {
+    }
+    #wheel-overlay {
       position: absolute;
       top:0;
       left:0;
       right:0;
       bottom:0;
       pointer-events:none;
-  }  
+    } 
+  } 
   .intro-message{
     position: absolute;
     @include centerV;
     right: 6rem;
     width: calc(100% - 1300px);
     min-width: 250px;
+    opacity: 0;
+    &.in{
+      opacity: 1;
+      @include transition(.6s, ease-out, all, 2.4s);
+    }   
   }
   p {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 // AGE

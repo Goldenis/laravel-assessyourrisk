@@ -101,20 +101,13 @@
     }else{
       _smallScreen = false;
     }
-    // setFontScale($('.vignette .headlines h3, .prompt',2,2.2)
-    // setFontScale($('h1'),3,5);
-    // setFontScale($('h2'),3,4);
-    // setFontScale($('h3'),2,3);
-    // setFontScale($('h4'),1,2);
-    // setFontScale($('h5'),.8,1.5);
-    // setFontScale($('p'),.8,1.5);
-    // setFontScale($('button'),.8,1.5);
-    // setFontScale($('checkbox'),.8,1);
     setFontScale($('html'),11,16,'px');
+    $('.wheel-container').css({
+      '-webkit-transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
+    });
   }
   function setFontScale (el,min,max,type){
     type = typeof type !== "undefined" ? type : "em";
-    console.log(_winW*_winH)
     el.css({
       'font-size': Math.min(max,Math.max(min,max*((_winW*_winH)/1348438)))+type
     })
@@ -388,6 +381,7 @@
     _currentFrame = 0;
     $('.vignette').removeClass('in');
     _currentVignette++;
+    $('.headline').removeClass('active');
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
     // $('.bg-video').get(_currentVignette).currentTime = 0;

@@ -497,9 +497,9 @@ input[type="checkbox"]{
     height: 400px;
     position: absolute;
     overflow: hidden;
-    //@include center;
-    top: 20%;
-    left: 20%;
+    left: 50%;
+    top: 50%;
+    @include transform(scale(1.6) translate(-50%,-50%));
     #wheel-base {
       position: absolute;
       top:0;
@@ -744,7 +744,8 @@ input[type="checkbox"]{
     }
   }
   .module-hero{
-    width: 100%;
+    width: 75%;
+    left: 25%;
     background: $red;
     background-size: cover;
     color: #fff;
@@ -752,6 +753,7 @@ input[type="checkbox"]{
     height: 33.333%;
     cursor: pointer;
     border-left: 10px solid #fff;
+    border-bottom: 10px solid #fff;
 
     @include transition(.4s,ease-out);
     &:last-of-type{

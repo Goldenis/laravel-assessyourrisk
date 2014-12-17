@@ -537,8 +537,12 @@ input[type="checkbox"] {
   height: 400px;
   position: absolute;
   overflow: hidden;
-  top: 20%;
-  left: 20%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: scale(1.6) translate(-50%, -50%);
+  -moz-transform: scale(1.6) translate(-50%, -50%);
+  -o-transform: scale(1.6) translate(-50%, -50%);
+  transform: scale(1.6) translate(-50%, -50%);
 }
 .intro .wheel-container #wheel-base {
   position: absolute;
@@ -821,7 +825,8 @@ input[type="checkbox"] {
   left: 100%;
 }
 .education .module-hero {
-  width: 100%;
+  width: 75%;
+  left: 25%;
   background: #f6323e;
   background-size: cover;
   color: #fff;
@@ -829,6 +834,7 @@ input[type="checkbox"] {
   height: 33.333%;
   cursor: pointer;
   border-left: 10px solid #fff;
+  border-bottom: 10px solid #fff;
   -webkit-transition: all 0.4s 0 ease-out;
   -moz-transition: all 0.4s 0 ease-out;
   -o-transition: all 0.4s 0 ease-out;

@@ -81,6 +81,19 @@ background-repeat:no-repeat;
 }
 
 
+@mixin transition($duration,$ease:ease-out,$prop:all,$delay:0)
+{
+  -webkit-transition: $prop $duration $delay $ease;
+  -moz-transition: $prop $duration $delay $ease;
+  -o-transition: $prop $duration $delay $ease;
+  -ms-transition: $prop $duration $delay $ease;
+  transition: $prop $duration $delay $ease;
+
+  -moz-transition-duration: $duration;
+  -moz-transition-property:$prop;
+  -moz-transition-delay:$delay;
+}
+
 @mixin quarter-second-transition{
 -webkit-transition-duration: .25s;
 -moz-transition-duration: .25s;

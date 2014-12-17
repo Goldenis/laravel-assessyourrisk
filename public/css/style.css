@@ -4,7 +4,6 @@
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
-/* Styles */
 @font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
@@ -874,7 +873,7 @@ input[type="checkbox"] {
 }
 .education .section-title {
   color: #fff;
-  left: 33%;
+  left: 33.333%;
   top: 8rem;
   opacity: 0;
   border-top: 2px solid rgba(255, 255, 255, .2);
@@ -925,7 +924,7 @@ input[type="checkbox"] {
   top: 22%;
   height: 100%;
   pointer-events: none;
-  left: 33%;
+  left: 33.333%;
 }
 .education .headlines .headline {
   position: absolute;
@@ -1270,7 +1269,7 @@ footer {
   display: none;
 }
 @media (max-width: 1000px) {
-  /* Smartphones (portrait and landscape) ----------- */  .intro {
+  .intro {
     padding-top: 15%;
   }
   .education, .assessment {
@@ -1315,10 +1314,21 @@ footer {
     border-width: 5px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-width: 499px) {
   /* =============================================================================
    Non-Semantic Helper Classes
-   ========================================================================== */}
+   ========================================================================== */  .intro .intro-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    right: 6rem;
+    width: 80%;
+    bottom: 20px;
+  }
+  .intro .intro-message p {
+    font-size: 1rem;
+  }
+}
 .ir {
   display: block;
   border: 0;

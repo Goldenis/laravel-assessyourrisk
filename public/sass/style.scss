@@ -790,7 +790,7 @@ input[type="checkbox"]{
   }
   .section-title{
     color: #fff;
-    left: 33%;
+    left: 33.333%;
     top: 8rem;
     opacity: 0;
     border-top: 2px solid rgba(255,255,255,.2);
@@ -838,7 +838,7 @@ input[type="checkbox"]{
     top: 22%;
     height: 100%;
     pointer-events: none;
-    left: 33%;
+    left: 33.333%;
     .headline{
       position: absolute;
       width: 100%;
@@ -1141,9 +1141,30 @@ footer{
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
+@media only screen 
+and (min-width:500px) {
+
+}
+
+//mobile
+@media only screen
+and (max-width:499px) {
+
+  .intro {
+      .intro-message{
+    position: absolute;
+    left: 0;
+    right: 0;
+    right: 6rem;
+    width: 80%;
+    bottom: 20px;
+      p {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
 }
 
 /* =============================================================================

@@ -12,7 +12,7 @@
   <body>
     <div class="border"></div>
     <div class="logo in">
-    <img src="img/brightpink_logo.jpg">
+    <img src="img/brightpink_logo.png">
     </div>
     <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
     
@@ -622,27 +622,32 @@
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
             </div>
+            <div class="headline"></div>
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
-              <ul>
-                <li>Look & touch from many angles with different pressures.</li>
-                <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
-                <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
-                <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
-                <li>If a change persists or worsens, get to a doc</li>
-              </ul>
-            </h3>
+                <ul>
+                  <li>Look & touch from many angles with different pressures.</li>
+                  <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
+                  <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
+                  <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
+                  <li>If a change persists or worsens, get to a doc</li>
+                </ul>
+              </h3>
             </div>
             <div class="headline"></div>
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>A few examples of abnormal symptoms:</h3>
@@ -661,7 +666,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Let’s talk lumps.</h3>
@@ -678,7 +685,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t forget to take care.</h3>
@@ -691,7 +700,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>There is currently no effective test for ovarian cancer.</h3>
@@ -744,7 +755,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
@@ -758,7 +771,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
@@ -767,7 +782,9 @@
           </div>
         </div>        
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
@@ -776,7 +793,9 @@
           </div>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
@@ -791,12 +810,14 @@
           <button class="pledge sub">Count me in.</button>
         </div>
         <div class="vignette">
-          <div class="video"><img src="img/modules/yoga1.jpg"></div>
+          <div class="video">
+            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
             </div>
-            <div class="headline">              
+            <div class="headline">            
               <h3>678 women have pledged to consider oral contraceptives. Support or join them.</h3>
             </div>
           </div>

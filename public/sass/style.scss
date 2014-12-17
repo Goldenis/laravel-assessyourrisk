@@ -431,14 +431,15 @@ input[type="checkbox"]{
 }
 .logo{
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   left: 3rem;
-  margin-left: -6px;
+  margin-left: 0px;
   opacity: 0;
   @include transition(.5s);
   img{
-    width: 11rem;
-    max-width: 147px;
+    width: 12rem;
+    max-width: 205px;
+    min-width: 140px;
   }
 }
 .asterisk{
@@ -951,7 +952,7 @@ input[type="checkbox"]{
       width: calc(100% - 6.8em);
       height: 100%;
       display: none;
-      font-size: .8em;
+      font-size: .7em;
     }
     .fact:nth-of-type(1){
       display: block;

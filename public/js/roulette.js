@@ -12,7 +12,7 @@ var wheel = $(document).ready(
 			
 			var main_chart_div = d3.select("#wheel-overlay").append("div");
 			var svg;
-			d3.xml("img/roulette/roulette_spencer.svg", function(error,
+			d3.xml("img/roulette/Roulette_spencer_newcopy_outlines.svg", function(error,
 					documentFragment) {
 				if (error) {
 					console.log(error);
@@ -25,7 +25,7 @@ var wheel = $(document).ready(
 			})
 			
 			var locations = [348, 8, 54, 94, 142, 166, 220, 288, 347];
-			var ids = ['you', 'girl', 'work', 'sister', 'mom', 'maid', 'friend', 'partner'];
+			var ids = ['you', 'sister', 'aunt', 'girl', 'mom', 'maid', 'friend', 'partner'];
 			
 			function highlightByRotation() {
 				var r1 = wheelBase[0]._gsTransform.rotation % 360;
@@ -42,11 +42,14 @@ var wheel = $(document).ready(
 			}
 			
 			function doSetHighlighted(segmentId) {
-				svg.selectAll('text').style('fill', "#D8076D")
-				svg.selectAll('path').style('fill', "none")
+				// #you
+				// #g-you
 				
-				svg.selectAll('#' + segmentId + ' text').style('fill', "#fff")
-				svg.selectAll('#path' + segmentId + ' path').style('fill', "#D8076D")
+				svg.selectAll('#copy  path').style('fill', "#D8076D")
+				svg.selectAll('#segments path').style('fill', "none")
+				
+				svg.selectAll('#t-' + segmentId + ' path').style('fill', "#fff")
+				svg.selectAll('#g-' + segmentId + ' path').style('fill', "#D8076D")
 			}
 			
 			if (doAllowDrag) {

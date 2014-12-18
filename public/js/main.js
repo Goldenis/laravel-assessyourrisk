@@ -37,7 +37,8 @@
   var chart2;
   var chart3;
   
-  var savedData = {};
+  var savedQuizProgress = {};
+  var savedDiveProgress = {};
 
   $(window).on('scroll',function(e){
     if(overlayOpen){
@@ -164,6 +165,8 @@
       _currentHeadline.removeClass('active');
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
       _currentHeadline.addClass('active');
+      
+      handleSaveDeepProgress();
     }
   }
   
@@ -308,6 +311,9 @@
     _$window.bind('resize', _pageResize);
   }
   function changeModule(e){
+	  
+	  
+	  
     var $this = e;
     var i = $this.index();
     _currentModule = i;
@@ -316,9 +322,13 @@
     })
     expandModule(i);
   }
-  function expandModule(num){
+  function expandModule(num){  
+	  
     _currentModule = num;
     _currentVignette = 0;
+    
+    handleSaveDeepProgress();
+	  
     $('.nav').addClass('in');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
@@ -360,7 +370,7 @@
   function updateCharts() {
 	  // percquiz percdive
 	  var questionsAnswered = 0;
-	  for (q in savedData) questionsAnswered++;
+	  for (q in savedQuizProgress) questionsAnswered++;
 	  var quizProgress = questionsAnswered/22;
 	  $(".percquiz").html(Math.ceil(quizProgress * 100) + "%");
 	  chart2.transitionToValues (5,
@@ -373,11 +383,21 @@
 				['#D7006D','#FFFFFF']);
   }
   
+
+	function handleSaveDeepProgress() {
+		savedDiveProgress[_currentModule + "_" + _currentVignette + "_"
+				+ _currentHeadline.index()] = true;
+		console.log(savedDiveProgress);
+	}
+	function handleSaveQuizAnswer(questionId, answerVal) {
+		savedQuizProgress[questionId] = answerVal;
+		updateCharts();
+	}
+  
   function answerQuestion(answer){
-	  
-	savedData[String(_currentQuestion)] = answer.attr("data-answer-id");
-	updateCharts();
 	
+	handleSaveQuizAnswer(String(_currentQuestion), answer.attr("data-answer-id"))
+
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
@@ -433,6 +453,9 @@
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
     // $('.bg-video').get(_currentVignette).currentTime = 0;
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+
+    handleSaveDeepProgress();
+    
     _scrollHandler();
   }
   function createProgressOverlay() {

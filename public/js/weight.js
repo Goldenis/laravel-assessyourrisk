@@ -6,7 +6,8 @@ var weight = $(document).ready(
 			weightOverlay = $('#weight-overlay'),
 			rot = 0;
 			var touch;
-			
+			window.weightInPounds = 0;
+				
 			weightOverlay.mousedown (function(e) {
 				e.preventDefault();
 				moved = 0;
@@ -59,6 +60,9 @@ var weight = $(document).ready(
 				currentX = touch.pageX;
 				moved = currentX - touchStartPos;
 				rot += moved/2;
+				if (rot > 0) {
+					rot = 0;
+				}
 				rotate(weightBase, rot, 1);
 				touchStartPos = currentX;
 			}
@@ -69,6 +73,8 @@ var weight = $(document).ready(
 			}
 			
 			function rotate(obj, degree, time) {
+				var degreeRot = (Math.abs(Math.ceil(degree))%720);
+				window.weightInPounds = Math.ceil(240 * (degreeRot/360));
 				TweenLite.killTweensOf(obj);
 				TweenLite.to(obj, time, {css:{rotation:degree}, ease:Power3.easeOut});
 	        }

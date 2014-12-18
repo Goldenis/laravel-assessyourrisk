@@ -358,7 +358,7 @@
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }
-  function calculateWeight(height){
+  function calculateWeight(obj){
     $('.btn-calculate').css({
       visibility: 'hidden'
     })     
@@ -372,9 +372,22 @@
 
     $('.bmi-result').css({
       opacity: 1
-    })    
-
-
+    })
+    
+    
+//    console.log("getHeightInInches:" + window.heightInInches);
+//    console.log("weightInPounds:" + window.weightInPounds);
+    // BMI = Formula: weight (lb) / [height (in)]2 x 703
+    var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+    $(".bmi-result").html("Your BMI result is " + BMI);
+    /*
+    BMI
+    Weight Status
+    Below 18.5	Underweight
+    18.5 – 24.9	Normal
+    25.0 – 29.9	Overweight
+    30.0 and Above	Obese
+    */
   }
   
   function updateCharts() {
@@ -422,6 +435,9 @@
 		// 15 - gene mutation have you or your relative
 		// 16 - Within one side of the family
 		var ansTxt = answer.attr("data-answer-id");
+		if (_currentQuestion == 2) {
+			ansTxt = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+		}
 		if (_currentQuestion == 3) ansTxt = currentGlass;
 		if (_currentQuestion == 13) {
 			var data = [];

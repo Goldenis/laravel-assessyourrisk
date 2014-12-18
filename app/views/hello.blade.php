@@ -259,7 +259,7 @@
 
         <div class="question" data-question-id="3">
           <div class="bmi-result">
-            Your BMI result is INSERT SCORE
+            
           </div>
         <div class="bmi-wrapper">  
             <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>

@@ -61,12 +61,12 @@
       <div class="dashboard">
         <h6 class="label">MY PROGRESS</h6>
         <div class="progress">
-          <div class="percentage">20%</div>
+          <div class="percentage percquiz">0%</div>
           <div class="chart chart-2"></div>
           <h6>ASSESSMENT</h6>
         </div>
         <div class="progress">
-          <div class="percentage">68%</div>
+          <div class="percentage percdive">0%</div>
           <div class="chart chart-3"></div>
           <h6>EDUCATION</h6>
         </div>

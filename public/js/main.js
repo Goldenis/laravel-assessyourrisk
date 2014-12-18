@@ -36,6 +36,8 @@
   var chart1;
   var chart2;
   var chart3;
+  
+  var savedData = {};
 
   $(window).on('scroll',function(e){
     if(overlayOpen){
@@ -196,14 +198,6 @@
 				10,
 				[1,1,1,1,1,1,1,1], 
 				['#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#D7006D']);
-	  chart2.transitionToValues (5,
-				8,
-				[.2, .8], 
-				['#D7006D','#FFFFFF']);
-	  chart3.transitionToValues (5,
-				8,
-				[.68, .32], 
-				['#D7006D','#FFFFFF']);
   }
   
   function _registerEventListeners() {
@@ -360,16 +354,37 @@
 
 
   }
+  
+  function updateCharts() {
+	  // percquiz percdive
+	  var questionsAnswered = 0;
+	  for (q in savedData) questionsAnswered++;
+	  var quizProgress = questionsAnswered/21;
+	  $(".percquiz").html(Math.floor(quizProgress * 100) + "%");
+	  chart2.transitionToValues (5,
+				8,
+				[quizProgress, 1-quizProgress], 
+				['#D7006D','#FFFFFF']);
+	  chart3.transitionToValues (5,
+				8,
+				[.68, .32], 
+				['#D7006D','#FFFFFF']);
+  }
+  
   function answerQuestion(answer){
+	  
+	savedData[String(_currentQuestion)] = answer.attr("data-answer-id");
+	updateCharts();
+	
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
-    console.log(answer);
+//    console.log(answer);
 
     if(_currentQuestion == 1) {
-      console.log(_currentQuestion)
+//      console.log(_currentQuestion)
       $('.btn-wrap').css({
-      opacity: 0
+      opacity: 1
       })    
     }
 

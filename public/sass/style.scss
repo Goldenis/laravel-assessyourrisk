@@ -676,8 +676,6 @@ input[type="checkbox"]{
   top: 13rem;
     .action {
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
     }
 }
 .education{
@@ -746,7 +744,8 @@ input[type="checkbox"]{
   .scroll{
     opacity: 1;
     position: absolute;
-    bottom: 35px;
+    bottom: 55px;
+    left: 33.3%;
     z-index:3;
   }
   .scroll{
@@ -981,8 +980,18 @@ input[type="checkbox"]{
       padding: 0em;
       width: calc(100% - 6.8em);
       height: 100%;
-      display: none;
+      opacity: 0;
+      top: 70px;
       font-size: .7em;
+      @include transition(1s,ease-in-out);
+      &.in{
+        top: 40px;
+        opacity: 1;
+      }
+      &.out{
+        top: 10px;
+        opacity: 0;
+      }
     }
     .fact:nth-of-type(1){
       display: block;

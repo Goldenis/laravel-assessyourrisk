@@ -479,10 +479,9 @@
       receivedBMI = true;
       return   
     }
-
-    $('.fact').eq(_currentQuestion).css({
-      display: 'none'
-    })
+    
+    $('.fact').eq(_currentQuestion).removeClass('in');
+    $('.fact').eq(_currentQuestion).addClass('out');
     switch (_currentQuestion){  
       case 0:
         if(answer.html() != "Yes"){
@@ -504,9 +503,7 @@
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
     _currentQuestion++;
-    $('.fact').eq(_currentQuestion).css({
-      display: 'block'
-    })
+    $('.fact').eq(_currentQuestion).addClass('in');
     $('.dot').eq(_currentQuestion).addClass('active')
     $('.question').eq(_currentQuestion).addClass('in')
   }

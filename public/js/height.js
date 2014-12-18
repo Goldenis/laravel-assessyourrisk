@@ -13,9 +13,10 @@ var height = $(document).ready(
 			moved;
 			var touch;
 			var spots = [];
-			for (var i=0; i<36; i++) {
+			for (var i=0; i<37; i++) {
 				spots.push(topPos - (inc * i));
 			}
+			window.heightInInches = 70;
 			
 			TweenLite.to(heightBase, 1, {css:{top:startPos}, ease:Power3.easeOut});
 			
@@ -74,6 +75,10 @@ var height = $(document).ready(
 				var closest = spots.reduce(function (prev, curr) {
 				  return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
 				});
+				// 4' (36) - 7' (0) 48" - 84"
+				var index = spots.indexOf(closest);
+				
+				window.heightInInches = 84 - index;
 				
 				return closest;
 			}

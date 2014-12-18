@@ -36,6 +36,13 @@
   var chart1;
   var chart2;
   var chart3;
+  
+  var savedQuizProgress = {};
+  var savedDiveProgress = {};
+  var lastDeepSave = null;
+  var currentGlass = 0;
+
+  var receivedBMI = false;
 
   $(window).on('scroll',function(e){
     if(overlayOpen){
@@ -158,11 +165,17 @@
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
       '-webkit-transform':"translateX("+(_myL)+"px)"
     })
+
     if(_currentHeadline.index() < $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length-1){
       _currentHeadline.removeClass('active');
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
       _currentHeadline.addClass('active');
+      
+      handleSaveDeepProgress();
     }
+
+    console.log('just one headline matey' +_currentHeadline.index());
+
   }
   
   function addCharts() {
@@ -196,14 +209,6 @@
 				10,
 				[1,1,1,1,1,1,1,1], 
 				['#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#FFB4AA','#D7006D']);
-	  chart2.transitionToValues (5,
-				8,
-				[.2, .8], 
-				['#D7006D','#FFFFFF']);
-	  chart3.transitionToValues (5,
-				8,
-				[.68, .32], 
-				['#D7006D','#FFFFFF']);
   }
   
   function _registerEventListeners() {
@@ -236,6 +241,13 @@
     $('.question button').on('click',function(){
       answerQuestion($(this));
     })
+    $('.btn-calculate').on('click',function(){
+      calculateWeight($(this));
+    })
+    $('.pledge').on('click',function(){
+      startFBShare($(this));
+    })
+
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show")
     })
@@ -283,7 +295,7 @@
       var x = e.pageX;
       var distance = 0;
       var l;
-      var currentGlass;
+      
       _$window.bind('mousemove',function(e){
         distance = x-e.pageX;
         l = Math.max(50,$('.bottle').position().left-distance);
@@ -309,6 +321,9 @@
     _$window.bind('resize', _pageResize);
   }
   function changeModule(e){
+	  
+	  
+	  
     var $this = e;
     var i = $this.index();
     _currentModule = i;
@@ -317,9 +332,13 @@
     })
     expandModule(i);
   }
-  function expandModule(num){
+  function expandModule(num){  
+	  
     _currentModule = num;
     _currentVignette = 0;
+    
+    handleSaveDeepProgress();
+	  
     $('.nav').addClass('in');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
@@ -338,14 +357,144 @@
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');
+   
     //$('.logo-white').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }
+
+  function startFBShare() {
+    
+   window.open("fb.html", "PopupWindow", "width=530,height=420,scrollbars=yes,resizable=no");
+  
+  }
+
+  function calculateWeight(obj){
+    $('.btn-calculate').css({
+      visibility: 'hidden'
+    })     
+
+    $('.bmi-wrapper').css({
+      opacity: 0
+    })     
+    $('.btn-wrap').css({
+      opacity: 1
+    })    
+
+    $('.bmi-result').css({
+      opacity: 1
+    })
+    
+    
+//    console.log("getHeightInInches:" + window.heightInInches);
+//    console.log("weightInPounds:" + window.weightInPounds);
+    // BMI = Formula: weight (lb) / [height (in)]2 x 703
+    var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+    $(".bmi-result").html("Your BMI result is " + BMI);
+    /*
+    BMI
+    Weight Status
+    Below 18.5	Underweight
+    18.5 – 24.9	Normal
+    25.0 – 29.9	Overweight
+    30.0 and Above	Obese
+    */
+  }
+  
+  function updateCharts() {
+	  // percquiz percdive
+	  var questionsAnswered = 0;
+	  for (q in savedQuizProgress) questionsAnswered++;
+	  var quizProgress = questionsAnswered/22;
+	  $(".percquiz").html(Math.ceil(quizProgress * 100) + "%");
+	  chart2.transitionToValues (5,
+				8,
+				[quizProgress, 1-quizProgress], 
+				['#D7006D','#FFFFFF']);
+	  
+	  var deepViewed = 0;
+	  for (v in savedDiveProgress) deepViewed++;
+	  var diveProgress = deepViewed/40;
+	  $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
+	  chart3.transitionToValues (5,
+				8,
+				[diveProgress, 1-diveProgress], 
+				['#D7006D','#FFFFFF']);
+  }
+  
+  	
+	function handleSaveDeepProgress() {
+		
+		// check for invalid values (bugs)
+		if (_currentModule < 0 || _currentVignette < 0 || _currentHeadline.index() < 0) return;
+		
+		var id = _currentModule + "_" + _currentVignette + "_"
+		+ _currentHeadline.index();
+		
+		// handle scroll repeditive saves
+		if (id == lastDeepSave) return;
+		
+		savedDiveProgress[id] = true;
+		
+		lastDeepSave = id;
+		updateCharts();
+	}
+	function handleSaveQuizAnswer(answer) {
+		// 2 - bmi
+		// 3 - .answers .drinks
+		// 13 - Have any of your immediate family members
+		// 15 - gene mutation have you or your relative
+		// 16 - Within one side of the family
+		var ansTxt = answer.attr("data-answer-id");
+		if (_currentQuestion == 2) {
+			ansTxt = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+		}
+		if (_currentQuestion == 3) ansTxt = currentGlass;
+		if (_currentQuestion == 13) {
+			var data = [];
+			$('.cb1 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		if (_currentQuestion == 15) {
+			var data = [];
+			$('.cb2 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		if (_currentQuestion == 16) {
+			var data = [];
+			$('.cb3 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		savedQuizProgress[String(_currentQuestion)] = ansTxt;
+		updateCharts();
+	}
+  
   function answerQuestion(answer){
+	
+	handleSaveQuizAnswer(answer)
+
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
+
+    if(_currentQuestion == 1) {
+//      console.log(_currentQuestion)
+      $('.btn-wrap').css({
+      opacity: 1
+      })    
+    }
+
+    if(_currentQuestion == 2 && receivedBMI == false ) {
+      receivedBMI = true;
+      return   
+    }
+
     $('.fact').eq(_currentQuestion).css({
       display: 'none'
     })
@@ -386,6 +535,9 @@
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
     // $('.bg-video').get(_currentVignette).currentTime = 0;
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+
+    handleSaveDeepProgress();
+    
     _scrollHandler();
   }
   function createProgressOverlay() {
@@ -395,6 +547,7 @@
     }
     $('.progress-overlay .questions').append(html);
   }
+
   $(document).ready(function() {
 
     //position the header to be 90%;

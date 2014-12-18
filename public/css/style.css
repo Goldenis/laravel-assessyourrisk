@@ -1275,6 +1275,47 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
+.module-time {
+  top: 35%;
+}
+.module-time ul {
+  padding: 0;
+  margin-left: -20px;
+}
+.module-time li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: #fff;
+  margin: 0 1em;
+  display: inline-block;
+  color: #d7006d;
+  position: relative;
+}
+.module-time li::before {
+  content: '';
+  position: absolute;
+  top: 0.9em;
+  left: -4em;
+  width: 4em;
+  height: 0.2em;
+  background: #fff;
+  z-index: -1;
+}
+.module-time li:first-child::before {
+  display: none;
+}
+.module-time .active {
+  background: #fff;
+}
+.module-time .active ~ li {
+  background: lightblue;
+}
+.module-time .active ~ li::before {
+  background: lightblue;
+}
 footer {
   width: 100%;
   height: 100px;

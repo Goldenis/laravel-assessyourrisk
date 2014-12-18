@@ -37,7 +37,9 @@
   var chart2;
   var chart3;
   
-  var savedData = {};
+  var savedQuizProgress = {};
+  var savedDiveProgress = {};
+  var lastDeepSave = null;
 
   var receivedBMI = false;
 
@@ -167,6 +169,8 @@
       _currentHeadline.removeClass('active');
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
       _currentHeadline.addClass('active');
+      
+      handleSaveDeepProgress();
     }
 
     console.log('just one headline matey' +_currentHeadline.index());
@@ -314,6 +318,9 @@
     _$window.bind('resize', _pageResize);
   }
   function changeModule(e){
+	  
+	  
+	  
     var $this = e;
     var i = $this.index();
     _currentModule = i;
@@ -322,9 +329,13 @@
     })
     expandModule(i);
   }
-  function expandModule(num){
+  function expandModule(num){  
+	  
     _currentModule = num;
     _currentVignette = 0;
+    
+    handleSaveDeepProgress();
+	  
     $('.nav').addClass('in');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
@@ -370,24 +381,50 @@
   function updateCharts() {
 	  // percquiz percdive
 	  var questionsAnswered = 0;
-	  for (q in savedData) questionsAnswered++;
+	  for (q in savedQuizProgress) questionsAnswered++;
 	  var quizProgress = questionsAnswered/22;
 	  $(".percquiz").html(Math.ceil(quizProgress * 100) + "%");
 	  chart2.transitionToValues (5,
 				8,
 				[quizProgress, 1-quizProgress], 
 				['#D7006D','#FFFFFF']);
+	  
+	  var deepViewed = 0;
+	  for (v in savedDiveProgress) deepViewed++;
+	  var diveProgress = deepViewed/40;
+	  $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
 	  chart3.transitionToValues (5,
 				8,
-				[.68, .32], 
+				[diveProgress, 1-diveProgress], 
 				['#D7006D','#FFFFFF']);
   }
   
+  	
+	function handleSaveDeepProgress() {
+		
+		// check for invalid values (bugs)
+		if (_currentModule < 0 || _currentVignette < 0 || _currentHeadline.index() < 0) return;
+		
+		var id = _currentModule + "_" + _currentVignette + "_"
+		+ _currentHeadline.index();
+		
+		// handle scroll repeditive saves
+		if (id == lastDeepSave) return;
+		
+		savedDiveProgress[id] = true;
+		
+		lastDeepSave = id;
+		updateCharts();
+	}
+	function handleSaveQuizAnswer(questionId, answerVal) {
+		savedQuizProgress[questionId] = answerVal;
+		updateCharts();
+	}
+  
   function answerQuestion(answer){
-	  
-	savedData[String(_currentQuestion)] = answer.attr("data-answer-id");
-	updateCharts();
 	
+	handleSaveQuizAnswer(String(_currentQuestion), answer.attr("data-answer-id"))
+
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
@@ -444,6 +481,9 @@
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
     // $('.bg-video').get(_currentVignette).currentTime = 0;
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+
+    handleSaveDeepProgress();
+    
     _scrollHandler();
   }
   function createProgressOverlay() {

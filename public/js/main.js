@@ -368,7 +368,7 @@
 	  var questionsAnswered = 0;
 	  for (q in savedData) questionsAnswered++;
 	  var quizProgress = questionsAnswered/22;
-	  $(".percquiz").html(Math.floor(quizProgress * 100) + "%");
+	  $(".percquiz").html(Math.ceil(quizProgress * 100) + "%");
 	  chart2.transitionToValues (5,
 				8,
 				[quizProgress, 1-quizProgress], 

@@ -259,19 +259,21 @@
 
         <div class="question" data-question-id="3">
           <div class="bmi-result">
-            Your result is BLANK
+            Your BMI result is INSERT SCORE
           </div>
-          <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
-          <div class="visual">
-        <div class="weight-container">
-          <div id="weight-base"></div>
-          <div id="weight-overlay"></div>
-        </div>
-        <div class="height-container">
-          <div id="height-base"></div>
-          <div id="height-overlay"></div>
-        </div>
+        <div class="bmi-wrapper">  
+            <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
+            <div class="visual">
+          <div class="weight-container">
+            <div id="weight-base"></div>
+            <div id="weight-overlay"></div>
           </div>
+          <div class="height-container">
+            <div id="height-base"></div>
+            <div id="height-overlay"></div>
+          </div>
+            </div>
+        </div>    
           <br>
           <button class="btn-calculate">Calculate</button>
           <button class="btn-wrap">Continue</button>
@@ -528,6 +530,18 @@
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
             </div>
+              <div class="module-time">
+                <div class="module-time-text">
+                Time to complete : <1 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul> 
+              </div>  
           </div>
         </div>
 
@@ -627,6 +641,18 @@
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
             </div>
+              <div class="module-time">
+                <div class="module-time-text">
+                Time to complete : 2 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul> 
+              </div>  
             <div class="headline"></div>
           </div>
         </div>
@@ -644,7 +670,6 @@
                   <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
                   <li>If a change persists or worsens, get to a doc</li>
                 </ul>
-              </h3>
             </div>
             <div class="headline"></div>
           </div>
@@ -716,7 +741,7 @@
               <h3>The signs and symptoms can be easily mistaken for other issues — like PMS.</h3>
             </div>
             <div class="headline">
-              <h3>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:
+              <h3>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h3>
               <ul>
                 <li><h4>Primary:</h4></li>
                 <li>Pelvic or abdominal pain</li>
@@ -742,12 +767,12 @@
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
-            </h3>
           </div>
               
           </div>
         </div>
       </div>
+
 
 <!-- FAMILY HISTORY -->
       <div class="module family-history">
@@ -756,6 +781,17 @@
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
             </div>
+              <div class="module-time">
+                <div class="module-time-text">
+                Time to complete : <2 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                </ul> 
+              </div> 
             <div class="headline"></div>
           </div>
         </div>
@@ -792,17 +828,6 @@
           </div>
           <div class="headlines">
             <div class="headline">         
-              <h3>Your personal health history and choices have a big effect as well.</h3>
-            </div>
-            <div class="headline"></div>
-          </div>
-        </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
-          </div>
-          <div class="headlines">
-            <div class="headline">         
               <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
             </div>
             <div class="headline">
@@ -831,13 +856,8 @@
 
       </div>
     </div>
-  </div>
-    </div>
-  </div>
-  
-    </div>
-  </div>
-  
+
+</section> 
 
 <!-- FOOTER -->
 

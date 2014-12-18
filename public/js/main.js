@@ -40,6 +40,8 @@
   var savedQuizProgress = {};
   var savedDiveProgress = {};
 
+  var receivedBMI = false;
+
   $(window).on('scroll',function(e){
     if(overlayOpen){
       return;
@@ -356,8 +358,12 @@
       visibility: 'hidden'
     })     
 
+    $('.bmi-wrapper').css({
+      opacity: 0
+    })  
+
     $('.btn-wrap').css({
-      visibility: 'display'
+      opacity: 1
     })    
 
     $('.bmi-result').css({
@@ -409,9 +415,10 @@
       })    
     }
 
-    // if(_currentQuestion == 2) {
-    //   return   
-    // }
+    if(_currentQuestion == 2 && receivedBMI == false ) {
+      receivedBMI = true;
+      return   
+    }
 
     $('.fact').eq(_currentQuestion).css({
       display: 'none'

@@ -236,6 +236,9 @@
     $('.question button').on('click',function(){
       answerQuestion($(this));
     })
+    $('.btn-calculate').on('click',function(){
+      calculateWeight($(this));
+    })
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show")
     })
@@ -342,10 +345,38 @@
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }
+  function calculateWeight(height){
+    $('.btn-calculate').css({
+      visibility: 'hidden'
+    })     
+
+    $('.btn-wrap').css({
+      visibility: 'display'
+    })    
+
+    $('.bmi-result').css({
+      opacity: 1
+    })    
+
+
+  }
   function answerQuestion(answer){
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
+    console.log(answer);
+
+    if(_currentQuestion == 1) {
+      console.log(_currentQuestion)
+      $('.btn-wrap').css({
+      opacity: 0
+      })    
+    }
+
+    if(_currentQuestion == 2) {
+      return   
+    }
+
     $('.fact').eq(_currentQuestion).css({
       display: 'none'
     })
@@ -395,6 +426,7 @@
     }
     $('.progress-overlay .questions').append(html);
   }
+
   $(document).ready(function() {
 
     //position the header to be 90%;

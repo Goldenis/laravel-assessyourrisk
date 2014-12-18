@@ -410,6 +410,13 @@ button{
   left: 0px;
   top: 350px;
 }
+.btn-calculate {
+  left: 0;
+  position: absolute;
+  left: 0px;
+  top: 350px;
+  z-index: 10;
+}
 .checkbox-list{
   margin: 1em 0 1em;
   &.half{
@@ -1064,7 +1071,11 @@ input[type="checkbox"]{
 .question{
   @include transform(translateY(50px));
   top: 0px;
+  .bmi-result {
+    opacity: 0;   
+  }
 }
+
 .in{
   visibility: visible;
   opacity: 1 !important;

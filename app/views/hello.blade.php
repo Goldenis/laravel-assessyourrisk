@@ -258,6 +258,9 @@
         </div>
 
         <div class="question" data-question-id="3">
+          <div class="bmi-result">
+            Your result is BLANK
+          </div>
           <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
           <div class="visual">
         <div class="weight-container">
@@ -270,6 +273,7 @@
         </div>
           </div>
           <br>
+          <button class="btn-calculate">Calculate</button>
           <button class="btn-wrap">Continue</button>
         </div>
 

@@ -454,6 +454,13 @@ button.sub:hover {
   left: 0px;
   top: 350px;
 }
+.btn-calculate {
+  left: 0;
+  position: absolute;
+  left: 0px;
+  top: 350px;
+  z-index: 10;
+}
 .checkbox-list {
   margin: 1em 0 1em;
 }
@@ -1225,6 +1232,9 @@ input[type="checkbox"] {
   -o-transform: translateY(50px);
   transform: translateY(50px);
   top: 0px;
+}
+.question .bmi-result {
+  opacity: 0;
 }
 .in {
   visibility: visible;

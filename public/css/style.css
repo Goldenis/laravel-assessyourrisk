@@ -474,13 +474,13 @@ input[type="checkbox"] {
   float: left;
   z-index: 20;
 }
-.logo {
+.logo, .logo-white {
   position: absolute;
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
 }
-.logo img {
+.logo img, .logo-white img {
   width: 12rem;
   max-width: 205px;
   min-width: 140px;

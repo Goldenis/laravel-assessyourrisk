@@ -15,7 +15,7 @@
     <img src="img/brightpink_logo.png">
 
     </div>
-    <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
+    <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
     
     <div class="overlay male-overlay">
       <button class="close-btn">✕ &nbsp; close</button>
@@ -489,7 +489,9 @@
         </div>
       </div>
     </section>
-    <!-- EDUCATION -->
+
+<!-- EDUCATION -->
+
     <section class="education">
       <div class="nav">
         <div class="nav-item">LIFESTYLE</div>
@@ -516,7 +518,9 @@
         </div>
       </div>
       <div class="section-title">Understand Your Risk</div>
+
 <!-- LIFESTYLE -->
+
       <div class="module lifestyle">
         <div class="vignette main">
           <div class="headlines">
@@ -524,12 +528,13 @@
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
             </div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/running1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -548,7 +553,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/fat1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -563,7 +568,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/alcohol1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -581,7 +586,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/smoking1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -599,7 +604,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/birthControl1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -615,7 +620,9 @@
           <button class="pledge sub">Pledge to start birth control</button>
         </div>
       </div>
+
 <!-- KNOW YOUR NORMAL -->
+
       <div class="module normal">
         <div class="vignette main">
           <div class="headlines">
@@ -623,12 +630,12 @@
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -642,12 +649,12 @@
                 </ul>
               </h3>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -663,12 +670,12 @@
                 <li>Lump </li>
               </ul>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -687,7 +694,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -697,12 +704,12 @@
               <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
               <button>Text Me.</button>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -757,7 +764,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -773,29 +780,29 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>        
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
             </div>
-            <div class="headline"></div>
+            <div class="headline">EMPTY</div>
           </div>
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -812,7 +819,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/5000kbps-2mbfile.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -834,7 +841,6 @@
     </div>
   </div>
   
-
 <!-- FOOTER -->
 
     </div><footer id="site-footer" class="flex-container">

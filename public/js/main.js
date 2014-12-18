@@ -39,6 +39,7 @@
   
   var savedQuizProgress = {};
   var savedDiveProgress = {};
+  var lastDeepSave = null;
 
   var receivedBMI = false;
 
@@ -383,17 +384,33 @@
 				8,
 				[quizProgress, 1-quizProgress], 
 				['#D7006D','#FFFFFF']);
+	  
+	  var deepViewed = 0;
+	  for (v in savedDiveProgress) deepViewed++;
+	  var diveProgress = deepViewed/40;
+	  $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
 	  chart3.transitionToValues (5,
 				8,
-				[.68, .32], 
+				[diveProgress, 1-diveProgress], 
 				['#D7006D','#FFFFFF']);
   }
   
-
+  	
 	function handleSaveDeepProgress() {
-		savedDiveProgress[_currentModule + "_" + _currentVignette + "_"
-				+ _currentHeadline.index()] = true;
-		console.log(savedDiveProgress);
+		
+		// check for invalid values (bugs)
+		if (_currentModule < 0 || _currentVignette < 0 || _currentHeadline.index() < 0) return;
+		
+		var id = _currentModule + "_" + _currentVignette + "_"
+		+ _currentHeadline.index();
+		
+		// handle scroll repeditive saves
+		if (id == lastDeepSave) return;
+		
+		savedDiveProgress[id] = true;
+		
+		lastDeepSave = id;
+		updateCharts();
 	}
 	function handleSaveQuizAnswer(questionId, answerVal) {
 		savedQuizProgress[questionId] = answerVal;

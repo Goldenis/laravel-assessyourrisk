@@ -405,13 +405,32 @@
   }
   function handleSaveQuizAnswer(answer) {
     // 2 - bmi
+	  
+	  /*
+	    BMI
+	    Weight Status
+	    Below 18.5  Underweight
+	    18.5 – 24.9 Normal
+	    25.0 – 29.9 Overweight
+	    30.0 and Above  Obese
+	    */
+	  
     // 3 - .answers .drinks
     // 13 - Have any of your immediate family members
     // 15 - gene mutation have you or your relative
     // 16 - Within one side of the family
     var ansTxt = answer.attr("data-answer-id");
     if (_currentQuestion == 2) {
-      ansTxt = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+      var bmi = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
+      if (bmi < 18.5) {
+    	  ansTxt = "-1";
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+    	  ansTxt = "+1";
+      } else if (bmi >= 25.0 && bmi <= 29.9) {
+    	  ansTxt = "-1";
+      } else if (bmi >= 30.0) {
+    	  ansTxt = "-1";
+      }
     }
     if (_currentQuestion == 3) ansTxt = currentGlass;
     if (_currentQuestion == 13) {
@@ -437,6 +456,8 @@
     }
     savedQuizProgress[String(_currentQuestion)] = ansTxt;
     updateCharts();
+    
+    console.log(savedQuizProgress)
   }
   
   function answerQuestion(answer){

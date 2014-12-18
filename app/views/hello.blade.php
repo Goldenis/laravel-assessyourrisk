@@ -240,8 +240,8 @@
           <div class="prompt">Do you have breasts and/or ovaries?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="0">Yes</button>
+            <button data-answer-id="0">No</button>
           </div>
         </div>
 
@@ -250,10 +250,10 @@
         
           <div class="answers">
             <button data-answer-id="1">Under 20</button>
-            <button data-answer-id="2">20-30</button>
-            <button data-answer-id="3">31-35</button>
-            <button data-answer-id="4">36-40</button>
-            <button data-answer-id="5">40+</button>
+            <button data-answer-id="1">20-30</button>
+            <button data-answer-id="0">31-35</button>
+            <button data-answer-id="0">36-40</button>
+            <button data-answer-id="0">40+</button>
           </div>
         </div>
 
@@ -302,8 +302,8 @@
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 
@@ -311,8 +311,8 @@
           <div class="prompt">Do you follow a diet that’s low in fat and includes a mix of fruits, vegetables, whole grains, fat-free or low-fat dairy products, and lean proteins?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 
@@ -320,8 +320,8 @@
           <div class="prompt">Have you ever been Vitamin D deficient?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
           </div>
         </div>
 
@@ -329,8 +329,8 @@
           <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
           </div>
         </div>
 
@@ -338,8 +338,8 @@
           <div class="prompt">How old were you when you first got your period?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Under 12</button>
-            <button data-answer-id="2">12 or older</button>
+            <button data-answer-id="-1">Under 12</button>
+            <button data-answer-id="+1">12 or older</button>
           </div>
         </div>
 
@@ -347,8 +347,8 @@
           <div class="prompt">Have you taken birth control pills for five years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="0">No</button>
           </div>
         </div>
 
@@ -356,8 +356,8 @@
           <div class="prompt">Have you ever given birth?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 
@@ -365,8 +365,8 @@
           <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 
@@ -374,9 +374,9 @@
           <div class="prompt">Have you ever been diagnosed with either of the following?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Breast cancer</button>
-            <button data-answer-id="2">Ovarian cancer</button>
-            <button data-answer-id="3">Neither</button>
+            <button data-answer-id="-1">Breast cancer</button>
+            <button data-answer-id="-1">Ovarian cancer</button>
+            <button data-answer-id="0">Neither</button>
           </div>
         </div>
 
@@ -384,13 +384,13 @@
           <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4"><div class="label">Male breast cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
           <br>
@@ -402,11 +402,11 @@
           <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes, I've tested positive for a specific gene mutation</button>
-            <button data-answer-id="2">Yes, a relative has but I've tested negative for that mutation</button>
-            <button data-answer-id="3">Yes, a relative has, but I've not yet been tested</button>
-            <button data-answer-id="4">No</button>
-            <button data-answer-id="5">I don’t know</button>
+            <button data-answer-id="-1">Yes, I've tested positive for a specific gene mutation</button>
+            <button data-answer-id="-1">Yes, a relative has but I've tested negative for that mutation</button>
+            <button data-answer-id="-1">Yes, a relative has, but I've not yet been tested</button>
+            <button data-answer-id="+1">No</button>
+            <button data-answer-id="0">I don’t know</button>
           </div>
         </div>
 
@@ -414,10 +414,10 @@
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4" checked><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0" checked><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <br>
@@ -427,20 +427,20 @@
         <div class="question cb3" data-question-id="17">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
           <div class="checkbox-list half">        
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">Ovarian cancer</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Pancreatic cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">Thyroid cancer</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
           </div>
           <div class="checkbox-list half">
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6"><div class="label">Leukemia or Lymphoma</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7"><div class="label">Melanoma cancer</div></div>
-            <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8"><div class="label">Adrenocortical Carcinoma</div></div>
-            <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10"><div class="label">Brain Cancer</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11"><div class="label">None of the above</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12" checked><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain Cancer</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0" checked><div class="label">I’m not sure</div></div>
           </div>     
           <br>
           <br>
@@ -452,8 +452,8 @@
           <div class="prompt">Are you of Ashkenazi (Eastern European) Jewish ancestry with breast, ovarian, or pancreatic cancer in the family?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
           </div>
         </div>
 
@@ -461,8 +461,8 @@
           <div class="prompt">Did you receive radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
           </div>
         </div>
 
@@ -470,8 +470,8 @@
           <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
             <button class="sub" data-answer-id="3">Help me ask them</button>
           </div>
         </div>
@@ -480,8 +480,8 @@
           <div class="prompt">Have you ever had an abnormal breast biopsy?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
           </div>
         </div>
   
@@ -489,8 +489,8 @@
           <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
         
           <div class="answers">
-            <button data-answer-id="1">Yes</button>
-            <button data-answer-id="2">No</button>
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
       </div>

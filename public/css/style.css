@@ -716,7 +716,7 @@ input[type="checkbox"] {
 .assessment-intro .action {
   position: relative;
   left: 50%;
-  transformX: translateX(-50%);
+  transform: translateX(-50%);
 }
 .education {
   position: absolute;

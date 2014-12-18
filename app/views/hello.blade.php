@@ -55,7 +55,7 @@
     <!-- RIGHT COLUMN -->
     <div class="right-column">
 
-      <!-- DASH -->
+<!-- DASH -->
 
       <div class="dashboard">
         <h6 class="label">MY PROGRESS</h6>
@@ -195,11 +195,11 @@
             <div class="chart-1"></div>
           </div>
         </div>
-        <div class="education-facts">
+        <!-- <div class="education-facts">
           <div class="fact">
             <span class="q-num">Q: 1 of 15</span> <br>Do you have breasts and/or ovaries?
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -262,19 +262,19 @@
           <div class="bmi-result">
             
           </div>
-        <div class="bmi-wrapper">  
+          <div class="bmi-wrapper">  
             <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
             <div class="visual">
-          <div class="weight-container">
-            <div id="weight-base"></div>
-            <div id="weight-overlay"></div>
-          </div>
-          <div class="height-container">
-            <div id="height-base"></div>
-            <div id="height-overlay"></div>
-          </div>
+              <div class="weight-container">
+                <div id="weight-base"></div>
+                <div id="weight-overlay"></div>
+              </div>
+              <div class="height-container">
+                <div id="height-base"></div>
+                <div id="height-overlay"></div>
+              </div>
             </div>
-        </div>    
+          </div>    
           <br>
           <button class="btn-calculate">Calculate</button>
           <button class="btn-wrap">Continue</button>
@@ -362,7 +362,7 @@
           </div>
         </div>
 
-        <div class="question"  data-question-id="12">
+        <div class="question" data-question-id="12">
           <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
         
           <div class="answers">
@@ -381,7 +381,7 @@
           </div>
         </div>
 
-        <div class="question"  data-question-id="14">
+        <div class="question" data-question-id="14">
           <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
@@ -446,7 +446,7 @@
           <br>
           <br>
           <button>Continue</button>
-          <button class="sub"  data-answer-id="13">Help me ask them</button>
+          <button class="sub" data-answer-id="13">Help me ask them</button>
         </div>
 
         <div class="question" data-question-id="18">
@@ -467,7 +467,7 @@
           </div>
         </div>
 
-        <div class="question"  data-question-id="20">
+        <div class="question" data-question-id="20">
           <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
@@ -535,7 +535,6 @@
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
             </div>
-            <div class="headline">EMPTY</div>
             <div class="module-time">
               <div class="module-time-text">
               Time to complete : &lt;1 min
@@ -672,13 +671,13 @@
           <div class="headlines">
             <div class="headline">         
               <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
-                <ul>
-                  <li>Look & touch from many angles with different pressures.</li>
-                  <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
-                  <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
-                  <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
-                  <li>If a change persists or worsens, get to a doc</li>
-                </ul>
+              <ul>
+                <li>Look & touch from many angles with different pressures.</li>
+                <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
+                <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
+                <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
+                <li>If a change persists or worsens, get to a doc</li>
+              </ul>
             </div>
             <div class="headline">EMPTY</div>
           </div>
@@ -863,20 +862,21 @@
         </div>
       </div>
     </section> 
-    
+
 <!-- FOOTER -->
 
-    </div><footer id="site-footer" class="flex-container">
+    <footer id="site-footer" class="flex-container">
       <div class="flex-none">
         <a href="#"><span class="icon-facebook"></span></a>
         <a href="#"><span class="icon-twitter"></span></a>
       </div>
     </footer>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/anim.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/anim.js"></script>
 
      <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>

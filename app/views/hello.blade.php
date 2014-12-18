@@ -383,14 +383,14 @@
         <div class="question"  data-question-id="14">
           <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
         
-          <div class="checkbox-list">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox"><div class="label">Male breast cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox"><div class="label">None of the above</div></div>
+          <div class="checkbox-list cb1">
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7"><div class="label">None of the above</div></div>
           </div>
           <br>
           <br>
@@ -413,34 +413,34 @@
         <div class="question" data-question-id="16">
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
-          <div class="checkbox-list">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" checked><div class="label">I’m not sure</div></div>
+          <div class="checkbox-list cb2">
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Other specific mutation</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4" checked><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <br>
           <button>Continue</button>
         </div>
     
-        <div class="question" data-question-id="17">
+        <div class="question cb3" data-question-id="17">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
           <div class="checkbox-list half">        
-            <div class="checkbox" data-answer-id="1"><input type="checkbox"><div class="label">Ovarian cancer</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox"><div class="label">Pancreatic cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox"><div class="label">Thyroid cancer</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5"><div class="label">Sarcoma cancer</div></div>
           </div>
           <div class="checkbox-list half">
-            <div class="checkbox" data-answer-id="6"><input type="checkbox"><div class="label">Leukemia or Lymphoma</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox"><div class="label">Melanoma cancer</div></div>
-            <div class="checkbox" data-answer-id="8"><input type="checkbox"><div class="label">Adrenocortical Carcinoma</div></div>
-            <div class="checkbox" data-answer-id="9"><input type="checkbox"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox" data-answer-id="10"><input type="checkbox"><div class="label">Brain Cancer</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox"><div class="label">None of the above</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" checked><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10"><div class="label">Brain Cancer</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12" checked><div class="label">I’m not sure</div></div>
           </div>     
           <br>
           <br>

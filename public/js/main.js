@@ -40,6 +40,7 @@
   var savedQuizProgress = {};
   var savedDiveProgress = {};
   var lastDeepSave = null;
+  var currentGlass = 0;
 
   var receivedBMI = false;
 
@@ -235,8 +236,6 @@
     })
     $('.question button').on('click',function(){
       answerQuestion($(this));
-      console.log($(this).attr("data-answer-id")) 
-    
     })
     $('.btn-calculate').on('click',function(){
       calculateWeight($(this));
@@ -288,7 +287,7 @@
       var x = e.pageX;
       var distance = 0;
       var l;
-      var currentGlass;
+      
       _$window.bind('mousemove',function(e){
         distance = x-e.pageX;
         l = Math.max(50,$('.bottle').position().left-distance);
@@ -412,14 +411,42 @@
 		lastDeepSave = id;
 		updateCharts();
 	}
-	function handleSaveQuizAnswer(questionId, answerVal) {
-		savedQuizProgress[questionId] = answerVal;
+	function handleSaveQuizAnswer(answer) {
+		// 2 - bmi
+		// 3 - .answers .drinks
+		// 13 - Have any of your immediate family members
+		// 15 - gene mutation have you or your relative
+		// 16 - Within one side of the family
+		var ansTxt = answer.attr("data-answer-id");
+		if (_currentQuestion == 3) ansTxt = currentGlass;
+		if (_currentQuestion == 13) {
+			var data = [];
+			$('.cb1 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		if (_currentQuestion == 15) {
+			var data = [];
+			$('.cb2 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		if (_currentQuestion == 16) {
+			var data = [];
+			$('.cb3 input:checked').each(function() {
+			    data.push($(this).attr('data-answer-id'));
+			});
+			ansTxt = data;
+		}
+		savedQuizProgress[String(_currentQuestion)] = ansTxt;
 		updateCharts();
 	}
   
   function answerQuestion(answer){
 	
-	handleSaveQuizAnswer(String(_currentQuestion), answer.attr("data-answer-id"))
+	handleSaveQuizAnswer(answer)
 
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');

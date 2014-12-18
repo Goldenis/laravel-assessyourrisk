@@ -705,6 +705,11 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
   top: 13rem;
 }
+.assessment-intro .action {
+  position: relative;
+  left: 50%;
+  transformX: translateX(-50%);
+}
 .education {
   position: absolute;
   top: 0;

@@ -165,6 +165,7 @@
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
       '-webkit-transform':"translateX("+(_myL)+"px)"
     })
+
     if(_currentHeadline.index() < $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length-1){
       _currentHeadline.removeClass('active');
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
@@ -172,6 +173,9 @@
       
       handleSaveDeepProgress();
     }
+
+    console.log('just one headline matey' +_currentHeadline.index());
+
   }
   
   function addCharts() {
@@ -349,6 +353,7 @@
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');
+   
     //$('.logo-white').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
@@ -360,8 +365,7 @@
 
     $('.bmi-wrapper').css({
       opacity: 0
-    })  
-
+    })     
     $('.btn-wrap').css({
       opacity: 1
     })    

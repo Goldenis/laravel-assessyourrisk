@@ -659,6 +659,11 @@ input[type="checkbox"]{
   width: 75%;
   @include transition(.4s);
   top: 13rem;
+    .action {
+      position: relative;
+      left: 50%;
+      transformX: translateX(-50%);
+    }
 }
 .education{
   position: absolute;

@@ -503,7 +503,7 @@
         <div class="nav-item">FAMILY HISTORY</div>
       </div>
       <div class="scroll"><!-- SCROLL --></div>
-      <button class="btn-continue">CONTINUE</button>
+      <button class="btn-continue">BEGIN</button>
       <div class="education-menu">
         <div class="module-hero">
           <div class="how">Understand How</div>
@@ -671,7 +671,7 @@
                   <li>If a change persists or worsens, get to a doc</li>
                 </ul>
             </div>
-            <div class="headline"></div>
+<!--             <div class="headline"></div> -->
           </div>
         </div>
         <div class="vignette">

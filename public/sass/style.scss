@@ -275,6 +275,7 @@ button{
 .progress-overlay{
   overflow: hidden;
   padding: 0;
+  background: $nude;
   .section-title{
     border-color: #fff !important;
   }
@@ -436,7 +437,7 @@ input[type="checkbox"]{
   float: left;
   z-index: 20;
 }
-.logo,.logo-white{
+.logo{
   position: absolute;
   top: 1.5rem;
   left: 3rem;
@@ -450,8 +451,18 @@ input[type="checkbox"]{
   }
 }
 .logo-white{
-  opacity: 0;
-  top: 2rem;
+  z-index: 5;
+  position: absolute;
+  top: 92px;
+  left: 3rem;
+  margin-left: 0px;
+  //opacity: 0;
+  //@include transition(.5s);
+  img{
+    width: 12rem;
+    max-width: 185px;
+    min-width: 140px;
+  }
 }
 .asterisk{
   color: $red;
@@ -506,8 +517,8 @@ input[type="checkbox"]{
   .wheel-container {
     width: 400px;
     height: 400px;
-    left: 50%;
-    top: 50%;
+    left: 55%;
+    top: 60%;
     position: absolute;
     overflow: hidden;
   }
@@ -735,7 +746,6 @@ input[type="checkbox"]{
   .scroll{
     opacity: 1;
     position: absolute;
-    @include centerH;
     bottom: 35px;
     z-index:3;
   }
@@ -816,9 +826,8 @@ input[type="checkbox"]{
   }
   .pledge{
     position: absolute;
-    left: 50%;
-    @include transform(translateX(-50%));
-    bottom: 190px;
+    left: 0;
+    bottom: 120px;
     border-color: #fff;
     &:hover{
       background: $red;
@@ -856,11 +865,12 @@ input[type="checkbox"]{
     z-index: 12;
     top: 22%;
     height: 100%;
-    pointer-events: none;
+    // pointer-events: none;
     left: 33.333%;
     .headline{
       position: absolute;
       width: 100%;
+      height: 78%;
       visibility: hidden;
       opacity: 0;
       @include transition(.4s);
@@ -1105,7 +1115,8 @@ input[type="checkbox"]{
 }
 
 .module-time {
-  top: 35%;
+  bottom: 190px;
+  position: absolute;
   ul {
     padding: 0;
     margin-left: -20px;

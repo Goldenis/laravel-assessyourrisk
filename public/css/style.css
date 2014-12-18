@@ -302,6 +302,7 @@ button.sub:hover {
 .progress-overlay {
   overflow: hidden;
   padding: 0;
+  background: #ffb4aa;
 }
 .progress-overlay .section-title {
   border-color: #fff !important;
@@ -481,20 +482,28 @@ input[type="checkbox"] {
   float: left;
   z-index: 20;
 }
-.logo, .logo-white {
+.logo {
   position: absolute;
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
 }
-.logo img, .logo-white img {
+.logo img {
   width: 12rem;
   max-width: 205px;
   min-width: 140px;
 }
 .logo-white {
-  opacity: 0;
-  top: 2rem;
+  z-index: 5;
+  position: absolute;
+  top: 92px;
+  left: 3rem;
+  margin-left: 0px;
+}
+.logo-white img {
+  width: 12rem;
+  max-width: 185px;
+  min-width: 140px;
 }
 .asterisk {
   color: #f6323e;
@@ -546,8 +555,8 @@ input[type="checkbox"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  left: 50%;
-  top: 50%;
+  left: 55%;
+  top: 60%;
   position: absolute;
   overflow: hidden;
 }
@@ -798,11 +807,6 @@ input[type="checkbox"] {
 .education .btn-continue, .education .scroll {
   opacity: 1;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
   bottom: 35px;
   z-index: 3;
 }
@@ -898,12 +902,8 @@ input[type="checkbox"] {
 }
 .education .pledge {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 190px;
+  left: 0;
+  bottom: 120px;
   border-color: #fff;
 }
 .education .pledge:hover {
@@ -941,12 +941,12 @@ input[type="checkbox"] {
   z-index: 12;
   top: 22%;
   height: 100%;
-  pointer-events: none;
   left: 33.333%;
 }
 .education .headlines .headline {
   position: absolute;
   width: 100%;
+  height: 78%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.4s 0 ;
@@ -1289,7 +1289,8 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .module-time {
-  top: 35%;
+  bottom: 180px;
+  position: absolute;
 }
 .module-time ul {
   padding: 0;

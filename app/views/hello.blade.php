@@ -15,7 +15,6 @@
     <img src="img/brightpink_logo.png">
 
     </div>
-    <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
     <div class="overlay male-overlay">
       <button class="close-btn">✕ &nbsp; close</button>
       <h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
@@ -505,6 +504,7 @@
         <div class="nav-item">YOUR NORMAL</div>
         <div class="nav-item">FAMILY HISTORY</div>
       </div>
+      <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
       <div class="scroll"><!-- SCROLL --></div>
       <button class="btn-continue">BEGIN</button>
       <div class="education-menu">
@@ -534,8 +534,7 @@
             <div class="headline">
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
-            </div>
-            <div class="module-time">
+              <div class="module-time">
               <div class="module-time-text">
               Time to complete : &lt;1 min
               </div>
@@ -546,7 +545,9 @@
                 <li>4</li>
                 <li>5</li>
               </ul> 
-            </div>  
+            </div>
+            </div>
+             
           </div>
         </div>
 
@@ -560,13 +561,9 @@
             </div>
             <div class="headline">
               <h3>Get moving: 30 minutes on most days, and you might reduce your risk by as much as 10-20 percent.</h3>
-            </div>
-            <div class="headline">
-              <h3>123 women have pledged to move regularly. Join Them.</h3>
+              <button class="pledge sub">I get it.</button>
             </div>
           </div>
-
-          <button class="pledge sub">I get it.</button>
         </div>
 
         <div class="vignette">
@@ -576,12 +573,13 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
+              <button class="pledge sub">Me Too.</button>
             </div>
             <div class="headline">
-              <h3>234 women have pledged to watch their fat intake. Join them.</h3>
+              <!-- <h3>234 women have pledged to watch their fat intake. Join them.</h3> -->
+              <button class="pledge sub">Me Too.</button>
             </div>
           </div>
-          <button class="pledge sub">Me Too.</button>
         </div>
 
         <div class="vignette">
@@ -594,12 +592,12 @@
             </div>
             <div class="headline">
               <h3>Every drink you throw back affects your health. Limit your drinking wherever you can to stay on the safe side.</h3>
+              <button class="pledge sub">I’m Onboard.</button>
             </div>
-            <div class="headline">
+            <!-- <div class="headline">
               <h3>345 women have pledged to tee-total. Join them.</h3>
-            </div>
+            </div> -->
           </div>
-          <button class="pledge sub">I’m Onboard.</button>
         </div>
 
         <div class="vignette">
@@ -612,12 +610,12 @@
             </div>
             <div class="headline">
               <h3>No excuses: if you don’t give up your smokes, you’re putting out a welcome sign for cancer.</h3>
+              <button class="pledge sub">I’m All About It.</button>
             </div>
-            <div class="headline">
+            <!-- <div class="headline">
               <h3>456 women have pledged to go smoke-free. Support or join them.</h3>
-            </div>
+            </div> -->
           </div>
-          <button class="pledge sub">I’m All About It.</button>
         </div>
 
         <div class="vignette">
@@ -630,12 +628,12 @@
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
+              <button class="pledge sub">Pledge to start birth control</button>
             </div>
-            <div class="headline">
+            <!-- <div class="headline">
               <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
-            </div>
+            </div> -->
           </div>
-          <button class="pledge sub">Pledge to start birth control</button>
         </div>
       </div>
 
@@ -647,21 +645,20 @@
             <div class="headline">
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
-            </div>
-            <div class="headline">EMPTY</div>
               <div class="module-time">
-                <div class="module-time-text">
-                Time to complete : 2 min
-                </div>
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul> 
-              </div>  
-            <div class="headline"></div>
+              <div class="module-time-text">
+              Time to complete : 2 min
+              </div>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul> 
+            </div>
+            </div>
+            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -678,8 +675,9 @@
                 <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
                 <li>If a change persists or worsens, get to a doc</li>
               </ul>
+              <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline">EMPTY</div>
+            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -699,8 +697,9 @@
                 <li>Itching or bumps</li>
                 <li>Lump </li>
               </ul>
+              <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline">EMPTY</div>
+            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -718,8 +717,9 @@
                 <li>A lump that gets bigger and doesn’t go away for 2-3 weeks is not.</li>
                 <li>Don’t panic — 80% of lumps aren’t cancerous — but make sure to go to your doctor.</li>
               </ul>
+              <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline"></div>
+            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -733,8 +733,11 @@
             <div class="headline">
               <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
               <button>Text Me.</button>
+              <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline">EMPTY</div>
+            <div class="headline">
+              <button class="pledge sub">CONTINUE</button>
+            </div>
           </div>
         </div>
         <div class="vignette">
@@ -766,6 +769,8 @@
                 <li><br>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
                 <li>But if they persist or worsen for 2-3 weeks, see your doctor and ask—could it be my ovaries?</li>
               </ul>
+            </div>
+            <div class="headline">
               <ul>
                 <li>See a doctor annually for a well woman’s exam.</li>
                 <li>Ask for a physical breast exam.</li>
@@ -775,6 +780,7 @@
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
+              <button class="pledge sub">CONTINUE</button>
             </div>  
           </div>
         </div>
@@ -787,20 +793,20 @@
           <div class="headlines">
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
-            </div>
-            <div class="module-time">
-              <div class="module-time-text">
-                Time to complete : &lt;2 min
+              <div class="module-time">
+                <div class="module-time-text">
+                  Time to complete : &lt;2 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                </ul>
               </div>
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-              </ul> 
-            </div> 
+            </div>
           </div>
-          <div class="headline">EMPTY</div>
+          <div class="headline"></div>
         </div>
         <div class="vignette">
           <div class="video">
@@ -812,6 +818,7 @@
             </div>
             <div class="headline">
               <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
+              <button class="pledge sub">CONTINUE</button>
             </div>
           </div>
           <div class="data-viz">
@@ -825,8 +832,10 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
+              <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline">EMPTY</div>
+            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
+            
           </div>
         </div>
         <div class="vignette">
@@ -839,12 +848,14 @@
             </div>
             <div class="headline">
               <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts.  The earlier this transformation happens, the lower the risk of breast cancer.  Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
+              <button class="pledge sub">CONTINUE</button>
             </div>
             <div class="headline">
               <h3>567 women have pledged to breastfeed. Support them.</h3>
+              <button class="pledge sub">CONTINUE</button>
             </div>
           </div>
-          <button class="pledge sub">Count me in.</button>
+          <!-- <button class="pledge sub">Count me in.</button> -->
         </div>
         <div class="vignette">
           <div class="video">
@@ -853,12 +864,13 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+              <button class="pledge sub">Done & Done.</button>
             </div>
             <div class="headline">            
               <h3>678 women have pledged to consider oral contraceptives. Support or join them.</h3>
+              <button class="pledge sub">Done & Done.</button>
             </div>
           </div>
-          <button class="pledge sub">Done & Done.</button>
         </div>
       </div>
     </section> 

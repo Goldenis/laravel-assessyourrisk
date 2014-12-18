@@ -126,35 +126,6 @@
       });
     }
   }
-  function preRoll(){
-    // // scene 1
-    // var _myFrame = 0;
-    // var dir = 'forward';
-    // _preL = 0;
-    // clearInterval(preRollInterval)
-    // preRollInterval = setInterval(function(){
-    //   _preL = Math.max(-vidW*79,-vidW*Math.floor(_myFrame/2));
-    //   if(_smallScreen){
-    //     _preL -= 220;
-    //   }
-
-    //   $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
-    //     '-webkit-transform':"translateX("+(_preL)+"px)"
-    //   })
-    //   if(_myFrame >= 50){
-    //     dir = "backward"
-    //   }
-    //   if(dir == "forward"){
-    //     _myFrame++;
-    //   }else{
-    //     _myFrame--;
-    //   }
-    //   if(_myFrame <= 0){
-    //     clearInterval(preRollInterval);
-    //   }
-    // },20)
-     
-  }
   function _scrollHandler(){
     // scene 1
     _myL = Math.max(-vidW*79,-vidW*Math.floor(_currentFrame/2));
@@ -257,11 +228,10 @@
       
     })
     $('.module-hero').on('click',function(){
-      changeModule($(this));
-      preRoll();
+      changeModule($(this).index());
     })
     $('.progress-overlay .vignettes .headline').on('click',function(){
-      changeModule($(this));
+      changeModule($(this).index());
       overlayOpen = false;
       $('.progress-overlay').removeClass("in");
       $('.assessment').removeClass('in');
@@ -276,14 +246,16 @@
       $('.education').removeClass('in');
     })
     $('.progress').on('click',function(){
-      $('.progress-overlay').addClass('in');
-      overlayOpen = true;
+      openProgressOverlay();
 
     })
     $('.nav-item').on('click',function () {
-      changeModule($(this));
+      changeModule($(this).index());
     })
     $('.vignette, .btn-continue').on('click',function(){
+      $('.btn-continue').css({
+        opacity: 0
+      })
       nextVignette();
     })
     $('.bottle').on('mousedown',function(e){
@@ -316,12 +288,15 @@
     })
     _$window.bind('resize', _pageResize);
   }
-  function changeModule(e){
+  function openProgressOverlay() {
+    $('.progress-overlay').addClass('in');
+    overlayOpen = true;
+  }
+  function changeModule(i){
     
-    
-    
-    var $this = e;
-    var i = $this.index();
+    $('.btn-continue').css({
+      opacity: 1
+    })
     _currentModule = i;
     $('.progress-overlay .vignettes .headline').eq(i).css({
       opacity: .3
@@ -515,15 +490,23 @@
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
-    preRoll();
     _currentFrame = 0;
     $('.vignette').removeClass('in');
     _currentVignette++;
     $('.headline').removeClass('active');
-    _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
-    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
-    // $('.bg-video').get(_currentVignette).currentTime = 0;
-    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+    if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){
+      _currentModule++;
+      if(_currentModule >= 3){
+        openProgressOverlay();
+        return;
+      }
+      changeModule(_currentModule);
+    }else{
+      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
+      // $('.bg-video').get(_currentVignette).currentTime = 0;
+      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+    }
 
     handleSaveDeepProgress();
     

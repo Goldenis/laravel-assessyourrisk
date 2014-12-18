@@ -531,16 +531,12 @@ input[type="checkbox"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  position: absolute;
-  overflow: hidden;
   left: 50%;
   top: 50%;
-  -webkit-transform: scale(1.6) translate(-50%, -50%);
-  -moz-transform: scale(1.6) translate(-50%, -50%);
-  -o-transform: scale(1.6) translate(-50%, -50%);
-  transform: scale(1.6) translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
 }
-.intro .wheel-container #wheel-base {
+.intro #wheel-base {
   position: absolute;
   top: 0;
   left: 0;
@@ -549,7 +545,7 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-image: url(../img/roulette/spin_base.png);
 }
-.intro .wheel-container #wheel-overlay {
+.intro #wheel-overlay {
   position: absolute;
   top: 0;
   left: 0;

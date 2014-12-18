@@ -495,12 +495,13 @@ input[type="checkbox"]{
   .wheel-container {
     width: 400px;
     height: 400px;
-    position: absolute;
-    overflow: hidden;
     left: 50%;
     top: 50%;
-    @include transform(scale(1.6) translate(-50%,-50%));
-    #wheel-base {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  #wheel-base {
       position: absolute;
       top:0;
       left:0;
@@ -508,15 +509,15 @@ input[type="checkbox"]{
       bottom:0;
       background-repeat:no-repeat;
       background-image: url(../img/roulette/spin_base.png);
-    }
-    #wheel-overlay {
+  }
+
+  #wheel-overlay {
       position: absolute;
       top:0;
       left:0;
       right:0;
       bottom:0;
       pointer-events:none;
-    } 
   } 
   .intro-message{
     position: absolute;

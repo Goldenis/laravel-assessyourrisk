@@ -244,6 +244,10 @@
     $('.btn-calculate').on('click',function(){
       calculateWeight($(this));
     })
+    $('.pledge').on('click',function(){
+      startFBShare($(this));
+    })
+
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show")
     })
@@ -358,6 +362,13 @@
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }
+
+  function startFBShare() {
+    
+   window.open("fb.html", "PopupWindow", "width=530,height=420,scrollbars=yes,resizable=no");
+  
+  }
+
   function calculateWeight(obj){
     $('.btn-calculate').css({
       visibility: 'hidden'

@@ -10,7 +10,8 @@
     //instantiate a TimelineLite    
     var tl = new TimelineLite();
 
-    tl.from(wheel, 2, {opacity:0, scale:.1}, "+=2.5");
+    tl.from(wheel, 1, {opacity:0, scale:.1}, "+=1.5");
+    tl.to(wheel, .5, {scale:1.5})
     tl.from(logo, 1, {left:250, opacity:0});
     tl.from(second, 0.5, {top:-100, opacity:0}, "-=.5");
 

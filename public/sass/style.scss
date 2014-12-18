@@ -1072,7 +1072,12 @@ input[type="checkbox"]{
   @include transform(translateY(50px));
   top: 0px;
   .bmi-result {
-    opacity: 0;   
+    opacity: 0;
+    font-size: 3rem;  
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: 100%; 
   }
 }
 

@@ -240,8 +240,8 @@
           <div class="prompt">Do you have breasts and/or ovaries?</div>
         
           <div class="answers">
-            <button>Yes</button>
-            <button>No</button>
+            <button data-answer-id="1">Yes</button>
+            <button data-answer-id="2">No</button>
           </div>
         </div>
 

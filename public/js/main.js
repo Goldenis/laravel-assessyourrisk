@@ -37,6 +37,8 @@
   var chart2;
   var chart3;
 
+  var receivedBMI = false;
+
   $(window).on('scroll',function(e){
     if(overlayOpen){
       return;
@@ -352,8 +354,12 @@
       visibility: 'hidden'
     })     
 
+    $('.bmi-wrapper').css({
+      opacity: 0
+    })  
+
     $('.btn-wrap').css({
-      visibility: 'display'
+      opacity: 1
     })    
 
     $('.bmi-result').css({
@@ -363,6 +369,7 @@
 
   }
   function answerQuestion(answer){
+
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
@@ -374,9 +381,10 @@
       })    
     }
 
-    // if(_currentQuestion == 2) {
-    //   return   
-    // }
+    if(_currentQuestion == 2 && receivedBMI == false ) {
+      receivedBMI = true;
+      return   
+    }
 
     $('.fact').eq(_currentQuestion).css({
       display: 'none'

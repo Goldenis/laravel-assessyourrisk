@@ -235,6 +235,8 @@
     })
     $('.question button').on('click',function(){
       answerQuestion($(this));
+      console.log($(this).attr("data-answer-id")) 
+    
     })
     $('.btn-calculate').on('click',function(){
       calculateWeight($(this));
@@ -364,7 +366,6 @@
     if(_currentQuestion == $('.question').length){
       $('.progress-overlay').addClass('in');
     }
-    console.log(answer);
 
     if(_currentQuestion == 1) {
       console.log(_currentQuestion)
@@ -373,9 +374,9 @@
       })    
     }
 
-    if(_currentQuestion == 2) {
-      return   
-    }
+    // if(_currentQuestion == 2) {
+    //   return   
+    // }
 
     $('.fact').eq(_currentQuestion).css({
       display: 'none'

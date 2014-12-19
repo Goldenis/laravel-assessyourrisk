@@ -27,7 +27,7 @@
       <div class="share">
         <button>SHARE</button><h5>Save the life of somebody you love. Like your <span class="person">sister</span>.</h5>
       </div>
-      <div class="results">
+      <div class="charts">
         <div class="progress">
           <div class="percentage percquiz">0%</div>
           <div class="chart chart-4"></div>
@@ -36,7 +36,8 @@
           <div class="percentage percdive">0%</div>
           <div class="chart chart-5"></div>
         </div>
-        
+      </div>
+      <div class="results">
         <div class="your-risk">
           <div class='section-title'>Assessment Results</div>
           <h2>Your Risk is <span class="risk-level">Average</span></h2>
@@ -50,9 +51,9 @@
       <div class="vignettes">
         <div class='section-title'>Education</div>
         <div class="sections">
-          <h3>Lifestyle</h3>
-          <h3>Family History</h3>
-          <h3>Your Normal</h3>
+          <h2>Lifestyle</h2><br>
+          <h2>Family History</h2><br>
+          <h2>Your Normal</h2>
         </div>
       </div>
       <div class="cards">

@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -13,7 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -58,9 +63,7 @@
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -200,10 +203,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -303,24 +307,38 @@ button.sub:hover {
   background: #ffb4aa;
   overflow-y: scroll;
 }
+.progress-overlay .charts {
+  width: 100%;
+  height: 120px;
+  margin-top: 100px;
+}
+.progress-overlay .progress {
+  width: 96px;
+  height: 96px;
+  margin-left: 5.5em;
+  left: 0;
+  position: absolute;
+}
+.progress-overlay .progress:nth-of-type(2) {
+  left: 50%;
+}
 .progress-overlay .chart {
   width: 6rem;
   height: 6rem;
-  margin: auto;
   margin-bottom: 9px;
 }
 .progress-overlay .share {
   width: 100%;
   position: absolute;
   left: 6em;
-  top: 22px;
+  top: 25px;
 }
 .progress-overlay .share h5 {
   float: left;
 }
 .progress-overlay .share button {
   float: left;
-  margin-top: -22px;
+  margin-top: -25px;
   margin-right: 24px;
 }
 .progress-overlay .person {
@@ -330,13 +348,13 @@ button.sub:hover {
   border-color: #fff !important;
 }
 .progress-overlay .questions {
-  padding: 6rem;
+  padding: 1em 6em;
   width: 50%;
   height: 100%;
   float: left;
 }
 .progress-overlay .questions .progress-question {
-  margin-top: 2em;
+  margin-top: 50px;
   width: 100%;
   cursor: pointer;
 }
@@ -349,20 +367,17 @@ button.sub:hover {
 }
 .progress-overlay .results {
   width: 50%;
-  padding: 6em;
+  padding: 1rem 6rem;
   float: left;
-  display: block;
+  display: none;
 }
 .progress-overlay .results .risk-level {
   color: #d7006d;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.progress-overlay .results .your-risk {
-  margin-top: 80px;
-}
 .progress-overlay .results .your-risk h2 {
-  margin: 0.5em 0;
+  margin: 50px 0;
 }
 .progress-overlay .results .your-risk p {
   margin-bottom: 1em;
@@ -390,6 +405,7 @@ button.sub:hover {
 }
 .progress-overlay .cards .card .factors-title {
   position: absolute;
+  font-family: 'avg_bold';
   top: -25px;
   left: 0;
 }
@@ -414,7 +430,7 @@ button.sub:hover {
   color: #d7006d;
 }
 .progress-overlay .vignettes {
-  padding: 6rem;
+  padding: 1em 6em;
   width: 50%;
   overflow-y: scroll;
   height: 100%;
@@ -423,12 +439,25 @@ button.sub:hover {
 .progress-overlay .vignettes .sections {
   margin-top: 50px;
 }
-.progress-overlay .vignettes h4 {
-  margin-top: 2em;
+.progress-overlay .vignettes h2 {
   cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0.5em;
 }
-.progress-overlay .vignettes h4:hover {
+.progress-overlay .vignettes h2:hover {
   opacity: 0.8;
+}
+.progress-overlay .vignettes h2.done {
+  color: #fdd5ce;
+}
+.progress-overlay .vignettes h2.done:after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px solid #f6323e;
+  position: absolute;
+  left: 0;
+  top: 48px;
 }
 .progress-overlay .close-btn {
   display: none;
@@ -1524,7 +1553,9 @@ footer {
   }
 }
 @media only screen and (max-width: 499px) {
-  .intro .intro-message {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .intro .intro-message {
     position: absolute;
     left: 0;
     right: 0;
@@ -1536,9 +1567,7 @@ footer {
     font-size: 1rem;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

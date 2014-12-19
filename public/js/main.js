@@ -182,18 +182,18 @@
         [.01,.99], 
         ['#D7006D','#FFFFFF'], 
         null);
-    // chart4 = new DonutChartBuilder('.chart-4',
-    //     8,
-    //     8,
-    //     [.01,.99], 
-    //     ['#D7006D','#FFFFFF'], 
-    //     null);
-    // chart5 = new DonutChartBuilder('.chart-5',
-    //     8,
-    //     8,
-    //     [.01,.99], 
-    //     ['#D7006D','#FFFFFF'], 
-    //     null);
+    chart4 = new DonutChartBuilder('.chart-4',
+        8,
+        8,
+        [.01,.99], 
+        ['#D7006D','#FFFFFF'], 
+        null);
+    chart5 = new DonutChartBuilder('.chart-5',
+        8,
+        8,
+        [.01,.99], 
+        ['#D7006D','#FFFFFF'], 
+        null);
     setTimeout(transCharts, 1000);
   /* Only use this if it needs to watch the container and resize with the div
   $( window ).resize(function() {
@@ -416,23 +416,23 @@
         8,
         [quizProgress, 1-quizProgress], 
         ['#D7006D','#FFFFFF']);
-    
+    chart4.transitionToValues (5,
+        8,
+        [quizProgress, 1-quizProgress], 
+        ['#D7006D','#FFFFFF']);    
+
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
-    var diveProgress = deepViewed/$('.headline').length + 3;
+    var diveProgress = deepViewed/$('.headline').length;
     $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
     chart3.transitionToValues (5,
         8,
         [diveProgress, 1-diveProgress], 4
         ['#D7006D','#FFFFFF']);
-    // chart4.transitionToValues (5,
-    //     8,
-    //     [diveProgress, 1-diveProgress], 
-    //     ['#D7006D','#FFFFFF']);
-    // chart5.transitionToValues (5,
-    //     8,
-    //     [diveProgress, 1-diveProgress],
-    //     ['#D7006D','#FFFFFF']);
+    chart5.transitionToValues (5,
+        8,
+        [diveProgress, 1-diveProgress], 4
+        ['#D7006D','#FFFFFF']);
   }
   
     

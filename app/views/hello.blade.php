@@ -30,11 +30,11 @@
       <div class="results">
         <div class="progress">
           <div class="percentage percquiz">0%</div>
-          <div class="chart chart-2"></div>
+          <div class="chart chart-4"></div>
         </div>
         <div class="progress">
           <div class="percentage percdive">0%</div>
-          <div class="chart chart-3"></div>
+          <div class="chart chart-5"></div>
         </div>
         
         <div class="your-risk">

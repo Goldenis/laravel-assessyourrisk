@@ -279,11 +279,34 @@ button{
   padding: 0;
   background: $nude;
   overflow-y: scroll;
+  .chart{
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    margin-bottom: 9px;
+  }
+  .share{
+    width: 100%;
+    position: absolute;
+    left: 6em;
+    top: 22px;
+    h5{
+      float: left;
+    }
+    button{
+      float: left;
+      margin-top: -22px;
+      margin-right: 24px;
+    }
+  }
+  .person{
+    color: $pink;
+  }
   .section-title{
     border-color: #fff !important;
   }
   .questions{
-    padding: 8%;
+    padding: 6rem;
     width: 50%;
     height: 100%;
     float: left;
@@ -302,12 +325,9 @@ button{
   }
   .results{
     width: 50%;
-    padding: 0 6%;
+    padding: 6em;
     float: left;
-    display: none;
-    .person{
-      color: $pink;
-    }
+    display: block;
     .risk-level{
       color: $pink;
       margin-top: 3rem;
@@ -983,6 +1003,25 @@ input[type="checkbox"]{
   left: 0;
   margin-top: 1em;
 }
+.progress{
+  position: relative;
+  width: 45%;
+  height: 100%;
+  top: 16%;
+  left: 10%;
+  float: left;
+  .percentage{
+    position: absolute;
+    top: 2.5rem;
+    @include centerH;
+  }
+  .chart{
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    margin-bottom: 9px;
+  }
+}
 .right-column{
   position: absolute;
   right: -25%;
@@ -1117,25 +1156,6 @@ input[type="checkbox"]{
       border-bottom: 2px solid $pink;
       line-height: 1.2em;
       padding-bottom: 4px;
-    }
-    .progress{
-      position: relative;
-      width: 45%;
-      height: 100%;
-      top: 16%;
-      left: 10%;
-      float: left;
-      .percentage{
-        position: absolute;
-        top: 2.5rem;
-        @include centerH;
-      }
-      .chart{
-        width: 6rem;
-        height: 6rem;
-        margin: auto;
-        margin-bottom: 9px;
-      }
     }
     &:hover{
       background: $nude-light;

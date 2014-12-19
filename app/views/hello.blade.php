@@ -24,14 +24,19 @@
       <div class="question-stats">
       </div>
       <button class="close-btn">✕ &nbsp; close</button>
+      <div class="share">
+        <button>SHARE</button><h5>Save the life of somebody you love. Like your <span class="person">sister</span>.</h5>
+      </div>
       <div class="results">
-        <div class="chart-1"></div>
-        <div class="share">
-          <h5>Save the life of somebody you love.<br>
-            Like your <span class="person">sister</span>.
-          </h5>
-          <button>SHARE</button>
+        <div class="progress">
+          <div class="percentage percquiz">0%</div>
+          <div class="chart chart-2"></div>
         </div>
+        <div class="progress">
+          <div class="percentage percdive">0%</div>
+          <div class="chart chart-3"></div>
+        </div>
+        
         <div class="your-risk">
           <div class='section-title'>Assessment Results</div>
           <h2>Your Risk is <span class="risk-level">Moderate</span></h2>

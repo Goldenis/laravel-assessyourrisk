@@ -16,16 +16,18 @@
 
     </div>
     <div class="overlay male-overlay">
-      <button class="close-btn">✕ &nbsp; close</button>
+      <button class="close-btn">✕</button>
       <h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
     </div>
 
     <div class="overlay progress-overlay">
       <div class="question-stats">
       </div>
-      <button class="close-btn">✕ &nbsp; close</button>
+      <button class="sub close-btn">✕</button>
       <div class="share">
-        <button>SHARE</button><h5>Save the life of somebody you love. Like your <span class="person">sister</span>.</h5>
+        <h5>Save the life of somebody you love. Like your <span class="person">sister</span>.</h5>
+        <br>
+        <button>SHARE</button>
       </div>
       <div class="charts">
         <div class="progress">
@@ -475,7 +477,7 @@
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0" checked><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <br>
@@ -498,7 +500,7 @@
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
             <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain Cancer</div></div>
             <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0" checked><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
           </div>     
           <br>
           <br>

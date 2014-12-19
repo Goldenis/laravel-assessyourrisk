@@ -39,7 +39,7 @@
         
         <div class="your-risk">
           <div class='section-title'>Assessment Results</div>
-          <h2>Your Risk is <span class="risk-level">Moderate</span></h2>
+          <h2>Your Risk is <span class="risk-level">Average</span></h2>
 
           <p><b>Lorem ipsum dolor</b><br> Sit amet, ligula suspendisse sit pharetra per litora, sed suspendisse elit pede consequat duis, habitasse velit congue. Feugiat suspendisse nulla sit, donec consectetuer dictumst mi, risus justo egestas cras ut fusce, sit maecenas. porta nulla ultricies, nunc wisi scelerisque nam quaerat ultrices, et placerat orci ornare. Libero nibh. Metus et inceptos ligula sed arcu, porttitor dui pretium cras, pede ea sem natoque, hac in a sed, sed tristique.
           <br><br><b>Aliquam eu, sollicitudin</b><br> Nulla rhoncus sit pellentesque sit, a orci ipsum ipsum sollicitudin. Aenean ipsum justo pede mauris. Eros arcu porta sem, justo felis quam, leo sed nihil, proin ipsum duis nibh consequatur diam sed. Eu fringilla eros. Neque aliquet curabitur quis sapien bibendum sed. Dis tortor diam massa eget mauris, suspendisse sollicitudin sodales eget fermentum etiam. Aliquet nunc vel massa, gravida tempor, pellentesque fermentum elit, pellentesque vestibulum duis ullamcorper. Et amet elementum, hac duis justo fermentum nulla, nibh tortor erat, commodo lorem et condimentum aliquet.</p>

@@ -489,6 +489,14 @@
       });
       ansTxt = data;
     }
+
+    console.log(_currentQuestion)
+    if (_currentQuestion == 14 && ansTxt == '+1') {
+      console.log('not')
+      _currentQuestion = 15;
+    }
+ 
+
     if (_currentQuestion == 15) {
       var data = [];
       $('.cb2 input:checked').each(function() {
@@ -503,6 +511,11 @@
       });
       ansTxt = data;
     }
+
+    if (ansTxt == '-1' && $('.risk-level').html()=='Average'){
+      $('.risk-level').html('Moderate')
+    }
+
     savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
     $('.question-stats').html('');
@@ -512,14 +525,15 @@
     $('.question-stats').append('question number ' + key + '  answer' + savedQuizProgress[key] +'<br>');
     }
 
+
+    //console.log($.inArray( "0", savedQuizProgress ));
     updateCharts();
     
-    console.log(savedQuizProgress)
+    console.log(ansTxt)
   }
   
   function answerQuestion(answer){
    
-    handleSaveQuizAnswer(answer)
 
     if(_currentQuestion >= $('.question').length-1){
       openProgressOverlay();
@@ -565,6 +579,8 @@
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     $('.dot').eq(_currentQuestion).removeClass('active')
+    
+    handleSaveQuizAnswer(answer)
     _currentQuestion++;
     $('.fact').eq(_currentQuestion).addClass('in');
     $('.dot').eq(_currentQuestion).addClass('active')

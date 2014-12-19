@@ -42,7 +42,7 @@
       <div class="results">
         <div class="your-risk">
           <div class='section-title'>Assessment Results</div>
-          <h2>Your Risk is <span class="risk-level">Moderate</span></h2>
+          <h2>Your Risk is <span class="risk-level">Average</span></h2>
 
           <p><b>Lorem ipsum dolor</b><br> Sit amet, ligula suspendisse sit pharetra per litora, sed suspendisse elit pede consequat duis, habitasse velit congue. Feugiat suspendisse nulla sit, donec consectetuer dictumst mi, risus justo egestas cras ut fusce, sit maecenas. porta nulla ultricies, nunc wisi scelerisque nam quaerat ultrices, et placerat orci ornare. Libero nibh. Metus et inceptos ligula sed arcu, porttitor dui pretium cras, pede ea sem natoque, hac in a sed, sed tristique.
           <br><br><b>Aliquam eu, sollicitudin</b><br> Nulla rhoncus sit pellentesque sit, a orci ipsum ipsum sollicitudin. Aenean ipsum justo pede mauris. Eros arcu porta sem, justo felis quam, leo sed nihil, proin ipsum duis nibh consequatur diam sed. Eu fringilla eros. Neque aliquet curabitur quis sapien bibendum sed. Dis tortor diam massa eget mauris, suspendisse sollicitudin sodales eget fermentum etiam. Aliquet nunc vel massa, gravida tempor, pellentesque fermentum elit, pellentesque vestibulum duis ullamcorper. Et amet elementum, hac duis justo fermentum nulla, nibh tortor erat, commodo lorem et condimentum aliquet.</p>
@@ -474,7 +474,7 @@
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>

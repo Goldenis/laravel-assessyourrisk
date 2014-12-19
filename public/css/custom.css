@@ -1,9 +1,6 @@
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* COLORS ======= */
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
-@font-face {
+ Author's custom styles
+ ========================================================================== *//* COLORS ======= *//* EMS ======= *//* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -20,9 +17,6 @@
 body {
   background-color: #fff;
 }
-nav {
-  /*======================================================  GLOBAL FLEXBOX LAYOUT CLASSES */
-}
 nav ul {
   margin: 0;
   padding: 0;
@@ -33,7 +27,7 @@ nav ul li {
 nav a {
   text-decoration: none;
 }
-.flex-container {
+/*======================================================  GLOBAL FLEXBOX LAYOUT CLASSES */.flex-container {
   display: -webkit-flex;
   display: flex;
 }
@@ -54,9 +48,8 @@ nav a {
 .flex2 {
   -webkit-flex: 2;
   flex: 2;
-  /*======================================================  HEADER & FOOTER */
 }
-#site-header {
+/*======================================================  HEADER & FOOTER */#site-header {
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -148,7 +141,6 @@ nav a {
   width: 100%;
   color: #d7006d;
   z-index: 98;
-  /*======================================================  SPLIT COLUMN LAYOUTS */
 }
 #site-footer div {
   width: 4em;
@@ -173,7 +165,7 @@ nav a {
 #site-footer a:hover {
   color: #d7006d;
 }
-#main {
+/*======================================================  SPLIT COLUMN LAYOUTS */#main {
   display: flex;
   flex-flow: row wrap;
   position: relative;
@@ -257,7 +249,6 @@ nav a {
   -ms-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  /*======================================================  WITHIN RISK ASSESSMENT SECTION */
 }
 #Intro.done {
   z-index: 0;
@@ -282,7 +273,7 @@ nav a {
   background-color: #fff;
   color: #d7006d;
 }
-#Assessment-Intro {
+/*======================================================  WITHIN RISK ASSESSMENT SECTION */#Assessment-Intro {
   background-color: #dededf;
   color: #555559;
   padding: 1em 4em;
@@ -353,8 +344,8 @@ nav a {
   width: 9.05%;
 }
 .assess .prompt {
-  /*'itc_avant_garde_pro_mdbold',*/
   font-family: 'itc_avant_garde_gothic_proMd', helvetica-neue, helvetica, sans-serif;
+  /*'itc_avant_garde_pro_mdbold',*/
   text-align: center;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -462,8 +453,8 @@ nav a {
   }
 }
 #Assessment-Counter {
-  /*'itc_avant_garde_gothic_proMd',*/
   font-family: 'itc_avant_garde_pro_mdbold', helvetica-neue, helvetica, sans-serif;
+  /*'itc_avant_garde_gothic_proMd',*/
   -webkit-font-smoothing: antialiased;
   display: block;
   margin: 1em auto 3em;
@@ -518,7 +509,6 @@ nav a {
   -ms-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
   transition-duration: 0.25s;
-  /*======================================================  WITHIN EDUCATION MODULES SECTION */
 }
 #Facts-Container.open {
   z-index: 99;
@@ -633,7 +623,7 @@ nav a {
   display: block;
   margin: auto;
 }
-#back-to-assess {
+/*======================================================  WITHIN EDUCATION MODULES SECTION */#back-to-assess {
   position: fixed;
   top: 0;
   left: 0;
@@ -1013,15 +1003,12 @@ nav a {
   width: 100%;
   margin: auto;
 }
-.know-your-normal {
-  /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-}
 .know-your-normal .photo-bg {
   background-image: url('../img/education/knowyournormal.jpg');
 }
-.ir {
+/* ==========================================================================
+ Helper classes
+ ========================================================================== */.ir {
   background-color: transparent;
   border: 0;
   overflow: hidden;
@@ -1067,15 +1054,16 @@ nav a {
 }
 .clearfix {
   *zoom: 1;
-  /* ==========================================================================
-   Print styles
-   ========================================================================== */
 }
-@media print {
-  * {
+/* ==========================================================================
+ Print styles
+ ========================================================================== */@media print {
+  /*
+ * Don't show links for images, or javascript/internal links
+ */  * {
     background: transparent !important;
-    /* Black prints faster: h5bp.com/s */
     color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1087,9 +1075,6 @@ nav a {
   }
   abbr[title]:after {
     content: " (" attr(title) ")";
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
   }
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
@@ -1099,8 +1084,8 @@ nav a {
     page-break-inside: avoid;
   }
   thead {
-    /* h5bp.com/t */
     display: table-header-group;
+    /* h5bp.com/t */
   }
   tr, img {
     page-break-inside: avoid;

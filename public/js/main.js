@@ -489,7 +489,7 @@
 
     console.log(_currentQuestion)
     if (_currentQuestion == 14 && ansTxt == '+1') {
-      console.log('not')
+      //console.log('not')
       _currentQuestion = 15;
     }
  
@@ -500,6 +500,12 @@
           data.push($(this).attr('data-answer-id'));
       });
       ansTxt = data;
+
+      if (ansTxt == '1|-2') {
+        console.log('high')
+        $('.risk-level').html('High')       
+      }
+
     }
     if (_currentQuestion == 16) {
       var data = [];

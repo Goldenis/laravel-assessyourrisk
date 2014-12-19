@@ -520,8 +520,8 @@ input[type="checkbox"]{
   .wheel-container {
     width: 400px;
     height: 400px;
-    left: 55%;
-    top: 60%;
+    left: 45%;
+    top: 50%;
     position: absolute;
     overflow: hidden;
   }
@@ -735,7 +735,7 @@ input[type="checkbox"]{
       }
       &.active{
         color: #fff;
-        background: $nude;
+        background: $pink;
       }
     }
   }
@@ -1142,6 +1142,7 @@ input[type="checkbox"]{
 }
 
 .module-time {
+  font-size: 14px;
   bottom: 190px;
   position: absolute;
   ul {

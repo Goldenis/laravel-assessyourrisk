@@ -11,7 +11,7 @@
     var tl = new TimelineLite();
 
     tl.from(wheel, 1, {opacity:0, scale:.5}, "+=.1");
-    tl.to(wheel, .5, {scale:1.5})
+    tl.to(wheel, .5, {scale:1.5, ease:Expo.easeOut})
     tl.from(logo, 1, {opacity:0});
     tl.from(second, 0.5, {opacity:0}, "-=.2");
 

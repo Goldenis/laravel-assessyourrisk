@@ -339,7 +339,7 @@ button{
     width: 50%;
     padding: 1rem 6rem;
     float: left;
-    display: block;
+    display: none;
     .risk-level{
       color: $pink;
       margin-top: 3rem;
@@ -351,6 +351,9 @@ button{
       }
       p{
         margin-bottom: 1em;
+        a,a:visited{
+          color: $pink;
+        }
       }
     }
     .sub{
@@ -376,7 +379,7 @@ button{
       .factors-title{
         position: absolute;
         font-family: 'avg_bold';
-        top: -25px;
+        top: -55px;
         left: 0;
       }
       .item{

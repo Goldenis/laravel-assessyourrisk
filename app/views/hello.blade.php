@@ -21,6 +21,7 @@
     </div>
 
     <div class="overlay progress-overlay">
+      <div class="question-stats"></div>
       <button class="close-btn">✕ &nbsp; close</button>
       <div class="questions">
         

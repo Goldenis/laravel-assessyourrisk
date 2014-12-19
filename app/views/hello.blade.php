@@ -505,7 +505,6 @@
         <div class="nav-item">FAMILY HISTORY</div>
       </div>
       <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
-      <div class="scroll"><!-- SCROLL --></div>
       <button class="btn-continue">BEGIN</button>
       <div class="education-menu">
         <div class="module-hero">
@@ -535,19 +534,18 @@
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
               <div class="module-time">
-              <div class="module-time-text">
-              Time to complete : &lt;1 min
+                <div class="module-time-text">
+                Time to complete : &lt;1 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul> 
               </div>
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ul> 
             </div>
-            </div>
-             
           </div>
         </div>
 
@@ -558,6 +556,9 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Women who get regular exercise may have a lower risk of breast cancer.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>Get moving: 30 minutes on most days, and you might reduce your risk by as much as 10-20 percent.</h3>
@@ -575,10 +576,10 @@
               <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
               <button class="pledge sub">Me Too.</button>
             </div>
-            <div class="headline">
-              <!-- <h3>234 women have pledged to watch their fat intake. Join them.</h3> -->
+            <!-- <div class="headline">
+              <h3>234 women have pledged to watch their fat intake. Join them.</h3>
               <button class="pledge sub">Me Too.</button>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -589,6 +590,9 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Cut back on cocktails — there’s a known link between alcohol and breast cancer.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>Every drink you throw back affects your health. Limit your drinking wherever you can to stay on the safe side.</h3>
@@ -607,6 +611,9 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>No excuses: if you don’t give up your smokes, you’re putting out a welcome sign for cancer.</h3>
@@ -625,6 +632,9 @@
           <div class="headlines">
             <div class="headline">         
               <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
@@ -646,19 +656,18 @@
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
               <div class="module-time">
-              <div class="module-time-text">
-              Time to complete : 2 min
+                <div class="module-time-text">
+                Time to complete : 2 min
+                </div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul> 
               </div>
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ul> 
             </div>
-            </div>
-            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -677,7 +686,6 @@
               </ul>
               <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -699,7 +707,6 @@
               </ul>
               <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -719,7 +726,6 @@
               </ul>
               <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
           </div>
         </div>
         <div class="vignette">
@@ -729,13 +735,10 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t forget to take care.</h3>
-            </div>
-            <div class="headline">
               <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
+              <br>
               <button>Text Me.</button>
-              <button class="pledge sub">CONTINUE</button>
-            </div>
-            <div class="headline">
+              <br>
               <button class="pledge sub">CONTINUE</button>
             </div>
           </div>
@@ -747,12 +750,18 @@
           <div class="headlines">
             <div class="headline">         
               <h3>There is currently no effective test for ovarian cancer.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>The signs and symptoms can be easily mistaken for other issues — like PMS.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
-              <h3>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h3>
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
               <ul>
                 <li><h4>Primary:</h4></li>
                 <li>Pelvic or abdominal pain</li>
@@ -760,6 +769,14 @@
                 <li>Prolonged bloating</li>
                 <li>Difficulty eating or feeling full quickly</li>
                 <li>(If you had Chinese food last night and are feeling bloated, this isn’t what we’re talking about.)</li>
+              </ul>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
+            </div>
+            <div class="headline">
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
+              <ul>
                 <li><h4>Secondary:</h4></li>
                 <li>Constipation</li>
                 <li>Menstrual changes</li>
@@ -769,6 +786,9 @@
                 <li><br>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
                 <li>But if they persist or worsen for 2-3 weeks, see your doctor and ask—could it be my ovaries?</li>
               </ul>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <ul>
@@ -806,7 +826,6 @@
               </div>
             </div>
           </div>
-          <div class="headline"></div>
         </div>
         <div class="vignette">
           <div class="video">
@@ -815,6 +834,9 @@
           <div class="headlines">
             <div class="headline">         
               <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
               <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
@@ -834,8 +856,6 @@
               <h3>Your personal health history and choices have a big effect as well.</h3>
               <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline"><button class="pledge sub">CONTINUE</button></div>
-            
           </div>
         </div>
         <div class="vignette">
@@ -845,15 +865,24 @@
           <div class="headlines">
             <div class="headline">
               <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
             </div>
             <div class="headline">
-              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts.  The earlier this transformation happens, the lower the risk of breast cancer.  Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
+              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts. The earlier this transformation happens, the lower the risk of breast cancer.</h3>
+              <div class="scroll">SCROLL
+                <div class="arrow"><img src="img/arrow_right.png"></div>
+              </div>
+            </div>
+            <div class="headline">
+              <h3>Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
               <button class="pledge sub">CONTINUE</button>
             </div>
-            <div class="headline">
+<!--             <div class="headline">
               <h3>567 women have pledged to breastfeed. Support them.</h3>
               <button class="pledge sub">CONTINUE</button>
-            </div>
+            </div> -->
           </div>
           <!-- <button class="pledge sub">Count me in.</button> -->
         </div>
@@ -863,13 +892,13 @@
           </div>
           <div class="headlines">
             <div class="headline">         
-              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
               <button class="pledge sub">Done & Done.</button>
             </div>
-            <div class="headline">            
+            <!-- <div class="headline">            
               <h3>678 women have pledged to consider oral contraceptives. Support or join them.</h3>
               <button class="pledge sub">Done & Done.</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

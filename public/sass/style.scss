@@ -453,7 +453,7 @@ input[type="checkbox"]{
 .logo-white{
   z-index: 5;
   position: absolute;
-  top: 92px;
+  bottom: 42px;
   left: 3rem;
   margin-left: 0px;
   //opacity: 0;
@@ -665,7 +665,6 @@ input[type="checkbox"]{
       @include transition(.5s);
     }
   }
-
 }
 .assessment-intro{
   position: absolute;
@@ -740,8 +739,7 @@ input[type="checkbox"]{
   button{
     top: auto;
   }
-  .btn-continue,
-  .scroll{
+  .btn-continue{
     opacity: 1;
     position: absolute;
     bottom: 55px;
@@ -749,12 +747,15 @@ input[type="checkbox"]{
     z-index:3;
   }
   .scroll{
-    font-size: 2em;
+    margin-top: 50px;
+    font-size: 1.4em;
     font-family: 'avg_bold';
-    color: $pink;
-    bottom: 120px;
-    @media (max-height: 878px){
-      display: none;
+    color: #fff;
+    .arrow{
+      position: absolute;
+      margin-top: 20px;
+      left: 1em;
+      @include transform(rotate(90deg) scale(.7));
     }
   }
   .education-menu{
@@ -824,9 +825,9 @@ input[type="checkbox"]{
     border-top: 2px solid rgba(255,255,255,.2);
   }
   .pledge{
-    position: absolute;
+    position: relative;
     left: 0;
-    bottom: 120px;
+    margin-top: 50px;
     border-color: #fff;
     &:hover{
       background: $red;
@@ -872,10 +873,16 @@ input[type="checkbox"]{
       height: 78%;
       visibility: hidden;
       opacity: 0;
+      top: 40px;
       @include transition(.4s);
       &.active{
         visibility: visible;
         opacity: 1;
+        top: 0;
+      }
+      &.out{
+        top: -20px;
+        opacity: 0;
       }
     }
     ul,p{

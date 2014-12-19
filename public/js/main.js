@@ -21,6 +21,7 @@
   var preRollInterval;
   var vidW = 1271;
   var overlayOpen;
+  var initialized;
 
   var _currentModule = 0;
   var _currentQuestion = 0;
@@ -108,6 +109,17 @@
     }else{
       _smallScreen = false;
     }
+    if(_winW/_winH > 1.8){
+      $('video').css({
+        width: _winW,
+        height: 'auto'
+      })
+    }else{
+      $('video').css({
+        height: _winH,
+        width: 'auto'
+      })
+    }
     setFontScale($('html'),11,16,'px');
     $('.wheel-container').css({
       '-webkit-transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
@@ -127,25 +139,19 @@
     }
   }
   function _scrollHandler(){
-    // scene 1
-    _myL = Math.max(-vidW*79,-vidW*Math.floor(_currentFrame/2));
-    if(_smallScreen){
-      _myL -= 220;
-    }
-
-    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.video img')).css({
-      '-webkit-transform':"translateX("+(_myL)+"px)"
-    })
-
-    if(_currentHeadline.index() < $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length-1){
+    var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
+    var nextHeadline = Math.min(numHeadlines,Math.floor(_currentFrame/15));
+    if (initialized && nextHeadline < numHeadlines){
       _currentHeadline.removeClass('active');
-      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(Math.floor(_currentFrame/15));
+      _currentHeadline.addClass('out');
+      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
+      _currentHeadline.removeClass('out');
       _currentHeadline.addClass('active');
       
       handleSaveDeepProgress();
     }
 
-    console.log('just one headline matey' +_currentHeadline.index());
+    console.log(numHeadlines, nextHeadline-1);
 
   }
   
@@ -301,6 +307,7 @@
     $('.progress-overlay .vignettes .headline').eq(i).css({
       opacity: .3
     })
+    
     expandModule(i);
   }
   function expandModule(num){  
@@ -514,12 +521,14 @@
     $('.headline').removeClass('active');
     if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){
       _currentModule++;
+      
       if(_currentModule >= 3){
         openProgressOverlay();
         return;
       }
       changeModule(_currentModule);
     }else{
+      
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
@@ -546,5 +555,6 @@
     createProgressOverlay();
     _registerEventListeners();
     _pageResize();
+    initialized = true;
   });
 })(jQuery);

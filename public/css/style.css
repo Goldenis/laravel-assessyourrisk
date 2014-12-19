@@ -311,7 +311,7 @@ button.sub:hover {
 .progress-overlay .charts {
   width: 100%;
   height: 120px;
-  margin-top: 180px;
+  margin-top: 220px;
 }
 .progress-overlay .progress {
   width: 96px;
@@ -379,6 +379,9 @@ button.sub:hover {
 }
 .progress-overlay .results .your-risk p {
   margin-bottom: 1em;
+}
+.progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
+  color: #d7006d;
 }
 .progress-overlay .results .sub {
   background: transparent;

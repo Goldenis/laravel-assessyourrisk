@@ -811,12 +811,21 @@ input[type="checkbox"] {
   bottom: 55px;
   left: 33.3%;
   z-index: 3;
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .education .scroll {
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 1.4em;
   font-family: 'avg_bold';
   color: #fff;
+  cursor: pointer;
 }
 .education .scroll .arrow {
   position: absolute;
@@ -826,6 +835,17 @@ input[type="checkbox"] {
   -moz-transform: rotate(90deg) scale(0.7);
   -o-transform: rotate(90deg) scale(0.7);
   transform: rotate(90deg) scale(0.7);
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.education .scroll:hover .arrow {
+  margin-top: 30px;
 }
 .education .education-menu {
   position: absolute;

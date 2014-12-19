@@ -640,7 +640,7 @@
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
               <button class="facebook">Pledge to Improve Your Lifestyle</button>
-              <button class="pledge sub">CONTINUE</button>
+              <button class="pledge sub">KNOW YOUR NORMAL MODULE</button>
             </div>
             <!-- <div class="headline">
               <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
@@ -803,7 +803,7 @@
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
               <button class="facebook">Pledge to Know Your Normal</button>
-              <button class="pledge sub">CONTINUE</button>
+              <button class="pledge sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
         </div>

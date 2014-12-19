@@ -748,17 +748,25 @@ input[type="checkbox"]{
     bottom: 55px;
     left: 33.3%;
     z-index:3;
+    @include transition(.3s);
   }
   .scroll{
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 1.4em;
     font-family: 'avg_bold';
     color: #fff;
+    cursor: pointer;
     .arrow{
       position: absolute;
       margin-top: 20px;
       left: 1em;
       @include transform(rotate(90deg) scale(.7));
+      @include transition(.3s,ease-out);
+    }
+    &:hover{
+     .arrow{
+        margin-top: 30px;
+      } 
     }
   }
   .education-menu{

@@ -420,7 +420,7 @@
 
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
-    var diveProgress = deepViewed/$('.headline').length;
+    var diveProgress = deepViewed/($('.headline').length -1);
     $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
     chart3.transitionToValues (5,
         8,

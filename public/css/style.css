@@ -311,7 +311,7 @@ button.sub:hover {
 .progress-overlay .charts {
   width: 100%;
   height: 120px;
-  margin-top: 220px;
+  margin-top: 180px;
 }
 .progress-overlay .progress {
   width: 96px;
@@ -367,7 +367,7 @@ button.sub:hover {
   width: 50%;
   padding: 1rem 6rem;
   float: left;
-  display: block;
+  display: none;
 }
 .progress-overlay .results .risk-level {
   color: #d7006d;
@@ -407,7 +407,7 @@ button.sub:hover {
 .progress-overlay .cards .card .factors-title {
   position: absolute;
   font-family: 'avg_bold';
-  top: -25px;
+  top: -60px;
   left: 0;
 }
 .progress-overlay .cards .card .item {

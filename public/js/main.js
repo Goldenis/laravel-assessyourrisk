@@ -302,7 +302,7 @@
     overlayOpen = true;
   }
   function changeModule(i){
-    
+
     $('.btn-continue').css({
       opacity: 1
     })
@@ -339,7 +339,7 @@
   function toggleColumn() {
     $('.assessment').toggleClass('in');
    
-    //$('.logo-white').toggleClass('in');
+    $('.logo').toggleClass('out');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }

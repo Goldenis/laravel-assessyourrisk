@@ -488,6 +488,9 @@ input[type="checkbox"] {
   left: 3rem;
   margin-left: 0px;
 }
+.logo.out {
+  opacity: 0 !important;
+}
 .logo img {
   width: 12rem;
   max-width: 205px;

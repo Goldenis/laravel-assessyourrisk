@@ -33,6 +33,8 @@
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
   var DESKTOP_WIDTH = "1350";
+
+  var people = ["sister","aunt","mom","girl crush","partner in crime","friend-at-first-sight","maid of honor"];
   
   var chart1;
   var chart2;
@@ -308,6 +310,9 @@
   function openProgressOverlay() {
     $('.progress-overlay').addClass('in');
     overlayOpen = true;
+    setInterval(function(){
+      $('.person').html(people[Math.floor(Math.random()*people.length)])
+    },2000);
   }
   function changeModule(i){
     $('.btn-continue').css({
@@ -482,7 +487,7 @@
 
     for(var key in savedQuizProgress) {
     //alert('key: ' + key + '\n' + 'value: ' + savedQuizProgress[key]);
-    $('.question-stats').append('question number ' + key + '  answer' + savedQuizProgress[key] +'<br>');    
+    $('.question-stats').append('question number ' + key + '  answer' + savedQuizProgress[key] +'<br>');
     }
 
     updateCharts();
@@ -496,6 +501,12 @@
 
     if(_currentQuestion >= $('.question').length-1){
       openProgressOverlay();
+      $('.results, .cards').css({
+        display: 'block'
+      })
+      $('.questions').css({
+        display: 'none'
+      })
     }
 
     if(_currentQuestion == 1) {

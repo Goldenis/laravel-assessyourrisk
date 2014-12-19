@@ -21,25 +21,69 @@
     </div>
 
     <div class="overlay progress-overlay">
-      <div clas="results">
-        <div class="chart-1"></div>
-        <div class="chart-1"></div>
-        <div class='section-title'>Assessment Results</div>
-      	<h2>Your Risk is <span class="level">Moderate</span></h2>
-      </div>
       <div class="question-stats">
       </div>
       <button class="close-btn">✕ &nbsp; close</button>
-      <div class="questions">
-        
+      <div class="results">
+        <div class="chart-1"></div>
+        <div class="share">
+          <h5>Save the life of somebody you love.<br>
+            Like your <span class="person">sister</span>.
+          </h5>
+          <button>SHARE</button>
+        </div>
+        <div class="your-risk">
+          <div class='section-title'>Assessment Results</div>
+          <h2>Your Risk is <span class="risk-level">Moderate</span></h2>
+
+          <p><b>Lorem ipsum dolor</b><br> Sit amet, ligula suspendisse sit pharetra per litora, sed suspendisse elit pede consequat duis, habitasse velit congue. Feugiat suspendisse nulla sit, donec consectetuer dictumst mi, risus justo egestas cras ut fusce, sit maecenas. porta nulla ultricies, nunc wisi scelerisque nam quaerat ultrices, et placerat orci ornare. Libero nibh. Metus et inceptos ligula sed arcu, porttitor dui pretium cras, pede ea sem natoque, hac in a sed, sed tristique.
+          <br><br><b>Aliquam eu, sollicitudin</b><br> Nulla rhoncus sit pellentesque sit, a orci ipsum ipsum sollicitudin. Aenean ipsum justo pede mauris. Eros arcu porta sem, justo felis quam, leo sed nihil, proin ipsum duis nibh consequatur diam sed. Eu fringilla eros. Neque aliquet curabitur quis sapien bibendum sed. Dis tortor diam massa eget mauris, suspendisse sollicitudin sodales eget fermentum etiam. Aliquet nunc vel massa, gravida tempor, pellentesque fermentum elit, pellentesque vestibulum duis ullamcorper. Et amet elementum, hac duis justo fermentum nulla, nibh tortor erat, commodo lorem et condimentum aliquet.</p>
+          
+          <button class="sub">EMAIL</button><button class="sub">PDF</button>
+        </div>
       </div>
       <div class="vignettes">
         <div class='section-title'>Education</div>
-        <div>
+        <div class="sections">
           <h3>Lifestyle</h3>
           <h3>Family History</h3>
           <h3>Your Normal</h3>
         </div>
+      </div>
+      <div class="cards">
+        <div class="card positive">
+          <div class="factors-title">Factors reducing your risk</div>
+          <div class="item">
+            <div class="section-title">BMI</div>
+            <h4>Your body mass index (BMI) is within the healthy range of 18.5 - 24.9.</h4>
+            <p>This reduces your baseline risk if BMI below 18.5; Be good to yourself and talk to your doctor or a nutritionist about how you can achieve a healthy BMI.</p>
+          </div>
+          <div class="item">
+            <div class="section-title">EXERCISE</div>
+            <h4>You work out at least 30 min/day.</h4>
+            <p>this decreases your baseline risk; You don't have to become a gymrat -- walking counts! Park further from the door, take a walk at lunch, ask your co-workers to take walking meetings, consider biking instead of driving, etc.</p>
+          </div>
+        </div>
+        <div class="card negative">
+          <div class="factors-title">Factors reducing your risk</div>
+          <div class="item">
+            <div class="section-title">ALCOHOL</div>
+            <h4>You have 3 drinks per day.</h4>
+            <p>This increases your baseline risk; we advise no more than 1 drink/day.</p>
+          </div>
+          <div class="item">
+            <div class="section-title">DIET</div>
+            <h4>You don’t maintain a healthy diet.</h4>
+            <p>diet can affect your risk; we advise talking to a nutritionist about how to eat for optimum health.</p>
+          </div>
+          <div class="item">
+            <div class="section-title">VITAMIN D</div>
+            <h4>You do aren’t getting enough Vitamin D</h4>
+            <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
+          </div>
+        </div>
+      </div>
+      <div class="questions">
       </div>
     </div>
     <!-- INTRO -->

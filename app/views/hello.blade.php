@@ -21,7 +21,14 @@
     </div>
 
     <div class="overlay progress-overlay">
-      <div class="question-stats"></div>
+      <div clas="results">
+        <div class="chart-1"></div>
+        <div class="chart-1"></div>
+        <div class='section-title'>Assessment Results</div>
+      	<h2>Your Risk is <span class="level">Moderate</span></h2>
+      </div>
+      <div class="question-stats">
+      </div>
       <button class="close-btn">✕ &nbsp; close</button>
       <div class="questions">
         
@@ -552,7 +559,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/running.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/running.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -570,7 +577,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/fat.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/fat.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -586,7 +593,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/alcohol.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/alcohol.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -607,7 +614,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/smoking.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/smoking.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -628,7 +635,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/birthControl.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/birthControl.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -674,7 +681,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -692,7 +699,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -713,7 +720,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -732,7 +739,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -747,7 +754,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -832,7 +839,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/family.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -852,7 +859,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/family.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -863,7 +870,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/mother.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">
@@ -891,7 +898,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
+            <video class="bg-video" data-src="video/mother.mp4" type="video/mp4" loop></video>
           </div>
           <div class="headlines">
             <div class="headline">         

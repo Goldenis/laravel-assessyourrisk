@@ -376,7 +376,7 @@
 //    console.log("weightInPounds:" + window.weightInPounds);
     // BMI = Formula: weight (lb) / [height (in)]2 x 703
     var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
-    $(".bmi-result").html("Your BMI result is " + BMI);
+    $(".bmi-result").html("Your BMI result is<br><h2>" + BMI + "</h2>");
     /*
     BMI
     Weight Status
@@ -555,6 +555,8 @@
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
+      var vid = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video'));
+      vid.attr('src',vid.data('src'));
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }
 

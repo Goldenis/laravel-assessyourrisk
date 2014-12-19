@@ -240,7 +240,6 @@ button{
     background: $red;
   }
   &.sub{
-    font-size: .8em;
     color: $pink;
     background: #fff;
     border: 3px solid $pink;
@@ -914,7 +913,7 @@ input[type="checkbox"]{
     position: relative;
     left: 0;
     margin-top: 50px;
-    border-color: #fff;
+    border-color: transparent;
     &:hover{
       background: $red;
       color: #fff;

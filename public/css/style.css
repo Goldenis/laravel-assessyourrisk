@@ -262,7 +262,6 @@ button:hover {
   background: #f6323e;
 }
 button.sub {
-  font-size: 0.8em;
   color: #d7006d;
   background: #fff;
   border: 3px solid #d7006d;
@@ -403,7 +402,7 @@ button.sub:hover {
   width: 50%;
   overflow-y: scroll;
   height: 100%;
-  float: left;
+  float: right;
 }
 .progress-overlay .vignettes .sections {
   margin-top: 50px;

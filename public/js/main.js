@@ -551,6 +551,10 @@
   function nextVignette(){
     _currentFrame = 0;
     $('.vignette').removeClass('in');
+    var _oldVignette = _currentVignette;
+    setTimeout(function(){
+      $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).find($('.bg-video')).attr('src',"");
+    },600);
     _currentVignette++;
     $('.headline').removeClass('active');
     if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){

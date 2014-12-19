@@ -492,7 +492,7 @@ input[type="checkbox"] {
 .logo-white {
   z-index: 5;
   position: absolute;
-  top: 92px;
+  bottom: 42px;
   left: 3rem;
   margin-left: 0px;
 }
@@ -798,7 +798,7 @@ input[type="checkbox"] {
 .education button {
   top: auto;
 }
-.education .btn-continue, .education .scroll {
+.education .btn-continue {
   opacity: 1;
   position: absolute;
   bottom: 55px;
@@ -806,15 +806,19 @@ input[type="checkbox"] {
   z-index: 3;
 }
 .education .scroll {
-  font-size: 2em;
+  margin-top: 50px;
+  font-size: 1.4em;
   font-family: 'avg_bold';
-  color: #d7006d;
-  bottom: 120px;
+  color: #fff;
 }
-@media (max-height: 878px) {
-  .education .scroll {
-    display: none;
-  }
+.education .scroll .arrow {
+  position: absolute;
+  margin-top: 20px;
+  left: 1em;
+  -webkit-transform: rotate(90deg) scale(0.7);
+  -moz-transform: rotate(90deg) scale(0.7);
+  -o-transform: rotate(90deg) scale(0.7);
+  transform: rotate(90deg) scale(0.7);
 }
 .education .education-menu {
   position: absolute;
@@ -896,9 +900,9 @@ input[type="checkbox"] {
   border-top: 2px solid rgba(255, 255, 255, .2);
 }
 .education .pledge {
-  position: absolute;
+  position: relative;
   left: 0;
-  bottom: 120px;
+  margin-top: 50px;
   border-color: #fff;
 }
 .education .pledge:hover {
@@ -944,6 +948,7 @@ input[type="checkbox"] {
   height: 78%;
   visibility: hidden;
   opacity: 0;
+  top: 40px;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -956,6 +961,11 @@ input[type="checkbox"] {
 .education .headlines .headline.active {
   visibility: visible;
   opacity: 1;
+  top: 0;
+}
+.education .headlines .headline.out {
+  top: -20px;
+  opacity: 0;
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;

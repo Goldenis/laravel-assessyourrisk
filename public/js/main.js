@@ -432,7 +432,7 @@
 
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
-    var diveProgress = deepViewed/$('.headline').length-1;
+    var diveProgress = deepViewed/($('.headline').length -1);
     $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
     chart3.transitionToValues (5,
         8,
@@ -503,6 +503,7 @@
     if (_currentQuestion == 14 && ansTxt == '+1') {
       //console.log('not')
       _currentQuestion = 15;
+      savedQuizProgress['14'] = ansTxt;
     }
  
 

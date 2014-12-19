@@ -552,7 +552,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/running1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/running.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -570,7 +570,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/fat1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/fat.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -586,7 +586,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/alcohol1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/alcohol.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -607,7 +607,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/smoking1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/smoking.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -628,7 +628,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/birthControl1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/birthControl.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -674,7 +674,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -692,7 +692,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -713,7 +713,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -732,7 +732,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -747,7 +747,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -832,7 +832,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -852,7 +852,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -863,7 +863,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">
@@ -891,7 +891,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         

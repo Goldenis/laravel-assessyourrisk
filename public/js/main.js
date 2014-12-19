@@ -480,10 +480,10 @@
   
   function answerQuestion(answer){
   
-  handleSaveQuizAnswer(answer)
+    handleSaveQuizAnswer(answer)
 
-    if(_currentQuestion == $('.question').length){
-      $('.progress-overlay').addClass('in');
+    if(_currentQuestion >= $('.question').length-1){
+      openProgressOverlay();
     }
 
     if(_currentQuestion == 1) {

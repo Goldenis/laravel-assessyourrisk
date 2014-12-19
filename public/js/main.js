@@ -30,6 +30,10 @@
   var _myL = 0;
   var _preL = 0;
 
+  setInterval(function(){
+    $('.person').html(people[Math.floor(Math.random()*people.length)])
+  },2000);
+
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
   var DESKTOP_WIDTH = "1350";
@@ -324,9 +328,6 @@
   function openProgressOverlay() {
     $('.progress-overlay').addClass('in');
     overlayOpen = true;
-    setInterval(function(){
-      $('.person').html(people[Math.floor(Math.random()*people.length)])
-    },2000);
   }
   function changeModule(i){
     $('.btn-continue').css({
@@ -367,8 +368,6 @@
   }
   function toggleColumn() {
     $('.assessment').toggleClass('in');
-   
-    $('.logo').toggleClass('out');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
   }

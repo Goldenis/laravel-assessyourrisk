@@ -455,6 +455,14 @@
       ansTxt = data;
     }
     savedQuizProgress[String(_currentQuestion)] = ansTxt;
+
+    $('.question-stats').html('');
+
+    for(var key in savedQuizProgress) {
+    //alert('key: ' + key + '\n' + 'value: ' + savedQuizProgress[key]);
+    $('.question-stats').append('question number ' + key + '  answer' + savedQuizProgress[key] +'<br>');    
+    }
+
     updateCharts();
     
     console.log(savedQuizProgress)

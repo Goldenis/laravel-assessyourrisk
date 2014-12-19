@@ -496,7 +496,7 @@
   }
   
   function answerQuestion(answer){
-  
+   
     handleSaveQuizAnswer(answer)
 
     if(_currentQuestion >= $('.question').length-1){

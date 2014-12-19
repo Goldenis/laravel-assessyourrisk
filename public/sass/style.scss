@@ -272,17 +272,20 @@ button{
     }
   }
 }
+.question-stats{
+  display: none;
+}
 .progress-overlay{
   overflow: hidden;
   padding: 0;
   background: $nude;
+  overflow-y: scroll;
   .section-title{
     border-color: #fff !important;
   }
   .questions{
     padding: 8%;
     width: 50%;
-    overflow-y: scroll;
     height: 100%;
     float: left;
     .progress-question{
@@ -298,12 +301,84 @@ button{
       }
     }
   }
+  .results{
+    width: 50%;
+    padding: 0 6%;
+    float: left;
+    display: none;
+    .person{
+      color: $pink;
+    }
+    .risk-level{
+      color: $pink;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    .your-risk{
+      margin-top: 80px;
+      h2{
+        margin: .5em 0;
+      }
+      p{
+        margin-bottom: 1em;
+      }
+    }
+    .sub{
+      background: transparent;
+    }
+  }
+  .cards{
+    width: 100%;
+    margin-top: 40px;
+    float: left;
+    display: none;
+    .section-title{
+      margin-bottom: 2em;
+    }
+    h4{
+      margin-bottom: .5em;
+    }
+    .card{
+      float: left;
+      width: 42%;
+      margin: 4%;
+      padding: 4em;
+      .factors-title{
+        position: absolute;
+        top: -25px;
+        left: 0;
+      }
+      .item{
+        margin-bottom: 4em;
+      }
+    }
+    .positive{
+      background: #fff;
+      color: $darkColor;
+      .section-title{
+        border-color: $darkColor !important;
+      }
+      .factors-title{
+        color: #fff;
+      }
+    }
+    .negative{
+      background: $pink;
+      color: #fff;
+      .factors-title{
+        color: $pink;
+      }
+    }
+  }
   .vignettes{
     padding: 6rem;
     width: 50%;
     overflow-y: scroll;
     height: 100%;
-    float: left;
+    float: right;
+    .sections{
+      margin-top: 50px;
+    }
     h4{
       margin-top: 2em;
       cursor: pointer;
@@ -784,7 +859,7 @@ input[type="checkbox"]{
   .module-hero{
     width: 75%;
     left: 25%;
-    background: $red;
+    background: $pink;
     background-size: cover;
     color: #fff;
     padding: 3.5em 5rem;

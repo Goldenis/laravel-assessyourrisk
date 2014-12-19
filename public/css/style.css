@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -13,7 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -58,9 +63,7 @@
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -200,10 +203,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -807,12 +811,21 @@ input[type="checkbox"] {
   bottom: 55px;
   left: 33.3%;
   z-index: 3;
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .education .scroll {
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 1.4em;
   font-family: 'avg_bold';
   color: #fff;
+  cursor: pointer;
 }
 .education .scroll .arrow {
   position: absolute;
@@ -822,6 +835,17 @@ input[type="checkbox"] {
   -moz-transform: rotate(90deg) scale(0.7);
   -o-transform: rotate(90deg) scale(0.7);
   transform: rotate(90deg) scale(0.7);
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.education .scroll:hover .arrow {
+  margin-top: 30px;
 }
 .education .education-menu {
   position: absolute;
@@ -868,7 +892,7 @@ input[type="checkbox"] {
 .education .module-hero:hover {
   background: #d7006d;
   border-left: 18px solid #fff;
-  border-top: 18px solid #fff;
+  border-bottom: 18px solid #fff;
 }
 .education .module-hero .how {
   border-bottom: 2px solid rgba(255, 255, 255, .2);
@@ -884,15 +908,15 @@ input[type="checkbox"] {
   color: #fff;
 }
 .education .module-hero:nth-of-type(1) {
-  background: url('../img/education/lifestyle.jpg') center center;
+  background: url('../img/lifestyle.jpg') center top;
   background-size: cover;
 }
 .education .module-hero:nth-of-type(2) {
-  background: url('../img/education/familyhistory.jpg') center center;
+  background: url('../img/normal.jpg') center center;
   background-size: cover;
 }
 .education .module-hero:nth-of-type(3) {
-  background: url('../img/education/knowyournormal.jpg') center center;
+  background: url('../img/family.jpg') center center;
   background-size: cover;
 }
 .education .section-title {
@@ -1409,7 +1433,9 @@ footer {
   }
 }
 @media only screen and (max-width: 499px) {
-  .intro .intro-message {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .intro .intro-message {
     position: absolute;
     left: 0;
     right: 0;
@@ -1421,9 +1447,7 @@ footer {
     font-size: 1rem;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

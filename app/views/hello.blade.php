@@ -552,7 +552,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/running1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/running.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -570,7 +570,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/fat1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/fat.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -586,7 +586,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/alcohol1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/alcohol.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -607,7 +607,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/smoking1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/smoking.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -628,7 +628,7 @@
 
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/birthControl1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/birthControl.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -640,7 +640,7 @@
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
               <button class="facebook">Pledge to Improve Your Lifestyle</button>
-              <button class="pledge sub">CONTINUE</button>
+              <button class="pledge sub">KNOW YOUR NORMAL MODULE</button>
             </div>
             <!-- <div class="headline">
               <h3>These women have all pledged to take birth control. Join or encourage them!</h3>
@@ -674,7 +674,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -692,7 +692,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -713,7 +713,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -732,7 +732,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -747,7 +747,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/breastAwareness1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/breastAwareness.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -803,7 +803,7 @@
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
               <button class="facebook">Pledge to Know Your Normal</button>
-              <button class="pledge sub">CONTINUE</button>
+              <button class="pledge sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
         </div>
@@ -832,7 +832,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -852,7 +852,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/family.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         
@@ -863,7 +863,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">
@@ -891,7 +891,7 @@
         </div>
         <div class="vignette">
           <div class="video">
-            <video class="bg-video" src="video/family1.mov" type="video/mov"></video>
+            <video class="bg-video" src="video/mother.mov" type="video/mov"></video>
           </div>
           <div class="headlines">
             <div class="headline">         

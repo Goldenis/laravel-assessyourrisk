@@ -307,10 +307,24 @@ button.sub:hover {
   background: #ffb4aa;
   overflow-y: scroll;
 }
+.progress-overlay .charts {
+  width: 100%;
+  height: 110px;
+  margin-top: 80px;
+}
+.progress-overlay .progress {
+  width: 96px;
+  height: 96px;
+  margin-left: 5.5em;
+  left: 0;
+  position: absolute;
+}
+.progress-overlay .progress:nth-of-type(2) {
+  left: 50%;
+}
 .progress-overlay .chart {
   width: 6rem;
   height: 6rem;
-  margin: auto;
   margin-bottom: 9px;
 }
 .progress-overlay .share {
@@ -334,7 +348,7 @@ button.sub:hover {
   border-color: #fff !important;
 }
 .progress-overlay .questions {
-  padding: 6rem;
+  padding: 1em 6em;
   width: 50%;
   height: 100%;
   float: left;
@@ -353,7 +367,7 @@ button.sub:hover {
 }
 .progress-overlay .results {
   width: 50%;
-  padding: 6em;
+  padding: 1rem 6rem;
   float: left;
   display: block;
 }
@@ -362,11 +376,8 @@ button.sub:hover {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.progress-overlay .results .your-risk {
-  margin-top: 80px;
-}
 .progress-overlay .results .your-risk h2 {
-  margin: 0.5em 0;
+  margin: 50px 0;
 }
 .progress-overlay .results .your-risk p {
   margin-bottom: 1em;
@@ -378,10 +389,11 @@ button.sub:hover {
   width: 100%;
   margin-top: 40px;
   float: left;
-  display: none;
+  display: block;
 }
 .progress-overlay .cards .section-title {
   margin-bottom: 2em;
+  font-family: 'avg_bold';
 }
 .progress-overlay .cards h4 {
   margin-bottom: 0.5em;
@@ -418,7 +430,7 @@ button.sub:hover {
   color: #d7006d;
 }
 .progress-overlay .vignettes {
-  padding: 6rem;
+  padding: 1em 6em;
   width: 50%;
   overflow-y: scroll;
   height: 100%;
@@ -427,12 +439,25 @@ button.sub:hover {
 .progress-overlay .vignettes .sections {
   margin-top: 50px;
 }
-.progress-overlay .vignettes h4 {
-  margin-top: 2em;
+.progress-overlay .vignettes h2 {
   cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0.5em;
 }
-.progress-overlay .vignettes h4:hover {
+.progress-overlay .vignettes h2:hover {
   opacity: 0.8;
+}
+.progress-overlay .vignettes h2.done {
+  color: #fdd5ce;
+}
+.progress-overlay .vignettes h2.done:after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px solid #f6323e;
+  position: absolute;
+  left: 0;
+  top: 40px;
 }
 .progress-overlay .close-btn {
   display: none;

@@ -256,7 +256,7 @@
     $('.module-hero').on('click',function(){
       changeModule($(this).index());
     })
-    $('.progress-overlay .vignettes .headline').on('click',function(){
+    $('.progress-overlay .vignettes h2').on('click',function(){
       changeModule($(this).index());
       overlayOpen = false;
       $('.progress-overlay').removeClass("in");
@@ -338,9 +338,7 @@
       })
     },600);
     _currentModule = i;
-    $('.progress-overlay .vignettes .headline').eq(i).css({
-      opacity: .3
-    })
+    $('.progress-overlay .vignettes h2').eq(i).addClass('done');
     
     expandModule(i);
   }
@@ -419,7 +417,7 @@
     
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
-    var diveProgress = deepViewed/$('.headline').length + 3;
+    var diveProgress = deepViewed/$('.headline').length;
     $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
     chart3.transitionToValues (5,
         8,

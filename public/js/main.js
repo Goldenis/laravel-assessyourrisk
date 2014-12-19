@@ -491,6 +491,7 @@
     if (_currentQuestion == 14 && ansTxt == '+1') {
       //console.log('not')
       _currentQuestion = 15;
+      savedQuizProgress['14'] = ansTxt;
     }
  
 

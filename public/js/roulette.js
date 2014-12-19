@@ -4,6 +4,7 @@ var wheel = $(document).ready(
 			 * SET doAllowDrag to false to disable the mouse spin
 			 */
 			var doAllowDrag = true;
+			var doSpinUponLoad = true;
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove
 			wheelBase = $('#wheel-base'),
@@ -132,4 +133,11 @@ var wheel = $(document).ready(
 				highlightByRotation()
 			}
 			
+			function spinOnLoad() {
+				rotate(wheelBase, Math.random() * 500 + 500, 10);
+			}
+			
+			if (doSpinUponLoad) {
+				setTimeout(spinOnLoad, 3000);
+			}
 		});

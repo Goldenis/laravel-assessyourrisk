@@ -554,8 +554,8 @@ input[type="checkbox"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  left: 55%;
-  top: 60%;
+  left: 45%;
+  top: 50%;
   position: absolute;
   overflow: hidden;
 }
@@ -796,7 +796,7 @@ input[type="checkbox"] {
 }
 .education .nav .nav-item.active {
   color: #fff;
-  background: #ffb4aa;
+  background: #d7006d;
 }
 .education button {
   top: auto;
@@ -1314,6 +1314,7 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .module-time {
+  font-size: 14px;
   bottom: 190px;
   position: absolute;
 }

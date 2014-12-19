@@ -23,6 +23,7 @@
   var overlayOpen;
   var initialized;
 
+  var _currentView = "left";
   var _currentModule = 0;
   var _currentQuestion = 0;
   var _currentVignette = 0;
@@ -270,6 +271,7 @@
     })
     $('.progress-overlay .questions h4').on('click',function() {
       overlayOpen = false; 
+      toggleLogo();
       $('.progress-overlay').removeClass("in");
       $('.assessment').addClass('in');
       $('.right-column').removeClass('left');
@@ -370,6 +372,16 @@
     $('.assessment').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
+    toggleLogo();
+  }
+  function toggleLogo () {
+    if(_currentView == "left"){
+      _currentView = "right";
+      $('.logo').addClass('out');
+    }else{
+      $('.logo').removeClass('out');
+      _currentView = "left"
+    }
   }
   function calculateWeight(obj){
     $('.btn-calculate').css({

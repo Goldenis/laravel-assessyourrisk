@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -13,7 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -58,9 +63,7 @@
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -200,10 +203,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -302,6 +306,7 @@ button.sub:hover {
   padding: 0;
   background: #ffb4aa;
   overflow-y: scroll;
+  border: none;
 }
 .progress-overlay .charts {
   width: 100%;
@@ -341,6 +346,7 @@ button.sub:hover {
 }
 .progress-overlay .questions {
   padding: 1em 6em;
+  margin-bottom: 6em;
   width: 50%;
   height: 100%;
   float: left;
@@ -601,6 +607,14 @@ input[type="checkbox"] {
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
+  -webkit-transition: all 0.5s 0 ;
+  -moz-transition: all 0.5s 0 ;
+  -o-transition: all 0.5s 0 ;
+  -ms-transition: all 0.5s 0 ;
+  transition: all 0.5s 0 ;
+  -moz-transition-duration: 0.5s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .logo.out {
   opacity: 0 !important;
@@ -838,6 +852,9 @@ input[type="checkbox"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
   top: 13rem;
+}
+.assessment-intro a, .assessment-intro a:visited {
+  color: #d7006d;
 }
 .assessment-intro .action {
   position: relative;
@@ -1548,7 +1565,9 @@ footer {
   }
 }
 @media only screen and (max-width: 499px) {
-  .intro .intro-message {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .intro .intro-message {
     position: absolute;
     left: 0;
     right: 0;
@@ -1560,9 +1579,7 @@ footer {
     font-size: 1rem;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

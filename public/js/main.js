@@ -496,7 +496,7 @@
   }
   
   function answerQuestion(answer){
-  
+   
     handleSaveQuizAnswer(answer)
 
     if(_currentQuestion >= $('.question').length-1){
@@ -508,7 +508,7 @@
         display: 'none'
       })
     }
-
+ 
     if(_currentQuestion == 1) {
 //      console.log(_currentQuestion)
       $('.btn-wrap').css({

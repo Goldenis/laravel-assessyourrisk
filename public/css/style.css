@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -13,7 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -58,9 +63,7 @@
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -200,16 +203,17 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
   border: 1px solid #555558;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'avg_bold', sans-serif;
   font-weight: normal;
 }
@@ -227,6 +231,10 @@ h4 {
 }
 h5 {
   font-size: 1.5em;
+}
+h6 {
+  letter-spacing: 0;
+  font-size: 0.8em;
 }
 button {
   padding: 1em 1.8em;
@@ -543,26 +551,28 @@ button.sub:hover {
   color: #ccc;
   display: inline-block;
   position: relative;
-  width: 2px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: #ccc;
   margin-right: 20px;
-  border: 4px solid #ccc;
-  -webkit-transition: all 0.4s 0 ;
-  -moz-transition: all 0.4s 0 ;
-  -o-transition: all 0.4s 0 ;
-  -ms-transition: all 0.4s 0 ;
-  transition: all 0.4s 0 ;
-  -moz-transition-duration: 0.4s;
+  -webkit-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
+  -moz-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
+  -o-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
+  -ms-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
+  transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
+  -moz-transition-duration: 0.6s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  top: 0;
 }
 .dot.active {
   background: #d7006d;
-  border: 10px solid #d7006d;
+  width: 16px;
+  height: 16px;
+  top: 3px;
 }
 .tooltip-bottom {
   width: auto;
@@ -860,6 +870,7 @@ input[type="checkbox"] {
 }
 .education {
   position: absolute;
+  overflow: hidden;
   top: 0;
   width: 100%;
   height: 100%;
@@ -884,17 +895,13 @@ input[type="checkbox"] {
   color: #fff;
 }
 .education .nav {
-  width: 100%;
-  height: 60px;
-  background: #fff;
+  width: 25%;
   position: absolute;
-  top: -60px;
+  top: 20px;
+  left: -25%;
   z-index: 2000;
-  color: #ffb4aa;
   font-family: 'avg_bold';
-  letter-spacing: 0.1em;
-  border-bottom: 10px solid #fff;
-  border-left: 10px solid #fff;
+  background: transparent;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
   -o-transition: all 1s 0 ;
@@ -905,16 +912,14 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
 }
 .education .nav.in {
-  top: 0;
+  left: 12px;
 }
 .education .nav .nav-item {
-  float: left;
-  padding: 22px 0px 15px 30px;
-  width: 33.333%;
-  height: 50px;
-  background: #fff;
-  border-right: 1px solid #ffb4aa;
-  font-size: 0.8em;
+  padding: 0.8rem 10% 0;
+  width: 100%;
+  font-size: 1.8em;
+  color: #fdd5ce;
+  opacity: 0.5;
   -webkit-transition: all 0.2s 0 ;
   -moz-transition: all 0.2s 0 ;
   -o-transition: all 0.2s 0 ;
@@ -925,12 +930,24 @@ input[type="checkbox"] {
   -moz-transition-delay: 0;
   cursor: pointer;
 }
+.education .nav .nav-item .percent {
+  color: #fdd5ce;
+  font-size: 0.6em;
+}
 .education .nav .nav-item:hover {
-  color: #d7006d;
+  opacity: 1;
 }
 .education .nav .nav-item.active {
   color: #fff;
-  background: #d7006d;
+  opacity: 1;
+}
+.education .nav .nav-item .mod-progress {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 2px;
+  height: 30%;
+  background: #fff;
 }
 .education button {
   top: auto;
@@ -983,6 +1000,7 @@ input[type="checkbox"] {
   top: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   z-index: 143;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
@@ -999,7 +1017,6 @@ input[type="checkbox"] {
 .education .module-hero {
   width: 75%;
   left: 25%;
-  background: #d7006d;
   background-size: cover;
   color: #fff;
   padding: 3.5em 5rem;
@@ -1152,18 +1169,23 @@ input[type="checkbox"] {
 }
 .progress .percentage {
   position: absolute;
-  top: 2.5rem;
+  top: 2.4rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  font-size: 1rem;
+  font-family: "avg_bold";
 }
 .progress .chart {
   width: 6rem;
   height: 6rem;
   margin: auto;
   margin-bottom: 9px;
+}
+.progress h6 {
+  color: #fff;
 }
 .right-column {
   position: absolute;
@@ -1317,7 +1339,6 @@ input[type="checkbox"] {
   position: relative;
   width: 100%;
   height: 18.666%;
-  margin-top: 6px;
   min-height: 128px;
   background: #fff;
   background: #ffb4aa;
@@ -1328,17 +1349,16 @@ input[type="checkbox"] {
   text-align: center;
   padding-right: 10px;
   cursor: pointer;
-  -webkit-transition: all 0.2s 0 linear;
-  -moz-transition: all 0.2s 0 linear;
-  -o-transition: all 0.2s 0 linear;
-  -ms-transition: all 0.2s 0 linear;
-  transition: all 0.2s 0 linear;
-  -moz-transition-duration: 0.2s;
+  -webkit-transition: all 0.5s 0 linear;
+  -moz-transition: all 0.5s 0 linear;
+  -o-transition: all 0.5s 0 linear;
+  -ms-transition: all 0.5s 0 linear;
+  transition: all 0.5s 0 linear;
+  -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
 .right-column .dashboard .label {
-  font-size: 12px;
   position: absolute;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -1356,6 +1376,17 @@ input[type="checkbox"] {
 }
 .right-column .dashboard:hover {
   background: #fdd5ce;
+}
+.right-column .dashboard.flash {
+  background: #fdd5ce;
+  -webkit-transition: all 0s 0 linear;
+  -moz-transition: all 0s 0 linear;
+  -o-transition: all 0s 0 linear;
+  -ms-transition: all 0s 0 linear;
+  transition: all 0s 0 linear;
+  -moz-transition-duration: 0s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .right-column.in {
   right: 0;
@@ -1561,10 +1592,13 @@ footer {
   }
   .dot.active {
     border-width: 5px;
+    top: 6px;
   }
 }
 @media only screen and (max-width: 499px) {
-  .intro .intro-message {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .intro .intro-message {
     position: absolute;
     left: 0;
     right: 0;
@@ -1576,9 +1610,7 @@ footer {
     font-size: 1rem;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

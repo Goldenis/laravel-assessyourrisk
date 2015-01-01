@@ -416,6 +416,10 @@
   }
   
   function updateCharts() {
+    $('.dashboard').addClass('flash');
+    setTimeout(function(){
+      $('.dashboard').removeClass('flash');
+    },300);
     // percquiz percdive
     var questionsAnswered = 0;
     for (q in savedQuizProgress) questionsAnswered++;
@@ -572,7 +576,6 @@
       receivedBMI = true;
       return   
     }
-    
     $('.fact').eq(_currentQuestion).removeClass('in');
     $('.fact').eq(_currentQuestion).addClass('out');
     switch (_currentQuestion){  
@@ -594,12 +597,15 @@
     })
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
-    $('.dot').eq(_currentQuestion).removeClass('active')
     
     handleSaveQuizAnswer(answer)
+    var _oldQuestion = _currentQuestion;
     _currentQuestion++;
-    $('.fact').eq(_currentQuestion).addClass('in');
-    $('.dot').eq(_currentQuestion).addClass('active')
+    setTimeout(function(){
+      $('.fact').eq(_currentQuestion).addClass('in');
+      $('.dot').eq(_oldQuestion).removeClass('active')
+      $('.dot').eq(_currentQuestion).addClass('active')
+    },1000)
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
@@ -607,7 +613,7 @@
     $('.vignette').removeClass('in');
     var _oldVignette = _currentVignette;
     setTimeout(function(){
-      $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).find($('.bg-video')).attr('src',"");
+      // $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).attr('src',"");
     },600);
     _currentVignette++;
     $('.headline').removeClass('active');
@@ -624,9 +630,12 @@
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
-      var vid = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video'));
-      vid.attr('src',vid.data('src'));
-      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+      if($('.bg-video').attr('src') != vig.data('src')){
+        $('.bg-video').attr('src',vig.data('src'));
+        $('.bg-video').get(0).play();
+      }
+      //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }
 
     handleSaveDeepProgress();

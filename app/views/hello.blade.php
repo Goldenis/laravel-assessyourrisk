@@ -116,7 +116,7 @@
           Your body. Your life.<br>
           Don’t leave it up to chance.
         </p>
-        <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
+        <a id="Begin" href="#home"></span>"> <button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
     </section>
     <!-- RIGHT COLUMN -->
@@ -990,7 +990,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<!--     // <script src="js/vendor/jquery.address-1.5.min.js"></script> -->
+    <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
@@ -999,7 +999,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-      <script src="js/weight.js"></script>
+    <script src="js/weight.js"></script>
     <script src="js/height.js"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="js/svg/DonutChartBuilder.js"></script>

@@ -216,10 +216,7 @@
   
   function _registerEventListeners() {
     $('#Begin').on('click',function(){
-      $('.intro').addClass('out-up')
-      $('.right-column').addClass('in')
-      $('.assessment').addClass('in');
-      $('.border').addClass('white');
+      hideIntro();
     })
     $('.male-overlay .close-btn').on('click',function () {
       overlayOpen = false;
@@ -253,11 +250,16 @@
     $('.asterisk').on('mouseleave',function(){
       $(this).next().removeClass("show")
     })
-    $('.toggle-box, .fact-group').on('click',function(){
-      toggleColumn();
-    })
     $('.assess').on('click',function(){
-      
+      toggleColumn();
+      $.address.path('/assessment');
+    })
+    $('.understand').on('click',function(){
+      toggleColumn();
+      $.address.path('/education');
+    })
+    $('.fact-group').on('click',function(){
+      toggleColumn();
     })
     $('.module-hero').on('click',function(){
       changeModule($(this).index());
@@ -328,6 +330,13 @@
     })
     _$window.bind('resize', _pageResize);
   }
+  function hideIntro() {
+    $('.intro').addClass('out-up')
+    $('.right-column').addClass('in')
+    $('.assessment').addClass('in');
+    $('.border').addClass('white');
+  };
+
   function openProgressOverlay() {
     $('.progress-overlay').addClass('in');
     overlayOpen = true;
@@ -704,15 +713,33 @@
 
    //    });
       
-   //  $.address.change(function(event) { 
-   //      //define an event handler based on the params...**
-   //    if (event.value = 'sortbyname')
-   //      sortstuffbyname()
-   //    else if (event.value ='sortbysomethingelse')
-   //      sortstuffbysomethingelse();
-   //        // do something depending on the event.value property, e.g.  
-   //        // $('#content').load(event.value + '.xml');  
-   //  });   
+    $.address.externalChange(function(event) { 
+
+      console.log('external URL change')
+      console.log(event.value)
+      if (event.value == '/home') {
+        
+        //$.address.path('/home');
+        console.log('home')
+      } 
+      else if (event.value == '/education') {
+        console.log('education')
+        hideIntro();
+        addCharts();
+        toggleColumn();
+      }
+      else if (event.value == '/assessment') {
+        console.log('assessment')
+        hideIntro();
+        addCharts();
+      }      
+      else {
+        console.log('intro view')
+        startIntro();
+        $.address.path('/intro');
+  
+      };
+    });   
 
   $(document).ready(function() {
 
@@ -723,6 +750,7 @@
     _registerEventListeners();
     _pageResize();
     initialized = true;
+
 
 
   });

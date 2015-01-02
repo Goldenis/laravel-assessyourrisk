@@ -621,7 +621,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/running.mp4">
+        <div class="vignette" data-src="video/running">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -639,7 +639,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/fat.mp4">
+        <div class="vignette" data-src="video/fat">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -655,7 +655,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/alcohol.mp4">
+        <div class="vignette" data-src="video/alcohol">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -676,7 +676,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/smoking.mp4">
+        <div class="vignette" data-src="video/smoking">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -697,7 +697,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/birthControl.mp4">
+        <div class="vignette" data-src="video/birthControl">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -743,7 +743,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness.mp4">
+        <div class="vignette" data-src="video/breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -761,7 +761,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness.mp4">
+        <div class="vignette" data-src="video/breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -782,7 +782,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness.mp4">
+        <div class="vignette" data-src="video/breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -801,7 +801,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness.mp4">
+        <div class="vignette" data-src="video/breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -816,7 +816,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness.mp4">
+        <div class="vignette" data-src="video/breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -901,7 +901,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/family.mp4">
+        <div class="vignette" data-src="video/family">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -921,7 +921,7 @@
             <h1>87%</h1><h1>54%</h1>
           </div>
         </div>
-        <div class="vignette" data-src="video/family.mp4">
+        <div class="vignette" data-src="video/family">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -932,7 +932,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/mother.mp4">
+        <div class="vignette" data-src="video/mother">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -960,7 +960,7 @@
           </div>
           <!-- <button class="pledge sub">Count me in.</button> -->
         </div>
-        <div class="vignette" data-src="video/mother.mp4">
+        <div class="vignette" data-src="video/mother">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->

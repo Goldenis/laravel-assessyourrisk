@@ -624,6 +624,10 @@
   }
   function nextVignette(){
     _currentFrame = 0;
+
+    var videoType;
+    var videoURL;
+
     $('.vignette').removeClass('in');
     var _oldVignette = _currentVignette;
     setTimeout(function(){
@@ -645,8 +649,33 @@
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
       var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+
+
+
       if($('.bg-video').attr('src') != vig.data('src')){
-        $('.bg-video').attr('src',vig.data('src'));
+
+        if (Modernizr.video) {
+          // let's play some video! but what kind?
+          if (Modernizr.video.webm) {
+            
+            videoURL = $( vig ).data()
+            videoType = ".webm"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+
+          } else if (Modernizr.video.ogg) {
+
+            videoURL = $( vig ).data()
+            videoType = ".ogv"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+
+          } else if (Modernizr.video.h264){
+ 
+            videoURL = $( vig ).data()
+            videoType = ".mp4"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+          }
+        }
+
         $('.bg-video').get(0).play();
         $('.bg-video').css({
           background: "#D7006D"

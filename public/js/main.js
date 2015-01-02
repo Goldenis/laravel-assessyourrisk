@@ -698,21 +698,21 @@
   }
 
 
-   $('a').click(function() {  
-      //change the after-hash-sign-params to the value of the clicked link**
-      $.address.value($(this).attr('href'));
+   // $('a').click(function() {  
+   //    //change the after-hash-sign-params to the value of the clicked link**
+   //    $.address.value($(this).attr('href'));
 
-      });
+   //    });
       
-    $.address.change(function(event) { 
-        //define an event handler based on the params...**
-      // if (event.value = 'sortbyname')
-      //   sortstuffbyname()
-      // else if (event.value ='sortbysomethingelse')
-      //   sortstuffbysomethingelse();
-      //     // do something depending on the event.value property, e.g.  
-      //     // $('#content').load(event.value + '.xml');  
-    });   
+   //  $.address.change(function(event) { 
+   //      //define an event handler based on the params...**
+   //    if (event.value = 'sortbyname')
+   //      sortstuffbyname()
+   //    else if (event.value ='sortbysomethingelse')
+   //      sortstuffbysomethingelse();
+   //        // do something depending on the event.value property, e.g.  
+   //        // $('#content').load(event.value + '.xml');  
+   //  });   
 
   $(document).ready(function() {
 

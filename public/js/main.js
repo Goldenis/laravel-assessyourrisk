@@ -55,22 +55,6 @@
   var receivedBMI = false;
 
 
-  // $('a').click(function() {  
-  //   //change the after-hash-sign-params to the value of the clicked link**
-  //   $.address.value($(this).attr('href'));
-
-  //   });
-    
-  // $.address.change(function(event) { 
-  //     //define an event handler based on the params...**
-  //   if (event.value = 'sortbyname')
-  //     sortstuffbyname()
-  //   else if (event.value ='sortbysomethingelse')
-  //     sortstuffbysomethingelse();
-  //       // do something depending on the event.value property, e.g.  
-  //       // $('#content').load(event.value + '.xml');  
-  // }); 
-
   $(window).on('scroll',function(e){
     if(overlayOpen){
       return;
@@ -713,6 +697,23 @@
     $('.progress-overlay .questions').append(html);
   }
 
+
+   $('a').click(function() {  
+      //change the after-hash-sign-params to the value of the clicked link**
+      $.address.value($(this).attr('href'));
+
+      });
+      
+    $.address.change(function(event) { 
+        //define an event handler based on the params...**
+      // if (event.value = 'sortbyname')
+      //   sortstuffbyname()
+      // else if (event.value ='sortbysomethingelse')
+      //   sortstuffbysomethingelse();
+      //     // do something depending on the event.value property, e.g.  
+      //     // $('#content').load(event.value + '.xml');  
+    });   
+
   $(document).ready(function() {
 
     //position the header to be 90%;
@@ -722,5 +723,7 @@
     _registerEventListeners();
     _pageResize();
     initialized = true;
+
+
   });
 })(jQuery);

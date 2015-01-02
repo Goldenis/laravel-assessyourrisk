@@ -61,9 +61,9 @@
       <div class="vignettes">
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h2>Lifestyle</h2><br>
-          <h2>Family History</h2><br>
-          <h2>Your Normal</h2>
+          <h2>Lifestyle<span class="percent">0%</span></h2>
+          <h2>Your Normal<span class="percent">0%</span></h2>
+          <h2>Family History<span class="percent">0%</span></h2>
         </div>
       </div>
       <div class="cards">
@@ -94,7 +94,7 @@
           </div>
           <div class="item">
             <div class="section-title">VITAMIN D</div>
-            <h4>You do aren’t getting enough Vitamin D</h4>
+            <h4>You aren’t getting enough Vitamin D</h4>
             <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
           </div>
         </div>
@@ -106,7 +106,7 @@
 
     <section class="intro" class="flex-container vertical-container">
       <div class="wheel-container">
-        <div id="wheel-base"></div>
+        <div id="wheel-base"><div class="spin">CLICK TO SPIN</div></div>
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">

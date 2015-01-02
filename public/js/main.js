@@ -24,7 +24,7 @@
   var initialized;
 
   var _currentView = "left";
-  var _currentModule = 0;
+  var _currentModule;
   var _currentQuestion = 0;
   var _currentVignette = 0;
   var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
@@ -351,8 +351,8 @@
     _currentVignette = 0;
     
     handleSaveDeepProgress();
-    
     $('.nav').addClass('in');
+    $('.right-column').addClass('down');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
     _currentFrame = 0;
@@ -369,12 +369,26 @@
     $('.education .section-title').addClass('in');
   }
   function toggleColumn() {
+    if(_currentView == "left"){
+      _currentView = "right";
+      $('.logo').addClass('out');
+      if(_currentModule != undefined){
+        setTimeout(function(){
+          $('.right-column').addClass('down');
+        },800)
+      }
+    }else{
+      $('.logo').removeClass('out');
+      _currentView = "left"
+      setTimeout(function(){
+        $('.right-column').removeClass('down');
+      },800)
+    }
     $('.assessment').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
-    toggleLogo();
   }
-  function toggleLogo () {
+  function toggleLogo() {
     if(_currentView == "left"){
       _currentView = "right";
       $('.logo').addClass('out');
@@ -634,6 +648,9 @@
       if($('.bg-video').attr('src') != vig.data('src')){
         $('.bg-video').attr('src',vig.data('src'));
         $('.bg-video').get(0).play();
+        $('.bg-video').css({
+          background: "#D7006D"
+        });
       }
       //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }

@@ -135,6 +135,7 @@ var wheel = $(document).ready(
 			
 			function spinOnLoad() {
 				rotate(wheelBase, Math.random() * 500 + 500, 10);
+        $('.spin').css({display: "none"})
 			}
 			
 			if (doSpinUponLoad) {

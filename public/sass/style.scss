@@ -421,6 +421,12 @@ button{
       margin-top: 50px;
     }
     h2{
+      .percent{
+        color: $nude-light;
+        font-size: .4em;
+        display: block;
+        top: -.5em;
+      }
       cursor: pointer;
       display: inline-block;
       margin-bottom: .5em;
@@ -436,7 +442,7 @@ button{
           border-bottom: 2px solid $red;
           position: absolute;
           left: 0;
-          top: 48px;
+          top: 3rem;
         }
       }
     }
@@ -668,6 +674,23 @@ input[type="checkbox"]{
       bottom:0;
       background-repeat:no-repeat;
       background-image: url(../img/roulette/spin_base.png);
+      .spin{
+        width: 150px;
+        height: 150px;
+        background: $pink;
+        font-family: "avg_bold";
+        font-size: 1.6em;
+        line-height: 1.2em;
+        color: #fff;
+        position: absolute;
+        left: 125px;
+        top: 125px;
+        @include rounded(50%);
+        text-align: center;
+        padding: 44px 20px;
+        box-sizing: border-box;
+        z-index: 2;
+      }
   }
 
   #wheel-overlay {
@@ -845,14 +868,14 @@ input[type="checkbox"]{
   .nav{
     width: 25%;
     position: absolute;
-    top: 20px;
-    left: -25%;
+    top: -200px;
+    left: 12px;
     z-index: 2000;
     font-family: 'avg_bold';
     background: transparent;
     @include transition(1s);
     &.in{
-      left: 12px;
+      top: 20px;
     }
     .nav-item{
       padding: .8rem 10% 0;
@@ -1001,7 +1024,7 @@ input[type="checkbox"]{
     width: 100%;
     overflow: hidden;
     height: 100% ;
-    background: $pink;
+    background: $nude;
     border-left: 10px solid #fff;
     video{
       opacity: .9;
@@ -1165,7 +1188,7 @@ input[type="checkbox"]{
     .fact{
       position: absolute;
       padding: 0em;
-      width: calc(100% - 6.8em);
+      width: calc(100% - 9.8em);
       height: 100%;
       opacity: 0;
       top: 70px;
@@ -1222,9 +1245,11 @@ input[type="checkbox"]{
   &.in{
     right: 0;
   }
+  &.down{
+    top: 200px;
+  }
   &.left{
     right: calc(75% - 10px);
-    top: 200px;
     @include transition(1s,ease-in-out);
     .understand{
       left: calc(100% + 10px);

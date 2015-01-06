@@ -1,5 +1,7 @@
 <?php
 
+$url = parse_url(getenv("DATABASE_URL"));
+
 return array(
 
 	/*
@@ -26,7 +28,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'pgsql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -45,7 +47,7 @@ return array(
 	*/
 
 	'connections' => array(
-
+		/*
 		'sqlite' => array(
 			'driver'   => 'sqlite',
 			'database' => __DIR__.'/../database/production.sqlite',
@@ -62,18 +64,18 @@ return array(
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
-
+		*/
 		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'forge',
-			'username' => 'forge',
-			'password' => '',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		),
-
+            'driver'   => 'pgsql',
+            'host'     => $url["host"],
+            'database' => substr($url["path"], 1),
+            'username' => $url["user"],
+            'password' => $url["pass"],
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ),
+		/*
 		'sqlsrv' => array(
 			'driver'   => 'sqlsrv',
 			'host'     => 'localhost',
@@ -82,7 +84,7 @@ return array(
 			'password' => '',
 			'prefix'   => '',
 		),
-
+		*/
 	),
 
 	/*
@@ -108,7 +110,7 @@ return array(
 	| such as APC or Memcached. Laravel makes it easy to dig right in.
 	|
 	*/
-
+	/*
 	'redis' => array(
 
 		'cluster' => false,
@@ -120,5 +122,5 @@ return array(
 		),
 
 	),
-
+	*/
 );

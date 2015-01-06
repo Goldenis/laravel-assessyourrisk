@@ -35,7 +35,7 @@ class PledgeController extends BaseController {
 				$response = $users;
 			}
 		} catch ( Exception $e ) {
-			Log::error ( '>> Validator failed.', $e );
+			Log::info ( '>> Validator failed.', $e );
 			$response = $e->getMessage ();
 			$statusCode = 401;
 		} finally{
@@ -57,7 +57,7 @@ class PledgeController extends BaseController {
 			) );
 			
 			if ($validator->fails ()) {
-				Log::error ( '>> Validator failed.' );
+				Log::info ( '>> Validator failed.' );
 				
 				$statusCode = 401;
 				$messages = $validator->messages ();
@@ -69,18 +69,23 @@ class PledgeController extends BaseController {
 				Log::info ( '>> Validator passed.' );
 				FacebookSession::setDefaultApplication ( '757106917704007', '460fc7a9192ab2adc792739b9738ba94' );
 				
+				Log::info ( '>> setDefaultApplication passed.' );
+				
 				$session = null;
 				// Check for user token from JavaScript
 				
 				$helper = new FacebookJavaScriptLoginHelper ();
+				Log::info ( '>> FacebookJavaScriptLoginHelper initialized.' );
+				
 				try {
-					$session = $helper->getSession ();
+					Log::info ( '>> try block started.' );
+					$session = $helper->getSession();
 				} catch ( FacebookRequestException $ex ) {
-					Log::error ( '>> Exception', $ex );
+					Log::info ( '>> Exception', $ex );
 					$response ['errorCode'] = $ex->getCode ();
 					$response ['errorMessage'] = $ex->getMessage ();
 				} catch ( \Exception $ex ) {
-					Log::error ( '>> Exception', $ex );
+					Log::info ( '>> Exception', $ex );
 					$response ['errorCode'] = $ex->getCode ();
 					$response ['errorMessage'] = $ex->getMessage ();
 				}
@@ -105,7 +110,7 @@ class PledgeController extends BaseController {
 						
 						$response ['user'] = $user;
 					} catch ( FacebookRequestException $e ) {
-						Log::error ( '>> Exception', $e );
+						Log::info ( '>> Exception', $e );
 						$response ['errorCode'] = $e->getCode ();
 						$response ['errorMessage'] = $e->getMessage ();
 					}
@@ -115,7 +120,7 @@ class PledgeController extends BaseController {
 			}
 			// Send activation code to the user so he can activate the account
 		} catch ( Exception $e ) {
-			Log::error ( '>> Exception', $e );
+			Log::info ( '>> Exception', $e );
 			$statusCode = 401;
 			$response ['errors'] = [ ];
 			$response ['errors'] [] = $e->getMessage ();

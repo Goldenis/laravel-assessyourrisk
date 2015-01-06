@@ -40,6 +40,7 @@ class PledgeController extends BaseController {
 				$response = $users;
 			}
 		} catch ( Exception $e ) {
+			Log::error ( 'Validator failed.', $e );
 			$response = $e->getMessage ();
 			$statusCode = 401;
 		} finally{
@@ -62,7 +63,7 @@ class PledgeController extends BaseController {
 			) );
 				
 			if ($validator->fails ()) {
-				Log::info ( 'Validator failed.' );
+				Log::error ( 'Validator failed.' );
 	
 				$statusCode = 401;
 				$messages = $validator->messages ();
@@ -81,9 +82,11 @@ class PledgeController extends BaseController {
 				try {
 					$session = $helper->getSession();
 				} catch(FacebookRequestException $ex) {
+					Log::error ( 'Exception', $ex );
 					$response ['errorCode'] = $ex->getCode();
 					$response ['errorMessage'] = $ex->getMessage();	
 				} catch(\Exception $ex) {
+					Log::error ( 'Exception', $ex );
 					$response ['errorCode'] = $ex->getCode();
 					$response ['errorMessage'] = $ex->getMessage();	
 				}
@@ -105,6 +108,7 @@ class PledgeController extends BaseController {
 						$response['user'] = $user;
 						
 					} catch(FacebookRequestException $e) {
+						Log::error ( 'Exception', $e );
 						$response ['errorCode'] = $e->getCode();
 						$response ['errorMessage'] = $e->getMessage();					
 					}		
@@ -112,7 +116,7 @@ class PledgeController extends BaseController {
 			}
 			// Send activation code to the user so he can activate the account
 		} catch ( Exception $e ) {
-			Log::info ( 'Exception' );
+			Log::error ( 'Exception', $e );
 			$statusCode = 401;
 			$response ['errors'] = [ ];
 			$response ['errors'] [] = $e->getMessage ();

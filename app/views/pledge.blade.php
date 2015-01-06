@@ -150,7 +150,7 @@ body {
 
 			
 			function appendUser(uid, name, trg) {
-				var imgURL = "http://graph.facebook.com/" + uid + "/picture?type=large";
+				var imgURL = "https://graph.facebook.com/" + uid + "/picture?type=large";
 				trg.append(name + '<br>');
 			    trg.append('<img src="' + imgURL + '"><br>');
 			}

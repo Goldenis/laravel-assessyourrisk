@@ -67,14 +67,15 @@ class PledgeController extends BaseController {
 				}
 			} else {
 				Log::info ( '>> Validator passed.' );
-				FacebookSession::setDefaultApplication ( '757106917704007', '460fc7a9192ab2adc792739b9738ba94' );
 				
+				FacebookSession::setDefaultApplication ( '757106917704007', '460fc7a9192ab2adc792739b9738ba94' );
 				Log::info ( '>> setDefaultApplication passed.' );
 				
 				$session = null;
 				// Check for user token from JavaScript
+				Log::info ( '>> session set to bull.' );
 				
-				$helper = new FacebookJavaScriptLoginHelper ();
+				$helper = new FacebookJavaScriptLoginHelper();
 				Log::info ( '>> FacebookJavaScriptLoginHelper initialized.' );
 				
 				try {

@@ -112,6 +112,8 @@ class PledgeController extends BaseController {
 						$response ['errorCode'] = $e->getCode();
 						$response ['errorMessage'] = $e->getMessage();					
 					}		
+				} else {
+					Log::error ( 'No session detected' );
 				}
 			}
 			// Send activation code to the user so he can activate the account

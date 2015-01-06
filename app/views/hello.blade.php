@@ -41,7 +41,7 @@
       </div>
       <div class="results">
         <div class="your-risk">
-          <div class='section-title'>Assessment Results</div>
+          <div class='section-title'>Assess</div>
           <h2>Your Risk is <span class="risk-level">Average</span></h2>
 
           <p>
@@ -59,11 +59,11 @@
         </div>
       </div>
       <div class="vignettes">
-        <div class='section-title'>Education</div>
+        <div class='section-title'>Understand</div>
         <div class="sections">
-          <h2>Lifestyle</h2><br>
-          <h2>Family History</h2><br>
-          <h2>Your Normal</h2>
+          <h2>Lifestyle<span class="percent">0%</span></h2>
+          <h2>Your Normal<span class="percent">0%</span></h2>
+          <h2>Family History<span class="percent">0%</span></h2>
         </div>
       </div>
       <div class="cards">
@@ -94,7 +94,7 @@
           </div>
           <div class="item">
             <div class="section-title">VITAMIN D</div>
-            <h4>You do aren’t getting enough Vitamin D</h4>
+            <h4>You aren’t getting enough Vitamin D</h4>
             <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
           </div>
         </div>
@@ -106,7 +106,7 @@
 
     <section class="intro" class="flex-container vertical-container">
       <div class="wheel-container">
-        <div id="wheel-base"></div>
+        <div id="wheel-base"><div class="spin">CLICK TO SPIN</div></div>
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
@@ -116,7 +116,7 @@
           Your body. Your life.<br>
           Don’t leave it up to chance.
         </p>
-        <a id="Begin" href="#Risk-Assessment"> <button class="action lifestyle"> Assess Your Risk </button> </a>
+        <a id="Begin" href="#home"></span>"> <button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
     </section>
     <!-- RIGHT COLUMN -->
@@ -129,12 +129,12 @@
         <div class="progress">
           <div class="percentage percquiz">0%</div>
           <div class="chart chart-2"></div>
-          <h6>ASSESSMENT</h6>
+          <h6>Assess</h6>
         </div>
         <div class="progress">
           <div class="percentage percdive">0%</div>
           <div class="chart chart-3"></div>
-          <h6>EDUCATION</h6>
+          <h6>Understand</h6>
         </div>
       </div>
 
@@ -567,10 +567,14 @@
 <!-- EDUCATION -->
 
     <section class="education">
+      <!-- MASTER VIDEO -->    
+      <div class="video">
+        <video class="bg-video" src="" type="video/mp4" loop></video>
+      </div>
       <div class="nav">
-        <div class="nav-item">LIFESTYLE</div>
-        <div class="nav-item">YOUR NORMAL</div>
-        <div class="nav-item">FAMILY HISTORY</div>
+        <div class="nav-item"><span class="percent">0%</span> Lifestyle</div>
+        <div class="nav-item"><span class="percent">0%</span> Your Normal</div>
+        <div class="nav-item"><span class="percent">0%</span> Family History</div>
       </div>
       <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
       <button class="btn-continue">BEGIN</button>
@@ -617,10 +621,10 @@
           </div>
         </div>
 
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/running.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/running">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Women who get regular exercise may have a lower risk of breast cancer.</h3>
@@ -635,10 +639,10 @@
           </div>
         </div>
 
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/fat.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/fat">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
@@ -651,10 +655,10 @@
           </div>
         </div>
 
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/alcohol.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/alcohol">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Cut back on cocktails — there’s a known link between alcohol and breast cancer.</h3>
@@ -672,10 +676,10 @@
           </div>
         </div>
 
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/smoking.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/smoking">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
@@ -693,10 +697,10 @@
           </div>
         </div>
 
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/birthControl.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/birthControl">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
@@ -739,10 +743,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/breastAwareness">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
@@ -757,10 +761,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/breastAwareness">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>A few examples of abnormal symptoms:</h3>
@@ -778,10 +782,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/breastAwareness">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Let’s talk lumps.</h3>
@@ -797,10 +801,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/breastAwareness">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t forget to take care.</h3>
@@ -812,10 +816,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/breastAwareness.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/breastAwareness">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>There is currently no effective test for ovarian cancer.</h3>
@@ -897,10 +901,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/family.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/family">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
@@ -917,10 +921,10 @@
             <h1>87%</h1><h1>54%</h1>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/family.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/family">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Your personal health history and choices have a big effect as well.</h3>
@@ -928,10 +932,10 @@
             </div>
           </div>
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/mother.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/mother">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">
               <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
@@ -956,10 +960,10 @@
           </div>
           <!-- <button class="pledge sub">Count me in.</button> -->
         </div>
-        <div class="vignette">
-          <div class="video">
-            <video class="bg-video" data-src="video/mother.mp4" type="video/mp4" loop></video>
-          </div>
+        <div class="vignette" data-src="video/mother">
+          <!-- <div class="video">
+            <video class="bg-video" type="video/mp4" loop></video>
+          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
@@ -973,7 +977,7 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
 
 <!-- FOOTER -->
 
@@ -986,6 +990,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
@@ -994,7 +999,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-      <script src="js/weight.js"></script>
+    <script src="js/weight.js"></script>
     <script src="js/height.js"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="js/svg/DonutChartBuilder.js"></script>

@@ -145,6 +145,8 @@ $lightColor: #dedede;
 $lightColor50: rgba(223, 236, 230, .50);
 $borderColor: #494547;
 
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.675);
+
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
@@ -201,7 +203,7 @@ header{
   text-align: center;
   border: 1px solid $darkColor;
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,h6{
   font-family: $headline-font;
   font-weight: normal;
 }
@@ -219,6 +221,10 @@ h4{
 }
 h5{
   font-size: 1.5em;
+}
+h6{
+  letter-spacing: 0;
+  font-size: .8em;
 }
 button{
   padding: 1em 1.8em;
@@ -415,6 +421,12 @@ button{
       margin-top: 50px;
     }
     h2{
+      .percent{
+        color: $nude-light;
+        font-size: .4em;
+        display: block;
+        top: -.5em;
+      }
       cursor: pointer;
       display: inline-block;
       margin-bottom: .5em;
@@ -430,7 +442,7 @@ button{
           border-bottom: 2px solid $red;
           position: absolute;
           left: 0;
-          top: 48px;
+          top: 3rem;
         }
       }
     }
@@ -508,16 +520,18 @@ button{
   color: #ccc;
   display: inline-block;
   position: relative;
-  width: 2px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   @include rounded(50%);
   background: $light-gray;
   margin-right: 20px;
-  border: 4px solid $light-gray;
-  @include transition(.4s);
+  @include transition(.6s,$ease-out-back);
+  top: 0;
   &.active{
     background: $pink;
-    border: 10px solid $pink;
+    width: 16px;
+    height: 16px;
+    top: 3px;
   }
 }
 .tooltip-bottom{
@@ -631,7 +645,8 @@ input[type="checkbox"]{
 .intro{
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1112;
+  opacity: 0;
   // .wheel{
   //   position: absolute;
   //   @include center;
@@ -660,6 +675,23 @@ input[type="checkbox"]{
       bottom:0;
       background-repeat:no-repeat;
       background-image: url(../img/roulette/spin_base.png);
+      .spin{
+        width: 150px;
+        height: 150px;
+        background: $pink;
+        font-family: "avg_bold";
+        font-size: 1.6em;
+        line-height: 1.2em;
+        color: #fff;
+        position: absolute;
+        left: 125px;
+        top: 125px;
+        @include rounded(50%);
+        text-align: center;
+        padding: 44px 20px;
+        box-sizing: border-box;
+        z-index: 2;
+      }
   }
 
   #wheel-overlay {
@@ -811,6 +843,7 @@ input[type="checkbox"]{
 }
 .education{
   position: absolute;
+  overflow: hidden;
   top: 0;
   width: 100%;
   height: 100%;
@@ -834,37 +867,43 @@ input[type="checkbox"]{
     }
   }
   .nav{
-    width: 100%;
-    height: 60px;
-    background: #fff;
+    width: 25%;
     position: absolute;
-    top: -60px;
+    top: -200px;
+    left: 12px;
     z-index: 2000;
-    color: $nude;
     font-family: 'avg_bold';
-    letter-spacing: .1em;
-    border-bottom: 10px solid #fff;
-    border-left: 10px solid #fff;
+    background: transparent;
     @include transition(1s);
     &.in{
-      top: 0;
+      top: 20px;
     }
     .nav-item{
-      float: left;
-      padding: 22px 0px 15px 30px;
-      width: 33.333%;
-      height: 50px;
-      background: #fff;
-      border-right: 1px solid $nude;
-      font-size: .8em;
+      padding: .8rem 10% 0;
+      width: 100%;
+      font-size: 1.8em;
+      color: $nude-light;
+      opacity: .5;
       @include transition(.2s);
       cursor: pointer;
+      .percent{
+        color: $nude-light;
+        font-size: .6em;
+      }
       &:hover{
-        color: $pink;
+        opacity: 1;
       }
       &.active{
         color: #fff;
-        background: $pink;
+        opacity: 1;
+      }
+      .mod-progress{
+        position: absolute;
+        right: -2px;
+        top: 0;
+        width: 2px;
+        height: 30%;
+        background: #fff;
       }
     }
   }
@@ -904,6 +943,7 @@ input[type="checkbox"]{
     top: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;
     z-index: 143;
     @include transition(1s,ease-in-out);
     &.out{
@@ -913,7 +953,7 @@ input[type="checkbox"]{
   .module-hero{
     width: 75%;
     left: 25%;
-    background: $pink;
+    //background: $pink;
     background-size: cover;
     color: #fff;
     padding: 3.5em 5rem;
@@ -985,7 +1025,7 @@ input[type="checkbox"]{
     width: 100%;
     overflow: hidden;
     height: 100% ;
-    background: $pink;
+    background: $nude;
     border-left: 10px solid #fff;
     video{
       opacity: .9;
@@ -1047,14 +1087,19 @@ input[type="checkbox"]{
   float: left;
   .percentage{
     position: absolute;
-    top: 2.5rem;
+    top: 2.4rem;
     @include centerH;
+    font-size: 1rem;
+    font-family: "avg_bold";
   }
   .chart{
     width: 6rem;
     height: 6rem;
     margin: auto;
     margin-bottom: 9px;
+  }
+  h6{
+    color: #fff;
   }
 }
 .right-column{
@@ -1144,7 +1189,7 @@ input[type="checkbox"]{
     .fact{
       position: absolute;
       padding: 0em;
-      width: calc(100% - 6.8em);
+      width: calc(100% - 9.8em);
       height: 100%;
       opacity: 0;
       top: 70px;
@@ -1167,7 +1212,6 @@ input[type="checkbox"]{
     position: relative;
     width: 100%;
     height: 18.666%;
-    margin-top: 6px;
     min-height: 128px;
     background: #fff;
     background: $nude;
@@ -1178,9 +1222,8 @@ input[type="checkbox"]{
     text-align: center;
     padding-right: 10px;
     cursor: pointer;
-    @include transition(.2s,linear);
+    @include transition(.5s,linear);
     .label{
-      font-size: 12px;
       position: absolute;
       @include transform(rotate(-90deg));
       @include transform-origin(50% 50%);
@@ -1195,13 +1238,19 @@ input[type="checkbox"]{
     &:hover{
       background: $nude-light;
     }
+    &.flash{
+      background: $nude-light;
+      @include transition(0s,linear);
+    }
   }  
   &.in{
     right: 0;
   }
+  &.down{
+    top: 200px;
+  }
   &.left{
     right: calc(75% - 10px);
-    top: 200px;
     @include transition(1s,ease-in-out);
     .understand{
       left: calc(100% + 10px);
@@ -1384,6 +1433,7 @@ footer{
     border-width: 3px;
     &.active{
       border-width: 5px;
+      top: 6px;
     }
   }
 }

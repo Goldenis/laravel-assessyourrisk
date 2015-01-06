@@ -1,12 +1,17 @@
 
 
 
-  $(document).ready(function() {
+ function startIntro () {
 
     var wheel = $('.wheel-container'),
         second = $('.intro-message'),
         logo = $('.logo');
-     
+
+    $('.intro').removeClass('out-up');
+    $('.intro').css({opacity: 1});
+    $('.right-column').removeClass('in');     
+    $('.assessment').removeClass('in');
+
     //instantiate a TimelineLite    
     var tl = new TimelineLite();
 
@@ -21,4 +26,4 @@
 
     tl.play();
 
-  });
+  };

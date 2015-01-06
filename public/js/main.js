@@ -24,7 +24,7 @@
   var initialized;
 
   var _currentView = "left";
-  var _currentModule = 0;
+  var _currentModule;
   var _currentQuestion = 0;
   var _currentVignette = 0;
   var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
@@ -53,6 +53,7 @@
   var currentGlass = 0;
 
   var receivedBMI = false;
+
 
   $(window).on('scroll',function(e){
     if(overlayOpen){
@@ -215,10 +216,7 @@
   
   function _registerEventListeners() {
     $('#Begin').on('click',function(){
-      $('.intro').addClass('out-up')
-      $('.right-column').addClass('in')
-      $('.assessment').addClass('in');
-      $('.border').addClass('white');
+      hideIntro();
     })
     $('.male-overlay .close-btn').on('click',function () {
       overlayOpen = false;
@@ -252,11 +250,16 @@
     $('.asterisk').on('mouseleave',function(){
       $(this).next().removeClass("show")
     })
-    $('.toggle-box, .fact-group').on('click',function(){
-      toggleColumn();
-    })
     $('.assess').on('click',function(){
-      
+      toggleColumn();
+      $.address.path('/assessment');
+    })
+    $('.understand').on('click',function(){
+      toggleColumn();
+      $.address.path('/education');
+    })
+    $('.fact-group').on('click',function(){
+      toggleColumn();
     })
     $('.module-hero').on('click',function(){
       changeModule($(this).index());
@@ -327,6 +330,13 @@
     })
     _$window.bind('resize', _pageResize);
   }
+  function hideIntro() {
+    $('.intro').addClass('out-up')
+    $('.right-column').addClass('in')
+    $('.assessment').addClass('in');
+    $('.border').addClass('white');
+  };
+
   function openProgressOverlay() {
     $('.progress-overlay').addClass('in');
     overlayOpen = true;
@@ -351,8 +361,8 @@
     _currentVignette = 0;
     
     handleSaveDeepProgress();
-    
     $('.nav').addClass('in');
+    $('.right-column').addClass('down');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(num).addClass('active');
     _currentFrame = 0;
@@ -369,12 +379,26 @@
     $('.education .section-title').addClass('in');
   }
   function toggleColumn() {
+    if(_currentView == "left"){
+      _currentView = "right";
+      $('.logo').addClass('out');
+      if(_currentModule != undefined){
+        setTimeout(function(){
+          $('.right-column').addClass('down');
+        },800)
+      }
+    }else{
+      $('.logo').removeClass('out');
+      _currentView = "left"
+      setTimeout(function(){
+        $('.right-column').removeClass('down');
+      },800)
+    }
     $('.assessment').toggleClass('in');
     $('.right-column').toggleClass('left');
     $('.education').toggleClass('in');
-    toggleLogo();
   }
-  function toggleLogo () {
+  function toggleLogo() {
     if(_currentView == "left"){
       _currentView = "right";
       $('.logo').addClass('out');
@@ -416,6 +440,10 @@
   }
   
   function updateCharts() {
+    $('.dashboard').addClass('flash');
+    setTimeout(function(){
+      $('.dashboard').removeClass('flash');
+    },300);
     // percquiz percdive
     var questionsAnswered = 0;
     for (q in savedQuizProgress) questionsAnswered++;
@@ -572,7 +600,6 @@
       receivedBMI = true;
       return   
     }
-    
     $('.fact').eq(_currentQuestion).removeClass('in');
     $('.fact').eq(_currentQuestion).addClass('out');
     switch (_currentQuestion){  
@@ -594,20 +621,27 @@
     })
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
-    $('.dot').eq(_currentQuestion).removeClass('active')
     
     handleSaveQuizAnswer(answer)
+    var _oldQuestion = _currentQuestion;
     _currentQuestion++;
-    $('.fact').eq(_currentQuestion).addClass('in');
-    $('.dot').eq(_currentQuestion).addClass('active')
+    setTimeout(function(){
+      $('.fact').eq(_currentQuestion).addClass('in');
+      $('.dot').eq(_oldQuestion).removeClass('active')
+      $('.dot').eq(_currentQuestion).addClass('active')
+    },1000)
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
     _currentFrame = 0;
+
+    var videoType;
+    var videoURL;
+
     $('.vignette').removeClass('in');
     var _oldVignette = _currentVignette;
     setTimeout(function(){
-      $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).find($('.bg-video')).attr('src',"");
+      // $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).attr('src',"");
     },600);
     _currentVignette++;
     $('.headline').removeClass('active');
@@ -624,9 +658,40 @@
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
-      var vid = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video'));
-      vid.attr('src',vid.data('src'));
-      $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+
+
+
+      if($('.bg-video').attr('src') != vig.data('src')){
+
+        if (Modernizr.video) {
+          // let's play some video! but what kind?
+          if (Modernizr.video.webm) {
+            
+            videoURL = $( vig ).data()
+            videoType = ".webm"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+
+          } else if (Modernizr.video.ogg) {
+
+            videoURL = $( vig ).data()
+            videoType = ".ogv"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+
+          } else if (Modernizr.video.h264){
+ 
+            videoURL = $( vig ).data()
+            videoType = ".mp4"
+            $('.bg-video').attr('src',videoURL['src'] + videoType);
+          }
+        }
+
+        $('.bg-video').get(0).play();
+        $('.bg-video').css({
+          background: "#D7006D"
+        });
+      }
+      //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }
 
     handleSaveDeepProgress();
@@ -641,6 +706,41 @@
     $('.progress-overlay .questions').append(html);
   }
 
+
+   // $('a').click(function() {  
+   //    //change the after-hash-sign-params to the value of the clicked link**
+   //    $.address.value($(this).attr('href'));
+
+   //    });
+      
+    $.address.externalChange(function(event) { 
+
+      console.log('external URL change')
+      console.log(event.value)
+      if (event.value == '/home') {
+        
+        //$.address.path('/home');
+        console.log('home')
+      } 
+      else if (event.value == '/education') {
+        console.log('education')
+        hideIntro();
+        addCharts();
+        toggleColumn();
+      }
+      else if (event.value == '/assessment') {
+        console.log('assessment')
+        hideIntro();
+        addCharts();
+      }      
+      else {
+        console.log('intro view')
+        startIntro();
+        $.address.path('/intro');
+  
+      };
+    });   
+
   $(document).ready(function() {
 
     //position the header to be 90%;
@@ -650,5 +750,8 @@
     _registerEventListeners();
     _pageResize();
     initialized = true;
+
+
+
   });
 })(jQuery);

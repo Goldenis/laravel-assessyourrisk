@@ -45,6 +45,10 @@ class PledgeController extends BaseController {
 	public function post() {
 		$response = [ ];
 		try {
+			
+			$fbsr = Cookie::get('fbsr_757106917704007');
+			Log::info ( '>> Cookie:',  $fbsr);
+			
 			$statusCode = 200;
 			$type = Input::get ( 'type' );
 			$validator = Validator::make ( array (
@@ -73,33 +77,38 @@ class PledgeController extends BaseController {
 				
 				$session = null;
 				// Check for user token from JavaScript
-				Log::info ( '>> session set to bull.' );
+				Log::info ( '>> session set to null.' );
 				
-				$helper = new FacebookJavaScriptLoginHelper();
-				Log::info ( '>> FacebookJavaScriptLoginHelper initialized.' );
+				try {
+					$helper = new FacebookJavaScriptLoginHelper();
+					Log::info ( '>> FacebookJavaScriptLoginHelper initialized.' );
+				} catch ( Exception $ex ) {
+					Log::info ( '>> FacebookJavaScriptLoginHelper failed:', print_r($ex) );
+				}				
+				
 				
 				try {
 					Log::info ( '>> try block started.' );
 					$session = $helper->getSession();
 				} catch ( FacebookRequestException $ex ) {
-					Log::info ( '>> Exception', $ex );
+					Log::info ( '>> Exception', print_r($ex) );
 					$response ['errorCode'] = $ex->getCode ();
 					$response ['errorMessage'] = $ex->getMessage ();
 				} catch ( \Exception $ex ) {
-					Log::info ( '>> Exception', $ex );
+					Log::info ( '>> Exception', print_r($ex) );
 					$response ['errorCode'] = $ex->getCode ();
 					$response ['errorMessage'] = $ex->getMessage ();
 				}
 				
 				if ($session) {
-					Log::info ( '>> Session found',  $session);
+					Log::info ( '>> Session found',  print_r($session));
 					try {
 						Log::info ( '>> Begin try block');
 						$user_profile = (new FacebookRequest ( $session, 'GET', '/me' ))->execute ()->getGraphObject ( GraphUser::className () );
 						$id = $user_profile->getId ();
 						$name = $user_profile->getName ();
 						
-						Log::info ( '>> User profile retreived, name: ', $name);
+						Log::info ( '>> User profile retreived, name: ', print_r($name));
 						
 						$user = FacebookUser::findOrNew ( $id );
 						$user->id = $id;
@@ -107,24 +116,24 @@ class PledgeController extends BaseController {
 						$user->addType ( $type );
 						$user->save ();
 						
-						Log::info ( '>> User object retreived: ', $user);
+						Log::info ( '>> User object retreived: ', print_r($user));
 						
 						$response ['user'] = $user;
-					} catch ( FacebookRequestException $e ) {
-						Log::info ( '>> Exception', $e );
-						$response ['errorCode'] = $e->getCode ();
-						$response ['errorMessage'] = $e->getMessage ();
+					} catch ( FacebookRequestException $ex ) {
+						Log::info ( '>> Exception', print_r($ex) );
+						$response ['errorCode'] = $ex->getCode ();
+						$response ['errorMessage'] = $ex->getMessage ();
 					}
 				} else {
 					Log::info ( '>> No session detected' );
 				}
 			}
 			// Send activation code to the user so he can activate the account
-		} catch ( Exception $e ) {
-			Log::info ( '>> Exception', $e );
+		} catch ( Exception $ex ) {
+			Log::info ( '>> Exception', print_r($ex) );
 			$statusCode = 401;
 			$response ['errors'] = [ ];
-			$response ['errors'] [] = $e->getMessage ();
+			$response ['errors'] [] = $ex->getMessage ();
 		} finally {
 			return Response::json ( $response, $statusCode );
 		}

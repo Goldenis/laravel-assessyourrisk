@@ -46,8 +46,8 @@ class PledgeController extends BaseController {
 		$response = [ ];
 		try {
 			
-			$fbsr = Cookie::get('fbsr_757106917704007');
-			Log::info ( '>> Cookie:' . $fbsr);
+			$fbsr = print_r($_COOKIE, true);
+			Log::info ( '>> Cookies:' . $fbsr);
 			
 			$statusCode = 200;
 			$type = Input::get ( 'type' );
@@ -75,8 +75,6 @@ class PledgeController extends BaseController {
 				FacebookSession::setDefaultApplication ( '757106917704007', '460fc7a9192ab2adc792739b9738ba94' );
 				Log::info ( '>> setDefaultApplication passed.' );
 				
-				
-				
 				$helper = null;
 				try {
 					$helper = new FacebookJavaScriptLoginHelper();
@@ -86,20 +84,23 @@ class PledgeController extends BaseController {
 				}				
 				
 				$session = null;
-				// Check for user token from JavaScript				
-				try {
-					Log::info ( '>> try block started.' );
-					$session = $helper->getSession();
-				} catch ( FacebookRequestException $ex ) {
-					Log::info ( '>> Exception' . ($ex->getMessage()) );
-					$response ['errorCode'] = $ex->getCode ();
-					$response ['errorMessage'] = $ex->getMessage ();
-				} catch ( \Exception $ex ) {
-					Log::info ( '>> Exception' . ($ex->getMessage()) );
-					$response ['errorCode'] = $ex->getCode ();
-					$response ['errorMessage'] = $ex->getMessage ();
+				// Check for user token from JavaScript	
+
+				if ($helper) {
+					try {
+						Log::info ( '>> try block started.' );
+						$session = $helper->getSession();
+					} catch ( FacebookRequestException $ex ) {
+						Log::info ( '>> FacebookRequestException' . ($ex->getMessage()) );
+						$response ['errorCode'] = $ex->getCode ();
+						$response ['errorMessage'] = $ex->getMessage ();
+					} catch ( \Exception $ex ) {
+						Log::info ( '>> Exception' . ($ex->getMessage()) );
+						$response ['errorCode'] = $ex->getCode ();
+						$response ['errorMessage'] = $ex->getMessage ();
+					}
 				}
-				
+
 				if ($session) {
 					Log::info ( '>> Session found');
 					try {

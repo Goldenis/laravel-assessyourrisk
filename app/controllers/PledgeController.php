@@ -75,10 +75,9 @@ class PledgeController extends BaseController {
 				FacebookSession::setDefaultApplication ( '757106917704007', '460fc7a9192ab2adc792739b9738ba94' );
 				Log::info ( '>> setDefaultApplication passed.' );
 				
-				$session = null;
-				// Check for user token from JavaScript
-				Log::info ( '>> session set to null.' );
 				
+				
+				$helper = null;
 				try {
 					$helper = new FacebookJavaScriptLoginHelper();
 					Log::info ( '>> FacebookJavaScriptLoginHelper initialized.' );
@@ -86,7 +85,8 @@ class PledgeController extends BaseController {
 					Log::info ( '>> FacebookJavaScriptLoginHelper failed:' . ($ex->getMessage()) );
 				}				
 				
-				
+				$session = null;
+				// Check for user token from JavaScript				
 				try {
 					Log::info ( '>> try block started.' );
 					$session = $helper->getSession();

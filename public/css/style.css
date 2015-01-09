@@ -441,7 +441,6 @@ button.sub:hover {
 .progress-overlay .vignettes {
   padding: 1em 6em;
   width: 50%;
-  overflow-y: scroll;
   height: 100%;
   float: right;
   border-left: 1px solid #fff;
@@ -1588,7 +1587,7 @@ footer {
   }
   .dots {
     bottom: 6rem;
-    left: 0.9rem;
+    left: 0.8rem;
   }
   .dot {
     color: #ccc;
@@ -1616,6 +1615,9 @@ footer {
     width: 8px;
     height: 8px;
     top: 2px;
+  }
+  .dot:last-of-type {
+    margin-right: 0;
   }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
@@ -1775,6 +1777,10 @@ footer {
     padding: 1em 1.3em;
     background: transparent;
   }
+  .overlay {
+    padding: 4% 3%;
+    border: 0px solid #ffb4aa;
+  }
   .male-overlay {
     text-align: center;
   }
@@ -1784,7 +1790,7 @@ footer {
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    font: 4.4rem/1.5 "avg_bold";
+    font: 3.4rem/1.5 "avg_bold";
   }
   .male-overlay a {
     border-bottom: 6px solid #ffb4aa;
@@ -1970,8 +1976,11 @@ footer {
   .education .module-hero {
     width: 100%;
     left: 0%;
-    padding: 2em 2.5rem;
+    padding: 1.5em 2.5rem;
     height: calc(33.333% - 20px);
+  }
+  .education .module-hero h1 {
+    color: 4em;
   }
   .education .section-title {
     left: 3rem;
@@ -2007,8 +2016,6 @@ footer {
   .education .headlines .headline {
     width: calc(100% - 5rem);
     top: 40px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
   .education .headlines .headline h4 {
     font-size: 1.5rem;
@@ -2089,10 +2096,11 @@ footer {
     right: auto;
     top: auto;
     left: 0;
-    bottom: 60px;
+    bottom: 0px;
     width: 100%;
     height: 60px;
     z-index: 1113;
+    overflow: hidden;
   }
   .right-column .toggle-box {
     height: 100%;
@@ -2128,123 +2136,10 @@ footer {
     left: 0;
   }
   .right-column .fact-group {
-    padding: 3em 3em;
-    height: 50%;
-    width: 100%;
-    overflow: hidden;
-    border-top: 10px solid #fff;
-  }
-  .right-column .fact-group .education-facts, .right-column .fact-group .assessment-facts {
-    background: #f6323e;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    padding: 3em 3em;
-    -webkit-transition: all 1s 0 ease-in-out;
-    -moz-transition: all 1s 0 ease-in-out;
-    -o-transition: all 1s 0 ease-in-out;
-    -ms-transition: all 1s 0 ease-in-out;
-    transition: all 1s 0 ease-in-out;
-    -moz-transition-duration: 1s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
-  .right-column .fact-group .education-facts {
-    padding-left: 2.2em;
-  }
-  .right-column .fact-group .education-facts {
-    font-size: 1.4em;
-    left: calc(-100% - 10px);
-    cursor: pointer;
-  }
-  .right-column .fact-group .education-facts .q-num {
-    font-family: 'avg_bold';
-  }
-  .right-column .fact-group .education-facts:hover {
-    background-color: #f6323e;
-  }
-  .right-column .fact-group .fact {
-    position: absolute;
-    padding: 0em;
-    width: calc(100% - 9.8em);
-    height: 100%;
-    opacity: 0;
-    top: 70px;
-    font-size: 0.7em;
-    -webkit-transition: all 1s 0 ease-in-out;
-    -moz-transition: all 1s 0 ease-in-out;
-    -o-transition: all 1s 0 ease-in-out;
-    -ms-transition: all 1s 0 ease-in-out;
-    transition: all 1s 0 ease-in-out;
-    -moz-transition-duration: 1s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
-  .right-column .fact-group .fact.in {
-    top: 40px;
-    opacity: 1;
-  }
-  .right-column .fact-group .fact.out {
-    top: 10px;
-    opacity: 0;
-  }
-  .right-column .fact-group .fact:nth-of-type(1) {
-    display: block;
+    display: none;
   }
   .right-column .dashboard {
-    position: relative;
-    width: 100%;
-    height: 18.666%;
-    min-height: 128px;
-    background: #fff;
-    background: #ffb4aa;
-    color: #d7006d;
-    border-bottom: 10px solid #fff;
-    border-top: 10px solid #fff;
-    border-right: 10px solid #fff;
-    text-align: center;
-    padding-right: 10px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s 0 linear;
-    -moz-transition: all 0.5s 0 linear;
-    -o-transition: all 0.5s 0 linear;
-    -ms-transition: all 0.5s 0 linear;
-    transition: all 0.5s 0 linear;
-    -moz-transition-duration: 0.5s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
-  .right-column .dashboard .label {
-    position: absolute;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    top: 50%;
-    margin-top: -7px;
-    left: -20px;
-    letter-spacing: 0.02em;
-    border-bottom: 2px solid #d7006d;
-    line-height: 1.2em;
-    padding-bottom: 4px;
-  }
-  .right-column .dashboard:hover {
-    background: #fdd5ce;
-  }
-  .right-column .dashboard.flash {
-    background: #fdd5ce;
-    -webkit-transition: all 0s 0 linear;
-    -moz-transition: all 0s 0 linear;
-    -o-transition: all 0s 0 linear;
-    -ms-transition: all 0s 0 linear;
-    transition: all 0s 0 linear;
-    -moz-transition-duration: 0s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
+    display: none;
   }
   .right-column.in {
     bottom: 0;

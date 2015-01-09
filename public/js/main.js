@@ -662,35 +662,39 @@
       var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
 
 
+      if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // no video
+      }else{
+        if($('.bg-video').attr('src') != vig.data('src')){
 
-      if($('.bg-video').attr('src') != vig.data('src')){
+          if (Modernizr.video) {
+            // let's play some video! but what kind?
+            if (Modernizr.video.webm) {
+              
+              videoURL = $( vig ).data()
+              videoType = ".webm"
+              $('.bg-video').attr('src',videoURL['src'] + videoType);
 
-        if (Modernizr.video) {
-          // let's play some video! but what kind?
-          if (Modernizr.video.webm) {
-            
-            videoURL = $( vig ).data()
-            videoType = ".webm"
-            $('.bg-video').attr('src',videoURL['src'] + videoType);
+            } else if (Modernizr.video.ogg) {
 
-          } else if (Modernizr.video.ogg) {
+              videoURL = $( vig ).data()
+              videoType = ".ogv"
+              $('.bg-video').attr('src',videoURL['src'] + videoType);
 
-            videoURL = $( vig ).data()
-            videoType = ".ogv"
-            $('.bg-video').attr('src',videoURL['src'] + videoType);
-
-          } else if (Modernizr.video.h264){
- 
-            videoURL = $( vig ).data()
-            videoType = ".mp4"
-            $('.bg-video').attr('src',videoURL['src'] + videoType);
+            } else if (Modernizr.video.h264){
+   
+              videoURL = $( vig ).data()
+              videoType = ".mp4"
+              $('.bg-video').attr('src',videoURL['src'] + videoType);
+            }
+            $('.bg-video').get(0).play();
+            $('.bg-video').css({
+              background: "#D7006D"
+            });
           }
-          $('.bg-video').get(0).play();
-          $('.bg-video').css({
-            background: "#D7006D"
-          });
-        }
+        }  
       }
+      
       //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }
 

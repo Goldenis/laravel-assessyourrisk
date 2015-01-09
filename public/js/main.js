@@ -685,12 +685,11 @@
             videoType = ".mp4"
             $('.bg-video').attr('src',videoURL['src'] + videoType);
           }
+          $('.bg-video').get(0).play();
+          $('.bg-video').css({
+            background: "#D7006D"
+          });
         }
-
-        $('.bg-video').get(0).play();
-        $('.bg-video').css({
-          background: "#D7006D"
-        });
       }
       //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }

@@ -1752,7 +1752,10 @@ footer{
         position: relative;
         opacity: .8;
         display: inline;
-        height: 750px;
+        height: 100%;
+      }
+      video{
+        display: none;
       }
     }
     .headlines{

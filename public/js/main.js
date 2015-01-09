@@ -91,7 +91,7 @@
     e.preventDefault();
     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
     distance = touch.pageY-touchStartY;
-    _currentFrame -= distance/3;
+    _currentFrame -= distance/10;
     _currentFrame = Math.floor(Math.max(_currentFrame,0));
     _scrollHandler();
     touchStartY = touch.pageY;
@@ -114,10 +114,14 @@
     _winH = _$window.height();
     _winW = _$window.width();
     _scrollHandler(0);
-    if(_winW < 1000){
+    if(_winW < 768){
       _smallScreen = true;
+      $('.module-hero h1').eq(1).html('Normal')
+      $('.module-hero h1').eq(2).html('Family')
     }else{
       _smallScreen = false;
+      $('.module-hero h1').eq(1).html('Knowing Your Normal')
+      $('.module-hero h1').eq(2).html('Family & Health History')
     }
     if(_winW/_winH > 1.8){
       $('video').css({
@@ -215,8 +219,10 @@
   }
   
   function _registerEventListeners() {
-    $('#Begin').on('click',function(){
+    $('#Begin, .assess-start').on('click',function(e){
+      e.stopPropagation();
       hideIntro();
+      addCharts();
     })
     $('.male-overlay .close-btn').on('click',function () {
       overlayOpen = false;
@@ -226,13 +232,8 @@
       overlayOpen = false;
       $('.progress-overlay').removeClass("in");
     })
-    $('.dot').on('click',function(){
-
-    });
-    $('#Begin').on('click',function(){
-      addCharts();
-    });
-    $('.assessment-intro button').on('click',function() {
+    $('.assessment-intro button, .lets-go').on('click',function() {
+      $('.right-column').addClass('in2')
       $('.assessment-intro').addClass('out-up');
       $('.assessment-intro').removeClass('in');
       $('.question').eq(0).addClass('in');
@@ -491,16 +492,16 @@
   }
   function handleSaveQuizAnswer(answer) {
     // 2 - bmi
-	  
-	  /*
-	    BMI
-	    Weight Status
-	    Below 18.5  Underweight
-	    18.5 – 24.9 Normal
-	    25.0 – 29.9 Overweight
-	    30.0 and Above  Obese
-	    */
-	  
+    
+    /*
+      BMI
+      Weight Status
+      Below 18.5  Underweight
+      18.5 – 24.9 Normal
+      25.0 – 29.9 Overweight
+      30.0 and Above  Obese
+      */
+    
     // 3 - .answers .drinks
     // 13 - Have any of your immediate family members
     // 15 - gene mutation have you or your relative
@@ -509,13 +510,13 @@
     if (_currentQuestion == 2) {
       var bmi = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
       if (bmi < 18.5) {
-    	  ansTxt = "-1";
+        ansTxt = "-1";
       } else if (bmi >= 18.5 && bmi <= 24.9) {
-    	  ansTxt = "+1";
+        ansTxt = "+1";
       } else if (bmi >= 25.0 && bmi <= 29.9) {
-    	  ansTxt = "-1";
+        ansTxt = "-1";
       } else if (bmi >= 30.0) {
-    	  ansTxt = "-1";
+        ansTxt = "-1";
       }
     }
     if (_currentQuestion == 3) ansTxt = currentGlass;

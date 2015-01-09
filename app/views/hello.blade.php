@@ -116,7 +116,7 @@
           Your body. Your life.<br>
           Don’t leave it up to chance.
         </p>
-        <a id="Begin" href="#home"></span>"> <button class="action lifestyle"> Assess Your Risk </button> </a>
+        <a id="Begin" href="#home"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
     </section>
     <!-- RIGHT COLUMN -->
@@ -140,12 +140,18 @@
 
       <!-- UNDERSTAND -->
       <div class="toggle-box">
+      	<div class="assess-start">
+			<h3>Assess Your Risk<br></h3>
+      	</div>
+      	<div class="lets-go">
+			<h3>Let’s Go.<br></h3>
+      	</div>
         <div class="understand">
           <h3>Understand<br>Your Risk<br></h3>
           <div class="arrow"><img src="img/arrow_right.png"></div>
         </div>
         <div class="assess">
-          <h4>Assess<br>Your Risk<br></h4>
+          <h3>Assess<br>Your Risk<br></h3>
           <div class="arrow"><img src="img/arrow_left.png"></div>
         </div>
       </div>
@@ -856,7 +862,7 @@
                 <li>Back pain</li>
                 <li>Upset stomach, heartburn</li>
                 <li>Pain during intercourse</li>
-                <li><br>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
+                <li>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
                 <li>But if they persist or worsen for 2-3 weeks, see your doctor and ask—could it be my ovaries?</li>
               </ul>
               <div class="scroll">SCROLL

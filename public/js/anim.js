@@ -2,7 +2,6 @@
 
 
  function startIntro () {
-
     var wheel = $('.wheel-container'),
         second = $('.intro-message'),
         logo = $('.logo');
@@ -16,7 +15,11 @@
     var tl = new TimelineLite();
 
     tl.from(wheel, 1, {opacity:0, scale:.5}, "+=.1");
-    tl.to(wheel, 2.5, {scale:1.5, ease:Expo.easeOut})
+    var wheelScale = 1.5;
+    if($(window).width() < 768){
+      wheelScale = .85;
+    }
+    tl.to(wheel, 2.5, {scale:wheelScale, ease:Expo.easeOut})
     tl.from(logo, 1, {opacity:0});
     tl.from(second, 0.5, {opacity:0}, "-=.2");
 

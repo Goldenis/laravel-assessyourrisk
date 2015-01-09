@@ -1885,92 +1885,10 @@ footer{
       }
     }
     .fact-group{
-      padding: 3em 3em;
-      height: 50%;
-      width: 100%;
-      overflow: hidden;
-      border-top: 10px solid #fff;
-      .education-facts,
-      .assessment-facts{
-        background: $red;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        padding: 3em 3em;
-        @include transition(1s,ease-in-out);
-      }
-      .education-facts{
-        padding-left: 2.2em;
-      }
-      .education-facts{
-        font-size: 1.4em;
-        left: calc(-100% - 10px);
-        cursor: pointer;
-        .q-num{
-          font-family: 'avg_bold';
-        }
-        &:hover{
-          background-color: $red;
-        }
-      }
-      .fact{
-        position: absolute;
-        padding: 0em;
-        width: calc(100% - 9.8em);
-        height: 100%;
-        opacity: 0;
-        top: 70px;
-        font-size: .7em;
-        @include transition(1s,ease-in-out);
-        &.in{
-          top: 40px;
-          opacity: 1;
-        }
-        &.out{
-          top: 10px;
-          opacity: 0;
-        }
-      }
-      .fact:nth-of-type(1){
-        display: block;
-      }
+      display: none;
     }
     .dashboard{
-      position: relative;
-      width: 100%;
-      height: 18.666%;
-      min-height: 128px;
-      background: #fff;
-      background: $nude;
-      color: $pink;
-      border-bottom: 10px solid #fff;
-      border-top: 10px solid #fff;
-      border-right: 10px solid #fff;
-      text-align: center;
-      padding-right: 10px;
-      cursor: pointer;
-      @include transition(.5s,linear);
-      .label{
-        position: absolute;
-        @include transform(rotate(-90deg));
-        @include transform-origin(50% 50%);
-        top: 50%;
-        margin-top: -7px;
-        left: -20px;
-        letter-spacing: .02em;
-        border-bottom: 2px solid $pink;
-        line-height: 1.2em;
-        padding-bottom: 4px;
-      }
-      &:hover{
-        background: $nude-light;
-      }
-      &.flash{
-        background: $nude-light;
-        @include transition(0s,linear);
-      }
+      display: none;
     }  
     &.in{
       bottom: 0;

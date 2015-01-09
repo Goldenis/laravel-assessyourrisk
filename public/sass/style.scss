@@ -1390,7 +1390,7 @@ footer{
   }
   .dots{
     bottom: 6rem;
-    left: .9rem;
+    left: .8rem;
   }
   .dot{
     color: #ccc;
@@ -1408,6 +1408,9 @@ footer{
       width: 8px;
       height: 8px;
       top: 2px;
+    }
+    &:last-of-type{
+      margin-right: 0;
     }
   }
   .progress-overlay{

@@ -76,6 +76,7 @@
 html {
   font-size: 100%;
   width: 100%;
+  overflow: hidden;
   font-size: 16px;
   font-family: 'avg', 'Helvetica', sans-serif;
   height: 100%;
@@ -1991,7 +1992,10 @@ footer {
     position: relative;
     opacity: 0.8;
     display: inline;
-    height: 750px;
+    height: 100%;
+  }
+  .education .video video {
+    display: none;
   }
   .education .headlines {
     width: 100%;
@@ -2085,7 +2089,7 @@ footer {
     right: auto;
     top: auto;
     left: 0;
-    bottom: 0;
+    bottom: 60px;
     width: 100%;
     height: 60px;
     z-index: 1113;

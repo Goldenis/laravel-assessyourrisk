@@ -16,7 +16,7 @@
 
     </div>
     <div class="overlay male-overlay">
-      <button class="close-btn">✕</button>
+      <button class="sub close-btn">✕</button>
       <h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
     </div>
 
@@ -61,9 +61,9 @@
       <div class="vignettes">
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h2>Lifestyle<span class="percent">0%</span></h2>
-          <h2>Your Normal<span class="percent">0%</span></h2>
-          <h2>Family History<span class="percent">0%</span></h2>
+          <h3>Lifestyle<span class="percent">0%</span></h3>
+          <h3>Your Normal<span class="percent">0%</span></h3>
+          <h3>Family History<span class="percent">0%</span></h3>
         </div>
       </div>
       <div class="cards">
@@ -147,11 +147,11 @@
 			<h3>Let’s Go.<br></h3>
       	</div>
         <div class="understand">
-          <h3>Understand<br>Your Risk<br></h3>
+          <h4>Understand<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_right.png"></div>
         </div>
         <div class="assess">
-          <h3>Assess<br>Your Risk<br></h3>
+          <h4>Assess<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_left.png"></div>
         </div>
       </div>
@@ -180,16 +180,6 @@
 
           <div class="fact">
             <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>What you eat affects your health. Research shows a 12% increase in cancer risk for every 50g of red meat consumed each day.</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>Studies have shown a 2.5x increase in the risk of breast cancer associated with Vitamin D deficiency, and a possible increase in ovarian cancer risk.</h5>
             <div class="chart-1"></div>
           </div>
 
@@ -244,11 +234,6 @@
           </div>
 
           <div class="fact">
-            <h5>Women of certain races, lineages, and backgrounds may have an increased risk of developing breast and ovarian cancer. For example, breast cancer is the most common cancer diagnosis among African American women. People of Ashkenazi Jewish ancestry are more likely to carry BRCA gene mutations, which puts them at higher risk.</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
             <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin disease or non-Hodgkin lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
             <div class="chart-1"></div>
           </div>
@@ -263,10 +248,6 @@
             <div class="chart-1"></div>
           </div>
 
-          <div class="fact">
-            <h5>80% of breast cancers in young women are found by young women themselves.</h5>
-            <div class="chart-1"></div>
-          </div>
         </div>
         <!-- <div class="education-facts">
           <div class="fact">
@@ -381,24 +362,6 @@
           </div>
         </div>
 
-        <div class="question" data-question-id="6">
-          <div class="prompt">Do you follow a diet that’s low in fat and includes a mix of fruits, vegetables, whole grains, fat-free or low-fat dairy products, and lean proteins?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="-1">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="7">
-          <div class="prompt">Have you ever been Vitamin D deficient?</div>
-        
-          <div class="answers">
-            <button data-answer-id="-1">Yes</button>
-            <button data-answer-id="+1">No</button>
-          </div>
-        </div>
-
         <div class="question" data-question-id="8">
           <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
         
@@ -451,6 +414,7 @@
             <button data-answer-id="-1">Breast cancer</button>
             <button data-answer-id="-1">Ovarian cancer</button>
             <button data-answer-id="0">Neither</button>
+            <button data-answer-id="-1">Both</button>
           </div>
         </div>
 
@@ -506,9 +470,9 @@
             <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
             <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
           <div class="checkbox-list half">
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
             <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
             <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
@@ -520,15 +484,6 @@
           <br>
           <button>Continue</button>
           <button class="sub" data-answer-id="13">Help me ask them</button>
-        </div>
-
-        <div class="question" data-question-id="18">
-          <div class="prompt">Are you of Ashkenazi (Eastern European) Jewish ancestry with breast, ovarian, or pancreatic cancer in the family?</div>
-        
-          <div class="answers">
-            <button data-answer-id="-1">Yes</button>
-            <button data-answer-id="+1">No</button>
-          </div>
         </div>
 
         <div class="question" data-question-id="19">
@@ -558,15 +513,7 @@
             <button data-answer-id="+1">No</button>
           </div>
         </div>
-  
-        <div class="question" data-question-id="22">
-          <div class="prompt">Do you know the signs and symptoms of breast and ovarian cancer?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="-1">No</button>
-          </div>
-        </div>
+
       </div>
     </section>
 

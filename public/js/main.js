@@ -429,7 +429,7 @@
 //    console.log("weightInPounds:" + window.weightInPounds);
     // BMI = Formula: weight (lb) / [height (in)]2 x 703
     var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
-    $(".bmi-result").html("Your BMI result is<br><h2>" + BMI + "</h2>");
+    $(".bmi-result").html("Your BMI result is<br><h3>" + BMI + "</h3>");
     /*
     BMI
     Weight Status

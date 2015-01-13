@@ -67,6 +67,11 @@
         </div>
       </div>
       <div class="cards">
+      
+      	<div class="bmi-high">BMI HIGH</div>
+      	<div class="drinks-high">DRINKS HIGH</div>
+      	<div class="bad-gene">GENE</div>
+      	
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
           <div class="item">

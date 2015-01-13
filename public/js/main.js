@@ -528,7 +528,7 @@
       ansTxt = data;
     }
 
-    console.log(_currentQuestion)
+//    console.log(_currentQuestion)
     if (_currentQuestion == 14 && ansTxt == '+1') {
       //console.log('not')
       _currentQuestion = 15;
@@ -573,14 +573,37 @@
 
     //console.log($.inArray( "0", savedQuizProgress ));
     updateCharts();
-    
-    console.log(ansTxt)
+    console.log('Object savedQuizProgress = ', savedQuizProgress)
+  }
+  
+  /**
+   * Here are examples of grabbing answers to specific questions
+   * Look at the savedQuizProgress dictionary (that is logged) to see
+   * how answers are saved
+   * Here are examples of the 3 types
+   */
+  function addCustomResults(){
+	  
+	  var bmiHigh = savedQuizProgress[2] == '-1';
+	  var drinksHigh = savedQuizProgress[3] > 3;
+	  var badGene = $.inArray( "1|-2", savedQuizProgress[2] );
+	  
+	  $('.bmi-high').css({
+	        display: bmiHigh ? 'block' : 'none'
+	  })
+	  $('.drinks-high').css({
+	        display: drinksHigh ? 'block' : 'none'
+	  })
+	  $('.bad-gene').css({
+	        display: badGene ? 'block' : 'none'
+	  })
   }
   
   function answerQuestion(answer){
    
 
     if(_currentQuestion >= $('.question').length-1){
+      addCustomResults()
       openProgressOverlay();
       $('.results, .cards').css({
         display: 'block'

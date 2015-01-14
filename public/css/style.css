@@ -994,21 +994,6 @@ input[type="checkbox"], input[type="radio"] {
 .education button {
   top: auto;
 }
-.education .btn-continue {
-  opacity: 1;
-  position: absolute;
-  bottom: 55px;
-  left: 33.3%;
-  z-index: 3;
-  -webkit-transition: all 0.3s 0 ;
-  -moz-transition: all 0.3s 0 ;
-  -o-transition: all 0.3s 0 ;
-  -ms-transition: all 0.3s 0 ;
-  transition: all 0.3s 0 ;
-  -moz-transition-duration: 0.3s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
-}
 .education .scroll {
   margin-top: 60px;
   font-size: 1.4em;
@@ -1111,17 +1096,21 @@ input[type="checkbox"], input[type="radio"] {
 .education .section-title {
   color: #fff;
   left: 33.333%;
-  top: 8rem;
+  top: 6rem;
   opacity: 0;
   border-top: 2px solid rgba(255, 255, 255, .2);
 }
-.education .pledge {
+.education .btn-begin {
+  margin-top: 50px;
+  background: transparent;
+}
+.education .btn-continue {
   position: relative;
   left: 0;
   margin-top: 50px;
   border-color: transparent;
 }
-.education .pledge:hover {
+.education .btn-continue:hover {
   background: #f6323e;
   color: #fff;
 }
@@ -1182,6 +1171,7 @@ input[type="checkbox"], input[type="radio"] {
 .education .headlines .headline.out {
   top: -20px;
   opacity: 0;
+  visibility: hidden;
 }
 .education .headlines .headline .module-time {
   font-size: 14px;
@@ -1925,21 +1915,6 @@ footer {
     height: 30%;
     background: #fff;
   }
-  .education .btn-continue {
-    opacity: 1;
-    position: absolute;
-    bottom: 90px;
-    left: 3rem;
-    z-index: 3;
-    -webkit-transition: all 0.3s 0 ;
-    -moz-transition: all 0.3s 0 ;
-    -o-transition: all 0.3s 0 ;
-    -ms-transition: all 0.3s 0 ;
-    transition: all 0.3s 0 ;
-    -moz-transition-duration: 0.3s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
   .education .scroll {
     margin-top: 2rem;
     font-size: 1.4em;
@@ -1981,7 +1956,7 @@ footer {
     left: 3rem;
     top: 2rem;
   }
-  .education .pledge {
+  .education .btn-continue {
     margin-top: 20px;
   }
   .education .vignette {

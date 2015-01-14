@@ -22,9 +22,10 @@
   var vidW = 1271;
   var overlayOpen;
   var initialized;
+  var videoType;
 
   var _currentView = "left";
-  var _currentModule;
+  var _currentModule = 0;
   var _currentQuestion = 0;
   var _currentVignette = 0;
   var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
@@ -70,7 +71,7 @@
     }else{
       _currentFrame -= deltaY;
       _currentFrame = Math.max(0,_currentFrame);
-      _scrollHandler();
+      //_scrollHandler();
       eventData.preventDefault();
     }
   })
@@ -93,7 +94,7 @@
     distance = touch.pageY-touchStartY;
     _currentFrame -= distance/10;
     _currentFrame = Math.floor(Math.max(_currentFrame,0));
-    _scrollHandler();
+    //_scrollHandler();
     touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
@@ -104,7 +105,7 @@
       distance*=.9;
       _currentFrame -= distance/3;
       _currentFrame = Math.floor(Math.max(_currentFrame,0));
-      _scrollHandler();
+      //_scrollHandler();
       if(Math.abs(distance) < .2){
         clearInterval(inertiaInterval)
       }
@@ -115,7 +116,7 @@
   function _pageResize () {
     _winH = _$window.height();
     _winW = _$window.width();
-    _scrollHandler(0);
+    //_scrollHandler(0);
     if(_winW < 768){
       _smallScreen = true;
       $('.module-hero h1').eq(1).html('Normal')
@@ -149,18 +150,18 @@
   }
   function redraw() {
     if(_isTouchDevice){
-      window.requestAnimationFrame(function() {
-         _scrollHandler();
-      });
+      // window.requestAnimationFrame(function() {
+      //    _scrollHandler();
+      // });
     }
   }
   function showNextHeadline(){
-    _currentFrame += 15;
-    _scrollHandler();
-  }
-  function _scrollHandler(){
+    // _currentFrame += 15;
+    // _scrollHandler();
+    console.log("Next Headline")
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
-    var nextHeadline = Math.min(numHeadlines,Math.floor(_currentFrame/15));
+    var nextHeadline = _currentHeadline.index() + 1;
+    console.log("numHeadlines: " + numHeadlines, "nextHeadline: " + nextHeadline)
     if (initialized && nextHeadline < numHeadlines){
       _currentHeadline.removeClass('active');
       _currentHeadline.addClass('out');
@@ -169,6 +170,23 @@
       _currentHeadline.addClass('active');
       
       handleSaveDeepProgress();
+    }else{
+      nextVignette();
+    }
+  }
+  function _scrollHandler(){
+    var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
+    var nextHeadline = _currentHeadline.index() + 1;
+    if (initialized && nextHeadline < numHeadlines){
+      _currentHeadline.removeClass('active');
+      _currentHeadline.addClass('out');
+      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
+      _currentHeadline.removeClass('out');
+      _currentHeadline.addClass('active');
+      
+      handleSaveDeepProgress();
+    }else{
+      nextVignette();
     }
 
     console.log(numHeadlines, nextHeadline-1);
@@ -308,13 +326,10 @@
     $('.nav-item').on('click',function () {
       changeModule($(this).index());
     })
-    $('.vignette, .btn-continue').on('click',function(){
-      $('.btn-continue').css({
-        opacity: 0
-      })
-      nextVignette();
+    $('.btn-begin').on('click',function(){
+      showNextHeadline();
     })
-    $('.scroll').on('click',function (e) {
+    $('.btn-continue').on('click',function (e) {
       e.stopPropagation();
       showNextHeadline();
     })
@@ -360,39 +375,30 @@
     overlayOpen = true;
   }
   function changeModule(i){
-    $('.btn-continue').css({
-      opacity: 0
-    })
-    setTimeout(function(){
-      $('.btn-continue').css({
-        opacity: 1
-      })
-    },600);
     _currentModule = i;
     $('.progress-overlay .vignettes h2').eq(i).addClass('done');
     
     expandModule(i);
   }
-  function expandModule(num){  
-    
-    _currentModule = num;
+  function expandModule(){
     _currentVignette = 0;
-    
+    $('.headline').removeClass('active');
+
     handleSaveDeepProgress();
     $('.nav').addClass('in');
     $('.right-column').addClass('down');
     $('.nav-item').removeClass('active');
-    $('.nav-item').eq(num).addClass('active');
+    $('.nav-item').eq(_currentModule).addClass('active');
     _currentFrame = 0;
     $('.education-menu').addClass('out');
 
     $('.module').removeClass('in');
     $('.vignette').removeClass('in');
 
-    $('.module').eq(num).addClass('in');
+    $('.module').eq(_currentModule).addClass('in');
 
-    $('.module').eq(num).find($('.vignette')).eq(_currentVignette).addClass('in');
-    $('.module').eq(num).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0).addClass('active');
+    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
+    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0).addClass('active');
     
     $('.education .section-title').addClass('in');
   }
@@ -731,9 +737,9 @@ Do you know if I do%3F";
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
+    console.log("Next Vignette")
     _currentFrame = 0;
 
-    var videoType;
     var videoURL;
 
     $('.vignette').removeClass('in');
@@ -754,15 +760,17 @@ Do you know if I do%3F";
     }else{
       
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+      _currentHeadline.addClass('active')
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
-      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+      console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
 
+      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
 
       if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         // no video
       }else{
-        if($('.bg-video').attr('src') != vig.data('src')){
+        if($('.bg-video').attr('src') != vig.data('src') + videoType){
 
           if (Modernizr.video) {
             // let's play some video! but what kind?
@@ -797,7 +805,7 @@ Do you know if I do%3F";
 
     handleSaveDeepProgress();
     
-    _scrollHandler();
+    // _scrollHandler();
   }
   function createProgressOverlay() {
     var html = "<div class='section-title'>Risk Assessment</div>";

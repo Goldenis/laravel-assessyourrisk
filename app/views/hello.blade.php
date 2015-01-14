@@ -17,7 +17,7 @@
     </div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <a href="#">share</a> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <a href="#" class="share-btn">share</a> this with someone you care about that does. You just might save her life.</h1>
     </div>
 
     <div class="overlay progress-overlay">
@@ -170,8 +170,6 @@
           </div>
 
           <div class="fact">
-            <h5>TBD</h5>
-            <div class="chart-1"></div>
           </div>
 
           <div class="fact">

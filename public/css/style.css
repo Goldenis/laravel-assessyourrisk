@@ -309,7 +309,7 @@ button.sub:hover {
 .close-btn {
   display: none;
   position: fixed;
-  top: 12px;
+  top: 10px;
   right: 20px;
   z-index: 2;
   padding: 1em 1.3em;

@@ -228,6 +228,10 @@
       overlayOpen = false;
       $('.male-overlay').removeClass("in");
     })
+    $('.male-overlay .share-btn').on('click',function () {
+      overlayOpen = false;
+      $('.male-overlay').removeClass("in");
+    })
     $('.progress-overlay .close-btn').on('click',function () {
       overlayOpen = false;
       $('.progress-overlay').removeClass("in");

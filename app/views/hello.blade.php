@@ -61,8 +61,8 @@
       <div class="vignettes">
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h3>Lifestyle<span class="percent">0%</span></h3>
-          <h3>Your Normal<span class="percent">0%</span></h3>
+          <h3>Lifestyle<span class="percent">0%</span></h3><br>
+          <h3>Your Normal<span class="percent">0%</span></h3><br>
           <h3>Family History<span class="percent">0%</span></h3>
         </div>
       </div>
@@ -467,7 +467,7 @@
     
         <div class="question cb3" data-question-id="17">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
-          <div class="checkbox-list half">        
+          <div class="checkbox-list column-left">        
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
@@ -475,7 +475,7 @@
             <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
             <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
-          <div class="checkbox-list half">
+          <div class="checkbox-list column-right">
             <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
             <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
@@ -562,9 +562,6 @@
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
               <div class="module-time">
-                <div class="module-time-text">
-                Time to complete : &lt;1 min
-                </div>
                 <ul>
                   <li>1</li>
                   <li>2</li>
@@ -685,9 +682,6 @@
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
               <div class="module-time">
-                <div class="module-time-text">
-                Time to complete : 2 min
-                </div>
                 <ul>
                   <li>1</li>
                   <li>2</li>
@@ -844,9 +838,6 @@
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
               <div class="module-time">
-                <div class="module-time-text">
-                  Time to complete : &lt;2 min
-                </div>
                 <ul>
                   <li>1</li>
                   <li>2</li>

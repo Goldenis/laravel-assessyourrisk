@@ -311,7 +311,7 @@ button{
     position: absolute;
   }
   .progress:nth-of-type(2){
-    left: 50%;
+    left: 62%;
   }
   .chart{
     width: 6rem;
@@ -337,7 +337,7 @@ button{
   .questions{
     padding: 1em 6em;
     margin-bottom: 6em;
-    width: 50%;
+    width: 62%;
     height: 100%;
     float: left;
     .progress-question{
@@ -427,7 +427,7 @@ button{
   }
   .vignettes{
     padding: 1em 6em;
-    width: 50%;
+    width: 38%;
     height: 100%;
     float: right;
     border-left: 1px solid #fff;
@@ -567,8 +567,12 @@ button{
 }
 .checkbox-list{
   margin: 1em 0 1em;
-  &.half{
-    width: 25%;
+  &.column-left{
+    width: 33%;
+    float: left;
+  }
+  &.column-right{
+    width: 66%;
     float: left;
   }
 }
@@ -673,6 +677,7 @@ input[type="checkbox"]{
     top: 50%;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
   }
 
   #wheel-base {
@@ -757,6 +762,7 @@ input[type="checkbox"]{
     background-repeat:no-repeat;
     background-image: url("../img/assessment/scales/weight_overlay.png");
     z-index: 1000;
+    cursor: pointer;
 }
 
 
@@ -768,30 +774,31 @@ input[type="checkbox"]{
   margin-top: 40px;
   position: relative;
   float: left;
-    -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
-    -webkit-mask-position: 0px 0px;
-    overflow: hidden;
+  -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
+  -webkit-mask-position: 0px 0px;
+  overflow: hidden;
 }
 
 #height-base {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-repeat:no-repeat;
-    background-image: url("../img/assessment/scales/height_base.png");
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-repeat:no-repeat;
+  background-image: url("../img/assessment/scales/height_base.png");
 }
 
 #height-overlay {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-repeat:no-repeat;
-    background-image: url("../img/assessment/scales/height_overlay.png");
-    z-index: 1001;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-repeat:no-repeat;
+  background-image: url("../img/assessment/scales/height_overlay.png");
+  z-index: 1001;
+  cursor: pointer;
 }
 
 .assessment{
@@ -891,7 +898,7 @@ input[type="checkbox"]{
       width: 100%;
       font-size: 1.8em;
       color: $nude-light;
-      opacity: .5;
+      opacity: 1;
       @include transition(.2s);
       cursor: pointer;
       .percent{

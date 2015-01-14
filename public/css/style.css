@@ -610,17 +610,17 @@ button.sub:hover {
   margin: 1em 0 1em;
 }
 .checkbox-list.column-left {
-  width: 25%;
+  width: 33%;
   float: left;
 }
 .checkbox-list.column-right {
-  width: 75%;
+  width: 66%;
   float: left;
 }
 .checkbox {
   margin: 1em 0;
 }
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
   margin: 0 8px 0 2px;
   top: 4px;
   float: left;

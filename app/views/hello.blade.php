@@ -68,10 +68,10 @@
       </div>
       <div class="cards">
       
-      	<div class="bmi-high">BMI HIGH</div>
-      	<div class="drinks-high">DRINKS HIGH</div>
-      	<div class="bad-gene">GENE</div>
-      	
+        <div class="bmi-high">BMI HIGH</div>
+        <div class="drinks-high">DRINKS HIGH</div>
+        <div class="bad-gene">GENE</div>
+        
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
           <div class="item">
@@ -145,12 +145,12 @@
 
       <!-- UNDERSTAND -->
       <div class="toggle-box">
-      	<div class="assess-start">
-			<h3>Assess Your Risk<br></h3>
-      	</div>
-      	<div class="lets-go">
-			<h3>Let’s Go.<br></h3>
-      	</div>
+        <div class="assess-start">
+      <h3>Assess Your Risk<br></h3>
+        </div>
+        <div class="lets-go">
+      <h3>Let’s Go.<br></h3>
+        </div>
         <div class="understand">
           <h4>Understand<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_right.png"></div>
@@ -436,18 +436,23 @@
           <br>
           <br>
           <button>Continue</button>
-          <button class="sub">Help me ask them</button>          
+          <button class="sub ask">Help me ask them</button>          
         </div>
 
         <div class="question" data-question-id="15">
           <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
-            <button data-answer-id="-1">Yes, I've tested positive for a specific gene mutation</button>
-            <button data-answer-id="-1">Yes, a relative has but I've tested negative for that mutation</button>
-            <button data-answer-id="-1">Yes, a relative has, but I've not yet been tested</button>
-            <button data-answer-id="+1">No</button>
-            <button data-answer-id="0">I don’t know</button>
+            <div class="checkbox-list cb1">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="1|-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="2|-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="3|-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="4|+1"><div class="label">No</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="5|0"><div class="label">I don’t know</div></div>
+            </div>
+              <br>
+              <br>
+              <button>Continue</button>
           </div>
         </div>
 
@@ -486,7 +491,7 @@
           <br>
           <br>
           <button>Continue</button>
-          <button class="sub" data-answer-id="13">Help me ask them</button>
+          <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
         <div class="question" data-question-id="19">
@@ -504,7 +509,7 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
-            <button class="sub" data-answer-id="3">Help me ask them</button>
+            <button class="sub ask" data-answer-id="3">Help me ask them</button>
           </div>
         </div>
 

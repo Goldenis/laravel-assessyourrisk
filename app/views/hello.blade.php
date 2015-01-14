@@ -27,7 +27,7 @@
       <div class="share">
         <h5>Save the life of somebody you love. Like your <span class="person">sister</span>.<br>Tell them to complete this experience too.</h5>
         <br>
-        <button>SHARE</button>
+        <button class="share-btn">SHARE</button>
       </div>
       <div class="charts">
         <div class="progress">
@@ -55,7 +55,7 @@
             Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s a little further behind you in her journey. Bright Pink offers both <a href="#">1:1</a> and <a href="#">group</a> support programs that you may find helpful.<br><br>
           </p>
           
-          <button class="sub">EMAIL</button><button class="sub">PDF</button>
+          <button class="sub email-pdf">EMAIL</button><button class="sub">PDF</button>
         </div>
       </div>
       <div class="vignettes">
@@ -422,7 +422,7 @@
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of your <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -504,7 +504,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more immediate family members<span class="asterisk">*</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
@@ -686,15 +686,6 @@
             <div class="headline">
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
-              <div class="module-time">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul> 
-              </div>
             </div>
           </div>
         </div>
@@ -842,14 +833,6 @@
           <div class="headlines">
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
-              <div class="module-time">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>

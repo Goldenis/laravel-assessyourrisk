@@ -567,6 +567,7 @@ button{
 }
 .checkbox-list{
   margin: 1em 0 1em;
+  width: 80%;
   &.column-left{
     width: 33%;
     float: left;
@@ -579,7 +580,7 @@ button{
 .checkbox{
   margin: 1em 0;
   .label{
-
+    margin-left: 2rem;
   }
 }
 input[type="checkbox"],

@@ -608,6 +608,7 @@ button.sub:hover {
 }
 .checkbox-list {
   margin: 1em 0 1em;
+  width: 80%;
 }
 .checkbox-list.column-left {
   width: 33%;
@@ -619,6 +620,9 @@ button.sub:hover {
 }
 .checkbox {
   margin: 1em 0;
+}
+.checkbox .label {
+  margin-left: 2rem;
 }
 input[type="checkbox"], input[type="radio"] {
   margin: 0 8px 0 2px;

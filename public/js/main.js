@@ -230,8 +230,14 @@
       overlayOpen = false;
       $('.male-overlay').removeClass("in");
     })
+    $('.progress-overlay .email-pdf').on('click',function () {
+      window.location.href = 'mailto:?subject=Here are the results of your risk assessment';
+    })
+    $('.progress-overlay .share-btn').on('click',function () {
+      window.location.href = 'mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment';
+    })
     $('.male-overlay .share-btn').on('click',function () {
-      window.open('mailto:')
+      window.location.href = 'mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment';
     })
     $('.progress-overlay .close-btn').on('click',function () {
       overlayOpen = false;
@@ -254,7 +260,10 @@
       calculateWeight($(this));
     })
     $('.asterisk').on('mouseenter',function(){
-      $(this).next().addClass("show")
+      $(this).next().addClass("show");
+      $(this).next().css({
+        left: $(this).offset().left
+      })
     })
     $('.asterisk').on('mouseleave',function(){
       $(this).next().removeClass("show")
@@ -610,7 +619,7 @@
     switch($(this).closest(".question").attr("data-question-id")){
       case "14":
         window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment and one of the questions is: \
+I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
 Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
@@ -632,7 +641,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F";
         break;
       case "17":
         window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment and one of the questions is: \
+I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
 Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one%3F \
@@ -654,7 +663,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F";
         break;
       case "20":
         window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment and one of the questions is: \
+I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
 Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \

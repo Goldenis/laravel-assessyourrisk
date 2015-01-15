@@ -266,13 +266,13 @@
       $('.dot').eq(_currentQuestion).addClass('active');
     })
     $('.ask').on('click',askHandler);
-    $('.question button').on('click',function(e){
+    $('.btn-calculate').on('click',function(e){
+      calculateWeight($(this));
+    })
+    $('.question .answers button').on('click',function(e){
       if(!$(this).hasClass('sub')){
         answerQuestion($(this));
       }
-    })
-    $('.btn-calculate').on('click',function(){
-      calculateWeight($(this));
     })
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show");
@@ -341,7 +341,11 @@
         distance = x-e.pageX;
         l = Math.max(50,$('.bottle').position().left-distance);
         l = Math.min(l,550);
-        currentGlass = Math.floor((l-5)/59);
+        var glassW = 59;
+        if(_smallScreen){
+          glassW = 22;
+        }
+        currentGlass = Math.floor((l-5)/glassW);
         $('.drink img').eq(currentGlass).css({
           opacity: 1
         })
@@ -438,12 +442,9 @@
       visibility: 'hidden'
     })     
 
-    $('.bmi-wrapper').css({
-      opacity: 0
-    })     
-    $('.btn-wrap').css({
-      opacity: 1
-    })    
+    $('.height-wrapper').css({
+      display: "none"
+    })
 
     $('.bmi-result').css({
       opacity: 1
@@ -454,7 +455,7 @@
 //    console.log("weightInPounds:" + window.weightInPounds);
     // BMI = Formula: weight (lb) / [height (in)]2 x 703
     var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
-    $(".bmi-result").html("Your BMI result is<br><h4>" + BMI + "</h4>");
+    $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
     /*
     BMI
     Weight Status
@@ -532,7 +533,7 @@
     // 15 - gene mutation have you or your relative
     // 16 - Within one side of the family
     var ansTxt = answer.attr("data-answer-id");
-    if (_currentQuestion == 2) {
+    if ($.contains(_currentQuestion,$('.bmi-result'))) {
       var bmi = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
       if (bmi < 18.5) {
         ansTxt = "-1";
@@ -544,6 +545,7 @@
         ansTxt = "-1";
       }
     }
+    console.log(_currentQuestion)
     if (_currentQuestion == 3) ansTxt = currentGlass;
     if (_currentQuestion == 13) {
       var data = [];
@@ -682,7 +684,6 @@ Do you know if I do%3F";
     }
   }
   function answerQuestion(answer){
-   
 
     if(_currentQuestion >= $('.question').length-1){
       addCustomResults()
@@ -693,18 +694,6 @@ Do you know if I do%3F";
       $('.questions').css({
         display: 'none'
       })
-    }
- 
-    if(_currentQuestion == 1) {
-//      console.log(_currentQuestion)
-      $('.btn-wrap').css({
-      opacity: 1
-      })    
-    }
-
-    if(_currentQuestion == 2 && receivedBMI == false ) {
-      receivedBMI = true;
-      return   
     }
     $('.fact').eq(_currentQuestion).removeClass('in');
     $('.fact').eq(_currentQuestion).addClass('out');
@@ -728,7 +717,9 @@ Do you know if I do%3F";
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     
-    handleSaveQuizAnswer(answer)
+    if(!$(this).hasClass('submit-weight')){
+      handleSaveQuizAnswer(answer)
+    }
     var _oldQuestion = _currentQuestion;
     _currentQuestion++;
     setTimeout(function(){

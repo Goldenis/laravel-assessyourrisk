@@ -322,25 +322,38 @@
         </div>
 
         <div class="question" data-question-id="3">
-          <div class="bmi-result">
-            
-          </div>
-          <div class="bmi-wrapper">  
-            <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
+          <div class="weight-wrapper">  
+            <div class="prompt">What is your weight?</div>
             <div class="visual">
               <div class="weight-container">
                 <div id="weight-base"></div>
                 <div id="weight-overlay"></div>
               </div>
+            </div>
+            <div class="answers weight-answer">
+              <button class="submit-weight">Continue</button>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        <div class="question" data-question-id="3" data-question-name="bmi">
+          <div class="bmi-result">
+            <div class="answers">
+              <button>Continue</button>
+            </div>
+          </div>
+          <div class="height-wrapper">  
+            <div class="prompt">What is your height?</div>
+            <div class="visual">
               <div class="height-container">
                 <div id="height-base"></div>
                 <div id="height-overlay"></div>
               </div>
             </div>
-          </div>    
+            <button class="btn-calculate">Calculate</button>
+          </div>   
           <br>
-          <button class="btn-calculate">Calculate</button>
-          <button class="btn-wrap">Continue</button>
         </div>
 
        <div class="question" data-question-id="4">

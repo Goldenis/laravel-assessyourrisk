@@ -653,7 +653,7 @@
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
-              <button class="facebook">Pledge to Improve Your Lifestyle</button>
+              <button class="facebook">Pledge to Improve Your Lifestyle</button><br>
               <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
             <!-- <div class="headline">
@@ -797,7 +797,7 @@
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
-              <button class="facebook">Pledge to Know Your Normal</button>
+              <button class="facebook">Pledge to Know Your Normal</button><br>
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
@@ -875,7 +875,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
-              <button class="facebook">Pledge to Learn Your Family History</button>
+              <button class="facebook">Pledge to Learn Your Family History</button><br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <!-- <div class="headline">            

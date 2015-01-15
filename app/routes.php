@@ -12,6 +12,7 @@ Route::get('/', function()
 });
 
 Route::get('/pledge/{id}', 'PledgeController@get');
+Route::get('/pledge/{id}/count', 'PledgeController@getCount');
 Route::post('/pledge', 'PledgeController@post');
 
 /**

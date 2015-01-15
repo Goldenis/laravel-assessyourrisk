@@ -42,6 +42,44 @@ class PledgeController extends BaseController {
 			return Response::json ( $response, $statusCode );
 		}
 	}
+	public function getCount($type) {
+		$response = [ ];
+		try {
+			$validator = Validator::make ( array (
+					'type' => $type
+			), array (
+					'type' => array (
+							'required',
+							'regex:[^.*\b(lifestyle|knowing|family|all)\b.*$]'
+					)
+			) );
+			if ($validator->fails ()) {
+				Log::info ( '>> Validator failed.' );
+				$statusCode = 401;
+				$messages = $validator->messages ();
+				$response ['errors'] = [ ];
+				foreach ( $messages->all () as $message ) {
+					$response ['errors'] [] = $message;
+				}
+			} else {
+				$statusCode = 200;
+				
+				$users = FacebookUser::all ();
+				if ($type != 'all') {
+					$users = $users->filter ( function ($user) use($type) {
+						return $user->hasType ( $type );
+					} )->values ();
+				}
+				$response ['count'] [] = count($users);
+			}
+		} catch ( Exception $ex ) {
+			Log::info ( '>> Validator failed: ' . ($ex->getMessage()) );
+			$response = $ex->getMessage ();
+			$statusCode = 401;
+		} finally{
+			return Response::json ( $response, $statusCode );
+		}
+	}
 	public function post() {
 		$response = [ ];
 		try {

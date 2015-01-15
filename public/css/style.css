@@ -306,12 +306,24 @@ button.sub:hover {
 .question-stats {
   display: none;
 }
+.close-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  padding: 1em 1.3em;
+  background: transparent;
+}
 .progress-overlay {
   overflow: hidden;
   padding: 0;
   background: #ffb4aa;
   overflow-y: scroll;
   border: none;
+}
+.progress-overlay .close-btn {
+  background: #ffb4aa;
 }
 .progress-overlay .charts {
   width: 100%;
@@ -326,7 +338,7 @@ button.sub:hover {
   position: absolute;
 }
 .progress-overlay .progress:nth-of-type(2) {
-  left: 50%;
+  left: 62%;
 }
 .progress-overlay .chart {
   width: 6rem;
@@ -352,21 +364,9 @@ button.sub:hover {
 .progress-overlay .questions {
   padding: 1em 6em;
   margin-bottom: 6em;
-  width: 50%;
+  width: 62%;
   height: 100%;
   float: left;
-}
-.progress-overlay .questions .progress-question {
-  margin-top: 50px;
-  width: 100%;
-  cursor: pointer;
-}
-.progress-overlay .questions .progress-question b {
-  font-weight: 100;
-  font-family: "avg_bold";
-}
-.progress-overlay .questions .progress-question:hover {
-  opacity: 0.8;
 }
 .progress-overlay .questions .progress-question:last-of-type {
   margin-bottom: 50px;
@@ -440,7 +440,7 @@ button.sub:hover {
 }
 .progress-overlay .vignettes {
   padding: 1em 6em;
-  width: 50%;
+  width: 38%;
   height: 100%;
   float: right;
   border-left: 1px solid #fff;
@@ -448,24 +448,24 @@ button.sub:hover {
 .progress-overlay .vignettes .sections {
   margin-top: 50px;
 }
-.progress-overlay .vignettes h2 {
+.progress-overlay .vignettes h3 {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 0.5em;
 }
-.progress-overlay .vignettes h2 .percent {
+.progress-overlay .vignettes h3 .percent {
   color: #fdd5ce;
-  font-size: 0.4em;
+  font-size: 0.6em;
   display: block;
   top: -0.5em;
 }
-.progress-overlay .vignettes h2:hover {
+.progress-overlay .vignettes h3:hover {
   opacity: 0.8;
 }
-.progress-overlay .vignettes h2.done {
+.progress-overlay .vignettes h3.done {
   color: #fdd5ce;
 }
-.progress-overlay .vignettes h2.done:after {
+.progress-overlay .vignettes h3.done:after {
   content: " ";
   width: 100%;
   height: 1px;
@@ -473,15 +473,6 @@ button.sub:hover {
   position: absolute;
   left: 0;
   top: 3rem;
-}
-.progress-overlay .close-btn {
-  display: none;
-  position: fixed;
-  top: 0px;
-  right: 20px;
-  z-index: 2;
-  padding: 1em 1.3em;
-  background: transparent;
 }
 .male-overlay {
   text-align: center;
@@ -504,13 +495,12 @@ button.sub:hover {
   border-color: #fff;
 }
 .male-overlay .close-btn {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  top: 40px;
+  background: #d7006d;
+  border-color: #ffb4aa;
+  color: #ffb4aa;
+}
+.male-overlay .close-btn:hover {
+  border-color: #fff;
 }
 .donut-png {
   width: 8rem;
@@ -606,15 +596,23 @@ button.sub:hover {
 }
 .checkbox-list {
   margin: 1em 0 1em;
+  width: 80%;
 }
-.checkbox-list.half {
-  width: 25%;
+.checkbox-list.column-left {
+  width: 33%;
+  float: left;
+}
+.checkbox-list.column-right {
+  width: 66%;
   float: left;
 }
 .checkbox {
   margin: 1em 0;
 }
-input[type="checkbox"] {
+.checkbox .label {
+  margin-left: 2rem;
+}
+input[type="checkbox"], input[type="radio"] {
   margin: 0 8px 0 2px;
   top: 4px;
   float: left;
@@ -653,6 +651,9 @@ input[type="checkbox"] {
   width: 12rem;
   max-width: 185px;
   min-width: 140px;
+}
+.menu-icon {
+  display: none;
 }
 .asterisk {
   color: #f6323e;
@@ -709,6 +710,7 @@ input[type="checkbox"] {
   top: 50%;
   position: absolute;
   overflow: hidden;
+  cursor: pointer;
 }
 .intro #wheel-base {
   position: absolute;
@@ -790,6 +792,7 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-image: url("../img/assessment/scales/weight_overlay.png");
   z-index: 1000;
+  cursor: pointer;
 }
 .height-container {
   width: 146px;
@@ -821,6 +824,7 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-image: url("../img/assessment/scales/height_overlay.png");
   z-index: 1001;
+  cursor: pointer;
 }
 .assessment {
   width: 75%;
@@ -948,7 +952,7 @@ input[type="checkbox"] {
   width: 100%;
   font-size: 1.8em;
   color: #fdd5ce;
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: all 0.2s 0 ;
   -moz-transition: all 0.2s 0 ;
   -o-transition: all 0.2s 0 ;
@@ -980,48 +984,6 @@ input[type="checkbox"] {
 }
 .education button {
   top: auto;
-}
-.education .btn-continue {
-  opacity: 1;
-  position: absolute;
-  bottom: 55px;
-  left: 33.3%;
-  z-index: 3;
-  -webkit-transition: all 0.3s 0 ;
-  -moz-transition: all 0.3s 0 ;
-  -o-transition: all 0.3s 0 ;
-  -ms-transition: all 0.3s 0 ;
-  transition: all 0.3s 0 ;
-  -moz-transition-duration: 0.3s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
-}
-.education .scroll {
-  margin-top: 60px;
-  font-size: 1.4em;
-  font-family: 'avg_bold';
-  color: #fff;
-  cursor: pointer;
-}
-.education .scroll .arrow {
-  position: absolute;
-  margin-top: 20px;
-  left: 1em;
-  -webkit-transform: rotate(90deg) scale(0.7);
-  -moz-transform: rotate(90deg) scale(0.7);
-  -o-transform: rotate(90deg) scale(0.7);
-  transform: rotate(90deg) scale(0.7);
-  -webkit-transition: all 0.3s 0 ease-out;
-  -moz-transition: all 0.3s 0 ease-out;
-  -o-transition: all 0.3s 0 ease-out;
-  -ms-transition: all 0.3s 0 ease-out;
-  transition: all 0.3s 0 ease-out;
-  -moz-transition-duration: 0.3s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
-}
-.education .scroll:hover .arrow {
-  margin-top: 30px;
 }
 .education .education-menu {
   position: absolute;
@@ -1098,17 +1060,21 @@ input[type="checkbox"] {
 .education .section-title {
   color: #fff;
   left: 33.333%;
-  top: 8rem;
+  top: 6rem;
   opacity: 0;
   border-top: 2px solid rgba(255, 255, 255, .2);
 }
-.education .pledge {
+.education .btn-begin {
+  margin-top: 50px;
+  background: transparent;
+}
+.education .btn-continue {
   position: relative;
   left: 0;
   margin-top: 50px;
   border-color: transparent;
 }
-.education .pledge:hover {
+.education .btn-continue:hover {
   background: #f6323e;
   color: #fff;
 }
@@ -1169,49 +1135,6 @@ input[type="checkbox"] {
 .education .headlines .headline.out {
   top: -20px;
   opacity: 0;
-}
-.education .headlines .headline .module-time {
-  font-size: 14px;
-  bottom: 190px;
-  position: absolute;
-}
-.education .headlines .headline .module-time ul {
-  padding: 0;
-  margin-left: -20px;
-}
-.education .headlines .headline .module-time li {
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  line-height: 2em;
-  border-radius: 1em;
-  background: #fff;
-  margin: 0 1em;
-  display: inline-block;
-  color: #d7006d;
-  position: relative;
-}
-.education .headlines .headline .module-time li::before {
-  content: '';
-  position: absolute;
-  top: 0.9em;
-  left: -4em;
-  width: 4em;
-  height: 0.2em;
-  background: #fff;
-  z-index: -1;
-}
-.education .headlines .headline .module-time li:first-child::before {
-  display: none;
-}
-.education .headlines .headline .module-time .active {
-  background: #fff;
-}
-.education .headlines .headline .module-time .active ~ li {
-  background: lightblue;
-}
-.education .headlines .headline .module-time .active ~ li::before {
-  background: lightblue;
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
@@ -1532,7 +1455,7 @@ input[type="checkbox"] {
 }
 .question .bmi-result {
   opacity: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "avg_bold";
   background: #fff;
   position: relative;
@@ -1585,33 +1508,32 @@ footer {
    ========================================================================== */  .logo-white {
     display: none;
   }
+  .menu-icon {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 1.4rem;
+    width: 5rem;
+    height: 4.5rem;
+    z-index: 2000;
+  }
+  .menu-icon .line {
+    width: 100%;
+    height: 3px;
+    background: #d7006d;
+    margin-bottom: 4px;
+  }
   .dots {
     bottom: 6rem;
     left: 0.8rem;
   }
   .dot {
-    color: #ccc;
-    display: inline-block;
-    position: relative;
     width: 4px;
     height: 4px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #ccc;
     margin-right: 7px;
-    -webkit-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-    -moz-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-    -o-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-    -ms-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-    transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-    -moz-transition-duration: 0.6s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-    top: 0;
   }
   .dot.active {
-    background: #d7006d;
     width: 8px;
     height: 8px;
     top: 2px;
@@ -1626,6 +1548,9 @@ footer {
     width: 100%;
     height: 120px;
     margin-top: 180px;
+  }
+  .progress-overlay .close-btn {
+    display: none;
   }
   .progress-overlay .progress {
     width: 96px;
@@ -1646,15 +1571,9 @@ footer {
     left: 1em;
     top: 65px;
   }
-  .progress-overlay .share button {
-    margin-top: -25px;
-  }
   .progress-overlay .questions {
     padding: 1em 2em;
-    margin-bottom: 6em;
     width: 100%;
-    height: 100%;
-    float: left;
   }
   .progress-overlay .questions .progress-question {
     margin-top: 50px;
@@ -1671,37 +1590,9 @@ footer {
   .progress-overlay .results {
     width: 100%;
     padding: 1rem 2rem;
-    float: left;
-    display: none;
-  }
-  .progress-overlay .results .risk-level {
-    color: #d7006d;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
   }
   .progress-overlay .results .your-risk h2 {
     margin: 20px 0;
-  }
-  .progress-overlay .results .your-risk p {
-    margin-bottom: 1em;
-  }
-  .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
-    color: #d7006d;
-  }
-  .progress-overlay .results .sub {
-    background: transparent;
-  }
-  .progress-overlay .cards {
-    width: 100%;
-    margin-top: 40px;
-    float: left;
-    display: none;
-  }
-  .progress-overlay .cards .section-title {
-    margin-bottom: 2em;
-  }
-  .progress-overlay .cards h4 {
-    margin-bottom: 0.5em;
   }
   .progress-overlay .cards .card {
     width: 100%;
@@ -1712,103 +1603,23 @@ footer {
     top: -50px;
     left: 2rem;
   }
-  .progress-overlay .cards .card .item {
-    margin-bottom: 4em;
-  }
-  .progress-overlay .cards .positive {
-    background: #fff;
-    color: #555558;
-  }
-  .progress-overlay .cards .positive .section-title {
-    border-color: #555558 !important;
-  }
-  .progress-overlay .cards .positive .factors-title {
-    color: #fff;
-  }
-  .progress-overlay .cards .negative {
-    background: #d7006d;
-    color: #fff;
-  }
-  .progress-overlay .cards .negative .factors-title {
-    color: #d7006d;
-  }
   .progress-overlay .vignettes {
     padding: 1em 2em;
     width: 100%;
     height: auto;
-    float: right;
-    border-left: 1px solid #fff;
   }
   .progress-overlay .vignettes .sections {
     margin-top: 20px;
   }
-  .progress-overlay .vignettes h2 {
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 0.5em;
-  }
-  .progress-overlay .vignettes h2 .percent {
-    color: #fdd5ce;
+  .progress-overlay .vignettes h3 .percent {
     font-size: 0.4em;
-    display: block;
-    top: -0.5em;
-  }
-  .progress-overlay .vignettes h2:hover {
-    opacity: 0.8;
-  }
-  .progress-overlay .vignettes h2.done {
-    color: #fdd5ce;
-  }
-  .progress-overlay .vignettes h2.done:after {
-    content: " ";
-    width: 100%;
-    height: 1px;
-    border-bottom: 2px solid #f6323e;
-    position: absolute;
-    left: 0;
-    top: 3rem;
-  }
-  .progress-overlay .close-btn {
-    display: none;
-    position: fixed;
-    top: 0px;
-    right: 20px;
-    z-index: 2;
-    padding: 1em 1.3em;
-    background: transparent;
   }
   .overlay {
     padding: 4% 3%;
     border: 0px solid #ffb4aa;
   }
-  .male-overlay {
-    text-align: center;
-  }
   .male-overlay h1 {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
     font: 3.4rem/1.5 "avg_bold";
-  }
-  .male-overlay a {
-    border-bottom: 6px solid #ffb4aa;
-    padding: 0;
-    line-height: 0.4em;
-  }
-  .male-overlay a:hover {
-    color: #fff;
-    border-color: #fff;
-  }
-  .male-overlay .close-btn {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    top: 40px;
   }
   .border {
     border: 0px solid #ccc;
@@ -1842,57 +1653,10 @@ footer {
   .assessment {
     width: 100%;
   }
-  .assessment .bottle {
-    position: absolute;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    left: 50px;
-  }
-  .assessment .drinks {
-    margin-top: 80px;
-  }
-  .assessment .drink {
-    width: 43px;
-    height: 78px;
-    background: url('../img/assessment/drink.png');
-    margin-right: 10px;
-    display: inline-block;
-  }
-  .assessment .drink:first-of-type {
-    opacity: 0.2;
-  }
-  .assessment .drink:first-of-type img {
-    visibility: hidden;
-  }
-  .assessment .drink img {
-    left: 7px;
-    top: 15px;
-    opacity: 0;
-    -webkit-transition: all 0.5s 0 ;
-    -moz-transition: all 0.5s 0 ;
-    -o-transition: all 0.5s 0 ;
-    -ms-transition: all 0.5s 0 ;
-    transition: all 0.5s 0 ;
-    -moz-transition-duration: 0.5s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
   .assessment-intro {
     position: absolute;
     width: calc(100% - 5.1rem);
-    -webkit-transition: all 0.4s 0 ;
-    -moz-transition: all 0.4s 0 ;
-    -o-transition: all 0.4s 0 ;
-    -ms-transition: all 0.4s 0 ;
-    transition: all 0.4s 0 ;
-    -moz-transition-duration: 0.4s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
     top: 12rem;
-  }
-  .assessment-intro a, .assessment-intro a:visited {
-    color: #d7006d;
   }
   .assessment-intro .action {
     display: none;
@@ -1905,73 +1669,7 @@ footer {
     width: 100%;
   }
   .education .nav {
-    width: 100%;
-    left: auto;
-    right: -100%;
-  }
-  .education .nav.in {
-    top: 0px;
-    right: -90%;
-  }
-  .education .nav .nav-item {
-    padding: 0.2rem 1rem 0;
-    width: 33%;
-    float: left;
-  }
-  .education .nav .nav-item .percent {
-    color: #fdd5ce;
-    font-size: 0.6em;
-  }
-  .education .nav .nav-item .mod-progress {
-    position: absolute;
-    right: -2px;
-    top: 0;
-    width: 2px;
-    height: 30%;
-    background: #fff;
-  }
-  .education .btn-continue {
-    opacity: 1;
-    position: absolute;
-    bottom: 90px;
-    left: 3rem;
-    z-index: 3;
-    -webkit-transition: all 0.3s 0 ;
-    -moz-transition: all 0.3s 0 ;
-    -o-transition: all 0.3s 0 ;
-    -ms-transition: all 0.3s 0 ;
-    transition: all 0.3s 0 ;
-    -moz-transition-duration: 0.3s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
-  .education .scroll {
-    margin-top: 2rem;
-    font-size: 1.4em;
-    font-family: 'avg_bold';
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-  }
-  .education .scroll .arrow {
-    position: absolute;
-    margin-top: 20px;
-    left: 1em;
-    -webkit-transform: rotate(90deg) scale(0.7);
-    -moz-transform: rotate(90deg) scale(0.7);
-    -o-transform: rotate(90deg) scale(0.7);
-    transform: rotate(90deg) scale(0.7);
-    -webkit-transition: all 0.3s 0 ease-out;
-    -moz-transition: all 0.3s 0 ease-out;
-    -o-transition: all 0.3s 0 ease-out;
-    -ms-transition: all 0.3s 0 ease-out;
-    transition: all 0.3s 0 ease-out;
-    -moz-transition-duration: 0.3s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-  }
-  .education .scroll:hover .arrow {
-    margin-top: 30px;
+    display: none;
   }
   .education .module-hero {
     width: 100%;
@@ -1986,7 +1684,7 @@ footer {
     left: 3rem;
     top: 2rem;
   }
-  .education .pledge {
+  .education .btn-continue {
     margin-top: 20px;
   }
   .education .vignette {
@@ -2027,50 +1725,6 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
-  .education .headlines .headline .module-time {
-    font-size: 14px;
-    bottom: auto;
-    top: 20px;
-    position: relative;
-  }
-  .education .headlines .headline .module-time ul {
-    padding: 0;
-    margin-left: -10px;
-  }
-  .education .headlines .headline .module-time li {
-    width: 2em;
-    height: 2em;
-    text-align: center;
-    line-height: 2em;
-    border-radius: 1em;
-    background: #fff;
-    margin: 0 0 0 1em;
-    display: inline-block;
-    color: #d7006d;
-    position: relative;
-  }
-  .education .headlines .headline .module-time li::before {
-    content: '';
-    position: absolute;
-    top: 0.9em;
-    left: -2em;
-    width: 2em;
-    height: 0.2em;
-    background: #fff;
-    z-index: -1;
-  }
-  .education .headlines .headline .module-time li:first-child::before {
-    display: none;
-  }
-  .education .headlines .headline .module-time .active {
-    background: #fff;
-  }
-  .education .headlines .headline .module-time .active ~ li {
-    background: lightblue;
-  }
-  .education .headlines .headline .module-time .active ~ li::before {
-    background: lightblue;
-  }
   .education .headlines ul, .education .headlines p {
     font-size: 1.1rem;
   }
@@ -2103,37 +1757,27 @@ footer {
     overflow: hidden;
   }
   .right-column .toggle-box {
-    height: 100%;
     position: absolute;
     top: 0;
   }
-  .right-column .toggle-box .understand {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0.7em 3em;
-    background: #d7006d;
-    top: 0;
-    left: 100%;
-    -webkit-transition: all 1s 0 ease-in-out;
-    -moz-transition: all 1s 0 ease-in-out;
-    -o-transition: all 1s 0 ease-in-out;
-    -ms-transition: all 1s 0 ease-in-out;
-    transition: all 1s 0 ease-in-out;
-    -moz-transition-duration: 1s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
+  .right-column .toggle-box .understand, .right-column .toggle-box .assess {
+    padding: 0.7em 2em;
+  }
+  .right-column .toggle-box .understand h4, .right-column .toggle-box .assess h4 {
+    font-size: 3em;
   }
   .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7em 2em;
     left: 100%;
     top: 0;
     border-right: 0px solid #fff;
+    z-index: 3;
   }
   .right-column .toggle-box .assess-start {
     border-top: 4px solid #fff;
     padding-top: 0.4em;
     left: 0;
+    z-index: 3;
   }
   .right-column .fact-group {
     display: none;

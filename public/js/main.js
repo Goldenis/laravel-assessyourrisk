@@ -257,10 +257,7 @@
     $('.male-overlay .share-btn').on('click',function () {
       window.location.href = 'mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment';
     })
-    $('.progress-overlay .close-btn').on('click',function () {
-      overlayOpen = false;
-      $('.progress-overlay').removeClass("in");
-    })
+    $('.progress-overlay .close-btn').on('click',closeProgressOverlay);
     $('.assessment-intro button, .lets-go').on('click',function() {
       $('.right-column').addClass('in2')
       $('.assessment-intro').addClass('out-up');
@@ -302,16 +299,14 @@
     })
     $('.progress-overlay .vignettes h2').on('click',function(){
       changeModule($(this).index());
-      overlayOpen = false;
-      $('.progress-overlay').removeClass("in");
+      closeProgressOverlay();
       $('.assessment').removeClass('in');
       $('.right-column').addClass('left');
       $('.education').addClass('in');
     })
     $('.progress-overlay .questions h4').on('click',function() {
-      overlayOpen = false; 
       toggleLogo();
-      $('.progress-overlay').removeClass("in");
+      closeProgressOverlay();
       $('.assessment').addClass('in');
       $('.right-column').removeClass('left');
       $('.education').removeClass('in');
@@ -319,9 +314,12 @@
     $('.facebook').on('click',function () {
       window.open("fb.html", "PopupWindow", "width=520,height=420,scrollbars=no,resizable=no");
     })
-    $('.progress').on('click',function(){
-      openProgressOverlay();
-
+    $('.progress,.menu-icon').on('click',function(){
+      if(!overlayOpen){
+        openProgressOverlay();
+      }else{
+        closeProgressOverlay();
+      }
     })
     $('.nav-item').on('click',function () {
       changeModule($(this).index());
@@ -373,6 +371,10 @@
   function openProgressOverlay() {
     $('.progress-overlay').addClass('in');
     overlayOpen = true;
+  }
+  function closeProgressOverlay() {
+    $('.progress-overlay').removeClass("in");
+    overlayOpen = false;
   }
   function changeModule(i){
     _currentModule = i;

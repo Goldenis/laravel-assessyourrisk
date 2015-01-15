@@ -20,7 +20,11 @@
       <h1>Then <a href="#" class="share-btn">share</a> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
-    <div class="menu-icon">–––</div>
+    <div class="menu-icon">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
 
     <div class="overlay progress-overlay">
       <div class="question-stats">

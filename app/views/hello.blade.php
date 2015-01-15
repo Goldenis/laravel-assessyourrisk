@@ -534,6 +534,11 @@
 <!-- EDUCATION -->
 
     <section class="education">
+      <div class="fb-faces">
+          <div class="faces lifestyle"></div>
+          <div class="faces knowing"></div>
+          <div class="faces family"></div>
+      </div>
       <!-- MASTER VIDEO -->    
       <div class="video">
         <video class="bg-video" src="" type="video/mp4" loop></video>
@@ -657,7 +662,7 @@
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
-              <button class="facebook">Pledge to Improve Your Lifestyle</button><br>
+              <button class="facebook lifestyle">Pledge to Improve Your Lifestyle</button><br>
               <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
             <!-- <div class="headline">
@@ -801,7 +806,7 @@
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
-              <button class="facebook">Pledge to Know Your Normal</button><br>
+              <button class="facebook knowing">Pledge to Know Your Normal</button><br>
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
@@ -879,7 +884,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
-              <button class="facebook">Pledge to Learn Your Family History</button><br>
+              <button class="facebook family">Pledge to Learn Your Family History</button><br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <!-- <div class="headline">            
@@ -928,6 +933,29 @@
       src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
     </script>
     <script src="js/roulette.js"></script>
+    <script src="js/facebook.js"></script>
+
+      <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
+    <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '757106917704007',
+          xfbml      : true,
+          version    : 'v2.2',
+          cookie   : true,
+          status     : true
+        });
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+    </script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

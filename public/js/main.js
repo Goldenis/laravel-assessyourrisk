@@ -311,9 +311,6 @@
       $('.right-column').removeClass('left');
       $('.education').removeClass('in');
     })
-    $('.facebook').on('click',function () {
-      window.open("fb.html", "PopupWindow", "width=520,height=420,scrollbars=no,resizable=no");
-    })
     $('.progress,.menu-icon').on('click',function(){
       if(!overlayOpen){
         openProgressOverlay();

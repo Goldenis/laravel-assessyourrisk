@@ -379,12 +379,17 @@
       glassW = 22;
     }
     currentGlass = Math.floor((l-5)/glassW);
-    $('.drink img').eq(currentGlass).css({
-      opacity: 1
-    })
-    $('.drink img').eq(currentGlass+1).css({
-      opacity: 0
-    })
+    for(var i=0;i<$('.drink').length;i++){
+      if(i <= currentGlass){
+        $('.drink img').eq(i).css({
+          opacity: 1
+        })
+      }else{
+        $('.drink img').eq(i).css({
+          opacity: 0
+        })
+      }
+    }
     $('.bottle').css({
       left: l,
       //'-webkit-transform': 'rotate('+distance+'deg)'

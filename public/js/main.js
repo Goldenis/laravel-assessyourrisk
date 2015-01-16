@@ -589,10 +589,10 @@
       30.0 and Above  Obese
       */
     
-    // 3 - .answers .drinks
-    // 13 - Have any of your immediate family members
-    // 15 - gene mutation have you or your relative
-    // 16 - Within one side of the family
+    // 6 - .answers .drinks
+    // 5 - Have any of your immediate family members
+    // 7 - gene mutation have you or your relative
+    // 10 - Within one side of the family
     var ansTxt = answer.attr("data-answer-id");
     if ($.contains(_currentQuestion,$('.bmi-result'))) {
       var bmi = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
@@ -607,8 +607,9 @@
       }
     }
     console.log(_currentQuestion)
-    if (_currentQuestion == 3) ansTxt = currentGlass;
-    if (_currentQuestion == 13) {
+    if (_currentQuestion == 6) ansTxt = currentGlass;
+    
+    if (_currentQuestion == 5) {
       var data = [];
       $('.cb1 input:checked').each(function() {
           data.push($(this).attr('data-answer-id'));
@@ -616,7 +617,7 @@
       ansTxt = data;
     }
 
-//    console.log(_currentQuestion)
+    console.log(_currentQuestion)
     if (_currentQuestion == 14 && ansTxt == '+1') {
       //console.log('not')
       _currentQuestion = 15;
@@ -624,7 +625,7 @@
     }
  
 
-    if (_currentQuestion == 15) {
+    if (_currentQuestion == 8) {
       var data = [];
       $('.cb2 input:checked').each(function() {
           data.push($(this).attr('data-answer-id'));
@@ -637,7 +638,7 @@
       }
 
     }
-    if (_currentQuestion == 16) {
+    if (_currentQuestion == 10) {
       var data = [];
       $('.cb3 input:checked').each(function() {
           data.push($(this).attr('data-answer-id'));

@@ -74,7 +74,7 @@ $(function() {
           }
         }).done(function(data) {
           console.log(data);
-          refreshAllAvatars();
+          refreshAllAvatars(type);
         }).fail(function(error) {
           console.log(error);
         });
@@ -82,9 +82,12 @@ $(function() {
 
       
       function appendUser(uid, name, trg) {
+
+        for (i=0; i<20; i++) {      
         var imgURL = "https://graph.facebook.com/" + uid + "/picture?type=large";
-        trg.append(name + '<br>');
-          trg.append('<img src="' + imgURL + '"><br>');
+        //trg.append(name + '<br>');
+          trg.append('<img src="' + imgURL + '">');
+        }
       }
 
       function refreshAvatars(type) {
@@ -107,11 +110,12 @@ $(function() {
       }
 
       // Populates add 3 buckets
-      function refreshAllAvatars() {
-        $('.fb-faces').addClass('in');
+      function refreshAllAvatars(type) {
         refreshAvatars('lifestyle');
         refreshAvatars('knowing');
         refreshAvatars('family');
+        $('.fb-faces').addClass('in');
+        $('.' + type).addClass('in');
       }
       //refreshAllAvatars();
       

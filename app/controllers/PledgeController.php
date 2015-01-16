@@ -80,9 +80,9 @@ class PledgeController extends BaseController {
 						$knowing += $user->hasType ( 'knowing' ) ? (1) : (0);
 						$family += $user->hasType ( 'family' ) ? (1) : (0);
 					}
-					$response ['lifestyle'] [] = $lifestyle;
-					$response ['knowing'] [] = $knowing;
-					$response ['family'] [] = $family;
+					$response ['lifestyle'] = $lifestyle;
+					$response ['knowing'] = $knowing;
+					$response ['family'] = $family;
 				}
 				
 			}

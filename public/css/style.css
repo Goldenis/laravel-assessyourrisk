@@ -1581,7 +1581,7 @@ footer {
   }
   .dots {
     bottom: 6rem;
-    left: 0.8rem;
+    left: auto;
   }
   .dot {
     width: 4px;
@@ -1708,8 +1708,22 @@ footer {
   .assessment {
     width: 100%;
   }
+  .assessment .bottle {
+    left: 20px;
+  }
+  .assessment .drinks {
+    width: 120%;
+  }
   .assessment .drink {
-    margin-right: -10px;
+    margin-right: 0px;
+    margin-left: -19px;
+    float: left;
+  }
+  .assessment .drink:first-of-type {
+    margin-left: 0;
+  }
+  .assessment .drink:first-of-type img {
+    left: 0px;
   }
   .assessment-intro {
     position: absolute;
@@ -1911,6 +1925,18 @@ footer {
     text-align: center;
     top: 0px;
     height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 8rem;
+    padding-top: 2rem;
+  }
+  .question.weight-question {
+    overflow: visible;
+  }
+  .question.drinks-question {
+    overflow: visible;
+  }
+  .question.drinks-question button {
+    left: -20%;
   }
   .btn-calculate {
     left: 64px;
@@ -1918,6 +1944,16 @@ footer {
   .checkbox-list {
     text-align: left;
     width: 100%;
+  }
+  .checkbox-list.column-left {
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .checkbox-list.column-right {
+    margin-top: -1rem;
+    width: 100%;
+    float: left;
   }
 }
 .ir {

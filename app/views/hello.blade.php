@@ -295,9 +295,6 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question" data-question-id="1">
@@ -321,7 +318,7 @@
           </div>
         </div>
         
-        <div class="question" data-question-id="3">
+        <div class="question weight-question" data-question-id="3">
           <div class="weight-wrapper">  
             <div class="prompt">What is your weight?</div>
             <div class="visual">
@@ -356,7 +353,7 @@
           <br>
         </div>
 
-       <div class="question" data-question-id="4">
+       <div class="question drinks-question" data-question-id="4">
           <div class="prompt">Drag drink icon to the number of drinks per day you have — don’t forget to count the weekends!</div>
           <div class="bottle"><img src="img/assessment/bottle.png"></div>
           <div class="answers drinks">
@@ -370,6 +367,7 @@
             <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+            <br>
             <button>Continue</button>
           </div>
         </div>

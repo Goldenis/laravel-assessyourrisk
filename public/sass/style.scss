@@ -1410,7 +1410,7 @@ footer{
   }
   .dots{
     bottom: 6rem;
-    left: .8rem;
+    left: auto;
   }
   .dot{
     width: 4px;
@@ -1544,16 +1544,19 @@ footer{
   .assessment{
     width: 100%;
     .bottle{
-      
+      left: 20px;
     }
     .drinks{
-      
+      width: 120%;
     }
     .drink{
-      margin-right: -10px;
+      margin-right: 0px;
+      margin-left: -19px;
+      float: left;
       &:first-of-type{
+        margin-left: 0;
         img{
-
+          left: 0px;
         }
       }
       img{
@@ -1761,6 +1764,16 @@ footer{
     height: 100%;
     overflow-y: scroll;
     padding-bottom: 8rem;
+    padding-top: 2rem;
+    &.weight-question{
+      overflow: visible;
+    }
+    &.drinks-question{
+      overflow: visible;
+      button{
+        left: -20%;
+      }
+    }
   }
   .btn-calculate {
     left: 64px;

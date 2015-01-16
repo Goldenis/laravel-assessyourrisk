@@ -120,7 +120,8 @@ $(function() {
         $('.' + type).addClass('in');
       }
 
-      function getUserCount(type) {
+      function getUserCount(type1, type2, type3) {
+  
         resp = $.ajax({
           type : "GET",
           cache: false,

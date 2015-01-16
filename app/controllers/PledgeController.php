@@ -50,7 +50,7 @@ class PledgeController extends BaseController {
 			), array (
 					'type' => array (
 							'required',
-							'regex:[^.*\b(lifestyle|knowing|family|all)\b.*$]'
+							'regex:[^.*\b(lifestyle|knowing|family|all|totals)\b.*$]'
 					)
 			) );
 			if ($validator->fails ()) {
@@ -63,14 +63,28 @@ class PledgeController extends BaseController {
 				}
 			} else {
 				$statusCode = 200;
-				
 				$users = FacebookUser::all ();
-				if ($type != 'all') {
+				if ($type != 'all' && $type != 'totals') {
 					$users = $users->filter ( function ($user) use($type) {
 						return $user->hasType ( $type );
 					} )->values ();
+					$response ['count'] [] = count($users);
+				} else if ($type == 'all') {
+					$response ['count'] [] = count($users);
+				} else if ($type == 'totals') {
+					$lifestyle = 0;
+					$knowing = 0;
+					$family = 0;
+					foreach ($users as $user) {
+						$lifestyle += $user->hasType ( 'lifestyle' ) ? (1) : (0);
+						$knowing += $user->hasType ( 'knowing' ) ? (1) : (0);
+						$family += $user->hasType ( 'family' ) ? (1) : (0);
+					}
+					$response ['lifestyle'] [] = $lifestyle;
+					$response ['knowing'] [] = $knowing;
+					$response ['family'] [] = $family;
 				}
-				$response ['count'] [] = count($users);
+				
 			}
 		} catch ( Exception $ex ) {
 			Log::info ( '>> Validator failed: ' . ($ex->getMessage()) );

@@ -321,6 +321,9 @@
     $('.nav-item').on('click',function () {
       changeModule($(this).index());
     })
+    $('.text-me').on('click',function () {
+      window.open('http://www.brightpink.org/awareness-to-action/breast-health-reminders/');
+    })
     $('.btn-begin').on('click',function(){
       showNextHeadline();
     })

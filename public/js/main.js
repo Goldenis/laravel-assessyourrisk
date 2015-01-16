@@ -139,7 +139,7 @@
     }
     setFontScale($('html'),11,16,'px');
     $('.wheel-container').css({
-      '-webkit-transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
+      'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
     });
   }
   function setFontScale (el,min,max,type){

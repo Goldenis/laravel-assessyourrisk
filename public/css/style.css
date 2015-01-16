@@ -961,16 +961,38 @@ input[type="checkbox"], input[type="radio"] {
   height: 100%;
   left: 100%;
 }
+.education .dots {
+  bottom: auto;
+  top: 1.3rem;
+  width: 66.666%;
+  left: 33.333%;
+  z-index: 3;
+}
+.education .dots .dot {
+  background: #fff;
+}
 .education .module {
   position: absolute;
-  left: 0;
+  left: 100px;
   top: 0;
   width: 100%;
   height: 100%;
   visibility: hidden;
+  -webkit-transition: all 1s 0 ;
+  -moz-transition: all 1s 0 ;
+  -o-transition: all 1s 0 ;
+  -ms-transition: all 1s 0 ;
+  transition: all 1s 0 ;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .education .module.in {
+  left: 0;
   visibility: visible;
+}
+.education .module.left {
+  left: -100px !important;
 }
 .education .module .main {
   left: 10px;
@@ -1170,7 +1192,7 @@ input[type="checkbox"], input[type="radio"] {
   height: 78%;
   visibility: hidden;
   opacity: 0;
-  top: 40px;
+  top: 0px;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -1186,7 +1208,7 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
 }
 .education .headlines .headline.out {
-  top: -20px;
+  top: 0px;
   opacity: 0;
 }
 .education .headlines ul, .education .headlines p {
@@ -1586,7 +1608,7 @@ footer {
   .dot {
     width: 4px;
     height: 4px;
-    margin-right: 7px;
+    margin-right: 0.45rem;
   }
   .dot.active {
     width: 8px;
@@ -1735,6 +1757,17 @@ footer {
   }
   .assessment-intro h4 {
     font-size: 1.2rem;
+  }
+  .education .dots {
+    bottom: 6rem;
+    top: auto;
+    width: 100%;
+    left: auto;
+    z-index: 3;
+    text-align: center;
+  }
+  .education .dots .dot {
+    background: #fff;
   }
   .education .module .main {
     left: 0px;

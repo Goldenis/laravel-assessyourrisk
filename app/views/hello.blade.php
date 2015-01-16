@@ -559,6 +559,28 @@
       <div class="video">
         <video class="bg-video" src="" type="video/mp4" loop></video>
       </div>
+      <div class="dots">
+        <div class="tooltip-bottom"></div><br>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
       <div class="nav">
         <div class="nav-item">Lifestyle</div>
         <div class="nav-item">Your Normal</div>
@@ -853,9 +875,6 @@
               <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
-          </div>
-          <div class="data-viz">
-            <h1>87%</h1><h1>54%</h1>
           </div>
         </div>
         <div class="vignette" data-src="video/family">

@@ -26,9 +26,12 @@
 
   var _currentView = "left";
   var _currentModule = 0;
+  var _oldModule;
   var _currentQuestion = 0;
   var _currentVignette = 0;
+  var _oldVignette;
   var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+  var _oldHeadline;
   var _myL = 0;
   var _preL = 0;
 
@@ -164,6 +167,7 @@
     if (initialized && nextHeadline < numHeadlines){
       _currentHeadline.removeClass('active');
       _currentHeadline.addClass('out');
+      _oldHeadline = _currentHeadline;
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
       _currentHeadline.removeClass('out');
       _currentHeadline.addClass('active');
@@ -262,7 +266,7 @@
       $('.assessment-intro').addClass('out-up');
       $('.assessment-intro').removeClass('in');
       $('.question').eq(0).addClass('in');
-      $('.dot').eq(_currentQuestion).addClass('active');
+      $('.assessment .dot').eq(_currentQuestion).addClass('active');
     })
     $('.ask').on('click',askHandler);
     $('.btn-calculate').on('click',function(e){
@@ -296,8 +300,8 @@
     $('.module-hero').on('click',function(){
       changeModule($(this).index());
     })
-    $('.progress-overlay .vignettes h2').on('click',function(){
-      changeModule($(this).index());
+    $('.progress-overlay .vignettes h3').on('click',function(){
+      changeModule($(this).index($('h3')));
       closeProgressOverlay();
       $('.assessment').removeClass('in');
       $('.right-column').addClass('left');
@@ -411,26 +415,39 @@
     overlayOpen = false;
   }
   function changeModule(i){
+    _oldModule = _currentModule;
     _currentModule = i;
+    if(_oldModule !== undefined){
+      closeModule(_oldModule);
+    }
     $('.progress-overlay .vignettes h2').eq(i).addClass('done');
     
     expandModule(i);
   }
+  function closeModule(num) {
+    $('.module').eq(num).removeClass('in');
+    if(num < _currentModule){
+      $('.module').eq(num).addClass('left');
+    }else{
+      $('.module').eq(num).removeClass('left');
+    }
+  }
   function expandModule(){
+    _oldVignette = null;
     _currentVignette = 0;
-    $('.headline').removeClass('active');
 
     handleSaveDeepProgress();
     $('.nav').addClass('in');
     $('.right-column').addClass('down');
     $('.nav-item').removeClass('active');
     $('.nav-item').eq(_currentModule).addClass('active');
-    _currentFrame = 0;
+    // _currentFrame = 0;
     $('.education-menu').addClass('out');
-
-    $('.module').removeClass('in');
+    $('.headline').removeClass('active');
+    $('.headline').removeClass('out');
     $('.vignette').removeClass('in');
 
+    $('.module').eq(_currentModule).removeClass('left');
     $('.module').eq(_currentModule).addClass('in');
 
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
@@ -754,34 +771,33 @@ Do you know if I do%3F";
     _currentQuestion++;
     setTimeout(function(){
       $('.fact').eq(_currentQuestion).addClass('in');
-      $('.dot').eq(_oldQuestion).removeClass('active')
-      $('.dot').eq(_currentQuestion).addClass('active')
+      $('.assessment .dot').eq(_oldQuestion).removeClass('active')
+      $('.assessment .dot').eq(_currentQuestion).addClass('active')
     },1000)
     $('.question').eq(_currentQuestion).addClass('in')
   }
   function nextVignette(){
     console.log("Next Vignette")
-    _currentFrame = 0;
+    // _currentFrame = 0;
 
     var videoURL;
 
     $('.vignette').removeClass('in');
-    var _oldVignette = _currentVignette;
     setTimeout(function(){
       // $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).attr('src',"");
     },600);
+    _oldVignette = _currentVignette;
     _currentVignette++;
     $('.headline').removeClass('active');
     if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){
-      _currentModule++;
       
-      if(_currentModule >= 3){
+      if(_currentModule + 1 >= 3){
         openProgressOverlay();
         return;
       }
-      changeModule(_currentModule);
+      changeModule(_currentModule+1);
     }else{
-      
+      _oldHeadline = _currentHeadline;
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
       _currentHeadline.addClass('active')
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');

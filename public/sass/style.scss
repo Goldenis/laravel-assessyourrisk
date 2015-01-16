@@ -925,15 +925,30 @@ input[type="radio"]{
   width: 100%;
   height: 100%;
   left: 100%;
+  .dots{
+    bottom: auto;
+    top: 1.3rem; 
+    width: 66.666%;
+    left: 33.333%;
+    z-index: 3;
+    .dot{
+      background: #fff;
+    }
+  }
   .module{
     position: absolute;
-    left: 0;
+    left: 100px;
     top: 0;
     width: 100%;
     height: 100%;
     visibility: hidden;
+    @include transition(1s);
     &.in{
+      left: 0;
       visibility: visible;
+    }
+    &.left{
+      left: -100px !important;
     }
     .main{
       left: 10px;
@@ -1108,7 +1123,7 @@ input[type="radio"]{
       height: 78%;
       visibility: hidden;
       opacity: 0;
-      top: 40px;
+      top: 0px;
       @include transition(.4s);
       &.active{
         visibility: visible;
@@ -1116,7 +1131,7 @@ input[type="radio"]{
         top: 0;
       }
       &.out{
-        top: -20px;
+        top: 0px;
         opacity: 0;
       }
     }
@@ -1415,7 +1430,7 @@ footer{
   .dot{
     width: 4px;
     height: 4px;
-    margin-right: 7px;
+    margin-right: .45rem;
     &.active{
       width: 8px;
       height: 8px;
@@ -1576,6 +1591,17 @@ footer{
     }
   }
   .education{
+    .dots{
+      bottom: 6rem;
+      top: auto; 
+      width: 100%;
+      left: auto;
+      z-index: 3;
+      text-align: center;
+      .dot{
+        background: #fff;
+      }
+    }
     .module{
       .main{
         left: 0px;

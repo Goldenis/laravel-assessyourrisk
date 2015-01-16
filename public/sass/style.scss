@@ -256,6 +256,57 @@ button{
     }
   }
 }
+
+.fb-faces{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  &.in{
+    opacity: 1;
+  z-index: 100;
+  }
+  .lifestyle{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;   
+      opacity: 0;  
+    &.in{
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+  .knowing{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; 
+      opacity: 0;  
+    &.in{
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+  .family{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;     
+      opacity: 0;  
+    &.in{
+      opacity: 1;
+      z-index: 100;
+    }
+  }    
+}
+
+
 .overlay{
   position: fixed;
   left: 0;
@@ -552,7 +603,7 @@ button{
   left: 0;
   position: absolute;
   left: 0px;
-  top: 350px;
+  top: 18rem;
   z-index: 10;
 }
 .checkbox-list{
@@ -727,15 +778,26 @@ input[type="radio"]{
 // WEIGHT
 
 .weight-container {
-  position: relative;
+  position: absolute;
   width: 590px;
   height: 590px;
-  left: -130px;
-  top: 0px;
-  margin-top: 20px;
+  left: -160px;
+  top: 0;
   float: left;
+    
     -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
     -webkit-mask-position: 0px 0px;
+
+    clip-path: url(../img/clip.svg#svgClip);
+    // -webkit-clip-path: url(../img/clip.svg);
+
+    
+    // -moz-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // -moz-mask-position: 0px 0px;
+    // -ms-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // -ms-mask-position: 0px 0px;
+    // mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // mask-position: 0px 0px;
     overflow: hidden;
 }
 
@@ -761,17 +823,21 @@ input[type="radio"]{
     cursor: pointer;
 }
 
+.weight-answer{
+  margin-top: 15rem;
+}
 
 .height-container {
-  width: 146px;
+  width: 100%;
   height: 1298px;
-  left: -210px;
-  top: 0px;
+  left: 50px;
+  top: -20px;
   margin-top: 40px;
   position: relative;
   float: left;
   -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
   -webkit-mask-position: 0px 0px;
+  clip-path: url(../img/height-mask.svg#heightMask);
   overflow: hidden;
 }
 
@@ -997,6 +1063,7 @@ input[type="radio"]{
     left: 0;
     margin-top: 50px;
     border-color: transparent;
+    z-index: 2000;
     &:hover{
       background: $red;
       color: #fff;
@@ -1286,11 +1353,12 @@ input[type="radio"]{
   @include transform(translateY(50px));
   top: 0px;
   .bmi-result {
+    display: block;
     opacity: 0;
-    font-size: 2rem;
     font-family: "avg_bold";
     background: #fff;
-    position: relative;
+    color: $pink;
+    position: absolute;
     width: 100%;
     height: 100%; 
   }
@@ -1332,6 +1400,7 @@ footer{
     width: 5rem;
     height: 4.5rem;
     z-index: 2000;
+    cursor: pointer;
     .line{
       width: 100%;
       height: 3px;
@@ -1341,7 +1410,7 @@ footer{
   }
   .dots{
     bottom: 6rem;
-    left: .8rem;
+    left: auto;
   }
   .dot{
     width: 4px;
@@ -1475,16 +1544,19 @@ footer{
   .assessment{
     width: 100%;
     .bottle{
-      
+      left: 20px;
     }
     .drinks{
-      
+      width: 120%;
     }
     .drink{
-
+      margin-right: 0px;
+      margin-left: -19px;
+      float: left;
       &:first-of-type{
+        margin-left: 0;
         img{
-
+          left: 0px;
         }
       }
       img{
@@ -1594,9 +1666,13 @@ footer{
     .toggle-box{
       position: absolute;
       top: 0;
+      height: 70px;
       .understand,
-      .assess{
+      .assess,
+      .assess-start,
+      .lets-go{
         padding: .7em 2em;
+        height: 70px;
         h4{
           font-size: 3em;
         }
@@ -1672,6 +1748,9 @@ footer{
       }
     }
   }
+  .assessment-wrap{
+    height: calc(100% - 82px);
+  }
   .question,.vignette{
     .prompt{
       width: 100%;
@@ -1680,9 +1759,37 @@ footer{
   }
   .question{
     @include transform(translateY(20px));
+    text-align: center;
     top: 0px;
-    .bmi-result {
-      font-size: 2rem;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 8rem;
+    padding-top: 2rem;
+    &.weight-question{
+      overflow: visible;
+    }
+    &.drinks-question{
+      overflow: visible;
+      button{
+        left: -20%;
+      }
+    }
+  }
+  .btn-calculate {
+    left: 64px;
+  }
+  .checkbox-list{
+    text-align: left;
+    width: 100%;
+    &.column-left{
+      width: 100%;
+      float: left;
+      margin-bottom: 0;
+    }
+    &.column-right{
+      margin-top: -1rem;
+      width: 100%;
+      float: left;
     }
   }
 

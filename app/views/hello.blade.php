@@ -67,9 +67,9 @@
       <div class="vignettes">
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h3>Lifestyle<span class="percent">0%</span></h3><br>
-          <h3>Your Normal<span class="percent">0%</span></h3><br>
-          <h3>Family History<span class="percent">0%</span></h3>
+          <h3>Lifestyle</h3><br>
+          <h3>Your Normal</h3><br>
+          <h3>Family History</h3>
         </div>
       </div>
       <div class="cards">
@@ -295,9 +295,6 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question" data-question-id="1">
@@ -320,30 +317,43 @@
             <button data-answer-id="0">40+</button>
           </div>
         </div>
-
-        <div class="question" data-question-id="3">
-          <div class="bmi-result">
-            
-          </div>
-          <div class="bmi-wrapper">  
-            <div class="prompt">Is your body mass index (BMI) between 18.5 - 24.9? What is your height and weight?</div>
+        
+        <div class="question weight-question" data-question-id="3">
+          <div class="weight-wrapper">  
+            <div class="prompt">What is your weight?</div>
             <div class="visual">
               <div class="weight-container">
                 <div id="weight-base"></div>
                 <div id="weight-overlay"></div>
               </div>
+            </div>
+            <div class="answers weight-answer">
+              <button class="submit-weight">Continue</button>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        <div class="question" data-question-id="3" data-question-name="bmi">
+          <div class="bmi-result">
+            <div class="answers">
+              <button>Continue</button>
+            </div>
+          </div>
+          <div class="height-wrapper">  
+            <div class="prompt">What is your height?</div>
+            <div class="visual">
               <div class="height-container">
                 <div id="height-base"></div>
                 <div id="height-overlay"></div>
               </div>
             </div>
-          </div>    
+            <button class="btn-calculate">Calculate</button>
+          </div>   
           <br>
-          <button class="btn-calculate">Calculate</button>
-          <button class="btn-wrap">Continue</button>
         </div>
 
-       <div class="question" data-question-id="4">
+       <div class="question drinks-question" data-question-id="4">
           <div class="prompt">Drag drink icon to the number of drinks per day you have — don’t forget to count the weekends!</div>
           <div class="bottle"><img src="img/assessment/bottle.png"></div>
           <div class="answers drinks">
@@ -357,8 +367,9 @@
             <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+            <br>
+            <button>Continue</button>
           </div>
-          <button>Continue</button>
         </div>
 
 
@@ -440,8 +451,9 @@
             <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
-          <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
           <button class="sub ask">Help me ask them</button>          
         </div>
 
@@ -457,8 +469,9 @@
               <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="5|0"><div class="label">I don’t know</div></div>
             </div>
               <br>
-              <br>
-              <button>Continue</button>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
           </div>
         </div>
 
@@ -472,8 +485,9 @@
             <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
-          <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
         </div>
     
         <div class="question cb3" data-question-id="17">
@@ -496,7 +510,9 @@
           </div>     
           <br>
           <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
           <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
@@ -534,14 +550,19 @@
 <!-- EDUCATION -->
 
     <section class="education">
+      <div class="fb-faces">
+          <div class="faces lifestyle"></div>
+          <div class="faces knowing"></div>
+          <div class="faces family"></div>
+      </div>
       <!-- MASTER VIDEO -->    
       <div class="video">
         <video class="bg-video" src="" type="video/mp4" loop></video>
       </div>
       <div class="nav">
-        <div class="nav-item"><span class="percent">0%</span> Lifestyle</div>
-        <div class="nav-item"><span class="percent">0%</span> Your Normal</div>
-        <div class="nav-item"><span class="percent">0%</span> Family History</div>
+        <div class="nav-item">Lifestyle</div>
+        <div class="nav-item">Your Normal</div>
+        <div class="nav-item">Family History</div>
       </div>
       <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
       <div class="education-menu">
@@ -657,7 +678,7 @@
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
-              <button class="facebook">Pledge to Improve Your Lifestyle</button><br>
+              <button class="facebook lifestyle">Pledge to Improve Your Lifestyle</button><br>
               <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
             <!-- <div class="headline">
@@ -746,7 +767,7 @@
               <h3>Don’t forget to take care.</h3>
               <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
               <br>
-              <button>Text Me.</button>
+              <button class="text-me">Text Me.</button>
               <br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
@@ -801,7 +822,7 @@
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
-              <button class="facebook">Pledge to Know Your Normal</button><br>
+              <button class="facebook knowing">Pledge to Know Your Normal</button><br>
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
@@ -879,7 +900,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
-              <button class="facebook">Pledge to Learn Your Family History</button><br>
+              <button class="facebook family">Pledge to Learn Your Family History</button><br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <!-- <div class="headline">            
@@ -928,6 +949,29 @@
       src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
     </script>
     <script src="js/roulette.js"></script>
+    <script src="js/facebook.js"></script>
+
+      <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
+    <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '757106917704007',
+          xfbml      : true,
+          version    : 'v2.2',
+          cookie   : true,
+          status     : true
+        });
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+    </script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

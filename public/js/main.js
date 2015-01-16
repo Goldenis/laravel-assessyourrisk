@@ -57,59 +57,58 @@
 
 
   $(window).on('scroll',function(e){
-    if(overlayOpen){
-      return;
-    }
-    e.preventDefault();
+    // if(overlayOpen){
+    //   return;
+    // }
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
-    if(overlayOpen){
-      return;
-    }
-    if(_isTouchDevice){
-      eventData.preventDefault();
-    }else{
-      _currentFrame -= deltaY;
-      _currentFrame = Math.max(0,_currentFrame);
-      //_scrollHandler();
-      eventData.preventDefault();
-    }
+    // if(overlayOpen){
+    //   return;
+    // }
+    // if(_isTouchDevice){
+    //   eventData.preventDefault();
+    // }else{
+    //   _currentFrame -= deltaY;
+    //   _currentFrame = Math.max(0,_currentFrame);
+    //   //_scrollHandler();
+    //   eventData.preventDefault();
+    // }
   })
   $(window).bind('touchstart',function(e){
-    if(overlayOpen){
-      return;
-    }
-    _isTouchDevice = true;
-    distance = 0;
-    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    touchStartY = touch.pageY;
-    clearInterval(inertiaInterval);
+    // if(overlayOpen){
+    //   return;
+    // }
+    // _isTouchDevice = true;
+    // distance = 0;
+    // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    // touchStartY = touch.pageY;
+    // clearInterval(inertiaInterval);
   })
   $(window).bind('touchmove',function(e){
-    if(overlayOpen){
-      return;
-    }
-    e.preventDefault();
-    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    distance = touch.pageY-touchStartY;
-    _currentFrame -= distance/10;
-    _currentFrame = Math.floor(Math.max(_currentFrame,0));
-    //_scrollHandler();
-    touchStartY = touch.pageY;
+    // if(overlayOpen){
+    //   return;
+    // }
+    // e.preventDefault();
+    // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    // distance = touch.pageY-touchStartY;
+    // _currentFrame -= distance/10;
+    // _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    // //_scrollHandler();
+    // touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
-    if(overlayOpen){
-      return;
-    }
-    var inertiaInterval = setInterval(function(){
-      distance*=.9;
-      _currentFrame -= distance/3;
-      _currentFrame = Math.floor(Math.max(_currentFrame,0));
-      //_scrollHandler();
-      if(Math.abs(distance) < .2){
-        clearInterval(inertiaInterval)
-      }
-    },10)
+    // if(overlayOpen){
+    //   return;
+    // }
+    // var inertiaInterval = setInterval(function(){
+    //   distance*=.9;
+    //   _currentFrame -= distance/3;
+    //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //   //_scrollHandler();
+    //   if(Math.abs(distance) < .2){
+    //     clearInterval(inertiaInterval)
+    //   }
+    // },10)
   })
 
 
@@ -139,7 +138,7 @@
     }
     setFontScale($('html'),11,16,'px');
     $('.wheel-container').css({
-      '-webkit-transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
+      'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
     });
   }
   function setFontScale (el,min,max,type){
@@ -266,13 +265,13 @@
       $('.dot').eq(_currentQuestion).addClass('active');
     })
     $('.ask').on('click',askHandler);
-    $('.question button').on('click',function(e){
+    $('.btn-calculate').on('click',function(e){
+      calculateWeight($(this));
+    })
+    $('.question .answers button').on('click',function(e){
       if(!$(this).hasClass('sub')){
         answerQuestion($(this));
       }
-    })
-    $('.btn-calculate').on('click',function(){
-      calculateWeight($(this));
     })
     $('.asterisk').on('mouseenter',function(){
       $(this).next().addClass("show");
@@ -311,9 +310,6 @@
       $('.right-column').removeClass('left');
       $('.education').removeClass('in');
     })
-    $('.facebook').on('click',function () {
-      window.open("fb.html", "PopupWindow", "width=520,height=420,scrollbars=no,resizable=no");
-    })
     $('.progress,.menu-icon').on('click',function(){
       if(!overlayOpen){
         openProgressOverlay();
@@ -323,6 +319,9 @@
     })
     $('.nav-item').on('click',function () {
       changeModule($(this).index());
+    })
+    $('.text-me').on('click',function () {
+      window.open('http://www.brightpink.org/awareness-to-action/breast-health-reminders/');
     })
     $('.btn-begin').on('click',function(){
       showNextHeadline();
@@ -338,20 +337,8 @@
       var l;
       
       _$window.bind('mousemove',function(e){
-        distance = x-e.pageX;
-        l = Math.max(50,$('.bottle').position().left-distance);
-        l = Math.min(l,550);
-        currentGlass = Math.floor((l-5)/59);
-        $('.drink img').eq(currentGlass).css({
-          opacity: 1
-        })
-        $('.drink img').eq(currentGlass+1).css({
-          opacity: 0
-        })
-        $('.bottle').css({
-          left: l,
-          //'-webkit-transform': 'rotate('+distance+'deg)'
-        })
+        var newX = e.pageX;
+        dragBottle(x, newX)
         x = e.pageX;
         distance = 0;
       })
@@ -359,7 +346,54 @@
     _$window.on('mouseup',function () {
       _$window.unbind('mousemove');
     })
+    $('.bottle').on('touchstart',function(e){
+      var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+      e.preventDefault();
+      var x = touch.pageX;
+      var distance = 0;
+      var l;
+      
+      _$window.bind('touchmove',function(e){
+        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+        var newX = touch.pageX;
+        dragBottle(x, newX)
+        x = touch.pageX;
+        distance = 0;
+      })
+    })
+    _$window.on('touchend',function () {
+      _$window.unbind('touchmove');
+    })
     _$window.bind('resize', _pageResize);
+  }
+  function dragBottle(x, newX) {
+    distance = x-newX;
+    var min = 50;
+    if(_smallScreen){
+      min = 20;
+    }
+    l = Math.max(min,$('.bottle').position().left-distance);
+    l = Math.min(l,550);
+    var glassW = 59;
+    if(_smallScreen){
+      glassW = 22;
+    }
+    currentGlass = Math.floor((l-5)/glassW);
+    for(var i=0;i<$('.drink').length;i++){
+      if(i <= currentGlass){
+        $('.drink img').eq(i).css({
+          opacity: 1
+        })
+      }else{
+        $('.drink img').eq(i).css({
+          opacity: 0
+        })
+      }
+    }
+    $('.bottle').css({
+      left: l,
+      //'-webkit-transform': 'rotate('+distance+'deg)'
+    })
   }
   function hideIntro() {
     $('.intro').addClass('out-up')
@@ -438,12 +472,9 @@
       visibility: 'hidden'
     })     
 
-    $('.bmi-wrapper').css({
-      opacity: 0
-    })     
-    $('.btn-wrap').css({
-      opacity: 1
-    })    
+    $('.height-wrapper').css({
+      display: "none"
+    })
 
     $('.bmi-result').css({
       opacity: 1
@@ -454,7 +485,7 @@
 //    console.log("weightInPounds:" + window.weightInPounds);
     // BMI = Formula: weight (lb) / [height (in)]2 x 703
     var BMI = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
-    $(".bmi-result").html("Your BMI result is<br><h4>" + BMI + "</h4>");
+    $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
     /*
     BMI
     Weight Status
@@ -532,7 +563,7 @@
     // 15 - gene mutation have you or your relative
     // 16 - Within one side of the family
     var ansTxt = answer.attr("data-answer-id");
-    if (_currentQuestion == 2) {
+    if ($.contains(_currentQuestion,$('.bmi-result'))) {
       var bmi = ( (window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703 ).toPrecision(4);
       if (bmi < 18.5) {
         ansTxt = "-1";
@@ -544,6 +575,7 @@
         ansTxt = "-1";
       }
     }
+    console.log(_currentQuestion)
     if (_currentQuestion == 3) ansTxt = currentGlass;
     if (_currentQuestion == 13) {
       var data = [];
@@ -682,7 +714,6 @@ Do you know if I do%3F";
     }
   }
   function answerQuestion(answer){
-   
 
     if(_currentQuestion >= $('.question').length-1){
       addCustomResults()
@@ -693,18 +724,6 @@ Do you know if I do%3F";
       $('.questions').css({
         display: 'none'
       })
-    }
- 
-    if(_currentQuestion == 1) {
-//      console.log(_currentQuestion)
-      $('.btn-wrap').css({
-      opacity: 1
-      })    
-    }
-
-    if(_currentQuestion == 2 && receivedBMI == false ) {
-      receivedBMI = true;
-      return   
     }
     $('.fact').eq(_currentQuestion).removeClass('in');
     $('.fact').eq(_currentQuestion).addClass('out');
@@ -728,7 +747,9 @@ Do you know if I do%3F";
     $('.question').eq(_currentQuestion).addClass('out-up')
     $('.question').eq(_currentQuestion).removeClass('in')
     
-    handleSaveQuizAnswer(answer)
+    if(!$(this).hasClass('submit-weight')){
+      handleSaveQuizAnswer(answer)
+    }
     var _oldQuestion = _currentQuestion;
     _currentQuestion++;
     setTimeout(function(){

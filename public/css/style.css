@@ -276,6 +276,54 @@ button.sub:hover {
   color: #f6323e;
   border-color: #f6323e;
 }
+.fb-faces {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.fb-faces.in {
+  opacity: 1;
+  z-index: 100;
+}
+.fb-faces .lifestyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .lifestyle.in {
+  opacity: 1;
+  z-index: 100;
+}
+.fb-faces .knowing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .knowing.in {
+  opacity: 1;
+  z-index: 100;
+}
+.fb-faces .family {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .family.in {
+  opacity: 1;
+  z-index: 100;
+}
 .overlay {
   position: fixed;
   left: 0;
@@ -591,7 +639,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 350px;
+  top: 18rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -763,15 +811,15 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 22px;
 }
 .weight-container {
-  position: relative;
+  position: absolute;
   width: 590px;
   height: 590px;
-  left: -130px;
-  top: 0px;
-  margin-top: 20px;
+  left: -160px;
+  top: 0;
   float: left;
   -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
   -webkit-mask-position: 0px 0px;
+  clip-path: url(../img/clip.svg#svgClip);
   overflow: hidden;
 }
 #weight-base {
@@ -794,16 +842,20 @@ input[type="checkbox"], input[type="radio"] {
   z-index: 1000;
   cursor: pointer;
 }
+.weight-answer {
+  margin-top: 15rem;
+}
 .height-container {
-  width: 146px;
+  width: 100%;
   height: 1298px;
-  left: -210px;
-  top: 0px;
+  left: 50px;
+  top: -20px;
   margin-top: 40px;
   position: relative;
   float: left;
   -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
   -webkit-mask-position: 0px 0px;
+  clip-path: url(../img/height-mask.svg#heightMask);
   overflow: hidden;
 }
 #height-base {
@@ -1073,6 +1125,7 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
   margin-top: 50px;
   border-color: transparent;
+  z-index: 2000;
 }
 .education .btn-continue:hover {
   background: #f6323e;
@@ -1454,11 +1507,12 @@ input[type="checkbox"], input[type="radio"] {
   top: 0px;
 }
 .question .bmi-result {
+  display: block;
   opacity: 0;
-  font-size: 2rem;
   font-family: "avg_bold";
   background: #fff;
-  position: relative;
+  color: #d7006d;
+  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -1517,6 +1571,7 @@ footer {
     width: 5rem;
     height: 4.5rem;
     z-index: 2000;
+    cursor: pointer;
   }
   .menu-icon .line {
     width: 100%;
@@ -1526,7 +1581,7 @@ footer {
   }
   .dots {
     bottom: 6rem;
-    left: 0.8rem;
+    left: auto;
   }
   .dot {
     width: 4px;
@@ -1550,7 +1605,7 @@ footer {
     margin-top: 180px;
   }
   .progress-overlay .close-btn {
-    display: none;
+    display: none !important;
   }
   .progress-overlay .progress {
     width: 96px;
@@ -1652,6 +1707,23 @@ footer {
   }
   .assessment {
     width: 100%;
+  }
+  .assessment .bottle {
+    left: 20px;
+  }
+  .assessment .drinks {
+    width: 120%;
+  }
+  .assessment .drink {
+    margin-right: 0px;
+    margin-left: -19px;
+    float: left;
+  }
+  .assessment .drink:first-of-type {
+    margin-left: 0;
+  }
+  .assessment .drink:first-of-type img {
+    left: 0px;
   }
   .assessment-intro {
     position: absolute;
@@ -1759,11 +1831,13 @@ footer {
   .right-column .toggle-box {
     position: absolute;
     top: 0;
+    height: 70px;
   }
-  .right-column .toggle-box .understand, .right-column .toggle-box .assess {
+  .right-column .toggle-box .understand, .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7em 2em;
+    height: 70px;
   }
-  .right-column .toggle-box .understand h4, .right-column .toggle-box .assess h4 {
+  .right-column .toggle-box .understand h4, .right-column .toggle-box .assess h4, .right-column .toggle-box .assess-start h4, .right-column .toggle-box .lets-go h4 {
     font-size: 3em;
   }
   .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
@@ -1836,6 +1910,9 @@ footer {
     width: 100%;
     left: 0;
   }
+  .assessment-wrap {
+    height: calc(100% - 82px);
+  }
   .question .prompt, .vignette .prompt {
     width: 100%;
     font-size: 1.4em;
@@ -1845,10 +1922,38 @@ footer {
     -moz-transform: translateY(20px);
     -o-transform: translateY(20px);
     transform: translateY(20px);
+    text-align: center;
     top: 0px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 8rem;
+    padding-top: 2rem;
   }
-  .question .bmi-result {
-    font-size: 2rem;
+  .question.weight-question {
+    overflow: visible;
+  }
+  .question.drinks-question {
+    overflow: visible;
+  }
+  .question.drinks-question button {
+    left: -20%;
+  }
+  .btn-calculate {
+    left: 64px;
+  }
+  .checkbox-list {
+    text-align: left;
+    width: 100%;
+  }
+  .checkbox-list.column-left {
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .checkbox-list.column-right {
+    margin-top: -1rem;
+    width: 100%;
+    float: left;
   }
 }
 .ir {

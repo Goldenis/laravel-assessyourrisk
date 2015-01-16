@@ -764,7 +764,7 @@
               <h3>Don’t forget to take care.</h3>
               <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
               <br>
-              <button>Text Me.</button>
+              <button class="text-me">Text Me.</button>
               <br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>

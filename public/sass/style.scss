@@ -349,32 +349,34 @@ button{
   .close-btn{
     background: $nude;
   }
-  .charts{
-    width: 100%;
-    height: 120px;
-    margin-top: 180px;
-  }
   .progress{
-    width: 96px;
-    height: 96px;
-    margin-left: 5.5em;
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    margin-left: 0em;
     left: 0;
-    position: absolute;
+    top: 0 !important;
+    .percentage{
+      width: 6rem;
+      text-align: center;
+      left: 0;
+      @include transform(translate3d(0,0,0));
+    }
   }
   .progress:nth-of-type(2){
-    left: 62%;
+    left: 0%;
   }
   .chart{
     width: 6rem;
     height: 6rem;
+    margin: 0 0 9px 0 !important;
     margin-bottom: 9px;
   }
   .share{
-    width: calc(100% - 12em);
+    width: 100%;
+    padding: 3rem 6rem;
     text-align: center;
-    position: absolute;
-    left: 6em;
-    top: 35px;
+    position: relative;
     button{
       margin-top: -25px;
     }
@@ -392,6 +394,7 @@ button{
     height: 100%;
     float: left;
     .progress-question{
+      margin-top: 50px;
       &:last-of-type{
         margin-bottom: 50px;
       }
@@ -573,7 +576,7 @@ button{
   height: 8px;
   @include rounded(50%);
   background: $light-gray;
-  margin-right: 20px;
+  margin-right: 1rem;
   @include transition(.6s,$ease-out-back);
   top: 0;
   &.active{
@@ -927,13 +930,10 @@ input[type="radio"]{
   left: 100%;
   .dots{
     bottom: auto;
-    top: 1.3rem; 
+    top: 2.3rem; 
     width: 66.666%;
     left: 33.333%;
     z-index: 3;
-    .dot{
-      background: #fff;
-    }
   }
   .module{
     position: absolute;
@@ -1425,7 +1425,9 @@ footer{
   }
   .dots{
     bottom: 6rem;
-    left: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
   .dot{
     width: 4px;
@@ -1442,33 +1444,24 @@ footer{
   }
   .progress-overlay{
     -webkit-overflow-scrolling: touch;
-    .charts{
-      width: 100%;
-      height: 120px;
-      margin-top: 180px;
-    }
+    text-align: center;
     .close-btn{
       display: none !important;
     }
-    .progress{
-      width: 96px;
-      height: 96px;
-      margin-left: 5.5em;
-      left: 0;
-    }
-    .progress:nth-of-type(2){
-      left: 50%;
-    }
-    .chart{
-      width: 6rem;
-      height: 6rem;
-      margin-bottom: 9px;
-    }
     .share{
-      width: calc(100% - 2em);
-      left: 1em;
-      top: 65px;
+      width: 100%;
+      padding: 3rem 1rem;
+      position: relative;
     }
+    .progress{
+      .chart{
+        margin: auto !important;
+      }
+      .percentage{
+        width: 100%;
+      }
+    }
+    
     .questions{
       padding: 1em 2em;
       width: 100%;
@@ -1506,9 +1499,10 @@ footer{
       }
     }
     .vignettes{
-      padding: 1em 2em;
+      padding: 1em 2em 3rem;
       width: 100%;
       height: auto;
+      border-left: none;
       .sections{
         margin-top: 20px;
       }
@@ -1570,12 +1564,9 @@ footer{
       float: left;
       &:first-of-type{
         margin-left: 0;
-        img{
-          left: 0px;
-        }
       }
       img{
-        
+        left: 0px;
       }
     }
   }
@@ -1600,6 +1591,12 @@ footer{
       text-align: center;
       .dot{
         background: #fff;
+        &.active{
+          width: 4px;
+          height: 4px;
+          top: 0;
+          background: $pink;
+        }
       }
     }
     .module{

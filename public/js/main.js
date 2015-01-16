@@ -28,16 +28,18 @@
   var _currentModule = 0;
   var _oldModule;
   var _currentQuestion = 0;
+  var _totalQuestions;
+  var _totalHeadlines;
   var _currentVignette = 0;
   var _oldVignette;
-  var _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+  var _currentHeadline;
   var _oldHeadline;
   var _myL = 0;
   var _preL = 0;
 
-  setInterval(function(){
-    $('.person').html(people[Math.floor(Math.random()*people.length)])
-  },2000);
+  // setInterval(function(){
+  //   $('.person').html(people[Math.floor(Math.random()*people.length)])
+  // },2000);
 
   var MOBILE_WIDTH = "767";
   var TABLET_WIDTH = "1024";
@@ -163,7 +165,7 @@
     console.log("Next Headline")
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
     var nextHeadline = _currentHeadline.index() + 1;
-    console.log("numHeadlines: " + numHeadlines, "nextHeadline: " + nextHeadline)
+    $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
     if (initialized && nextHeadline < numHeadlines){
       _currentHeadline.removeClass('active');
       _currentHeadline.addClass('out');
@@ -301,7 +303,7 @@
       changeModule($(this).index());
     })
     $('.progress-overlay .vignettes h3').on('click',function(){
-      changeModule($(this).index($('h3')));
+      changeModule($('.progress-overlay .vignettes h3').index($(this)));
       closeProgressOverlay();
       $('.assessment').removeClass('in');
       $('.right-column').addClass('left');
@@ -398,6 +400,16 @@
       left: l,
       //'-webkit-transform': 'rotate('+distance+'deg)'
     })
+  }
+  function createDots() {
+    for (var i = 0; i < _totalQuestions; i++) {
+      var dot = '<div class="dot"></div>';
+      $('.assessment .dots').append(dot);
+    };
+    for (var i = 0; i < _totalHeadlines; i++) {
+      var dot = '<div class="dot"></div>';
+      $('.education .dots').append(dot);
+    };
   }
   function hideIntro() {
     $('.intro').addClass('out-up')
@@ -521,8 +533,10 @@
     // percquiz percdive
     var questionsAnswered = 0;
     for (q in savedQuizProgress) questionsAnswered++;
-    var quizProgress = questionsAnswered/22;
-    $(".percquiz").html(Math.ceil(quizProgress * 100) + "%");
+    
+    var quizProgress = questionsAnswered+'/'+_totalQuestions;
+    $(".percquiz").html(quizProgress);
+
     chart2.transitionToValues (5,
         8,
         [quizProgress, 1-quizProgress], 
@@ -530,12 +544,12 @@
     chart4.transitionToValues (5,
         8,
         [quizProgress, 1-quizProgress], 
-        ['#D7006D','#FFFFFF']);    
+        ['#D7006D','#FFFFFF']);
 
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
-    var diveProgress = deepViewed/($('.headline').length -1);
-    $(".percdive").html(Math.ceil(diveProgress * 100) + "%");
+    var diveProgress = deepViewed + '/' + _totalHeadlines;
+    $(".percdive").html(diveProgress);
     chart3.transitionToValues (5,
         8,
         [diveProgress, 1-diveProgress], 4
@@ -732,7 +746,7 @@ Do you know if I do%3F";
   }
   function answerQuestion(answer){
 
-    if(_currentQuestion >= $('.question').length-1){
+    if(_currentQuestion >= _totalQuestions-1){
       addCustomResults()
       openProgressOverlay();
       $('.results, .cards').css({
@@ -851,7 +865,7 @@ Do you know if I do%3F";
     for(var i=0;i < $('.prompt').length-1;i++){
       html += "<div class='progress-question'><b>Q" + (i+1) + ":</b><br><h4>" + $('.prompt').eq(i).html() + "</h4></div>"
     }
-    $('.progress-overlay .questions').append(html);
+    $('.progress-overlay .questions .progress').after(html);
   }
 
 
@@ -890,11 +904,17 @@ Do you know if I do%3F";
     });   
 
   $(document).ready(function() {
-
+    _totalQuestions = $('.question').length;
+    _totalHeadlines = $('.headline').length;
+    _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
     //position the header to be 90%;
     _$window = $(window);
     _$document = $(window.document);
     createProgressOverlay();
+    createDots();
+    for(var i=0;i<_totalHeadlines;i++){
+      $('.headline').eq(i).attr('data-idx',i)
+    }
     _registerEventListeners();
     _pageResize();
     initialized = true;

@@ -31,19 +31,9 @@
       </div>
       <button class="sub close-btn">✕</button>
       <div class="share">
-        <h5>Save the life of somebody you love. Like your <span class="person">sister</span>.<br>Tell them to complete this experience too.</h5>
+        <h5>Save the life of somebody you love. <!-- Like your <span class="person">sister</span>. -->Tell them to complete this experience too.</h5>
         <br>
         <button class="share-btn">SHARE</button>
-      </div>
-      <div class="charts">
-        <div class="progress">
-          <div class="percentage percquiz">0%</div>
-          <div class="chart chart-4"></div>
-        </div>
-        <div class="progress">
-          <div class="percentage percdive">0%</div>
-          <div class="chart chart-5"></div>
-        </div>
       </div>
       <div class="results">
         <div class="your-risk">
@@ -65,10 +55,14 @@
         </div>
       </div>
       <div class="vignettes">
+        <div class="progress">
+          <div class="percentage percdive"></div>
+          <div class="chart chart-5"></div>
+        </div>
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h3>Lifestyle</h3><br>
-          <h3>Your Normal</h3><br>
+          <h3>Lifestyle</h3>
+          <h3>Your Normal</h3>
           <h3>Family History</h3>
         </div>
       </div>
@@ -111,6 +105,10 @@
         </div>
       </div>
       <div class="questions">
+        <div class="progress">
+          <div class="percentage percquiz"></div>
+          <div class="chart chart-4"></div>
+        </div>
       </div>
     </div>
     <!-- INTRO -->
@@ -138,12 +136,12 @@
       <div class="dashboard">
         <h6 class="label">MY PROGRESS</h6>
         <div class="progress">
-          <div class="percentage percquiz">0%</div>
+          <div class="percentage percquiz"></div>
           <div class="chart chart-2"></div>
           <h6>Assess</h6>
         </div>
         <div class="progress">
-          <div class="percentage percdive">0%</div>
+          <div class="percentage percdive"></div>
           <div class="chart chart-3"></div>
           <h6>Understand</h6>
         </div>
@@ -280,26 +278,6 @@
         <button class="action">Let’s Go.</button>
       </section>
       <div class="dots">
-        <div class="tooltip-bottom"></div><br>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
       </div>
       <div class="assessment-wrap">
         <div class="question" data-question-id="1">
@@ -564,26 +542,6 @@
         <video class="bg-video" src="" type="video/mp4" loop></video>
       </div>
       <div class="dots">
-        <div class="tooltip-bottom"></div><br>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
       </div>
       <div class="nav">
         <div class="nav-item">Lifestyle</div>

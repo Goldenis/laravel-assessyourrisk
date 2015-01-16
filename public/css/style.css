@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -16,7 +21,7 @@
 b {
   font-family: 'avg_bold';
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -61,9 +66,7 @@ b {
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -204,10 +207,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -372,32 +376,37 @@ button.sub:hover {
 .progress-overlay .close-btn {
   background: #ffb4aa;
 }
-.progress-overlay .charts {
-  width: 100%;
-  height: 120px;
-  margin-top: 180px;
-}
 .progress-overlay .progress {
-  width: 96px;
-  height: 96px;
-  margin-left: 5.5em;
+  position: relative;
+  width: 100%;
+  height: 7rem;
+  margin-left: 0em;
   left: 0;
-  position: absolute;
+  top: 0 !important;
+}
+.progress-overlay .progress .percentage {
+  width: 6rem;
+  text-align: center;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .progress-overlay .progress:nth-of-type(2) {
-  left: 62%;
+  left: 0%;
 }
 .progress-overlay .chart {
   width: 6rem;
   height: 6rem;
+  margin: 0 0 9px 0 !important;
   margin-bottom: 9px;
 }
 .progress-overlay .share {
-  width: calc(100% - 12em);
+  width: 100%;
+  padding: 3rem 6rem;
   text-align: center;
-  position: absolute;
-  left: 6em;
-  top: 35px;
+  position: relative;
 }
 .progress-overlay .share button {
   margin-top: -25px;
@@ -414,6 +423,9 @@ button.sub:hover {
   width: 62%;
   height: 100%;
   float: left;
+}
+.progress-overlay .questions .progress-question {
+  margin-top: 50px;
 }
 .progress-overlay .questions .progress-question:last-of-type {
   margin-bottom: 50px;
@@ -603,7 +615,7 @@ button.sub:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: #ccc;
-  margin-right: 20px;
+  margin-right: 1rem;
   -webkit-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
   -moz-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
   -o-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
@@ -962,13 +974,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .dots {
   bottom: auto;
-  top: 1.3rem;
+  top: 2.3rem;
   width: 66.666%;
   left: 33.333%;
   z-index: 3;
-}
-.education .dots .dot {
-  background: #fff;
 }
 .education .module {
   position: absolute;
@@ -1578,7 +1587,9 @@ footer {
   display: none;
 }
 @media (max-width: 768px) {
-  .logo-white {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .logo-white {
     display: none;
   }
   .menu-icon {
@@ -1600,7 +1611,9 @@ footer {
   }
   .dots {
     bottom: 6rem;
-    left: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
   .dot {
     width: 4px;
@@ -1617,33 +1630,21 @@ footer {
   }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
-  }
-  .progress-overlay .charts {
-    width: 100%;
-    height: 120px;
-    margin-top: 180px;
+    text-align: center;
   }
   .progress-overlay .close-btn {
     display: none !important;
   }
-  .progress-overlay .progress {
-    width: 96px;
-    height: 96px;
-    margin-left: 5.5em;
-    left: 0;
-  }
-  .progress-overlay .progress:nth-of-type(2) {
-    left: 50%;
-  }
-  .progress-overlay .chart {
-    width: 6rem;
-    height: 6rem;
-    margin-bottom: 9px;
-  }
   .progress-overlay .share {
-    width: calc(100% - 2em);
-    left: 1em;
-    top: 65px;
+    width: 100%;
+    padding: 3rem 1rem;
+    position: relative;
+  }
+  .progress-overlay .progress .chart {
+    margin: auto !important;
+  }
+  .progress-overlay .progress .percentage {
+    width: 100%;
   }
   .progress-overlay .questions {
     padding: 1em 2em;
@@ -1678,9 +1679,10 @@ footer {
     left: 2rem;
   }
   .progress-overlay .vignettes {
-    padding: 1em 2em;
+    padding: 1em 2em 3rem;
     width: 100%;
     height: auto;
+    border-left: none;
   }
   .progress-overlay .vignettes .sections {
     margin-top: 20px;
@@ -1741,7 +1743,7 @@ footer {
   .assessment .drink:first-of-type {
     margin-left: 0;
   }
-  .assessment .drink:first-of-type img {
+  .assessment .drink img {
     left: 0px;
   }
   .assessment-intro {
@@ -1765,6 +1767,12 @@ footer {
   }
   .education .dots .dot {
     background: #fff;
+  }
+  .education .dots .dot.active {
+    width: 4px;
+    height: 4px;
+    top: 0;
+    background: #d7006d;
   }
   .education .module .main {
     left: 0px;
@@ -1986,9 +1994,7 @@ footer {
     float: left;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

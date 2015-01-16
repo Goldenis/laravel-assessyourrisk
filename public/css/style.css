@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -13,7 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -58,9 +63,7 @@
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -201,10 +204,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -806,9 +810,9 @@ input[type="checkbox"], input[type="radio"] {
   margin-top: 15rem;
 }
 .height-container {
-  width: 146px;
+  width: 100%;
   height: 1298px;
-  left: 0px;
+  left: 50px;
   top: -20px;
   margin-top: 40px;
   position: relative;
@@ -1471,7 +1475,7 @@ input[type="checkbox"], input[type="radio"] {
   font-family: "avg_bold";
   background: #fff;
   color: #d7006d;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -1516,7 +1520,9 @@ footer {
   display: none;
 }
 @media (max-width: 768px) {
-  .logo-white {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .logo-white {
     display: none;
   }
   .menu-icon {
@@ -1528,6 +1534,7 @@ footer {
     width: 5rem;
     height: 4.5rem;
     z-index: 2000;
+    cursor: pointer;
   }
   .menu-icon .line {
     width: 100%;
@@ -1852,6 +1859,9 @@ footer {
     width: 100%;
     left: 0;
   }
+  .assessment-wrap {
+    height: calc(100% - 82px);
+  }
   .question .prompt, .vignette .prompt {
     width: 100%;
     font-size: 1.4em;
@@ -1863,11 +1873,17 @@ footer {
     transform: translateY(20px);
     text-align: center;
     top: 0px;
+    height: 100%;
+  }
+  .btn-calculate {
+    left: 64px;
+  }
+  .checkbox-list {
+    text-align: left;
+    width: 100%;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999em;

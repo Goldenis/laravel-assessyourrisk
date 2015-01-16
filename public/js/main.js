@@ -57,23 +57,22 @@
 
 
   $(window).on('scroll',function(e){
-    if(overlayOpen){
-      return;
-    }
-    e.preventDefault();
+    // if(overlayOpen){
+    //   return;
+    // }
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
-    if(overlayOpen){
-      return;
-    }
-    if(_isTouchDevice){
-      eventData.preventDefault();
-    }else{
-      _currentFrame -= deltaY;
-      _currentFrame = Math.max(0,_currentFrame);
-      //_scrollHandler();
-      eventData.preventDefault();
-    }
+    // if(overlayOpen){
+    //   return;
+    // }
+    // if(_isTouchDevice){
+    //   eventData.preventDefault();
+    // }else{
+    //   _currentFrame -= deltaY;
+    //   _currentFrame = Math.max(0,_currentFrame);
+    //   //_scrollHandler();
+    //   eventData.preventDefault();
+    // }
   })
   $(window).bind('touchstart',function(e){
     if(overlayOpen){

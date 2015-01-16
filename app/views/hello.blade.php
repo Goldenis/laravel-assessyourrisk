@@ -67,9 +67,9 @@
       <div class="vignettes">
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h3>Lifestyle<span class="percent">0%</span></h3><br>
-          <h3>Your Normal<span class="percent">0%</span></h3><br>
-          <h3>Family History<span class="percent">0%</span></h3>
+          <h3>Lifestyle</h3><br>
+          <h3>Your Normal</h3><br>
+          <h3>Family History</h3>
         </div>
       </div>
       <div class="cards">
@@ -370,8 +370,8 @@
             <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
             <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+            <button>Continue</button>
           </div>
-          <button>Continue</button>
         </div>
 
 
@@ -453,8 +453,9 @@
             <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
-          <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
           <button class="sub ask">Help me ask them</button>          
         </div>
 
@@ -470,8 +471,9 @@
               <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="5|0"><div class="label">I don’t know</div></div>
             </div>
               <br>
-              <br>
-              <button>Continue</button>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
           </div>
         </div>
 
@@ -485,8 +487,9 @@
             <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
-          <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
         </div>
     
         <div class="question cb3" data-question-id="17">
@@ -509,7 +512,9 @@
           </div>     
           <br>
           <br>
-          <button>Continue</button>
+          <div class="answers">
+            <button>Continue</button>
+          </div>
           <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
@@ -557,9 +562,9 @@
         <video class="bg-video" src="" type="video/mp4" loop></video>
       </div>
       <div class="nav">
-        <div class="nav-item"><span class="percent">0%</span> Lifestyle</div>
-        <div class="nav-item"><span class="percent">0%</span> Your Normal</div>
-        <div class="nav-item"><span class="percent">0%</span> Family History</div>
+        <div class="nav-item">Lifestyle</div>
+        <div class="nav-item">Your Normal</div>
+        <div class="nav-item">Family History</div>
       </div>
       <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
       <div class="education-menu">

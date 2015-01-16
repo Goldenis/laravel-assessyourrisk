@@ -57,59 +57,58 @@
 
 
   $(window).on('scroll',function(e){
-    if(overlayOpen){
-      return;
-    }
-    e.preventDefault();
+    // if(overlayOpen){
+    //   return;
+    // }
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
-    if(overlayOpen){
-      return;
-    }
-    if(_isTouchDevice){
-      eventData.preventDefault();
-    }else{
-      _currentFrame -= deltaY;
-      _currentFrame = Math.max(0,_currentFrame);
-      //_scrollHandler();
-      eventData.preventDefault();
-    }
+    // if(overlayOpen){
+    //   return;
+    // }
+    // if(_isTouchDevice){
+    //   eventData.preventDefault();
+    // }else{
+    //   _currentFrame -= deltaY;
+    //   _currentFrame = Math.max(0,_currentFrame);
+    //   //_scrollHandler();
+    //   eventData.preventDefault();
+    // }
   })
   $(window).bind('touchstart',function(e){
-    if(overlayOpen){
-      return;
-    }
-    _isTouchDevice = true;
-    distance = 0;
-    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    touchStartY = touch.pageY;
-    clearInterval(inertiaInterval);
+    // if(overlayOpen){
+    //   return;
+    // }
+    // _isTouchDevice = true;
+    // distance = 0;
+    // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    // touchStartY = touch.pageY;
+    // clearInterval(inertiaInterval);
   })
   $(window).bind('touchmove',function(e){
-    if(overlayOpen){
-      return;
-    }
-    e.preventDefault();
-    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    distance = touch.pageY-touchStartY;
-    _currentFrame -= distance/10;
-    _currentFrame = Math.floor(Math.max(_currentFrame,0));
-    //_scrollHandler();
-    touchStartY = touch.pageY;
+    // if(overlayOpen){
+    //   return;
+    // }
+    // e.preventDefault();
+    // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    // distance = touch.pageY-touchStartY;
+    // _currentFrame -= distance/10;
+    // _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    // //_scrollHandler();
+    // touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
-    if(overlayOpen){
-      return;
-    }
-    var inertiaInterval = setInterval(function(){
-      distance*=.9;
-      _currentFrame -= distance/3;
-      _currentFrame = Math.floor(Math.max(_currentFrame,0));
-      //_scrollHandler();
-      if(Math.abs(distance) < .2){
-        clearInterval(inertiaInterval)
-      }
-    },10)
+    // if(overlayOpen){
+    //   return;
+    // }
+    // var inertiaInterval = setInterval(function(){
+    //   distance*=.9;
+    //   _currentFrame -= distance/3;
+    //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //   //_scrollHandler();
+    //   if(Math.abs(distance) < .2){
+    //     clearInterval(inertiaInterval)
+    //   }
+    // },10)
   })
 
 
@@ -338,24 +337,8 @@
       var l;
       
       _$window.bind('mousemove',function(e){
-        distance = x-e.pageX;
-        l = Math.max(50,$('.bottle').position().left-distance);
-        l = Math.min(l,550);
-        var glassW = 59;
-        if(_smallScreen){
-          glassW = 22;
-        }
-        currentGlass = Math.floor((l-5)/glassW);
-        $('.drink img').eq(currentGlass).css({
-          opacity: 1
-        })
-        $('.drink img').eq(currentGlass+1).css({
-          opacity: 0
-        })
-        $('.bottle').css({
-          left: l,
-          //'-webkit-transform': 'rotate('+distance+'deg)'
-        })
+        var newX = e.pageX;
+        dragBottle(x, newX)
         x = e.pageX;
         distance = 0;
       })
@@ -363,7 +346,54 @@
     _$window.on('mouseup',function () {
       _$window.unbind('mousemove');
     })
+    $('.bottle').on('touchstart',function(e){
+      var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+      e.preventDefault();
+      var x = touch.pageX;
+      var distance = 0;
+      var l;
+      
+      _$window.bind('touchmove',function(e){
+        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+        var newX = touch.pageX;
+        dragBottle(x, newX)
+        x = touch.pageX;
+        distance = 0;
+      })
+    })
+    _$window.on('touchend',function () {
+      _$window.unbind('touchmove');
+    })
     _$window.bind('resize', _pageResize);
+  }
+  function dragBottle(x, newX) {
+    distance = x-newX;
+    var min = 50;
+    if(_smallScreen){
+      min = 20;
+    }
+    l = Math.max(min,$('.bottle').position().left-distance);
+    l = Math.min(l,550);
+    var glassW = 59;
+    if(_smallScreen){
+      glassW = 22;
+    }
+    currentGlass = Math.floor((l-5)/glassW);
+    for(var i=0;i<$('.drink').length;i++){
+      if(i <= currentGlass){
+        $('.drink img').eq(i).css({
+          opacity: 1
+        })
+      }else{
+        $('.drink img').eq(i).css({
+          opacity: 0
+        })
+      }
+    }
+    $('.bottle').css({
+      left: l,
+      //'-webkit-transform': 'rotate('+distance+'deg)'
+    })
   }
   function hideIntro() {
     $('.intro').addClass('out-up')

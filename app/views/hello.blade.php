@@ -121,11 +121,11 @@
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
-        <p>1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.
+        <p>1 in 8 women will develop breast cancer at some point in her lifetime.  1 in 67 will develop ovarian cancer.  
           <br>
           <br>
           Your body. Your life.<br>
-          Don’t leave it up to chance.
+          <b>Don’t leave it up to chance.</b>
         </p>
         <a id="Begin" href="#home"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
@@ -179,52 +179,27 @@
           </div>
 
           <div class="fact">
-            <h5>There is a clear link between obesity and breast cancer — extra fatty tissue creates extra estrogen which increases breast cancer risk. Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+            <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful — <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
             <div class="chart-1"></div>
           </div>
 
           <div class="fact">
-            <h5>Research shows a 10% increase in breast cancer risk for every 10g of alcohol—that’s one standard drink—consumed each day. Limit alcohol to one drink per day or eliminate it entirely.</h5>
-          </div>
-
-          <div class="fact">
-            <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
+            <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
             <div class="chart-1"></div>
           </div>
 
           <div class="fact">
-            <h5>Younger women have denser breast tissue, which can make it harder to see tumors on mammograms. </h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>Starting your period young increases risk for breast cancer because it raises total lifestyle exposure to estrogen.</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.  With less cellular division, there’s less opportunity for cells to “go rogue.”</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>Pregnancy minimizes risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>Breastfeeding for 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
-            <div class="chart-1"></div>
-          </div>
-
-          <div class="fact">
-            <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful—2/3 of women diagnosed with ovarian cancer will die from their disease.</h5>
+            <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
             <div class="chart-1"></div>
           </div>
 
           <div class="fact">
             <h5>Breast and ovarian cancers can run in some families. Sometimes this is because mutated genes have been passed down to you from your mother or father. These genes dramatically increase the risk of developing cancer. Other times, there may be a strong family history, but no known genetic mutation.</h5>
             <div class="chart-1"></div>
+          </div>
+          
+          <div class="fact">
+            <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day. Limit alcohol to one drink per day or eliminate it entirely.</h5>
           </div>
 
           <div class="fact">
@@ -238,22 +213,52 @@
           </div>
 
           <div class="fact">
-            <h5>Nothing has a greater effect on a woman’s level of risk than her family history.  Background information from BOTH sides of your family is important.</h5>
+            <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
             <div class="chart-1"></div>
           </div>
 
           <div class="fact">
-            <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin disease or non-Hodgkin lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
+            <h5><b>Nothing has a greater effect on a woman’s level of risk than her family history.</b>  Background information from BOTH sides of your family is important.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Younger women tend to have denser breast tissue – breasts with more glandular tissue and less fatty tissue – which can make it harder to see tumors on mammograms. Dense breast tissue is linked to a higher risk of breast cancer.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+           <div class="fact">
+            <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin’s disease or non-Hodgkin’s lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
+            <div class="chart-1"></div>
+          </div>         
+
+          <div class="fact">
+            <h5>Starting your period under age 12 is linked to an increased risk for breast cancer because it raises total lifetime exposure to estrogen.</h5>
             <div class="chart-1"></div>
           </div>
 
           <div class="fact">
             <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
             <div class="chart-1"></div>
+          </div>          
+
+          <div class="fact">
+            <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with the most common, low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
+            <div class="chart-1"></div>
           </div>
 
           <div class="fact">
-            <h5>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</h5>
+            <h5><b>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</b></h5>
+            <div class="chart-1"></div>
+          </div>          
+
+          <div class="fact">
+            <h5>Pregnancy reduces risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
+            <div class="chart-1"></div>
+          </div>
+
+          <div class="fact">
+            <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
             <div class="chart-1"></div>
           </div>
 
@@ -271,7 +276,7 @@
     <section class="assessment scrollpane"> 
       <div class="section-title">Assess Your Risk</div>
       <section class="assessment-intro in">
-        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about what actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
+        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
         <button class="action">Let’s Go.</button>
       </section>
       <div class="dots">
@@ -317,6 +322,17 @@
             <button data-answer-id="0">40+</button>
           </div>
         </div>
+
+        <div class="question" data-question-id="13">
+          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
+        
+          <div class="answers">
+            <button data-answer-id="-1">Breast cancer</button>
+            <button data-answer-id="-1">Ovarian cancer</button>
+            <button data-answer-id="0">Neither</button>
+            <button data-answer-id="-1">Both</button>
+          </div>
+        </div>
         
         <div class="question weight-question" data-question-id="3">
           <div class="weight-wrapper">  
@@ -353,91 +369,6 @@
           <br>
         </div>
 
-       <div class="question drinks-question" data-question-id="4">
-          <div class="prompt">Drag drink icon to the number of drinks per day you have — don’t forget to count the weekends!</div>
-          <div class="bottle"><img src="img/assessment/bottle.png"></div>
-          <div class="answers drinks">
-            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
-            <br>
-            <button>Continue</button>
-          </div>
-        </div>
-
-
-        <div class="question" data-question-id="5">
-          <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="-1">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="8">
-          <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
-        
-          <div class="answers">
-            <button data-answer-id="-1">Yes</button>
-            <button data-answer-id="+1">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="9">
-          <div class="prompt">How old were you when you first got your period?</div>
-        
-          <div class="answers">
-            <button data-answer-id="-1">Under 12</button>
-            <button data-answer-id="+1">12 or older</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="10">
-          <div class="prompt">Have you taken birth control pills for five years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="0">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="11">
-          <div class="prompt">Have you ever given birth?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="-1">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="12">
-          <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
-        
-          <div class="answers">
-            <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="-1">No</button>
-          </div>
-        </div>
-
-        <div class="question" data-question-id="13">
-          <div class="prompt">Have you ever been diagnosed with either of the following?</div>
-        
-          <div class="answers">
-            <button data-answer-id="-1">Breast cancer</button>
-            <button data-answer-id="-1">Ovarian cancer</button>
-            <button data-answer-id="0">Neither</button>
-            <button data-answer-id="-1">Both</button>
-          </div>
-        </div>
-
         <div class="question" data-question-id="14">
           <div class="prompt">Have any of your <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
         
@@ -455,6 +386,25 @@
             <button>Continue</button>
           </div>
           <button class="sub ask">Help me ask them</button>          
+        </div>
+
+       <div class="question drinks-question" data-question-id="4">
+          <div class="prompt">Drag drink icon to the average number of drinks per day you have — don’t forget to count the weekends!</div>
+          <div class="bottle"><img src="img/assessment/bottle.png"></div>
+          <div class="answers drinks">
+            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
+            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+            <br>
+            <button>Continue</button>
+          </div>
         </div>
 
         <div class="question" data-question-id="15">
@@ -475,7 +425,7 @@
           </div>
         </div>
 
-        <div class="question" data-question-id="16">
+       <div class="question" data-question-id="16">
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
@@ -488,8 +438,17 @@
           <div class="answers">
             <button>Continue</button>
           </div>
+        </div>        
+
+        <div class="question" data-question-id="5">
+          <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
+        
+          <div class="answers">
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
+          </div>
         </div>
-    
+
         <div class="question cb3" data-question-id="17">
           <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
           <div class="checkbox-list column-left">        
@@ -516,6 +475,15 @@
           <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
+        <div class="question" data-question-id="8">
+          <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
+        
+          <div class="answers">
+            <button data-answer-id="-1">Yes</button>
+            <button data-answer-id="+1">No</button>
+          </div>
+        </div>
+
         <div class="question" data-question-id="19">
           <div class="prompt">Did you receive radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
         
@@ -525,13 +493,31 @@
           </div>
         </div>
 
+        <div class="question" data-question-id="9">
+          <div class="prompt">How old were you when you first got your period?</div>
+        
+          <div class="answers">
+            <button data-answer-id="-1">Under 12</button>
+            <button data-answer-id="+1">12 or older</button>
+          </div>
+        </div>
+
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent, aunt/uncle</div> that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent, aunt</div> that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
             <button class="sub ask" data-answer-id="3">Help me ask them</button>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="10">
+          <div class="prompt">Have you taken birth control pills for five or more years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
+        
+          <div class="answers">
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="0">No</button>
           </div>
         </div>
 
@@ -541,6 +527,24 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="11">
+          <div class="prompt">Have you ever given birth?</div>
+        
+          <div class="answers">
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="12">
+          <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
+        
+          <div class="answers">
+            <button data-answer-id="+1">Yes</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 

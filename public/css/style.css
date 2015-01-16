@@ -779,6 +779,7 @@ input[type="checkbox"], input[type="radio"] {
   float: left;
   -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
   -webkit-mask-position: 0px 0px;
+  clip-path: url(../img/clip.svg#svgClip);
   overflow: hidden;
 }
 #weight-base {

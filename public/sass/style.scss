@@ -748,8 +748,20 @@ input[type="radio"]{
   left: -160px;
   top: 0;
   float: left;
+    
     -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
     -webkit-mask-position: 0px 0px;
+
+    clip-path: url(../img/clip.svg#svgClip);
+    // -webkit-clip-path: url(../img/clip.svg);
+
+    
+    // -moz-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // -moz-mask-position: 0px 0px;
+    // -ms-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // -ms-mask-position: 0px 0px;
+    // mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
+    // mask-position: 0px 0px;
     overflow: hidden;
 }
 

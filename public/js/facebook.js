@@ -1,6 +1,9 @@
   
 $(function() {
 
+
+      getUserCount('lifestyle','knowing','family');
+
       var userLoggedIn = false;
       
       $( ".facebook.lifestyle" ).click(function() {
@@ -10,11 +13,10 @@ $(function() {
       $( ".facebook.knowing" ).click(function() {
         var type = 'knowing';
         getLoginStatus(type);
-        //showPhotoWall();
       });
       $( ".facebook.family" ).click(function() {
         var type = 'family';
-        getLoginStatus(type);
+        getLoginStatus(type);       
       });
 
 
@@ -116,6 +118,20 @@ $(function() {
         refreshAvatars('family');
         $('.fb-faces').addClass('in');
         $('.' + type).addClass('in');
+      }
+
+      function getUserCount(type) {
+        resp = $.ajax({
+          type : "GET",
+          cache: false,
+          url : "/pledge/"+type+"/count/",
+          dataType: 'json'
+        }).done(function(data) {
+          var count = data.count;
+          console.log(data.count)
+        }).fail(function(error) {
+          console.log(error);
+        });
       }
       //refreshAllAvatars();
       

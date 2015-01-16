@@ -815,6 +815,7 @@ input[type="checkbox"], input[type="radio"] {
   float: left;
   -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
   -webkit-mask-position: 0px 0px;
+  clip-path: url(../img/height-mask.svg#heightMask);
   overflow: hidden;
 }
 #height-base {

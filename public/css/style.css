@@ -284,6 +284,42 @@ button.sub:hover {
   opacity: 1;
   z-index: 100;
 }
+.fb-faces .lifestyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .lifestyle.in {
+  opacity: 1;
+  z-index: 100;
+}
+.fb-faces .knowing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .knowing.in {
+  opacity: 1;
+  z-index: 100;
+}
+.fb-faces .family {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.fb-faces .family.in {
+  opacity: 1;
+  z-index: 100;
+}
 .overlay {
   position: fixed;
   left: 0;
@@ -1085,6 +1121,7 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
   margin-top: 50px;
   border-color: transparent;
+  z-index: 2000;
 }
 .education .btn-continue:hover {
   background: #f6323e;

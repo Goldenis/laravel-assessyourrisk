@@ -576,7 +576,7 @@
             <div class="headline">
               <h2>Turns out, life affects your life:</h2>
               <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
-              <button class="btn-begin sub">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
         </div>
@@ -680,7 +680,7 @@
             <div class="headline">
               <h2>Every body is different.</h2>
               <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
-              <button class="btn-begin sub">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
         </div>
@@ -820,7 +820,7 @@
           <div class="headlines">
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
-              <button class="btn-begin sub">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
         </div>

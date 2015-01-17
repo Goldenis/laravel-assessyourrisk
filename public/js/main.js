@@ -165,12 +165,12 @@
     console.log("Next Headline")
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
     var nextHeadline = _currentHeadline.index() + 1;
-    $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
     if (initialized && nextHeadline < numHeadlines){
       _currentHeadline.removeClass('active');
       _currentHeadline.addClass('out');
       _oldHeadline = _currentHeadline;
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
+      fillDot();
       _currentHeadline.removeClass('out');
       _currentHeadline.addClass('active');
       
@@ -178,6 +178,9 @@
     }else{
       nextVignette();
     }
+  }
+  function fillDot() {
+    $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
   }
   function _scrollHandler(){
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
@@ -382,7 +385,7 @@
     l = Math.min(l,550);
     var glassW = 59;
     if(_smallScreen){
-      glassW = 22;
+      glassW = 25;
     }
     currentGlass = Math.floor((l-5)/glassW);
     for(var i=0;i<$('.drink').length;i++){
@@ -410,6 +413,7 @@
       var dot = '<div class="dot"></div>';
       $('.education .dots').append(dot);
     };
+    $('.education .dot').on('click',changeHeadline);
   }
   function hideIntro() {
     $('.intro').addClass('out-up')
@@ -429,6 +433,10 @@
   function changeModule(i){
     _oldModule = _currentModule;
     _currentModule = i;
+    _oldVignette = null;
+    _currentVignette = 0;
+    _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+
     if(_oldModule !== undefined){
       closeModule(_oldModule);
     }
@@ -436,18 +444,20 @@
     
     expandModule(i);
   }
-  function closeModule(num) {
-    $('.module').eq(num).removeClass('in');
-    if(num < _currentModule){
-      $('.module').eq(num).addClass('left');
-    }else{
-      $('.module').eq(num).removeClass('left');
+  function changeHeadline(){
+    _oldModule = _currentModule;
+    var idx = $('.education .dot').index($(this));
+    _currentHeadline = $('.headline').eq(idx);
+    _currentModule =  $('.module').index(_currentHeadline.closest('.module'));
+    _currentVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
+
+    if(_oldModule !== undefined){
+      closeModule(_oldModule);
     }
+    
+    expandModule(_currentModule);
   }
   function expandModule(){
-    _oldVignette = null;
-    _currentVignette = 0;
-
     handleSaveDeepProgress();
     $('.nav').addClass('in');
     $('.right-column').addClass('down');
@@ -463,10 +473,19 @@
     $('.module').eq(_currentModule).addClass('in');
 
     $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
-    $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0).addClass('active');
+    _currentHeadline.addClass('active');
+    fillDot();
     
     $('.education .section-title').addClass('in');
   }
+  function closeModule(num) {
+    $('.module').eq(num).removeClass('in');
+    if(num < _currentModule){
+      $('.module').eq(num).addClass('left');
+    }else{
+      $('.module').eq(num).removeClass('left');
+    }
+  }  
   function toggleColumn() {
     if(_currentView == "left"){
       _currentView = "right";
@@ -535,6 +554,7 @@
     for (q in savedQuizProgress) questionsAnswered++;
     
     var quizProgress = questionsAnswered+'/'+_totalQuestions;
+    var quizPercent = questionsAnswered/_totalQuestions;
     $(".percquiz").html(quizProgress);
 
     chart2.transitionToValues (5,
@@ -549,6 +569,7 @@
     var deepViewed = 0;
     for (v in savedDiveProgress) deepViewed++;
     var diveProgress = deepViewed + '/' + _totalHeadlines;
+    var divePercent = deepViewed/_totalHeadlines;
     $(".percdive").html(diveProgress);
     chart3.transitionToValues (5,
         8,
@@ -814,6 +835,7 @@ Do you know if I do%3F";
     }else{
       _oldHeadline = _currentHeadline;
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+      fillDot();
       _currentHeadline.addClass('active')
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
@@ -908,6 +930,7 @@ Do you know if I do%3F";
     _totalQuestions = $('.question').length;
     _totalHeadlines = $('.headline').length;
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+    fillDot();
     //position the header to be 90%;
     _$window = $(window);
     _$document = $(window.document);

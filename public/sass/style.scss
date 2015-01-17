@@ -214,7 +214,7 @@ h2{
  font-size: 4em; 
 }
 h3{
-  font-size: 3em;
+  font-size: 2.8em;
 }
 h4{
   font-size: 2em;
@@ -934,6 +934,19 @@ input[type="radio"]{
     width: 66.666%;
     left: 33.333%;
     z-index: 3;
+    .dot{
+      background: rgba(255,255,255,.2);
+      cursor: pointer;
+      &.active{
+        width: 8px;
+        height: 8px;
+        top: 0;
+        background: #fff;
+      }
+      &:hover{
+        background: #fff;
+      }
+    }
   }
   .module{
     position: absolute;
@@ -1071,7 +1084,9 @@ input[type="radio"]{
   }
   .btn-begin{
     margin-top: 50px;
-    background: transparent;
+    &:hover{
+      border-color: $red;
+    }
   }
   .btn-continue{
     position: relative;
@@ -1125,6 +1140,19 @@ input[type="radio"]{
       opacity: 0;
       top: 0px;
       @include transition(.4s);
+      button{
+        margin-top: 50px;
+        border: 3px solid $pink;
+        &.sub{
+          border-color: #fff;
+        }
+        &:hover{
+          border-color: $red;
+        }
+      }
+      button:nth-of-type(2){
+        margin-top: 20px;
+      }
       &.active{
         visibility: visible;
         opacity: 1;
@@ -1590,12 +1618,10 @@ footer{
       z-index: 3;
       text-align: center;
       .dot{
-        background: #fff;
         &.active{
           width: 4px;
           height: 4px;
           top: 0;
-          background: $pink;
         }
       }
     }

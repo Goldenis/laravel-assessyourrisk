@@ -853,7 +853,7 @@ Do you know if I do%3F";
       _currentHeadline.addClass('active')
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
-      console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
+     // console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
 
       var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
 
@@ -868,6 +868,7 @@ Do you know if I do%3F";
               
               videoURL = $( vig ).data()
               videoType = ".webm"
+              $('.bg-video').addClass('in');
               $('.bg-video').attr('src',cloudfrontURL + videoURL['src'] + videoType);
 
             } else if (Modernizr.video.ogg) {
@@ -882,9 +883,9 @@ Do you know if I do%3F";
               videoType = ".mp4"
               $('.bg-video').attr('src',cloudfrontURL + videoURL['src'] + videoType);
             }
-            $('.bg-video').get(0).play();
+            //$('.bg-video').get(0).play();
             $('.bg-video').css({
-              background: "#D7006D"
+              background: "#000"
             });
           }
         }  

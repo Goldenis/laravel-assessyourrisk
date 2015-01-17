@@ -257,6 +257,14 @@ button{
   }
 }
 
+.bg-video{
+  opacity: 0;
+  @include transition(.3s);
+    &.in{
+      opacity: 1;
+    }
+}
+
 .fb-faces{
   position: absolute;
   width: 100%;

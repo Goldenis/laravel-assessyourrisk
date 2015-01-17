@@ -529,7 +529,7 @@
       </div>
       <!-- MASTER VIDEO -->    
       <div class="video">
-        <video class="bg-video" src="" type="video/mp4" loop></video>
+        <video class="bg-video" src="" type="video/mp4" preload="auto" autoplay loop></video>
       </div>
       <div class="dots">
         <h6>Lifestyle</h6>

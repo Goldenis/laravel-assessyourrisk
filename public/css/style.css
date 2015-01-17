@@ -275,6 +275,20 @@ button.sub:hover {
   color: #f6323e;
   border-color: #f6323e;
 }
+.bg-video {
+  opacity: 0;
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.bg-video.in {
+  opacity: 1;
+}
 .fb-faces {
   position: absolute;
   width: 100%;

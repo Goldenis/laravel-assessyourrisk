@@ -899,7 +899,7 @@
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/anim.js"></script>
+
 
      <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>

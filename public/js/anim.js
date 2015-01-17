@@ -20,7 +20,7 @@
       wheelScale = .85;
     }
     tl.to(wheel, 2.5, {scale:wheelScale, ease:Expo.easeOut})
-    tl.from(logo, 1, {opacity:0});
+    tl.from(logo, 0.2, {opacity:0}, "-=.2");
     tl.from(second, 0.5, {opacity:0}, "-=.2");
 
     //add a label 0.5 seconds later to mark the placement of the next tween

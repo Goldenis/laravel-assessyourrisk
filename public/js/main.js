@@ -559,11 +559,11 @@
 
     chart2.transitionToValues (5,
         8,
-        [quizProgress, 1-quizProgress], 
+        [quizPercent, 1-quizPercent], 
         ['#D7006D','#FFFFFF']);
     chart4.transitionToValues (5,
         8,
-        [quizProgress, 1-quizProgress], 
+        [quizPercent, 1-quizPercent], 
         ['#D7006D','#FFFFFF']);
 
     var deepViewed = 0;
@@ -573,11 +573,11 @@
     $(".percdive").html(diveProgress);
     chart3.transitionToValues (5,
         8,
-        [diveProgress, 1-diveProgress], 4
+        [divePercent, 1-divePercent], 4
         ['#D7006D','#FFFFFF']);
     chart5.transitionToValues (5,
         8,
-        [diveProgress, 1-diveProgress], 4
+        [divePercent, 1-divePercent], 4
         ['#D7006D','#FFFFFF']);
   }
   

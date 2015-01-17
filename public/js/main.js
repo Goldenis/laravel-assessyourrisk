@@ -829,6 +829,7 @@ Do you know if I do%3F";
     console.log("Next Vignette")
     // _currentFrame = 0;
 
+    var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
     var videoURL;
 
     $('.vignette').removeClass('in');
@@ -867,19 +868,19 @@ Do you know if I do%3F";
               
               videoURL = $( vig ).data()
               videoType = ".webm"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
+              $('.bg-video').attr('src',cloudfrontURL + videoURL['src'] + videoType);
 
             } else if (Modernizr.video.ogg) {
 
               videoURL = $( vig ).data()
               videoType = ".ogv"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
+              $('.bg-video').attr('src',cloudfrontURL + videoURL['src'] + videoType);
 
             } else if (Modernizr.video.h264){
    
               videoURL = $( vig ).data()
               videoType = ".mp4"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
+              $('.bg-video').attr('src',cloudfrontURL + videoURL['src'] + videoType);
             }
             $('.bg-video').get(0).play();
             $('.bg-video').css({

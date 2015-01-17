@@ -573,7 +573,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/running">
+        <div class="vignette" data-src="running">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -589,7 +589,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/fat">
+        <div class="vignette" data-src="fat">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -605,7 +605,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/alcohol">
+        <div class="vignette" data-src="alcohol">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -624,7 +624,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/smoking">
+        <div class="vignette" data-src="smoking">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -643,7 +643,7 @@
           </div>
         </div>
 
-        <div class="vignette" data-src="video/birthControl">
+        <div class="vignette" data-src="birthControl">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -676,7 +676,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness">
+        <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -694,7 +694,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness">
+        <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -715,7 +715,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness">
+        <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -734,7 +734,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness">
+        <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -749,7 +749,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/breastAwareness">
+        <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -816,7 +816,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/family">
+        <div class="vignette" data-src="family">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -831,7 +831,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/family">
+        <div class="vignette" data-src="family">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -842,7 +842,7 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="video/mother">
+        <div class="vignette" data-src="mother">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -866,7 +866,7 @@
           </div>
           <!-- <button class="btn-continue sub">Count me in.</button> -->
         </div>
-        <div class="vignette" data-src="video/mother">
+        <div class="vignette" data-src="mother">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->

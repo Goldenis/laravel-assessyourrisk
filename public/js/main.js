@@ -553,9 +553,9 @@
     var questionsAnswered = 0;
     for (q in savedQuizProgress) questionsAnswered++;
     
-    var quizProgress = questionsAnswered+'/'+_totalQuestions;
-    var quizPercent = questionsAnswered/_totalQuestions;
-    $(".percquiz").html(quizProgress);
+    var quizProgress = questionsAnswered/_totalQuestions;
+    var quizPercent = questionsAnswered+'/'+_totalQuestions;
+    $(".percquiz").html(quizPercent);
 
     chart2.transitionToValues (5,
         8,

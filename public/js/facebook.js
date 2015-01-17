@@ -125,7 +125,7 @@ $(function() {
         resp = $.ajax({
           type : "GET",
           cache: false,
-          url : "/pledge/"+type+"/count/",
+          url : "/pledge/knowing/count/",
           dataType: 'json'
         }).done(function(data) {
           var count = data.count;

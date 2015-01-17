@@ -299,9 +299,6 @@
       toggleColumn();
       $.address.path('/education');
     })
-    $('.fact-group').on('click',function(){
-      toggleColumn();
-    })
     $('.module-hero').on('click',function(){
       changeModule($(this).index());
     })
@@ -414,6 +411,8 @@
       $('.education .dots').append(dot);
     };
     $('.education .dot').on('click',changeHeadline);
+    $('.percdive').html(0 + '/' + _totalHeadlines);
+    $('.percquiz').html(0 + '/' + _totalQuestions);
   }
   function hideIntro() {
     $('.intro').addClass('out-up')

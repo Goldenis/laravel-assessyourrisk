@@ -1319,7 +1319,7 @@ input[type="radio"]{
       background: $nude-light;
     }
     &.flash{
-      background: $nude-light;
+      background: $nude !important;
       @include transition(0s,linear);
     }
   }  

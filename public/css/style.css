@@ -1458,7 +1458,7 @@ input[type="checkbox"], input[type="radio"] {
   background: #fdd5ce;
 }
 .right-column .dashboard.flash {
-  background: #fdd5ce;
+  background: #ffb4aa !important;
   -webkit-transition: all 0s 0 linear;
   -moz-transition: all 0s 0 linear;
   -o-transition: all 0s 0 linear;

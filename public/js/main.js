@@ -146,6 +146,14 @@
       'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
     });
   }
+  function killWidows() {
+    var wordArray = $(this).text().split(" ");
+    if (wordArray.length > 1) {
+      wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+      wordArray.pop();
+      $(this).html(wordArray.join(" "));
+    }
+  }
   function setFontScale (el,min,max,type){
     type = typeof type !== "undefined" ? type : "em";
     el.css({
@@ -413,6 +421,12 @@
     $('.education .dot').on('click',changeHeadline);
     $('.percdive').html(0 + '/' + _totalHeadlines);
     $('.percquiz').html(0 + '/' + _totalQuestions);
+    $('.education .dots h6').eq(1).css({
+      left: $('.module').eq(0).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
+    })
+    $('.education .dots h6').eq(2).css({
+      left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
+    })
   }
   function hideIntro() {
     $('.intro').addClass('out-up')

@@ -700,10 +700,8 @@ input[type="checkbox"], input[type="radio"] {
   min-width: 140px;
 }
 .logo-white {
-  z-index: 5;
   position: absolute;
-  bottom: 42px;
-  left: 3rem;
+  bottom: 38%;
   margin-left: 0px;
 }
 .logo-white img {
@@ -974,13 +972,24 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .dots {
   bottom: auto;
-  top: 2.3rem;
+  bottom: 3rem;
   width: 66.666%;
   left: 33.333%;
   z-index: 3;
 }
+.education .dots h6 {
+  position: absolute;
+  top: 23px;
+  color: #fff;
+}
+.education .dots h6:nth-of-type(2) {
+  left: 400px;
+}
+.education .dots h6:nth-of-type(3) {
+  left: 500px;
+}
 .education .dots .dot {
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .4);
   cursor: pointer;
 }
 .education .dots .dot.active {
@@ -1216,12 +1225,12 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
   opacity: 0;
   top: 0px;
-  -webkit-transition: all 0.4s 0 ;
-  -moz-transition: all 0.4s 0 ;
-  -o-transition: all 0.4s 0 ;
-  -ms-transition: all 0.4s 0 ;
-  transition: all 0.4s 0 ;
-  -moz-transition-duration: 0.4s;
+  -webkit-transition: all 1s 0 ;
+  -moz-transition: all 1s 0 ;
+  -o-transition: all 1s 0 ;
+  -ms-transition: all 1s 0 ;
+  transition: all 1s 0 ;
+  -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
@@ -1269,7 +1278,7 @@ input[type="checkbox"], input[type="radio"] {
   position: relative;
   width: 45%;
   height: 100%;
-  top: 20%;
+  top: 22%;
   left: 10%;
   float: left;
 }
@@ -1375,6 +1384,9 @@ input[type="checkbox"], input[type="radio"] {
 .right-column .toggle-box .assess:hover .arrow, .right-column .toggle-box .assess-start:hover .arrow, .right-column .toggle-box .lets-go:hover .arrow {
   left: -10px;
 }
+.right-column .toggle-box .assess {
+  opacity: 0.9;
+}
 .right-column .fact {
   position: absolute;
   padding: 0em;
@@ -1460,7 +1472,7 @@ input[type="checkbox"], input[type="radio"] {
   right: 0;
 }
 .right-column.down {
-  top: 200px;
+  top: 22%;
 }
 .right-column.left {
   right: calc(75% - 10px);
@@ -1475,6 +1487,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .right-column.left .dashboard {
   background: transparent;
+  color: #fff;
+}
+.right-column.left .dashboard .label {
+  border-bottom: 2px solid #fff;
 }
 .right-column.left .understand {
   left: calc(100% + 10px);

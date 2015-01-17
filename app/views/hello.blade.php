@@ -255,6 +255,7 @@
         <div class="assess">
           <h4>Assess<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_left.png"></div>
+          <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
         </div>
       </div>
     </div>
@@ -520,7 +521,6 @@
     </section>
 
 <!-- EDUCATION -->
-
     <section class="education">
       <div class="fb-faces">
           <div class="faces lifestyle"></div>
@@ -532,13 +532,15 @@
         <video class="bg-video" src="" type="video/mp4" loop></video>
       </div>
       <div class="dots">
+        <h6>Lifestyle</h6>
+        <h6>Your Normal</h6>
+        <h6>Family History</h6>
       </div>
       <div class="nav">
         <div class="nav-item">Lifestyle</div>
         <div class="nav-item">Your Normal</div>
         <div class="nav-item">Family History</div>
       </div>
-      <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
       <div class="education-menu">
         <div class="module-hero">
           <div class="how">Understand How</div>

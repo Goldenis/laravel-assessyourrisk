@@ -37,6 +37,8 @@
   var _myL = 0;
   var _preL = 0;
 
+  var _currentVideo;
+
   // setInterval(function(){
   //   $('.person').html(people[Math.floor(Math.random()*people.length)])
   // },2000);
@@ -155,7 +157,7 @@
     }
   }
   function setFontScale (el,min,max,type){
-    type = typeof type !== "undefined" ? type : "em";
+    type = typeof type !== "undefined" ? type : "rem";
     el.css({
       'font-size': Math.min(max,Math.max(min,max*((_winW*_winH)/1348438)))+type
     })
@@ -829,6 +831,7 @@ Do you know if I do%3F";
     console.log("Next Vignette")
     // _currentFrame = 0;
 
+    var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
     var videoURL;
 
     $('.vignette').removeClass('in');
@@ -852,41 +855,15 @@ Do you know if I do%3F";
       _currentHeadline.addClass('active')
       $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
       // $('.bg-video').get(_currentVignette).currentTime = 0;
-      console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
+     // console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
 
       var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
 
       if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         // no video
       }else{
-        if($('.bg-video').attr('src') != vig.data('src') + videoType){
-
-          if (Modernizr.video) {
-            // let's play some video! but what kind?
-            if (Modernizr.video.webm) {
-              
-              videoURL = $( vig ).data()
-              videoType = ".webm"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
-
-            } else if (Modernizr.video.ogg) {
-
-              videoURL = $( vig ).data()
-              videoType = ".ogv"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
-
-            } else if (Modernizr.video.h264){
-   
-              videoURL = $( vig ).data()
-              videoType = ".mp4"
-              $('.bg-video').attr('src',videoURL['src'] + videoType);
-            }
-            $('.bg-video').get(0).play();
-            $('.bg-video').css({
-              background: "#D7006D"
-            });
-          }
-        }  
+        var src = vig.data('src') + videoType;
+        loadBGVideo(vig, src, cloudfrontURL);
       }
       
       //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
@@ -896,6 +873,106 @@ Do you know if I do%3F";
     
     // _scrollHandler();
   }
+
+  function loadBGVideo(vig, src, host){
+    if($('#bg-vid').attr('data-src') != src){
+          $('#bg-vid').attr('data-src', src);
+          if (Modernizr.video) {
+
+            var previousVid = _currentVideo;
+
+            var videoContainer = $('<div class="vid-container" style="opacity: 0;"></div>');
+            var vid1 = $('<video class="bg-video" src="" type="video/mp4" preload="auto" autoplay loop></video>');
+
+            // var vid2 = $('<video class="bg-video" src="" style="opacity: 1;display:none;" type="video/mp4" preload="auto" autoplay></video>');
+            var videoElement = vid1;
+            $(videoContainer).append(vid1)/*.append(vid2)*/;
+            _currentVideo = videoContainer;
+            function onVideoPlay(){
+              // _pageResize();
+              $(videoContainer).animate({opacity:1}, 800, function(){
+                // console.log("video fade in complete");
+                if (previousVid){
+                  $(previousVid).remove();
+                }
+              });
+            }
+
+            // function onVideoEnd(){
+            //   console.log("VIDEO ENDED");
+            //   // $(this).get(0).play(0);
+            //   if (videoElement == vid1){
+            //     videoElement = vid2;
+            //     $(vid1).css('display', 'none');
+            //   }
+            //   else
+            //   {
+            //     videoElement = vid1;
+            //     $(vid2).css('display', 'none');
+            //   }
+            //   $(videoElement).css('display', 'block');
+            //   $(videoElement).get(0).play();
+            // }
+
+            function onVideoProgress(){
+              console.log($(this).get(0).currentTime);
+            }
+
+            $(vid1).on('play', onVideoPlay);
+            // $(vid2).on('play', onVideoPlay);
+
+            // $(vid1).on('ended', onVideoEnd);
+            // $(vid2).on('ended', onVideoEnd);
+
+            // $(vid1).on('ontimeupdate', onVideoProgress);
+            // $(vid2).on('ontimeupdate', onVideoProgress);
+
+            // let's play some video! but what kind?
+            var uri;
+            if (Modernizr.video.webm) {
+              
+              videoURL = $( vig ).data()
+              videoType = ".webm"
+              $(vid1).addClass('in');
+              // $(vid2).addClass('in');
+              uri = host + videoURL['src'] + videoType;
+
+            } else if (Modernizr.video.ogg) {
+
+              videoURL = $( vig ).data()
+              videoType = ".ogv"
+              uri = host + videoURL['src'] + videoType;
+
+            } 
+            else if (Modernizr.video.h264){
+   
+              videoURL = $( vig ).data()
+              videoType = ".mp4"
+              uri = host + videoURL['src'] + videoType;
+            }
+            
+
+            
+            $(vid1).attr('src', uri);
+            // $(vid2).attr('src', uri);
+            
+            $('#bg-vid').append($(videoContainer));
+            
+
+
+            //$('.bg-video').get(0).play();
+            $('.bg-video').css({
+              background: "#000"
+            });
+
+            // $(videoElement).css('display', 'block');
+
+
+          }
+        }
+  }
+
+
   function createProgressOverlay() {
     var html = "<div class='section-title'>Risk Assessment</div>";
     for(var i=0;i < $('.prompt').length-1;i++){

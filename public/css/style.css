@@ -1,5 +1,10 @@
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+/* CSS Document */
 @charset "utf-8";
-/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');
@@ -16,7 +21,7 @@
 b {
   font-family: 'avg_bold';
 }
-/* CSS Document */@-webkit-keyframes rotate-in {
+@-webkit-keyframes rotate-in {
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -61,9 +66,7 @@ b {
     transform: rotate(0deg);
   }
 }
-/* =============================================================================
- HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
+* {
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -204,10 +207,11 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
 }
-/* ===== Primary Styles ========================================================
- Author: Nick Jones / The Experiment
- ========================================================================== */header {
+header {
   width: 100%;
   height: 100px;
   text-align: center;
@@ -349,6 +353,7 @@ button.sub:hover {
   padding: 10% 15%;
   border: 20px solid #ffb4aa;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -webkit-transition: all 1s 0 ease-out;
   -moz-transition: all 1s 0 ease-out;
   -o-transition: all 1s 0 ease-out;
@@ -376,11 +381,21 @@ button.sub:hover {
   padding: 1rem 1.3rem;
   background: transparent;
 }
+.share {
+  width: 100%;
+  padding: 3rem 6rem;
+  text-align: center;
+  position: relative;
+}
+.share button {
+  margin-top: -25px;
+}
 .progress-overlay {
   overflow: hidden;
   padding: 0;
   background: #ffb4aa;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   border: none;
 }
 .progress-overlay .close-btn {
@@ -412,15 +427,6 @@ button.sub:hover {
   margin: 0 0 9px 0 !important;
   margin-bottom: 9px;
 }
-.progress-overlay .share {
-  width: 100%;
-  padding: 3rem 6rem;
-  text-align: center;
-  position: relative;
-}
-.progress-overlay .share button {
-  margin-top: -25px;
-}
 .progress-overlay .person {
   color: #d7006d;
 }
@@ -450,6 +456,9 @@ button.sub:hover {
   color: #d7006d;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+.progress-overlay .results .your-risk .more-results {
+  display: none;
 }
 .progress-overlay .results .your-risk h2 {
   margin: 50px 0;
@@ -510,9 +519,7 @@ button.sub:hover {
 .progress-overlay .vignettes {
   padding: 1rem 6rem;
   width: 38%;
-  height: 100%;
   float: right;
-  border-left: 1px solid #fff;
 }
 .progress-overlay .vignettes .sections {
   margin-top: 50px;
@@ -943,6 +950,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
+.assessment .share {
+  display: none;
+}
 .assessment-intro {
   position: absolute;
   opacity: 0;
@@ -991,7 +1001,7 @@ input[type="checkbox"], input[type="radio"] {
   left: 500px;
 }
 .education .dots .dot {
-  background: rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .3);
   cursor: pointer;
 }
 .education .dots .dot.active {
@@ -1592,7 +1602,9 @@ footer {
   display: none;
 }
 @media (max-width: 768px) {
-  .logo-white {
+  /* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */  .logo-white {
     display: none;
   }
   .menu-icon {
@@ -1611,6 +1623,9 @@ footer {
     height: 3px;
     background: #d7006d;
     margin-bottom: 4px;
+  }
+  .menu-icon.left .line {
+    background: #fff;
   }
   .dots {
     bottom: 6rem;
@@ -1631,17 +1646,17 @@ footer {
   .dot:last-of-type {
     margin-right: 0;
   }
+  .share {
+    width: 100%;
+    padding: 3rem 1rem;
+    position: relative;
+  }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
     text-align: center;
   }
   .progress-overlay .close-btn {
     display: none !important;
-  }
-  .progress-overlay .share {
-    width: 100%;
-    padding: 3rem 1rem;
-    position: relative;
   }
   .progress-overlay .progress .chart {
     margin: auto !important;
@@ -1787,7 +1802,7 @@ footer {
     height: calc(33.333% - 20px);
   }
   .education .module-hero h1 {
-    color: 4rem;
+    font-size: 4rem;
   }
   .education .section-title {
     left: 3rem;
@@ -1799,6 +1814,8 @@ footer {
   .education .vignette {
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-top: 32rem;
   }
   .education .video {
@@ -1963,6 +1980,7 @@ footer {
     top: 0px;
     height: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 8rem;
     padding-top: 2rem;
   }
@@ -1993,9 +2011,7 @@ footer {
     float: left;
   }
 }
-/* =============================================================================
- Non-Semantic Helper Classes
- ========================================================================== */.ir {
+.ir {
   display: block;
   border: 0;
   text-indent: -999rem;

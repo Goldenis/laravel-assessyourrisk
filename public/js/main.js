@@ -266,6 +266,14 @@
       overlayOpen = false;
       $('.male-overlay').removeClass("in");
     })
+    $('.your-risk .read-more').on('click',function(){
+      $(this).css({
+        display: "none"
+      })
+      $('.more-results').css({
+        display: 'block'
+      })
+    })
     $('.progress-overlay .email-pdf').on('click',function () {
       window.location.href = 'mailto:?subject=Here are the results of your risk assessment';
     })
@@ -317,6 +325,7 @@
       closeProgressOverlay();
       $('.assessment').removeClass('in');
       $('.right-column').addClass('left');
+      $('.menu-icon').addClass('left');
       $('.education').addClass('in');
     })
     $('.progress-overlay .questions h4').on('click',function() {
@@ -324,6 +333,7 @@
       closeProgressOverlay();
       $('.assessment').addClass('in');
       $('.right-column').removeClass('left');
+      $('.menu-icon').removeClass('left');
       $('.education').removeClass('in');
     })
     $('.progress,.menu-icon').on('click',function(){
@@ -519,6 +529,7 @@
     }
     $('.assessment').toggleClass('in');
     $('.right-column').toggleClass('left');
+    $('.menu-icon').toggleClass('left');
     $('.education').toggleClass('in');
   }
   function toggleLogo() {
@@ -585,6 +596,9 @@
     for (v in savedDiveProgress) deepViewed++;
     var diveProgress = deepViewed + '/' + _totalHeadlines;
     var divePercent = deepViewed/_totalHeadlines;
+    if(divePercent == 1){
+
+    }
     $(".percdive").html(diveProgress);
     chart3.transitionToValues (5,
         8,
@@ -786,6 +800,9 @@ Do you know if I do%3F";
     if(_currentQuestion >= _totalQuestions-1){
       addCustomResults()
       openProgressOverlay();
+      $('.assessment .share').css({
+        display: 'block'
+      })
       $('.results, .cards').css({
         display: 'block'
       })
@@ -844,7 +861,7 @@ Do you know if I do%3F";
     if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){
       
       if(_currentModule + 1 >= 3){
-        openProgressOverlay();
+
         return;
       }
       changeModule(_currentModule+1);

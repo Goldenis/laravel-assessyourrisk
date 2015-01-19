@@ -31,7 +31,7 @@
       </div>
       <button class="sub close-btn">✕</button>
       <div class="share">
-        <h5>Save the life of somebody you love. <!-- Like your <span class="person">sister</span>. -->Tell them to complete this experience too.</h5>
+        <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         <br>
         <button class="share-btn">SHARE</button>
       </div>
@@ -41,14 +41,15 @@
           <h2>Your Risk is <span class="risk-level">Average</span></h2>
 
           <p>
-            Your answers to the family and health history questions in our quiz suggest that you are at a high risk for breast and ovarian cancer, due either to having a diagnosed “high-penetrance” gene mutation associated with one of these cancers (such as BRCA 1 or 2, or Lynch Syndrome) or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations. Being at high risk means that you have up to an 87% chance of getting breast cancer at some point in your lifetime, and up to a 54% chance of getting ovarian cancer at some point in your lifetime. This is really significant, so it’s super important that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Congratulations on being proactive!<br><br>
+            Your answers to the family and health history questions in our quiz suggest that you are at a high risk for breast and ovarian cancer<a href="#" class="read-more">...Read More</a>
+            <span class="more-results">, due either to having a diagnosed “high-penetrance” gene mutation associated with one of these cancers (such as BRCA 1 or 2, or Lynch Syndrome) or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations. Being at high risk means that you have up to an 87% chance of getting breast cancer at some point in your lifetime, and up to a 54% chance of getting ovarian cancer at some point in your lifetime. This is really significant, so it’s super important that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Congratulations on being proactive!<br><br>
             <b>What to do now…</b><br><br>
             It can be scary to face the idea of those lifetime risk numbers. The good news is that knowledge is power and there are things you can do to take control and reduce your risk!<br><br>
             First, review the information in the section below to understand the ways in which you’ve told us your baseline risk is already being reduced, or perhaps increased, by lifestyle choices and other health factors. Gene mutations are funny things – no one really knows for sure what “flips the switch” and causes that mutation to express itself in the form of a developing cancer. But there is good news here -- taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping on.<br><br>
             <i>If you’ve not yet had genetic testing done,</i> we do suggest that you seek input from an OB/GYN or a genetic counselor, who can help you understand what’s involved with testing, and also talk to you about how to manage and respond to the fears you might be feeling about facing the prospect of getting tested, and then getting a result. It’s important to note that until you’ve had genetic testing done, you don’t know for sure that you’re high risk. You may not have inherited the gene mutation your relative has, so testing to be sure one way or the other will help you know how to move forward. If you need help finding a genetic counselor, you can find resources <a href="#">here</a>. And if you want to dip your toe in the water by asking a question online first, you can do so via our <a href="#">Ask a Genetic Counselor</a> page.<br><br>
             <i>If you have a diagnosed gene mutation, but are choosing not to have risk-reducing surgery, or if you haven’t yet had risk-reducing surgeries but plan to later,</i> we encourage you to be in close contact with your OB/GYN or another physician you trust about what kind of increased screening protocol he or she recommends for you. You can learn more about the increased screening typically recommended for high-risk women <a href="#">here</a>. And if you want more information about what those risk-reducing surgeries are, you can find it here.<br><br>
             <i>If you have a diagnosed gene mutation and have undergone risk-reducing breast and/or ovarian surgeries,</i> congratulations on crossing a big and important hurdle. We recommend staying in close touch with your physician even though the surgeries are complete or partially complete. He or she should talk to you about what kind of screening is recommended for you now; if you haven’t had that conversation yet, ask for it!<br><br>
-            Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s a little further behind you in her journey. Bright Pink offers both <a href="#">1:1</a> and <a href="#">group</a> support programs that you may find helpful.<br><br>
+            Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s a little further behind you in her journey. Bright Pink offers both <a href="#">1:1</a> and <a href="#">group</a> support programs that you may find helpful.<br><br></span>
           </p>
           
           <button class="sub email-pdf">EMAIL</button><button class="sub">PDF</button>
@@ -61,8 +62,8 @@
         </div>
         <div class='section-title'>Understand</div>
         <div class="sections">
-          <h3>Lifestyle</h3>
-          <h3>Your Normal</h3>
+          <h3>Lifestyle</h3><br>
+          <h3>Your Normal</h3><br>
           <h3>Family History</h3>
         </div>
       </div>
@@ -516,7 +517,11 @@
             <button data-answer-id="-1">No</button>
           </div>
         </div>
-
+        <div class="share">
+          <h4>Save the life of somebody you love. Tell them to complete this experience too.</h4>
+          <br>
+          <button class="share-btn">SHARE</button>
+        </div>
       </div>
     </section>
 
@@ -876,10 +881,13 @@
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
-            <!-- <div class="headline">            
-              <h3>678 women have pledged to consider oral contraceptives. Support or join them.</h3>
-              <button class="btn-continue sub">Done & Done.</button>
-            </div> -->
+            <div class="headline">            
+              <div class="share">
+                <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
+                <br>
+                <button class="share-btn">SHARE</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

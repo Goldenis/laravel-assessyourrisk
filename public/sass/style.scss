@@ -327,7 +327,7 @@ button{
   padding: 10% 15%;
   border: 20px solid $nude;
   overflow-y: scroll;
-
+  -webkit-overflow-scrolling: touch;
   @include transition(1s,ease-out);
   &.in{
     top: 0;
@@ -348,11 +348,21 @@ button{
   padding: 1rem 1.3rem;
   background: transparent;
 }
+.share{
+  width: 100%;
+  padding: 3rem 6rem;
+  text-align: center;
+  position: relative;
+  button{
+    margin-top: -25px;
+  }
+}
 .progress-overlay{
   overflow: hidden;
   padding: 0;
   background: $nude;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   border: none;
   .close-btn{
     background: $nude;
@@ -379,15 +389,6 @@ button{
     height: 6rem;
     margin: 0 0 9px 0 !important;
     margin-bottom: 9px;
-  }
-  .share{
-    width: 100%;
-    padding: 3rem 6rem;
-    text-align: center;
-    position: relative;
-    button{
-      margin-top: -25px;
-    }
   }
   .person{
     color: $pink;
@@ -419,6 +420,9 @@ button{
       margin-bottom: 3rem;
     }
     .your-risk{
+      .more-results{
+        display: none;
+      }
       h2{
         margin: 50px 0;
       }
@@ -480,9 +484,7 @@ button{
   .vignettes{
     padding: 1rem 6rem;
     width: 38%;
-    height: 100%;
     float: right;
-    border-left: 1px solid #fff;
     .sections{
       margin-top: 50px;
     }
@@ -913,6 +915,9 @@ input[type="radio"]{
       @include transition(.5s);
     }
   }
+  .share{
+    display: none;
+  }
 }
 .assessment-intro{
   position: absolute;
@@ -953,7 +958,7 @@ input[type="radio"]{
       }
     }
     .dot{
-      background: rgba(255,255,255,.4);
+      background: rgba(255,255,255,.3);
       cursor: pointer;
       &.active{
         width: 8px;
@@ -1435,6 +1440,11 @@ footer{
       background: $pink;
       margin-bottom: 4px;
     }
+    &.left{
+      .line{
+        background: #fff;
+      }
+    }
   }
   .dots{
     bottom: 6rem;
@@ -1455,16 +1465,16 @@ footer{
       margin-right: 0;
     }
   }
+  .share{
+    width: 100%;
+    padding: 3rem 1rem;
+    position: relative;
+  }
   .progress-overlay{
     -webkit-overflow-scrolling: touch;
     text-align: center;
     .close-btn{
       display: none !important;
-    }
-    .share{
-      width: 100%;
-      padding: 3rem 1rem;
-      position: relative;
     }
     .progress{
       .chart{
@@ -1625,7 +1635,7 @@ footer{
       padding: 1.5rem 2.5rem;
       height: calc(33.333% - 20px);
       h1{
-        color: 4rem;
+        font-size: 4rem;
       }
     }
     .section-title{
@@ -1638,6 +1648,8 @@ footer{
     .vignette{
       width: 100%;
       height: 100%;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       padding-top: 32rem;
     }
     .video{
@@ -1797,6 +1809,7 @@ footer{
     top: 0px;
     height: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 8rem;
     padding-top: 2rem;
     &.weight-question{

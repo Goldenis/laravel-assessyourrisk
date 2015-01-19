@@ -336,7 +336,7 @@
       $('.menu-icon').removeClass('left');
       $('.education').removeClass('in');
     })
-    $('.progress,.menu-icon').on('click',function(){
+    $('.menu-icon').on('click',function(){
       if(!overlayOpen){
         openProgressOverlay();
       }else{
@@ -800,9 +800,7 @@ Do you know if I do%3F";
     if(_currentQuestion >= _totalQuestions-1){
       addCustomResults()
       openProgressOverlay();
-      $('.assessment .share').css({
-        display: 'block'
-      })
+      $('.assessment .share').addClass('in')
       $('.results, .cards').css({
         display: 'block'
       })

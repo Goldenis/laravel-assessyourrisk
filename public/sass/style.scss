@@ -364,6 +364,7 @@ button{
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   border: none;
+  text-align: center;
   .close-btn{
     background: $nude;
   }
@@ -410,7 +411,7 @@ button{
     }
   }
   .results{
-    width: 50%;
+    width: 100%;
     padding: 1rem 6rem;
     float: left;
     display: none;
@@ -427,6 +428,8 @@ button{
         margin: 50px 0;
       }
       p{
+        width: 70%;
+        left: 15%;
         margin-bottom: 1rem;
         a,a:visited{
           color: $pink;
@@ -485,6 +488,7 @@ button{
     padding: 1rem 6rem;
     width: 38%;
     float: right;
+    display: none;
     .sections{
       margin-top: 50px;
     }
@@ -622,6 +626,8 @@ button{
 .checkbox-list{
   margin: 1rem 0 1rem;
   width: 80%;
+  left: 10%;
+  text-align: left;
   &.column-left{
     width: 33%;
     float: left;
@@ -916,7 +922,13 @@ input[type="radio"]{
     }
   }
   .share{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(1s);
+    &.in{
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 .assessment-intro{
@@ -927,6 +939,7 @@ input[type="radio"]{
   @include transition(.4s);
   a,a:visited{
     color: $pink;
+    font-size: 1em;
   }
   top: 13rem;
   .action {
@@ -1288,7 +1301,6 @@ input[type="radio"]{
     height: 100%;
     opacity: 0;
     top: 70px;
-    font-size: .7rem;
     @include transition(1s,ease-in-out);
     &.in{
       top: 40px;
@@ -1297,6 +1309,9 @@ input[type="radio"]{
     &.out{
       top: 10px;
       opacity: 0;
+    }
+    h5{
+      font-size: 1.2rem;
     }
   }
   .fact:nth-of-type(1){
@@ -1315,7 +1330,7 @@ input[type="radio"]{
     border-right: 10px solid #fff;
     text-align: center;
     padding-right: 10px;
-    cursor: pointer;
+    // cursor: pointer;
     @include transition(.5s,linear);
     .label{
       position: absolute;
@@ -1329,9 +1344,9 @@ input[type="radio"]{
       line-height: 1.2rem;
       padding-bottom: 4px;
     }
-    &:hover{
-      background: $nude-light;
-    }
+    // &:hover{
+    //   background: $nude-light;
+    // }
     &.flash{
       background: $nude !important;
       @include transition(0s,linear);
@@ -1373,11 +1388,6 @@ input[type="radio"]{
   height: 100%;
   padding: 3rem 0;
   @include transition(.5s,ease-out);
-  .prompt{
-    width: 80%;
-    //font-family: 'avg';
-    font-size: 2rem;
-  }
   &.in{
     @include transition(1s,ease-out,all,.5s);
   }
@@ -1385,6 +1395,14 @@ input[type="radio"]{
 .question{
   @include transform(translateY(50px));
   top: 0px;
+  text-align: center;
+  .prompt{
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    //font-family: 'avg';
+    font-size: 2rem;
+  }
   .bmi-result {
     display: block;
     opacity: 0;
@@ -1393,7 +1411,9 @@ input[type="radio"]{
     color: $pink;
     position: absolute;
     width: 100%;
-    height: 100%; 
+    height: 100%;
+    text-align: center;
+    @include transition(1s);
   }
 }
 
@@ -1472,7 +1492,6 @@ footer{
   }
   .progress-overlay{
     -webkit-overflow-scrolling: touch;
-    text-align: center;
     .close-btn{
       display: none !important;
     }
@@ -1526,6 +1545,7 @@ footer{
       width: 100%;
       height: auto;
       border-left: none;
+      display: block;
       .sections{
         margin-top: 20px;
       }

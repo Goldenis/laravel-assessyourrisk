@@ -397,6 +397,7 @@ button.sub:hover {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   border: none;
+  text-align: center;
 }
 .progress-overlay .close-btn {
   background: #ffb4aa;
@@ -520,6 +521,7 @@ button.sub:hover {
   padding: 1rem 6rem;
   width: 38%;
   float: right;
+  display: none;
 }
 .progress-overlay .vignettes .sections {
   margin-top: 50px;
@@ -673,6 +675,8 @@ button.sub:hover {
 .checkbox-list {
   margin: 1rem 0 1rem;
   width: 80%;
+  left: 10%;
+  text-align: left;
 }
 .checkbox-list.column-left {
   width: 33%;
@@ -951,7 +955,20 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-delay: 0;
 }
 .assessment .share {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s 0 ;
+  -moz-transition: all 1s 0 ;
+  -o-transition: all 1s 0 ;
+  -ms-transition: all 1s 0 ;
+  transition: all 1s 0 ;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.assessment .share.in {
+  visibility: visible;
+  opacity: 1;
 }
 .assessment-intro {
   position: absolute;
@@ -970,6 +987,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .assessment-intro a, .assessment-intro a:visited {
   color: #d7006d;
+  font-size: 1em;
 }
 .assessment-intro .action {
   position: relative;
@@ -1406,7 +1424,6 @@ input[type="checkbox"], input[type="radio"] {
   height: 100%;
   opacity: 0;
   top: 70px;
-  font-size: 0.7rem;
   -webkit-transition: all 1s 0 ease-in-out;
   -moz-transition: all 1s 0 ease-in-out;
   -o-transition: all 1s 0 ease-in-out;
@@ -1424,6 +1441,9 @@ input[type="checkbox"], input[type="radio"] {
   top: 10px;
   opacity: 0;
 }
+.right-column .fact h5 {
+  font-size: 1.2rem;
+}
 .right-column .fact:nth-of-type(1) {
   display: block;
 }
@@ -1440,7 +1460,6 @@ input[type="checkbox"], input[type="radio"] {
   border-right: 10px solid #fff;
   text-align: center;
   padding-right: 10px;
-  cursor: pointer;
   -webkit-transition: all 0.5s 0 linear;
   -moz-transition: all 0.5s 0 linear;
   -o-transition: all 0.5s 0 linear;
@@ -1465,9 +1484,6 @@ input[type="checkbox"], input[type="radio"] {
   border-bottom: 2px solid #d7006d;
   line-height: 1.2rem;
   padding-bottom: 4px;
-}
-.right-column .dashboard:hover {
-  background: #fdd5ce;
 }
 .right-column .dashboard.flash {
   background: #ffb4aa !important;
@@ -1530,10 +1546,6 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.question .prompt, .vignette .prompt {
-  width: 80%;
-  font-size: 2rem;
-}
 .question.in, .vignette.in {
   -webkit-transition: all 1s 0.5s ease-out;
   -moz-transition: all 1s 0.5s ease-out;
@@ -1550,6 +1562,13 @@ input[type="checkbox"], input[type="radio"] {
   -o-transform: translateY(50px);
   transform: translateY(50px);
   top: 0px;
+  text-align: center;
+}
+.question .prompt {
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  font-size: 2rem;
 }
 .question .bmi-result {
   display: block;
@@ -1560,6 +1579,15 @@ input[type="checkbox"], input[type="radio"] {
   position: absolute;
   width: 100%;
   height: 100%;
+  text-align: center;
+  -webkit-transition: all 1s 0 ;
+  -moz-transition: all 1s 0 ;
+  -o-transition: all 1s 0 ;
+  -ms-transition: all 1s 0 ;
+  transition: all 1s 0 ;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .in {
   visibility: visible;
@@ -1653,7 +1681,6 @@ footer {
   }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
-    text-align: center;
   }
   .progress-overlay .close-btn {
     display: none !important;
@@ -1701,6 +1728,7 @@ footer {
     width: 100%;
     height: auto;
     border-left: none;
+    display: block;
   }
   .progress-overlay .vignettes .sections {
     margin-top: 20px;

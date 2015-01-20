@@ -10,6 +10,8 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body>
+
+
     <div class="border"></div>
     <div class="logo">
     <img src="img/brightpink_logo.png">
@@ -960,5 +962,14 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+
+        <!--[if lt IE11]>-->
+      <script>
+        $('.border').css('display', 'none');
+
+      </script>
+    <!--<![endif]-->
     </body>
+
+
 </html> 

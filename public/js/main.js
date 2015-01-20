@@ -258,15 +258,18 @@
   
   function _registerEventListeners() {
     $('#Begin, .assess-start').on('click',function(e){
+      $('.vid-container').remove();
       e.stopPropagation();
       hideIntro();
       addCharts();
     })
     $('.male-overlay .close-btn').on('click',function () {
+      $('.vid-container').remove();
       overlayOpen = false;
       $('.male-overlay').removeClass("in");
     })
     $('.your-risk .read-more').on('click',function(){
+      $('.vid-container').remove();
       $(this).css({
         display: "none"
       })
@@ -461,7 +464,7 @@
     _oldVignette = null;
     _currentVignette = 0;
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
-
+    $('.vid-container').remove();
     if(_oldModule !== undefined){
       closeModule(_oldModule);
     }
@@ -885,7 +888,7 @@ Do you know if I do%3F";
     }
 
     handleSaveDeepProgress();
-    
+    _pageResize();
     // _scrollHandler();
   }
 
@@ -903,9 +906,10 @@ Do you know if I do%3F";
             var videoElement = vid1;
             $(videoContainer).append(vid1)/*.append(vid2)*/;
             _currentVideo = videoContainer;
+            _pageResize();
             function onVideoPlay(){
               // _pageResize();
-              $(videoContainer).animate({opacity:1}, 800, function(){
+              $(videoContainer).delay(1000).animate({opacity:1}, 800, function(){
                 // console.log("video fade in complete");
                 if (previousVid){
                   $(previousVid).remove();
@@ -985,6 +989,7 @@ Do you know if I do%3F";
 
           }
         }
+        _pageResize();
   }
 
 
@@ -1025,10 +1030,12 @@ Do you know if I do%3F";
       }      
       else {
         console.log('intro view')
+
         startIntro();
         $.address.path('/intro');
   
       };
+      $('.vid-container').remove();
     });   
 
   $(document).ready(function() {

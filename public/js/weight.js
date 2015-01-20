@@ -9,6 +9,7 @@ var weight = $(document).ready(
 			window.weightInPounds = 0;
 				
 			weightOverlay.mousedown (function(e) {
+				// console.log("TRACK ");
 				e.preventDefault();
 				moved = 0;
 				touch = e;

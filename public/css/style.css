@@ -448,7 +448,7 @@ button.sub:hover {
   margin-bottom: 50px;
 }
 .progress-overlay .results {
-  width: 50%;
+  width: 100%;
   padding: 1rem 6rem;
   float: left;
   display: none;
@@ -465,6 +465,8 @@ button.sub:hover {
   margin: 50px 0;
 }
 .progress-overlay .results .your-risk p {
+  width: 70%;
+  left: 15%;
   margin-bottom: 1rem;
 }
 .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {

@@ -227,22 +227,18 @@
 
             <div class="fact">
               <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful — <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Breast and ovarian cancers can run in some families. Sometimes this is because mutated genes have been passed down to you from your mother or father. These genes dramatically increase the risk of developing cancer. Other times, there may be a strong family history, but no known genetic mutation.</h5>
-              <div class="chart-1"></div>
             </div>
             
             <div class="fact">
@@ -251,62 +247,50 @@
 
             <div class="fact">
               <h5>Getting a genetic test is as simple as taking a blood test.  The Affordable Care Act requires coverage of genetic testing for women who qualify. </h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>One of the most common mutations — BRCA ½ — is present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>Nothing has a greater effect on a woman’s level of risk than her family history.</b>  Background information from BOTH sides of your family is important.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Younger women tend to have denser breast tissue – breasts with more glandular tissue and less fatty tissue – which can make it harder to see tumors on mammograms. Dense breast tissue is linked to a higher risk of breast cancer.</h5>
-              <div class="chart-1"></div>
             </div>
 
              <div class="fact">
               <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin’s disease or non-Hodgkin’s lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
-              <div class="chart-1"></div>
             </div>         
 
             <div class="fact">
               <h5>Starting your period under age 12 is linked to an increased risk for breast cancer because it raises total lifetime exposure to estrogen.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
-              <div class="chart-1"></div>
             </div>          
 
             <div class="fact">
               <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with the most common, low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</b></h5>
-              <div class="chart-1"></div>
             </div>          
 
             <div class="fact">
               <h5>Pregnancy reduces risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
-              <div class="chart-1"></div>
             </div>
           </div>
         </div>
@@ -377,7 +361,7 @@
           <br>
         </div>
 
-        <div class="question" data-question-id="3" data-question-name="bmi">
+        <div class="question" id="height-question" data-question-id="3" data-question-name="bmi">
           <div class="bmi-result">
             <div class="answers">
               <button>Continue</button>
@@ -411,27 +395,29 @@
           <br>
           <div class="answers">
             <button>Continue</button>
-          </div>
-          <button class="sub ask">Help me ask them</button>          
+            <button class="sub ask">Help me ask them</button>  
+          </div>        
         </div>
 
        <div class="question drinks-question" data-question-id="4">
           <div class="prompt">Drag drink icon to the average number of drinks per day you have — don’t forget to count the weekends!</div>
-          <div class="bottle"><img src="img/assessment/bottle.png"></div>
-          <div class="answers drinks">
-            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
-            <br>
-            <button>Continue</button>
-          </div>
+          	<div class="drink-slider">
+	          <div class="bottle"><img src="img/assessment/bottle.png"></div>
+	          <div class="answers drinks">
+	            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+	            <br>
+	            <button>Continue</button>
+	          </div>
+	        </div>
         </div>
 
         <div class="question" data-question-id="15">
@@ -498,8 +484,8 @@
           <br>
           <div class="answers">
             <button>Continue</button>
+            <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
-          <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
         <div class="question" data-question-id="8">

@@ -741,6 +741,7 @@
 	  })
   }
   function askHandler(e) {
+    e.stopPropagation();
     switch($(this).closest(".question").attr("data-question-id")){
       case "14":
         window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \

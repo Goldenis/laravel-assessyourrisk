@@ -469,7 +469,7 @@
       closeModule(_oldModule);
     }
     $('.progress-overlay .vignettes h2').eq(i).addClass('done');
-    
+
     expandModule(i);
   }
   function changeHeadline(){

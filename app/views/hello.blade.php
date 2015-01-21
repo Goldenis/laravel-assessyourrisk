@@ -648,6 +648,7 @@
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
               <button class="facebook lifestyle">Pledge to Improve Your Lifestyle</button><br>
+              <div class="lifestyle-pledge-number">Number of Pledges 0</div>
               <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
             <!-- <div class="headline">
@@ -792,6 +793,7 @@
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
               <button class="facebook knowing">Pledge to Know Your Normal</button><br>
+              <div class="knowing-pledge-number">Number of Pledges 0</div>              
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
@@ -867,6 +869,7 @@
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
+              <div class="family-pledge-number">Number of Pledges 0</div>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">            
@@ -894,6 +897,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/facebook.js"></script>    
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
 
@@ -918,7 +922,6 @@
       src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
     </script>
     <script src="js/roulette.js"></script>
-    <script src="js/facebook.js"></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
     <script type="text/javascript">

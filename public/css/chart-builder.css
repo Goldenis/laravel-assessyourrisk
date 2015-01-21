@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* COLORS ======= *//* EMS ======= *//* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */@font-face {
+/* COLORS ======= */
+/* 	ADVANCED TYPOGRAPHY STYLES ============================================================================== */
+@font-face {
   font-family: 'avg_bold';
   src: url('../fonts/itcavantgardepro-bold-webfont.eot');
   src: url('../fonts/itcavantgardepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'), url('../fonts/itcavantgardepro-bold-webfont.woff') format('woff'), url('../fonts/itcavantgardepro-bold-webfont.ttf') format('truetype'), url('../fonts/itcavantgardepro-bold-webfont.svg#itc_avant_garde_pro_mdbold') format('svg');

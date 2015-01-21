@@ -77,34 +77,89 @@
         
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
-          <div class="item">
+          <div class="item bmi-low">
             <div class="section-title">BMI</div>
-            <h4>Your body mass index (BMI) is within the healthy range of 18.5 - 24.9.</h4>
+            <h4>Your BMI is within 18.5 and 24.9 — a healthy range! Keep up the good work.</h4>
             <p>This reduces your baseline risk if BMI below 18.5; Be good to yourself and talk to your doctor or a nutritionist about how you can achieve a healthy BMI.</p>
           </div>
-          <div class="item">
+          <div class="item alcohol-low">
+            <div class="section-title">BMI</div>
+            <h4>Your cocktail consumption likely doesn’t increase your baseline risk.</h4>
+            <p></p>
+          </div>          
+          <div class="item exercise-low">
             <div class="section-title">EXERCISE</div>
             <h4>You work out at least 30 min/day.</h4>
-            <p>this decreases your baseline risk; You don't have to become a gymrat -- walking counts! Park further from the door, take a walk at lunch, ask your co-workers to take walking meetings, consider biking instead of driving, etc.</p>
+            <p>Your active lifestyle will benefit your health in many, many ways.</p>
           </div>
+          <div class="item birth-control-low">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>Low Birth Head</h4>
+            <p>You likely made this choice for other reasons, but just by taking birth control pills for a total of at least five years, yYou’ve decreased your risk by ovarian cancer by up to 50%</p>
+          </div>          
+          <div class="item breastfeeding-low">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>Low BREASTFEEDING Head</h4>
+            <p>Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.</p>
+          </div>  
+          <div class="item diet-low">
+            <div class="section-title">DIET</div>
+            <h4>Low DIET Head</h4>
+            <p>Keep fueling up on food that’s good for you.</p>
+          </div>  
+          <div class="item vitamin-low">
+            <div class="section-title">VITAMIN D</div>
+            <h4>Low VITAMIN Head</h4>
+            <p>Vitamin D is important, and you’re getting your fill.  Enjoy the sun.</p>
+          </div>  
+          <div class="item pregnancy-low">
+            <div class="section-title">PREGNANCY</div>
+            <h4>Low PREGNANCY Head</h4>
+            <p>One of the many joys of motherhood can be risk reduction—pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.</p>
+          </div>                                
         </div>
         <div class="card negative">
           <div class="factors-title"><h3>What’s Bad.</h3></div>
-          <div class="item">
+          <div class="item bmi-high">
+            <div class="section-title">BMI</div>
+            <h4>Your BMI is within 25 and xxx</h4>
+            <p>Your BMI is outside of the healthy range.  Be good to yourself! Talk to your doctor or nutritionist about how you cansteps you can take to achieve a healthier BMI.</p>
+          </div>
+          <div class="item alcohol-high">
             <div class="section-title">ALCOHOL</div>
-            <h4>You have 3 drinks per day.</h4>
-            <p>This increases your baseline risk; we advise no more than 1 drink/day.</p>
+            <h4>You have x drinks per day.</h4>
+            <p>Consider cutting back on cocktails, as they alcohol increases your baseline risk.  We advise no more than one drink a day.</p>
           </div>
           <div class="item">
+            <div class="section-title exercise-high">EXERCISE</div>
+            <h4>You work out less than 30 min/day.</h4>
+            <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat—walking counts!</p>
+          </div>
+          <div class="item birth-control-high">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>High Birth Head</h4>
+            <p>Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for five years, you can reduce your ovarian cancer risk by up to 50%.</p>
+          </div>  
+          <div class="item breastfeeding-high">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>High BREASTFEEDING Head</h4>
+            <p>Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.</p>
+          </div>  
+          <div class="item diet-high">
             <div class="section-title">DIET</div>
-            <h4>You don’t maintain a healthy diet.</h4>
-            <p>diet can affect your risk; we advise talking to a nutritionist about how to eat for optimum health.</p>
-          </div>
-          <div class="item">
+            <h4>High DIET Head</h4>
+            <p>Your diet not only affects your breast and ovarian cancer risk, but your health in many other ways! Consider talking to a nutritionist about eating food that makes you feel good AND lowers your risk.</p>
+          </div>  
+          <div class="item vitamin-high">
             <div class="section-title">VITAMIN D</div>
-            <h4>You aren’t getting enough Vitamin D</h4>
-            <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
-          </div>
+            <h4>High VITAMIN Head</h4>
+            <p>Being Vitamin D deficient can slightly increase your risk.  Make sure to get some time in the sun or talk to your doctor about Vitamin D supplements.</p>
+          </div>  
+          <div class="item pregnancy-high">
+            <div class="section-title">PREGNANCY</div>
+            <h4>High PREGNANCY Head</h4>
+            <p>If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.</p>
+          </div>                      
         </div>
       </div>
       <div class="questions">
@@ -118,7 +173,7 @@
 
     <section class="intro" class="flex-container vertical-container">
       <div class="wheel-container">
-        <div id="wheel-base"><div class="spin">CLICK TO SPIN</div></div>
+        <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
@@ -172,22 +227,18 @@
 
             <div class="fact">
               <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful — <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Breast and ovarian cancers can run in some families. Sometimes this is because mutated genes have been passed down to you from your mother or father. These genes dramatically increase the risk of developing cancer. Other times, there may be a strong family history, but no known genetic mutation.</h5>
-              <div class="chart-1"></div>
             </div>
             
             <div class="fact">
@@ -196,62 +247,50 @@
 
             <div class="fact">
               <h5>Getting a genetic test is as simple as taking a blood test.  The Affordable Care Act requires coverage of genetic testing for women who qualify. </h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>One of the most common mutations — BRCA ½ — is present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>Nothing has a greater effect on a woman’s level of risk than her family history.</b>  Background information from BOTH sides of your family is important.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Younger women tend to have denser breast tissue – breasts with more glandular tissue and less fatty tissue – which can make it harder to see tumors on mammograms. Dense breast tissue is linked to a higher risk of breast cancer.</h5>
-              <div class="chart-1"></div>
             </div>
 
              <div class="fact">
               <h5>Risk for developing breast cancer is significantly increased if a woman received radiation treatments to the chest for another cancer (like Hodgkin’s disease or non-Hodgkin’s lymphoma) at a young age, particularly while her breasts were developing. Some reports find it to be as much as 12 times the normal risk.</h5>
-              <div class="chart-1"></div>
             </div>         
 
             <div class="fact">
               <h5>Starting your period under age 12 is linked to an increased risk for breast cancer because it raises total lifetime exposure to estrogen.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
-              <div class="chart-1"></div>
             </div>          
 
             <div class="fact">
               <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with the most common, low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5><b>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</b></h5>
-              <div class="chart-1"></div>
             </div>          
 
             <div class="fact">
               <h5>Pregnancy reduces risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
-              <div class="chart-1"></div>
             </div>
 
             <div class="fact">
               <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
-              <div class="chart-1"></div>
             </div>
           </div>
         </div>
@@ -322,7 +361,7 @@
           <br>
         </div>
 
-        <div class="question" data-question-id="3" data-question-name="bmi">
+        <div class="question" id="height-question" data-question-id="3" data-question-name="bmi">
           <div class="bmi-result">
             <div class="answers">
               <button>Continue</button>
@@ -356,27 +395,29 @@
           <br>
           <div class="answers">
             <button>Continue</button>
-          </div>
-          <button class="sub ask">Help me ask them</button>          
+            <button class="sub ask">Help me ask them</button>  
+          </div>        
         </div>
 
        <div class="question drinks-question" data-question-id="4">
           <div class="prompt">Drag drink icon to the average number of drinks per day you have — don’t forget to count the weekends!</div>
-          <div class="bottle"><img src="img/assessment/bottle.png"></div>
-          <div class="answers drinks">
-            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
-            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
-            <br>
-            <button>Continue</button>
-          </div>
+          	<div class="drink-slider">
+	          <div class="bottle"><img src="img/assessment/bottle.png"></div>
+	          <div class="answers drinks">
+	            <div class="drink" data-answer-id="1"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="2"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="3"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="4"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
+	            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
+	            <br>
+	            <button>Continue</button>
+	          </div>
+	        </div>
         </div>
 
         <div class="question" data-question-id="15">
@@ -443,8 +484,8 @@
           <br>
           <div class="answers">
             <button>Continue</button>
+            <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
-          <button class="sub ask" data-answer-id="13">Help me ask them</button>
         </div>
 
         <div class="question" data-question-id="8">
@@ -662,6 +703,7 @@
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
               <button class="facebook lifestyle">Pledge to Improve Your Lifestyle</button><br>
+              <div class="lifestyle-pledge-number">Number of Pledges 0</div>
               <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
             <!-- <div class="headline">
@@ -806,6 +848,7 @@
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
               <button class="facebook knowing">Pledge to Know Your Normal</button><br>
+              <div class="knowing-pledge-number">Number of Pledges 0</div>              
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
           </div>
@@ -881,6 +924,7 @@
             <div class="headline">         
               <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
+              <div class="family-pledge-number">Number of Pledges 0</div>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">            
@@ -908,6 +952,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/facebook.js"></script>    
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
 
@@ -932,7 +977,6 @@
       src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
     </script>
     <script src="js/roulette.js"></script>
-    <script src="js/facebook.js"></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
     <script type="text/javascript">

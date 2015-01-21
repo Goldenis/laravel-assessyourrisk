@@ -3,7 +3,7 @@ var wheel = $(document).ready(
 			/*
 			 * SET doAllowDrag to false to disable the mouse spin
 			 */
-			var doAllowDrag = true;
+			var doAllowDrag = false;
 			var doSpinUponLoad = true;
 			var touchStartPos,
 			moved = 0, // amount your finger moved during touchmove

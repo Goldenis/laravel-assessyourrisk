@@ -77,34 +77,89 @@
         
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
-          <div class="item">
+          <div class="item bmi-low">
             <div class="section-title">BMI</div>
-            <h4>Your body mass index (BMI) is within the healthy range of 18.5 - 24.9.</h4>
+            <h4>Your BMI is within 18.5 and 24.9 — a healthy range! Keep up the good work.</h4>
             <p>This reduces your baseline risk if BMI below 18.5; Be good to yourself and talk to your doctor or a nutritionist about how you can achieve a healthy BMI.</p>
           </div>
-          <div class="item">
+          <div class="item alcohol-low">
+            <div class="section-title">BMI</div>
+            <h4>Your cocktail consumption likely doesn’t increase your baseline risk.</h4>
+            <p></p>
+          </div>          
+          <div class="item exercise-low">
             <div class="section-title">EXERCISE</div>
             <h4>You work out at least 30 min/day.</h4>
-            <p>this decreases your baseline risk; You don't have to become a gymrat -- walking counts! Park further from the door, take a walk at lunch, ask your co-workers to take walking meetings, consider biking instead of driving, etc.</p>
+            <p>Your active lifestyle will benefit your health in many, many ways.</p>
           </div>
+          <div class="item birth-control-low">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>Low Birth Head</h4>
+            <p>You likely made this choice for other reasons, but just by taking birth control pills for a total of at least five years, yYou’ve decreased your risk by ovarian cancer by up to 50%</p>
+          </div>          
+          <div class="item breastfeeding-low">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>Low BREASTFEEDING Head</h4>
+            <p>Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.</p>
+          </div>  
+          <div class="item diet-low">
+            <div class="section-title">DIET</div>
+            <h4>Low DIET Head</h4>
+            <p>Keep fueling up on food that’s good for you.</p>
+          </div>  
+          <div class="item vitamin-low">
+            <div class="section-title">VITAMIN D</div>
+            <h4>Low VITAMIN Head</h4>
+            <p>Vitamin D is important, and you’re getting your fill.  Enjoy the sun.</p>
+          </div>  
+          <div class="item pregnancy-low">
+            <div class="section-title">PREGNANCY</div>
+            <h4>Low PREGNANCY Head</h4>
+            <p>One of the many joys of motherhood can be risk reduction—pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.</p>
+          </div>                                
         </div>
         <div class="card negative">
           <div class="factors-title"><h3>What’s Bad.</h3></div>
-          <div class="item">
+          <div class="item bmi-high">
+            <div class="section-title">BMI</div>
+            <h4>Your BMI is within 25 and xxx</h4>
+            <p>Your BMI is outside of the healthy range.  Be good to yourself! Talk to your doctor or nutritionist about how you cansteps you can take to achieve a healthier BMI.</p>
+          </div>
+          <div class="item alcohol-high">
             <div class="section-title">ALCOHOL</div>
-            <h4>You have 3 drinks per day.</h4>
-            <p>This increases your baseline risk; we advise no more than 1 drink/day.</p>
+            <h4>You have x drinks per day.</h4>
+            <p>Consider cutting back on cocktails, as they alcohol increases your baseline risk.  We advise no more than one drink a day.</p>
           </div>
           <div class="item">
+            <div class="section-title exercise-high">EXERCISE</div>
+            <h4>You work out less than 30 min/day.</h4>
+            <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat—walking counts!</p>
+          </div>
+          <div class="item birth-control-high">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>High Birth Head</h4>
+            <p>Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for five years, you can reduce your ovarian cancer risk by up to 50%.</p>
+          </div>  
+          <div class="item breastfeeding-high">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>High BREASTFEEDING Head</h4>
+            <p>Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.</p>
+          </div>  
+          <div class="item diet-high">
             <div class="section-title">DIET</div>
-            <h4>You don’t maintain a healthy diet.</h4>
-            <p>diet can affect your risk; we advise talking to a nutritionist about how to eat for optimum health.</p>
-          </div>
-          <div class="item">
+            <h4>High DIET Head</h4>
+            <p>Your diet not only affects your breast and ovarian cancer risk, but your health in many other ways! Consider talking to a nutritionist about eating food that makes you feel good AND lowers your risk.</p>
+          </div>  
+          <div class="item vitamin-high">
             <div class="section-title">VITAMIN D</div>
-            <h4>You aren’t getting enough Vitamin D</h4>
-            <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
-          </div>
+            <h4>High VITAMIN Head</h4>
+            <p>Being Vitamin D deficient can slightly increase your risk.  Make sure to get some time in the sun or talk to your doctor about Vitamin D supplements.</p>
+          </div>  
+          <div class="item pregnancy-high">
+            <div class="section-title">PREGNANCY</div>
+            <h4>High PREGNANCY Head</h4>
+            <p>If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.</p>
+          </div>                      
         </div>
       </div>
       <div class="questions">
@@ -118,7 +173,7 @@
 
     <section class="intro" class="flex-container vertical-container">
       <div class="wheel-container">
-        <div id="wheel-base"><div class="spin">CLICK TO SPIN</div></div>
+        <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">

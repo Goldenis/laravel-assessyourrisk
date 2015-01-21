@@ -724,7 +724,13 @@ input[type="checkbox"], input[type="radio"] {
   min-width: 140px;
 }
 .menu-icon {
-  display: none;
+  z-index: 100000000;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 100;
+  height: 40px;
+  width: 100px;
 }
 .asterisk {
   color: #f6323e;

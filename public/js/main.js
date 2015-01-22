@@ -13,7 +13,6 @@
   var _iPhone = window.navigator.userAgent.indexOf("iPhone") >= 0;
   var _currentFrame = 0;
   var inertiaInterval;
-  var scrollTop = 0;
   var containerTop = 0;
   var _frameRange;
   var touchInterval;
@@ -22,7 +21,12 @@
   var vidW = 1271;
   var overlayOpen;
   var initialized;
+
+  var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
+  var videoURL;
   var videoType;
+  var closest = 0;
+  var newClosest = 0;
 
   var _currentView = "left";
   var _currentModule = 0;
@@ -30,6 +34,7 @@
   var _currentQuestion = 0;
   var _totalQuestions;
   var _totalHeadlines;
+  var headline_tops;
   var _currentVignette = 0;
   var _oldVignette;
   var _currentHeadline;
@@ -63,10 +68,11 @@
   var receivedBMI = false;
 
 
-  $(window).on('scroll',function(e){
+  $('.module').on('scroll',function(e){
     // if(overlayOpen){
     //   return;
     // }
+    _scrollHandler();
   });
   $(window).on('mousewheel',function (eventData,deltaY) {
     // if(overlayOpen){
@@ -144,6 +150,7 @@
       })
     }
     setFontScale($('html'),11,16,'px');
+    setHeadlineTops();
     $('.wheel-container').css({
       'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
     });
@@ -169,6 +176,21 @@
       // });
     }
   }
+  function setHeadlineTops(){
+    headline_tops = [[],[],[]];
+    var l1 = $('.module').eq(0).find($('.headline')).length;
+    var l2 = l1+$('.module').eq(1).find($('.headline')).length;
+    var l3 = l2+$('.module').eq(2).find($('.headline')).length;
+    for(var i=0;i<_totalHeadlines;i++){
+      if(i < l1){
+        headline_tops[0].push($('.headline').eq(i).offset().top);
+      }else if(i < l2){
+        headline_tops[1].push($('.headline').eq(i).offset().top);
+      }else if(i < l3){
+        headline_tops[2].push($('.headline').eq(i).offset().top);
+      }
+    }
+  }
   function showNextHeadline(){
     // _currentFrame += 15;
     // _scrollHandler();
@@ -176,16 +198,17 @@
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
     var nextHeadline = _currentHeadline.index() + 1;
     if (initialized && nextHeadline < numHeadlines){
-      _currentHeadline.removeClass('active');
-      _currentHeadline.addClass('out');
+      // _currentHeadline.removeClass('active');
+      // _currentHeadline.addClass('out');
       _oldHeadline = _currentHeadline;
       _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
       fillDot();
-      _currentHeadline.removeClass('out');
+      // _currentHeadline.removeClass('out');
       _currentHeadline.addClass('active');
       
       handleSaveDeepProgress();
-    }else{
+    }
+    else{
       nextVignette();
     }
   }
@@ -193,22 +216,19 @@
     $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
   }
   function _scrollHandler(){
-    var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
-    var nextHeadline = _currentHeadline.index() + 1;
-    if (initialized && nextHeadline < numHeadlines){
-      _currentHeadline.removeClass('active');
-      _currentHeadline.addClass('out');
-      _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(nextHeadline);
-      _currentHeadline.removeClass('out');
-      _currentHeadline.addClass('active');
-      
-      handleSaveDeepProgress();
-    }else{
-      nextVignette();
+    var scrollTop = $('.module').eq(_currentModule).scrollTop();
+
+    for(var i=0;i< headline_tops[_currentModule].length;i++){
+      if (Math.abs(headline_tops[_currentModule][i] - scrollTop) < Math.abs(headline_tops[_currentModule][newClosest] - scrollTop)) {
+        newClosest = i;
+      }
     }
-
-    console.log(numHeadlines, nextHeadline-1);
-
+    console.log(newClosest, closest)
+    if(newClosest !== closest){
+      closest = newClosest;
+      $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
+      changeHeadline(closest*(_currentModule+1));
+    }
   }
   
   function addCharts() {
@@ -354,6 +374,7 @@
     })
     $('.btn-begin').on('click',function(){
       showNextHeadline();
+      $('.module').eq(_currentModule).animate({scrollTop:_winH},500);
     })
     $('.btn-continue').on('click',function (e) {
       e.stopPropagation();
@@ -433,7 +454,10 @@
       var dot = '<div class="dot"></div>';
       $('.education .dots').append(dot);
     };
-    $('.education .dot').on('click',changeHeadline);
+    $('.education .dot').on('click',function(){
+        changeHeadline($('.education .dot').index($(this)))
+      }
+    );
     $('.percdive').html(0 + '/' + _totalHeadlines);
     $('.percquiz').html(0 + '/' + _totalQuestions);
     $('.education .dots h6').eq(1).css({
@@ -472,18 +496,16 @@
 
     expandModule(i);
   }
-  function changeHeadline(){
+  function changeHeadline(idx){
     _oldModule = _currentModule;
-    var idx = $('.education .dot').index($(this));
     _currentHeadline = $('.headline').eq(idx);
-    _currentModule =  $('.module').index(_currentHeadline.closest('.module'));
-    _currentVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
-
-    if(_oldModule !== undefined){
-      closeModule(_oldModule);
+    console.log(idx)
+    var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
+    // console.log(_newVignette)
+    if(_currentVignette != _newVignette){
+      _currentVignette = _newVignette;
+      changeVideo();
     }
-    
-    expandModule(_currentModule);
   }
   function expandModule(){
     handleSaveDeepProgress();
@@ -493,9 +515,9 @@
     $('.nav-item').eq(_currentModule).addClass('active');
     // _currentFrame = 0;
     $('.education-menu').addClass('out');
-    $('.headline').removeClass('active');
-    $('.headline').removeClass('out');
-    $('.vignette').removeClass('in');
+    // $('.headline').removeClass('active');
+    // $('.headline').removeClass('out');
+    // $('.vignette').removeClass('in');
 
     $('.module').eq(_currentModule).removeClass('left');
     $('.module').eq(_currentModule).addClass('in');
@@ -848,18 +870,14 @@ Do you know if I do%3F";
   }
   function nextVignette(){
     console.log("Next Vignette")
-    // _currentFrame = 0;
 
-    var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
-    var videoURL;
-
-    $('.vignette').removeClass('in');
+    // $('.vignette').removeClass('in');
     setTimeout(function(){
       // $('.module').eq(_currentModule).find($('.vignette')).eq(_oldVignette).attr('src',"");
     },600);
     _oldVignette = _currentVignette;
     _currentVignette++;
-    $('.headline').removeClass('active');
+    // $('.headline').removeClass('active');
     if(_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length){
       
       if(_currentModule + 1 >= 3){
@@ -876,14 +894,7 @@ Do you know if I do%3F";
       // $('.bg-video').get(_currentVignette).currentTime = 0;
      // console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
 
-      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
-
-      if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        // no video
-      }else{
-        var src = vig.data('src') + videoType;
-        loadBGVideo(vig, src, cloudfrontURL);
-      }
+     changeVideo();
       
       //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
     }
@@ -893,6 +904,17 @@ Do you know if I do%3F";
     // _scrollHandler();
   }
 
+  function changeVideo() {
+    
+      var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+
+      if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // no video
+      }else{
+        var src = vig.data('src') + videoType;
+        loadBGVideo(vig, src, cloudfrontURL);
+      }
+  }
   function loadBGVideo(vig, src, host){
     if($('#bg-vid').attr('data-src') != src){
           $('#bg-vid').attr('data-src', src);
@@ -1042,6 +1064,7 @@ Do you know if I do%3F";
   $(document).ready(function() {
     _totalQuestions = $('.question').length;
     _totalHeadlines = $('.headline').length;
+    headline_tops = [];
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
     fillDot();
     //position the header to be 90%;

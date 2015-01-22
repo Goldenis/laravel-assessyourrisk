@@ -128,6 +128,9 @@ $(function() {
         
         console.log(type)
 
+        if(type == "lifestyle"){
+          pledgeMessage = "improve their lifestyles."
+        }
         resp = $.ajax({
           type : "GET",
           cache: false,
@@ -137,7 +140,7 @@ $(function() {
           var count = data.count;
           console.log('pledges' +count)
           
-          $('.' +type+ '-pledge-number').html("Join " +count+ " other people");
+          $('.' +type+ '-pledge-number').html(count+ " women have pledged to " + pledgeMessage);
 
           //return(count);
 

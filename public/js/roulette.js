@@ -139,6 +139,6 @@ var wheel = $(document).ready(
 			}
 			
 			if (doSpinUponLoad) {
-				setTimeout(spinOnLoad, 3000);
+				setTimeout(spinOnLoad, 2000);
 			}
 		});

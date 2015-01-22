@@ -662,8 +662,9 @@ input[type="radio"]{
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
+  opacity: 0;
   // opacity: 0 !important;
-  //@include transition(.5s);
+  // @include transition(.5s);
   &.out {
     opacity: 0 !important;
   }

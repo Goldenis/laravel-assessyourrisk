@@ -4,7 +4,7 @@ $(function() {
       var modules = ['lifestyle','knowing','family']
       var userLoggedIn = false;
 
-        getUserCount('lifestyle');
+        getUserCount();
       
       // $( ".facebook.lifestyle" ).click(function() {
       //   alert('hello')
@@ -124,22 +124,20 @@ $(function() {
         $('.' + type).addClass('in');
       }
 
-      function getUserCount(type) {
+      function getUserCount() {
         
-        console.log(type)
-
         resp = $.ajax({
           type : "GET",
           cache: false,
-          url : '/pledge/'+ type + '/count/',
+          //url : '/pledge/'+ type + '/count/',
+          url : '/pledge/totals/count/',
           dataType: 'json'
         }).done(function(data) {
-          var count = data.count;
-          console.log('pledges' +count)
-          
-          $('.' +type+ '-pledge-number').html("Join " +count+ " other people");
 
-          //return(count);
+        for (i=0; i<modules.length; i++) {
+          console.log('pledges ' +data[modules[i]])
+          $('.' +modules[i]+ '-pledge-number').html("Join " +data[modules[i]]+ " other people");
+          }
 
         }).fail(function(error) {
           console.log(error);

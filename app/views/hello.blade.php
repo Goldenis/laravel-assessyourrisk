@@ -79,13 +79,13 @@
           <div class="factors-title"><h3>What’s Good.</h3></div>
           <div class="item bmi-low">
             <div class="section-title">BMI</div>
-            <h4>Your BMI is within 18.5 and 24.9 — a healthy range! Keep up the good work.</h4>
-            <p>This reduces your baseline risk if BMI below 18.5; Be good to yourself and talk to your doctor or a nutritionist about how you can achieve a healthy BMI.</p>
+            <h4>Your BMI is within 18.5 and 24.9</h4>
+            <p>a healthy range! Keep up the good work.</p>
           </div>
           <div class="item alcohol-low">
             <div class="section-title">BMI</div>
-            <h4>Your cocktail consumption likely doesn’t increase your baseline risk.</h4>
-            <p></p>
+            <h4>Your have 1 drink per day.</h4>
+            <p>Your cocktail consumption likely doesn’t increase your baseline risk.</p>
           </div>          
           <div class="item exercise-low">
             <div class="section-title">EXERCISE</div>

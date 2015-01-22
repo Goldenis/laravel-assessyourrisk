@@ -614,8 +614,8 @@
         <div class="vignette main">
           <div class="headlines">
             <div class="headline">
-              <h2>Turns out, life affects your life:</h2>
-              <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
+              <h2>Turns out, <i>life</i> affects your life:</h2>
+              <h4> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -631,7 +631,7 @@
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h3>Get moving: 30 minutes on most days, and you might reduce your risk by as much as 10-20 percent.</h3>
+              <h3>Get moving: Breaking a sweat for 30 minutes on most days can help reduce your risk by as much as 10-20 percent.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
           </div>
@@ -663,7 +663,7 @@
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h3>Every drink you throw back affects your health. Limit your drinking wherever you can to stay on the safe side.</h3>
+              <h3>Every drink you throw back affects your health. Limit your drinking to no more than one drink per day, and you’ll be doing yourself a favor.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <!-- <div class="headline">
@@ -678,7 +678,7 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
+              <h3>Commit to quit. There’s a direct through line from tobacco use to <i>many</i> diseases, including breast cancer.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
@@ -731,13 +731,10 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
+              <h3>When it comes to your boobs, you need to know the lay of the land, so get to know what they feel like. And your breasts cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</h3>
               <ul>
-                <li>Look & touch from many angles with different pressures.</li>
-                <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
-                <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
-                <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
-                <li>If a change persists or worsens, get to a doc</li>
+                <li>Pay attention to changes in size, shape, contour, and color</li>
+                <li>If a change persists or worsens for 2-3 weeks, it’s time to see a doctor</li>
               </ul>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
@@ -751,14 +748,17 @@
             <div class="headline">         
               <h3>A few examples of abnormal symptoms:</h3>
               <ul>
-                <li>Warmth or redness</li>
+                <li>A lump that’s hard and immobile</li>
+                <li>Swelling, soreness or rash</li>
+                <li>Warmth, redness or darkening</li>
+                <li>Change in size or shape of either breast</li>
+                <li>Dimpling or prickling of the skin</li>
+                <li>An itchy, scaly sore, or rash around the nipple</li>
+                <li>A nipple that becomes flat or inverted</li>
                 <li>Nipple discharge</li>
-                <li>Swelling</li>
-                <li>Soreness</li>
-                <li>Scaly, sore, or rash on breast</li>
-                <li>Changes in breast size or shape</li>
-                <li>Itching or bumps</li>
-                <li>Lump </li>
+                <li>New pain in one spot that does not go away</li>
+                <li>Persistent itching</li>                                
+                <li>Bumps that resemble bug bites</li>
               </ul>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
@@ -773,7 +773,7 @@
               <h3>Let’s talk lumps.</h3>
               <ul>
                 <li>The most common symptom of breast cancer is a lump.</li>
-                <li>But, some women have naturally lumpy breasts.  </li>
+                <li>But, some women have naturally lumpy breasts.</li>
                 <li>Soft, mobile lumps that come and go are normal.</li>
                 <li>A lump that feels like a frozen pea is not.</li>
                 <li>A lump that gets bigger and doesn’t go away for 2-3 weeks is not.</li>
@@ -790,7 +790,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t forget to take care.</h3>
-              <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
+              <p>Sign up for a monthly Breast Health Reminder™ to be breast self-aware— that’s one text a month.  Your information stays private and you can opt out any time.</p>
               <br>
               <button class="text-me">Text Me.</button>
               <br>
@@ -812,7 +812,7 @@
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
               <ul>
                 <li><h4>Primary:</h4></li>
                 <li>Pelvic or abdominal pain</li>
@@ -824,7 +824,7 @@
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
               <ul>
                 <li><h4>Secondary:</h4></li>
                 <li>Constipation</li>
@@ -841,9 +841,9 @@
               <ul>
                 <li>See a doctor annually for a well woman’s exam.</li>
                 <li>Ask for a physical breast exam.</li>
-                <li>Remember: pap smears don’t check for ovarian cancer.</li>
+                <li>Remember: pap smears <i>don’t</i> check for ovarian cancer.</li>
                 <li>Mammograms should begin at 40, unless your family history says otherwise.</li>
-                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
+                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of at diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
@@ -861,7 +861,7 @@
         <div class="vignette main">
           <div class="headlines">
             <div class="headline">
-              <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
+              <h3>If you have breast and ovaries, you are at risk.  Family and health history is the most important thing to look at when it comes to being proactive about your health.</h3>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -872,11 +872,11 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
+              <h3>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can be as high as 54%.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
+              <h3>Family history and genetic predisposition aren’t one in the same. For example, if a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
           </div>
@@ -898,11 +898,11 @@
           </div> -->
           <div class="headlines">
             <div class="headline">
-              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
+              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity can help reduce the breast-fed baby’s own later-life risk.  Now that’s win-win.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
-              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts. The earlier this transformation happens, the lower the risk of breast cancer.</h3>
+              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth.  The earlier this transformation happens, the lower the risk of breast cancer.</h3>
               <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
@@ -922,7 +922,7 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
               <div class="family-pledge-number">Number of Pledges 0</div>
               <button class="btn-continue sub">CONTINUE</button>

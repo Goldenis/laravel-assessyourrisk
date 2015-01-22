@@ -144,9 +144,9 @@
       })
     }
     setFontScale($('html'),11,16,'px');
-    $('.wheel-container').css({
-      'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
-    });
+    // $('.wheel-container').css({
+    //   'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
+    // });
   }
   function killWidows() {
     var wordArray = $(this).text().split(" ");

@@ -665,8 +665,9 @@ input[type="radio"]{
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
+  opacity: 0;
   // opacity: 0 !important;
-  //@include transition(.5s);
+  // @include transition(.5s);
   &.out {
     opacity: 0 !important;
   }
@@ -691,7 +692,14 @@ input[type="radio"]{
   }
 }
 .menu-icon{
-  display: none;
+  //display: none;
+  z-index: 100000000;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 100;
+  height: 40px;
+  width: 100px;
 }
 .asterisk{
   color: $red;
@@ -747,8 +755,8 @@ input[type="radio"]{
   .wheel-container {
     width: 400px;
     height: 400px;
-    left: 45%;
-    top: 50%;
+    left: 25%;
+    top: 15%;
     position: absolute;
     overflow: hidden;
     cursor: pointer;
@@ -1033,16 +1041,16 @@ input[type="radio"]{
     height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    visibility: hidden;
+    opacity: 0;
     @include transition(1s);
+    pointer-events: none;
     &.in{
       left: 0;
-      visibility: visible;
+      pointer-events: auto;
     }
     &.left{
       left: -100px !important;
       opacity: 0;
-      visibility: hidden;
     }
     .main{
       left: 10px;

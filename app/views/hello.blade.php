@@ -77,34 +77,89 @@
         
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
-          <div class="item">
+          <div class="item bmi-low">
             <div class="section-title">BMI</div>
-            <h4>Your body mass index (BMI) is within the healthy range of 18.5 - 24.9.</h4>
-            <p>This reduces your baseline risk if BMI below 18.5; Be good to yourself and talk to your doctor or a nutritionist about how you can achieve a healthy BMI.</p>
+            <h4>Your BMI is within 18.5 and 24.9</h4>
+            <p>a healthy range! Keep up the good work.</p>
           </div>
-          <div class="item">
+          <div class="item alcohol-low">
+            <div class="section-title">BMI</div>
+            <h4>Your have 1 drink per day.</h4>
+            <p>Your cocktail consumption likely doesn’t increase your baseline risk.</p>
+          </div>          
+          <div class="item exercise-low">
             <div class="section-title">EXERCISE</div>
             <h4>You work out at least 30 min/day.</h4>
-            <p>this decreases your baseline risk; You don't have to become a gymrat -- walking counts! Park further from the door, take a walk at lunch, ask your co-workers to take walking meetings, consider biking instead of driving, etc.</p>
+            <p>Your active lifestyle will benefit your health in many, many ways.</p>
           </div>
+          <div class="item birth-control-low">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>Low Birth Head</h4>
+            <p>You likely made this choice for other reasons, but just by taking birth control pills for a total of at least five years, yYou’ve decreased your risk by ovarian cancer by up to 50%</p>
+          </div>          
+          <div class="item breastfeeding-low">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>Low BREASTFEEDING Head</h4>
+            <p>Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.</p>
+          </div>  
+          <div class="item diet-low">
+            <div class="section-title">DIET</div>
+            <h4>Low DIET Head</h4>
+            <p>Keep fueling up on food that’s good for you.</p>
+          </div>  
+          <div class="item vitamin-low">
+            <div class="section-title">VITAMIN D</div>
+            <h4>Low VITAMIN Head</h4>
+            <p>Vitamin D is important, and you’re getting your fill.  Enjoy the sun.</p>
+          </div>  
+          <div class="item pregnancy-low">
+            <div class="section-title">PREGNANCY</div>
+            <h4>Low PREGNANCY Head</h4>
+            <p>One of the many joys of motherhood can be risk reduction—pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.</p>
+          </div>                                
         </div>
         <div class="card negative">
           <div class="factors-title"><h3>What’s Bad.</h3></div>
-          <div class="item">
+          <div class="item bmi-high">
+            <div class="section-title">BMI</div>
+            <h4>Your BMI is within 25 and xxx</h4>
+            <p>Your BMI is outside of the healthy range.  Be good to yourself! Talk to your doctor or nutritionist about how you cansteps you can take to achieve a healthier BMI.</p>
+          </div>
+          <div class="item alcohol-high">
             <div class="section-title">ALCOHOL</div>
-            <h4>You have 3 drinks per day.</h4>
-            <p>This increases your baseline risk; we advise no more than 1 drink/day.</p>
+            <h4>You have x drinks per day.</h4>
+            <p>Consider cutting back on cocktails, as they alcohol increases your baseline risk.  We advise no more than one drink a day.</p>
           </div>
           <div class="item">
+            <div class="section-title exercise-high">EXERCISE</div>
+            <h4>You work out less than 30 min/day.</h4>
+            <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat—walking counts!</p>
+          </div>
+          <div class="item birth-control-high">
+            <div class="section-title">BIRTH CONTROL</div>
+            <h4>High Birth Head</h4>
+            <p>Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for five years, you can reduce your ovarian cancer risk by up to 50%.</p>
+          </div>  
+          <div class="item breastfeeding-high">
+            <div class="section-title">BREASTFEEDING</div>
+            <h4>High BREASTFEEDING Head</h4>
+            <p>Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.</p>
+          </div>  
+          <div class="item diet-high">
             <div class="section-title">DIET</div>
-            <h4>You don’t maintain a healthy diet.</h4>
-            <p>diet can affect your risk; we advise talking to a nutritionist about how to eat for optimum health.</p>
-          </div>
-          <div class="item">
+            <h4>High DIET Head</h4>
+            <p>Your diet not only affects your breast and ovarian cancer risk, but your health in many other ways! Consider talking to a nutritionist about eating food that makes you feel good AND lowers your risk.</p>
+          </div>  
+          <div class="item vitamin-high">
             <div class="section-title">VITAMIN D</div>
-            <h4>You aren’t getting enough Vitamin D</h4>
-            <p>Vitamin D is important for lots of reasons and studies show that being deficient can slightly increase your risk for breast cancer, and potentially also for ovarian cancer. If you haven't already, talk to your doctor about how to boost your levels, and make sure you get your levels checked each month. </p>
-          </div>
+            <h4>High VITAMIN Head</h4>
+            <p>Being Vitamin D deficient can slightly increase your risk.  Make sure to get some time in the sun or talk to your doctor about Vitamin D supplements.</p>
+          </div>  
+          <div class="item pregnancy-high">
+            <div class="section-title">PREGNANCY</div>
+            <h4>High PREGNANCY Head</h4>
+            <p>If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.</p>
+          </div>                      
         </div>
       </div>
       <div class="questions">
@@ -118,7 +173,7 @@
 
     <section class="intro" class="flex-container vertical-container">
       <div class="wheel-container">
-        <div id="wheel-base"><div class="spin">CLICK TO SPIN</div></div>
+        <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
@@ -558,8 +613,8 @@
         <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
-              <h2>Turns out, life affects your life:</h2>
-              <h4>day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
+              <h2>Turns out, <i>life</i> affects your life:</h2>
+              <h4> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -575,8 +630,7 @@
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
             <div class="headline">
-              <h3>Get moving: 30 minutes on most days, and you might reduce your risk by as much as 10-20 percent.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>Get moving: Breaking a sweat for 30 minutes on most days can help reduce your risk by as much as 10-20 percent.</h3>
             </div>
           </div>
         </div>
@@ -603,8 +657,7 @@
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
             <div class="headline">
-              <h3>Every drink you throw back affects your health. Limit your drinking wherever you can to stay on the safe side.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>Every drink you throw back affects your health. Limit your drinking to no more than one drink per day, and you’ll be doing yourself a favor.</h3>
             </div>
           </div>
         </div>
@@ -615,8 +668,7 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Commit to quit. There’s a direct through line from tobacco use to many diseases.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>Commit to quit. There’s a direct through line from tobacco use to <i>many</i> diseases, including breast cancer.</h3>
             </div>
             <div class="headline">
               <h3>No excuses: if you don’t give up your smokes, you’re putting out a welcome sign for cancer.</h3>
@@ -643,7 +695,7 @@
             </div>
             <div class="headline last">
             	<h2>Module Complete.</h2>
-                <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
+                <button class="btn-continue sub">KNOW YOUR NORMAL MODULE →</button>
             </div>
           </div>
         </div>
@@ -667,13 +719,10 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>When it comes to your boobs, you need to know the lay of the land.</h3>
+              <h3>When it comes to your boobs, you need to know the lay of the land, so get to know what they feel like. And your breasts cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</h3>
               <ul>
-                <li>Look & touch from many angles with different pressures.</li>
-                <li>Use your three middle finger pads (nerve endings are most sensitive)</li>
-                <li>Pay attention to changes in size, shape, contour, dimpling, pulling, redness, or scaly skin.</li>
-                <li>Breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</li>
-                <li>If a change persists or worsens, get to a doc</li>
+                <li>Pay attention to changes in size, shape, contour, and color</li>
+                <li>If a change persists or worsens for 2-3 weeks, it’s time to see a doctor</li>
               </ul>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
@@ -687,14 +736,17 @@
             <div class="headline">         
               <h3>A few examples of abnormal symptoms:</h3>
               <ul>
-                <li>Warmth or redness</li>
+                <li>A lump that’s hard and immobile</li>
+                <li>Swelling, soreness or rash</li>
+                <li>Warmth, redness or darkening</li>
+                <li>Change in size or shape of either breast</li>
+                <li>Dimpling or prickling of the skin</li>
+                <li>An itchy, scaly sore, or rash around the nipple</li>
+                <li>A nipple that becomes flat or inverted</li>
                 <li>Nipple discharge</li>
-                <li>Swelling</li>
-                <li>Soreness</li>
-                <li>Scaly, sore, or rash on breast</li>
-                <li>Changes in breast size or shape</li>
-                <li>Itching or bumps</li>
-                <li>Lump </li>
+                <li>New pain in one spot that does not go away</li>
+                <li>Persistent itching</li>                                
+                <li>Bumps that resemble bug bites</li>
               </ul>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
@@ -709,7 +761,7 @@
               <h3>Let’s talk lumps.</h3>
               <ul>
                 <li>The most common symptom of breast cancer is a lump.</li>
-                <li>But, some women have naturally lumpy breasts.  </li>
+                <li>But, some women have naturally lumpy breasts.</li>
                 <li>Soft, mobile lumps that come and go are normal.</li>
                 <li>A lump that feels like a frozen pea is not.</li>
                 <li>A lump that gets bigger and doesn’t go away for 2-3 weeks is not.</li>
@@ -726,7 +778,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t forget to take care.</h3>
-              <p>Sign up for a monthly Breast Health Reminder to check in with your breasts — that’s one text a month.  Your information stays private and you can opt out any time.  </p>
+              <p>Sign up for a monthly Breast Health Reminder™ to be breast self-aware— that’s one text a month.  Your information stays private and you can opt out any time.</p>
               <br>
               <button class="text-me">Text Me.</button>
               <br>
@@ -748,7 +800,7 @@
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
             <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
               <ul>
                 <li><h4>Primary:</h4></li>
                 <li>Pelvic or abdominal pain</li>
@@ -760,7 +812,7 @@
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
             <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen:</h4>
+              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
               <ul>
                 <li><h4>Secondary:</h4></li>
                 <li>Constipation</li>
@@ -777,9 +829,9 @@
               <ul>
                 <li>See a doctor annually for a well woman’s exam.</li>
                 <li>Ask for a physical breast exam.</li>
-                <li>Remember: pap smears don’t check for ovarian cancer.</li>
+                <li>Remember: pap smears <i>don’t</i> check for ovarian cancer.</li>
                 <li>Mammograms should begin at 40, unless your family history says otherwise.</li>
-                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
+                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of at diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
                 <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
                 <li>You see your doctor once a year.  The other 364 days are up to you.</li>
               </ul>
@@ -790,7 +842,7 @@
             </div>
             <div class="headline last">
             	<h2>Module Complete.</h2>
-              <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
+              <button class="btn-continue sub">FAMILY HISTORY MODULE →</button>
             </div>  
           </div>
         </div>
@@ -798,11 +850,11 @@
 
 <!-- FAMILY HISTORY -->
 
-      <div class="module family-history" data-src="family">
-        <div class="vignette main">
+      <div class="module family-history">
+        <div class="vignette main" data-src="family">
           <div class="headlines">
             <div class="headline">
-              <h3>If you have breast and ovaries, you are at risk.  Family history is the most important thing to look at when it comes to being proactive about your health.</h3>
+              <h3>If you have breast and ovaries, you are at risk.  Family and health history is the most important thing to look at when it comes to being proactive about your health.</h3>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -813,12 +865,10 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>For a woman with family history or carrying a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can go as high as 54%.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can be as high as 54%.</h3>
             </div>
             <div class="headline">
-              <h3>Family history and genetic predisposition aren’t one in the same.  If a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>Family history and genetic predisposition aren’t one in the same. For example, if a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
             </div>
           </div>
         </div>
@@ -839,12 +889,10 @@
           </div> -->
           <div class="headlines">
             <div class="headline">
-              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity reduces the breast-fed babes’ own later-life risk.  Now that’s win-win.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity can help reduce the breast-fed baby’s own later-life risk.  Now that’s win-win.</h3>
             </div>
             <div class="headline">
-              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts. The earlier this transformation happens, the lower the risk of breast cancer.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth.  The earlier this transformation happens, the lower the risk of breast cancer.</h3>
             </div>
             <div class="headline">
               <h3>Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
@@ -859,7 +907,7 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
             </div>
              <div class="headline">

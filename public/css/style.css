@@ -712,6 +712,7 @@ input[type="checkbox"], input[type="radio"] {
   top: 1.5rem;
   left: 3rem;
   margin-left: 0px;
+  opacity: 0;
 }
 .logo.out {
   opacity: 0 !important;
@@ -732,7 +733,13 @@ input[type="checkbox"], input[type="radio"] {
   min-width: 140px;
 }
 .menu-icon {
-  display: none;
+  z-index: 100000000;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 100;
+  height: 40px;
+  width: 100px;
 }
 .asterisk {
   color: #f6323e;
@@ -785,8 +792,8 @@ input[type="checkbox"], input[type="radio"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  left: 45%;
-  top: 50%;
+  left: 25%;
+  top: 15%;
   position: absolute;
   overflow: hidden;
   cursor: pointer;
@@ -1069,7 +1076,7 @@ input[type="checkbox"], input[type="radio"] {
   height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  visibility: hidden;
+  opacity: 0;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
   -o-transition: all 1s 0 ;
@@ -1078,15 +1085,15 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  pointer-events: none;
 }
 .education .module.in {
   left: 0;
-  visibility: visible;
+  pointer-events: auto;
 }
 .education .module.left {
   left: -100px !important;
   opacity: 0;
-  visibility: hidden;
 }
 .education .module .main {
   left: 10px;

@@ -14,13 +14,13 @@
     //instantiate a TimelineLite    
     var tl = new TimelineLite();
 
-    tl.from(wheel, 1, {opacity:0, scale:.5}, "+=.1");
-    var wheelScale = 1.5;
+    tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
+    var wheelScale = 1.2;
     if($(window).width() < 768){
-      wheelScale = .85;
+      wheelScale = .95;
     }
-    tl.to(wheel, 2.5, {scale:wheelScale, ease:Expo.easeOut})
-    tl.from(logo, 0.2, {opacity:0}, "-=.2");
+    tl.to(wheel, 2, {scale:wheelScale, ease:Expo.easeOut})
+    tl.to(logo, .5, {opacity:1}, "+=0");
     tl.from(second, 0.5, {opacity:0}, "-=.2");
 
     //add a label 0.5 seconds later to mark the placement of the next tween

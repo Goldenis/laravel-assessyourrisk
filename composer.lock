@@ -1687,16 +1687,16 @@
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v56",
+            "version": "v57",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "02352cd6fc1f3351fa8bd088602b2816e133f094"
+                "reference": "166ad317a307082d037a6d201ddb602f3295af9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/02352cd6fc1f3351fa8bd088602b2816e133f094",
-                "reference": "02352cd6fc1f3351fa8bd088602b2816e133f094",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/166ad317a307082d037a6d201ddb602f3295af9a",
+                "reference": "166ad317a307082d037a6d201ddb602f3295af9a",
                 "shasum": ""
             },
             "bin": [
@@ -1727,7 +1727,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2015-01-13 10:40:10"
+            "time": "2015-01-19 23:21:04"
         },
         {
             "name": "leafo/scssphp",
@@ -1826,6 +1826,7 @@
         "panique/laravel-sass": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.15"
     },

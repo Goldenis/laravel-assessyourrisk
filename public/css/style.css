@@ -1345,6 +1345,9 @@ input[type="checkbox"], input[type="radio"] {
   top: 0px;
   opacity: 0;
 }
+.education .headlines .headline.last {
+  margin-bottom: 40%;
+}
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
 }
@@ -1961,20 +1964,21 @@ footer {
     left: 0%;
   }
   .education .headlines .headline {
+    margin-bottom: 200px;
     width: 100%;
   }
   .education .headlines .headline h4 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
   .education .headlines .headline h3 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
   .education .headlines .headline h2 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     margin-bottom: 2rem;
   }
   .education .headlines ul, .education .headlines p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .education.in {
     left: 0;

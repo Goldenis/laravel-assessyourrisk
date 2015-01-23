@@ -83,7 +83,6 @@
     // }else{
     //   _currentFrame -= deltaY;
     //   _currentFrame = Math.max(0,_currentFrame);
-    //   //_scrollHandler();
     //   eventData.preventDefault();
     // }
   })
@@ -106,7 +105,6 @@
     // distance = touch.pageY-touchStartY;
     // _currentFrame -= distance/10;
     // _currentFrame = Math.floor(Math.max(_currentFrame,0));
-    // //_scrollHandler();
     // touchStartY = touch.pageY;
   })
   $(window).bind('touchend',function(e){
@@ -117,7 +115,6 @@
     //   distance*=.9;
     //   _currentFrame -= distance/3;
     //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
-    //   //_scrollHandler();
     //   if(Math.abs(distance) < .2){
     //     clearInterval(inertiaInterval)
     //   }
@@ -128,7 +125,6 @@
   function _pageResize () {
     _winH = _$window.height();
     _winW = _$window.width();
-    //_scrollHandler(0);
     if(_winW < 768){
       _smallScreen = true;
       $('.module-hero h1').eq(1).html('Normal')
@@ -138,6 +134,14 @@
       $('.module-hero h1').eq(1).html('Knowing Your Normal')
       $('.module-hero h1').eq(2).html('Family & Health History')
     }
+    sizeVideo();
+    setFontScale($('html'),11,16,'px');
+    setHeadlineTops();
+    $('.wheel-container').css({
+      'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
+    });
+  }
+  function sizeVideo() {
     if(_winW/_winH > 1.8){
       $('video').css({
         width: _winW,
@@ -149,19 +153,6 @@
         width: 'auto'
       })
     }
-    setFontScale($('html'),11,16,'px');
-    setHeadlineTops();
-    $('.wheel-container').css({
-      'transform': 'scale(' + (_winW*_winH)/1048438 + ') translate(-50%,-50%)'
-    });
-  }
-  function killWidows() {
-    var wordArray = $(this).text().split(" ");
-    if (wordArray.length > 1) {
-      wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
-      wordArray.pop();
-      $(this).html(wordArray.join(" "));
-    }
   }
   function setFontScale (el,min,max,type){
     type = typeof type !== "undefined" ? type : "rem";
@@ -172,7 +163,7 @@
   function redraw() {
     if(_isTouchDevice){
       // window.requestAnimationFrame(function() {
-      //    _scrollHandler();
+      
       // });
     }
   }
@@ -190,10 +181,11 @@
         headline_tops[2].push($('.headline').eq(i).offset().top);
       }
     }
+    console.log(headline_tops[_currentModule])
   }
   function showNextHeadline(){
     // _currentFrame += 15;
-    // _scrollHandler();
+    
     console.log("Next Headline")
     var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
     var nextHeadline = _currentHeadline.index() + 1;
@@ -213,21 +205,20 @@
     }
   }
   function fillDot() {
+    console.log("fill dot "+_currentHeadline)
     $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
   }
   function _scrollHandler(){
-    var scrollTop = $('.module').eq(_currentModule).scrollTop();
-
+    var scrollTop = $('.module').eq(_currentModule).scrollTop()+(_winH/3);
     for(var i=0;i< headline_tops[_currentModule].length;i++){
-      if (Math.abs(headline_tops[_currentModule][i] - scrollTop) < Math.abs(headline_tops[_currentModule][newClosest] - scrollTop)) {
+      if (Math.abs(headline_tops[_currentModule][i] - scrollTop) < Math.min(Math.abs(headline_tops[_currentModule][closest] - scrollTop),Math.abs(headline_tops[_currentModule][newClosest] - scrollTop))) {
         newClosest = i;
       }
     }
-    console.log(newClosest, closest)
     if(newClosest !== closest){
       closest = newClosest;
       $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
-      changeHeadline(closest*(_currentModule+1));
+      changeHeadline(closest+(_currentModule*12));
     }
   }
   
@@ -488,6 +479,8 @@
     _oldVignette = null;
     _currentVignette = 0;
     _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
+    closest = 0;
+    newClosest = 0;
     $('.vid-container').remove();
     if(_oldModule !== undefined){
       closeModule(_oldModule);
@@ -506,6 +499,7 @@
       _currentVignette = _newVignette;
       changeVideo();
     }
+    fillDot();
   }
   function expandModule(){
     handleSaveDeepProgress();
@@ -527,6 +521,7 @@
     fillDot();
     
     $('.education .section-title').addClass('in');
+    changeVideo();
   }
   function closeModule(num) {
     $('.module').eq(num).removeClass('in');
@@ -681,7 +676,6 @@
         ansTxt = "-1";
       }
     }
-    console.log(_currentQuestion)
     if (_currentQuestion == 6) ansTxt = currentGlass;
     
     if (_currentQuestion == 5) {
@@ -692,7 +686,6 @@
       ansTxt = data;
     }
 
-    console.log(_currentQuestion)
     if (_currentQuestion == 14 && ansTxt == '+1') {
       //console.log('not')
       _currentQuestion = 15;
@@ -900,8 +893,6 @@ Do you know if I do%3F";
     }
 
     handleSaveDeepProgress();
-    _pageResize();
-    // _scrollHandler();
   }
 
   function changeVideo() {
@@ -929,7 +920,7 @@ Do you know if I do%3F";
             var videoElement = vid1;
             $(videoContainer).append(vid1)/*.append(vid2)*/;
             _currentVideo = videoContainer;
-            _pageResize();
+            sizeVideo();
             function onVideoPlay(){
               // _pageResize();
               $(videoContainer).delay(1000).animate({opacity:1}, 800, function(){
@@ -1012,7 +1003,7 @@ Do you know if I do%3F";
 
           }
         }
-        _pageResize();
+        sizeVideo();
   }
 
 

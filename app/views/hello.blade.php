@@ -555,7 +555,7 @@
 <!-- LIFESTYLE -->
 
       <div class="module lifestyle">
-        <div class="vignette main">
+        <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
               <h2>Turns out, life affects your life:</h2>
@@ -641,7 +641,7 @@
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
             	<button class="facebook lifestyle">Join Them</button>
             </div>
-            <div class="headline">
+            <div class="headline last">
             	<h2>Module Complete.</h2>
                 <button class="btn-continue sub">KNOW YOUR NORMAL MODULE ></button>
             </div>
@@ -652,7 +652,7 @@
 <!-- KNOW YOUR NORMAL -->
 
       <div class="module normal">
-        <div class="vignette main">
+        <div class="vignette main" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline">
               <h2>Every body is different.</h2>
@@ -788,7 +788,7 @@
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
             	<button class="facebook lifestyle">Join Them</button>
             </div>
-            <div class="headline">
+            <div class="headline last">
             	<h2>Module Complete.</h2>
               <button class="btn-continue sub">FAMILY HISTORY MODULE</button>
             </div>  
@@ -798,7 +798,7 @@
 
 <!-- FAMILY HISTORY -->
 
-      <div class="module family-history">
+      <div class="module family-history" data-src="family">
         <div class="vignette main">
           <div class="headlines">
             <div class="headline">
@@ -869,7 +869,7 @@
             <div class="headline">
             	<h2>Module Complete.</h2>
             </div>
-            <div class="headline">            
+            <div class="headline last">            
               <div class="share">
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>

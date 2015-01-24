@@ -289,6 +289,15 @@ button.sub:hover {
 .bg-video.in {
   opacity: 1;
 }
+#bg-img img {
+  position: absolute;
+  top: 0px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .fb-faces {
   position: absolute;
   width: 100%;

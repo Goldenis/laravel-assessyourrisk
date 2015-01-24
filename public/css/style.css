@@ -1017,6 +1017,8 @@ input[type="checkbox"], input[type="radio"] {
 .assessment .share.in {
   visibility: visible;
   opacity: 1;
+  transform: perspective(1000px) translateY(-50%);
+  top: 50%;
 }
 .assessment-intro {
   position: absolute;
@@ -1704,6 +1706,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 #height-question {
   height: 270px;
+  transform: perspective(1000px) translateY(-50%);
+  top: 60%;
 }
 .in {
   visibility: visible;

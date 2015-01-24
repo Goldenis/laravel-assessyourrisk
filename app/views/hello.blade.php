@@ -349,9 +349,11 @@
           <div class="weight-wrapper">  
             <div class="prompt">What is your weight?</div>
             <div class="visual">
-              <div class="weight-container">
-                <div id="weight-base"></div>
-                <div id="weight-overlay"></div>
+              <div class="weight-container-mask">
+                <div class="weight-container">
+                  <div id="weight-base"></div>
+                  <div id="weight-overlay"></div>
+                </div>
               </div>
             </div>
             <div class="answers weight-answer">
@@ -370,10 +372,12 @@
           <div class="height-wrapper">  
             <div class="prompt">What is your height?</div>
             <div class="visual">
-              <div class="height-container">
-                <div id="height-base"></div>
-                <div id="height-overlay"></div>
-              </div>
+                <div class="height-container-mask">
+                  <div class="height-container">
+                    <div id="height-base"></div>
+                    <div id="height-overlay"></div>
+                  </div>
+                </div>
             </div>
             <button class="btn-calculate">Calculate</button>
           </div>   

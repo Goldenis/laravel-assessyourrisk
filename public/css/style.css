@@ -844,7 +844,18 @@ input[type="checkbox"], input[type="radio"] {
 .intro p {
   font-size: 22px;
 }
-.weight-container {
+.weight-container-mask {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  float: left;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 385px;
+  height: 249px;
+  overflow: hidden;
+}
+.weight-container-mask .weight-container {
   position: absolute;
   width: 590px;
   height: 590px;
@@ -853,9 +864,6 @@ input[type="checkbox"], input[type="radio"] {
   -webkit-transform: translate(-50%, 0);
   top: 0;
   float: left;
-  -webkit-mask: url("../img/assessment/scales/weight_mask.png") no-repeat;
-  -webkit-mask-position: 0px 0px;
-  clip-path: url(../img/clip.svg#svgClip);
   overflow: hidden;
 }
 #weight-base {
@@ -868,33 +876,37 @@ input[type="checkbox"], input[type="radio"] {
   background-image: url("../img/assessment/scales/weight_base.png");
 }
 #weight-overlay {
+  background-repeat: no-repeat;
+  background-image: url("../img/assessment/scales/weight_wheel_needle.png");
+  width: 393px;
+  height: 254px;
   position: absolute;
   top: 0px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-image: url("../img/assessment/scales/weight_overlay.png");
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: all;
+  left: 100px;
 }
 .weight-answer {
   margin-top: 15rem;
 }
-.height-container {
-  width: 145px;
-  height: 147px;
+.height-container-mask {
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  float: left;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 166px;
+  height: 159px;
+  overflow: hidden;
+}
+.height-container-mask .height-container {
+  width: 149px;
+  height: 157px;
   left: 50%;
   transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
-  top: -20px;
-  margin-top: 40px;
+  top: 1px;
   position: absolute;
   float: left;
-  -webkit-mask: url("../img/assessment/scales/height_mask.png") no-repeat;
-  -webkit-mask-position: 0px 0px;
-  clip-path: url(../img/height-mask.svg#heightMask);
   overflow: hidden;
 }
 .height-wrapper button {
@@ -912,15 +924,13 @@ input[type="checkbox"], input[type="radio"] {
   background-image: url("../img/assessment/scales/height_base.png");
 }
 #height-overlay {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-repeat: no-repeat;
-  background-image: url("../img/assessment/scales/height_overlay.png");
-  z-index: 1001;
-  cursor: pointer;
+  background-image: url("../img/assessment/scales/height_needle.png");
+  width: 246px;
+  height: 254px;
+  position: absolute;
+  top: -49px;
+  left: -50px;
 }
 .assessment-wrap {
   height: calc(100% - 142px);
@@ -2098,6 +2108,7 @@ footer {
     width: 100%;
     left: 0;
     font-size: 1.4rem;
+    line-height: 2rem;
   }
   .question {
     text-align: center;

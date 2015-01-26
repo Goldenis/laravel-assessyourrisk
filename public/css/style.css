@@ -954,6 +954,7 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
   opacity: 0;
   top: 0;
+  overflow: hidden;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -1618,12 +1619,19 @@ input[type="checkbox"], input[type="radio"] {
 .question {
   position: absolute;
   display: block;
-  top: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 60%;
   visibility: hidden;
   opacity: 0;
   width: 100%;
   height: 100%;
-  padding: 3rem 0;
+  height: auto;
+  max-height: 100%;
+  padding: 0;
+  text-align: center;
   -webkit-transition: all 0.5s 0 ease-out;
   -moz-transition: all 0.5s 0 ease-out;
   -o-transition: all 0.5s 0 ease-out;
@@ -1632,27 +1640,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-}
-.question.in {
-  -webkit-transition: all 1s 0.5s ease-out;
-  -moz-transition: all 1s 0.5s ease-out;
-  -o-transition: all 1s 0.5s ease-out;
-  -ms-transition: all 1s 0.5s ease-out;
-  transition: all 1s 0.5s ease-out;
-  -moz-transition-duration: 1s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0.5s;
-}
-.question {
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  top: 60%;
-  height: auto;
-  max-height: 100%;
-  padding: 0;
-  text-align: center;
+  pointer-events: none;
 }
 .question .prompt {
   left: 10%;
@@ -1688,15 +1676,16 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: all 1s 0 ease-in-out;
-  -moz-transition: all 1s 0 ease-in-out;
-  -o-transition: all 1s 0 ease-in-out;
-  -ms-transition: all 1s 0 ease-in-out;
-  transition: all 1s 0 ease-in-out;
+  -webkit-transition: all 1s 0.5s ease-out;
+  -moz-transition: all 1s 0.5s ease-out;
+  -o-transition: all 1s 0.5s ease-out;
+  -ms-transition: all 1s 0.5s ease-out;
+  transition: all 1s 0.5s ease-out;
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
-  -moz-transition-delay: 0;
+  -moz-transition-delay: 0.5s;
   top: 50%;
+  pointer-events: auto;
 }
 .question.out-up {
   -webkit-transform: perspective(1000px) translateY(-50%);
@@ -2119,12 +2108,6 @@ footer {
   .assessment-wrap {
     height: calc(100% - 82px);
   }
-  .question .prompt {
-    width: 100%;
-    left: 0;
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
   .question {
     text-align: center;
     height: auto;
@@ -2132,6 +2115,12 @@ footer {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     padding: 2rem 0 5rem;
+  }
+  .question .prompt {
+    width: 100%;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
   .question.weight-question {
     overflow: visible;

@@ -989,6 +989,7 @@ input[type="checkbox"], input[type="radio"] {
     visibility: hidden;
     opacity: 0;
     top: 0;
+    overflow: hidden;
     @include transition(.4s);
     .drink-slider {
         display: inline-block;
@@ -1288,7 +1289,6 @@ input[type="checkbox"], input[type="radio"] {
         width: 55%;
         z-index: 12;
         height: auto;
-        // pointer-events: none;
         left: calc(33.333% - 7px);
         .headline {
             width: 100%;

@@ -613,6 +613,7 @@
         // BMI = Formula: weight (lb) / [height (in)]2 x 703
         var BMI = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
         $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
+        console.log(BMI)
         /*
         BMI
         Weight Status
@@ -672,9 +673,11 @@
         updateCharts();
     }
 
-    function handleSaveQuizAnswer(answer) {
-        // 2 - bmi
 
+
+
+    function handleSaveQuizAnswer(answer) {
+               
         /*
           BMI
           Weight Status
@@ -684,13 +687,18 @@
           30.0 and Above  Obese
           */
 
+        // 4 - BMI result
         // 6 - .answers .drinks
         // 5 - Have any of your immediate family members
         // 7 - gene mutation have you or your relative
         // 10 - Within one side of the family
         var ansTxt = answer.attr("data-answer-id");
-        if ($.contains(_currentQuestion, $('.bmi-result'))) {
+        //if ($.contains(_currentQuestion, $('.bmi-result'))) {
             var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
+
+
+            if (_currentQuestion == 4) {
+            console.log(bmi)    
             if (bmi < 18.5) {
                 ansTxt = "-1";
             } else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -701,6 +709,8 @@
                 ansTxt = "-1";
             }
         }
+        //}
+
         if (_currentQuestion == 6) ansTxt = currentGlass;
 
         if (_currentQuestion == 5) {
@@ -711,10 +721,15 @@
             ansTxt = data;
         }
 
-        if (_currentQuestion == 14 && ansTxt == '+1') {
-            //console.log('not')
-            _currentQuestion = 15;
-            savedQuizProgress['14'] = ansTxt;
+        var mutationCheck = $('input[name="mutation-radio"]:checked').attr("data-answer-id");
+        if (_currentQuestion == 7) ansTxt = mutationCheck;
+
+          console.log(mutationCheck)
+
+        if (_currentQuestion == 7 && ansTxt == '+1') {
+            console.log('not')
+            _currentQuestion = 9;
+            savedQuizProgress['7'] = ansTxt;
         }
 
 
@@ -770,9 +785,76 @@
         var drinksHigh = savedQuizProgress[3] > 3;
         var badGene = $.inArray("1|-2", savedQuizProgress[2]);
 
-        $('.bmi-high').css({
-            display: bmiHigh ? 'block' : 'none'
-        })
+//bmi card
+        if (savedQuizProgress[4] == '+1') { 
+            $('.item.bmi-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.bmi-high').css({
+                display: 'block'
+             })            
+
+
+//drinks card
+        if (savedQuizProgress[6] <= '2') { 
+            $('.item.alcohol-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.alcohol-high').css({
+                display: 'block'
+             })            
+                
+
+//exercise card
+        if (savedQuizProgress[99] <= '+1') { 
+            $('.item.exercise-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.exercise-high').css({
+                display: 'block'
+             })   
+
+//birth-control card
+        if (savedQuizProgress[6] <= '+1') { 
+            $('.item.birth-control-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.birth-control-high').css({
+                display: 'block'
+             })   
+
+//pregnancy card
+        if (savedQuizProgress[17] <= '+1') { 
+            $('.item.pregnancy-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.pregnancy-high').css({
+                display: 'block'
+             })   
+
+//BREASTFEEDING card
+        if (savedQuizProgress[18] <= '+1') { 
+            $('.item.breastfeeding-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.breastfeeding-high').css({
+                display: 'block'
+             })   
+
+
+
         $('.drinks-high').css({
             display: drinksHigh ? 'block' : 'none'
         })

@@ -83,7 +83,7 @@
             <p>a healthy range! Keep up the good work.</p>
           </div>
           <div class="item alcohol-low">
-            <div class="section-title">BMI</div>
+            <div class="section-title">ALCOHOL</div>
             <h4>Your have 1 drink per day.</h4>
             <p>Your cocktail consumption likely doesn’t increase your baseline risk.</p>
           </div>          
@@ -429,11 +429,11 @@
         
           <div class="answers">
             <div class="checkbox-list cb1">
-              <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="1|-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
-              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="2|-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
-              <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="3|-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
-              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="4|+1"><div class="label">No</div></div>
-              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="5|0"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" checked data-answer-id="+1"><div class="label">No</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="0"><div class="label">I don’t know</div></div>
             </div>
               <br>
               <div class="answers">

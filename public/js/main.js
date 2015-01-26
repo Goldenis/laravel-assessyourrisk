@@ -145,34 +145,17 @@
 
     function sizeBGMedia() {
         if (_winW / _winH > 1.8) {
-        	if ($('#bg-img').length){
-				$('#bg-img img').css({
-	                width: _winW,
-	                height: 'auto'
-	            });
-        	}
-        	else
-        	{
-        		$('video').css({
-	                width: _winW,
-	                height: 'auto'
-	            });
-        	}
+
+    		$('video').css({
+                width: _winW,
+                height: 'auto'
+            });
             
         } else {
-        	if ($('#bg-img').length){
-	            $('#bg-img img').css({
-	                height: _winH,
-	                width: 'auto'
-	            });
-	        }
-	        else
-	        {
-	        	$('video').css({
-	                height: _winH,
-	                width: 'auto'
-	            });
-	        }
+        	$('video').css({
+                height: _winH,
+                width: 'auto'
+            });
         }
     }
 

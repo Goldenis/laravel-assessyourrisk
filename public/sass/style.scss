@@ -340,12 +340,10 @@ button {
 	img{
 		position: absolute;
 		top: 0px;
-		background-position: center;
-		background-size: cover;
 		width: 100%;
-
-		left: 50%;
-		transform: translate(-50%, 0);
+        height: 100%;
+        object-fit: cover;
+		left: 0;
 	}
 }
 
@@ -667,9 +665,7 @@ button {
     position: absolute;
     bottom: 2rem;
     // left: 3rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
+    @include centerH;
 }
 .dot {
     color: #ccc;
@@ -892,19 +888,15 @@ input[type="checkbox"], input[type="radio"] {
         width: 590px;
         height: 590px;
         // left: -160px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
         top: 0;
         float: left;
         overflow: hidden;
     }
     position: absolute;
-    left: 50%;
+    @include centerH;
     top: 0;
     float: left;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
     width: 385px;
     height: 249px;
     overflow: hidden;
@@ -934,29 +926,23 @@ input[type="checkbox"], input[type="radio"] {
     .height-container {
         width: 149px;
         height: 157px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
         top: 1px;
         position: absolute;
         float: left;
         overflow: hidden;
     }
     position: absolute;
-    left: 50%;
+    @include centerH;
     top: 9px;
     float: left;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
     width: 166px;
     height: 159px;
     overflow: hidden;
 }
 .height-wrapper {
     button {
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
     }
 }
 #height-base {

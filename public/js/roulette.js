@@ -6,6 +6,8 @@ var wheel = $(document).ready(
 			var doAllowDrag = false;
 			var doSpinUponLoad = true;
 			var touchStartPos,
+			touchMove,
+			touchEnd,
 			moved = 0, // amount your finger moved during touchmove
 			wheelBase = $('#wheel-base'),
 			rot = 0;
@@ -78,14 +80,14 @@ var wheel = $(document).ready(
 				var currentX;
 				
 				if (isTouch) {
-					$(window).bind('touchmove', function(e) {
+					var touchmove = $(window).bind('touchmove', function(e) {
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 						move(touch);
 					});
 					
-					$(window).bind('touchend', function(e) {
+					var touchend = $(window).bind('touchend', function(e) {
 						e.preventDefault();
 						endTrackingTouch();
 					});
@@ -118,8 +120,8 @@ var wheel = $(document).ready(
 				
 			function endTrackingTouch() {
 								
-				$( window ).unbind('touchmove');
-				$( window ).unbind('touchend');
+				$(window).unbind(touchMove);
+				$(window).unbind(touchEnd);
 				$( window ).unbind('mousemove');
 				$( window ).unbind('mouseup');
 			}

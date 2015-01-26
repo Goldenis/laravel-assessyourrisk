@@ -1,7 +1,10 @@
+
 var height = $(document).ready(
 		
 		function() {
-			var touchStartPos,
+			var touchMove,
+			touchEnd,
+			touchStartPos,
 			heightBase = $('#height-base'),
 			heightOverlay = $('#height-overlay'),
 			topPos = 54,
@@ -41,14 +44,14 @@ var height = $(document).ready(
 				var currentY;
 				
 				if (isTouch) {
-					$(window).bind('touchmove', function(e) {
+					touchMove = $(window).bind('touchmove', function(e) {
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 						move(touch);
 					});
 					
-					$(window).bind('touchend', function(e) {
+					touchEnd = $(window).bind('touchend', function(e) {
 						e.preventDefault();
 						endInteraction();
 						endTrackingTouch();
@@ -103,8 +106,8 @@ var height = $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				// $( window ).unbind('mousemove');
-    //     $( window ).unbind('touchmove');
+				$(window).unbind(touchMove);
+				$(window).unbind(touchEnd);
 			}
 			
 			function slideH(obj, degree, time) {

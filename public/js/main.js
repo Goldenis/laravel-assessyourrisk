@@ -75,52 +75,52 @@
         // }
         _scrollHandler();
     });
-    $(window).on('mousewheel', function(eventData, deltaY) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // if(_isTouchDevice){
-        //   eventData.preventDefault();
-        // }else{
-        //   _currentFrame -= deltaY;
-        //   _currentFrame = Math.max(0,_currentFrame);
-        //   eventData.preventDefault();
-        // }
-    })
-    $(window).bind('touchstart', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // _isTouchDevice = true;
-        // distance = 0;
-        // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        // touchStartY = touch.pageY;
-        // clearInterval(inertiaInterval);
-    })
-    $(window).bind('touchmove', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // e.preventDefault();
-        // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        // distance = touch.pageY-touchStartY;
-        // _currentFrame -= distance/10;
-        // _currentFrame = Math.floor(Math.max(_currentFrame,0));
-        // touchStartY = touch.pageY;
-    })
-    $(window).bind('touchend', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // var inertiaInterval = setInterval(function(){
-        //   distance*=.9;
-        //   _currentFrame -= distance/3;
-        //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
-        //   if(Math.abs(distance) < .2){
-        //     clearInterval(inertiaInterval)
-        //   }
-        // },10)
-    })
+    // $(window).on('mousewheel', function(eventData, deltaY) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // if(_isTouchDevice){
+    //     //   eventData.preventDefault();
+    //     // }else{
+    //     //   _currentFrame -= deltaY;
+    //     //   _currentFrame = Math.max(0,_currentFrame);
+    //     //   eventData.preventDefault();
+    //     // }
+    // })
+    // $(window).bind('touchstart', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // _isTouchDevice = true;
+    //     // distance = 0;
+    //     // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    //     // touchStartY = touch.pageY;
+    //     // clearInterval(inertiaInterval);
+    // })
+    // $(window).bind('touchmove', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // e.preventDefault();
+    //     // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    //     // distance = touch.pageY-touchStartY;
+    //     // _currentFrame -= distance/10;
+    //     // _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //     // touchStartY = touch.pageY;
+    // })
+    // $(window).bind('touchend', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // var inertiaInterval = setInterval(function(){
+    //     //   distance*=.9;
+    //     //   _currentFrame -= distance/3;
+    //     //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //     //   if(Math.abs(distance) < .2){
+    //     //     clearInterval(inertiaInterval)
+    //     //   }
+    //     // },10)
+    // })
 
 
     function _pageResize() {

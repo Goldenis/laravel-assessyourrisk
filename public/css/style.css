@@ -797,8 +797,8 @@ input[type="checkbox"], input[type="radio"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  left: 25%;
-  top: 15%;
+  left: 40%;
+  top: 40%;
   position: absolute;
   overflow: hidden;
   cursor: pointer;

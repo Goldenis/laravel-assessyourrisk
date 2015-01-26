@@ -617,8 +617,8 @@
         <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
-              <h2>Turns out, <i>life</i> affects your life:</h2>
-              <h4> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
+              <h3>Turns out, <i>life</i> affects your life:</h3>
+              <h5> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h5>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>

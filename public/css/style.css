@@ -289,14 +289,20 @@ button.sub:hover {
 .bg-video.in {
   opacity: 1;
 }
+#bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 #bg-img img {
   position: absolute;
   top: 0px;
-  background-position: center;
-  background-size: cover;
   width: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  height: 100%;
+  object-fit: cover;
+  left: 0;
 }
 .fb-faces {
   position: absolute;
@@ -634,8 +640,10 @@ button.sub:hover {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .dot {
   color: #ccc;
@@ -857,10 +865,12 @@ input[type="checkbox"], input[type="radio"] {
 .weight-container-mask {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 0;
   float: left;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
   width: 385px;
   height: 249px;
   overflow: hidden;
@@ -870,8 +880,10 @@ input[type="checkbox"], input[type="radio"] {
   width: 590px;
   height: 590px;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 0;
   float: left;
   overflow: hidden;
@@ -900,10 +912,12 @@ input[type="checkbox"], input[type="radio"] {
 .height-container-mask {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 9px;
   float: left;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
   width: 166px;
   height: 159px;
   overflow: hidden;
@@ -912,8 +926,10 @@ input[type="checkbox"], input[type="radio"] {
   width: 149px;
   height: 157px;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 1px;
   position: absolute;
   float: left;
@@ -921,8 +937,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .height-wrapper button {
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 #height-base {
   position: absolute;

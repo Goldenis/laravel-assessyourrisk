@@ -211,7 +211,7 @@
         <h3>Assess Your Risk<br></h3>
         </div>
         <div class="lets-go">
-        <h3>Let’s Go.<br></h3>
+        <h3>Let’s Start.<br></h3>
         </div>
         <div class="understand">
           <h4>Understand<br>Your Risk<br></h4>

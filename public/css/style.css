@@ -2041,6 +2041,7 @@ footer {
   .right-column .toggle-box .understand, .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7rem 2rem;
     height: 70px;
+    text-align: center;
   }
   .right-column .toggle-box .understand h4, .right-column .toggle-box .assess h4, .right-column .toggle-box .assess-start h4, .right-column .toggle-box .lets-go h4 {
     font-size: 3rem;

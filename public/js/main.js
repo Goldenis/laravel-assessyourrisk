@@ -192,13 +192,11 @@
                 headline_tops[2].push($('.headline').eq(i).offset().top);
             }
         }
-        console.log(headline_tops[_currentModule])
     }
 
     function showNextHeadline() {
         // _currentFrame += 15;
 
-        console.log("Next Headline")
         var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
         var nextHeadline = _currentHeadline.index() + 1;
         if (initialized && nextHeadline < numHeadlines) {
@@ -217,7 +215,6 @@
     }
 
     function fillDot() {
-        console.log("fill dot " + _currentHeadline)
         $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
     }
 
@@ -502,9 +499,7 @@
     function changeHeadline(idx) {
         _oldModule = _currentModule;
         _currentHeadline = $('.headline').eq(idx);
-        console.log(idx)
         var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
-        // console.log(_newVignette)
         if (_currentVignette != _newVignette) {
             _currentVignette = _newVignette;
             changeVideo();
@@ -955,7 +950,6 @@ Do you know if I do%3F";
     }
 
     function nextVignette() {
-        console.log("Next Vignette")
 
         // $('.vignette').removeClass('in');
         setTimeout(function() {
@@ -991,7 +985,6 @@ Do you know if I do%3F";
     function changeVideo() {
 
         var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
-        console.log('isVideo', Modernizr.video);
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '_' + _currentModule + '_' + _currentVignette + '.jpg';
 
@@ -1027,7 +1020,6 @@ Do you know if I do%3F";
             opacity: 1
         }, 800, function() {
             // console.log("video fade in complete");
-            console.log('previousImage', previousImage);
             if (previousImage) {
                 $(previousImage).remove();
             }
@@ -1079,7 +1071,7 @@ Do you know if I do%3F";
                 // }
 
                 function onVideoProgress() {
-                    console.log($(this).get(0).currentTime);
+                    // console.log($(this).get(0).currentTime);
                 }
 
                 $(vid1).on('play', onVideoPlay);

@@ -1093,8 +1093,6 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   opacity: 0;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
@@ -1109,10 +1107,13 @@ input[type="checkbox"], input[type="radio"] {
 .education .module.in {
   left: 0;
   pointer-events: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .education .module.left {
   left: -100px !important;
   opacity: 0;
+  pointer-events: none;
 }
 .education .module .main {
   left: 10px;
@@ -1686,6 +1687,8 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-delay: 0.5s;
   top: 50%;
   pointer-events: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .question.out-up {
   -webkit-transform: perspective(1000px) translateY(-50%);
@@ -2112,8 +2115,6 @@ footer {
     text-align: center;
     height: auto;
     width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     padding: 2rem 0 5rem;
   }
   .question .prompt {

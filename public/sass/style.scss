@@ -732,8 +732,9 @@ button {
     }
 }
 input[type="checkbox"], input[type="radio"] {
-    margin: 0 8px 0 2px;
-    top: 4px;
+    height: 2rem;
+    margin: 0rem;
+    top: 0rem;
     float: left;
     z-index: 20;
 }

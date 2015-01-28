@@ -234,7 +234,7 @@
     }
 
     function fillDot() {
-        console.log("fill dot " + _currentHeadline)
+        console.log("fill dot ", _currentHeadline)
         $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
     }
 
@@ -329,6 +329,7 @@
             calculateWeight($(this));
         })
         $('.question .answers button').on('click', function(e) {
+            console.log('answer clicked', $(this).hasClass('sub'));
             if (!$(this).hasClass('sub')) {
                 answerQuestion($(this));
             }
@@ -482,6 +483,8 @@
     }
 
     function hideIntro() {
+         // $('.logo').css('opacity', 1);
+         TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
         $('.intro').addClass('out-up')
         $('.right-column').addClass('in')
         $('.assessment').addClass('in');
@@ -573,7 +576,7 @@
             }
         } else {
             $('.logo').removeClass('out');
-            _currentView = "left"
+            _currentView = "left";
             setTimeout(function() {
                 $('.right-column').removeClass('down');
             }, 800)
@@ -624,6 +627,8 @@
     }
 
     function updateCharts() {
+        console.log('update charts');
+
         $('.dashboard').addClass('flash');
         setTimeout(function() {
             $('.dashboard').removeClass('flash');
@@ -709,11 +714,13 @@
                 data.push($(this).attr('data-answer-id'));
             });
             ansTxt = data;
+            console.log(ansTxt);
         }
 
         if (_currentQuestion == 14 && ansTxt == '+1') {
-            //console.log('not')
+            console.log('QUESTION IS NOW 14');
             _currentQuestion = 15;
+            $('.assessment .dot').removeClass('active')
             savedQuizProgress['14'] = ansTxt;
         }
 
@@ -842,7 +849,7 @@ Do you know if I do%3F";
     }
 
     function answerQuestion(answer) {
-
+        console.log('ANSWERED QUESTION');
         if (_currentQuestion >= _totalQuestions - 1) {
             addCustomResults()
             openProgressOverlay();
@@ -882,6 +889,7 @@ Do you know if I do%3F";
         var _oldQuestion = _currentQuestion;
         _currentQuestion++;
         setTimeout(function() {
+
             $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment .dot').eq(_oldQuestion).removeClass('active')
             $('.assessment .dot').eq(_currentQuestion).addClass('active')

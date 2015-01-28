@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
   </head>
   <body>
 

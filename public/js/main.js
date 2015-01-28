@@ -68,6 +68,10 @@
 
     var receivedBMI = false;
 
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
 
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){

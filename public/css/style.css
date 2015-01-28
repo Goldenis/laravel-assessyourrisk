@@ -244,7 +244,6 @@ button {
   color: #fff;
   font-family: "avg_bold";
   margin: 1rem 0.5rem 0.5rem 0;
-  top: 1rem;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
@@ -872,8 +871,8 @@ input[type="checkbox"], input[type="radio"] {
   transform: translateX(-50%);
   top: 0;
   float: left;
-  width: 385px;
-  height: 249px;
+  width: 290px;
+  height: 170px;
   overflow: hidden;
 }
 .weight-container-mask .weight-container {
@@ -917,23 +916,16 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  top: 9px;
+  top: 0px;
   float: left;
-  width: 166px;
+  width: 145px;
   height: 159px;
   overflow: hidden;
 }
 .height-container-mask .height-container {
-  width: 149px;
-  height: 157px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  top: 1px;
+  width: 145px;
+  height: 159px;
   position: absolute;
-  float: left;
   overflow: hidden;
 }
 .height-wrapper button {
@@ -942,6 +934,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+.height-wrapper .visual {
+  top: 14px;
 }
 #height-base {
   position: absolute;
@@ -958,7 +953,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 246px;
   height: 254px;
   position: absolute;
-  top: -49px;
+  top: -42px;
   left: -50px;
 }
 .assessment-wrap {
@@ -1669,6 +1664,7 @@ input[type="checkbox"], input[type="radio"] {
   font-family: 'avg_bold';
   font-size: 2.5rem;
   line-height: 3.2rem;
+  z-index: 30;
 }
 .question .bmi-result {
   display: block;
@@ -1706,8 +1702,6 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-delay: 0.5s;
   top: 50%;
   pointer-events: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 .question.out-up {
   -webkit-transform: perspective(1000px) translateY(-50%);

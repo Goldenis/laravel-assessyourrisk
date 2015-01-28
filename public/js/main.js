@@ -325,7 +325,7 @@
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        $('.btn-calculate').on('click', function(e) {
+        $('.weight-wrapper .btn-calculate').on('click', function(e) {
             calculateWeight($(this));
         })
         $('.question .answers button').on('click', function(e) {
@@ -938,7 +938,7 @@ Do you know if I do%3F";
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '_' + _currentModule + '_' + _currentVignette + '.jpg';
 
-        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);
         } else {
             var src = vig.data('src') + videoType;

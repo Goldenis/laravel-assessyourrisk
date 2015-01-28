@@ -325,7 +325,7 @@
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        $('.weight-wrapper .btn-calculate').on('click', function(e) {
+        $('.btn-calculate').on('click', function(e) {
             calculateWeight($(this));
         })
         $('.question .answers button').on('click', function(e) {

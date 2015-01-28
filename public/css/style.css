@@ -96,7 +96,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
 }
 a {
@@ -289,14 +289,20 @@ button.sub:hover {
 .bg-video.in {
   opacity: 1;
 }
+#bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 #bg-img img {
   position: absolute;
   top: 0px;
-  background-position: center;
-  background-size: cover;
   width: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  height: 100%;
+  object-fit: cover;
+  left: 0;
 }
 .fb-faces {
   position: absolute;
@@ -508,6 +514,7 @@ button.sub:hover {
 }
 .progress-overlay .cards .card .item {
   margin-bottom: 4rem;
+  display: none;
 }
 .progress-overlay .cards .card.positive {
   background: #fff;
@@ -633,8 +640,10 @@ button.sub:hover {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .dot {
   color: #ccc;
@@ -798,8 +807,8 @@ input[type="checkbox"], input[type="radio"] {
 .intro .wheel-container {
   width: 400px;
   height: 400px;
-  left: 25%;
-  top: 15%;
+  left: 40%;
+  top: 40%;
   position: absolute;
   overflow: hidden;
   cursor: pointer;
@@ -857,10 +866,12 @@ input[type="checkbox"], input[type="radio"] {
 .weight-container-mask {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 0;
   float: left;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
   width: 385px;
   height: 249px;
   overflow: hidden;
@@ -870,8 +881,10 @@ input[type="checkbox"], input[type="radio"] {
   width: 590px;
   height: 590px;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 0;
   float: left;
   overflow: hidden;
@@ -900,10 +913,12 @@ input[type="checkbox"], input[type="radio"] {
 .height-container-mask {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 9px;
   float: left;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
   width: 166px;
   height: 159px;
   overflow: hidden;
@@ -912,8 +927,10 @@ input[type="checkbox"], input[type="radio"] {
   width: 149px;
   height: 157px;
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 1px;
   position: absolute;
   float: left;
@@ -921,8 +938,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .height-wrapper button {
   left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 #height-base {
   position: absolute;
@@ -954,6 +973,7 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
   opacity: 0;
   top: 0;
+  overflow: hidden;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -1092,8 +1112,6 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   opacity: 0;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
@@ -1108,10 +1126,13 @@ input[type="checkbox"], input[type="radio"] {
 .education .module.in {
   left: 0;
   pointer-events: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .education .module.left {
   left: -100px !important;
   opacity: 0;
+  pointer-events: none;
 }
 .education .module .main {
   left: 10px;
@@ -1618,12 +1639,19 @@ input[type="checkbox"], input[type="radio"] {
 .question {
   position: absolute;
   display: block;
-  top: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 60%;
   visibility: hidden;
   opacity: 0;
   width: 100%;
   height: 100%;
-  padding: 3rem 0;
+  height: auto;
+  max-height: 100%;
+  padding: 0;
+  text-align: center;
   -webkit-transition: all 0.5s 0 ease-out;
   -moz-transition: all 0.5s 0 ease-out;
   -o-transition: all 0.5s 0 ease-out;
@@ -1632,27 +1660,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-}
-.question.in {
-  -webkit-transition: all 1s 0.5s ease-out;
-  -moz-transition: all 1s 0.5s ease-out;
-  -o-transition: all 1s 0.5s ease-out;
-  -ms-transition: all 1s 0.5s ease-out;
-  transition: all 1s 0.5s ease-out;
-  -moz-transition-duration: 1s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0.5s;
-}
-.question {
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  top: 60%;
-  height: auto;
-  max-height: 100%;
-  padding: 0;
-  text-align: center;
+  pointer-events: none;
 }
 .question .prompt {
   left: 10%;
@@ -1688,15 +1696,18 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: all 1s 0 ease-in-out;
-  -moz-transition: all 1s 0 ease-in-out;
-  -o-transition: all 1s 0 ease-in-out;
-  -ms-transition: all 1s 0 ease-in-out;
-  transition: all 1s 0 ease-in-out;
+  -webkit-transition: all 1s 0.5s ease-out;
+  -moz-transition: all 1s 0.5s ease-out;
+  -o-transition: all 1s 0.5s ease-out;
+  -ms-transition: all 1s 0.5s ease-out;
+  transition: all 1s 0.5s ease-out;
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
-  -moz-transition-delay: 0;
+  -moz-transition-delay: 0.5s;
   top: 50%;
+  pointer-events: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .question.out-up {
   -webkit-transform: perspective(1000px) translateY(-50%);
@@ -1708,7 +1719,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
   height: 270px;
   transform: perspective(1000px) translateY(-50%);
-  top: 60%;
+  top: 40%;
 }
 .in {
   visibility: visible;
@@ -2041,6 +2052,7 @@ footer {
   .right-column .toggle-box .understand, .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7rem 2rem;
     height: 70px;
+    text-align: center;
   }
   .right-column .toggle-box .understand h4, .right-column .toggle-box .assess h4, .right-column .toggle-box .assess-start h4, .right-column .toggle-box .lets-go h4 {
     font-size: 3rem;
@@ -2118,19 +2130,17 @@ footer {
   .assessment-wrap {
     height: calc(100% - 82px);
   }
+  .question {
+    text-align: center;
+    height: auto;
+    width: 100%;
+    padding: 2rem 0 5rem;
+  }
   .question .prompt {
     width: 100%;
     left: 0;
     font-size: 1.4rem;
     line-height: 2rem;
-  }
-  .question {
-    text-align: center;
-    height: auto;
-    width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: 2rem 0 5rem;
   }
   .question.weight-question {
     overflow: visible;

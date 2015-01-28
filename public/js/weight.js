@@ -1,6 +1,8 @@
 var weight = $(document).ready(
 		function() {
 			var touchStartPos,
+			touchEnd,
+			touchMove,
 			moved = 0, // amount your finger moved during touchmove
 			weightBase = $('#weight-base'),
 			weightOverlay = $('#weight-overlay'),
@@ -30,14 +32,14 @@ var weight = $(document).ready(
 				var currentX;
 				
 				if (isTouch) {
-					$(window).bind('touchmove', function(e) {
+					var touchmove = $(window).bind('touchmove', function(e) {
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 						move(touch);
 					});
 					
-					$(window).bind('touchend', function(e) {
+					var touchend = $(window).bind('touchend', function(e) {
 						e.preventDefault();
 						endTrackingTouch();
 					});
@@ -69,8 +71,8 @@ var weight = $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				$( window ).unbind('mousemove');
-        $( window ).unbind('touchmove');
+				$(window).unbind(touchMove);
+				$(window).unbind(touchEnd);
 			}
 			
 			function rotate(obj, degree, time) {

@@ -163,7 +163,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.4;
 }
 a {
@@ -337,15 +337,18 @@ button {
 }
 
 #bg-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 	img{
 		position: absolute;
 		top: 0px;
-		background-position: center;
-		background-size: cover;
 		width: 100%;
-
-		left: 50%;
-		transform: translate(-50%, 0);
+        height: 100%;
+        object-fit: cover;
+		left: 0;
 	}
 }
 
@@ -548,6 +551,7 @@ button {
             }
             .item {
                 margin-bottom: 4rem;
+                display: none;
             }
             &.positive {
                 background: #fff;
@@ -666,9 +670,7 @@ button {
     position: absolute;
     bottom: 2rem;
     // left: 3rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
+    @include centerH;
 }
 .dot {
     color: #ccc;
@@ -833,8 +835,8 @@ input[type="checkbox"], input[type="radio"] {
     .wheel-container {
         width: 400px;
         height: 400px;
-        left: 25%;
-        top: 15%;
+        left: 40%;
+        top: 40%;
         position: absolute;
         overflow: hidden;
         cursor: pointer;
@@ -892,19 +894,15 @@ input[type="checkbox"], input[type="radio"] {
         width: 590px;
         height: 590px;
         // left: -160px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
         top: 0;
         float: left;
         overflow: hidden;
     }
     position: absolute;
-    left: 50%;
+    @include centerH;
     top: 0;
     float: left;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
     width: 385px;
     height: 249px;
     overflow: hidden;
@@ -934,29 +932,23 @@ input[type="checkbox"], input[type="radio"] {
     .height-container {
         width: 149px;
         height: 157px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
         top: 1px;
         position: absolute;
         float: left;
         overflow: hidden;
     }
     position: absolute;
-    left: 50%;
+    @include centerH;
     top: 9px;
     float: left;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
     width: 166px;
     height: 159px;
     overflow: hidden;
 }
 .height-wrapper {
     button {
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
+        @include centerH;
     }
 }
 #height-base {
@@ -989,6 +981,7 @@ input[type="checkbox"], input[type="radio"] {
     visibility: hidden;
     opacity: 0;
     top: 0;
+    overflow: hidden;
     @include transition(.4s);
     .drink-slider {
         display: inline-block;
@@ -1100,18 +1093,19 @@ input[type="checkbox"], input[type="radio"] {
         top: 0;
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
         opacity: 0;
         @include transition(1s);
         pointer-events: none;
         &.in {
             left: 0;
             pointer-events: auto;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
         }
         &.left {
             left: -100px !important;
             opacity: 0;
+            pointer-events: none;
         }
         .main {
             left: 10px;
@@ -1288,7 +1282,6 @@ input[type="checkbox"], input[type="radio"] {
         width: 55%;
         z-index: 12;
         height: auto;
-        // pointer-events: none;
         left: calc(33.333% - 7px);
         .headline {
             width: 100%;
@@ -1505,27 +1498,22 @@ input[type="checkbox"], input[type="radio"] {
         }
     }
 }
+
 .question {
     position: absolute;
     display: block;
-    top: 0;
+    @include transform(translateY(-50%));
+    top: 60%;
     visibility: hidden;
     opacity: 0;
     width: 100%;
     height: 100%;
-    padding: 3rem 0;
-    @include transition(.5s, ease-out);
-    &.in {
-        @include transition(1s, ease-out, all, .5s);
-    }
-}
-.question {
-    @include transform(translateY(-50%));
-    top: 60%;
     height: auto;
     max-height: 100%;
     padding: 0;
     text-align: center;
+    @include transition(.5s, ease-out);
+    pointer-events: none;
     .prompt {
         left: 10%;
         width: 80%;
@@ -1550,8 +1538,11 @@ input[type="checkbox"], input[type="radio"] {
         visibility: visible;
         opacity: 1 !important;
         @include transform(translateY(-50%));
-        @include transition(1s, ease-in-out);
+        @include transition(1s, ease-out, all, .5s);
         top: 50%;
+        pointer-events: auto;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     &.out-up {
         @include transform(perspective(1000px) translateY(-50%));
@@ -1561,7 +1552,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
     height: 270px;
     transform: perspective(1000px) translateY(-50%);
-	top: 60%;
+	top: 40%;
 }
 &.in {
     visibility: visible;
@@ -1886,6 +1877,7 @@ footer {
             .understand, .assess, .assess-start, .lets-go {
                 padding: .7rem 2rem;
                 height: 70px;
+                text-align: center;
                 h4 {
                     font-size: 3rem;
                 }
@@ -1967,13 +1959,9 @@ footer {
             font-size: 1.4rem;
             line-height: 2rem;
         }
-    }
-    .question {
         text-align: center;
         height: auto;
         width: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
         padding: 2rem 0 5rem;
         &.weight-question {
             overflow: visible;

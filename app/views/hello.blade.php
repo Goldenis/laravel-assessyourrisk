@@ -83,7 +83,7 @@
             <p>a healthy range! Keep up the good work.</p>
           </div>
           <div class="item alcohol-low">
-            <div class="section-title">BMI</div>
+            <div class="section-title">ALCOHOL</div>
             <h4>Your have 1 drink per day.</h4>
             <p>Your cocktail consumption likely doesn’t increase your baseline risk.</p>
           </div>          
@@ -211,7 +211,7 @@
         <h3>Assess Your Risk<br></h3>
         </div>
         <div class="lets-go">
-        <h3>Let’s Go.<br></h3>
+        <h3>Let’s Start.<br></h3>
         </div>
         <div class="understand">
           <h4>Understand<br>Your Risk<br></h4>
@@ -429,11 +429,11 @@
         
           <div class="answers">
             <div class="checkbox-list cb1">
-              <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="1|-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
-              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="2|-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
-              <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="3|-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
-              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="4|+1"><div class="label">No</div></div>
-              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="5|0"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" checked data-answer-id="+1"><div class="label">No</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="0"><div class="label">I don’t know</div></div>
             </div>
               <br>
               <div class="answers">
@@ -617,8 +617,8 @@
         <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
-              <h2>Turns out, <i>life</i> affects your life:</h2>
-              <h4> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h4>
+              <h3>Turns out, <i>life</i> affects your life:</h3>
+              <h5> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h5>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>

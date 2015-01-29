@@ -15,7 +15,7 @@ var wheel = $(document).ready(
 			
 			var main_chart_div = d3.select("#wheel-overlay").append("div");
 			var svg;
-			d3.xml("img/roulette/Roulette_spencer_newcopy_outlines.svg", function(error,
+			d3.xml("img/roulette/roulette.svg", function(error,
 					documentFragment) {
 				if (error) {
 					console.log(error);
@@ -30,6 +30,7 @@ var wheel = $(document).ready(
 			var locations = [348, 8, 54, 94, 142, 166, 220, 288, 347];
 			var ids = ['you', 'sister', 'aunt', 'girl', 'mom', 'maid', 'friend', 'partner'];
 			
+			var last = -1;
 			function highlightByRotation() {
 				var r1 = wheelBase[0]._gsTransform.rotation % 360;
 				var pos = 0;
@@ -41,18 +42,29 @@ var wheel = $(document).ready(
 						break;
 					}
 				}
-				doSetHighlighted(ids[pos]);
+				if (last != pos) {
+					doSetHighlighted(ids[pos]);
+					last = pos;
+				}
+				
+				
 			}
-			
+			var tog = 0
 			function doSetHighlighted(segmentId) {
 				// #you
 				// #g-you
 				
-				svg.selectAll('#copy  path').style('fill', "#D8076D")
+				svg.selectAll('#copy path').style('fill', "#D8076D")
 				svg.selectAll('#segments path').style('fill', "none")
 				
 				svg.selectAll('#t-' + segmentId + ' path').style('fill', "#fff")
-				svg.selectAll('#g-' + segmentId + ' path').style('fill', "#D8076D")
+				svg.select('#g-' + segmentId + ' path').style('fill', "#D8076D")
+				
+				var bit = tog++ % 2
+				svg.select('#breast path').style('fill', bit ? "#fff" : "#D8076D")
+				svg.select('#ovarian path').style('fill', !bit ? "#fff" : "#D8076D")
+				svg.selectAll('#breast g g path').style('fill', !bit ? "#fff" : "#D8076D")
+				svg.selectAll('#ovarian g g path').style('fill', bit ? "#fff" : "#D8076D")
 			}
 			
 			if (doAllowDrag) {
@@ -128,19 +140,19 @@ var wheel = $(document).ready(
 			
 			function rotate(obj, degree, time) {
 				TweenLite.killTweensOf(obj);
-				TweenLite.to(obj, time, {css:{rotation:degree}, ease:Power3.easeOut, onUpdate:applyValue, onUpdateParams:[degree]});
+				TweenLite.to(obj, time, {css:{rotation:degree}, ease:Expo.easeOut, onUpdate:applyValue, onUpdateParams:[degree]});
 	        }
-
+				
 			function applyValue(degree) {
 				highlightByRotation()
 			}
 			
 			function spinOnLoad() {
-				rotate(wheelBase, Math.random() * 500 + 500, 10);
+				rotate(wheelBase, Math.random() * 500 + 1000, 8);
         $('.spin').css({display: "none"})
 			}
 			
 			if (doSpinUponLoad) {
-				setTimeout(spinOnLoad, 2000);
+				setTimeout(spinOnLoad, 3000);
 			}
 		});

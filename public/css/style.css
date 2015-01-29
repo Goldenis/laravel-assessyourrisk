@@ -819,7 +819,6 @@ input[type="checkbox"], input[type="radio"] {
   right: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-image: url(../img/roulette/spin_base.png);
 }
 .intro #wheel-base .spin {
   width: 150px;

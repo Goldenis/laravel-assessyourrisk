@@ -45,6 +45,8 @@
     var _currentVideo;
     var _currentImage;
 
+    var _currentPath = '/';
+
     // setInterval(function(){
     //   $('.person').html(people[Math.floor(Math.random()*people.length)])
     // },2000);
@@ -79,6 +81,10 @@
         // }
         _scrollHandler();
     });
+
+
+
+
     $(window).on('mousewheel', function(eventData, deltaY) {
         // if(overlayOpen){
         //   return;
@@ -296,6 +302,7 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
+            // $.address.path('/assessment');
         })
         $('.male-overlay .close-btn').on('click', function() {
             $('.vid-container').remove();
@@ -349,10 +356,12 @@
         })
         $('.assess').on('click', function() {
             toggleColumn();
+            _currentPath = '/assessment';
             $.address.path('/assessment');
         })
         $('.understand').on('click', function() {
             toggleColumn();
+            _currentPath = '/education';
             $.address.path('/education');
         })
         $('.module-hero').on('click', function() {
@@ -487,6 +496,7 @@
     }
 
     function hideIntro() {
+        console.log('hideIntro');
          // $('.logo').css('opacity', 1);
          TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
         $('.intro').addClass('out-up')
@@ -494,6 +504,16 @@
         $('.assessment').addClass('in');
         $('.border').addClass('white');
     };
+
+    function goHome(){
+        console.log('goHome');
+        TweenLite.to($('.logo'), .5, {opacity: 1, delay: 0});
+        TweenLite.to($('.intro'), .5, {opacity: 1, delay: 1});
+        $('.intro').removeClass('out-up')
+        $('.right-column').removeClass('in')
+        $('.assessment').removeClass('in');
+        $('.border').removeClass('white');
+    }
 
     function openProgressOverlay() {
         $('.progress-overlay').addClass('in');
@@ -508,6 +528,7 @@
     function changeModule(i) {
         _oldModule = _currentModule;
         _currentModule = i;
+
         $('.module').eq(_currentModule).scrollTop(0);
         _oldVignette = null;
         _currentVignette = 0;
@@ -548,9 +569,14 @@
         // $('.headline').removeClass('active');
         // $('.headline').removeClass('out');
         // $('.vignette').removeClass('in');
-
+        if (_ie){
+            $('.module').css('display','none');
+        }
         $('.module').eq(_currentModule).removeClass('left');
         $('.module').eq(_currentModule).addClass('in');
+        if (_ie){
+            $('.module').eq(_currentModule).css('display','block');
+        }
 
         $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
         _currentHeadline.addClass('active');
@@ -562,11 +588,16 @@
 
     function closeModule(num) {
         $('.module').eq(num).removeClass('in');
+        if (_ie){
+            $('.module').eq(num).css('display','none');
+        }
         if (num < _currentModule) {
             $('.module').eq(num).addClass('left');
         } else {
             $('.module').eq(num).removeClass('left');
         }
+
+        
     }
 
     function toggleColumn() {
@@ -923,14 +954,22 @@ Do you know if I do%3F";
             _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
             fillDot();
             _currentHeadline.addClass('active')
-            $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).addClass('in');
+            var currentVin = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
+
+            currentVin.addClass('in');
+            
             // $('.bg-video').get(_currentVignette).currentTime = 0;
             // console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
 
             changeVideo();
 
             //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
+
+
+            
         }
+
+        
 
         handleSaveDeepProgress();
     }
@@ -989,7 +1028,7 @@ Do you know if I do%3F";
                 var previousVid = _currentVideo;
 
                 var videoContainer = $('<div class="vid-container" style="opacity: 0;"></div>');
-                var vid1 = $('<video class="bg-video" src="" type="video/mp4" preload="auto" autoplay loop></video>');
+                var vid1 = $('<video class="bg-video" preload="auto" autoplay loop></video>');
 
                 // var vid2 = $('<video class="bg-video" src="" style="opacity: 1;display:none;" type="video/mp4" preload="auto" autoplay></video>');
                 var videoElement = vid1;
@@ -1040,30 +1079,36 @@ Do you know if I do%3F";
 
                 // let's play some video! but what kind?
                 var uri;
-                if (Modernizr.video.webm) {
+
+                // if (Modernizr.video.ogg) {
+
+                    videoURL = $(vig).data()
+                    videoType = ".ogv"
+                    uri = host + videoURL['src'] + videoType;
+                    $(vid1).append('<source src="' + uri + '" type="video/ogg">');
+                // } 
+                // else if (Modernizr.video.h264) {
+
+                    videoURL = $(vig).data()
+                    videoType = ".mp4"
+                    uri = host + videoURL['src'] + videoType;
+                    $(vid1).append('<source src="' + uri + '" type="video/mp4">');
+                
+
+                // }
+                // else if (Modernizr.video.webm) {
 
                     videoURL = $(vig).data()
                     videoType = ".webm"
                     $(vid1).addClass('in');
                     // $(vid2).addClass('in');
                     uri = host + videoURL['src'] + videoType;
+                    $(vid1).append('<source src="' + uri + '" type="video/webm">');
 
-                } else if (Modernizr.video.ogg) {
-
-                    videoURL = $(vig).data()
-                    videoType = ".ogv"
-                    uri = host + videoURL['src'] + videoType;
-
-                } else if (Modernizr.video.h264) {
-
-                    videoURL = $(vig).data()
-                    videoType = ".mp4"
-                    uri = host + videoURL['src'] + videoType;
-                }
+                // } 
 
 
-
-                $(vid1).attr('src', uri);
+                // $(vid1).attr('src', uri);
                 // $(vid2).attr('src', uri);
 
                 $('#bg-vid').append($(videoContainer));
@@ -1103,25 +1148,48 @@ Do you know if I do%3F";
 
         console.log('external URL change')
         console.log(event.value)
-        if (event.value == '/home') {
+
+        var oldPath = _currentPath;
+        var newPath = event.value;
+        console.log('currentPath', _currentPath);
+
+
+
+        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
             //$.address.path('/home');
-            console.log('home')
+            console.log('GO HOME');
+            
+            if (_currentPath !== '/education' && _currentPath !== '/intro'){
+                goHome();
+            }
+            else if (_currentPath === '/education')
+            {
+                toggleColumn();
+            }
+            else
+            {
+                // $.address.path('/assessment');
+            }
+            _currentPath = newPath;
         } else if (event.value == '/education') {
-            console.log('education')
+            console.log('education');
+            
             hideIntro();
             addCharts();
             toggleColumn();
+            _currentPath = newPath;
         } else if (event.value == '/assessment') {
-            console.log('assessment')
+            console.log('assessment');
+            _currentPath = newPath;
             hideIntro();
             addCharts();
         } else {
             console.log('intro view')
-
+            
             startIntro();
             $.address.path('/intro');
-
+            _currentPath = newPath;
         };
         $('.vid-container').remove();
     });

@@ -708,7 +708,7 @@ button {
     left: 0;
     position: absolute;
     left: 0px;
-    top: 18rem;
+    top: 20rem;
     z-index: 10;
 }
 .checkbox-list {
@@ -1096,6 +1096,7 @@ input[type="checkbox"], input[type="radio"] {
         opacity: 0;
         @include transition(1s);
         pointer-events: none;
+        background: rgba(0, 0, 0, 0);
         &.in {
             left: 0;
             pointer-events: auto;
@@ -1685,6 +1686,9 @@ footer {
                 .factors-title {
                     top: -50px;
                 }
+            }
+            .bad-gene, .bmi-high, .drinks-high{
+                margin-bottom: 5rem;
             }
         }
         .vignettes {

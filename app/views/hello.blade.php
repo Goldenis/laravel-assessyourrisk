@@ -324,6 +324,9 @@
         </div>
 
         <div class="question" data-question-id="2">
+            <div class="anim-gif">
+               <img src="img/calendar.gif">
+            </div>
           <div class="prompt">How old are you?</div>
         
           <div class="answers">
@@ -459,6 +462,9 @@
         </div>        
 
         <div class="question" data-question-id="5">
+            <div class="anim-gif">
+               <img src="img/stopwatch.gif">
+            </div>        
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
         
           <div class="answers">
@@ -530,6 +536,9 @@
         </div>
 
         <div class="question" data-question-id="10">
+            <div class="anim-gif birth">
+               <img src="img/birthcontrol.gif">
+            </div>        
           <div class="prompt">Have you taken birth control pills for five or more years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
         
           <div class="answers">

@@ -424,8 +424,7 @@
 
         console.log('hideIntro');
          // $('.logo').css('opacity', 1);
- //maybe
- //        TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
+         TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
 
         $('.intro').addClass('out-up')
         $('.right-column').addClass('in')

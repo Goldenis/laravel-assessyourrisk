@@ -746,6 +746,24 @@ input[type="checkbox"], input[type="radio"] {
   max-width: 185px;
   min-width: 140px;
 }
+.anim-gif {
+  position: absolute;
+  top: -150px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.anim-gif img {
+  width: 10rem;
+  max-width: 205px;
+  min-width: 100px;
+}
+.anim-gif.birth img {
+  -webkit-transform: rotate(45deg);
+  width: 13rem;
+  max-width: 205px;
+  min-width: 130px;
+}
 .menu-icon {
   z-index: 100000000;
   position: absolute;

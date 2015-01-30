@@ -607,8 +607,8 @@
         <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
-              <h3>Turns out, <i>life</i> affects your life:</h3>
-              <h5> day-to-day decisions directly link to your risk of getting cancer. You only get one shot, so make sure you’re doing all you can to make the most of it — the stakes are high.</h5>
+              <h3>Turns out, <i>life</i> affects your life</h3>
+              <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -620,11 +620,9 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Women who get regular exercise may have a lower risk of breast cancer.</h3>
+              <h3>Get Moving</h3>
+              <h5>Women who get regular exercise may have a lower risk of breast cancer. Breaking a sweat for 30 minutes on most days can help reduce your risk by as much as 10-20 percent.</h5>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <h3>Get moving: Breaking a sweat for 30 minutes on most days can help reduce your risk by as much as 10-20 percent.</h3>
             </div>
           </div>
         </div>
@@ -635,7 +633,8 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Fight fat. Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat.</h3>
+              <h3>Fight Fat</h3>
+              <h5>Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat. Your body will thank you for it.</h5>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
           </div>
@@ -647,11 +646,9 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Cut back on cocktails — there’s a known link between alcohol and breast cancer.</h3>
+              <h3>Cut Back on Cocktails</h3>
+              <h5>There’s a known link between alcohol and breast cancer. Every drink you throw back affects your health. Limit your drinking to no more than one drink per day, and you’ll be doing yourself a favor.</h5>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <h3>Every drink you throw back affects your health. Limit your drinking to no more than one drink per day, and you’ll be doing yourself a favor.</h3>
             </div>
           </div>
         </div>
@@ -661,28 +658,47 @@
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
           <div class="headlines">
-            <div class="headline">         
-              <h3>Commit to quit. There’s a direct through line from tobacco use to <i>many</i> diseases, including breast cancer.</h3>
-            </div>
-            <div class="headline">
-              <h3>No excuses: if you don’t give up your smokes, you’re putting out a welcome sign for cancer.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+            <div class="headline"> 
+              <h3>Go Smoke Free</h3>        
+              <h5>Commit to quit. If you smoke, there are no excuses: there’s a direct through line from tobacco use to <i>many</i> diseases, including breast cancer.</h5>
             </div>
           </div>
         </div>
 
-        <div class="vignette" data-src="birthControl">
-          <!-- <div class="video">
+<!-- GUESSED on the vitamin-d data src? 
+Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
+        <div class="vignette" data-src="vitamin-d">
+          <div class="headlines">
+            <div class="headline">
+              <h3>Spend Some Time in the Sun</h3>
+              <h5>Vitamin D plays a role in regulating breast cell growth. Studies have shown a 2.5x increase in the risk of breast cancer associated with Vitamin D deficiency, and a possible increase in ovarian cancer risk.</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="vignette" data-src="">
+          <div class="headlines">
+            <div class="headline">
+              <h3>Eat Well</h3>
+              <h5>What you eat affects your health. Follow a diet that’s low in fat and includes a mix of fruits, vegetables, whole grains, fat-free or low-fat dairy products, and lean proteins. Research shows a 12% increase in cancer risk for every 50g of red meat consumed each day.</h5>
+            </div>
+          </div>
+        </div>
+
+<!--         <div class="vignette" data-src="birthControl">
+          <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
+          </div>
           <div class="headlines">
             <div class="headline">         
               <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <button class="btn-continue sub">CONTINUE</button>
             </div>
             <div class="headline">
               <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
             </div>
+ -->          
+          <div class="headlines">
             <div class="headline">
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
             	<button class="facebook lifestyle">Join Them</button>
@@ -693,7 +709,6 @@
             </div>
           </div>
         </div>
-      </div>
 
 <!-- KNOW YOUR NORMAL -->
 
@@ -701,8 +716,8 @@
         <div class="vignette main" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline">
-              <h2>Every body is different.</h2>
-              <h4>In order to know what’s up with your bod, you have to be self aware. It’s important to know what’s normal for you — that way, you’re equipped to recognize a change over time.</h4>
+              <h3>Know What’s Normal For You</h3>
+              <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -713,12 +728,16 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>When it comes to your boobs, you need to know the lay of the land, so get to know what they feel like. And your breasts cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your arm pits, and into your breast bone.</h3>
-              <ul>
+              <h3>You Need to Know the Lay of the Land</h3>
+              <h5>80% of breast cancers in young women are found by young women themselves. Get to know what your breasts feel like. They cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your armpits, and into your breast bone.</h5>
+        
+        <!--       <ul>
                 <li>Pay attention to changes in size, shape, contour, and color</li>
                 <li>If a change persists or worsens for 2-3 weeks, it’s time to see a doctor</li>
               </ul>
+               -->
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
+
             </div>
           </div>
         </div>
@@ -727,8 +746,11 @@
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
           <div class="headlines">
-            <div class="headline">         
-              <h3>A few examples of abnormal symptoms:</h3>
+            <div class="headline">    
+              <h3>What to Look Out For</h3> 
+              <h5>Pay attention to changes in size, shape, contour, and color. If a change persists or worsens for 2-3 weeks, it’s time to see a doctor.</h5>    
+              
+              <h5>A few examples of abnormal symptoms:</h5>
               <ul>
                 <li>A lump that’s hard and immobile</li>
                 <li>Swelling, soreness or rash</li>
@@ -753,18 +775,75 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Let’s talk lumps.</h3>
-              <ul>
-                <li>The most common symptom of breast cancer is a lump.</li>
-                <li>But, some women have naturally lumpy breasts.</li>
-                <li>Soft, mobile lumps that come and go are normal.</li>
-                <li>A lump that feels like a frozen pea is not.</li>
-                <li>A lump that gets bigger and doesn’t go away for 2-3 weeks is not.</li>
-                <li>Don’t panic — 80% of lumps aren’t cancerous — but make sure to go to your doctor.</li>
-              </ul>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h5>The most common breast cancer symptom is a lump. But some women have naturally lumpy breasts. Soft, mobile lumps that come and go are normal, but a lump that feels like a frozen pea is not. One that gets bigger and doesn’t go away for 2-3 weeks is not. If you find something, don’t panic — 80% of lumps aren’t cancerous — but make sure to go to your doctor.</h5>
             </div>
           </div>
         </div>
+
+<!-- Spencer added the following headlines according to new copy. -->
+        <div class="vignette" data-src="breastAwareness">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>The 4-1-1 on Ovarian Cancer</h3>
+              <h5>Because there’s currently no effective test for ovarian cancer, watching for signs and symptoms is important. However, many of these can easily be mistaken for other issues, like PMS.</h5>
+              <br>
+              <h6>Primary</h6>
+              <ul>
+                <li>Pelvic or abdominal pain</li>
+                <li>Feeling the need to urinate frequently</li>
+                <li>Prolonged bloating</li>
+                <li>Difficulty eating or feeling full quickly</li>
+              </ul> 
+             <!--  <br> -->
+              <h6>Secondary</h6>
+              <ul>
+                <li>Constipation</li>
+                <li>Menstrual changes</li>
+                <li>Back pain</li>
+                <li>Upset stomach, heartburn</li>
+                <li>Pain during intercourse</li>
+              </ul>
+              <h5>Like breast cancer symptoms, many ovarian cancer symptoms can come and go. But if they persist or worsen for 2-3 weeks, see your doctor and ask — could it be my ovaries?</h5>            
+            </div>
+          </div>
+        </div>
+
+        <div class="vignette" data-src="breastAwareness">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>You &amp Your Doctor</h3>
+              <h5>A key part of living proactively is finding a doctor you trust. He or she should listen to your questions, pay attention to your concerns, and provide clear recommendations. Once you’ve “shopped around” and found one you like, plan on seeing them annually for a well-woman exam.</h5>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="vignette" data-src="breastAwareness">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>The Well-Woman Exam</h3>
+              <h5>These annual exams, which are covered in all insurance policies, should include a clinical breast exam that thoroughly covers all breast tissue and typically lasts several minutes.</h5>
+              <br>
+              <h6>Your well-woman exam should also include:</h6>
+              <ul>
+                <li>Clinical breast and pelvic exam starting at age 20</li>
+                <li>A PAP smear — though it’s important to know these don’t check for ovarian cancer</li>
+                <li>Mammogram beginning at age 40— but if you if you have a family history, ten years before the age your youngest relative was diagnosed</li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+
+<!-- deleted by spencer - not on new copy 
+        <div class="vignette" data-src="breastAwareness">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>What to Watch</h3>
+              <h5>Some clear signs of ovarian cancer can be symptoms like these, when they persist or worsen for 2-3 weeks:</h5>
+            </div>
+          </div>
+        </div>
+ -->
         <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
@@ -780,60 +859,13 @@
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="breastAwareness">
-          <!-- <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
+
           <div class="headlines">
-            <div class="headline">         
-              <h3>There is currently no effective test for ovarian cancer.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <h3>The signs and symptoms can be easily mistaken for other issues — like PMS.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
-              <ul>
-                <li><h4>Primary:</h4></li>
-                <li>Pelvic or abdominal pain</li>
-                <li>Feeling the need to urinate frequently</li>
-                <li>Prolonged bloating</li>
-                <li>Difficulty eating or feeling full quickly</li>
-                <li>(If you had Chinese food last night and are feeling bloated, this isn’t what we’re talking about.)</li>
-              </ul>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <h4>Some clear signs of ovarian cancer can be symptoms like the following when they persist or worsen for 2-3 weeks:</h4>
-              <ul>
-                <li><h4>Secondary:</h4></li>
-                <li>Constipation</li>
-                <li>Menstrual changes</li>
-                <li>Back pain</li>
-                <li>Upset stomach, heartburn</li>
-                <li>Pain during intercourse</li>
-                <li>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.</li>
-                <li>But if they persist or worsen for 2-3 weeks, see your doctor and ask—could it be my ovaries?</li>
-              </ul>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
-            </div>
-            <div class="headline">
-              <ul>
-                <li>See a doctor annually for a well woman’s exam.</li>
-                <li>Ask for a physical breast exam.</li>
-                <li>Remember: pap smears <i>don’t</i> check for ovarian cancer.</li>
-                <li>Mammograms should begin at 40, unless your family history says otherwise.</li>
-                <li>If you have a close relative — mom, sister, aunt — diagnosed with breast cancer, you should start getting them 10 years prior to her age of at diagnosis.  So, if your mom was diagnosed at 40, you should start getting mammograms at 30.</li>
-                <li>All annual woman exams and mammograms are covered by health insurance plans under ACA.</li>
-                <li>You see your doctor once a year.  The other 364 days are up to you.</li>
-              </ul>
-            </div>
             <div class="headline">
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
             	<button class="facebook lifestyle">Join Them</button>
             </div>
+
             <div class="headline last">
             	<h2>Module Complete.</h2>
               <button class="btn-continue sub">FAMILY HISTORY MODULE →</button>
@@ -841,14 +873,15 @@
           </div>
         </div>
       </div>
-
+      
 <!-- FAMILY HISTORY -->
 
       <div class="module family-history">
         <div class="vignette main" data-src="family">
           <div class="headlines">
             <div class="headline">
-              <h3>If you have breast and ovaries, you are at risk.  Family and health history is the most important thing to look at when it comes to being proactive about your health.</h3>
+              <h3>If you have breast and ovaries, you are at risk.</h3>  
+              <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
               <button class="btn-begin">BEGIN MODULE</button>
             </div>
           </div>
@@ -859,20 +892,29 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%.  Lifetime ovarian cancer risk can be as high as 54%.</h3>
+              <h3>Family History &amp Genetic Predisposition</h3>
+              <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%. Lifetime ovarian cancer risk can be as high as 54%. Family history and genetic predisposition aren’t one in the same. For example, if a first-degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h5>
             </div>
-            <div class="headline">
-              <h3>Family history and genetic predisposition aren’t one in the same. For example, if a first degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h3>
+          </div>
+        </div>
+
+<!-- added Spencer due to recent copy -->
+        <div class="vignette" data-src="family">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Women of certain races, lineages, and backgrounds may have an increased risk of developing breast and ovarian cancer.</h3>
+              <h5>For example, breast cancer is the most common cancer diagnosis among African American women. People of Ashkenazi Jewish ancestry are more likely to carry BRCA gene mutations, which puts them at higher risk.</h5>
             </div>
           </div>
         </div>
         <div class="vignette" data-src="family">
+        
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Your personal health history and choices have a big effect as well.</h3>
+              <h3>Your Personal Health History &amp Lifestyle Choices Have a Big Effect As Well</h3>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
           </div>
@@ -883,14 +925,12 @@
           </div> -->
           <div class="headlines">
             <div class="headline">
-              <h3>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  Even better: the activity can help reduce the breast-fed baby’s own later-life risk.  Now that’s win-win.</h3>
+              <h3>Breastfeeding Lowers Risk</h3>
+              <h5>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life. Even better: the activity can help reduce the breast-fed baby’s own later-life risk. Now <i>that’s</i> win-win.</h5>
             </div>
             <div class="headline">
-              <h3>A woman’s childbearing history influences her risk of developing breast cancer. Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth.  The earlier this transformation happens, the lower the risk of breast cancer.</h3>
-            </div>
-            <div class="headline">
-              <h3>Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
+              <h3>A woman’s childbearing history influences her risk of developing breast cancer</h3>
+              <h5>Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth. The earlier this transformation happens, the lower the risk of breast cancer. Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h5>
             </div>
           </div>
           <!-- <button class="btn-continue sub">Count me in.</button> -->
@@ -901,7 +941,8 @@
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  These guys are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h3>
+              <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>
+              <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
               <button class="facebook family">Pledge to Learn Your Family History</button><br>
             </div>
              <div class="headline">

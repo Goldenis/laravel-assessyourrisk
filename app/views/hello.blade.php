@@ -442,7 +442,7 @@
         </div>        
 
         <div class="question" data-question-id="5">
-            <div class="anim-gif">
+            <div class="anim-gif stopwatch">
                <img src="img/stopwatch.gif">
             </div>        
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>

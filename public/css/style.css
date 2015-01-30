@@ -764,6 +764,11 @@ input[type="checkbox"], input[type="radio"] {
   max-width: 205px;
   min-width: 130px;
 }
+.anim-gif.stopwatch img {
+  width: 15rem;
+  max-width: 205px;
+  min-width: 150px;
+}
 .menu-icon {
   z-index: 100000000;
   position: absolute;

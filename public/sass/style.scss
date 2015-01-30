@@ -790,6 +790,13 @@ input[type="checkbox"], input[type="radio"] {
         min-width: 130px;
         }
     }    
+    &.stopwatch{
+        img {
+        width: 15rem;
+        max-width: 205px;
+        min-width: 150px;
+        }
+    }    
 }
 .menu-icon {
     //display: none;

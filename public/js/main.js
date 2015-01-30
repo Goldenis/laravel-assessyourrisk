@@ -68,10 +68,6 @@
 
     var receivedBMI = false;
 
-    $(function() {
-        FastClick.attach(document.body);
-    });
-
 
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
@@ -79,52 +75,52 @@
         // }
         _scrollHandler();
     });
-    $(window).on('mousewheel', function(eventData, deltaY) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // if(_isTouchDevice){
-        //   eventData.preventDefault();
-        // }else{
-        //   _currentFrame -= deltaY;
-        //   _currentFrame = Math.max(0,_currentFrame);
-        //   eventData.preventDefault();
-        // }
-    })
-    $(window).bind('touchstart', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // _isTouchDevice = true;
-        // distance = 0;
-        // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        // touchStartY = touch.pageY;
-        // clearInterval(inertiaInterval);
-    })
-    $(window).bind('touchmove', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // e.preventDefault();
-        // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        // distance = touch.pageY-touchStartY;
-        // _currentFrame -= distance/10;
-        // _currentFrame = Math.floor(Math.max(_currentFrame,0));
-        // touchStartY = touch.pageY;
-    })
-    $(window).bind('touchend', function(e) {
-        // if(overlayOpen){
-        //   return;
-        // }
-        // var inertiaInterval = setInterval(function(){
-        //   distance*=.9;
-        //   _currentFrame -= distance/3;
-        //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
-        //   if(Math.abs(distance) < .2){
-        //     clearInterval(inertiaInterval)
-        //   }
-        // },10)
-    })
+    // $(window).on('mousewheel', function(eventData, deltaY) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // if(_isTouchDevice){
+    //     //   eventData.preventDefault();
+    //     // }else{
+    //     //   _currentFrame -= deltaY;
+    //     //   _currentFrame = Math.max(0,_currentFrame);
+    //     //   eventData.preventDefault();
+    //     // }
+    // })
+    // $(window).bind('touchstart', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // _isTouchDevice = true;
+    //     // distance = 0;
+    //     // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    //     // touchStartY = touch.pageY;
+    //     // clearInterval(inertiaInterval);
+    // })
+    // $(window).bind('touchmove', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // e.preventDefault();
+    //     // var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    //     // distance = touch.pageY-touchStartY;
+    //     // _currentFrame -= distance/10;
+    //     // _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //     // touchStartY = touch.pageY;
+    // })
+    // $(window).bind('touchend', function(e) {
+    //     // if(overlayOpen){
+    //     //   return;
+    //     // }
+    //     // var inertiaInterval = setInterval(function(){
+    //     //   distance*=.9;
+    //     //   _currentFrame -= distance/3;
+    //     //   _currentFrame = Math.floor(Math.max(_currentFrame,0));
+    //     //   if(Math.abs(distance) < .2){
+    //     //     clearInterval(inertiaInterval)
+    //     //   }
+    //     // },10)
+    // })
 
 
     function _pageResize() {
@@ -149,34 +145,17 @@
 
     function sizeBGMedia() {
         if (_winW / _winH > 1.8) {
-        	if ($('#bg-img').length){
-				$('#bg-img img').css({
-	                width: _winW,
-	                height: 'auto'
-	            });
-        	}
-        	else
-        	{
-        		$('video').css({
-	                width: _winW,
-	                height: 'auto'
-	            });
-        	}
+
+    		$('video').css({
+                width: _winW,
+                height: 'auto'
+            });
             
         } else {
-        	if ($('#bg-img').length){
-	            $('#bg-img img').css({
-	                height: _winH,
-	                width: 'auto'
-	            });
-	        }
-	        else
-	        {
-	        	$('video').css({
-	                height: _winH,
-	                width: 'auto'
-	            });
-	        }
+        	$('video').css({
+                height: _winH,
+                width: 'auto'
+            });
         }
     }
 
@@ -213,13 +192,11 @@
                 headline_tops[2].push($('.headline').eq(i).offset().top);
             }
         }
-        console.log(headline_tops[_currentModule])
     }
 
     function showNextHeadline() {
         // _currentFrame += 15;
 
-        console.log("Next Headline")
         var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
         var nextHeadline = _currentHeadline.index() + 1;
         if (initialized && nextHeadline < numHeadlines) {
@@ -238,7 +215,6 @@
     }
 
     function fillDot() {
-        console.log("fill dot ", _currentHeadline)
         $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
     }
 
@@ -333,7 +309,6 @@
             calculateWeight($(this));
         })
         $('.question .answers button').on('click', function(e) {
-            console.log('answer clicked', $(this).hasClass('sub'));
             if (!$(this).hasClass('sub')) {
                 answerQuestion($(this));
             }
@@ -487,8 +462,6 @@
     }
 
     function hideIntro() {
-         // $('.logo').css('opacity', 1);
-         TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
         $('.intro').addClass('out-up')
         $('.right-column').addClass('in')
         $('.assessment').addClass('in');
@@ -526,9 +499,7 @@
     function changeHeadline(idx) {
         _oldModule = _currentModule;
         _currentHeadline = $('.headline').eq(idx);
-        console.log(idx)
         var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
-        // console.log(_newVignette)
         if (_currentVignette != _newVignette) {
             _currentVignette = _newVignette;
             changeVideo();
@@ -580,7 +551,7 @@
             }
         } else {
             $('.logo').removeClass('out');
-            _currentView = "left";
+            _currentView = "left"
             setTimeout(function() {
                 $('.right-column').removeClass('down');
             }, 800)
@@ -620,6 +591,7 @@
         // BMI = Formula: weight (lb) / [height (in)]2 x 703
         var BMI = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
         $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
+        console.log(BMI)
         /*
         BMI
         Weight Status
@@ -631,8 +603,6 @@
     }
 
     function updateCharts() {
-        console.log('update charts');
-
         $('.dashboard').addClass('flash');
         setTimeout(function() {
             $('.dashboard').removeClass('flash');
@@ -681,9 +651,11 @@
         updateCharts();
     }
 
-    function handleSaveQuizAnswer(answer) {
-        // 2 - bmi
 
+
+
+    function handleSaveQuizAnswer(answer) {
+               
         /*
           BMI
           Weight Status
@@ -693,13 +665,18 @@
           30.0 and Above  Obese
           */
 
+        // 4 - BMI result
         // 6 - .answers .drinks
         // 5 - Have any of your immediate family members
         // 7 - gene mutation have you or your relative
         // 10 - Within one side of the family
         var ansTxt = answer.attr("data-answer-id");
-        if ($.contains(_currentQuestion, $('.bmi-result'))) {
+        //if ($.contains(_currentQuestion, $('.bmi-result'))) {
             var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
+
+
+            if (_currentQuestion == 4) {
+            console.log(bmi)    
             if (bmi < 18.5) {
                 ansTxt = "-1";
             } else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -710,6 +687,8 @@
                 ansTxt = "-1";
             }
         }
+        //}
+
         if (_currentQuestion == 6) ansTxt = currentGlass;
 
         if (_currentQuestion == 5) {
@@ -718,14 +697,17 @@
                 data.push($(this).attr('data-answer-id'));
             });
             ansTxt = data;
-            console.log(ansTxt);
         }
 
-        if (_currentQuestion == 14 && ansTxt == '+1') {
-            console.log('QUESTION IS NOW 14');
-            _currentQuestion = 15;
-            $('.assessment .dot').removeClass('active')
-            savedQuizProgress['14'] = ansTxt;
+        var mutationCheck = $('input[name="mutation-radio"]:checked').attr("data-answer-id");
+        if (_currentQuestion == 7) ansTxt = mutationCheck;
+
+          console.log(mutationCheck)
+
+        if (_currentQuestion == 7 && ansTxt == '+1') {
+            console.log('not')
+            _currentQuestion = 9;
+            savedQuizProgress['7'] = ansTxt;
         }
 
 
@@ -781,15 +763,73 @@
         var drinksHigh = savedQuizProgress[3] > 3;
         var badGene = $.inArray("1|-2", savedQuizProgress[2]);
 
-        $('.bmi-high').css({
-            display: bmiHigh ? 'block' : 'none'
-        })
-        $('.drinks-high').css({
-            display: drinksHigh ? 'block' : 'none'
-        })
-        $('.bad-gene').css({
-            display: badGene ? 'block' : 'none'
-        })
+//bmi card
+        if (savedQuizProgress[4] == '+1') { 
+            $('.item.bmi-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.bmi-high').css({
+                display: 'block'
+             })            
+
+
+//drinks card
+        if (savedQuizProgress[6] <= '2') { 
+            $('.item.alcohol-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.alcohol-high').css({
+                display: 'block'
+             })            
+                
+
+//exercise card
+        if (savedQuizProgress[9] == '+1') { 
+            $('.item.exercise-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.exercise-high').css({
+                display: 'block'
+             })   
+
+//birth-control card
+        if (savedQuizProgress[15] == '+1') { 
+            $('.item.birth-control-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.birth-control-high').css({
+                display: 'block'
+             })   
+
+//pregnancy card
+        if (savedQuizProgress[17] == '+1') { 
+            $('.item.pregnancy-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.pregnancy-high').css({
+                display: 'block'
+             })   
+
+//BREASTFEEDING card
+        if (savedQuizProgress[18] == '+1') { 
+            $('.item.breastfeeding-low').css({
+                display: 'block'
+            })
+        }    
+        else 
+            $('.item.breastfeeding-high').css({
+                display: 'block'
+             })   
     }
 
     function askHandler(e) {
@@ -853,7 +893,7 @@ Do you know if I do%3F";
     }
 
     function answerQuestion(answer) {
-        console.log('ANSWERED QUESTION');
+
         if (_currentQuestion >= _totalQuestions - 1) {
             addCustomResults()
             openProgressOverlay();
@@ -893,7 +933,6 @@ Do you know if I do%3F";
         var _oldQuestion = _currentQuestion;
         _currentQuestion++;
         setTimeout(function() {
-
             $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment .dot').eq(_oldQuestion).removeClass('active')
             $('.assessment .dot').eq(_currentQuestion).addClass('active')
@@ -902,7 +941,6 @@ Do you know if I do%3F";
     }
 
     function nextVignette() {
-        console.log("Next Vignette")
 
         // $('.vignette').removeClass('in');
         setTimeout(function() {
@@ -938,11 +976,10 @@ Do you know if I do%3F";
     function changeVideo() {
 
         var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
-        console.log('isVideo', Modernizr.video);
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '_' + _currentModule + '_' + _currentVignette + '.jpg';
 
-        if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);
         } else {
             var src = vig.data('src') + videoType;
@@ -974,7 +1011,6 @@ Do you know if I do%3F";
             opacity: 1
         }, 800, function() {
             // console.log("video fade in complete");
-            console.log('previousImage', previousImage);
             if (previousImage) {
                 $(previousImage).remove();
             }
@@ -1026,7 +1062,7 @@ Do you know if I do%3F";
                 // }
 
                 function onVideoProgress() {
-                    console.log($(this).get(0).currentTime);
+                    // console.log($(this).get(0).currentTime);
                 }
 
                 $(vid1).on('play', onVideoPlay);

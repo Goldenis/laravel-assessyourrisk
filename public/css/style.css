@@ -513,7 +513,7 @@ button.sub:hover {
 }
 .progress-overlay .cards .card .item {
   margin-bottom: 4rem;
-  display: hidden;
+  display: none;
 }
 .progress-overlay .cards .card.positive {
   background: #fff;

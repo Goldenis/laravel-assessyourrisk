@@ -70,12 +70,7 @@
           <button class="sub email-pdf">EMAIL</button><button class="sub">PDF</button>
         </div>
       </div>
-      <div class="cards">
-      
-        <div class="bmi-high">BMI HIGH</div>
-        <div class="drinks-high">DRINKS HIGH</div>
-        <div class="bad-gene">GENE</div>
-        
+      <div class="cards">        
         <div class="card positive">
           <div class="factors-title"><h3>What’s Good.</h3></div>
           <div class="item bmi-low">
@@ -684,20 +679,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-
-<!--         <div class="vignette" data-src="birthControl">
-          <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div>
-          <div class="headlines">
-            <div class="headline">         
-              <h3>There are far fewer lifestyle behaviors known to reduce your ovarian cancer risk. However, taking oral contraceptives, or birth control pills, for 5 years in your 20s and 30s can actually reduce your risk by up to 50%.</h3>
-              <button class="btn-continue sub">CONTINUE</button>
-            </div>
-            <div class="headline">
-              <h3>5 years do not have to be consecutive—just any time in your 20s and 30s. Risk can be reduced by up to 50% (reduction by half is not guaranteed and depends on multiple other factors)</h3>
-            </div>
- -->          
+        
           <div class="headlines">
             <div class="headline">
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
@@ -834,16 +816,6 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-<!-- deleted by spencer - not on new copy 
-        <div class="vignette" data-src="breastAwareness">
-          <div class="headlines">
-            <div class="headline">         
-              <h3>What to Watch</h3>
-              <h5>Some clear signs of ovarian cancer can be symptoms like these, when they persist or worsen for 2-3 weeks:</h5>
-            </div>
-          </div>
-        </div>
- -->
         <div class="vignette" data-src="breastAwareness">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
@@ -886,10 +858,8 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
+
         <div class="vignette" data-src="family">
-          <!-- <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Family History &amp Genetic Predisposition</h3>
@@ -907,22 +877,16 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="family">
         
-          <!-- <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
+        <div class="vignette" data-src="family">
           <div class="headlines">
             <div class="headline">         
               <h3>Your Personal Health History &amp Lifestyle Choices Have a Big Effect As Well</h3>
-              <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
           </div>
         </div>
+
         <div class="vignette" data-src="mother">
-          <!-- <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
           <div class="headlines">
             <div class="headline">
               <h3>Breastfeeding Lowers Risk</h3>
@@ -933,12 +897,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <h5>Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth. The earlier this transformation happens, the lower the risk of breast cancer. Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h5>
             </div>
           </div>
-          <!-- <button class="btn-continue sub">Count me in.</button> -->
         </div>
+
         <div class="vignette" data-src="mother">
-          <!-- <div class="video">
-            <video class="bg-video" type="video/mp4" loop></video>
-          </div> -->
           <div class="headlines">
             <div class="headline">         
               <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>
@@ -948,9 +909,6 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
              <div class="headline">
             	<h3 class="family-pledge-number">0 women have pledged to learn their family histories.</h3>
             	<button class="facebook lifestyle">Join Them</button>
-            </div>
-            <div class="headline">
-            	<h2>Module Complete.</h2>
             </div>
             <div class="headline last">            
               <div class="share">

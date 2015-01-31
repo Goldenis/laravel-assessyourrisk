@@ -44,8 +44,8 @@
 
     var _currentVideo;
     var _currentImage;
-
     var _currentPath = '/';
+
 
     // setInterval(function(){
     //   $('.person').html(people[Math.floor(Math.random()*people.length)])
@@ -281,12 +281,12 @@
         })
         $('.assess').on('click', function() {
             toggleColumn();
-            _currentPath = '/assessment';
+            window._currentPath = '/assessment';
             $.address.path('/assessment');
         })
         $('.understand').on('click', function() {
             toggleColumn();
-            _currentPath = '/education';
+            window._currentPath = '/education';
             $.address.path('/education');
         })
         $('.module-hero').on('click', function() {
@@ -691,7 +691,7 @@
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
             console.log('not')
-            _currentQuestion = 9;
+            _currentQuestion = 8;
             savedQuizProgress['7'] = ansTxt;
         }
 
@@ -744,9 +744,9 @@
      */
     function addCustomResults() {
 
-        var bmiHigh = savedQuizProgress[2] == '-1';
-        var drinksHigh = savedQuizProgress[3] > 3;
-        var badGene = $.inArray("1|-2", savedQuizProgress[2]);
+        // var bmiHigh = savedQuizProgress[2] == '-1';
+        // var drinksHigh = savedQuizProgress[3] > 3;
+        // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
 
 //bmi card
         if (savedQuizProgress[4] == '+1') { 
@@ -952,16 +952,9 @@ Do you know if I do%3F";
             
             // $('.bg-video').get(_currentVignette).currentTime = 0;
             // console.log("module" + _currentModule, "vignette" + _currentVignette, "headline" + _currentHeadline.index())
-
             changeVideo();
-
-            //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();
-
-
-            
-        }
-
-        
+            //$('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.bg-video')).get(0).play();   
+        }   
 
         handleSaveDeepProgress();
     }
@@ -1128,13 +1121,7 @@ Do you know if I do%3F";
     }
 
 
-    // $('a').click(function() {  
-    //    //change the after-hash-sign-params to the value of the clicked link**
-    //    $.address.value($(this).attr('href'));
-
-    //    });
-
-    $.address.externalChange(function(event) {
+  $.address.externalChange(function(event) {
 
         console.log('external URL change')
         console.log(event.value)
@@ -1163,12 +1150,17 @@ Do you know if I do%3F";
             }
             _currentPath = newPath;
         } else if (event.value == '/education') {
-            console.log('education');
-            
+            console.log('education');            
             hideIntro();
             addCharts();
             toggleColumn();
             _currentPath = newPath;
+        } else if (event.value == '/education/lifestyle') {
+            console.log('education/lifestyle');            
+            hideIntro();
+            addCharts();
+            toggleColumn();
+            _currentPath = newPath;            
         } else if (event.value == '/assessment') {
             console.log('assessment');
             _currentPath = newPath;
@@ -1187,6 +1179,7 @@ Do you know if I do%3F";
     $(document).ready(function() {
         _totalQuestions = $('.question').length;
         _totalHeadlines = $('.headline').length;
+        console.log(_totalHeadlines)
         headline_tops = [];
         _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
         fillDot();
@@ -1201,8 +1194,6 @@ Do you know if I do%3F";
         _registerEventListeners();
         _pageResize();
         initialized = true;
-
-
 
     });
 })(jQuery);

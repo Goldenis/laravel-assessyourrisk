@@ -1,3 +1,5 @@
+    var pdfContent = "test";
+
 (function($, undefined) {
     var _$window;
     var _$document;
@@ -705,7 +707,9 @@
 
             if (ansTxt == '1|-2') {
                 console.log('high')
-                $('.risk-level').html('High')
+                $('.risk-level').html('High');
+                $('.results-copy-average').removeClass('on');   
+                $('.results-copy-high').addClass('on');                   
             }
 
         }
@@ -718,7 +722,10 @@
         }
 
         if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
-            $('.risk-level').html('Moderate')
+            $('.risk-level').html('Moderate');
+            $('.results-copy-average').removeClass('on');   
+            $('.results-copy-moderate').addClass('on');  
+
         }
 
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
@@ -736,12 +743,6 @@
         console.log('Object savedQuizProgress = ', savedQuizProgress)
     }
 
-    /**
-     * Here are examples of grabbing answers to specific questions
-     * Look at the savedQuizProgress dictionary (that is logged) to see
-     * how answers are saved
-     * Here are examples of the 3 types
-     */
     function addCustomResults() {
 
         // var bmiHigh = savedQuizProgress[2] == '-1';
@@ -753,11 +754,13 @@
             $('.item.bmi-low').css({
                 display: 'block'
             })
+            pdfContent = "bmi-low";
         }    
         else 
             $('.item.bmi-high').css({
                 display: 'block'
-             })            
+             }) 
+            pdfContent = "bmi-high";           
 
 
 //drinks card

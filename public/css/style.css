@@ -463,6 +463,18 @@ button.sub:hover {
   float: left;
   display: none;
 }
+.progress-overlay .results .progress-result {
+  padding-bottom: 1rem;
+}
+.progress-overlay .results .progress-result .percentage.percquiz {
+  position: absolute;
+  top: 2.4rem;
+  text-align: center;
+  width: 100%;
+}
+.progress-overlay .results .progress-result .chart .chart-4 {
+  margin: auto;
+}
 .progress-overlay .results .risk-level {
   color: #d7006d;
   margin-top: 3rem;
@@ -475,12 +487,17 @@ button.sub:hover {
   margin: 50px 0;
 }
 .progress-overlay .results .your-risk p {
+  font-size: 1.4rem;
+  display: none;
   width: 70%;
   left: 15%;
   margin-bottom: 1rem;
 }
 .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
   color: #d7006d;
+}
+.progress-overlay .results .your-risk p.on {
+  display: block;
 }
 .progress-overlay .results .sub {
   background: transparent;

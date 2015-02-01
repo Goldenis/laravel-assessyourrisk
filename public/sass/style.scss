@@ -500,6 +500,18 @@ button {
         padding: 1rem 6rem;
         float: left;
         display: none;
+        .progress-result{
+            padding-bottom: 1rem;
+            .percentage.percquiz{ 
+                position: absolute;
+                top: 2.4rem;
+                text-align: center;
+                width: 100%;
+            }
+            .chart .chart-4{
+                margin: auto !important;
+            }
+        }   
         .risk-level {
             color: $pink;
             margin-top: 3rem;
@@ -513,11 +525,16 @@ button {
                 margin: 50px 0;
             }
             p {
+                font-size: 1.4rem;
+                display: none;
                 width: 70%;
                 left: 15%;
                 margin-bottom: 1rem;
                 a, a:visited {
                     color: $pink;
+                }
+                &.on{
+                    display: block;
                 }
             }
         }

@@ -427,9 +427,6 @@
             var dot = '<div class="dot"></div>';
             $('.education .dots').append(dot);
         };
-        $('.education .dot').on('click', function() {
-            changeHeadline($('.education .dot').index($(this)))
-        });
         $('.percdive').html(0 + '/' + _totalHeadlines);
         $('.percquiz').html(0 + '/' + _totalQuestions);
         $('.education .dots h6').eq(1).css({

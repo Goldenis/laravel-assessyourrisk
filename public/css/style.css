@@ -473,7 +473,7 @@ button.sub:hover {
   width: 100%;
 }
 .progress-overlay .results .progress-result .chart .chart-4 {
-  margin: auto;
+  margin: auto !important;
 }
 .progress-overlay .results .risk-level {
   color: #d7006d;
@@ -1928,7 +1928,7 @@ footer {
     width: 400px;
     height: 400px;
     left: 0;
-    top: 200px;
+    top: 140px;
   }
   .intro .intro-message {
     position: absolute;

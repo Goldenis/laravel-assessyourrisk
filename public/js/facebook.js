@@ -132,7 +132,7 @@ $(function() {
           //url : '/pledge/'+ type + '/count/',
           url : '/pledge/totals/count/',
           dataType: 'json'
-        }).done(function(data) {improve their lifestyles.
+        }).done(function(data) {
 
         for (i=0; i<modules.length; i++) {
           console.log('pledges ' +data[modules[i]])

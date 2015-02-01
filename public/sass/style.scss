@@ -508,7 +508,7 @@ button {
                 text-align: center;
                 width: 100%;
             }
-            .chart .chart-4{
+            .chart-4{
                 margin: auto !important;
             }
         }   
@@ -1736,6 +1736,8 @@ footer {
                 width: 100%;
                 margin: 0%;
                 padding: 2rem;
+                margin-bottom: 2rem;
+                margin-top: 6rem;               
                 &:nth-of-type {
                     margin-top: 6rem;
                 }

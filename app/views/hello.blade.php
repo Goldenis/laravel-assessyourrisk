@@ -350,7 +350,7 @@
 
         <div class="question" data-question-id="2">
             <div class="anim-gif">
-               <img src="img/calendar.gif">
+               <img src="img/Calendar.gif">
             </div>
           <div class="prompt">How old are you?</div>
         
@@ -488,7 +488,7 @@
 
         <div class="question" data-question-id="5">
             <div class="anim-gif stopwatch">
-               <img src="img/stopwatch.gif">
+               <img src="img/Stopwatch.gif">
             </div>        
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
         
@@ -562,7 +562,7 @@
 
         <div class="question" data-question-id="10">
             <div class="anim-gif birth">
-               <img src="img/birthcontrol.gif">
+               <img src="img/Birthcontrol.gif">
             </div>        
           <div class="prompt">Have you taken birth control pills for five or more years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
         
@@ -712,7 +712,7 @@
 
 <!-- GUESSED on the vitamin-d data src? 
 Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
-        <div class="vignette" data-src="vitamin-d">
+        <div class="vignette" data-src="running">
           <div class="headlines">
             <div class="headline">
               <h3>Spend Some Time in the Sun</h3>
@@ -721,7 +721,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="">
+        <div class="vignette" data-src="fat">
           <div class="headlines">
             <div class="headline">
               <h3>Eat Well</h3>
@@ -729,7 +729,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        <div class="vignette last" data-src="">
+        <div class="vignette last" data-src="running">
           <div class="headlines">
             <div class="headline last">
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>

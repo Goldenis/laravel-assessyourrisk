@@ -724,7 +724,7 @@
             if (ansTxt == '1|-2') {
                 console.log('high')
                 $('.risk-level').html('High');
-                $('.results-copy-average').removeClass('on');   
+                $('.results-copy-average, .results-copy-moderate').removeClass('on');  
                 $('.results-copy-high').addClass('on');                   
             }
 

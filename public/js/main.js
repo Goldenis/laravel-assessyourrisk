@@ -154,8 +154,10 @@
         // _currentFrame += 15;
 
         var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
+        console.log(numHeadlines)
         var nextHeadline = _currentHeadline.index() + 1;
         if (initialized && nextHeadline < numHeadlines) {
+            console.log(nextHeadline, numHeadlines)
             // _currentHeadline.removeClass('active');
             // _currentHeadline.addClass('out');
             _oldHeadline = _currentHeadline;
@@ -184,7 +186,13 @@
         if (newClosest !== closest) {
             closest = newClosest;
             $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
-            changeHeadline(closest + (_currentModule * 12));
+            var offset = 0;
+            if(_currentModule == 1){
+                offset = $('.module').eq(0).find($('.headline')).length
+            }else if(_currentModule == 2){
+                offset = $('.module').eq(0).find($('.headline')).length + $('.module').eq(1).find($('.headline')).length
+            }
+            changeHeadline(closest + offset);
         }
     }
 
@@ -475,6 +483,7 @@
         _oldModule = _currentModule;
         _currentHeadline = $('.headline').eq(idx);
         var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
+        console.log('current',_currentVignette,' new',_newVignette)
         if (_currentVignette != _newVignette) {
             _currentVignette = _newVignette;
             changeVideo();

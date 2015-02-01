@@ -604,7 +604,7 @@
             <div class="headline">
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
-              <button class="btn-begin">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN</button>
             </div>
           </div>
         </div>
@@ -679,18 +679,16 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        
+        <div class="vignette" data-src="">
           <div class="headlines">
-            <div class="headline">
+            <div class="headline last">
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
             	<button class="facebook lifestyle">Join Them</button>
-            </div>
-            <div class="headline last">
-            	<h2>Module Complete.</h2>
-                <button class="btn-continue sub">KNOW YOUR NORMAL MODULE →</button>
+              <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
             </div>
           </div>
         </div>
+      </div>
 
 <!-- KNOW YOUR NORMAL -->
 
@@ -700,7 +698,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">
               <h3>Know What’s Normal For You</h3>
               <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
-              <button class="btn-begin">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN</button>
             </div>
           </div>
         </div>
@@ -831,17 +829,13 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-
+        <div class="vignette" data-src="breastAwareness">
           <div class="headlines">
-            <div class="headline">
+            <div class="headline last">
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
             	<button class="facebook lifestyle">Join Them</button>
+              <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
             </div>
-
-            <div class="headline last">
-            	<h2>Module Complete.</h2>
-              <button class="btn-continue sub">FAMILY HISTORY MODULE →</button>
-            </div>  
           </div>
         </div>
       </div>
@@ -854,7 +848,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">
               <h3>If you have breast and ovaries, you are at risk.</h3>  
               <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
-              <button class="btn-begin">BEGIN MODULE</button>
+              <button class="btn-begin">BEGIN</button>
             </div>
           </div>
         </div>

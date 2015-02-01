@@ -1817,6 +1817,9 @@ footer {
             left: auto;
             z-index: 3;
             text-align: center;
+            h6{
+                display: none;
+            }
             .dot {
                 &.active {
                     width: 4px;
@@ -1891,13 +1894,6 @@ footer {
             left: 0;
         }
     }
-    .arrow {
-        @include transition(.3s, ease-out);
-        position: absolute;
-        left: auto;
-        right: 10px;
-        margin-top: .7rem;
-    }
     .right-column {
         position: fixed;
         right: auto;
@@ -1912,6 +1908,17 @@ footer {
             position: absolute;
             top: 0;
             height: 70px;
+            .arrow {
+                @include transition(.3s, ease-out);
+                position: absolute;
+                left: auto;
+                right: 15px;
+                margin-top: .7rem;
+                top: 14px;
+                img{
+                    width: 40px;
+                }
+            }
             .understand, .assess, .assess-start, .lets-go {
                 padding: .7rem 2rem;
                 height: 70px;
@@ -1932,6 +1939,24 @@ footer {
                 padding-top: .4rem;
                 left: 0;
                 z-index: 3;
+            }
+            .understand{
+                &:hover{
+                    .arrow{
+                        left: auto;
+                    }
+                }
+            }
+            .assess{
+                .arrow{
+                    left: 20px;
+                    right: auto;
+                }
+                &:hover{
+                    .arrow{
+                        left: 20px;
+                    }
+                }
             }
         }
         .fact-group {

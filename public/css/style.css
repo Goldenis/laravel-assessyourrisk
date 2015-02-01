@@ -1971,6 +1971,9 @@ footer {
     z-index: 3;
     text-align: center;
   }
+  .education .dots h6 {
+    display: none;
+  }
   .education .dots .dot.active {
     width: 4px;
     height: 4px;
@@ -2039,20 +2042,6 @@ footer {
   .education.in {
     left: 0;
   }
-  .arrow {
-    -webkit-transition: all 0.3s 0 ease-out;
-    -moz-transition: all 0.3s 0 ease-out;
-    -o-transition: all 0.3s 0 ease-out;
-    -ms-transition: all 0.3s 0 ease-out;
-    transition: all 0.3s 0 ease-out;
-    -moz-transition-duration: 0.3s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-    position: absolute;
-    left: auto;
-    right: 10px;
-    margin-top: 0.7rem;
-  }
   .right-column {
     position: fixed;
     right: auto;
@@ -2068,6 +2057,24 @@ footer {
     position: absolute;
     top: 0;
     height: 70px;
+  }
+  .right-column .toggle-box .arrow {
+    -webkit-transition: all 0.3s 0 ease-out;
+    -moz-transition: all 0.3s 0 ease-out;
+    -o-transition: all 0.3s 0 ease-out;
+    -ms-transition: all 0.3s 0 ease-out;
+    transition: all 0.3s 0 ease-out;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+    position: absolute;
+    left: auto;
+    right: 15px;
+    margin-top: 0.7rem;
+    top: 14px;
+  }
+  .right-column .toggle-box .arrow img {
+    width: 40px;
   }
   .right-column .toggle-box .understand, .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7rem 2rem;
@@ -2089,6 +2096,16 @@ footer {
     padding-top: 0.4rem;
     left: 0;
     z-index: 3;
+  }
+  .right-column .toggle-box .understand:hover .arrow {
+    left: auto;
+  }
+  .right-column .toggle-box .assess .arrow {
+    left: 20px;
+    right: auto;
+  }
+  .right-column .toggle-box .assess:hover .arrow {
+    left: 20px;
   }
   .right-column .fact-group {
     display: none;

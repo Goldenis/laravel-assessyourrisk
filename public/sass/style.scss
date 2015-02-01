@@ -880,7 +880,7 @@ input[type="checkbox"], input[type="radio"] {
         width: 400px;
         height: 400px;
         left: 40%;
-        top: 40%;
+        top: 24%;
         position: absolute;
         overflow: hidden;
         cursor: pointer;
@@ -1321,6 +1321,9 @@ input[type="checkbox"], input[type="radio"] {
         &.in {
             @include transition(1s, ease-out, all, .5s);
         }
+        &.last{
+            height: calc(100% - 150px);
+        }
     }
     .headlines {
         color: #fff;
@@ -1363,7 +1366,7 @@ input[type="checkbox"], input[type="radio"] {
                 opacity: 0;
             }
             &.last {
-                margin-bottom: 40%;
+                margin-bottom: 0;
             }
         }
         ul, p {
@@ -1625,6 +1628,15 @@ footer {
     border: 1px solid $darkColor;
     display: none;
 }
+@media only(max-width: 1024px) {
+    .intro {
+        .wheel-container {
+            width: 400px;
+            height: 400px;
+            left: 20%;
+        }
+    }
+}
 @media only(max-width: 768px) {
     .logo {
         img {
@@ -1773,14 +1785,14 @@ footer {
         .wheel-container {
             width: 400px;
             height: 400px;
-            left: 0;
-            top: 140px;
+            left: calc(100% - 320px);
+            top: 145px;
         }
         .intro-message {
             position: absolute;
             @include transform(translate(0, 0));
             right: 0;
-            top: 100px;
+            top: 70px;
             width: 100%;
             padding: 0 3rem;
         }
@@ -2051,6 +2063,9 @@ footer {
             button {
                 left: -20%;
             }
+        }
+        &.in{
+            overflow-y: auto;
         }
     }
     .btn-calculate {

@@ -847,7 +847,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 400px;
   height: 400px;
   left: 40%;
-  top: 40%;
+  top: 24%;
   position: absolute;
   overflow: hidden;
   cursor: pointer;
@@ -1377,6 +1377,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0.5s;
 }
+.education .vignette.last {
+  height: calc(100% - 150px);
+}
 .education .headlines {
   color: #fff;
   width: 55%;
@@ -1427,7 +1430,7 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0;
 }
 .education .headlines .headline.last {
-  margin-bottom: 40%;
+  margin-bottom: 0;
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
@@ -1795,6 +1798,13 @@ footer {
   border: 1px solid #555558;
   display: none;
 }
+@media (max-width: 1024px) {
+  .intro .wheel-container {
+    width: 400px;
+    height: 400px;
+    left: 20%;
+  }
+}
 @media (max-width: 768px) {
   .logo img {
     min-width: 100px;
@@ -1927,8 +1937,8 @@ footer {
   .intro .wheel-container {
     width: 400px;
     height: 400px;
-    left: 0;
-    top: 140px;
+    left: calc(100% - 320px);
+    top: 145px;
   }
   .intro .intro-message {
     position: absolute;
@@ -1937,7 +1947,7 @@ footer {
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     right: 0;
-    top: 100px;
+    top: 70px;
     width: 100%;
     padding: 0 3rem;
   }
@@ -2204,6 +2214,9 @@ footer {
   }
   .question.drinks-question button {
     left: -20%;
+  }
+  .question.in {
+    overflow-y: auto;
   }
   .btn-calculate {
     left: 64px;

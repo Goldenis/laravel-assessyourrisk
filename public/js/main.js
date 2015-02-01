@@ -96,9 +96,19 @@
         sizeBGMedia();
         setFontScale($('html'), 11, 16, 'px');
         setHeadlineTops();
-        $('.wheel-container').css({
-            'transform': 'scale(' + (_winW * _winH) / 1048438 + ') translate(-50%,-50%)'
-        });
+        if(_smallScreen){
+            $('.wheel-container').css({
+                left: Math.max(-27,((_winW - 320) + ((320-_winW)/2)-27))
+            });
+        }else if(_winW < 1024){
+            $('.wheel-container').css({
+                left: _winW/10
+            });
+        }else{
+            $('.wheel-container').css({
+                left: '25%'
+            });
+        }
     }
 
     function sizeBGMedia() {
@@ -417,9 +427,6 @@
             var dot = '<div class="dot"></div>';
             $('.education .dots').append(dot);
         };
-        $('.education .dot').on('click', function() {
-            changeHeadline($('.education .dot').index($(this)))
-        });
         $('.percdive').html(0 + '/' + _totalHeadlines);
         $('.percquiz').html(0 + '/' + _totalQuestions);
         $('.education .dots h6').eq(1).css({

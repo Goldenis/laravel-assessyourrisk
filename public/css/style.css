@@ -473,7 +473,7 @@ button.sub:hover {
   width: 100%;
 }
 .progress-overlay .results .progress-result .chart .chart-4 {
-  margin: auto;
+  margin: auto !important;
 }
 .progress-overlay .results .risk-level {
   color: #d7006d;
@@ -1377,6 +1377,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0.5s;
 }
+.education .vignette.last {
+  height: calc(100% - 150px);
+}
 .education .headlines {
   color: #fff;
   width: 55%;
@@ -1427,7 +1430,7 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0;
 }
 .education .headlines .headline.last {
-  margin-bottom: 40%;
+  margin-bottom: 0;
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
@@ -2204,6 +2207,9 @@ footer {
   }
   .question.drinks-question button {
     left: -20%;
+  }
+  .question.in {
+    overflow-y: auto;
   }
   .btn-calculate {
     left: 64px;

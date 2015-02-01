@@ -1321,6 +1321,9 @@ input[type="checkbox"], input[type="radio"] {
         &.in {
             @include transition(1s, ease-out, all, .5s);
         }
+        &.last{
+            height: calc(100% - 150px);
+        }
     }
     .headlines {
         color: #fff;
@@ -1363,7 +1366,7 @@ input[type="checkbox"], input[type="radio"] {
                 opacity: 0;
             }
             &.last {
-                margin-bottom: 40%;
+                margin-bottom: 0;
             }
         }
         ul, p {
@@ -2051,6 +2054,9 @@ footer {
             button {
                 left: -20%;
             }
+        }
+        &.in{
+            overflow-y: auto;
         }
     }
     .btn-calculate {

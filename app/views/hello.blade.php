@@ -729,7 +729,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="">
+        <div class="vignette last" data-src="">
           <div class="headlines">
             <div class="headline last">
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
@@ -879,7 +879,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="breastAwareness">
+        <div class="vignette last" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline last">
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>

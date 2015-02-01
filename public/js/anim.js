@@ -16,8 +16,11 @@
 
     tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
     var wheelScale = 1.2;
-    if($(window).width() < 568){
-      wheelScale = .35;
+    if($(window).width() < 1024){
+      wheelScale = 1;
+    }
+    if($(window).width() < 768){
+      wheelScale = .65;
     }
     tl.to(wheel, 2, {scale:wheelScale, ease:Expo.easeOut})
     tl.to(logo, .5, {opacity:1}, "+=0");

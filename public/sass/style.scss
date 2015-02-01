@@ -880,7 +880,7 @@ input[type="checkbox"], input[type="radio"] {
         width: 400px;
         height: 400px;
         left: 40%;
-        top: 40%;
+        top: 24%;
         position: absolute;
         overflow: hidden;
         cursor: pointer;
@@ -1628,6 +1628,15 @@ footer {
     border: 1px solid $darkColor;
     display: none;
 }
+@media only(max-width: 1024px) {
+    .intro {
+        .wheel-container {
+            width: 400px;
+            height: 400px;
+            left: 20%;
+        }
+    }
+}
 @media only(max-width: 768px) {
     .logo {
         img {
@@ -1776,8 +1785,8 @@ footer {
         .wheel-container {
             width: 400px;
             height: 400px;
-            left: 0;
-            top: 140px;
+            left: calc(100% - 320px);
+            top: 145px;
         }
         .intro-message {
             position: absolute;

@@ -943,7 +943,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="mother">
+        <div class="vignette last" data-src="mother">
           <div class="headlines">
             <div class="headline">         
               <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>

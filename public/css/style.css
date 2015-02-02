@@ -472,7 +472,7 @@ button.sub:hover {
   text-align: center;
   width: 100%;
 }
-.progress-overlay .results .progress-result .chart .chart-4 {
+.progress-overlay .results .progress-result .chart-4 {
   margin: auto !important;
 }
 .progress-overlay .results .risk-level {
@@ -1895,6 +1895,8 @@ footer {
     width: 100%;
     margin: 0%;
     padding: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
   }
   .progress-overlay .cards .card:nth-of-type {
     margin-top: 6rem;

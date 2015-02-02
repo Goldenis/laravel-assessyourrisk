@@ -143,7 +143,7 @@ $(function() {
           }else if(i===2){
             pledgeMessage = "learn their family history."
           }
-          $('.' +modules[i]+ '-pledge-number').html(data[modules[i]]+ "women have pledged to"+ pledgeMessage);
+          $('.' +modules[i]+ '-pledge-number').html(data[modules[i]]+ " women have pledged to "+ pledgeMessage);
           }
 
         }).fail(function(error) {

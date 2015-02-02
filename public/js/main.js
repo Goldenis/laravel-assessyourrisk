@@ -1,4 +1,4 @@
-    var pdfContent = "test";
+    var resultLevel = 'average';
 
 (function($, undefined) {
     var _$window;
@@ -250,6 +250,12 @@
             addCharts();
             // $.address.path('/assessment');
         })
+
+        $('.testPDF, .pdf').on('click', function() {
+            createPinkPDF(resultLevel);
+        })
+
+
         $('.male-overlay .close-btn').on('click', function() {
             $('.vid-container').remove();
             overlayOpen = false;
@@ -724,6 +730,8 @@
             if (ansTxt == '1|-2') {
                 console.log('high')
                 $('.risk-level').html('High');
+//using result level for pdf work
+                resultLevel = 'high';
                 $('.results-copy-average, .results-copy-moderate').removeClass('on');  
                 $('.results-copy-high').addClass('on');                   
             }
@@ -739,6 +747,7 @@
 
         if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
             $('.risk-level').html('Moderate');
+            resultLevel = 'moderate';
             $('.results-copy-average').removeClass('on');   
             $('.results-copy-moderate').addClass('on');  
 
@@ -749,12 +758,9 @@
         $('.question-stats').html('');
 
         for (var key in savedQuizProgress) {
-            //alert('key: ' + key + '\n' + 'value: ' + savedQuizProgress[key]);
             $('.question-stats').append('question number ' + key + '  answer' + savedQuizProgress[key] + '<br>');
         }
 
-
-        //console.log($.inArray( "0", savedQuizProgress ));
         updateCharts();
         console.log('Object savedQuizProgress = ', savedQuizProgress)
     }

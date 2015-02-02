@@ -12,7 +12,7 @@
   </head>
   <body>
 
-      <a href="" onclick="createPinkPDF();">test pdf</a>
+<!--       <a href="" class="testPDF" >test pdf</a> -->
 
     <div class="border"></div>
     <div class="logo">
@@ -116,7 +116,7 @@
           </p>
            
 
-          <button class="sub email-pdf">EMAIL</button><button class="sub">PDF</button>
+          <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button>
 
         </div>
       </div>

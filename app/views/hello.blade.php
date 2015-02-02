@@ -348,7 +348,7 @@
           </div>
         </div>
 
-        <div class="question" data-question-id="2">
+        <div class="question gif" data-question-id="2">
             <div class="anim-gif">
                <img src="img/Calendar.gif">
             </div>
@@ -486,7 +486,7 @@
           </div>
         </div>        
 
-        <div class="question" data-question-id="5">
+        <div class="question gif" data-question-id="5">
             <div class="anim-gif stopwatch">
                <img src="img/Stopwatch.gif">
             </div>        
@@ -560,7 +560,7 @@
           </div>
         </div>
 
-        <div class="question" data-question-id="10">
+        <div class="question gif" data-question-id="10">
             <div class="anim-gif birth">
                <img src="img/Birthcontrol.gif">
             </div>        

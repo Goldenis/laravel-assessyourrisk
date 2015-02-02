@@ -1754,7 +1754,7 @@ input[type="checkbox"], input[type="radio"] {
   top: 40%;
 }
 #height-question {
-  height: 270px;
+  height: 290px;
   transform: perspective(1000px) translateY(-50%);
   top: 40%;
 }
@@ -1938,7 +1938,7 @@ footer {
     width: 400px;
     height: 400px;
     left: calc(100% - 320px);
-    top: 145px;
+    top: 25%;
   }
   .intro .intro-message {
     position: absolute;
@@ -2203,11 +2203,8 @@ footer {
   .question .prompt {
     width: 100%;
     left: 0;
-    font-size: 1.4rem;
+    font-size: 2rem;
     line-height: 2rem;
-  }
-  .question.weight-question {
-    overflow: visible;
   }
   .question.drinks-question {
     overflow: visible;
@@ -2217,6 +2214,17 @@ footer {
   }
   .question.in {
     overflow-y: auto;
+  }
+  .question.weight-question {
+    overflow-y: visible;
+    overflow: visible;
+  }
+  .question.gif, .question.weight {
+    overflow-y: visible;
+    overflow: visible;
+  }
+  .question.gif .anim-gif, .question.weight .anim-gif {
+    top: -110px;
   }
   .btn-calculate {
     left: 64px;

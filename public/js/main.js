@@ -84,7 +84,7 @@
     function _pageResize() {
         _winH = _$window.height();
         _winW = _$window.width();
-        if (_winW < 768) {
+        if (_winW <= 768) {
             _smallScreen = true;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')

@@ -562,7 +562,7 @@
 
         <div class="question gif" data-question-id="10">
             <div class="anim-gif birth">
-               <img src="img/Birthcontrol.gif">
+               <img src="img/BirthControl.gif">
             </div>        
           <div class="prompt">Have you taken birth control pills for five or more years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
         

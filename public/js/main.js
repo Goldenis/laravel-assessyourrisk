@@ -371,7 +371,12 @@
             })
         })
         _$window.on('mouseup', function() {
+            console.log('Strange how this comment fixes this function, eh?');
             _$window.unbind('mousemove');
+            _$window.unbind('touchstart');
+            _$window.unbind('touchmove');
+            _$window.unbind('touchend');
+
         })
         $('.bottle').on('touchstart', function(e) {
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];

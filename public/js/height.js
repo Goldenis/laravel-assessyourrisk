@@ -106,8 +106,8 @@ var height = $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				// $(window).unbind(touchMove);
-				// $(window).unbind(touchEnd);
+				$(window).unbind(touchMove);
+				$(window).unbind(touchEnd);
 			}
 			
 			function slideH(obj, degree, time) {

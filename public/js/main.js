@@ -363,20 +363,17 @@
             var distance = 0;
             var l;
 
-            _$window.bind('mousemove', function(e) {
+            _$window.on('mousemove', function(e) {
                 var newX = e.pageX;
                 dragBottle(x, newX)
                 x = e.pageX;
                 distance = 0;
-            })
-        })
+            });
+        });
         _$window.on('mouseup', function() {
-            _$window.unbind('mousemove');
-            _$window.unbind('touchstart');
-            _$window.unbind('touchmove');
-            _$window.unbind('touchend');
-
-        })
+            _$window.off('mousemove');
+            _$window.off('touchmove');
+        });
         $('.bottle').on('touchstart', function(e) {
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             e.preventDefault();
@@ -384,7 +381,7 @@
             var distance = 0;
             var l;
 
-            _$window.bind('touchmove', function(e) {
+            _$window.on('touchmove', function(e) {
                 var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
                 var newX = touch.pageX;
                 dragBottle(x, newX)
@@ -393,12 +390,10 @@
             })
         })
         _$window.on('touchend', function() {
-            _$window.unbind('touchmove');
-            _$window.unbind('mousemove');
-            _$window.unbind('touchstart');
-            _$window.unbind('touchend');
+            _$window.off('touchmove');
+            _$window.off('mousemove');
         })
-        _$window.bind('resize', _pageResize);
+        _$window.on('resize', _pageResize);
     }
 
     function dragBottle(x, newX) {

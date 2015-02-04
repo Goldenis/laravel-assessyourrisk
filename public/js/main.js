@@ -371,7 +371,6 @@
             })
         })
         _$window.on('mouseup', function() {
-            console.log('Strange how this comment fixes this function, eh?');
             _$window.unbind('mousemove');
             _$window.unbind('touchstart');
             _$window.unbind('touchmove');
@@ -395,6 +394,9 @@
         })
         _$window.on('touchend', function() {
             _$window.unbind('touchmove');
+            _$window.unbind('mousemove');
+            _$window.unbind('touchstart');
+            _$window.unbind('touchend');
         })
         _$window.bind('resize', _pageResize);
     }

@@ -21,7 +21,7 @@
     </div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <a href="#" class="share-btn">share</a> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <span class="share-btn">share<a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -48,7 +48,7 @@
         <div class="sections">
           <h3>Lifestyle</h3><br>
           <h3>Your Normal</h3><br>
-          <h3>Family History</h3>
+          <h3>Family & Health History</h3>
         </div>  
       </div>
       <div class="results">
@@ -625,7 +625,7 @@
       <div class="nav">
         <div class="nav-item">Lifestyle</div>
         <div class="nav-item">Your Normal</div>
-        <div class="nav-item">Family History</div>
+        <div class="nav-item">Family & Health History</div>
       </div>
       <div class="education-menu">
         <div class="module-hero">
@@ -644,7 +644,6 @@
           <div class="effect">Affects Your Risk</div>
         </div>
       </div>
-      <div class="section-title">Understand Your Risk</div>
 
 <!-- LIFESTYLE -->
 
@@ -652,6 +651,7 @@
         <div class="vignette main" data-src="running">
           <div class="headlines">
             <div class="headline">
+              <div class="section-title">Understand Your Risk</div>
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
               <button class="btn-begin">BEGIN</button>
@@ -745,6 +745,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
       <div class="module normal">
         <div class="vignette main" data-src="breastAwareness">
           <div class="headlines">
+            <div class="section-title">Understand Your Risk</div>
             <div class="headline">
               <h3>Know What’s Normal For You</h3>
               <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
@@ -896,6 +897,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette main" data-src="family">
           <div class="headlines">
             <div class="headline">
+              <div class="section-title">Understand Your Risk</div>
               <h3>If you have breast and ovaries, you are at risk.</h3>  
               <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
               <button class="btn-begin">BEGIN</button>

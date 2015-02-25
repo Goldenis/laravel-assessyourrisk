@@ -82,6 +82,7 @@
 
 
     function _pageResize() {
+        $('.module').scrollTop(0);
         _winH = _$window.height();
         _winW = _$window.width();
         if (_winW <= 768) {
@@ -196,6 +197,7 @@
             }
         }
         if (newClosest !== closest) {
+            $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
             closest = newClosest;
             $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
             var offset = 0;
@@ -271,13 +273,10 @@
             })
         })
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.location.href = 'mailto:?subject=Here are the results of your risk assessment';
+            window.open('mailto:?subject=Here are the results of your risk assessment','');
         })
         $('.progress-overlay .share-btn').on('click', function() {
-            window.location.href = 'mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment';
-        })
-        $('.male-overlay .share-btn').on('click', function() {
-            window.location.href = 'mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment';
+            window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
@@ -846,9 +845,10 @@
 
     function askHandler(e) {
         e.stopPropagation();
+        alert($(this).closest(".question").attr("data-question-id"))
         switch ($(this).closest(".question").attr("data-question-id")) {
             case "14":
-                window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
@@ -867,10 +867,10 @@ Have any of your immediate family members (parent, sibling, grandparent or aunt/
 - Two or more close relatives with breast cancer at any age \
 %0D%0A\
 %0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F";
+Do you know if anybody in the family has been diagnosed with any of these%3F");
                 break;
             case "17":
-                window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
@@ -889,17 +889,17 @@ Within one side of the family (both on mom’s side or both on dad’s side), is
 - Brain Cancer \
 %0D%0A\
 %0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F";
+Do you know if anybody in the family has been diagnosed with any of these%3F")
                 break;
             case "20":
-                window.location.href = "mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
 Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \
 %0D%0A\
 %0D%0A\
-Do you know if I do%3F";
+Do you know if I do%3F");
                 break;
         }
     }

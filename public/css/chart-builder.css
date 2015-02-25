@@ -15,6 +15,7 @@
 }
 b {
   font-family: 'avg_bold';
+  font-weight: normal !important;
 }
 html {
   width: 100%;

@@ -16,6 +16,7 @@
 }
 b {
   font-family: 'avg_bold';
+  font-weight: normal !important;
 }
 body {
   background-color: #fff;

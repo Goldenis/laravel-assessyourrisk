@@ -332,11 +332,11 @@
             </div>
 
             <div class="fact">
-              <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+              <h5><b>There is a clear link between obesity and breast cancer — extra fatty tissue produces extra estrogen, which in turn increases breast cancer risk.</b></h5>
             </div>
 
             <div class="fact">
-              <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+              <h5><b>Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</b></h5>
             </div>
 
             <div class="fact">
@@ -429,25 +429,37 @@
                <img src="img/Calendar.gif">
             </div>
           <div class="prompt">How old are you?</div>
-        
+   
           <div class="answers">
-            <button data-answer-id="1">Under 20</button>
-            <button data-answer-id="1">20-30</button>
-            <button data-answer-id="0">31-35</button>
-            <button data-answer-id="0">36-40</button>
-            <button data-answer-id="0">40+</button>
+            <div class="checkbox-list">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">Under 20</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="age-radio" data-answer-id="2"><div class="label">20-30</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="age-radio" data-answer-id="3"><div class="label">31-35</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="age-radio" data-answer-id="4"><div class="label">36-40</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="age-radio" data-answer-id="5"><div class="label">40+</div></div>
+            </div>
+              <br>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
           </div>
         </div>
 
         <div class="question" data-question-id="13">
           <div class="prompt">Have you ever been diagnosed with either of the following?</div>
-        
+
           <div class="answers">
-            <button data-answer-id="-1">Breast cancer</button>
-            <button data-answer-id="-1">Ovarian cancer</button>
-            <button data-answer-id="0">Neither</button>
-            <button data-answer-id="-1">Both</button>
-          </div>
+            <div class="checkbox-list">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Breast cancer</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>
+            </div>
+              <br>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
+          </div>        
         </div>
         
         <div class="question weight-question" data-question-id="3">
@@ -538,7 +550,7 @@
               <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>
-              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="0"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">I don’t know</div></div>
             </div>
               <br>
               <div class="answers">

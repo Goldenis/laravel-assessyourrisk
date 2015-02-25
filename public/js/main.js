@@ -291,7 +291,7 @@
             calculateWeight($(this));
         })
         $('.question .answers button').on('click', function(e) {
-            if (!$(this).hasClass('sub')) {
+            if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
             }
         })
@@ -666,6 +666,8 @@
 
     function handleSaveQuizAnswer(answer) {
                
+
+         console.log(answer)      
         /*
           BMI
           Weight Status
@@ -684,6 +686,15 @@
         //if ($.contains(_currentQuestion, $('.bmi-result'))) {
             var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
 
+            console.log(ansTxt)
+
+
+        var ageCheck = $('input[name="age-radio"]:checked').attr("data-answer-id");
+        if (_currentQuestion == 1) ansTxt = ageCheck;
+
+
+        var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked').attr("data-answer-id");
+        if (_currentQuestion == 2) ansTxt = cancerHistoryCheck;
 
             if (_currentQuestion == 4) {
             console.log(bmi)    
@@ -745,6 +756,7 @@
             });
             ansTxt = data;
         }
+
 
         if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
             $('.risk-level').html('Increased');

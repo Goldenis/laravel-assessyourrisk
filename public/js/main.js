@@ -748,7 +748,7 @@
         }
 
         if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
-            $('.risk-level').html('Moderate');
+            $('.risk-level').html('Increased');
             resultLevel = 'moderate';
             $('.results-copy-average').removeClass('on');   
             $('.results-copy-moderate').addClass('on');  

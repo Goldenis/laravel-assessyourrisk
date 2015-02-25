@@ -54,78 +54,148 @@
       <div class="results">
         <div class="your-risk">
 
-          <div class="progress-result">
+      <!-- Chart - Removed -->
+
+<!--           <div class="progress-result">
             <div class="percentage percquiz"></div>
             <div class="chart chart-4"></div>
+          </div> -->
+
+<!-- Assessment can get moved? -->
+
+          <!-- <div class='section-title'>Assessment</div> -->
+
+          <!-- Insert the TRIGGERED Text Div -->
+
+        
+        <h2>Your Baseline Risk is <span class="risk-level">Average</span></h2>
+        
+          <div class="paragraph-box">
+
+        <!-- Average -->            
+            <p class="results-copy-average on">
+            <!-- paragraph-one (left) -->
+              <span class="paragraph-header paragraph-one">Understanding Your Baseline Risk</span>
+              Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population.  
+              This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.
+              <span class="more-results">75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.
+              <br><br>
+            <!-- paragraph-two (right) -->
+              <span class="paragraph-header paragraph-two">What To Do Now</span>
+              First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  
+              Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  
+              The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. 
+              You can learn more about lifestyle risk-reduction strategies on our website.
+              <br><br>
+              In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
+              <br><br>
+              </span>
+              <a href="#" class="read-more"> ...Read More</a>
+            </p>
+
+        <!-- Increased (Moderate) -->
+            <div class="results-copy-moderate">
+              <div class="paragraph-one">
+                <!-- Added warning header -->
+                <span class="warning-header">There is potential that you may be high risk. Read on.</span>
+              <!-- paragraph-one (left) -->
+                <span class="paragraph-header">Understanding Your Baseline Risk</span>
+                Your answers suggest that you are at <a href=""><span>increased</span> baseline risk</a> for breast and ovarian cancer, either because of a <a href="">family history</a> of one of these cancers, some significant event in your personal health history, or because you or a family member has been diagnosed with a specific type of gene mutation associated with breast or ovarian cancer.
+                <span class="more-results"> 
+                <br>
+                Being at increased risk means that you have up to a 25% chance of developing breast cancer and up to a 5.5% chance of ovarian cancer at some point in your lifetime.  
+                These percentages mean that your risk for both cancers is more than twice that of women in the general population, which is significant.  
+                It’s a great thing that you’ve identified this risk and are here learning more about the <a href="">risk-reduction</a> and <a href="">early detection</a> options that are available to you.  
+                Living a proactive lifestyle is one of the most important things you can do.
+                <br><br>
+                If you’ve not yet had genetic testing, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
+                He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result.  
+                If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources on our website here.  
+                And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our <a href="">Ask a Genetic Counselor</a> page.<br>
+                <br><br>
+              </div>
+            <!-- paragraph-two (right) -->
+              <div class="paragraph-two">
+                <span class="paragraph-header">What To Do Now</span>
+                It can be daunting to face the idea of having a higher-than-average risk of breast and ovarian cancer.  
+                The good news is that knowledge is power and there are things you can do to take control and reduce your risk! 
+                <br><br>
+                First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  
+                Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  
+                The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping.  
+                You can learn more about lifestyle risk-reduction strategies on our website.
+                <br><br>
+                Your doctor may also recommend increased risk-reduction and early detection strategies appropriate for women at increased risk, including starting mammograms at a younger age than recommended for women of average risk, or exploring the possibility of pharmaceutical risk-reduction options.
+                <br><br>
+                If you feel like you might benefit from getting support from other women in a similar situation, Bright Pink offers both 1:1 and group support programs for women at increased and high risk that you may find helpful.
+                <br><br>
+                We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.
+                <br><br>
+                </span>
+                <a href="#" class="read-more"> ...Read More</a>
+              </div>
+            </div>
+
+          <!-- High -->
+            <p class="results-copy-high">
+            <!-- paragraph-one (left) -->
+              <span class="paragraph-header paragraph-one">Understanding Your Baseline Risk</span><br><br>
+              Your answers suggest that you are at a high baseline risk for breast and ovarian cancer, due either to a diagnosed gene mutation associated with one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations.<a href="#" class="read-more"> ...Read More</a>
+              <span class="more-results">Being at <a href="">high-risk</a> means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  
+                This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you.  
+                Living a proactive lifestyle is one of the most important things you can do!<br><br>
+            <!-- paragraph-two (right) -->
+              <span class="paragraph-header paragraph-two">What To Do Now</span><br><br>
+              It can be scary to face the idea of those lifetime risk numbers.  
+              The good news is that knowledge is power and there are things you can do to take control and reduce your risk! 
+              <br><br>
+              First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  
+              Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  
+              The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping.  
+              You can learn more about <a href="">lifestyle risk-reduction</a> strategies on our website.
+              <br><br>
+              If you’ve not yet had genetic testing, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
+              He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result.  
+              It’s important to note that until you’ve had genetic testing done, you don’t know for sure that you’re high risk.  
+              If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources here.  
+              And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our <a href="">Ask a Genetic Counselor</a> page.
+              <br><br>
+              If you have a diagnosed gene mutation, but are choosing not to have risk-reducing surgery, or if you haven’t yet had risk-reducing surgeries but plan to later, we encourage you to be in close contact with your OB/GYN or another physician you trust about what kind of increased screening protocol he or she recommends for you. You can learn more about the increased screening typically recommended for high-risk women <a href="">here</a>. And if you want more information about what those risk-reducing surgeries are, you can find it <a href="">here</a>.
+              <br><br>
+              If you have a diagnosed gene mutation and have undergone risk-reducing breast and/or ovarian surgeries, congratulations on crossing a big and important hurdle. We recommend staying in close touch with your physician even though the surgeries are complete or partially complete. He or she should talk to you about what kind of screening is recommended for you now; if you haven’t had that conversation yet, ask for it!
+              <br><br>
+              Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s a little further behind you in the process of risk assessment and management. Bright Pink offers both <a href="">1:1</a> and <a href="">group</a> support programs that you may find helpful.
+              <br><br>
+              We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
+              <br><br>
+              </span>
+            </p>
           </div>
 
-          <div class='section-title'>Assessment</div>
-          <h2>Your Risk is <span class="risk-level">Average</span></h2>
-
-          <p class="results-copy-average on">
-            Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population<a href="#" class="read-more">...Read More</a>
-            <span class="more-results">, This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.<br><br>
-            <b>What to do now…</b><br><br>
-            First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website.<br><br>
-            In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
-            <br><br>
-            </span>
-          </p>
-
-          <p class="results-copy-moderate">
-            Your answers suggest that you are at moderate baseline risk for breast and ovarian cancer<a href="#" class="read-more">...Read More</a>
-            <span class="more-results">,either because of a family history of one of these cancers, some significant event in your personal health history, or because you or a family member has been diagnosed with a specific type of gene mutation associated with breast or ovarian cancer. 
-            <br><br>
-            Being at moderate risk means that you have up to a 25% chance of developing breast cancer and up to a 5.5% chance of ovarian cancer at some point in your lifetime. These percentages mean that your risk for both cancers is more than twice that of women in the general population, which is significant. It’s a great thing that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Living a proactive lifestyle is one of the most important things you can do.
-            <b>What to do now…</b><br><br>
-            It can be daunting to face the idea of having a higher-than-average risk of breast and ovarian cancer. The good news is that knowledge is power and there are things you can do to take control and reduce your risk! 
-            <br><br>
-            First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website.
-            <br><br>
-            If you’ve not yet had genetic testing, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails. He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result. If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources on our website here. And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our Ask a Genetic Counselor page.
-            <br><br>
-            Your doctor may also recommend increased risk-reduction and early detection strategies appropriate for women at moderate risk, including starting mammograms at a younger age than recommended for women of average risk, or exploring the possibility of pharmaceutical risk-reduction options.
-            <br><br>
-            If you feel like you might benefit from getting support from other women in a similar situation, Bright Pink offers both 1:1 and group support programs for women at moderate and high risk that you may find helpful.
-            <br><br>
-            We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.
-            <br><br>
-            </span>
-          </p>
-
-
-          <p class="results-copy-high">
-            Your answers suggest that you are at a high baseline risk for breast and ovarian cancer<a href="#" class="read-more">...Read More</a>
-            <span class="more-results">, due either to a diagnosed gene mutation associated with one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations. Being at high risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Living a proactive lifestyle is one of the most important things you can do!<br><br>
-            <b>What to do now…</b><br><br>
-            It can be scary to face the idea of those lifetime risk numbers. The good news is that knowledge is power and there are things you can do to take control and reduce your risk! 
-            <br><br>
-            First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk.  Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.  The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website.
-            <br><br>
-            If you’ve not yet had genetic testing, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails. He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result. It’s important to note that until you’ve had genetic testing done, you don’t know for sure that you’re high risk.  If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources here. And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our Ask a Genetic Counselor page.
-            <br><br>
-            If you have a diagnosed gene mutation, but are choosing not to have risk-reducing surgery, or if you haven’t yet had risk-reducing surgeries but plan to later, we encourage you to be in close contact with your OB/GYN or another physician you trust about what kind of increased screening protocol he or she recommends for you. You can learn more about the increased screening typically recommended for high-risk women here. And if you want more information about what those risk-reducing surgeries are, you can find it here.
-            <br><br>
-            If you have a diagnosed gene mutation and have undergone risk-reducing breast and/or ovarian surgeries, congratulations on crossing a big and important hurdle. We recommend staying in close touch with your physician even though the surgeries are complete or partially complete. He or she should talk to you about what kind of screening is recommended for you now; if you haven’t had that conversation yet, ask for it!
-            <br><br>
-            Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s a little further behind you in the process of risk assessment and management. Bright Pink offers both 1:1 and group support programs that you may find helpful.
-            <br><br>
-            We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
-            <br><br>
-            </span>
-          </p>
-           
-
-          <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button>
+      <!-- Pink Email/PDF/Doctor Footer on first card -->
+        <div class="email-pdf-doctor">
+           <h4>Would you like a copy of your results?</h4>
+          <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button><button class="">SHARE WITH MY DOCTOR</button>
+        </div>
 
         </div>
-      </div>
+      </div> 
+    <!-- End of Results div -->
 
       <div class="cards">      
-      <div class="card-intro-text"><h2>Life Affects Life: Your Decisions Can Change Your Risk</h2></div> 
+
+      <div class="card-intro-text">
+        <h2>Life Affects Your Life: Understanding Your Other Risk Factors.</h2><br><br>
+        <p>Your baseline risk above is your starting point.  
+          The lifestyle and personal health history factors below can potentially increase or decrease that baseline risk.  
+          Talk to your doctor about how these risk factors may be affecting your total risk—make it a goal to get or keep as much as you can working in your favor.
+        </p>
+
+      </div>
+
       <br>   
         <div class="card positive">
-          <div class="factors-title"><h3>Keep it up</h3></div>
+          <div class="factors-title"><h3>Working In Your Favor</h3></div>
           <div class="item bmi-low">
             <div class="section-title">BMI</div>
             <h4>Your BMI is within 18.5 and 24.9</h4>
@@ -148,7 +218,7 @@
           </div>          
           <div class="item breastfeeding-low">
             <div class="section-title">BREASTFEEDING</div>
-            <h4>You have or plan on breastfeeding.</h4>
+            <h4>You have breastfed, or plan to in the future.</h4>
             <p>Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.</p>
           </div>  
           <div class="item pregnancy-low">
@@ -157,8 +227,9 @@
             <p>One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.</p>
           </div>                                
         </div>
+    <!-- Negative -->
         <div class="card negative">
-          <div class="factors-title"><h3>Room for improvement</h3></div>
+          <div class="factors-title"><h3>Unfortunately Not Helping</h3></div>
           <div class="item bmi-high">
             <div class="section-title">BMI</div>
             <h4>Your BMI is outside of the healthy range.</h4>
@@ -181,14 +252,19 @@
           </div>  
           <div class="item breastfeeding-high">
             <div class="section-title">BREASTFEEDING</div>
-            <h4>You have not or do not plan on breastfeeding.</h4>
+            <h4>You have not breastfed, or do not plan to in the future.</h4>
             <p>Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.</p>
           </div>  
           <div class="item pregnancy-high">
             <div class="section-title">PREGNANCY</div>
             <h4>You have not given birth.</h4>
             <p>If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.</p>
-          </div>                      
+          </div> 
+          <div class="item period-high">
+            <div class="section-title">PERIOD</div>
+            <h4>Your period started early.</h4>
+            <p>Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen.  You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.</p>
+          </div>                       
         </div>
       </div>
       <div class="questions">
@@ -599,9 +675,7 @@
           </div>
         </div>
         <div class="share">
-          <h4>Save the life of somebody you love. Tell them to complete this experience too.</h4>
-          <br>
-          <button class="share-btn">SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn">SHARE</button>
         </div>
       </div>
     </section>

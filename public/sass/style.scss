@@ -438,6 +438,7 @@ button {
     padding: 3rem 6rem;
     text-align: center;
     position: relative;
+    color: $pink;
     button {
         margin-top: -25px;
     }
@@ -527,17 +528,70 @@ button {
             p {
                 font-size: 1.4rem;
                 display: none;
-                width: 70%;
-                left: 15%;
+                width: 50%;
+            // Used to be --
+                // width: 70%;
+                // left: 15%;
                 margin-bottom: 1rem;
                 a, a:visited {
-                    color: $pink;
+                    color: $darkColor50;
                 }
                 &.on{
                     display: block;
                 }
             }
         }
+        .paragraph-box {
+            width: 100%;
+            text-align: left;
+            background: #fff;
+            margin: 0%;
+            padding: 4rem;
+            color: $darkColor;
+            a {
+                color: $darkColor;
+                font-size: 1.4rem;
+                text-decoration: underline;
+            }
+            .read-more {
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: $pink;  
+                a {
+                    color: $pink;
+                }              
+            }
+            
+            .warning-header {
+                color: $red;
+                font-size: 1.5rem;
+                font-family: $headline-font;
+                font-weight: normal;
+                // text-transform: uppercase;
+            }
+            .paragraph-header {
+                font-size: 2.8rem;
+                font-family: $headline-font;
+                font-weight: normal;
+            }
+            .paragraph-one {
+                // width: 50%;
+                float: left;
+            }
+        }
+        .email-pdf-doctor {
+            width: 100%;
+            color: #fff;
+            background: $pink;
+            padding: 4rem;
+           
+            button {
+                border: 3px solid #fff;
+                cursor: pointer;
+                color: #fff;
+            }
+        }
+
         .sub {
             background: transparent;
         }
@@ -547,6 +601,12 @@ button {
         margin-top: 40px;
         float: left;
         display: none;
+        .card-intro-text {
+            padding: 4rem 20rem;
+            p {
+                font-size: 1.8rem;
+            }
+        }
         .section-title {
             margin-bottom: 2rem;
         }

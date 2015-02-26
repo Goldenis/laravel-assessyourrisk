@@ -397,6 +397,7 @@ button.sub:hover {
   padding: 3rem 6rem;
   text-align: center;
   position: relative;
+  color: #d7006d;
 }
 .share button {
   margin-top: -25px;
@@ -462,7 +463,6 @@ button.sub:hover {
   width: 100%;
   padding: 1rem 6rem;
   float: left;
-  display: none;
 }
 .progress-overlay .results .progress-result {
   padding-bottom: 1rem;
@@ -490,24 +490,87 @@ button.sub:hover {
 .progress-overlay .results .your-risk p {
   font-size: 1.4rem;
   display: none;
-  width: 70%;
-  left: 15%;
+  width: 50%;
   margin-bottom: 1rem;
 }
 .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
-  color: #d7006d;
+  color: rgba(6, 6, 6, .50);
 }
 .progress-overlay .results .your-risk p.on {
   display: block;
 }
+.progress-overlay .results .paragraph-box {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  margin: 0%;
+  padding: 4rem;
+  color: #555558;
+}
+.progress-overlay .results .paragraph-box a {
+  color: #555558;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+.progress-overlay .results .paragraph-box .read-more {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #d7006d;
+}
+.progress-overlay .results .paragraph-box .read-more a {
+  color: #d7006d;
+}
+.progress-overlay .results .paragraph-box .warning-header {
+  color: #f6323e;
+  font-size: 1.5rem;
+  font-family: 'avg_bold', sans-serif;
+  font-weight: normal;
+}
+.progress-overlay .results .paragraph-box .paragraph-header {
+  font-size: 2.8rem;
+  font-family: 'avg_bold', sans-serif;
+  font-weight: normal;
+}
+.progress-overlay .results .paragraph-box .paragraph-one {
+  float: left;
+}
+.progress-overlay .results .email-pdf-doctor {
+  width: 100%;
+  color: #fff;
+  background: #d7006d;
+  padding: 4rem;
+}
+.progress-overlay .results .email-pdf-doctor button {
+  border: 3px solid #fff;
+  cursor: pointer;
+  color: #fff;
+}
 .progress-overlay .results .sub {
   background: transparent;
+}
+.progress-overlay .results-copy-moderate {
+  display: none;
+}
+.progress-overlay .results-copy-moderate.on {
+  display: block;
+}
+.progress-overlay .results-copy-high {
+  display: none;
+}
+.progress-overlay .results-copy-high.on {
+  display: block;
 }
 .progress-overlay .cards {
   width: 100%;
   margin-top: 40px;
   float: left;
   display: none;
+}
+.progress-overlay .cards .card-intro-text {
+  padding: 4rem 20rem;
+}
+.progress-overlay .cards .card-intro-text p {
+  font-size: 1.8rem;
 }
 .progress-overlay .cards .section-title {
   margin-bottom: 2rem;
@@ -2359,6 +2422,9 @@ footer {
     width: 100%;
     float: left;
   }
+}
+.email-content {
+  display: none !important;
 }
 /* =============================================================================
  Non-Semantic Helper Classes

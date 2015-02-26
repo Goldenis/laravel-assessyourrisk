@@ -67,6 +67,7 @@
 
     var savedQuizProgress = {};
     var savedDiveProgress = {};
+    var savedQuestionsAnswers = {};    
     var lastDeepSave = null;
     var currentGlass = 0;
 
@@ -665,9 +666,11 @@
 
 
     function handleSaveQuizAnswer(answer) {
-               
+            
+        var answers = null;
 
-         console.log(answer)      
+
+         //console.log(answer)      
         /*
           BMI
           Weight Status
@@ -682,22 +685,37 @@
         // 5 - Have any of your immediate family members
         // 7 - gene mutation have you or your relative
         // 10 - Within one side of the family
+        answers = answer.html();
+        //console.log(answers)
         var ansTxt = answer.attr("data-answer-id");
         //if ($.contains(_currentQuestion, $('.bmi-result'))) {
-            var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
+        var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
 
-            console.log(ansTxt)
-
-
-        var ageCheck = $('input[name="age-radio"]:checked').attr("data-answer-id");
-        if (_currentQuestion == 1) ansTxt = ageCheck;
+        //console.log(ansTxt)
 
 
-        var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked').attr("data-answer-id");
-        if (_currentQuestion == 2) ansTxt = cancerHistoryCheck;
+
+        //getRadioBtnVal();
+        //console.log(age.next().html());
+
+        //var ageCheck = $('input[name="age-radio"]:checked').attr("data-answer-id");
+        var age = $('input[name="age-radio"]:checked');
+        if (_currentQuestion == 1) {
+            ansTxt = age.attr("data-answer-id");
+            answers = age.next().html();
+        }
+
+
+        var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked');
+        //var cancer = $('input[name="cancerhistory-radio"]:checked');
+        if (_currentQuestion == 2) {
+            ansTxt = cancerHistoryCheck.attr("data-answer-id");
+            answers = cancerHistoryCheck.next().html();
+        }
 
             if (_currentQuestion == 4) {
             console.log(bmi)    
+            answers = bmi + " BMI Result"
             if (bmi < 18.5) {
                 ansTxt = "-1";
             } else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -708,22 +726,31 @@
                 ansTxt = "-1";
             }
         }
-        //}
+  
 
-        if (_currentQuestion == 6) ansTxt = currentGlass;
+        if (_currentQuestion == 6) {
+            ansTxt = currentGlass;
+            answers = currentGlass + "  alcohol drinks a day";            
+        }
 
         if (_currentQuestion == 5) {
             var data = [];
+            var ans5Text = []; 
             $('.cb1 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans5Text.push($(this).next().html());
             });
+            console.log(ans5Text);
             ansTxt = data;
+            answers = ans5Text;
         }
 
-        var mutationCheck = $('input[name="mutation-radio"]:checked').attr("data-answer-id");
-        if (_currentQuestion == 7) ansTxt = mutationCheck;
-
-          console.log(mutationCheck)
+        var mutationCheck = $('input[name="mutation-radio"]:checked');
+        if (_currentQuestion == 7) {
+            ansTxt = mutationCheck.attr("data-answer-id");
+            answers = mutationCheck.next().html();
+        }
+          console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
             console.log('not')
@@ -734,10 +761,13 @@
 
         if (_currentQuestion == 8) {
             var data = [];
+            var ans8Text = []; 
             $('.cb2 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans8Text.push($(this).next().html());    
             });
             ansTxt = data;
+            answers = ans8Text;
 
             if (ansTxt == '1|-2') {
                 console.log('high')
@@ -751,10 +781,13 @@
         }
         if (_currentQuestion == 10) {
             var data = [];
+            var ans10Text = [];             
             $('.cb3 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans10Text.push($(this).next().html());   
             });
             ansTxt = data;
+            answers = ans10Text;
         }
 
 
@@ -765,6 +798,14 @@
             $('.results-copy-moderate').addClass('on');  
 
         }
+        
+        var questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
+        //console.log(questionTxt)
+        
+        var nine = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+        console.log(nine)
+
+        savedQuestionsAnswers[String(_currentQuestion)] = nine;
 
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
@@ -776,7 +817,9 @@
 
         updateCharts();
         console.log('Object savedQuizProgress = ', savedQuizProgress)
+        console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
     }
+
 
     function addCustomResults() {
 

@@ -463,7 +463,6 @@ button.sub:hover {
   width: 100%;
   padding: 1rem 6rem;
   float: left;
-  display: none;
 }
 .progress-overlay .results .progress-result {
   padding-bottom: 1rem;
@@ -548,6 +547,18 @@ button.sub:hover {
 }
 .progress-overlay .results .sub {
   background: transparent;
+}
+.progress-overlay .results-copy-moderate {
+  display: none;
+}
+.progress-overlay .results-copy-moderate.on {
+  display: block;
+}
+.progress-overlay .results-copy-high {
+  display: none;
+}
+.progress-overlay .results-copy-high.on {
+  display: block;
 }
 .progress-overlay .cards {
   width: 100%;
@@ -2360,6 +2371,9 @@ footer {
     width: 100%;
     float: left;
   }
+}
+.email-content {
+  display: none !important;
 }
 /* =============================================================================
  Non-Semantic Helper Classes

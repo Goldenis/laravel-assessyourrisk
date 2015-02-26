@@ -274,8 +274,15 @@
             })
         })
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:?subject=Here are the results of your risk assessment','');
+            window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
+        $('.sub.email').on('click', function() {
+            console.log('click');
+            var content = $('.email-content').text();
+            window.open('mailto:?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
+        })
+
+
         $('.progress-overlay .share-btn').on('click', function() {
             window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
@@ -691,14 +698,6 @@
         //if ($.contains(_currentQuestion, $('.bmi-result'))) {
         var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
 
-        //console.log(ansTxt)
-
-
-
-        //getRadioBtnVal();
-        //console.log(age.next().html());
-
-        //var ageCheck = $('input[name="age-radio"]:checked').attr("data-answer-id");
         var age = $('input[name="age-radio"]:checked');
         if (_currentQuestion == 1) {
             ansTxt = age.attr("data-answer-id");
@@ -707,7 +706,6 @@
 
 
         var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked');
-        //var cancer = $('input[name="cancerhistory-radio"]:checked');
         if (_currentQuestion == 2) {
             ansTxt = cancerHistoryCheck.attr("data-answer-id");
             answers = cancerHistoryCheck.next().html();
@@ -800,13 +798,10 @@
         }
         
         var questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
-        //console.log(questionTxt)
         
         var nine = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
-        console.log(nine)
 
         savedQuestionsAnswers[String(_currentQuestion)] = nine;
-
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
         $('.question-stats').html('');
@@ -817,9 +812,43 @@
 
         updateCharts();
         console.log('Object savedQuizProgress = ', savedQuizProgress)
+
+        // if (_currentQuestion == 0) return;
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+        getUserAnswers();
+    
     }
 
+    function getUserAnswers() {
+        var emailqs;
+        
+         $('.email-content').html('');
+
+         $.each(savedQuestionsAnswers, function( key, value ) {
+            // console.log( value.questionnumber );
+            // console.log( value.questionTxt );
+            // console.log( value.questionanswer );
+            questionID = parseInt(value.questionnumber + 1);
+
+            if (key == 3) {
+                questionID = value.questionnumber - 1;
+                return; 
+            }
+
+            if (key == 4) {
+                value.questionTxt = 'Your BMI Score is'
+            }
+
+            $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + questionID + '.  ' + value.questionTxt + '%0D%0A' + value.questionanswer + '%0D%0A</div>')
+            //emailqs = value.questionnumber + value.questionTxt + value.questionanswer 
+        });
+
+         var resultCopy = $('.results-copy-high').text();
+
+         //$('.email-content').append('%0D%0A %0D%0A %0D%0A Your Result Text %0D%0A %0D%0A ' + encodeURIComponent(resultCopy));
+
+         //return emailqs;
+    }
 
     function addCustomResults() {
 

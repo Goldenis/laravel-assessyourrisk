@@ -19,6 +19,7 @@
     <img src="img/brightpink_logo.png">
 
     </div>
+    <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
       <h1>Then <span class="share-btn">share<a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>

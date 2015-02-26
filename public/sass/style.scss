@@ -500,7 +500,7 @@ button {
         width: 100%;
         padding: 1rem 6rem;
         float: left;
-        display: none;
+        //display: none;
         .progress-result{
             padding-bottom: 1rem;
             .percentage.percquiz{ 
@@ -596,6 +596,20 @@ button {
             background: transparent;
         }
     }
+    .results-copy-moderate{
+        display: none;
+        &.on{
+            display: block;
+        }    
+    }
+
+    .results-copy-high{
+        display: none;
+        &.on{
+            display: block;
+        }    
+    }
+
     .cards {
         width: 100%;
         margin-top: 40px;
@@ -2208,6 +2222,10 @@ footer {
         }
     }
 }
+.email-content{
+    display: none !important;
+}
+
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */

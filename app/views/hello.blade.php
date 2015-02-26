@@ -1094,7 +1094,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="js/roulette.js"></script>
     <script src='js/vendor/pdfmake/build/pdfmake.min.js'></script>
     <script src='js/vendor/pdfmake/build/vfs_fonts.js'></script>
-    <script src="js/pdf_gen.js"
+    <script src='js/pdf_gen.js'></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
     <script type="text/javascript">

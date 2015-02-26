@@ -625,6 +625,35 @@ button {
         }
     }
 }
+.share-btn{
+    @include transition(.3s,ease-out);
+    a:nth-of-type(1){
+        position: absolute;
+        left: 30px;
+        top: 5px;
+    }
+    a:nth-of-type(2){
+        position: absolute;
+        left: 80px;
+        top: 5px;
+    }
+    img{
+        width: 30px;
+        opacity: 0;
+        @include transition(.3s);
+    }
+    &:hover{
+        padding-left: 40px;
+        padding-right: 40px;
+        color: transparent;
+        img{
+            opacity: 1;
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
 .male-overlay {
     text-align: center;
     h1 {
@@ -727,10 +756,14 @@ button {
     width: 8px;
     height: 8px;
     @include rounded(50%);
-    background: $light-gray;
+    background: transparent;
+    border: 1px solid $light-gray;
     margin-right: 1rem;
-    @include transition(.6s, $ease-out-back);
+    @include transition(.3s, linear);
     top: 0;
+    &.on{
+        background: $light-gray;
+    }
     &.active {
         background: $pink;
         width: 16px;
@@ -1144,26 +1177,27 @@ input[type="checkbox"], input[type="radio"] {
         -webkit-transform: translate(0, 0);
         h6 {
             position: absolute;
-            top: 23px;
+            top: 25px;
             color: #fff;
-            &:nth-of-type(2) {
-                left: 400px;
-            }
-            &:nth-of-type(3) {
-                left: 500px;
+            font-size: 12px;
+            opacity: .4;
+            &.active{
+                opacity: 1;
             }
         }
         .dot {
-            background: rgba(255, 255, 255, .3);
-            cursor: pointer;
-            &.active {
+            margin-right: 14px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: transparent;
+            &.on {
                 width: 8px;
                 height: 8px;
                 top: 0;
                 background: #fff;
+                opacity: .6;
             }
-            &:hover {
-                background: #fff;
+            &.active {
+                opacity: 1;
             }
         }
     }
@@ -1653,7 +1687,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .out-up {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0 !important;
     @include transform-origin(50% 200%);
     @include transform(perspective(1000px) translateY(-40px));
     @include transition(.5s, ease-in);
@@ -1670,6 +1704,11 @@ footer {
             width: 400px;
             height: 400px;
             left: 20%;
+        }
+    }
+    .dots{
+        h6{
+            display: none;
         }
     }
     .dot {

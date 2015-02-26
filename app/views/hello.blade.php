@@ -37,7 +37,7 @@
       <div class="share">
         <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         <br>
-        <button class="share-btn">SHARE</button>
+        <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
       </div>
       <div class="vignettes">
       	<div class='section-title'>Understand</div>

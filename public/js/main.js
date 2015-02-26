@@ -110,6 +110,12 @@
                 left: '25%'
             });
         }
+        $('.education .dots h6').eq(1).css({
+            left: $('.module').eq(0).find($(".headline")).length * 22
+        })
+        $('.education .dots h6').eq(2).css({
+            left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * 22
+        })
     }
 
     function sizeBGMedia() {
@@ -186,7 +192,18 @@
     }
 
     function fillDot() {
-        $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
+        var hNum = $('.headline').index(_currentHeadline)
+        $('.education .dots h6').removeClass('active')
+        if(hNum < $('.module').eq(0).find($(".headline")).length){
+            $('.education .dots h6').eq(0).addClass('active')
+        }else if(_currentHeadline < $('.module').eq(1).find($(".headline")).length){
+            $('.education .dots h6').eq(1).addClass('active')
+        }else if(_currentHeadline < $('.module').eq(2).find($(".headline")).length){
+            $('.education .dots h6').eq(2).addClass('active')
+        }
+        $('.education .dot').removeClass('active');
+        $('.education .dot').eq(hNum).addClass('active');
+        $('.education .dot').eq(hNum).addClass('on');
     }
 
     function _scrollHandler() {
@@ -273,10 +290,10 @@
             })
         })
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:?subject=Here are the results of your risk assessment','');
+            window.open('mailto:?subject=Here are the results of your risk assessment');
         })
-        $('.progress-overlay .share-btn').on('click', function() {
-            window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
+        $('.progress-overlay .share-btn, .share .share-btn').on('click', function() {
+            window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment');
         })
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
@@ -284,6 +301,7 @@
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
+            $('.assessment .dot').eq(_currentQuestion).addClass('on');
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
@@ -436,12 +454,6 @@
         };
         $('.percdive').html(0 + '/' + _totalHeadlines);
         $('.percquiz').html(0 + '/' + _totalQuestions);
-        $('.education .dots h6').eq(1).css({
-            left: $('.module').eq(0).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
-        })
-        $('.education .dots h6').eq(2).css({
-            left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
-        })
     }
 
     function hideIntro() {
@@ -947,6 +959,7 @@ Do you know if I do%3F");
         setTimeout(function() {
             $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment .dot').eq(_oldQuestion).removeClass('active')
+            $('.assessment .dot').eq(_currentQuestion).addClass('on')
             $('.assessment .dot').eq(_currentQuestion).addClass('active')
         }, 1000)
         $('.question').eq(_currentQuestion).addClass('in')

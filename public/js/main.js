@@ -31,7 +31,7 @@
     var newClosest = 0;
 
     var _currentView = "left";
-    var _currentModule = 0;
+    var _currentModule = null;
     var _oldModule;
     var _currentQuestion = 0;
     var _totalQuestions;
@@ -359,7 +359,7 @@
             $('.menu-icon').removeClass('left');
             $('.education').removeClass('in');
         })
-        $('.menu-icon').on('click', function() {
+        $('.menu-icon, .btn-results').on('click', function() {
             if (!overlayOpen) {
                 openProgressOverlay();
             } else {
@@ -577,6 +577,7 @@
             if (_currentModule != undefined) {
                 setTimeout(function() {
                     $('.right-column').addClass('down');
+                    $('.nav').addClass('in');
                 }, 800)
             }
         } else {
@@ -584,6 +585,7 @@
             _currentView = "left"
             setTimeout(function() {
                 $('.right-column').removeClass('down');
+                $('.nav').removeClass('in');
             }, 800)
         }
         $('.assessment').toggleClass('in');
@@ -1004,7 +1006,9 @@ Do you know if I do%3F");
 
         if (_currentQuestion >= _totalQuestions - 1) {
             addCustomResults()
-            openProgressOverlay();
+            setTimeout(function(){
+                openProgressOverlay();
+            },500)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'

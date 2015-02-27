@@ -707,6 +707,7 @@
           </div>
         </div>
         <div class="share">
+          <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
           <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
         </div>
       </div>

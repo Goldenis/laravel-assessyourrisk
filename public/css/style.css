@@ -970,7 +970,7 @@ input[type="checkbox"], input[type="radio"] {
   right: 0;
 }
 .anim-gif img {
-  width: 10rem;
+  width: 9rem;
   max-width: 205px;
   min-width: 100px;
 }
@@ -979,7 +979,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
-  width: 12rem;
+  width: 11rem;
   max-width: 205px;
   min-width: 130px;
 }
@@ -987,7 +987,7 @@ input[type="checkbox"], input[type="radio"] {
   top: -13rem;
 }
 .anim-gif.stopwatch img {
-  width: 15rem;
+  width: 13rem;
   max-width: 205px;
   min-width: 150px;
 }
@@ -1265,6 +1265,7 @@ input[type="checkbox"], input[type="radio"] {
 .assessment .share {
   visibility: hidden;
   opacity: 0;
+  margin: 1.2rem 12% 0 12%;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
   -o-transition: all 1s 0 ;
@@ -1273,6 +1274,10 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  color: #555558;
+}
+.assessment .share .btn-results {
+  margin-bottom: 5rem;
 }
 .assessment .share.in {
   visibility: visible;
@@ -2210,6 +2215,9 @@ footer {
   }
   .assessment .bottle {
     left: 20px;
+  }
+  .assessment .share {
+    margin: 0;
   }
   .assessment .drink-slider .drinks {
     width: 120%;

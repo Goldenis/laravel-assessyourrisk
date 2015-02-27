@@ -1624,6 +1624,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .vignette.last .share {
   color: #fff;
+  padding-bottom: 200px;
 }
 .education .vignette.last .share .arrow {
   margin: auto;

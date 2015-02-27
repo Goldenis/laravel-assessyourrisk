@@ -197,9 +197,9 @@
         $('.education .dots h6').removeClass('active')
         if(hNum < $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(0).addClass('active')
-        }else if(_currentHeadline < $('.module').eq(1).find($(".headline")).length){
+        }else if(hNum < $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(1).addClass('active')
-        }else if(_currentHeadline < $('.module').eq(2).find($(".headline")).length){
+        }else if(hNum < $('.module').eq(2).find($(".headline")).length + $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(2).addClass('active')
         }
         $('.education .dot').removeClass('active');

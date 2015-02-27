@@ -47,7 +47,7 @@
 
     var _currentVideo;
     var _currentImage;
-    var _currentPath = '/';
+    var _currentPath;
 
 
     // setInterval(function(){
@@ -302,7 +302,9 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
+            //window._currentPath = '/assessment';
             $.address.path('/assessment');
+            //$.address.path('/assessment');
         })
 
         $('.testPDF, .pdf').on('click', function() {
@@ -1382,28 +1384,29 @@ Do you know if I do%3F");
         var oldPath = _currentPath;
         var newPath = event.value;
 
-        console.log('currentPath', _currentPath);
+        //console.log('currentPath', _currentPath);
 
 
 
-        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
+        // if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
-            //$.address.path('/home');
-            console.log('GO HOME');
+        //     //$.address.path('/home');
+        //     console.log('GO HOME');
             
-            if (_currentPath !== '/education' && _currentPath !== '/intro'){
-                //goHome();
-            }
-            else if (_currentPath === '/education')
-            {
-                toggleColumn();
-            }
-            else
-            {
-                // $.address.path('/assessment');
-            }
-            _currentPath = newPath;
-        } else if (event.value == '/education') {
+        //     if (_currentPath !== '/education' && _currentPath !== '/intro'){
+        //         //goHome();
+        //     }
+        //     else if (_currentPath === '/education')
+        //     {
+        //         toggleColumn();
+        //     }
+        //     else
+        //     {
+        //         // $.address.path('/assessment');
+        //     }
+        //     _currentPath = newPath;
+        // } else 
+        if (event.value == '/education') {
             console.log('education');            
             hideIntro();
             addCharts();
@@ -1421,8 +1424,7 @@ Do you know if I do%3F");
             hideIntro();
             addCharts();
         } else {
-            console.log('intro view')
-            
+            console.log('intro view')       
             startIntro();
             $.address.path('/intro');
             _currentPath = newPath;

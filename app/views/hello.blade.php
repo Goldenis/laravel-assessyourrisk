@@ -316,7 +316,7 @@
           Your body. Your life.<br>
           Don’t leave it up to chance.</b>
         </p>
-        <a id="Begin" href="#home"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
+        <a id="Begin"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
     </section>
     <!-- RIGHT COLUMN -->

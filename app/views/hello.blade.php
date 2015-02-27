@@ -339,7 +339,7 @@
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
-              <h5>● You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
+              <h5>You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
             <div class="fact">
@@ -347,7 +347,7 @@
             </div>
 
             <div class="fact">
-              <h5>○ If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
+              <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
             </div>
 
             <div class="fact">

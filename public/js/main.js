@@ -302,7 +302,7 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            // $.address.path('/assessment');
+            $.address.path('/assessment');
         })
 
         $('.testPDF, .pdf').on('click', function() {
@@ -405,8 +405,8 @@
         })
         $('.ask').on('click', askHandler);
         $('.btn-calculate').on('click', function(e) {
-            calculateWeight($(this));
-        })
+             calculateWeight($(this));
+         })
         $('.question .answers button').on('click', function(e) {
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
@@ -1036,6 +1036,8 @@
              })   
     }
 
+
+
     function askHandler(e) {
         e.stopPropagation();
         switch ($(this).closest(".question").attr("data-question-id")) {
@@ -1368,15 +1370,16 @@ Do you know if I do%3F");
   $.address.externalChange(function(event) {
 
         console.log('external URL change')
-        console.log(event.value)
+        console.log('event value', event.value)
 
         var oldPath = _currentPath;
         var newPath = event.value;
+
         console.log('currentPath', _currentPath);
 
 
 
-        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
+        if (event.value == '/intro' || event.value == '/' && event.value !== _currentPath) {
 
             //$.address.path('/home');
             console.log('GO HOME');

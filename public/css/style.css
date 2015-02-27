@@ -522,7 +522,7 @@ button.sub.ask {
   background: #fff;
   position: relative;
   display: inline-block;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box {
   width: 100%;
@@ -615,6 +615,12 @@ button.sub.ask {
   display: none;
 }
 .progress-overlay .results-copy-high.on {
+  display: block;
+}
+.progress-overlay .results-copy-average {
+  display: none;
+}
+.progress-overlay .results-copy-average.on {
   display: block;
 }
 .progress-overlay .cards {
@@ -911,7 +917,7 @@ button.sub.ask {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 16rem;
+  top: 20rem;
   z-index: 10;
 }
 .checkbox-list {

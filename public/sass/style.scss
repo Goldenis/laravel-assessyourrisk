@@ -669,6 +669,13 @@ button {
         }    
     }
 
+    .results-copy-average{
+        display: none;
+        &.on{
+            display: block;
+        }    
+    }
+
     .cards {
         width: 100%;
         margin-top: 40px;
@@ -921,7 +928,7 @@ button {
     left: 0;
     position: absolute;
     left: 0px;
-    top: 16rem;
+    top: 20rem;
     z-index: 10;
 }
 .checkbox-list {

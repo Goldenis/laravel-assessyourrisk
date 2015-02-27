@@ -900,7 +900,7 @@ button.sub.ask {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 20rem;
+  top: 16rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -1661,6 +1661,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
+  text-shadow: 1px 1px 2px #141414;
 }
 .education.in {
   left: 0;

@@ -527,14 +527,11 @@ button {
                 margin: auto !important;
             }
         }   
-        .risk-level {
-            color: $pink;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-        }
         .your-risk {
-            .more-results {
-                display: none;
+            .risk-level {
+                color: $pink;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
             h2 {
                 margin: 50px 0;
@@ -555,87 +552,94 @@ button {
                 }
             }
         }
-        .paragraph-box {
+        .paragraph-wrapper {
             width: 100%;
-            // margin-top: 40px;
-            float: left;
-            display: none;
-            text-align: left;
             background: #fff;
-            margin: 0%;
-            padding: 4rem;
-            color: $darkColor;
-            a {
-                color: $darkColor;
-                font-size: 1.4rem;
-                text-decoration: underline;
-            }
-            .read-more {
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: $pink;  
-                a {
-                    color: $pink;
-                }              
-            }
-            .column {
+            // padding: 4rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10rem;
+            .paragraph-box {
+                width: 100%;
                 float: left;
-                width: 48%;
-                margin: 1%;
-                padding: 4rem;
-                .column-header {
-                    //h3
-                    // font-size: 2.8rem;
-                    // font-family: $headline-font;
-                    // font-weight: normal;
+                text-align: left;
+                color: $darkColor;
+                h3 {
                     margin-bottom: 2rem;
                 }
-                .item {
-                    margin-bottom: 4rem;
+                p {
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                }
+                a {
+                    color: $darkColor;
+                    font-size: 1.4rem;
+                    text-decoration: underline;
+                }
+                .more-results {
                     display: none;
                 }
-                &.positive {
-                    background: #fff;
-                    color: $darkColor;
+                .read-more {
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    color: $pink;  
+                    a {
+                        color: $pink;
+                    }              
+                }
+                .column {
+                    // border: 1px solid blue;
+                    float: left;
+                    width: 50%;
+                    padding: 6rem;
+                    .column-header {
+                        margin-bottom: 2rem;
+                    }
+                    .item {
+                        margin-bottom: 4rem;
+                        display: none;
+                    }
+                    &.positive {
+                        background: #fff;
+                        color: $darkColor;
+                    }
+                }
+                .warning-header {
+                    color: $red;
+                    margin-bottom: 2rem;
                 }
             }
-            .warning-header {
-                color: $red;
-                margin-bottom: 2rem;
-                // font-size: 1.5rem;
-                // font-family: $headline-font;
-                // font-weight: normal;
-                // text-transform: uppercase;
-            }
-            .paragraph-one {
-                // width: 50%;
-                float: left;
-            }
-        }
-        .email-pdf-doctor {
-            width: 100%;
-            height: 128px;
-            margin: 0 auto;
-            color: #fff;
-            background: $pink;
-            padding: 3rem;
-            button {
-                border: 3px solid #fff;
-                cursor: pointer;
-                color: #fff;
-            }
-            .email-pdf-copy, .email-pdf-btns {
-                // border: 1px solid white;
-                float: left;
-                min-height: 60px;
-            }
-            .email-pdf-copy {
-                width: 50%;
-                padding-top: 1.6rem;
-            }
-            .email-pdf-btns {
-                width: 50%;
-            }
+                .email-pdf-doctor {
+                    // border: 2px solid blue;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    margin: 0 auto;
+                    color: #fff;
+                    background: $pink;
+                    padding: 3rem;
+                    button {
+                        border: 3px solid #fff;
+                        cursor: pointer;
+                        color: #fff;
+                        &:hover {
+                            background: #fff;
+                            color: $red;
+                        }
+                    }
+                    .email-pdf-copy, .email-pdf-btns {
+                        // border: 1px solid white;
+                        float: left;
+                        min-height: 60px;
+                    }
+                    .email-pdf-copy {
+                        width: 50%;
+                        padding-top: 1.6rem;
+                    }
+                    .email-pdf-btns {
+                        width: 50%;
+                    }
+                }
         }
 
         .sub {

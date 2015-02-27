@@ -486,13 +486,10 @@ button.sub:hover {
 .progress-overlay .results .progress-result .chart-4 {
   margin: auto !important;
 }
-.progress-overlay .results .risk-level {
+.progress-overlay .results .your-risk .risk-level {
   color: #d7006d;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-.progress-overlay .results .your-risk .more-results {
-  display: none;
 }
 .progress-overlay .results .your-risk h2 {
   margin: 50px 0;
@@ -509,75 +506,89 @@ button.sub:hover {
 .progress-overlay .results .your-risk p.on {
   display: block;
 }
-.progress-overlay .results .paragraph-box {
+.progress-overlay .results .paragraph-wrapper {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box {
   width: 100%;
   float: left;
-  display: none;
   text-align: left;
-  background: #fff;
-  margin: 0%;
-  padding: 4rem;
   color: #555558;
 }
-.progress-overlay .results .paragraph-box a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box h3 {
+  margin-bottom: 2rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box a {
   color: #555558;
   font-size: 1.4rem;
   text-decoration: underline;
 }
-.progress-overlay .results .paragraph-box .read-more {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
+  display: none;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more {
   font-size: 1.2rem;
   text-decoration: none;
   color: #d7006d;
 }
-.progress-overlay .results .paragraph-box .read-more a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more a {
   color: #d7006d;
 }
-.progress-overlay .results .paragraph-box .column {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column {
   float: left;
-  width: 48%;
-  margin: 1%;
-  padding: 4rem;
+  width: 50%;
+  padding: 6rem;
 }
-.progress-overlay .results .paragraph-box .column .column-header {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
   margin-bottom: 2rem;
 }
-.progress-overlay .results .paragraph-box .column .item {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
   margin-bottom: 4rem;
   display: none;
 }
-.progress-overlay .results .paragraph-box .column.positive {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column.positive {
   background: #fff;
   color: #555558;
 }
-.progress-overlay .results .paragraph-box .warning-header {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
   color: #f6323e;
   margin-bottom: 2rem;
 }
-.progress-overlay .results .paragraph-box .paragraph-one {
-  float: left;
-}
-.progress-overlay .results .email-pdf-doctor {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 128px;
   margin: 0 auto;
   color: #fff;
   background: #d7006d;
   padding: 3rem;
 }
-.progress-overlay .results .email-pdf-doctor button {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
   border: 3px solid #fff;
   cursor: pointer;
   color: #fff;
 }
-.progress-overlay .results .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .email-pdf-doctor .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+  background: #fff;
+  color: #f6323e;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
   float: left;
   min-height: 60px;
 }
-.progress-overlay .results .email-pdf-doctor .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
   width: 50%;
   padding-top: 1.6rem;
 }
-.progress-overlay .results .email-pdf-doctor .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
   width: 50%;
 }
 .progress-overlay .results .sub {

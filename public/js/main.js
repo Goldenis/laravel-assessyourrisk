@@ -310,8 +310,8 @@
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
             $('.fact').eq(_currentQuestion).addClass('in');
-            $('.assessment .dot').eq(_currentQuestion).addClass('on');
-            $('.assessment .dot').eq(_currentQuestion).addClass('active');
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
         // $('.btn-calculate').on('click', function(e) {
@@ -321,6 +321,9 @@
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
             }
+        })
+        $('.btn-back').on('click', function(e) { 
+            prevQuestion();
         })
         $('.asterisk').on('mouseenter', function() {
             $(this).next().addClass("show");
@@ -455,7 +458,7 @@
     function createDots() {
         for (var i = 0; i < _totalQuestions; i++) {
             var dot = '<div class="dot"></div>';
-            $('.assessment .dots').append(dot);
+            $('.assessment-dots').append(dot);
         };
         for (var i = 0; i < _totalHeadlines; i++) {
             var dot = '<div class="dot"></div>';
@@ -766,9 +769,9 @@
           console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
-            $('.assessment .dot').eq(_currentQuestion).removeClass('active')
+            $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
             _currentQuestion = 8;
-            $('.assessment .dot').eq(_currentQuestion).addClass('on')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
         }
 
@@ -1047,13 +1050,35 @@ Do you know if I do%3F");
         _currentQuestion++;
         setTimeout(function() {
             $('.fact').eq(_currentQuestion).addClass('in');
-            $('.assessment .dot').eq(_oldQuestion).removeClass('active')
-            $('.assessment .dot').eq(_currentQuestion).addClass('on')
-            $('.assessment .dot').eq(_currentQuestion).addClass('active')
+            $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
         }, 1000)
         $('.question').eq(_currentQuestion).addClass('in')
+        $('.question').eq(_currentQuestion).removeClass('out-up')
     }
 
+    function prevQuestion(){
+        if(_currentQuestion > 0){
+            $('.fact').eq(_currentQuestion).removeClass('in');
+            $('.fact').eq(_currentQuestion).addClass('out');
+            
+            $('.question').eq(_currentQuestion).addClass('out-up')
+            $('.question').eq(_currentQuestion).removeClass('in')
+
+            var _oldQuestion = _currentQuestion;
+            _currentQuestion--;
+            setTimeout(function() {
+                $('.fact').eq(_currentQuestion).addClass('in');
+                $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
+            }, 1000)
+            $('.question').eq(_currentQuestion).removeClass('out-up')
+            $('.question').eq(_currentQuestion).addClass('in')
+            $('.assessment .share').removeClass('in')
+        }
+    }
     function nextVignette() {
 
         // $('.vignette').removeClass('in');

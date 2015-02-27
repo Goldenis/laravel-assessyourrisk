@@ -424,15 +424,16 @@
     </div>
 
     <!-- ASSESSMENT-->
-
     <section class="assessment scrollpane"> 
       <!-- <div class="section-title">Assess Your Risk</div> -->
+      <div class="assessment-dots dots">
+        <div class="btn-back"><img src="img/arrow_left_pink.png"></div>
+      </div>
       <section class="assessment-intro in">
         <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
         <button class="action">Let’s Go.</button>
       </section>
-      <div class="dots">
-      </div>
+
       <div class="assessment-wrap">
         <div class="question" data-question-id="1">
           <div class="prompt">Do you have breasts and/or ovaries?</div>
@@ -460,7 +461,6 @@
               <br>
               <div class="answers">
                 <button>Continue</button>
-                <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
               </div>
           </div>
         </div>
@@ -478,7 +478,6 @@
               <br>
               <div class="answers">
                 <button>Continue</button>
-                <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
               </div>
           </div>        
         </div>
@@ -496,7 +495,6 @@
             </div>
             <div class="answers weight-answer">
               <button class="submit-weight">Continue</button>
-              <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
             </div>
           </div>
           <br>
@@ -506,7 +504,6 @@
           <div class="bmi-result">
             <div class="answers">
               <button>Continue</button>
-              <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
             </div>
           </div>
           <div class="height-wrapper">  
@@ -521,7 +518,6 @@
             </div>
             <div class="answers">
               <button class="btn-calculate">Continue</button>
-              <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
             </div>
           </div>   
           <br>
@@ -541,9 +537,8 @@
           </div>
           <br>
           <div class="answers">
-            <button>Continue</button><br>
-            <button class="sub ask">Help me ask them</button><br>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
+            <button>Continue</button>
+            <button class="sub ask">Help me ask them</button>
           </div>        
         </div>
 
@@ -562,9 +557,8 @@
 	            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
-	            <br>
+	            <br><br><br>
 	            <button>Continue</button>
-              <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
 	          </div>
 	        </div>
         </div>
@@ -583,7 +577,6 @@
               <br>
               <div class="answers">
                 <button>Continue</button>
-                <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
               </div>
           </div>
         </div>
@@ -600,7 +593,6 @@
           <br>
           <div class="answers">
             <button>Continue</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>        
 
@@ -613,7 +605,6 @@
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -638,8 +629,7 @@
 
           <div class="answers">
             <button>Continue</button>
-            <button class="sub ask" data-answer-id="13">Help me ask them</button><br>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
+            <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
         </div>
 
@@ -649,7 +639,6 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -659,7 +648,6 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -669,7 +657,6 @@
           <div class="answers">
             <button data-answer-id="-1">Under 12</button>
             <button data-answer-id="+1">12 or older</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -679,8 +666,7 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
-            <button class="sub ask" data-answer-id="3">Help me ask them</button><br>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
+            <button class="sub ask" data-answer-id="3">Help me ask them</button>
           </div>
         </div>
 
@@ -693,7 +679,6 @@
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="0">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -703,7 +688,6 @@
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -713,7 +697,6 @@
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
 
@@ -723,11 +706,9 @@
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
-            <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           </div>
         </div>
         <div class="share">
-          <div class="btn-back"><img src="img/arrow_left_pink.png"><b> BACK</b></div>
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
           <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
         </div>

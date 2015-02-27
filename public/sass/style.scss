@@ -1117,7 +1117,7 @@ input[type="checkbox"], input[type="radio"] {
     .intro-message {
         position: absolute;
         @include centerV;
-        right: 6rem;
+        right: 7%;
         width: calc(100% - 1300px);
         min-width: 250px;
     }

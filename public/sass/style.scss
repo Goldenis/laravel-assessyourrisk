@@ -742,16 +742,16 @@ button {
         color: $nude;
         a:nth-of-type(1){
             position: absolute;
-            left: 30px;
-            top: 19px;
+            left: 2.5rem;
+            top: 1rem;
         }
         a:nth-of-type(2){
             position: absolute;
-            left: 90px;
-            top: 19px;
+            left: 7rem;
+            top: 1rem;
         }
         img{
-            width: 46px;
+            width: 3rem;
             opacity: 0;
             @include transition(.3s);
         }

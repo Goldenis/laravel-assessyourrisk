@@ -711,16 +711,16 @@ button.sub:hover {
 }
 .male-overlay .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 30px;
-  top: 19px;
+  left: 2.5rem;
+  top: 1rem;
 }
 .male-overlay .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 90px;
-  top: 19px;
+  left: 7rem;
+  top: 1rem;
 }
 .male-overlay .share-btn img {
-  width: 46px;
+  width: 3rem;
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;

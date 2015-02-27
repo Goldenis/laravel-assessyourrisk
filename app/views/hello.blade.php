@@ -453,8 +453,8 @@
             <div class="checkbox-list">
               <div class="checkbox" data-answer-id="1"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Breast cancer</div></div>
               <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>              
               <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
-              <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>
             </div>
               <br>
               <div class="answers">
@@ -550,8 +550,8 @@
               <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
               <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
-              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>
               <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>              
             </div>
               <br>
               <div class="answers">
@@ -602,8 +602,8 @@
             <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
             <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain Cancer</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
             <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
           </div>     
 
           <div class="answers">

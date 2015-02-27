@@ -275,6 +275,17 @@ button.sub:hover {
   color: #f6323e;
   border-color: #f6323e;
 }
+button.sub.ask {
+  border: none;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 5px;
+  margin-left: 1rem;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #d7006d;
+}
 .bg-video {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
@@ -732,10 +743,10 @@ button.sub:hover {
   color: transparent;
 }
 .share-btn:hover img {
-  opacity: 1;
+  opacity: 0.7;
 }
 .share-btn:hover img:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 .male-overlay {
   text-align: center;
@@ -879,9 +890,8 @@ button.sub:hover {
 }
 .dot.active {
   background: #d7006d;
-  width: 16px;
-  height: 16px;
-  top: 3px;
+  border-color: #d7006d;
+  top: -2px;
 }
 .tooltip-bottom {
   width: auto;
@@ -901,7 +911,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 20rem;
+  top: 16rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -965,13 +975,13 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif {
   position: absolute;
-  top: -12rem;
+  top: -10.5rem;
   margin: auto;
   left: 0;
   right: 0;
 }
 .anim-gif img {
-  width: 10rem;
+  width: 9rem;
   max-width: 205px;
   min-width: 100px;
 }
@@ -980,7 +990,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
-  width: 12rem;
+  width: 11rem;
   max-width: 205px;
   min-width: 130px;
 }
@@ -988,7 +998,7 @@ input[type="checkbox"], input[type="radio"] {
   top: -13rem;
 }
 .anim-gif.stopwatch img {
-  width: 15rem;
+  width: 13rem;
   max-width: 205px;
   min-width: 150px;
 }
@@ -1100,7 +1110,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 6rem;
+  right: 7%;
   width: calc(100% - 1300px);
   min-width: 250px;
 }
@@ -1223,6 +1233,22 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
+.assessment .btn-back {
+  font-size: 12px;
+  color: #d7006d;
+  cursor: pointer;
+  margin-left: -60px;
+  width: 60px;
+  display: inline-block;
+}
+.assessment .btn-back img {
+  margin-left: -8px;
+  margin-right: 4px;
+  top: -1px;
+}
+.assessment .btn-back:hover {
+  color: #f6323e;
+}
 .assessment .drink-slider {
   display: inline-block;
   width: auto;
@@ -1266,6 +1292,7 @@ input[type="checkbox"], input[type="radio"] {
 .assessment .share {
   visibility: hidden;
   opacity: 0;
+  margin: 1.2rem 12% 0 12%;
   -webkit-transition: all 1s 0 ;
   -moz-transition: all 1s 0 ;
   -o-transition: all 1s 0 ;
@@ -1274,6 +1301,10 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  color: #555558;
+}
+.assessment .share .btn-results {
+  margin-bottom: 5rem;
 }
 .assessment .share.in {
   visibility: visible;
@@ -1345,6 +1376,9 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0.6;
 }
 .education .dots .dot.active {
+  width: 8px;
+  height: 8px;
+  top: -2px;
   opacity: 1;
 }
 .education .module {
@@ -1601,6 +1635,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .vignette.last .share {
   color: #fff;
+  padding-bottom: 200px;
 }
 .education .vignette.last .share .arrow {
   margin: auto;
@@ -1659,6 +1694,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
+  text-shadow: 1px 1px 2px #141414;
 }
 .education.in {
   left: 0;
@@ -1931,7 +1967,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 80%;
   text-align: center;
   font-family: 'avg_bold';
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   line-height: 3.2rem;
   z-index: 30;
 }
@@ -1980,7 +2016,7 @@ input[type="checkbox"], input[type="radio"] {
   top: 40%;
 }
 #height-question {
-  height: 290px;
+  height: 310px;
   transform: perspective(1000px) translateY(-50%);
   top: 40%;
 }
@@ -2207,6 +2243,9 @@ footer {
   }
   .assessment .bottle {
     left: 20px;
+  }
+  .assessment .share {
+    margin: 0;
   }
   .assessment .drink-slider .drinks {
     width: 120%;

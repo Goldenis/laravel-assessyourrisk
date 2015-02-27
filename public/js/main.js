@@ -1,4 +1,5 @@
     var resultLevel = 'average';
+    var savedQuestionsAnswers = {};  
 
 (function($, undefined) {
     var _$window;
@@ -31,7 +32,7 @@
     var newClosest = 0;
 
     var _currentView = "left";
-    var _currentModule = 0;
+    var _currentModule = null;
     var _oldModule;
     var _currentQuestion = 0;
     var _totalQuestions;
@@ -66,13 +67,15 @@
     var chart5;
 
     var savedQuizProgress = {};
-    var savedDiveProgress = {};
-    var savedQuestionsAnswers = {};    
+    var savedDiveProgress = {};  
     var lastDeepSave = null;
     var currentGlass = 0;
 
     var receivedBMI = false;
-
+    var moduleCategories = ['lifestyle','knowing','family']
+    var lifestylePledgeCount = 0;
+    var knowingPledgeCount = 0;
+    var familyPledgeCount = 0;    
 
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
@@ -197,9 +200,9 @@
         $('.education .dots h6').removeClass('active')
         if(hNum < $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(0).addClass('active')
-        }else if(_currentHeadline < $('.module').eq(1).find($(".headline")).length){
+        }else if(hNum < $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(1).addClass('active')
-        }else if(_currentHeadline < $('.module').eq(2).find($(".headline")).length){
+        }else if(hNum < $('.module').eq(2).find($(".headline")).length + $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(2).addClass('active')
         }
         $('.education .dot').removeClass('active');
@@ -262,6 +265,37 @@
             10, [1, 1, 1, 1, 1, 1, 1, 1], ['#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#D7006D']);
     }
 
+    function getUserCount() {
+        
+        resp = $.ajax({
+          type : "GET",
+          cache: false,
+          //url : '/pledge/'+ type + '/count/',
+          url : '/count',
+          dataType: 'json'
+        }).done(function(data) {
+
+        lifestylePledgeCount = data[moduleCategories[0]];
+        knowingPledgeCount = data[moduleCategories[1]];
+        familyPledgeCount = data[moduleCategories[2]]; 
+
+        for (i=0; i<moduleCategories.length; i++) {
+          console.log('pledges ' +data[moduleCategories[i]])
+          if(i===0){
+            pledgeMessage = "improve their lifestyles."
+          }else if(i===1){
+            pledgeMessage = "know their normal."
+          }else if(i===2){
+            pledgeMessage = "learn their family history."
+          }
+          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " women have pledged to "+ pledgeMessage);
+          }
+
+        }).fail(function(error) {
+          console.log(error);
+        });
+      }
+
     function _registerEventListeners() {
         $('#Begin, .assess-start').on('click', function(e) {
             $('.vid-container').remove();
@@ -272,9 +306,60 @@
         })
 
         $('.testPDF, .pdf').on('click', function() {
-            createPinkPDF(resultLevel);
+            createPinkPDF(resultLevel, savedQuestionsAnswers);
         })
 
+
+        $('.facebook.lifestyle').on('click', function() {
+            console.log('clicked')
+
+            $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/lifestyle",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })
+
+        $('.facebook.knowing').on('click', function() {
+            console.log('clicked')
+
+            $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/knowing",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })
+
+        $('.facebook.family').on('click', function() {
+            console.log('clicked')
+
+            $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/family",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })        
 
         $('.male-overlay .close-btn').on('click', function() {
             $('.vid-container').remove();
@@ -314,17 +399,21 @@
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
-            $('.assessment .dot').eq(_currentQuestion).addClass('on');
-            $('.assessment .dot').eq(_currentQuestion).addClass('active');
+            $('.fact').eq(_currentQuestion).addClass('in');
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        // $('.btn-calculate').on('click', function(e) {
-        //     calculateWeight($(this));
-        // })
+        $('.btn-calculate').on('click', function(e) {
+            calculateWeight($(this));
+        })
         $('.question .answers button').on('click', function(e) {
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
             }
+        })
+        $('.btn-back').on('click', function(e) { 
+            prevQuestion();
         })
         $('.asterisk').on('mouseenter', function() {
             $(this).next().addClass("show");
@@ -364,7 +453,7 @@
             $('.menu-icon').removeClass('left');
             $('.education').removeClass('in');
         })
-        $('.menu-icon').on('click', function() {
+        $('.menu-icon, .btn-results').on('click', function() {
             if (!overlayOpen) {
                 openProgressOverlay();
             } else {
@@ -459,7 +548,7 @@
     function createDots() {
         for (var i = 0; i < _totalQuestions; i++) {
             var dot = '<div class="dot"></div>';
-            $('.assessment .dots').append(dot);
+            $('.assessment-dots').append(dot);
         };
         for (var i = 0; i < _totalHeadlines; i++) {
             var dot = '<div class="dot"></div>';
@@ -582,6 +671,7 @@
             if (_currentModule != undefined) {
                 setTimeout(function() {
                     $('.right-column').addClass('down');
+                    $('.nav').addClass('in');
                 }, 800)
             }
         } else {
@@ -589,6 +679,7 @@
             _currentView = "left"
             setTimeout(function() {
                 $('.right-column').removeClass('down');
+                $('.nav').removeClass('in');
             }, 800)
         }
         $('.assessment').toggleClass('in');
@@ -768,9 +859,9 @@
           console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
-            $('.assessment .dot').eq(_currentQuestion).removeClass('active')
+            $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
             _currentQuestion = 8;
-            $('.assessment .dot').eq(_currentQuestion).addClass('on')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
         }
 
@@ -953,7 +1044,7 @@
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
-Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
+Have any of your immediate family members (parent, sibling, grandparent, aunt or uncle) been diagnosed with any of the following%3F \
 %0D%0A\
 - Breast cancer diagnosed at age 50 or under \
 %0D%0A\
@@ -1009,7 +1100,9 @@ Do you know if I do%3F");
 
         if (_currentQuestion >= _totalQuestions - 1) {
             addCustomResults()
-            openProgressOverlay();
+            setTimeout(function(){
+                openProgressOverlay();
+            },500)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'
@@ -1047,13 +1140,35 @@ Do you know if I do%3F");
         _currentQuestion++;
         setTimeout(function() {
             $('.fact').eq(_currentQuestion).addClass('in');
-            $('.assessment .dot').eq(_oldQuestion).removeClass('active')
-            $('.assessment .dot').eq(_currentQuestion).addClass('on')
-            $('.assessment .dot').eq(_currentQuestion).addClass('active')
+            $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
         }, 1000)
         $('.question').eq(_currentQuestion).addClass('in')
+        $('.question').eq(_currentQuestion).removeClass('out-up')
     }
 
+    function prevQuestion(){
+        if(_currentQuestion > 0){
+            $('.fact').eq(_currentQuestion).removeClass('in');
+            $('.fact').eq(_currentQuestion).addClass('out');
+            
+            $('.question').eq(_currentQuestion).addClass('out-up')
+            $('.question').eq(_currentQuestion).removeClass('in')
+
+            var _oldQuestion = _currentQuestion;
+            _currentQuestion--;
+            setTimeout(function() {
+                $('.fact').eq(_currentQuestion).addClass('in');
+                $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
+            }, 1000)
+            $('.question').eq(_currentQuestion).removeClass('out-up')
+            $('.question').eq(_currentQuestion).addClass('in')
+            $('.assessment .share').removeClass('in')
+        }
+    }
     function nextVignette() {
 
         // $('.vignette').removeClass('in');
@@ -1320,6 +1435,7 @@ Do you know if I do%3F");
         for (var i = 0; i < _totalHeadlines; i++) {
             $('.headline').eq(i).attr('data-idx', i)
         }
+        getUserCount();
         _registerEventListeners();
         _pageResize();
         initialized = true;

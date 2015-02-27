@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
+    <script>
+    function fbShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+    }
+    </script
   </head>
   <body>
 
@@ -22,7 +29,7 @@
     <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <span class="share-btn">share<a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <span class="share-btn">share<a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -40,7 +47,7 @@
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
+          <button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
         </div>
       </div>
       <div class="vignettes">
@@ -302,11 +309,11 @@
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
-        <p>1 in 8 women will develop breast cancer at some point in her lifetime.  1 in 67 will develop ovarian cancer.  
+        <p><b>1 in 8 women will develop breast cancer at some point in her lifetime.  1 in 67 will develop ovarian cancer.  
           <br>
           <br>
           Your body. Your life.<br>
-          <b>Don’t leave it up to chance.</b>
+          Don’t leave it up to chance.</b>
         </p>
         <a id="Begin" href="#home"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
       </div>
@@ -344,14 +351,15 @@
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
-              <h5>You—and the 52 million women in the United States between 18 and 45 who have not been diagnosed with breast or ovarian cancer—are at risk simply because you have breasts and/or ovaries.</h5>
+              <h5>You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
             <div class="fact">
+              <h5>Age is important when it comes to breast and ovarian cancer risk: most breast and ovarian cancers develop when women are in their 50s and 60s, but breast cancer in women with a genetic predisposition often develops much earlier, starting when those women are in their 30s and 40s.</h5>
             </div>
 
             <div class="fact">
-              <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful — <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
+              <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
             </div>
 
             <div class="fact">
@@ -367,23 +375,23 @@
             </div>
             
             <div class="fact">
-              <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day. Limit alcohol to one drink per day or eliminate it entirely.</h5>
+              <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day on average. Limit alcohol to one drink per day or eliminate it entirely.</h5>
             </div>
 
             <div class="fact">
-              <h5>Getting a genetic test is as simple as taking a blood test.  The Affordable Care Act requires coverage of genetic testing for women who qualify. </h5>
+              <h5>Getting a genetic test is as simple as taking a blood test. The Affordable Care Act requires insurance coverage of genetic testing for women who qualify. </h5>
             </div>
 
             <div class="fact">
-              <h5>One of the most common mutations — BRCA ½ — is present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
+              <h5>One of the most common mutations — BRCA 1/2 — are present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
             </div>
 
             <div class="fact">
-              <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
+              <h5>Regular exercise – breaking a sweat for 30+ minutes on most days – may reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
             </div>
 
             <div class="fact">
-              <h5><b>Nothing has a greater effect on a woman’s level of risk than her family history.</b>  Background information from BOTH sides of your family is important.</h5>
+              <h5><i>Nothing</i> has a greater effect on a woman’s level of risk than her family history. Background information from BOTH sides of your family is important</h5>
             </div>
 
             <div class="fact">
@@ -399,23 +407,23 @@
             </div>
 
             <div class="fact">
-              <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
+              <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected. Remember that information from your father’s side is just as important as your mother’s.</h5>
             </div>          
 
             <div class="fact">
-              <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with the most common, low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
+              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line - there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
             </div>
 
             <div class="fact">
-              <h5><b>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</b></h5>
+              <h5>A breast biopsy sometimes shows abnormal cells that are considered a “precancer” (called atypical hyperplasia, or cellular atypia.) Patients who have had precancerous cells on biopsy are more likely to have cancer later in life.   </h5>
             </div>          
 
             <div class="fact">
-              <h5>Pregnancy reduces risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
+              <h5>Pregnancy reduces breast cancer risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen. It also reduces the risk of ovarian cancer by preventing ovulation and therefore the chance for cell growth to “go rogue”. </h5>
             </div>
 
             <div class="fact">
-              <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
+              <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer. It also reduces the chance of ovulation, and therefore also it decreases the risk of ovarian cancer.</h5>
             </div>
           </div>
         </div>
@@ -428,15 +436,16 @@
     </div>
 
     <!-- ASSESSMENT-->
-
     <section class="assessment scrollpane"> 
-      <div class="section-title">Assess Your Risk</div>
+      <!-- <div class="section-title">Assess Your Risk</div> -->
+      <div class="assessment-dots dots">
+        <div class="btn-back"><img src="img/arrow_left_pink.png"></div>
+      </div>
       <section class="assessment-intro in">
         <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
         <button class="action">Let’s Go.</button>
       </section>
-      <div class="dots">
-      </div>
+
       <div class="assessment-wrap">
         <div class="question" data-question-id="1">
           <div class="prompt">Do you have breasts and/or ovaries?</div>
@@ -509,6 +518,7 @@
               <button>Continue</button>
             </div>
           </div>
+
           <div class="height-wrapper">  
             <div class="prompt">What is your height?</div>
             <div class="visual">
@@ -519,15 +529,13 @@
                   </div>
                 </div>
             </div>
-            <div class="answers">
               <button class="btn-calculate">Continue</button>
-            </div>
           </div>   
           <br>
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -541,7 +549,7 @@
           <br>
           <div class="answers">
             <button>Continue</button>
-            <button class="sub ask">Help me ask them</button>  
+            <button class="sub ask">Help me ask them</button>
           </div>        
         </div>
 
@@ -560,14 +568,14 @@
 	            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
-	            <br>
+	            <br><br><br>
 	            <button>Continue</button>
 	          </div>
 	        </div>
         </div>
 
         <div class="question" data-question-id="15">
-          <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
+          <div class="prompt">Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
             <div class="checkbox-list cb1">
@@ -612,7 +620,7 @@
         </div>
 
         <div class="question cb3" data-question-id="17">
-          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
+          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers?</div>
           <div class="checkbox-list column-left">        
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
@@ -664,7 +672,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt) that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt or uncle) that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
@@ -712,7 +720,8 @@
           </div>
         </div>
         <div class="share">
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
+          <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -997,7 +1006,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<button class="facebook knowing">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
             </div>
           </div>
@@ -1067,14 +1076,14 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
              <div class="headline">
             	<h3 class="family-pledge-number">0 women have pledged to learn their family histories.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<button class="facebook family">Join Them</button>
             </div>
             <div class="headline last">            
               <div class="share">
                 <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
+                <button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="javascript:fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
               </div>
             </div>
           </div>
@@ -1094,8 +1103,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/facebook.js"></script>    
+    <script src="js/plugins.js"></script>  
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
 

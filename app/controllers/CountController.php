@@ -9,7 +9,7 @@ class CountController extends BaseController {
 			), array (
 					'type' => array (
 							'required',
-							'regex:[^.*\b(lifestyle|knowing)\b.*$]' 
+							'regex:[^.*\b(lifestyle|knowing|family)\b.*$]' 
 					) 
 			) );
 			if ($validator->fails ()) {

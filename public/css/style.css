@@ -275,6 +275,17 @@ button.sub:hover {
   color: #f6323e;
   border-color: #f6323e;
 }
+button.sub.ask {
+  border: none;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 8px;
+  margin-left: 20px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #d7006d;
+}
 .bg-video {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
@@ -721,10 +732,10 @@ button.sub:hover {
   color: transparent;
 }
 .share-btn:hover img {
-  opacity: 1;
+  opacity: 0.7;
 }
 .share-btn:hover img:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 .male-overlay {
   text-align: center;
@@ -868,9 +879,8 @@ button.sub:hover {
 }
 .dot.active {
   background: #d7006d;
-  width: 16px;
-  height: 16px;
-  top: 3px;
+  border-color: #d7006d;
+  top: -2px;
 }
 .tooltip-bottom {
   width: auto;
@@ -1334,6 +1344,9 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0.6;
 }
 .education .dots .dot.active {
+  width: 8px;
+  height: 8px;
+  top: -2px;
   opacity: 1;
 }
 .education .module {

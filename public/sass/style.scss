@@ -326,6 +326,15 @@ button {
             color: $red;
             border-color: $red;
         }
+        &.ask{
+            border: none;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 8px;
+            margin-left: 20px;
+            @include rounded(0);
+            border-bottom: 2px solid $pink;
+        }
     }
 }
 .bg-video {
@@ -767,9 +776,9 @@ button {
         padding-right: 40px;
         color: transparent;
         img{
-            opacity: 1;
+            opacity: .7;
             &:hover{
-                opacity: .7;
+                opacity: 1;
             }
         }
     }
@@ -886,9 +895,8 @@ button {
     }
     &.active {
         background: $pink;
-        width: 16px;
-        height: 16px;
-        top: 3px;
+        border-color: $pink;
+        top: -2px;
     }
 }
 .tooltip-bottom {
@@ -1316,6 +1324,9 @@ input[type="checkbox"], input[type="radio"] {
                 opacity: .6;
             }
             &.active {
+                width: 8px;
+                height: 8px;
+                top: -2px;
                 opacity: 1;
             }
         }

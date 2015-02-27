@@ -513,6 +513,7 @@
               <button>Continue</button>
             </div>
           </div>
+
           <div class="height-wrapper">  
             <div class="prompt">What is your height?</div>
             <div class="visual">
@@ -523,9 +524,7 @@
                   </div>
                 </div>
             </div>
-            <div class="answers">
               <button class="btn-calculate">Continue</button>
-            </div>
           </div>   
           <br>
         </div>

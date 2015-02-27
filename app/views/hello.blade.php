@@ -15,7 +15,7 @@
         var winLeft = (screen.width / 2) - (winWidth / 2);
         window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
     }
-    </script
+    </script>
   </head>
   <body>
 
@@ -207,10 +207,11 @@
                 <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button><button class="">SHARE WITH MY DOCTOR</button>
               </div>         
             </div>
-<!-- paragraph-wrapper close -->
+<!-- paragraph wrapper close -->
         </div>
       </div> 
-    <!-- End of Results div -->
+  
+  <!-- End of Results div -->
 
       <div class="cards">      
 

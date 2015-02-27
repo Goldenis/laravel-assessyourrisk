@@ -1386,13 +1386,13 @@ Do you know if I do%3F");
 
 
 
-        if (event.value == '/intro' || event.value == '/' && event.value !== _currentPath) {
+        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
             //$.address.path('/home');
             console.log('GO HOME');
             
             if (_currentPath !== '/education' && _currentPath !== '/intro'){
-                goHome();
+                //goHome();
             }
             else if (_currentPath === '/education')
             {

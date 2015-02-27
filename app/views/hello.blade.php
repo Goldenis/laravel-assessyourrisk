@@ -239,7 +239,7 @@
           <div class="item exercise-low">
             <div class="section-title">PHYSICAL ACTIVITY</div>
             <h4>You get enough exercise.</h4>
-            <p>Your active lifestyle will benefit your health in many, many ways.</p>
+            <p>Your active lifestyle will benefit your health in many, many ways. Stick to it!</p>
           </div>
           <div class="item birth-control-low">
             <div class="section-title">BIRTH CONTROL</div>
@@ -273,12 +273,12 @@
           <div class="item">
             <div class="section-title exercise-high">PHYSICAL ACTIVITY</div>
             <h4>You’re not getting enough exercise.</h4>
-            <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts!</p>
+            <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.</p>
           </div>
           <div class="item birth-control-high">
             <div class="section-title">BIRTH CONTROL</div>
             <h4>You haven’t taken birth control for five years.</h4>
-            <p>Consider talking to your doctor about whether birth control pills might be a good option for you — if you take them for five years, you can reduce your ovarian cancer risk by up to 50%. That's no small feat.</p>
+            <p>Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.</p>
           </div>  
           <div class="item breastfeeding-high">
             <div class="section-title">BREASTFEEDING</div>

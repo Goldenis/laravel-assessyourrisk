@@ -1002,6 +1002,13 @@
                 display: 'block'
              })   
 
+//period card
+        if (savedQuizProgress[13] == '-1') { 
+            $('.item.period-high').css({
+                display: 'block'
+            })
+        } 
+        
 //birth-control card
         if (savedQuizProgress[15] == '+1') { 
             $('.item.birth-control-low').css({

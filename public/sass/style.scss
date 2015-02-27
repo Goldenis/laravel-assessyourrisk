@@ -989,7 +989,7 @@ input[type="checkbox"], input[type="radio"] {
     left: 0;
     right: 0;
     img {
-        width: 10rem;
+        width: 9rem;
         max-width: 205px;
         min-width: 100px;
     }
@@ -997,7 +997,7 @@ input[type="checkbox"], input[type="radio"] {
         top: -13rem;
         img {
         -webkit-transform: rotate(45deg);
-        width: 12rem;
+        width: 11rem;
         max-width: 205px;
         min-width: 130px;
         }
@@ -1005,7 +1005,7 @@ input[type="checkbox"], input[type="radio"] {
     &.stopwatch{
         top: -13rem;
         img {
-            width: 15rem;
+            width: 13rem;
             max-width: 205px;
             min-width: 150px;
         }
@@ -1261,7 +1261,12 @@ input[type="checkbox"], input[type="radio"] {
     .share {
         visibility: hidden;
         opacity: 0;
+        margin: 1.2rem 12% 0 12%;
         @include transition(1s);
+        color: $darkColor;
+        .btn-results{
+            margin-bottom: 5rem;
+        }
         &.in {
             visibility: visible;
             opacity: 1;
@@ -2042,6 +2047,9 @@ footer {
         padding: 6rem 3rem 0;
         .bottle {
             left: 20px;
+        }
+        .share{
+            margin: 0;
         }
         .drink-slider {
             .drinks {

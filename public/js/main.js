@@ -399,9 +399,9 @@
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        // $('.btn-calculate').on('click', function(e) {
-        //     calculateWeight($(this));
-        // })
+        $('.btn-calculate').on('click', function(e) {
+            calculateWeight($(this));
+        })
         $('.question .answers button').on('click', function(e) {
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));

@@ -16,6 +16,14 @@ Route::get('/pledge/{id}/count', 'PledgeController@getCount');
 Route::post('/pledge', 'PledgeController@post');
 
 /**
+ * Count endpoints --
+ *
+ */
+Route::get('/count', 'CountController@get');
+Route::get('/count/wipe', 'CountController@wipe');
+Route::get('/count/add/{type}', 'CountController@postCount');
+
+/**
  * Test harnesses --
  * 
  */

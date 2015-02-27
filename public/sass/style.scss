@@ -441,7 +441,7 @@ button {
     // position: relative;
     color: $pink;
     button {
-        margin-top: -25px;
+        margin-top: 1rem;
     }
     .share-btn-wrapper, .share-copy {
         border: 1px solid white;
@@ -512,7 +512,7 @@ button {
         width: 100%;
         padding: 1rem 6rem;
         float: left;
-        display: none;
+        //display: none;
         .progress-result{
             padding-bottom: 1rem;
             .percentage.percquiz{ 
@@ -627,6 +627,20 @@ button {
             background: transparent;
         }
     }
+    .results-copy-moderate{
+        display: none;
+        &.on{
+            display: block;
+        }    
+    }
+
+    .results-copy-high{
+        display: none;
+        &.on{
+            display: block;
+        }    
+    }
+
     .cards {
         width: 100%;
         margin-top: 40px;
@@ -716,6 +730,35 @@ button {
         }
     }
 }
+.share-btn{
+    @include transition(.3s,ease-out);
+    a:nth-of-type(1){
+        position: absolute;
+        left: 30px;
+        top: .65rem;
+    }
+    a:nth-of-type(2){
+        position: absolute;
+        left: 80px;
+        top: .65rem;
+    }
+    img{
+        width: 2rem;
+        opacity: 0;
+        @include transition(.3s);
+    }
+    &:hover{
+        padding-left: 40px;
+        padding-right: 40px;
+        color: transparent;
+        img{
+            opacity: 1;
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
 .male-overlay {
     text-align: center;
     h1 {
@@ -730,16 +773,16 @@ button {
         color: $nude;
         a:nth-of-type(1){
             position: absolute;
-            left: 30px;
-            top: 19px;
+            left: 2.5rem;
+            top: 1.5rem;
         }
         a:nth-of-type(2){
             position: absolute;
-            left: 90px;
-            top: 19px;
+            left: 7rem;
+            top: 1.5rem;
         }
         img{
-            width: 46px;
+            width: 3rem;
             opacity: 0;
             @include transition(.3s);
         }
@@ -818,10 +861,14 @@ button {
     width: 8px;
     height: 8px;
     @include rounded(50%);
-    background: $light-gray;
+    background: transparent;
+    border: 1px solid $light-gray;
     margin-right: 1rem;
-    @include transition(.6s, $ease-out-back);
+    @include transition(.3s, linear);
     top: 0;
+    &.on{
+        background: $light-gray;
+    }
     &.active {
         background: $pink;
         width: 16px;
@@ -914,7 +961,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif{
     position: absolute;
-    top: -150px;
+    top: -12rem;
     margin: auto;
     left: 0;
     right: 0;
@@ -924,18 +971,20 @@ input[type="checkbox"], input[type="radio"] {
         min-width: 100px;
     }
     &.birth{
+        top: -13rem;
         img {
         -webkit-transform: rotate(45deg);
-        width: 13rem;
+        width: 12rem;
         max-width: 205px;
         min-width: 130px;
         }
     }    
     &.stopwatch{
+        top: -13rem;
         img {
-        width: 15rem;
-        max-width: 205px;
-        min-width: 150px;
+            width: 15rem;
+            max-width: 205px;
+            min-width: 150px;
         }
     }    
 }
@@ -1235,26 +1284,24 @@ input[type="checkbox"], input[type="radio"] {
         -webkit-transform: translate(0, 0);
         h6 {
             position: absolute;
-            top: 23px;
+            top: 25px;
             color: #fff;
-            &:nth-of-type(2) {
-                left: 400px;
-            }
-            &:nth-of-type(3) {
-                left: 500px;
+            font-size: 12px;
+            opacity: .4;
+            &.active{
+                opacity: 1;
             }
         }
         .dot {
-            background: rgba(255, 255, 255, .3);
-            cursor: pointer;
-            &.active {
-                width: 8px;
-                height: 8px;
-                top: 0;
+            margin-right: 14px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: transparent;
+            &.on {
                 background: #fff;
+                opacity: .6;
             }
-            &:hover {
-                background: #fff;
+            &.active {
+                opacity: 1;
             }
         }
     }
@@ -1401,6 +1448,8 @@ input[type="checkbox"], input[type="radio"] {
         border-top: 2px solid rgba(255, 255, 255, .2);
     }
     .btn-begin {
+        @include transform(rotate(90deg));
+        width: 30px;
         margin-top: 50px;
         &:hover {
             border-color: $red;
@@ -1449,6 +1498,17 @@ input[type="checkbox"], input[type="radio"] {
         }
         &.last{
             height: calc(100% - 150px);
+            .arrow{
+                @include transform(rotate(-90deg));
+                width: 15px;
+                top: -50px;
+            }
+            .share{
+                color: #fff;
+                .arrow{
+                    margin: auto;
+                }
+            }
         }
     }
     .headlines {
@@ -1744,7 +1804,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .out-up {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0 !important;
     @include transform-origin(50% 200%);
     @include transform(perspective(1000px) translateY(-40px));
     @include transition(.5s, ease-in);
@@ -1761,6 +1821,11 @@ footer {
             width: 400px;
             height: 400px;
             left: 20%;
+        }
+    }
+    .dots{
+        h6{
+            display: none;
         }
     }
     .dot {
@@ -1993,6 +2058,7 @@ footer {
                 display: none;
             }
             .dot {
+                margin-right: 7px;
                 &.active {
                     width: 4px;
                     height: 4px;
@@ -2019,7 +2085,7 @@ footer {
             }
         }
         .section-title {
-            left: 3rem;
+            left: 0;
             top: 2rem;
         }
         .btn-continue {
@@ -2239,6 +2305,10 @@ footer {
         }
     }
 }
+.email-content{
+    display: none !important;
+}
+
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */

@@ -399,7 +399,7 @@ button.sub:hover {
   color: #d7006d;
 }
 .share button {
-  margin-top: -25px;
+  margin-top: 1rem;
 }
 .share .share-btn-wrapper, .share .share-copy {
   border: 1px solid white;
@@ -473,7 +473,6 @@ button.sub:hover {
   width: 100%;
   padding: 1rem 6rem;
   float: left;
-  display: none;
 }
 .progress-overlay .results .progress-result {
   padding-bottom: 1rem;
@@ -571,6 +570,18 @@ button.sub:hover {
 .progress-overlay .results .sub {
   background: transparent;
 }
+.progress-overlay .results-copy-moderate {
+  display: none;
+}
+.progress-overlay .results-copy-moderate.on {
+  display: block;
+}
+.progress-overlay .results-copy-high {
+  display: none;
+}
+.progress-overlay .results-copy-high.on {
+  display: block;
+}
 .progress-overlay .cards {
   width: 100%;
   margin-top: 40px;
@@ -659,6 +670,49 @@ button.sub:hover {
   left: 0;
   top: 3rem;
 }
+.share-btn {
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.share-btn a:nth-of-type(1) {
+  position: absolute;
+  left: 30px;
+  top: 0.65rem;
+}
+.share-btn a:nth-of-type(2) {
+  position: absolute;
+  left: 80px;
+  top: 0.65rem;
+}
+.share-btn img {
+  width: 2rem;
+  opacity: 0;
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.share-btn:hover {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: transparent;
+}
+.share-btn:hover img {
+  opacity: 1;
+}
+.share-btn:hover img:hover {
+  opacity: 0.7;
+}
 .male-overlay {
   text-align: center;
 }
@@ -679,16 +733,16 @@ button.sub:hover {
 }
 .male-overlay .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 30px;
-  top: 19px;
+  left: 2.5rem;
+  top: 1.5rem;
 }
 .male-overlay .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 90px;
-  top: 19px;
+  left: 7rem;
+  top: 1.5rem;
 }
 .male-overlay .share-btn img {
-  width: 46px;
+  width: 3rem;
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -783,17 +837,21 @@ button.sub:hover {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #ccc;
+  background: transparent;
+  border: 1px solid #ccc;
   margin-right: 1rem;
-  -webkit-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-  -moz-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-  -o-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-  -ms-transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-  transition: all 0.6s 0 cubic-bezier(0.175, 0.885, 0.32, 1.675);
-  -moz-transition-duration: 0.6s;
+  -webkit-transition: all 0.3s 0 linear;
+  -moz-transition: all 0.3s 0 linear;
+  -o-transition: all 0.3s 0 linear;
+  -ms-transition: all 0.3s 0 linear;
+  transition: all 0.3s 0 linear;
+  -moz-transition-duration: 0.3s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
   top: 0;
+}
+.dot.on {
+  background: #ccc;
 }
 .dot.active {
   background: #d7006d;
@@ -883,7 +941,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif {
   position: absolute;
-  top: -150px;
+  top: -12rem;
   margin: auto;
   left: 0;
   right: 0;
@@ -893,11 +951,17 @@ input[type="checkbox"], input[type="radio"] {
   max-width: 205px;
   min-width: 100px;
 }
+.anim-gif.birth {
+  top: -13rem;
+}
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
-  width: 13rem;
+  width: 12rem;
   max-width: 205px;
   min-width: 130px;
+}
+.anim-gif.stopwatch {
+  top: -13rem;
 }
 .anim-gif.stopwatch img {
   width: 15rem;
@@ -1239,27 +1303,25 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .dots h6 {
   position: absolute;
-  top: 23px;
+  top: 25px;
   color: #fff;
+  font-size: 12px;
+  opacity: 0.4;
 }
-.education .dots h6:nth-of-type(2) {
-  left: 400px;
-}
-.education .dots h6:nth-of-type(3) {
-  left: 500px;
+.education .dots h6.active {
+  opacity: 1;
 }
 .education .dots .dot {
-  background: rgba(255, 255, 255, .3);
-  cursor: pointer;
+  margin-right: 14px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  background: transparent;
+}
+.education .dots .dot.on {
+  background: #fff;
+  opacity: 0.6;
 }
 .education .dots .dot.active {
-  width: 8px;
-  height: 8px;
-  top: 0;
-  background: #fff;
-}
-.education .dots .dot:hover {
-  background: #fff;
+  opacity: 1;
 }
 .education .module {
   position: absolute;
@@ -1438,6 +1500,11 @@ input[type="checkbox"], input[type="radio"] {
   border-top: 2px solid rgba(255, 255, 255, .2);
 }
 .education .btn-begin {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 30px;
   margin-top: 50px;
 }
 .education .btn-begin:hover {
@@ -1499,6 +1566,20 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .vignette.last {
   height: calc(100% - 150px);
+}
+.education .vignette.last .arrow {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 15px;
+  top: -50px;
+}
+.education .vignette.last .share {
+  color: #fff;
+}
+.education .vignette.last .share .arrow {
+  margin: auto;
 }
 .education .headlines {
   color: #fff;
@@ -1897,7 +1978,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .out-up {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0 !important;
   -webkit-transform-origin: 50% 200%;
   -moz-transform-origin: 50% 200%;
   -webkit-transform: perspective(1000px) translateY(-40px);
@@ -1924,6 +2005,9 @@ footer {
     width: 400px;
     height: 400px;
     left: 20%;
+  }
+  .dots h6 {
+    display: none;
   }
   .dot {
     width: 5px;
@@ -2138,6 +2222,9 @@ footer {
   .education .dots h6 {
     display: none;
   }
+  .education .dots .dot {
+    margin-right: 7px;
+  }
   .education .dots .dot.active {
     width: 4px;
     height: 4px;
@@ -2160,7 +2247,7 @@ footer {
     font-size: 4rem;
   }
   .education .section-title {
-    left: 3rem;
+    left: 0;
     top: 2rem;
   }
   .education .btn-continue {
@@ -2382,6 +2469,9 @@ footer {
     width: 100%;
     float: left;
   }
+}
+.email-content {
+  display: none !important;
 }
 /* =============================================================================
  Non-Semantic Helper Classes

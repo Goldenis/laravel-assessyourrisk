@@ -67,6 +67,7 @@
 
     var savedQuizProgress = {};
     var savedDiveProgress = {};
+    var savedQuestionsAnswers = {};    
     var lastDeepSave = null;
     var currentGlass = 0;
 
@@ -110,6 +111,12 @@
                 left: '25%'
             });
         }
+        $('.education .dots h6').eq(1).css({
+            left: $('.module').eq(0).find($(".headline")).length * 22
+        })
+        $('.education .dots h6').eq(2).css({
+            left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * 22
+        })
     }
 
     function sizeBGMedia() {
@@ -186,7 +193,18 @@
     }
 
     function fillDot() {
-        $('.education .dot').eq($('.headline').index(_currentHeadline)).addClass('active');
+        var hNum = $('.headline').index(_currentHeadline)
+        $('.education .dots h6').removeClass('active')
+        if(hNum < $('.module').eq(0).find($(".headline")).length){
+            $('.education .dots h6').eq(0).addClass('active')
+        }else if(_currentHeadline < $('.module').eq(1).find($(".headline")).length){
+            $('.education .dots h6').eq(1).addClass('active')
+        }else if(_currentHeadline < $('.module').eq(2).find($(".headline")).length){
+            $('.education .dots h6').eq(2).addClass('active')
+        }
+        $('.education .dot').removeClass('active');
+        $('.education .dot').eq(hNum).addClass('active');
+        $('.education .dot').eq(hNum).addClass('on');
     }
 
     function _scrollHandler() {
@@ -273,8 +291,15 @@
             })
         })
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:?subject=Here are the results of your risk assessment','');
+            window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
+        $('.sub.email').on('click', function() {
+            console.log('click');
+            var content = $('.email-content').text();
+            window.open('mailto:?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
+        })
+
+
         $('.progress-overlay .share-btn').on('click', function() {
             window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
@@ -284,14 +309,15 @@
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
+            $('.assessment .dot').eq(_currentQuestion).addClass('on');
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        $('.btn-calculate').on('click', function(e) {
-            calculateWeight($(this));
-        })
+        // $('.btn-calculate').on('click', function(e) {
+        //     calculateWeight($(this));
+        // })
         $('.question .answers button').on('click', function(e) {
-            if (!$(this).hasClass('sub')) {
+            if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
             }
         })
@@ -436,12 +462,6 @@
         };
         $('.percdive').html(0 + '/' + _totalHeadlines);
         $('.percquiz').html(0 + '/' + _totalQuestions);
-        $('.education .dots h6').eq(1).css({
-            left: $('.module').eq(0).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
-        })
-        $('.education .dots h6').eq(2).css({
-            left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * (parseInt($('html').css('font-size')) + $('.dot').eq(0).width())
-        })
     }
 
     function hideIntro() {
@@ -665,7 +685,11 @@
 
 
     function handleSaveQuizAnswer(answer) {
-               
+            
+        var answers = null;
+
+
+         //console.log(answer)      
         /*
           BMI
           Weight Status
@@ -680,13 +704,28 @@
         // 5 - Have any of your immediate family members
         // 7 - gene mutation have you or your relative
         // 10 - Within one side of the family
+        answers = answer.html();
+        //console.log(answers)
         var ansTxt = answer.attr("data-answer-id");
         //if ($.contains(_currentQuestion, $('.bmi-result'))) {
-            var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
+        var bmi = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
 
+        var age = $('input[name="age-radio"]:checked');
+        if (_currentQuestion == 1) {
+            ansTxt = age.attr("data-answer-id");
+            answers = age.next().html();
+        }
+
+
+        var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked');
+        if (_currentQuestion == 2) {
+            ansTxt = cancerHistoryCheck.attr("data-answer-id");
+            answers = cancerHistoryCheck.next().html();
+        }
 
             if (_currentQuestion == 4) {
             console.log(bmi)    
+            answers = bmi + " BMI Result"
             if (bmi < 18.5) {
                 ansTxt = "-1";
             } else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -697,36 +736,49 @@
                 ansTxt = "-1";
             }
         }
-        //}
+  
 
-        if (_currentQuestion == 6) ansTxt = currentGlass;
+        if (_currentQuestion == 6) {
+            ansTxt = currentGlass;
+            answers = currentGlass + "  alcohol drinks a day";            
+        }
 
         if (_currentQuestion == 5) {
             var data = [];
+            var ans5Text = []; 
             $('.cb1 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans5Text.push($(this).next().html());
             });
+            console.log(ans5Text);
             ansTxt = data;
+            answers = ans5Text;
         }
 
-        var mutationCheck = $('input[name="mutation-radio"]:checked').attr("data-answer-id");
-        if (_currentQuestion == 7) ansTxt = mutationCheck;
-
-          console.log(mutationCheck)
+        var mutationCheck = $('input[name="mutation-radio"]:checked');
+        if (_currentQuestion == 7) {
+            ansTxt = mutationCheck.attr("data-answer-id");
+            answers = mutationCheck.next().html();
+        }
+          console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
-            console.log('not')
+            $('.assessment .dot').eq(_currentQuestion).removeClass('active')
             _currentQuestion = 8;
+            $('.assessment .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
         }
 
 
         if (_currentQuestion == 8) {
             var data = [];
+            var ans8Text = []; 
             $('.cb2 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans8Text.push($(this).next().html());    
             });
             ansTxt = data;
+            answers = ans8Text;
 
             if (ansTxt == '1|-2') {
                 console.log('high')
@@ -740,11 +792,15 @@
         }
         if (_currentQuestion == 10) {
             var data = [];
+            var ans10Text = [];             
             $('.cb3 input:checked').each(function() {
                 data.push($(this).attr('data-answer-id'));
+                ans10Text.push($(this).next().html());   
             });
             ansTxt = data;
+            answers = ans10Text;
         }
+
 
         if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
             $('.risk-level').html('Increased');
@@ -753,7 +809,12 @@
             $('.results-copy-moderate').addClass('on');  
 
         }
+        
+        var questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
+        
+        var nine = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
+        savedQuestionsAnswers[String(_currentQuestion)] = nine;
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
         $('.question-stats').html('');
@@ -764,6 +825,42 @@
 
         updateCharts();
         console.log('Object savedQuizProgress = ', savedQuizProgress)
+
+        // if (_currentQuestion == 0) return;
+        console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+        getUserAnswers();
+    
+    }
+
+    function getUserAnswers() {
+        var emailqs;
+        
+         $('.email-content').html('');
+
+         $.each(savedQuestionsAnswers, function( key, value ) {
+            // console.log( value.questionnumber );
+            // console.log( value.questionTxt );
+            // console.log( value.questionanswer );
+            questionID = parseInt(value.questionnumber + 1);
+
+            if (key == 3) {
+                questionID = value.questionnumber - 1;
+                return; 
+            }
+
+            if (key == 4) {
+                value.questionTxt = 'Your BMI Score is'
+            }
+
+            $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + questionID + '.  ' + value.questionTxt + '%0D%0A' + value.questionanswer + '%0D%0A</div>')
+            //emailqs = value.questionnumber + value.questionTxt + value.questionanswer 
+        });
+
+         var resultCopy = $('.results-copy-high').text();
+
+         //$('.email-content').append('%0D%0A %0D%0A %0D%0A Your Result Text %0D%0A %0D%0A ' + encodeURIComponent(resultCopy));
+
+         //return emailqs;
     }
 
     function addCustomResults() {
@@ -845,7 +942,6 @@
 
     function askHandler(e) {
         e.stopPropagation();
-        alert($(this).closest(".question").attr("data-question-id"))
         switch ($(this).closest(".question").attr("data-question-id")) {
             case "14":
                 window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
@@ -947,6 +1043,7 @@ Do you know if I do%3F");
         setTimeout(function() {
             $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment .dot').eq(_oldQuestion).removeClass('active')
+            $('.assessment .dot').eq(_currentQuestion).addClass('on')
             $('.assessment .dot').eq(_currentQuestion).addClass('active')
         }, 1000)
         $('.question').eq(_currentQuestion).addClass('in')

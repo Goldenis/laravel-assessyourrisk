@@ -19,6 +19,7 @@
     <img src="img/brightpink_logo.png">
 
     </div>
+    <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
       <h1>Then <span class="share-btn">share<a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
@@ -35,12 +36,9 @@
       </div>
       <button class="sub close-btn">✕</button>
       <div class="share">
-        <div class="share-copy">
-          <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
-        </div>
-        <div="share-btn-wrapper">
-          <button class="share-btn">SHARE</button>
-        </div>
+        <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
+        <br>
+        <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
       </div>
       <div class="vignettes">
       	<div class='section-title'>Understand</div>
@@ -148,7 +146,6 @@
                 <a href="#" class="read-more"> ...Read More</a>
               </div>
             </div>
-
 
           <!-- High -->
             <p class="results-copy-high">
@@ -346,11 +343,11 @@
             </div>
 
             <div class="fact">
-              <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+              <h5><b>There is a clear link between obesity and breast cancer — extra fatty tissue produces extra estrogen, which in turn increases breast cancer risk.</b></h5>
             </div>
 
             <div class="fact">
-              <h5><b>There is a clear link between obesity and breast cancer</b> — extra fatty tissue creates extra estrogen which increases breast cancer risk.  Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</h5>
+              <h5><b>Maintaining a healthy body weight means keeping your BMI between 18.5 and 24.9.</b></h5>
             </div>
 
             <div class="fact">
@@ -443,25 +440,37 @@
                <img src="img/Calendar.gif">
             </div>
           <div class="prompt">How old are you?</div>
-        
+   
           <div class="answers">
-            <button data-answer-id="1">Under 20</button>
-            <button data-answer-id="1">20-30</button>
-            <button data-answer-id="0">31-35</button>
-            <button data-answer-id="0">36-40</button>
-            <button data-answer-id="0">40+</button>
+            <div class="checkbox-list">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">Under 20</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="age-radio" data-answer-id="2"><div class="label">20-30</div></div>
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="age-radio" data-answer-id="3"><div class="label">31-35</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="age-radio" data-answer-id="4"><div class="label">36-40</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="age-radio" data-answer-id="5"><div class="label">40+</div></div>
+            </div>
+              <br>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
           </div>
         </div>
 
         <div class="question" data-question-id="13">
           <div class="prompt">Have you ever been diagnosed with either of the following?</div>
-        
+
           <div class="answers">
-            <button data-answer-id="-1">Breast cancer</button>
-            <button data-answer-id="-1">Ovarian cancer</button>
-            <button data-answer-id="0">Neither</button>
-            <button data-answer-id="-1">Both</button>
-          </div>
+            <div class="checkbox-list">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Breast cancer</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>              
+              <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
+            </div>
+              <br>
+              <div class="answers">
+                <button>Continue</button>
+              </div>
+          </div>        
         </div>
         
         <div class="question weight-question" data-question-id="3">
@@ -498,13 +507,15 @@
                   </div>
                 </div>
             </div>
-            <button class="btn-calculate">Calculate</button>
+            <div class="answers">
+              <button class="btn-calculate">Continue</button>
+            </div>
           </div>   
           <br>
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -551,8 +562,8 @@
               <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
               <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
-              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>
-              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="0"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">I don’t know</div></div>
+              <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>              
             </div>
               <br>
               <div class="answers">
@@ -603,8 +614,8 @@
             <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
             <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain Cancer</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
             <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
           </div>     
 
           <div class="answers">
@@ -641,7 +652,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent, aunt</div> that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt) that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
@@ -689,7 +700,7 @@
           </div>
         </div>
         <div class="share">
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn">SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -742,7 +753,7 @@
               <div class="section-title">Understand Your Risk</div>
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -820,6 +831,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette last" data-src="running">
           <div class="headlines">
             <div class="headline last">
+              <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
             	<button class="facebook lifestyle">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
@@ -837,7 +849,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">
               <h3>Know What’s Normal For You</h3>
               <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -971,6 +983,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette last" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline last">
+              <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
             	<button class="facebook lifestyle">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
@@ -988,7 +1001,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <div class="section-title">Understand Your Risk</div>
               <h3>If you have breast and ovaries, you are at risk.</h3>  
               <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -1046,9 +1059,10 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
             <div class="headline last">            
               <div class="share">
+                <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn">SHARE</button>
+                <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
               </div>
             </div>
           </div>
@@ -1096,7 +1110,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="js/roulette.js"></script>
     <script src='js/vendor/pdfmake/build/pdfmake.min.js'></script>
     <script src='js/vendor/pdfmake/build/vfs_fonts.js'></script>
-    <script src="js/pdf_gen.js"
+    <script src='js/pdf_gen.js'></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
     <script type="text/javascript">

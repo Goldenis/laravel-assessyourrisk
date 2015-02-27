@@ -330,8 +330,8 @@ button {
             border: none;
             padding-right: 0;
             padding-left: 0;
-            padding-bottom: 8px;
-            margin-left: 20px;
+            padding-bottom: 5px;
+            margin-left: 0px;
             @include rounded(0);
             border-bottom: 2px solid $pink;
         }
@@ -984,7 +984,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif{
     position: absolute;
-    top: -12rem;
+    top: -10.5rem;
     margin: auto;
     left: 0;
     right: 0;
@@ -1186,7 +1186,12 @@ input[type="checkbox"], input[type="radio"] {
     button {
         @include centerH;
     }
-
+    .btn-back{
+        @include centerH;
+        position: absolute;
+        z-index: 10;
+        top: 21rem;
+    }
     .visual{
         top: 14px;
     }
@@ -1223,6 +1228,20 @@ input[type="checkbox"], input[type="radio"] {
     top: 0;
     overflow: hidden;
     @include transition(.4s);
+    .btn-back{
+        font-size: 12px;
+        color: $pink;
+        margin-top: 1rem;
+        cursor: pointer;
+        img{
+            margin-left: -8px;
+            margin-right: 4px;
+            top: -1px;
+        }
+        &:hover{
+            color: $red;
+        }
+    }
     .drink-slider {
         display: inline-block;
         width: auto;
@@ -1824,7 +1843,7 @@ input[type="checkbox"], input[type="radio"] {
 //     }
 // }
 #height-question {
-    height: 290px;
+    height: 310px;
     transform: perspective(1000px) translateY(-50%);
 	top: 40%;
 }

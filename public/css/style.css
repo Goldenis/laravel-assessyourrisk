@@ -400,7 +400,7 @@ button.sub:hover {
   color: #d7006d;
 }
 .share button {
-  margin-top: -25px;
+  margin-top: 1rem;
 }
 .progress-overlay {
   overflow: hidden;
@@ -661,15 +661,15 @@ button.sub:hover {
 .share-btn a:nth-of-type(1) {
   position: absolute;
   left: 30px;
-  top: 5px;
+  top: 0.65rem;
 }
 .share-btn a:nth-of-type(2) {
   position: absolute;
   left: 80px;
-  top: 5px;
+  top: 0.65rem;
 }
 .share-btn img {
-  width: 30px;
+  width: 2rem;
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -712,12 +712,12 @@ button.sub:hover {
 .male-overlay .share-btn a:nth-of-type(1) {
   position: absolute;
   left: 2.5rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 .male-overlay .share-btn a:nth-of-type(2) {
   position: absolute;
   left: 7rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 .male-overlay .share-btn img {
   width: 3rem;
@@ -919,7 +919,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif {
   position: absolute;
-  top: -150px;
+  top: -12rem;
   margin: auto;
   left: 0;
   right: 0;
@@ -929,11 +929,17 @@ input[type="checkbox"], input[type="radio"] {
   max-width: 205px;
   min-width: 100px;
 }
+.anim-gif.birth {
+  top: -13rem;
+}
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
-  width: 13rem;
+  width: 12rem;
   max-width: 205px;
   min-width: 130px;
+}
+.anim-gif.stopwatch {
+  top: -13rem;
 }
 .anim-gif.stopwatch img {
   width: 15rem;
@@ -1289,9 +1295,6 @@ input[type="checkbox"], input[type="radio"] {
   background: transparent;
 }
 .education .dots .dot.on {
-  width: 8px;
-  height: 8px;
-  top: 0;
   background: #fff;
   opacity: 0.6;
 }
@@ -1475,6 +1478,11 @@ input[type="checkbox"], input[type="radio"] {
   border-top: 2px solid rgba(255, 255, 255, .2);
 }
 .education .btn-begin {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 30px;
   margin-top: 50px;
 }
 .education .btn-begin:hover {
@@ -1536,6 +1544,20 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .vignette.last {
   height: calc(100% - 150px);
+}
+.education .vignette.last .arrow {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 15px;
+  top: -50px;
+}
+.education .vignette.last .share {
+  color: #fff;
+}
+.education .vignette.last .share .arrow {
+  margin: auto;
 }
 .education .headlines {
   color: #fff;
@@ -2178,6 +2200,9 @@ footer {
   .education .dots h6 {
     display: none;
   }
+  .education .dots .dot {
+    margin-right: 7px;
+  }
   .education .dots .dot.active {
     width: 4px;
     height: 4px;
@@ -2200,7 +2225,7 @@ footer {
     font-size: 4rem;
   }
   .education .section-title {
-    left: 3rem;
+    left: 0;
     top: 2rem;
   }
   .education .btn-continue {

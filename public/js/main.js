@@ -313,9 +313,9 @@
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })
         $('.ask').on('click', askHandler);
-        $('.btn-calculate').on('click', function(e) {
-            calculateWeight($(this));
-        })
+        // $('.btn-calculate').on('click', function(e) {
+        //     calculateWeight($(this));
+        // })
         $('.question .answers button').on('click', function(e) {
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
@@ -763,8 +763,9 @@
           console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
-            console.log('not')
+            $('.assessment .dot').eq(_currentQuestion).removeClass('active')
             _currentQuestion = 8;
+            $('.assessment .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
         }
 

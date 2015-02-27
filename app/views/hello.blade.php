@@ -497,13 +497,15 @@
                   </div>
                 </div>
             </div>
-            <button class="btn-calculate">Calculate</button>
+            <div class="answers">
+              <button class="btn-calculate">Continue</button>
+            </div>
           </div>   
           <br>
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent or aunt/uncle</div> been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -640,7 +642,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more <span class="asterisk">immediate family members</span><div class="definition">parent, sibling, grandparent, aunt</div> that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt) that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
@@ -688,7 +690,7 @@
           </div>
         </div>
         <div class="share">
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn">SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -741,7 +743,7 @@
               <div class="section-title">Understand Your Risk</div>
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -819,6 +821,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette last" data-src="running">
           <div class="headlines">
             <div class="headline last">
+              <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
             	<button class="facebook lifestyle">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
@@ -836,7 +839,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">
               <h3>Know What’s Normal For You</h3>
               <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -970,6 +973,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette last" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline last">
+              <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
             	<button class="facebook lifestyle">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
@@ -987,7 +991,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <div class="section-title">Understand Your Risk</div>
               <h3>If you have breast and ovaries, you are at risk.</h3>  
               <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
-              <button class="btn-begin">BEGIN</button>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
             </div>
           </div>
         </div>
@@ -1045,9 +1049,10 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
             <div class="headline last">            
               <div class="share">
+                <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn">SHARE</button>
+                <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
               </div>
             </div>
           </div>

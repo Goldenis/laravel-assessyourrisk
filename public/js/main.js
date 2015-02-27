@@ -1,4 +1,5 @@
     var resultLevel = 'average';
+    var savedQuestionsAnswers = {};  
 
 (function($, undefined) {
     var _$window;
@@ -66,13 +67,15 @@
     var chart5;
 
     var savedQuizProgress = {};
-    var savedDiveProgress = {};
-    var savedQuestionsAnswers = {};    
+    var savedDiveProgress = {};  
     var lastDeepSave = null;
     var currentGlass = 0;
 
     var receivedBMI = false;
-
+    var moduleCategories = ['lifestyle','knowing','family']
+    var lifestylePledgeCount = 0;
+    var knowingPledgeCount = 0;
+    var familyPledgeCount = 0;    
 
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
@@ -262,6 +265,37 @@
             10, [1, 1, 1, 1, 1, 1, 1, 1], ['#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#D7006D']);
     }
 
+    function getUserCount() {
+        
+        resp = $.ajax({
+          type : "GET",
+          cache: false,
+          //url : '/pledge/'+ type + '/count/',
+          url : '/count',
+          dataType: 'json'
+        }).done(function(data) {
+
+        lifestylePledgeCount = data[moduleCategories[0]];
+        knowingPledgeCount = data[moduleCategories[1]];
+        familyPledgeCount = data[moduleCategories[2]]; 
+
+        for (i=0; i<moduleCategories.length; i++) {
+          console.log('pledges ' +data[moduleCategories[i]])
+          if(i===0){
+            pledgeMessage = "improve their lifestyles."
+          }else if(i===1){
+            pledgeMessage = "know their normal."
+          }else if(i===2){
+            pledgeMessage = "learn their family history."
+          }
+          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " women have pledged to "+ pledgeMessage);
+          }
+
+        }).fail(function(error) {
+          console.log(error);
+        });
+      }
+
     function _registerEventListeners() {
         $('#Begin, .assess-start').on('click', function(e) {
             $('.vid-container').remove();
@@ -272,9 +306,60 @@
         })
 
         $('.testPDF, .pdf').on('click', function() {
-            createPinkPDF(resultLevel);
+            createPinkPDF(resultLevel, savedQuestionsAnswers);
         })
 
+
+        $('.facebook.lifestyle').on('click', function() {
+            console.log('clicked')
+
+            $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/lifestyle",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })
+
+        $('.facebook.knowing').on('click', function() {
+            console.log('clicked')
+
+            $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/knowing",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })
+
+        $('.facebook.family').on('click', function() {
+            console.log('clicked')
+
+            $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
+
+            resp = $.ajax({
+              type : "GET",
+              cache: false,
+              url : "/count/add/family",
+              dataType: 'json'
+            }).done(function(data) {
+              console.log(data);
+            }).fail(function(error) {
+              console.log(error);
+            });
+        })        
 
         $('.male-overlay .close-btn').on('click', function() {
             $('.vid-container').remove();
@@ -1319,6 +1404,7 @@ Do you know if I do%3F");
         for (var i = 0; i < _totalHeadlines; i++) {
             $('.headline').eq(i).attr('data-idx', i)
         }
+        getUserCount();
         _registerEventListeners();
         _pageResize();
         initialized = true;

@@ -4,8 +4,10 @@ var brightpinklogo = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAA
 
 
 
-function createPinkPDF (result) {
+function createPinkPDF (result, quizanswers) {
   
+  console.log(savedQuestionsAnswers)
+
   var docDefinition; 
   
   switch (result) {

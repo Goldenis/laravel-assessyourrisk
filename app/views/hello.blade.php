@@ -76,6 +76,15 @@
         </div>
         <div class="paragraph-wrapper">
           <div class="paragraph-box">
+            <div class="triggered-cancer-copy">
+              <h3 class="column-header">You've Been Diagnosed With Cancer Before</h3>
+                <p>
+                  Your answers suggest that you've had cancer before. There are many women who know just how difficult this can be. 
+                  This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.  
+                  Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop.
+                </p>
+              
+            </div>
           <!-- Average -->            
             <div class="results-copy-average on">
               <!-- paragraph-one (left) -->

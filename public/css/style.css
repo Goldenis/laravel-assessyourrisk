@@ -393,8 +393,8 @@ button.sub:hover {
   background: transparent;
 }
 .share {
-  width: 100%;
-  margin: 0 auto;
+  width: 76%;
+  margin: 1.2rem 0 0 16%;
   text-align: center;
   color: #d7006d;
 }
@@ -402,15 +402,15 @@ button.sub:hover {
   margin-top: 1rem;
 }
 .share .share-btn-wrapper, .share .share-copy {
-  border: 1px solid white;
   float: left;
-  min-height: 400px;
+  min-height: 58px;
 }
 .share .share-copy {
-  width: 67%;
+  width: 75%;
+  padding-top: 1.6rem;
 }
 .share .share-btn-wrapper {
-  width: 33%;
+  width: 12%;
 }
 .progress-overlay {
   overflow: hidden;
@@ -558,14 +558,27 @@ button.sub:hover {
 }
 .progress-overlay .results .email-pdf-doctor {
   width: 100%;
+  height: 128px;
+  margin: 0 auto;
   color: #fff;
   background: #d7006d;
-  padding: 4rem;
+  padding: 3rem;
 }
 .progress-overlay .results .email-pdf-doctor button {
   border: 3px solid #fff;
   cursor: pointer;
   color: #fff;
+}
+.progress-overlay .results .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .email-pdf-doctor .email-pdf-btns {
+  float: left;
+  min-height: 60px;
+}
+.progress-overlay .results .email-pdf-doctor .email-pdf-copy {
+  width: 50%;
+  padding-top: 1.6rem;
+}
+.progress-overlay .results .email-pdf-doctor .email-pdf-btns {
+  width: 50%;
 }
 .progress-overlay .results .sub {
   background: transparent;

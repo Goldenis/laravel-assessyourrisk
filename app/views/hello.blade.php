@@ -36,9 +36,12 @@
       </div>
       <button class="sub close-btn">✕</button>
       <div class="share">
-        <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
-        <br>
-        <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
+        <div class="share-copy">
+          <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
+        </div>
+        <div class="share-btn-wrapper">
+          <button class="share-btn"><a href="http://twitter.com"><img src="img/twitter.svg"></a><a href="http://facebook.com"><img src="img/facebook.svg"></a>SHARE</button>
+        </div>
       </div>
       <div class="vignettes">
       	<div class='section-title'>Understand</div>
@@ -185,8 +188,12 @@
 
       <!-- Pink Email/PDF/Doctor Footer on first card -->
         <div class="email-pdf-doctor">
-           <h4>Would you like a copy of your results?</h4>
-          <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button><button class="">SHARE WITH MY DOCTOR</button>
+          <div class="email-pdf-copy">
+            <h4>Would you like a copy of your results?</h4>
+          </div>
+          <div class="email-pdf-btns">
+            <button class="sub email">EMAIL</button><button class="sub pdf">PDF</button><button class="">SHARE WITH MY DOCTOR</button>
+          </div>         
         </div>
 
         </div>

@@ -434,9 +434,9 @@ button {
     background: transparent;
 }
 .share {
-    width: 100%;
+    width: 76%;
     // padding: 3rem 6rem;
-    margin: 0 auto;
+    margin: 1.2rem 0 0 16%;
     text-align: center;
     // position: relative;
     color: $pink;
@@ -444,15 +444,17 @@ button {
         margin-top: 1rem;
     }
     .share-btn-wrapper, .share-copy {
-        border: 1px solid white;
+        // border: 1px solid white;
         float: left;
-        min-height: 400px;
+        min-height: 58px;
     }
     .share-copy {
-        width: 67%;
+        width: 75%;
+        padding-top: 1.6rem;
+        // text-align: right;
     }
     .share-btn-wrapper {
-        width: 33%;
+        width: 12%;
     }
 }
 .progress-overlay {
@@ -612,14 +614,27 @@ button {
         }
         .email-pdf-doctor {
             width: 100%;
+            height: 128px;
+            margin: 0 auto;
             color: #fff;
             background: $pink;
-            padding: 4rem;
-           
+            padding: 3rem;
             button {
                 border: 3px solid #fff;
                 cursor: pointer;
                 color: #fff;
+            }
+            .email-pdf-copy, .email-pdf-btns {
+                // border: 1px solid white;
+                float: left;
+                min-height: 60px;
+            }
+            .email-pdf-copy {
+                width: 50%;
+                padding-top: 1.6rem;
+            }
+            .email-pdf-btns {
+                width: 50%;
             }
         }
 

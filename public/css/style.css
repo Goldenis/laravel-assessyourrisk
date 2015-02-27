@@ -394,13 +394,23 @@ button.sub:hover {
 }
 .share {
   width: 100%;
-  padding: 3rem 6rem;
+  margin: 0 auto;
   text-align: center;
-  position: relative;
   color: #d7006d;
 }
 .share button {
   margin-top: -25px;
+}
+.share .share-btn-wrapper, .share .share-copy {
+  border: 1px solid white;
+  float: left;
+  min-height: 400px;
+}
+.share .share-copy {
+  width: 67%;
+}
+.share .share-btn-wrapper {
+  width: 33%;
 }
 .progress-overlay {
   overflow: hidden;
@@ -502,6 +512,8 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-box {
   width: 100%;
+  float: left;
+  display: none;
   text-align: left;
   background: #fff;
   margin: 0%;
@@ -521,16 +533,26 @@ button.sub:hover {
 .progress-overlay .results .paragraph-box .read-more a {
   color: #d7006d;
 }
+.progress-overlay .results .paragraph-box .column {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 4rem;
+}
+.progress-overlay .results .paragraph-box .column .column-header {
+  margin-bottom: 2rem;
+}
+.progress-overlay .results .paragraph-box .column .item {
+  margin-bottom: 4rem;
+  display: none;
+}
+.progress-overlay .results .paragraph-box .column.positive {
+  background: #fff;
+  color: #555558;
+}
 .progress-overlay .results .paragraph-box .warning-header {
   color: #f6323e;
-  font-size: 1.5rem;
-  font-family: 'avg_bold', sans-serif;
-  font-weight: normal;
-}
-.progress-overlay .results .paragraph-box .paragraph-header {
-  font-size: 2.8rem;
-  font-family: 'avg_bold', sans-serif;
-  font-weight: normal;
+  margin-bottom: 2rem;
 }
 .progress-overlay .results .paragraph-box .paragraph-one {
   float: left;

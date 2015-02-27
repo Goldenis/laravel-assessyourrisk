@@ -435,12 +435,24 @@ button {
 }
 .share {
     width: 100%;
-    padding: 3rem 6rem;
+    // padding: 3rem 6rem;
+    margin: 0 auto;
     text-align: center;
-    position: relative;
+    // position: relative;
     color: $pink;
     button {
         margin-top: -25px;
+    }
+    .share-btn-wrapper, .share-copy {
+        border: 1px solid white;
+        float: left;
+        min-height: 400px;
+    }
+    .share-copy {
+        width: 67%;
+    }
+    .share-btn-wrapper {
+        width: 33%;
     }
 }
 .progress-overlay {
@@ -543,6 +555,9 @@ button {
         }
         .paragraph-box {
             width: 100%;
+            // margin-top: 40px;
+            float: left;
+            display: none;
             text-align: left;
             background: #fff;
             margin: 0%;
@@ -561,18 +576,34 @@ button {
                     color: $pink;
                 }              
             }
-            
+            .column {
+                float: left;
+                width: 48%;
+                margin: 1%;
+                padding: 4rem;
+                .column-header {
+                    //h3
+                    // font-size: 2.8rem;
+                    // font-family: $headline-font;
+                    // font-weight: normal;
+                    margin-bottom: 2rem;
+                }
+                .item {
+                    margin-bottom: 4rem;
+                    display: none;
+                }
+                &.positive {
+                    background: #fff;
+                    color: $darkColor;
+                }
+            }
             .warning-header {
                 color: $red;
-                font-size: 1.5rem;
-                font-family: $headline-font;
-                font-weight: normal;
+                margin-bottom: 2rem;
+                // font-size: 1.5rem;
+                // font-family: $headline-font;
+                // font-weight: normal;
                 // text-transform: uppercase;
-            }
-            .paragraph-header {
-                font-size: 2.8rem;
-                font-family: $headline-font;
-                font-weight: normal;
             }
             .paragraph-one {
                 // width: 50%;

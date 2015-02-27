@@ -1039,7 +1039,7 @@
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
-Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
+Have any of your immediate family members (parent, sibling, grandparent, aunt or uncle) been diagnosed with any of the following%3F \
 %0D%0A\
 - Breast cancer diagnosed at age 50 or under \
 %0D%0A\

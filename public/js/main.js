@@ -1042,7 +1042,14 @@
         else 
             $('.item.breastfeeding-high').css({
                 display: 'block'
-             })   
+             })  
+
+//previous cancer history
+      if (savedQuizProgress[2] == '-1') { 
+        $('.triggered-cancer-copy').css({
+            display: 'block'
+        })  
+
     }
 
 
@@ -1378,8 +1385,8 @@ Do you know if I do%3F");
 
   $.address.externalChange(function(event) {
 
-        console.log('external URL change')
-        console.log('event value', event.value)
+        // console.log('external URL change')
+        // console.log('event value', event.value)
 
         var oldPath = _currentPath;
         var newPath = event.value;

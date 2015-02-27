@@ -995,7 +995,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
             	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<button class="facebook knowing">Join Them</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
             </div>
           </div>
@@ -1065,7 +1065,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
              <div class="headline">
             	<h3 class="family-pledge-number">0 women have pledged to learn their family histories.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<button class="facebook family">Join Them</button>
             </div>
             <div class="headline last">            
               <div class="share">
@@ -1092,8 +1092,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/facebook.js"></script>    
+    <script src="js/plugins.js"></script>  
     <script src="js/main.js"></script>
     <script src="js/anim.js"></script>
 

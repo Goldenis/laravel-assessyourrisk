@@ -343,7 +343,7 @@
             </div>
 
             <div class="fact">
-            <h5>Age is important when it comes to breast and ovarian cancer risk: most breast and ovarian cancers develop when women are in their 50s and 60s, but breast cancer in women with a genetic predisposition often develops much earlier, starting when those women are in their 30s and 40s.</h5>
+              <h5>Age is important when it comes to breast and ovarian cancer risk: most breast and ovarian cancers develop when women are in their 50s and 60s, but breast cancer in women with a genetic predisposition often develops much earlier, starting when those women are in their 30s and 40s.</h5>
             </div>
 
             <div class="fact">

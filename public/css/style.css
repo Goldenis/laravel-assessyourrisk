@@ -1099,7 +1099,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 6rem;
+  right: 7%;
   width: calc(100% - 1300px);
   min-width: 250px;
 }

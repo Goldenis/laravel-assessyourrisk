@@ -309,6 +309,7 @@
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
+            $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment .dot').eq(_currentQuestion).addClass('on');
             $('.assessment .dot').eq(_currentQuestion).addClass('active');
         })

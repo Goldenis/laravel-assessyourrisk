@@ -339,14 +339,15 @@
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
-              <h5>You—and the 52 million women in the United States between 18 and 45 who have not been diagnosed with breast or ovarian cancer—are at risk simply because you have breasts and/or ovaries.</h5>
+              <h5>● You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
             <div class="fact">
+            <h5>Age is important when it comes to breast and ovarian cancer risk: most breast and ovarian cancers develop when women are in their 50s and 60s, but breast cancer in women with a genetic predisposition often develops much earlier, starting when those women are in their 30s and 40s.</h5>
             </div>
 
             <div class="fact">
-              <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer.  An ovary may only be the size of an almond, but it’s powerful — <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
+              <h5>○ If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
             </div>
 
             <div class="fact">
@@ -362,23 +363,23 @@
             </div>
             
             <div class="fact">
-              <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day. Limit alcohol to one drink per day or eliminate it entirely.</h5>
+              <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day on average. Limit alcohol to one drink per day or eliminate it entirely.</h5>
             </div>
 
             <div class="fact">
-              <h5>Getting a genetic test is as simple as taking a blood test.  The Affordable Care Act requires coverage of genetic testing for women who qualify. </h5>
+              <h5>Getting a genetic test is as simple as taking a blood test. The Affordable Care Act requires insurance coverage of genetic testing for women who qualify. </h5>
             </div>
 
             <div class="fact">
-              <h5>One of the most common mutations — BRCA ½ — is present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
+              <h5>One of the most common mutations — BRCA 1/2 — are present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
             </div>
 
             <div class="fact">
-              <h5>Regular exercise for 30+ minutes on most days can reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
+              <h5>Regular exercise – breaking a sweat for 30+ minutes on most days – may reduce your risk of developing breast cancer. You don’t need to become a gym rat — walking counts!</h5>
             </div>
 
             <div class="fact">
-              <h5><b>Nothing has a greater effect on a woman’s level of risk than her family history.</b>  Background information from BOTH sides of your family is important.</h5>
+              <h5><i>Nothing</i> has a greater effect on a woman’s level of risk than her family history. Background information from BOTH sides of your family is important</h5>
             </div>
 
             <div class="fact">
@@ -394,23 +395,23 @@
             </div>
 
             <div class="fact">
-              <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected.  Remember that information from your father’s side is just as important as your mother’s.</h5>
+              <h5>When you collect family health history, note who had cancer, how old they were at diagnosis, and what type was detected. Remember that information from your father’s side is just as important as your mother’s.</h5>
             </div>          
 
             <div class="fact">
-              <h5>Research shows clear reduction in ovarian cancer risk with use of low-dose birth control pills.  You might have heard oral contraceptives can increase breast cancer risk, but studies show this increased risk is very small, and not associated with the most common, low-dose estrogen pills.  In fact, there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
+              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line - there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
             </div>
 
             <div class="fact">
-              <h5><b>With early detection and treatment, the five-year survival rate for both breast and ovarian cancer combined climbs to more than 90%.</b></h5>
+              <h5>A breast biopsy sometimes shows abnormal cells that are considered a “precancer” (called atypical hyperplasia, or cellular atypia.) Patients who have had precancerous cells on biopsy are more likely to have cancer later in life.   </h5>
             </div>          
 
             <div class="fact">
-              <h5>Pregnancy reduces risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen.</h5>
+              <h5>Pregnancy reduces breast cancer risk by stabilizing breast tissue and lowering total lifetime exposure to estrogen. It also reduces the risk of ovarian cancer by preventing ovulation and therefore the chance for cell growth to “go rogue”. </h5>
             </div>
 
             <div class="fact">
-              <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer.</h5>
+              <h5>Breastfeeding for a total of 1-2 years lowers total lifetime exposure to estrogen, reducing a woman’s risk of developing breast cancer. It also reduces the chance of ovulation, and therefore also it decreases the risk of ovarian cancer.</h5>
             </div>
           </div>
         </div>
@@ -522,7 +523,7 @@
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -562,7 +563,7 @@
         </div>
 
         <div class="question" data-question-id="15">
-          <div class="prompt">Have you or any of your close relatives been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
+          <div class="prompt">Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
             <div class="checkbox-list cb1">
@@ -607,7 +608,7 @@
         </div>
 
         <div class="question cb3" data-question-id="17">
-          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one?</div>
+          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers?</div>
           <div class="checkbox-list column-left">        
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
@@ -659,7 +660,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt) that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt or uncle) that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>

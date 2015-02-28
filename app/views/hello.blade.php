@@ -29,7 +29,7 @@
     <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <span class="share-btn">share<a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <span class="share-btn">share<a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -47,7 +47,7 @@
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+          <button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
       <div class="vignettes">
@@ -731,7 +731,7 @@
         </div>
         <div class="share">
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -1093,7 +1093,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="javascript:fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+                <button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
               </div>
             </div>
           </div>

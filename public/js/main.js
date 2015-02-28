@@ -866,10 +866,14 @@
             _currentQuestion = 8;
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
+            delete savedQuizProgress[8];
+            var specialQ = {'questionnumber': '7', 'questionTxt' : 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?', 'questionanswer' : answers};
+
+            savedQuestionsAnswers['7'] = specialQ;        
         }
 
 
-        if (_currentQuestion == 8) {
+        if (_currentQuestion == 8 && savedQuizProgress['7'] != '+1') {
             var data = [];
             var ans8Text = []; 
             $('.cb2 input:checked').each(function() {
@@ -1169,6 +1173,21 @@ Do you know if I do%3F");
 
     function prevQuestion(){
         if(_currentQuestion > 0){
+
+            console.log(savedQuizProgress['7'])
+            if (_currentQuestion == 9 && savedQuizProgress['7'] == '+1') {
+                $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
+                
+                $('.fact').eq(_currentQuestion).removeClass('in');
+                $('.fact').eq(_currentQuestion).addClass('out');
+   
+                $('.question').eq(_currentQuestion).addClass('out-up')
+                $('.question').eq(_currentQuestion).removeClass('in')
+
+                _currentQuestion = 8;
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+            }
+
             $('.fact').eq(_currentQuestion).removeClass('in');
             $('.fact').eq(_currentQuestion).addClass('out');
             

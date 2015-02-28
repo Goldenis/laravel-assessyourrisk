@@ -394,7 +394,7 @@
 
 
         $('.progress-overlay .share-btn').on('click', function() {
-            window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
+            //window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {

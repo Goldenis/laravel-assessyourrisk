@@ -271,10 +271,6 @@ button.sub {
   border: 3px solid #d7006d;
   cursor: pointer;
 }
-button.sub:hover {
-  color: #f6323e;
-  border-color: #f6323e;
-}
 button.sub.ask {
   border: none;
   padding-right: 0;
@@ -285,6 +281,10 @@ button.sub.ask {
   -webkit-border-radius: 0;
   border-radius: 0;
   border-bottom: 2px solid #d7006d;
+}
+button.sub:hover {
+  color: #f6323e;
+  border-color: #f6323e !important;
 }
 .bg-video {
   opacity: 0;
@@ -732,13 +732,18 @@ button.sub.ask {
 }
 .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 30px;
+  left: 1.2rem;
   top: 0.65rem;
 }
 .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 80px;
+  left: 4rem;
   top: 0.65rem;
+}
+.share-btn a:nth-of-type(3) {
+  position: absolute;
+  left: 6.9rem;
+  top: 0.8rem;
 }
 .share-btn img {
   width: 2rem;
@@ -753,8 +758,8 @@ button.sub.ask {
   -moz-transition-delay: 0;
 }
 .share-btn:hover {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 3rem;
+  padding-right: 3rem;
   color: transparent;
 }
 .share-btn:hover img {
@@ -783,13 +788,18 @@ button.sub.ask {
 }
 .male-overlay .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 2.5rem;
+  left: 0.6rem;
   top: 1.5rem;
 }
 .male-overlay .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 7rem;
+  left: 4.7rem;
   top: 1.5rem;
+}
+.male-overlay .share-btn a:nth-of-type(3) {
+  position: absolute;
+  left: 9rem;
+  top: 1.8rem;
 }
 .male-overlay .share-btn img {
   width: 3rem;
@@ -948,7 +958,7 @@ button.sub.ask {
   margin: 1rem 0;
 }
 .checkbox .label {
-  margin-left: 2rem;
+  margin-left: 2.2rem;
   line-height: 2rem;
 }
 input[type="checkbox"], input[type="radio"] {
@@ -958,6 +968,8 @@ input[type="checkbox"], input[type="radio"] {
   float: left;
   z-index: 20;
   font-size: 50px;
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
   -webkit-transform: perspective(1000px) translateZ(220px);
   -moz-transform: perspective(1000px) translateZ(220px);
   -o-transform: perspective(1000px) translateZ(220px);

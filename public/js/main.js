@@ -1049,8 +1049,8 @@
         $('.triggered-cancer-copy').css({
             display: 'block'
         })  
-
     }
+}
 
 
 

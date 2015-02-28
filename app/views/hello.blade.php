@@ -107,7 +107,7 @@
                 <p class="more-results">
                 In addition to finding out more about <a href="">risk-reduction</a> and <a href="">early detection</a>, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
-                <a href="#" class="read-more"> ...Read More</a>
+                <a href="#" class="read-more">Read More</a>
               </div>
             </div>
 
@@ -159,7 +159,7 @@
                   <p class="more-results">
                     We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.
                   </p>
-                  <a href="#" class="read-more"> ...Read More</a>
+                  <a href="#" class="read-more">Read More</a>
               </div>
             </div>
 
@@ -203,7 +203,7 @@
                 <p class="more-results">
                 We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
-                <a href="#" class="read-more"> ...Read More</a>
+                <a href="#" class="read-more">Read More</a>
               </div>
             </div>
           </div>

@@ -593,9 +593,14 @@ button {
                     display: none;
                 }
                 .read-more {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     text-decoration: none;
-                    color: $pink;  
+                    text-transform: uppercase;
+                    font-family: "avg_bold";
+                    letter-spacing: .1rem;
+                    color: $pink;
+                    border-bottom: 2px solid $pink;
+                    padding-bottom: 5px;  
                     a {
                         color: $pink;
                     }              

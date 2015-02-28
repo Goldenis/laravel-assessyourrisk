@@ -1,3 +1,4 @@
+
     var resultLevel = 'average';
     var savedQuestionsAnswers = {};  
 
@@ -369,13 +370,13 @@
             $('.male-overlay').removeClass("in");
         })
         $('.paragraph-box .read-more').on('click', function() {
-            if($(this).html() == ' ...Read More'){
-                $(this).html(' ...Read Less');
+            if($(this).html() == 'Read More'){
+                $(this).html('Read Less');
                 $('.more-results').css({
                     display: 'block'
                 })
             }else{
-                $(this).html(' ...Read More');
+                $(this).html('Read More');
                 $('.more-results').css({
                     display: 'none'
                 })

@@ -550,9 +550,14 @@ button.sub.ask {
   display: none;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
+  font-family: "avg_bold";
+  letter-spacing: 0.1rem;
   color: #d7006d;
+  border-bottom: 2px solid #d7006d;
+  padding-bottom: 5px;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more a {
   color: #d7006d;

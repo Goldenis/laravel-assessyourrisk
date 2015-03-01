@@ -133,7 +133,7 @@
             <div class="results-copy-moderate">
               <div class="column">
                   <!-- Added warning header -->
-                  <h5 class="warning-header">There is potential that you may be high risk. Read on.</h5>
+                  <h5 class="warning-header">There is potential that you may be High Risk. Read on.</h5>
                 <!-- paragraph-one (left) -->
                   <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>
@@ -267,7 +267,7 @@
           <div class="item exercise-low">
             <div class="section-title">PHYSICAL ACTIVITY</div>
             <h4>You get enough exercise.</h4>
-            <p>Your active lifestyle will benefit your health in many, many ways. Stick to it!</p>
+            <p>Your active lifestyle will benefit your health in many ways. Stick to it!</p>
           </div>
           <div class="item birth-control-low">
             <div class="section-title">BIRTH CONTROL</div>
@@ -296,7 +296,7 @@
           <div class="item alcohol-high">
             <div class="section-title">ALCOHOL</div>
             <h4>You have more than one drink a day.</h4>
-            <p>Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one a day.</p>
+            <p>Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.</p>
           </div>
           <div class="item">
             <div class="section-title exercise-high">PHYSICAL ACTIVITY</div>
@@ -305,7 +305,7 @@
           </div>
           <div class="item birth-control-high">
             <div class="section-title">BIRTH CONTROL</div>
-            <h4>You haven’t taken birth control for five years.</h4>
+            <h4>You haven’t taken birth control for at least five years.</h4>
             <p>Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.</p>
           </div>  
           <div class="item breastfeeding-high">

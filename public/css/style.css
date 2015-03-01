@@ -286,6 +286,9 @@ button.sub.ask {
   border-radius: 0;
   border-bottom: 2px solid #d7006d;
 }
+.red-text {
+  color: #f6323e;
+}
 .bg-video {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;

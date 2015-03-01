@@ -319,10 +319,12 @@
         <div id="wheel-overlay"></div>
       </div>
       <div class="intro-message">
-        <p><b>1 in 8 women will develop breast cancer at some point in her lifetime.  1 in 67 will develop ovarian cancer.  
-          <br>
-          <br>
-          Your body. Your life.<br>
+        <p>
+          <b><span class="red-text">1 in 8</span> women will develop breast cancer at some point in her lifetime.  <span class="red-text">1 in 67</span> will develop ovarian cancer.</b>  
+        </p>
+        <br>
+        <p> 
+          <b>Your body. Your life.<br>
           Don’t leave it up to chance.</b>
         </p>
         <a id="Begin"></span><button class="action lifestyle"> Assess Your Risk </button> </a>
@@ -452,7 +454,7 @@
         <div class="btn-back"><img src="img/arrow_left_pink.png"></div>
       </div>
       <section class="assessment-intro in">
-        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your personal level of risk for breast and ovarian cancer.  By looking at your health and family history alongside some of your lifestyle choices, you’ll not only learn more about your risk, but also about actions you can take to reduce it.<br><br>You have the power to save your life.</h4>            
+        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your <span class="red-text">personal level of risk</span> for breast and ovarian cancer.  By looking at your <span class="red-text">health and family history</span> alongside some of your <span class="red-text">lifestyle</span> choices, you’ll not only learn more about your risk, but also about <span class="red-text">actions</span> you can take to reduce it.<br><br><i>You</i> have the power to save your life.</h4>            
         <button class="action">Let’s Go.</button>
       </section>
 
@@ -545,7 +547,7 @@
         </div>
 
         <div class="question" data-question-id="14">
-          <div class="prompt">Have any of your immediate family members (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
+          <div class="prompt">Have any of <span class="red-text">your immediate family members</span> (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
@@ -585,7 +587,7 @@
         </div>
 
         <div class="question" data-question-id="15">
-          <div class="prompt">Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
+          <div class="prompt">Have <span class="red-text">you or any of your close relatives</span> (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?</div>
         
           <div class="answers">
             <div class="checkbox-list cb1">
@@ -630,7 +632,7 @@
         </div>
 
         <div class="question cb3" data-question-id="17">
-          <div class="prompt">Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers?</div>
+          <div class="prompt">Within <span class="red-text">one side</span> of the family (both on mom’s side or both on dad’s side), is there breast cancer <span class="red-text">and</span> one of the following cancers?</div>
           <div class="checkbox-list column-left">        
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
@@ -682,7 +684,7 @@
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more immediate family members (parent, sibling, grandparent, aunt or uncle) that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more <span class="red-text">immediate family members</span> (parent, sibling, grandparent, aunt or uncle) that have had breast cancer at age 50 or older?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>

@@ -282,13 +282,13 @@
         for (i=0; i<moduleCategories.length; i++) {
           console.log('pledges ' +data[moduleCategories[i]])
           if(i===0){
-            pledgeMessage = "improve their lifestyles."
+            pledgeMessage = "Women Have Pledged to Improve Their Lifestyles."
           }else if(i===1){
-            pledgeMessage = "know their normal."
+            pledgeMessage = "Women Have Pledged to Know Their Normal."
           }else if(i===2){
-            pledgeMessage = "learn their family history."
+            pledgeMessage = "Women Have Pledged to Collect Their Family History."
           }
-          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " women have pledged to "+ pledgeMessage);
+          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " "+ pledgeMessage);
           }
 
         }).fail(function(error) {
@@ -316,6 +316,9 @@
             console.log('clicked')
 
             $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles')
+            $('.facebook.lifestyle').css({
+                display: "none"
+            })
 
             resp = $.ajax({
               type : "GET",
@@ -333,6 +336,10 @@
             console.log('clicked')
 
             $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
+            $('.facebook.knowing').css({
+                display: "none"
+            })
+
 
             resp = $.ajax({
               type : "GET",
@@ -350,7 +357,10 @@
             console.log('clicked')
 
             $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
-
+            $('.facebook.family').css({
+                display: "none"
+            })
+            
             resp = $.ajax({
               type : "GET",
               cache: false,

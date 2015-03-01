@@ -883,8 +883,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<h3 class="lifestyle-pledge-number">0 Women Have Pledged to Improve Their Lifestyles.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook lifestyle">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
             </div>
           </div>
@@ -1035,8 +1036,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
-            	<button class="facebook knowing">Join Them</button>
+            	<h3 class="knowing-pledge-number">0 Women Have Pledged to Know Their Normal.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook knowing">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
             </div>
           </div>
@@ -1102,11 +1104,12 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">         
               <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>
               <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
-              <button class="facebook family">Pledge to Learn Your Family History</button><br>
+              <!-- <button class="facebook family">Pledge to Learn Your Family History</button><br> -->
             </div>
              <div class="headline">
-            	<h3 class="family-pledge-number">0 women have pledged to learn their family histories.</h3>
-            	<button class="facebook family">Join Them</button>
+            	<h3 class="family-pledge-number">0 Women Have Pledged to Collect Their Family History.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook family">Pledge</button>
             </div>
             <div class="headline last">            
               <div class="share">

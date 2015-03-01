@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
+    <meta property="og:url" content="http://brightenup.sew.la" /> 
+    <meta property="og:title" content="BrightPink Assessment" />
+    <meta property="og:description" content="1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer" /> 
+    <meta property="og:image" content="http://brightenup.sew.la/img/brightpink_logo.png" /> 
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
     <script>
-    function fbShare(url, title, descr, image, winWidth, winHeight) {
-        var winTop = (screen.height / 2) - (winHeight / 2);
-        var winLeft = (screen.width / 2) - (winWidth / 2);
-        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+
+    function fb_share(url, title, descr, image) {
+    FB.ui( {
+        method: 'feed',
+        name: title,
+        link: url,
+        picture: image,
+        caption: descr
+    }, function( response ) {
+        if ( response !== null && typeof response.post_id !== 'undefined' ) {
+            console.log( response );
+            // ajax call to save response
+          // $.post( 'http://www.webniraj.com/', { 'meta': response }, function( result ) {
+          //       console.log( result );
+          //   }, 'json' );
+        }
+    } );
+  
     }
     </script>
   </head>
@@ -29,7 +47,7 @@
     <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <span class="share-btn">share<a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -47,7 +65,7 @@
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
       <div class="vignettes">
@@ -610,7 +628,7 @@
           <div class="checkbox-list cb2">
             <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS<div class="definition">variant of uncertain significance</div> </div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
@@ -733,7 +751,7 @@
         </div>
         <div class="share">
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="http://twitter.com" target="_blank"><img src="img/twitter.svg"></a><a href="http://facebook.com" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -975,7 +993,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline">         
-              <h3>You &amp Your Doctor</h3>
+              <h3>You &amp; Your Doctor</h3>
               <h5>A key part of living proactively is finding a doctor you trust. He or she should listen to your questions, pay attention to your concerns, and provide clear recommendations. Once you’ve “shopped around” and found one you like, plan on seeing them annually for a well-woman exam.</h5>
             </div>
           </div>
@@ -1042,7 +1060,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette" data-src="family">
           <div class="headlines">
             <div class="headline">         
-              <h3>Family History &amp Genetic Predisposition</h3>
+              <h3>Family History &amp; Genetic Predisposition</h3>
               <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%. Lifetime ovarian cancer risk can be as high as 54%. Family history and genetic predisposition aren’t one in the same. For example, if a first-degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h5>
             </div>
           </div>
@@ -1061,7 +1079,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette" data-src="family">
           <div class="headlines">
             <div class="headline">         
-              <h3>Your Personal Health History &amp Lifestyle Choices Have a Big Effect As Well</h3>
+              <h3>Your Personal Health History &amp; Lifestyle Choices Have a Big Effect As Well</h3>
             </div>
           </div>
         </div>
@@ -1095,7 +1113,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn"><a href="https://twitter.com/home?status=insert the copy here for tweet" target="_blank"><img src="img/twitter.svg"></a><a href="javascript:fbShare('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)" target="_blank"><img src="img/facebook.svg"></a>SHARE</button>
+                <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
               </div>
             </div>
           </div>
@@ -1165,6 +1183,30 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
        }(document, 'script', 'facebook-jssdk'));
 
     </script>
+
+    <script>
+        window.fbAsyncInit = function() {
+          // init the FB JS SDK
+          FB.init({
+            appId      : '753349004746465',                        // App ID from the app dashboard
+            channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+            status     : true,                                 // Check Facebook Login status
+            xfbml      : true,                                  // Look for social plugins on the page
+            version    : 'v2.2'
+          });
+      
+          // Additional initialization code such as adding Event Listeners goes here
+        };
+      
+        // Load the SDK asynchronously
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

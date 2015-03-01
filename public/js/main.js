@@ -1,4 +1,3 @@
-
     var resultLevel = 'average';
     var savedQuestionsAnswers = {};  
 
@@ -48,7 +47,7 @@
 
     var _currentVideo;
     var _currentImage;
-    var _currentPath;
+    var _currentPath = '/';
 
 
     // setInterval(function(){
@@ -303,9 +302,7 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            //window._currentPath = '/assessment';
-            $.address.path('/assessment');
-            //$.address.path('/assessment');
+            // $.address.path('/assessment');
         })
 
         $('.testPDF, .pdf').on('click', function() {
@@ -369,19 +366,14 @@
             overlayOpen = false;
             $('.male-overlay').removeClass("in");
         })
-        $('.paragraph-box .read-more').on('click', function() {
-            if($(this).html() == 'Read More'){
-                $(this).html('Read Less');
-                $('.more-results').css({
-                    display: 'block'
-                })
-            }else{
-                $(this).html('Read More');
-                $('.more-results').css({
-                    display: 'none'
-                })
-            }
-            
+        $('.your-risk .read-more').on('click', function() {
+            $('.vid-container').remove();
+            $(this).css({
+                display: "none"
+            })
+            $('.more-results').css({
+                display: 'block'
+            })
         })
         $('.progress-overlay .email-pdf').on('click', function() {
             window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
@@ -394,7 +386,7 @@
 
 
         $('.progress-overlay .share-btn').on('click', function() {
-            window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
+            //window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
@@ -408,8 +400,8 @@
         })
         $('.ask').on('click', askHandler);
         $('.btn-calculate').on('click', function(e) {
-             calculateWeight($(this));
-         })
+            calculateWeight($(this));
+        })
         $('.question .answers button').on('click', function(e) {
             if (!$(this).hasClass('sub')) { 
                 answerQuestion($(this));
@@ -866,10 +858,14 @@
             _currentQuestion = 8;
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             savedQuizProgress['7'] = ansTxt;
+            delete savedQuizProgress[8];
+            var specialQ = {'questionnumber': '7', 'questionTxt' : 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?', 'questionanswer' : answers};
+
+            savedQuestionsAnswers['7'] = specialQ;        
         }
 
 
-        if (_currentQuestion == 8) {
+        if (_currentQuestion == 8 && savedQuizProgress['7'] != '+1') {
             var data = [];
             var ans8Text = []; 
             $('.cb2 input:checked').each(function() {
@@ -1005,13 +1001,6 @@
                 display: 'block'
              })   
 
-//period card
-        if (savedQuizProgress[13] == '-1') { 
-            $('.item.period-high').css({
-                display: 'block'
-            })
-        } 
-        
 //birth-control card
         if (savedQuizProgress[15] == '+1') { 
             $('.item.birth-control-low').css({
@@ -1043,17 +1032,8 @@
         else 
             $('.item.breastfeeding-high').css({
                 display: 'block'
-             })  
-
-//previous cancer history
-      if (savedQuizProgress[2] == '-1') { 
-        $('.triggered-cancer-copy').css({
-            display: 'block'
-        })  
+             })   
     }
-}
-
-
 
     function askHandler(e) {
         e.stopPropagation();
@@ -1063,7 +1043,7 @@
 I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
 %0D%0A\
 %0D%0A\
-Have any of your immediate family members (parent, sibling, grandparent, aunt or uncle) been diagnosed with any of the following%3F \
+Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
 %0D%0A\
 - Breast cancer diagnosed at age 50 or under \
 %0D%0A\
@@ -1114,7 +1094,6 @@ Do you know if I do%3F");
                 break;
         }
     }
-
     function answerQuestion(answer) {
 
         if (_currentQuestion >= _totalQuestions - 1) {
@@ -1169,6 +1148,21 @@ Do you know if I do%3F");
 
     function prevQuestion(){
         if(_currentQuestion > 0){
+
+            console.log(savedQuizProgress['7'])
+            if (_currentQuestion == 9 && savedQuizProgress['7'] == '+1') {
+                $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
+                
+                $('.fact').eq(_currentQuestion).removeClass('in');
+                $('.fact').eq(_currentQuestion).addClass('out');
+   
+                $('.question').eq(_currentQuestion).addClass('out-up')
+                $('.question').eq(_currentQuestion).removeClass('in')
+
+                _currentQuestion = 8;
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+            }
+
             $('.fact').eq(_currentQuestion).removeClass('in');
             $('.fact').eq(_currentQuestion).addClass('out');
             
@@ -1386,35 +1380,33 @@ Do you know if I do%3F");
 
   $.address.externalChange(function(event) {
 
-        // console.log('external URL change')
-        // console.log('event value', event.value)
+        console.log('external URL change')
+        console.log(event.value)
 
         var oldPath = _currentPath;
         var newPath = event.value;
-
-        //console.log('currentPath', _currentPath);
-
+        console.log('currentPath', _currentPath);
 
 
-        // if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
-        //     //$.address.path('/home');
-        //     console.log('GO HOME');
+        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
+
+            //$.address.path('/home');
+            console.log('GO HOME');
             
-        //     if (_currentPath !== '/education' && _currentPath !== '/intro'){
-        //         //goHome();
-        //     }
-        //     else if (_currentPath === '/education')
-        //     {
-        //         toggleColumn();
-        //     }
-        //     else
-        //     {
-        //         // $.address.path('/assessment');
-        //     }
-        //     _currentPath = newPath;
-        // } else 
-        if (event.value == '/education') {
+            if (_currentPath !== '/education' && _currentPath !== '/intro'){
+                goHome();
+            }
+            else if (_currentPath === '/education')
+            {
+                toggleColumn();
+            }
+            else
+            {
+                // $.address.path('/assessment');
+            }
+            _currentPath = newPath;
+        } else if (event.value == '/education') {
             console.log('education');            
             hideIntro();
             addCharts();
@@ -1432,7 +1424,8 @@ Do you know if I do%3F");
             hideIntro();
             addCharts();
         } else {
-            console.log('intro view')       
+            console.log('intro view')
+            
             startIntro();
             $.address.path('/intro');
             _currentPath = newPath;
@@ -1462,3 +1455,16 @@ Do you know if I do%3F");
 
     });
 })(jQuery);
+
+    function shareMail(){
+        window.open("mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, %0D%0A \
+%0D%0A\
+%0D%0A\
+I want to share something important with you. \
+%0D%0A\
+%0D%0A\
+Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. \
+%0D%0A\
+%0D%0A\
+1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool here.");
+    }

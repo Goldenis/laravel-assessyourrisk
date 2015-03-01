@@ -322,10 +322,6 @@ button {
         background: #fff;
         border: 3px solid $pink;
         cursor: pointer;
-        &:hover {
-            color: $red;
-            border-color: $red;
-        }
         &.ask{
             border: none;
             padding-right: 0;
@@ -335,6 +331,10 @@ button {
             @include rounded(0);
             border-bottom: 2px solid $pink;
         }
+        &:hover {
+            color: $red;
+            border-color: $red !important;
+        }        
     }
 }
 .red-text {
@@ -781,13 +781,18 @@ button {
     @include transition(.3s,ease-out);
     a:nth-of-type(1){
         position: absolute;
-        left: 30px;
+        left: 1.2rem;
         top: .65rem;
     }
     a:nth-of-type(2){
         position: absolute;
-        left: 80px;
+        left: 4rem;
         top: .65rem;
+    }
+    a:nth-of-type(3) {
+        position: absolute;
+        left: 6.9rem;
+        top: 0.8rem;
     }
     img{
         width: 2rem;
@@ -795,8 +800,8 @@ button {
         @include transition(.3s);
     }
     &:hover{
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 3rem;
+        padding-right: 3rem;
         color: transparent;
         img{
             opacity: .7;
@@ -820,13 +825,18 @@ button {
         color: $nude;
         a:nth-of-type(1){
             position: absolute;
-            left: 2.5rem;
+            left: .6rem;
             top: 1.5rem;
         }
         a:nth-of-type(2){
             position: absolute;
-            left: 7rem;
+            left: 4.7rem;
             top: 1.5rem;
+        }
+        a:nth-of-type(3){
+            position: absolute;
+            left: 9rem;
+            top: 1.8rem;
         }
         img{
             width: 3rem;
@@ -961,7 +971,7 @@ button {
 .checkbox {
     margin: 1rem 0;
     .label {
-        margin-left: 2rem;
+        margin-left: 2.2rem;
         line-height: 2rem;
     }
 }
@@ -972,6 +982,7 @@ input[type="checkbox"], input[type="radio"] {
     float: left;
     z-index: 20;
     font-size: 50px;
+    @include transform-origin(0% 50%);
     @include transform(perspective(1000px) translateZ(220px));
 }
 .logo {

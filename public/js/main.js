@@ -360,7 +360,7 @@
             $('.facebook.family').css({
                 display: "none"
             })
-            
+
             resp = $.ajax({
               type : "GET",
               cache: false,
@@ -378,15 +378,30 @@
             overlayOpen = false;
             $('.male-overlay').removeClass("in");
         })
-        $('.your-risk .read-more').on('click', function() {
-            $('.vid-container').remove();
-            $(this).css({
-                display: "none"
-            })
-            $('.more-results').css({
-                display: 'block'
-            })
-        })
+        // $('.your-risk .read-more').on('click', function() {
+        //     $('.vid-container').remove();
+        //     $(this).css({
+        //         display: "none"
+        //     })
+        //     $('.more-results').css({
+        //         display: 'block'
+        //     })
+        // })
+
+        $('.paragraph-box .read-more').on('click', function() {
+            if($(this).html() == 'Read More'){
+                $(this).html('Read Less');
+                $('.more-results').css({
+                    display: 'block'
+                })
+            }else{
+                $(this).html('Read More');
+                $('.more-results').css({
+                    display: 'none'
+                })
+            }
+        })   
+
         $('.progress-overlay .email-pdf').on('click', function() {
             window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
@@ -935,6 +950,10 @@
 
         // if (_currentQuestion == 0) return;
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+
+        //var result = $.grep(savedQuestionsAnswers, function(e){ return e.id == id; });
+        console.log(savedQuestionsAnswers[0].questionTxt)
+
         getUserAnswers();
     
     }

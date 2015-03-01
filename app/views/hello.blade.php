@@ -37,7 +37,7 @@
   </head>
   <body>
 
-<!--       <a href="" class="testPDF" >test pdf</a> -->
+      <a href="/#/assessment" class="testPDF" style="z-index: 10000">test pdf</a>
 
     <div class="border"></div>
     <div class="logo">

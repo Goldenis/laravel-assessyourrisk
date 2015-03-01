@@ -298,8 +298,8 @@
             <h4>You have more than one drink a day.</h4>
             <p>Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.</p>
           </div>
-          <div class="item">
-            <div class="section-title exercise-high">PHYSICAL ACTIVITY</div>
+          <div class="item exercise-high">
+            <div class="section-title">PHYSICAL ACTIVITY</div>
             <h4>You’re not getting enough exercise.</h4>
             <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.</p>
           </div>

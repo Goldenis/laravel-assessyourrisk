@@ -302,7 +302,9 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            // $.address.path('/assessment');
+            //window._currentPath = '/assessment';
+            $.address.path('/assessment');
+            //$.address.path('/assessment');
         })
 
         $('.testPDF, .pdf').on('click', function() {
@@ -1001,6 +1003,13 @@
                 display: 'block'
              })   
 
+//period card
+        if (savedQuizProgress[13] == '-1') { 
+            $('.item.period-high').css({
+                display: 'block'
+            })
+        } 
+
 //birth-control card
         if (savedQuizProgress[15] == '+1') { 
             $('.item.birth-control-low').css({
@@ -1010,7 +1019,7 @@
         else 
             $('.item.birth-control-high').css({
                 display: 'block'
-             })   
+             })     
 
 //pregnancy card
         if (savedQuizProgress[17] == '+1') { 
@@ -1027,12 +1036,21 @@
         if (savedQuizProgress[18] == '+1') { 
             $('.item.breastfeeding-low').css({
                 display: 'block'
-            })
-        }    
-        else 
+            })   
+        }
+        if (savedQuizProgress[18] == '-1') { 
             $('.item.breastfeeding-high').css({
                 display: 'block'
-             })   
+            })   
+        }
+    
+//previous cancer history
+      if (savedQuizProgress[2] == '-1') { 
+            $('.triggered-cancer-copy').css({
+                display: 'block'
+            })  
+        }
+
     }
 
     function askHandler(e) {
@@ -1096,11 +1114,11 @@ Do you know if I do%3F");
     }
     function answerQuestion(answer) {
 
-        if (_currentQuestion >= _totalQuestions - 1) {
+        if (_currentQuestion >= _totalQuestions -1) {
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
-            },500)
+            },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'
@@ -1149,6 +1167,8 @@ Do you know if I do%3F");
     function prevQuestion(){
         if(_currentQuestion > 0){
 
+            console.log(_currentQuestion)
+
             console.log(savedQuizProgress['7'])
             if (_currentQuestion == 9 && savedQuizProgress['7'] == '+1') {
                 $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
@@ -1162,6 +1182,32 @@ Do you know if I do%3F");
                 _currentQuestion = 8;
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             }
+
+            if (_currentQuestion == 4) {
+
+
+           $('.bmi-result').css({
+                opacity: 0
+            })
+
+            $('.fact').eq(_currentQuestion).removeClass('in');
+            $('.fact').eq(_currentQuestion).addClass('out');
+            
+            $('.question').eq(_currentQuestion).addClass('out-up')
+            $('.question').eq(_currentQuestion).removeClass('in')
+
+                    
+                    $('.bmi-result h4, h3').remove();
+
+                    $('.btn-calculate').css({
+                        visibility: 'visible'
+                    })
+
+                    $('.height-wrapper').css({
+                        display: "block"
+                    })
+            }
+
 
             $('.fact').eq(_currentQuestion).removeClass('in');
             $('.fact').eq(_currentQuestion).addClass('out');
@@ -1380,33 +1426,32 @@ Do you know if I do%3F");
 
   $.address.externalChange(function(event) {
 
-        console.log('external URL change')
-        console.log(event.value)
-
         var oldPath = _currentPath;
         var newPath = event.value;
-        console.log('currentPath', _currentPath);
+
+        //console.log('currentPath', _currentPath);
 
 
 
-        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
+        // if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
-            //$.address.path('/home');
-            console.log('GO HOME');
+        //     //$.address.path('/home');
+        //     console.log('GO HOME');
             
-            if (_currentPath !== '/education' && _currentPath !== '/intro'){
-                goHome();
-            }
-            else if (_currentPath === '/education')
-            {
-                toggleColumn();
-            }
-            else
-            {
-                // $.address.path('/assessment');
-            }
-            _currentPath = newPath;
-        } else if (event.value == '/education') {
+        //     if (_currentPath !== '/education' && _currentPath !== '/intro'){
+        //         //goHome();
+        //     }
+        //     else if (_currentPath === '/education')
+        //     {
+        //         toggleColumn();
+        //     }
+        //     else
+        //     {
+        //         // $.address.path('/assessment');
+        //     }
+        //     _currentPath = newPath;
+        // } else 
+        if (event.value == '/education') {
             console.log('education');            
             hideIntro();
             addCharts();
@@ -1424,13 +1469,13 @@ Do you know if I do%3F");
             hideIntro();
             addCharts();
         } else {
-            console.log('intro view')
-            
+            console.log('intro view')       
             startIntro();
             $.address.path('/intro');
             _currentPath = newPath;
         };
         $('.vid-container').remove();
+
     });
 
     $(document).ready(function() {

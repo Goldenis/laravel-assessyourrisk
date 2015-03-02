@@ -546,12 +546,20 @@ button.sub:hover {
   text-decoration: underline;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .triggered-cancer-copy {
-  padding: 3rem 0 0;
+  padding: 6rem;
+  width: calc(100% + 12rem);
+  margin-top: 6rem;
+  left: -6rem;
+  background: #fde4df;
+  display: none;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
   display: none;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
+  padding-bottom: 3rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -560,8 +568,9 @@ button.sub:hover {
   color: #d7006d;
   border-bottom: 2px solid #d7006d;
   padding-bottom: 5px;
+  position: absolute;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
   color: #d7006d;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .column {

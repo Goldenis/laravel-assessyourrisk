@@ -937,7 +937,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>You Need to Know the Lay of the Land</h3>
-              <h5>80% of breast cancers in young women are found by young women themselves. Get to know what your breasts feel like. They cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your armpits, and into your breast bone.</h5>
+              <h5>80% of breast cancers in young women are found by young women themselves.  
+                Get to know what your breasts feel like.  
+                They cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your armpits, and into your breastbone.</h5>
         
         <!--       <ul>
                 <li>Pay attention to changes in size, shape, contour, and color</li>
@@ -988,14 +990,21 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-<!-- Spencer added the following headlines according to new copy. -->
         <div class="vignette" data-src="breastAwareness">
           <div class="headlines">
             <div class="headline">         
               <h3>The 4-1-1 on Ovarian Cancer</h3>
               <h5>Because there’s currently no effective test for ovarian cancer, watching for signs and symptoms is important. However, many of these can easily be mistaken for other issues, like PMS.</h5>
-              <br>
-              <h6>Primary</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="vignette" data-src="breastAwareness">
+          <div class="headlines">
+            <div class="headline"> 
+              <h3>What to Watch For</h3> 
+              <h5>Some clear signs of ovarian cancer can be symptoms like these, <i>when they persist or worsen for 2-3 weeks:</i></h5>
+              <h6 class="primary-headline">Primary</h6>
               <ul>
                 <li>Pelvic or abdominal pain</li>
                 <li>Feeling the need to urinate frequently</li>
@@ -1011,7 +1020,8 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <li>Upset stomach, heartburn</li>
                 <li>Pain during intercourse</li>
               </ul>
-              <h5>Like breast cancer symptoms, many ovarian cancer symptoms can come and go. But if they persist or worsen for 2-3 weeks, see your doctor and ask — could it be my ovaries?</h5>            
+              <h5>Like breast cancer symptoms, many ovarian cancer symptoms can come and go.  
+                But if they persist or worsen for 2-3 weeks, see your doctor and ask — <i>could it be my ovaries?</i></h5>            
             </div>
           </div>
         </div>
@@ -1020,7 +1030,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>You &amp; Your Doctor</h3>
-              <h5>A key part of living proactively is finding a doctor you trust. He or she should listen to your questions, pay attention to your concerns, and provide clear recommendations. Once you’ve “shopped around” and found one you like, plan on seeing them annually for a well-woman exam.</h5>
+              <h5>A key part of living proactively is finding a doctor you trust.  
+                He or she should listen to your questions, pay attention to your concerns, and provide clear recommendations.  
+                Once you’ve “shopped around” and found one you like, plan on seeing them annually for a well-woman exam.</h5>
             </div>
           </div>
         </div>
@@ -1048,11 +1060,19 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div> -->
           <div class="headlines">
             <div class="headline">         
-              <h3>Don’t forget to take care.</h3>
-              <p>Sign up for a monthly Breast Health Reminder™ to be breast self-aware— that’s one text a month.  Your information stays private and you can opt out any time.</p>
-              <br>
-              <button class="text-me">Text Me.</button>
-              <br>
+              <h3>Don’t Forget to Take Care on Your Own</h3>
+              <h5>Sign up for a monthly Breast Health Reminder™ to be breast self-aware— that’s one text a month.  
+                Text PINK (“P-I-N-K”) to 59227.</h5>
+              <ul>
+                <li>You will receive one message per month.  
+                  Message will include instructions to quit.  
+                  Text <b>STOP</b> to quit or <b>HELP</b> for info.  
+                  Message and data rates may apply.  
+                  No purchase necessary.  Automated messages will be delivered to the phone number you provide at opt-in.  
+                  View Privacy Policy and Terms & Conditions <a href="http://mp.vibescm.com/p/1fdrw9">here</a>.  
+                  All consumer information collected is subject to Bright Pink's Privacy Policy.</li>
+              </ul>
+              <!-- <button class="text-me">Text Me.</button> -->
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
           </div>
@@ -1061,7 +1081,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="knowing-pledge-number">0 Women Have Pledged to Know Their Normal.</h3>
+            	<h3 class="knowing-pledge-number">0 Women Have Pledged to Know Their Normal</h3>
               <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
             	<button class="facebook knowing">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
@@ -1132,7 +1152,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <!-- <button class="facebook family">Pledge to Learn Your Family History</button><br> -->
             </div>
              <div class="headline">
-            	<h3 class="family-pledge-number">0 Women Have Pledged to Collect Their Family History.</h3>
+            	<h3 class="family-pledge-number">0 Women Have Pledged to Collect Their Family History</h3>
               <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
             	<button class="facebook family">Pledge</button>
             </div>

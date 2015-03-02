@@ -189,7 +189,7 @@ sub {
   bottom: -0.25rem;
 }
 ul, ol {
-  margin: 1rem 0;
+  margin: 1.4rem 0;
   padding: 0 0 0 20px;
 }
 dd {
@@ -1685,6 +1685,9 @@ input[type="checkbox"], input[type="radio"] {
   height: auto;
   left: calc(33.333% - 7px);
 }
+.education .headlines .primary-headline {
+  margin-top: 1.4rem;
+}
 .education .headlines .headline {
   width: 100%;
   height: auto;
@@ -1733,6 +1736,9 @@ input[type="checkbox"], input[type="radio"] {
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
   text-shadow: 1px 1px 2px #141414;
+}
+.education .headlines ul a, .education .headlines p a {
+  font-size: 1.4rem;
 }
 .education.in {
   left: 0;

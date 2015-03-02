@@ -96,7 +96,7 @@
             <div class="results-copy-average on">
               <!-- paragraph-one (left) -->
               <div class="column"> 
-                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                <h3 class="column-header">Understanding Your Baseline Risk</h3>
                 <p>Your answers suggest that you are at <a href="">average baseline risk</a> for breast and ovarian cancer, just like the majority of women in the general population.  
                 This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.
                 <span class="more-results">75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about <a href="">risk-reduction</a> and <a href="">early detection</a> is still important.</span>
@@ -136,7 +136,7 @@
                   <!-- Added warning header -->
                   <h5 class="warning-header">There is potential that you may be High Risk. <br>Read on.</h5>
                 <!-- paragraph-one (left) -->
-                  <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                  <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>
                     Your answers suggest that you are at <a href="">increased baseline risk</a> for breast and ovarian cancer, 
                     either because of a <a href="">family history</a> of one of these cancers, some significant event in your personal health history, 
@@ -205,7 +205,7 @@
             <div class="results-copy-high">
               <!-- paragraph-one (left) -->
               <div class="column">  
-                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                <h3 class="column-header">Understanding Your Baseline Risk</h3>
                 <p>Your answers suggest that you are at a <a href="">high baseline risk</a> for breast and ovarian cancer, due either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations.
                 <span class="more-results">(If you’ve not yet pursued genetic testing, doing so to confirm your risk level is advisable.)  Being at high-risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  
                   This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the <a href="">risk-reduction</a> and <a href="">early detection</a> options that are available to you.  
@@ -350,7 +350,8 @@
           <div class="item period-high">
             <div class="section-title">PERIOD</div>
             <h4>Your period started early.</h4>
-            <p>Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen.  You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.</p>
+            <p>Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen.  
+              You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.</p>
           </div>                       
         </div>
       </div>

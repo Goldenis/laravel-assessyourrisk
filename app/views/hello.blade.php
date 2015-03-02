@@ -256,7 +256,7 @@
                 <h4>Would you like a copy of your results?</h4>
               </div>
               <div class="email-pdf-btns">
-                <button class="email">EMAIL</button><button class="pdf">PDF</button><button class="">SHARE WITH MY DOCTOR</button>
+                <button class="sub email">EMAIL</button><button class="pdf">PDF</button><button class="sub email">SHARE WITH MY DOCTOR</button>
               </div>         
             </div>
 <!-- paragraph wrapper close -->

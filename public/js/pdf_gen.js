@@ -59,7 +59,7 @@ var averageResults = {
             },
             {
                 margin: [10, 0, 0, 0],
-                text: 'tagline'
+                text: ''
             }
         ]
   },
@@ -76,7 +76,7 @@ var averageResults = {
       style: 'body'  
     },
     {
-      text: 'WHAT TO DO NOW \n \n ',
+      text: 'WHAT TO DO NOW \n ',
       style: 'subheader'
     },
     {
@@ -96,7 +96,7 @@ var averageResults = {
       style: 'answer'
     },
     {
-      text: '2.  '+q2,
+      text: '2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)',
       style: 'question'
     },
     {
@@ -270,7 +270,7 @@ var moderateResults = {
             },
             {
                 margin: [10, 0, 0, 0],
-                text: 'tagline'
+                text: ''
             }
         ]
   },
@@ -287,7 +287,7 @@ var moderateResults = {
       style: 'body'  
     },
     {
-      text: 'WHAT TO DO NOW \n \n ',
+      text: 'WHAT TO DO NOW \n ',
       style: 'subheader'
     },
     {
@@ -307,7 +307,7 @@ var moderateResults = {
       style: 'answer'
     },
     {
-      text: '2.  '+q2,
+      text: '2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)',
       style: 'question'
     },
     {
@@ -483,7 +483,7 @@ var highResults = {
             },
             {
                 margin: [10, 0, 0, 0],
-                text: 'tagline'
+                text: ''
             }
         ]
   },
@@ -500,7 +500,7 @@ var highResults = {
       style: 'body'  
     },
     {
-      text: 'WHAT TO DO NOW \n \n ',
+      text: 'WHAT TO DO NOW \n ',
       style: 'subheader'
     },
     {
@@ -520,7 +520,7 @@ var highResults = {
       style: 'answer'
     },
     {
-      text: '2.  '+q2,
+      text: '2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)',
       style: 'question'
     },
     {

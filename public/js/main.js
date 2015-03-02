@@ -1,5 +1,6 @@
     var resultLevel = 'average';
-    var savedQuestionsAnswers = {};  
+    var savedQuestionsAnswers = {};
+    var endCards = {}  
 
 (function($, undefined) {
     var _$window;
@@ -954,11 +955,11 @@
         //var result = $.grep(savedQuestionsAnswers, function(e){ return e.id == id; });
         console.log(savedQuestionsAnswers[0].questionTxt)
 
-        getUserAnswers();
+        getUserAnswersForEmail();
     
     }
 
-    function getUserAnswers() {
+    function getUserAnswersForEmail() {
         var emailqs;
         
          $('.email-content').html('');
@@ -984,6 +985,8 @@
 
          var resultCopy = $('.results-copy-high').text();
 
+         console.log(resultCopy)
+
          //$('.email-content').append('%0D%0A %0D%0A %0D%0A Your Result Text %0D%0A %0D%0A ' + encodeURIComponent(resultCopy));
 
          //return emailqs;
@@ -1000,13 +1003,11 @@
             $('.item.bmi-low').css({
                 display: 'block'
             })
-            pdfContent = "bmi-low";
         }    
         else 
             $('.item.bmi-high').css({
                 display: 'block'
-             }) 
-            pdfContent = "bmi-high";           
+             })         
 
 
 //drinks card

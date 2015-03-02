@@ -36,9 +36,6 @@
     </script>
   </head>
   <body>
-
-<!--       <a href="" class="testPDF" >test pdf</a> -->
-
     <div class="border"></div>
     <div class="logo">
     <img src="img/brightpink_logo.png">
@@ -316,8 +313,8 @@
             <h4>You have more than one drink a day.</h4>
             <p>Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.</p>
           </div>
-          <div class="item">
-            <div class="section-title exercise-high">PHYSICAL ACTIVITY</div>
+          <div class="item exercise-high">
+            <div class="section-title">PHYSICAL ACTIVITY</div>
             <h4>You’re not getting enough exercise.</h4>
             <p>Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.</p>
           </div>
@@ -520,7 +517,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="age-btn" disabled>Continue</button>
               </div>
           </div>
         </div>
@@ -537,7 +534,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="cancerhistory-btn" disabled>Continue</button>
               </div>
           </div>        
         </div>
@@ -577,7 +574,7 @@
                   </div>
                 </div>
             </div>
-              <button class="btn-calculate">Continue</button>
+              <button class="btn-calculate">Calculate</button>
           </div>   
           <br>
         </div>
@@ -586,17 +583,17 @@
           <div class="prompt">Have any of <span class="red-text">your immediate family members</span> (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|0"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="famdiag-check" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="famdiag-check" data-answer-id="2|-1"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="famdiag-check" data-answer-id="3|-1"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="famdiag-check" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="famdiag-check" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" name="famdiag-check" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="famdiag-check" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
           <div class="answers">
-            <button>Continue</button>
+            <button id="famdiag-check-btn" disabled>Continue</button>
             <button class="sub ask">Help me ask them</button>
           </div>        
         </div>
@@ -635,7 +632,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="mutation-btn" disabled>Continue</button>
               </div>
           </div>
         </div>
@@ -644,14 +641,14 @@
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="mutation-sub"  data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="mutation-sub"  data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <div class="answers">
-            <button>Continue</button>
+            <button id="mutation-sub-btn" disabled>Continue</button>
           </div>
         </div>        
 
@@ -901,8 +898,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="lifestyle-pledge-number">0 women have pledged to improve their lifestyles.</h3>
-            	<button class="facebook lifestyle">Join Them</button>
+            	<h3 class="lifestyle-pledge-number">0 Women Have Pledged to Improve Their Lifestyles.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook lifestyle">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
             </div>
           </div>
@@ -1053,8 +1051,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="knowing-pledge-number">0 women have pledged to know their normal.</h3>
-            	<button class="facebook knowing">Join Them</button>
+            	<h3 class="knowing-pledge-number">0 Women Have Pledged to Know Their Normal.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook knowing">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO FAMILY HISTORY →</button>
             </div>
           </div>
@@ -1120,11 +1119,12 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">         
               <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>
               <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
-              <button class="facebook family">Pledge to Learn Your Family History</button><br>
+              <!-- <button class="facebook family">Pledge to Learn Your Family History</button><br> -->
             </div>
              <div class="headline">
-            	<h3 class="family-pledge-number">0 women have pledged to learn their family histories.</h3>
-            	<button class="facebook family">Join Them</button>
+            	<h3 class="family-pledge-number">0 Women Have Pledged to Collect Their Family History.</h3>
+              <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
+            	<button class="facebook family">Pledge</button>
             </div>
             <div class="headline last">            
               <div class="share">

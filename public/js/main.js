@@ -1,5 +1,6 @@
     var resultLevel = 'average';
-    var savedQuestionsAnswers = {};  
+    var savedQuestionsAnswers = {};
+    var endCards = {};  
 
 (function($, undefined) {
     var _$window;
@@ -282,13 +283,13 @@
         for (i=0; i<moduleCategories.length; i++) {
           console.log('pledges ' +data[moduleCategories[i]])
           if(i===0){
-            pledgeMessage = "improve their lifestyles."
+            pledgeMessage = "Women Have Pledged to Improve Their Lifestyles."
           }else if(i===1){
-            pledgeMessage = "know their normal."
+            pledgeMessage = "Women Have Pledged to Know Their Normal."
           }else if(i===2){
-            pledgeMessage = "learn their family history."
+            pledgeMessage = "Women Have Pledged to Collect Their Family History."
           }
-          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " women have pledged to "+ pledgeMessage);
+          $('.' +moduleCategories[i]+ '-pledge-number').html(data[moduleCategories[i]]+ " "+ pledgeMessage);
           }
 
         }).fail(function(error) {
@@ -302,8 +303,31 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            // $.address.path('/assessment');
+            //window._currentPath = '/assessment';
+            $.address.path('/assessment');
+            //$.address.path('/assessment');
         })
+
+//buttons
+        $('input[name="age-radio"]').change(function(){
+            $('#age-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="cancerhistory-radio"]').change(function(){
+            $('#cancerhistory-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="famdiag-check"]').change(function(){
+            $('#famdiag-check-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="mutation-radio"]').change(function(){
+            $('#mutation-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="mutation-sub"]').change(function(){
+            $('#mutation-sub-btn').prop('disabled', !this.checked);
+        });
 
         $('.testPDF, .pdf').on('click', function() {
             createPinkPDF(resultLevel, savedQuestionsAnswers);
@@ -314,6 +338,9 @@
             console.log('clicked')
 
             $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles')
+            $('.facebook.lifestyle').css({
+                display: "none"
+            })
 
             resp = $.ajax({
               type : "GET",
@@ -331,6 +358,10 @@
             console.log('clicked')
 
             $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
+            $('.facebook.knowing').css({
+                display: "none"
+            })
+
 
             resp = $.ajax({
               type : "GET",
@@ -348,6 +379,9 @@
             console.log('clicked')
 
             $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
+            $('.facebook.family').css({
+                display: "none"
+            })
 
             resp = $.ajax({
               type : "GET",
@@ -366,15 +400,30 @@
             overlayOpen = false;
             $('.male-overlay').removeClass("in");
         })
-        $('.your-risk .read-more').on('click', function() {
-            $('.vid-container').remove();
-            $(this).css({
-                display: "none"
-            })
-            $('.more-results').css({
-                display: 'block'
-            })
-        })
+        // $('.your-risk .read-more').on('click', function() {
+        //     $('.vid-container').remove();
+        //     $(this).css({
+        //         display: "none"
+        //     })
+        //     $('.more-results').css({
+        //         display: 'block'
+        //     })
+        // })
+
+        $('.paragraph-box .read-more').on('click', function() {
+            if($(this).html() == 'Read More'){
+                $(this).html('Read Less');
+                $('.more-results').css({
+                    display: 'block'
+                })
+            }else{
+                $(this).html('Read More');
+                $('.more-results').css({
+                    display: 'none'
+                })
+            }
+        })   
+
         $('.progress-overlay .email-pdf').on('click', function() {
             window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
@@ -608,7 +657,7 @@
         _oldModule = _currentModule;
         _currentHeadline = $('.headline').eq(idx);
         var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
-        console.log('current',_currentVignette,' new',_newVignette)
+        //console.log('current',_currentVignette,' new',_newVignette)
         if (_currentVignette != _newVignette) {
             _currentVignette = _newVignette;
             changeVideo();
@@ -907,9 +956,9 @@
         
         var questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
         
-        var nine = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+        var questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
-        savedQuestionsAnswers[String(_currentQuestion)] = nine;
+        savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
         $('.question-stats').html('');
@@ -919,15 +968,17 @@
         }
 
         updateCharts();
-        console.log('Object savedQuizProgress = ', savedQuizProgress)
+        //console.log('Object savedQuizProgress = ', savedQuizProgress)
 
         // if (_currentQuestion == 0) return;
-        console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
-        getUserAnswers();
+        //console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+        //console.log(savedQuestionsAnswers[0].questionTxt)
+
+        getUserAnswersForEmail();
     
     }
 
-    function getUserAnswers() {
+    function getUserAnswersForEmail() {
         var emailqs;
         
          $('.email-content').html('');
@@ -953,6 +1004,8 @@
 
          var resultCopy = $('.results-copy-high').text();
 
+         //console.log(resultCopy)
+
          //$('.email-content').append('%0D%0A %0D%0A %0D%0A Your Result Text %0D%0A %0D%0A ' + encodeURIComponent(resultCopy));
 
          //return emailqs;
@@ -964,18 +1017,25 @@
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
 
+        var cardsObj;
+        var cardContent;
+
 //bmi card
         if (savedQuizProgress[4] == '+1') { 
             $('.item.bmi-low').css({
                 display: 'block'
             })
-            pdfContent = "bmi-low";
+            cardContent = $('.item.bmi-low').text();
+            cardsObj = {'fact': cardContent};
+            console.log(cardsObj)
         }    
         else 
             $('.item.bmi-high').css({
                 display: 'block'
-             }) 
-            pdfContent = "bmi-high";           
+             })  
+            cardContent = $('.item.bmi-high').text();
+            cardsObj = {'fact': cardContent};
+            console.log(cardsObj)        
 
 
 //drinks card
@@ -1001,6 +1061,13 @@
                 display: 'block'
              })   
 
+//period card
+        if (savedQuizProgress[13] == '-1') { 
+            $('.item.period-high').css({
+                display: 'block'
+            })
+        } 
+
 //birth-control card
         if (savedQuizProgress[15] == '+1') { 
             $('.item.birth-control-low').css({
@@ -1010,7 +1077,7 @@
         else 
             $('.item.birth-control-high').css({
                 display: 'block'
-             })   
+             })     
 
 //pregnancy card
         if (savedQuizProgress[17] == '+1') { 
@@ -1027,12 +1094,21 @@
         if (savedQuizProgress[18] == '+1') { 
             $('.item.breastfeeding-low').css({
                 display: 'block'
-            })
-        }    
-        else 
+            })   
+        }
+        if (savedQuizProgress[18] == '-1') { 
             $('.item.breastfeeding-high').css({
                 display: 'block'
-             })   
+            })   
+        }
+    
+//previous cancer history
+      if (savedQuizProgress[2] == '-1') { 
+            $('.triggered-cancer-copy').css({
+                display: 'block'
+            })  
+        }
+
     }
 
     function askHandler(e) {
@@ -1096,11 +1172,11 @@ Do you know if I do%3F");
     }
     function answerQuestion(answer) {
 
-        if (_currentQuestion >= _totalQuestions - 1) {
+        if (_currentQuestion >= _totalQuestions -1) {
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
-            },500)
+            },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'
@@ -1149,6 +1225,8 @@ Do you know if I do%3F");
     function prevQuestion(){
         if(_currentQuestion > 0){
 
+            console.log(_currentQuestion)
+
             console.log(savedQuizProgress['7'])
             if (_currentQuestion == 9 && savedQuizProgress['7'] == '+1') {
                 $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
@@ -1162,6 +1240,37 @@ Do you know if I do%3F");
                 _currentQuestion = 8;
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             }
+
+            if (_currentQuestion == 4) {
+
+
+                $('.bmi-result.answers').css({
+                    opacity: 0
+                })   
+
+                $('.question').eq(_currentQuestion).addClass('out-up')
+                $('.question').eq(_currentQuestion).removeClass('in')
+
+                $('.fact').eq(_currentQuestion).removeClass('in');
+                $('.fact').eq(_currentQuestion).addClass('out');
+         
+              
+                $('.bmi-result h4, h3').remove();
+
+                $('.btn-calculate').css({
+                    visibility: 'visible'
+                })
+
+                $('.height-wrapper').css({
+                    display: "block"
+                })
+
+               $('.bmi-result').css({
+                    opacity: 0
+                })
+
+            }
+
 
             $('.fact').eq(_currentQuestion).removeClass('in');
             $('.fact').eq(_currentQuestion).addClass('out');
@@ -1380,33 +1489,32 @@ Do you know if I do%3F");
 
   $.address.externalChange(function(event) {
 
-        console.log('external URL change')
-        console.log(event.value)
-
         var oldPath = _currentPath;
         var newPath = event.value;
-        console.log('currentPath', _currentPath);
+
+        //console.log('currentPath', _currentPath);
 
 
 
-        if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
+        // if (event.value == '/home' || event.value == '/' && event.value !== _currentPath) {
 
-            //$.address.path('/home');
-            console.log('GO HOME');
+        //     //$.address.path('/home');
+        //     console.log('GO HOME');
             
-            if (_currentPath !== '/education' && _currentPath !== '/intro'){
-                goHome();
-            }
-            else if (_currentPath === '/education')
-            {
-                toggleColumn();
-            }
-            else
-            {
-                // $.address.path('/assessment');
-            }
-            _currentPath = newPath;
-        } else if (event.value == '/education') {
+        //     if (_currentPath !== '/education' && _currentPath !== '/intro'){
+        //         //goHome();
+        //     }
+        //     else if (_currentPath === '/education')
+        //     {
+        //         toggleColumn();
+        //     }
+        //     else
+        //     {
+        //         // $.address.path('/assessment');
+        //     }
+        //     _currentPath = newPath;
+        // } else 
+        if (event.value == '/education') {
             console.log('education');            
             hideIntro();
             addCharts();
@@ -1424,13 +1532,13 @@ Do you know if I do%3F");
             hideIntro();
             addCharts();
         } else {
-            console.log('intro view')
-            
+            console.log('intro view')       
             startIntro();
             $.address.path('/intro');
             _currentPath = newPath;
         };
         $('.vid-container').remove();
+
     });
 
     $(document).ready(function() {

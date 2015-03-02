@@ -520,6 +520,18 @@ button.sub:hover {
 .progress-overlay .results .your-risk p.on {
   display: block;
 }
+.progress-overlay .results .triggered-cancer-copy {
+  padding: 3rem 0 0;
+  padding: 6rem;
+  width: calc(100% + 12rem);
+  margin-top: 6rem;
+  left: -6rem;
+  background: #fde4df;
+  display: none !important;
+}
+.progress-overlay .results .triggered-cancer-copy.show {
+  display: block !important;
+}
 .progress-overlay .results .paragraph-wrapper {
   width: 100%;
   background: #fff;
@@ -544,14 +556,6 @@ button.sub:hover {
   color: #555558;
   font-size: 1.4rem;
   text-decoration: underline;
-}
-.progress-overlay .results .paragraph-wrapper .paragraph-box .triggered-cancer-copy {
-  padding: 6rem;
-  width: calc(100% + 12rem);
-  margin-top: 6rem;
-  left: -6rem;
-  background: #fde4df;
-  display: none;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
   display: none;

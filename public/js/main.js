@@ -1104,9 +1104,10 @@
     
 //previous cancer history
       if (savedQuizProgress[2] == '-1') { 
-            $('.triggered-cancer-copy').css({
-                display: 'block'
-            })  
+            $('.triggered-cancer-copy').addClass('show')
+            // $('.triggered-cancer-copy').css({
+            //     display: 'block !important' 
+            // })  
         }
 
     }

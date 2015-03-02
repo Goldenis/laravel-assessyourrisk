@@ -121,8 +121,9 @@ $headline-font: 'avg_bold', sans-serif;
 $bgColor: #fff;
 $darkColor: #555558;
 $pink: #D7006D;
-$nude-light: #fdd5ce;
 $nude: #FFB4AA;
+$nude-light: #fdd5ce;
+$nude-xtra-light: #FDE4DF;
 $red: #F6323E;
 $light-gray: #ccc;
 $darkColor50: rgba(6, 6, 6, .50);
@@ -564,6 +565,19 @@ button {
                 }
             }
         }
+        .triggered-cancer-copy {
+            padding: 3rem 0 0;
+            padding: 6rem;
+            width: calc(100% + 12rem);
+            margin-top: 6rem;
+            left: -6rem;
+            background: $nude-xtra-light; 
+            display: none !important;
+            &.show{
+                display: block !important; 
+            }
+        }
+
         .paragraph-wrapper {
             width: 100%;
             background: #fff;
@@ -588,26 +602,28 @@ button {
                     font-size: 1.4rem;
                     text-decoration: underline;
                 }
-                .triggered-cancer-copy {
-                    padding: 3rem 0 0;
-                    display: none;
-                }
                 .more-results {
                     display: none;
                 }
-                .read-more {
-                    font-size: 1rem;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-family: "avg_bold";
-                    letter-spacing: .1rem;
-                    color: $pink;
-                    border-bottom: 2px solid $pink;
-                    padding-bottom: 5px;  
-                    a {
+                .read-more-box{
+                    padding-bottom: 3rem;
+
+                    .read-more {
+                        font-size: 1rem;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: "avg_bold";
+                        letter-spacing: .1rem;
                         color: $pink;
-                    }              
+                        border-bottom: 2px solid $pink;
+                        padding-bottom: 5px;
+                        position: absolute;  
+                        a {
+                            color: $pink;
+                        }              
+                    }    
                 }
+                
                 .column {
                     // border: 1px solid blue;
                     float: left;

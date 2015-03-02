@@ -96,12 +96,12 @@
             <div class="results-copy-average on">
               <!-- paragraph-one (left) -->
               <div class="column"> 
-                <h3 class="column-header">Understanding Your Baseline Risk</h3>
+                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
                 <p>Your answers suggest that you are at <a href="">average baseline risk</a> for breast and ovarian cancer, just like the majority of women in the general population.  
                 This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.
                 <span class="more-results">75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about <a href="">risk-reduction</a> and <a href="">early detection</a> is still important.</span>
                 </p>
-                <div class="triggered-cancer-copy average">
+                <div class="triggered-cancer-copy average more-results">
                   <h3 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h3>
                     <p>
                       It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk.  
@@ -124,7 +124,9 @@
                 <p class="more-results">
                 In addition to finding out more about <a href="">risk-reduction</a> and <a href="">early detection</a>, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
-                <a href="#" class="read-more">Read More</a>
+                <div class="read-more-box">
+                  <a href="#" class="read-more">Read More</a>
+                </div>
               </div>
             </div>
 
@@ -132,13 +134,15 @@
             <div class="results-copy-moderate">
               <div class="column">
                   <!-- Added warning header -->
-                  <h5 class="warning-header">There is potential that you may be High Risk. Read on.</h5>
+                  <h5 class="warning-header">There is potential that you may be High Risk. <br>Read on.</h5>
                 <!-- paragraph-one (left) -->
-                  <h3 class="column-header">Understanding Your Baseline Risk</h3>
+                  <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
                   <p>
                     Your answers suggest that you are at <a href="">increased baseline risk</a> for breast and ovarian cancer, 
                     either because of a <a href="">family history</a> of one of these cancers, some significant event in your personal health history, 
-                    or because you or a family member has been diagnosed with a specific type of gene mutation associated with breast or ovarian cancer.
+                    or because you or a family member has been diagnosed with a specific type of gene mutation associated with an increased risk of breast or ovarian cancer.
+                    <span class="more-results">If you have not already pursued genetic testing, we highly recommend that you talk with your doctor or a genetic counselor about whether your personal circumstances warrant it, to confirm that your baseline risk truly is only increased, and not actually high.  
+                    If you are at high risk, you will need to discuss enhanced risk management strategies with your doctor.</span>
                   </p>  
                   <p class="more-results">
                   Being at increased risk means that you have up to a 25% chance of developing breast cancer and up to a 5.5% chance of ovarian cancer at some point in your lifetime.  
@@ -146,7 +150,7 @@
                   It’s a great thing that you’ve identified this risk and are here learning more about the <a href="">risk-reduction</a> and <a href="">early detection</a> options that are available to you.  
                   Living a proactive lifestyle is one of the most important things you can do.
                   </p>
-                  <div class="triggered-cancer-copy increased">
+                  <div class="triggered-cancer-copy increased more-results">
                     <h3 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h3>
                       <p>
                         The recommendation above regarding genetic testing is particularly relevant to you.  
@@ -176,6 +180,12 @@
                     The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. <span class="more-results"> 
                     You can learn more about lifestyle risk-reduction strategies on our website.</span>
                   </p>
+                  <p class="more-results red-text">
+                    <i>As mentioned above, if you’ve not yet had genetic testing</i>, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
+                    He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result.  
+                    If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources on our website <a href="">here</a>.  
+                    And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our <a href="">Ask a Genetic Counselor</a> page.
+                  </p>
                   <p class="more-results">
                     Your doctor may also recommend increased <a href="">risk-reduction</a> and <a href="">early detection</a> strategies appropriate for women at increased risk, including starting mammograms at a younger age than recommended for women of average risk, or exploring the possibility of pharmaceutical risk-reduction options.
                   </p>
@@ -193,9 +203,9 @@
             <div class="results-copy-high">
               <!-- paragraph-one (left) -->
               <div class="column">  
-                <h3 class="column-header">Understanding Your Baseline Risk</h3>
-                <p>Your answers suggest that you are at a <a href="">high baseline risk</a> for breast and ovarian cancer, due either to a diagnosed gene mutation associated with one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations.
-                <span class="more-results">Being at high-risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  
+                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                <p>Your answers suggest that you are at a <a href="">high baseline risk</a> for breast and ovarian cancer, due either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations.
+                <span class="more-results">(If you’ve not yet pursued genetic testing, doing so to confirm your risk level is advisable.)  Being at high-risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  
                   This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the <a href="">risk-reduction</a> and <a href="">early detection</a> options that are available to you.  
                   Living a proactive lifestyle is one of the most important things you can do!</span>
                 </p>
@@ -220,7 +230,7 @@
                 The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping.  
                 You can learn more about <a href="">lifestyle risk-reduction</a> strategies on our website.</span>
                 </p>
-                <p class="more-results"><i>If you’ve not yet had genetic testing</i>, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
+                <p class="more-results"><i>As mentioned above, if you’ve not yet had genetic testing</i>, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
                 He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result.  
                 It’s important to note that until you’ve had genetic testing done, you don’t know for sure that you’re high risk.  
                 If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources <a href="">here</a>.  

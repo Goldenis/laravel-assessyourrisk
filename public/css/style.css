@@ -547,6 +547,7 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .triggered-cancer-copy {
   padding: 3rem 0 0;
+  display: none;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
   display: none;

@@ -1042,17 +1042,16 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif{
     position: absolute;
-    top: -10.5rem;
     margin: auto;
     left: 0;
     right: 0;
+    top: 0;
     img {
         width: 9rem;
         max-width: 205px;
         min-width: 100px;
     }
     &.birth{
-        top: -13rem;
         img {
         -webkit-transform: rotate(45deg);
         width: 11rem;
@@ -1061,7 +1060,6 @@ input[type="checkbox"], input[type="radio"] {
         }
     }    
     &.stopwatch{
-        top: -13rem;
         img {
             width: 13rem;
             max-width: 205px;
@@ -1862,6 +1860,9 @@ input[type="checkbox"], input[type="radio"] {
     @include transition(.5s, ease-out);
     pointer-events: none;
 
+    &.gif{
+        padding-top: 11rem;
+    }
     .prompt {
         left: 10%;
         width: 80%;
@@ -2394,11 +2395,9 @@ footer {
             overflow-y: visible;
             overflow: visible;
         }
-        &.gif,&.weight{
-            overflow-y: visible;
-            overflow: visible;
+        &.gif{
             .anim-gif{
-                top: -110px;
+                
             }
         }
     }

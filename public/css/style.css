@@ -1020,27 +1020,21 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif {
   position: absolute;
-  top: -10.5rem;
   margin: auto;
   left: 0;
   right: 0;
+  top: 0;
 }
 .anim-gif img {
   width: 9rem;
   max-width: 205px;
   min-width: 100px;
 }
-.anim-gif.birth {
-  top: -13rem;
-}
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
   min-width: 130px;
-}
-.anim-gif.stopwatch {
-  top: -13rem;
 }
 .anim-gif.stopwatch img {
   width: 13rem;
@@ -2013,6 +2007,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-delay: 0;
   pointer-events: none;
 }
+.question.gif {
+  padding-top: 11rem;
+}
 .question .prompt {
   left: 10%;
   width: 80%;
@@ -2557,13 +2554,6 @@ footer {
   .question.weight-question {
     overflow-y: visible;
     overflow: visible;
-  }
-  .question.gif, .question.weight {
-    overflow-y: visible;
-    overflow: visible;
-  }
-  .question.gif .anim-gif, .question.weight .anim-gif {
-    top: -110px;
   }
   .btn-calculate {
     left: 64px;

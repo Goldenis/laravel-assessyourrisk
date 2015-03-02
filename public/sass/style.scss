@@ -1954,6 +1954,148 @@ footer {
             margin-right: 0;
         }
     }
+    .progress-overlay {
+        padding: 0;
+        .results {
+            width: 100%;
+            padding: 0;
+            .progress-result{
+                padding-bottom: 1rem;
+                .percentage.percquiz{ 
+                    position: absolute;
+                    top: 2.4rem;
+                    text-align: center;
+                    width: 100%;
+                }
+                .chart-4{
+                    margin: auto !important;
+                }
+            }   
+            .your-risk {
+                .risk-level {
+                    color: $pink;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                }
+                h2 {
+                    margin: 50px 0;
+                }
+                p {
+                    font-size: 1.4rem;
+                    display: none;
+                    width: 100%;
+                // Used to be --
+                    // width: 70%;
+                    // left: 15%;
+                    margin-bottom: 1rem;
+                    a, a:visited {
+                        color: $darkColor50;
+                    }
+                    &.on{
+                        display: block;
+                    }
+                }
+            }
+            .triggered-cancer-copy {
+                padding: 3rem;
+                width: calc(100% + 12rem);
+                margin-top: 3rem;
+                left: -6rem;
+                background: $nude-xtra-light; 
+                display: none !important;
+                &.show{
+                    display: block !important; 
+                }
+            }
+
+            .paragraph-wrapper {
+                width: 100%;
+                background: #fff;
+                // padding: 4rem;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 24rem;
+                .paragraph-box {
+                    width: 100%;
+                    float: left;
+                    text-align: left;
+                    color: $darkColor;
+                    h3 {
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        margin-bottom: 2rem;
+                    }
+                    a {
+                        color: $darkColor;
+                        font-size: 1.4rem;
+                        text-decoration: underline;
+                    }
+                    .more-results {
+                        display: none;
+                    }
+                    .read-more-box{
+                        padding-bottom: 3rem;
+
+                        .read-more {
+                            font-size: 1rem;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-family: "avg_bold";
+                            letter-spacing: .1rem;
+                            color: $pink;
+                            border-bottom: 2px solid $pink;
+                            padding-bottom: 5px;
+                            position: absolute;  
+                            a {
+                                color: $pink;
+                            }              
+                        }    
+                    }
+                    
+                    .column {
+                        width: 100%;
+                        padding: 3rem;
+                        .column-header {
+                            margin-bottom: 2rem;
+                        }
+                        .item {
+                            margin-bottom: 4rem;
+                            display: none;
+                        }
+                    }
+                    .warning-header {
+                        margin-bottom: 2rem;
+                    }
+                }
+                .email-pdf-doctor {
+                    padding: 3rem;
+                    button {
+                        border: 3px solid #fff;
+                        cursor: pointer;
+                        color: #fff;
+                        &:hover {
+                            background: #fff;
+                            color: $red;
+                        }
+                    }
+                    .email-pdf-copy, .email-pdf-btns {
+                        // border: 1px solid white;
+                        float: left;
+                        min-height: 60px;
+                    }
+                    .email-pdf-copy {
+                        width: 100%;
+                        padding-top: 1.6rem;
+                    }
+                    .email-pdf-btns {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only(max-width: 768px) {
     .logo {
@@ -2016,6 +2158,12 @@ footer {
         .close-btn {
             display: none !important;
         }
+        .share {
+            padding-right: 12.5%;
+            .share-btn-wrapper{
+                width: 75%;
+            }   
+        }
         .progress {
             .chart {
                 margin: auto !important;
@@ -2037,15 +2185,6 @@ footer {
                 }
                 &:hover {
                     opacity: .8;
-                }
-            }
-        }
-        .results {
-            width: 100%;
-            padding: 1rem 2rem;
-            .your-risk {
-                h2 {
-                    margin: 20px 0;
                 }
             }
         }

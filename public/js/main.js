@@ -308,6 +308,27 @@
             //$.address.path('/assessment');
         })
 
+//buttons
+        $('input[name="age-radio"]').change(function(){
+            $('#age-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="cancerhistory-radio"]').change(function(){
+            $('#cancerhistory-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="famdiag-check"]').change(function(){
+            $('#famdiag-check-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="mutation-radio"]').change(function(){
+            $('#mutation-btn').prop('disabled', !this.checked);
+        });
+
+        $('input[name="mutation-sub"]').change(function(){
+            $('#mutation-sub-btn').prop('disabled', !this.checked);
+        });
+
         $('.testPDF, .pdf').on('click', function() {
             createPinkPDF(resultLevel, savedQuestionsAnswers);
         })
@@ -636,7 +657,7 @@
         _oldModule = _currentModule;
         _currentHeadline = $('.headline').eq(idx);
         var _newVignette = $('.module').eq(_currentModule).find(_currentHeadline.closest('.vignette')).index();
-        console.log('current',_currentVignette,' new',_newVignette)
+        //console.log('current',_currentVignette,' new',_newVignette)
         if (_currentVignette != _newVignette) {
             _currentVignette = _newVignette;
             changeVideo();
@@ -1223,26 +1244,31 @@ Do you know if I do%3F");
             if (_currentQuestion == 4) {
 
 
-           $('.bmi-result').css({
-                opacity: 0
-            })
+                $('.bmi-result.answers').css({
+                    opacity: 0
+                })   
 
-            $('.fact').eq(_currentQuestion).removeClass('in');
-            $('.fact').eq(_currentQuestion).addClass('out');
-            
-            $('.question').eq(_currentQuestion).addClass('out-up')
-            $('.question').eq(_currentQuestion).removeClass('in')
+                $('.question').eq(_currentQuestion).addClass('out-up')
+                $('.question').eq(_currentQuestion).removeClass('in')
 
-                    
-                    $('.bmi-result h4, h3').remove();
+                $('.fact').eq(_currentQuestion).removeClass('in');
+                $('.fact').eq(_currentQuestion).addClass('out');
+         
+              
+                $('.bmi-result h4, h3').remove();
 
-                    $('.btn-calculate').css({
-                        visibility: 'visible'
-                    })
+                $('.btn-calculate').css({
+                    visibility: 'visible'
+                })
 
-                    $('.height-wrapper').css({
-                        display: "block"
-                    })
+                $('.height-wrapper').css({
+                    display: "block"
+                })
+
+               $('.bmi-result').css({
+                    opacity: 0
+                })
+
             }
 
 

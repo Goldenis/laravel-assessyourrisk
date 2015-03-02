@@ -499,7 +499,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="age-btn" disabled>Continue</button>
               </div>
           </div>
         </div>
@@ -516,7 +516,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="cancerhistory-btn" disabled>Continue</button>
               </div>
           </div>        
         </div>
@@ -556,7 +556,7 @@
                   </div>
                 </div>
             </div>
-              <button class="btn-calculate">Continue</button>
+              <button class="btn-calculate">Calculate</button>
           </div>   
           <br>
         </div>
@@ -565,17 +565,17 @@
           <div class="prompt">Have any of <span class="red-text">your immediate family members</span> (parent, sibling, grandparent, aunt, or uncle) been diagnosed with any of the following?</div>
         
           <div class="checkbox-list cb1">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|0"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="famdiag-check" data-answer-id="1|-1"><div class="label">Breast cancer diagnosed at age 50 or under</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="famdiag-check" data-answer-id="2|-1"><div class="label">Triple negative (ER/PR/her2-) breast cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="famdiag-check" data-answer-id="3|-1"><div class="label">More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast)</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="famdiag-check" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="famdiag-check" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" name="famdiag-check" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="famdiag-check" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
           <div class="answers">
-            <button>Continue</button>
+            <button id="famdiag-check-btn" disabled>Continue</button>
             <button class="sub ask">Help me ask them</button>
           </div>        
         </div>
@@ -614,7 +614,7 @@
             </div>
               <br>
               <div class="answers">
-                <button>Continue</button>
+                <button id="mutation-btn" disabled>Continue</button>
               </div>
           </div>
         </div>
@@ -623,14 +623,14 @@
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="mutation-sub"  data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="mutation-sub"  data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <div class="answers">
-            <button>Continue</button>
+            <button id="mutation-sub-btn" disabled>Continue</button>
           </div>
         </div>        
 

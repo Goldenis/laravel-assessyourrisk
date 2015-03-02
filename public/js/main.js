@@ -1,6 +1,6 @@
     var resultLevel = 'average';
     var savedQuestionsAnswers = {};
-    var endCards = {}  
+    var endCards = {};  
 
 (function($, undefined) {
     var _$window;
@@ -935,9 +935,9 @@
         
         var questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
         
-        var nine = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+        var questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
-        savedQuestionsAnswers[String(_currentQuestion)] = nine;
+        savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
         savedQuizProgress[String(_currentQuestion)] = ansTxt;
 
         $('.question-stats').html('');
@@ -947,13 +947,11 @@
         }
 
         updateCharts();
-        console.log('Object savedQuizProgress = ', savedQuizProgress)
+        //console.log('Object savedQuizProgress = ', savedQuizProgress)
 
         // if (_currentQuestion == 0) return;
-        console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
-
-        //var result = $.grep(savedQuestionsAnswers, function(e){ return e.id == id; });
-        console.log(savedQuestionsAnswers[0].questionTxt)
+        //console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+        //console.log(savedQuestionsAnswers[0].questionTxt)
 
         getUserAnswersForEmail();
     
@@ -985,7 +983,7 @@
 
          var resultCopy = $('.results-copy-high').text();
 
-         console.log(resultCopy)
+         //console.log(resultCopy)
 
          //$('.email-content').append('%0D%0A %0D%0A %0D%0A Your Result Text %0D%0A %0D%0A ' + encodeURIComponent(resultCopy));
 
@@ -998,16 +996,25 @@
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
 
+        var cardsObj;
+        var cardContent;
+
 //bmi card
         if (savedQuizProgress[4] == '+1') { 
             $('.item.bmi-low').css({
                 display: 'block'
             })
+            cardContent = $('.item.bmi-low').text();
+            cardsObj = {'fact': cardContent};
+            console.log(cardsObj)
         }    
         else 
             $('.item.bmi-high').css({
                 display: 'block'
-             })         
+             })  
+            cardContent = $('.item.bmi-high').text();
+            cardsObj = {'fact': cardContent};
+            console.log(cardsObj)        
 
 
 //drinks card

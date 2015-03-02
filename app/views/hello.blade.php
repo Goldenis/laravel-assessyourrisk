@@ -36,9 +36,6 @@
     </script>
   </head>
   <body>
-
-      <a href="/#/assessment" class="testPDF" style="z-index: 10000">test pdf</a>
-
     <div class="border"></div>
     <div class="logo">
     <img src="img/brightpink_logo.png">

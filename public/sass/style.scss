@@ -525,7 +525,7 @@ button {
     }
     .results {
         width: 100%;
-        padding: 1rem 6rem;
+        padding: 0rem 5rem;
         float: left;
         //display: none;
         .progress-result{
@@ -631,6 +631,9 @@ button {
                     padding: 6rem;
                     .column-header {
                         margin-bottom: 2rem;
+                        a {
+                            font-size: 2.8rem;
+                        }
                     }
                     .item {
                         margin-bottom: 4rem;
@@ -644,6 +647,11 @@ button {
                 .warning-header {
                     color: $red;
                     margin-bottom: 2rem;
+
+                    // background: $nude-xtra-light;
+                    // width: calc(100% + 12rem);
+                    // left: -6rem;
+                    // padding: 2rem 6rem;
                 }
             }
                 .email-pdf-doctor {

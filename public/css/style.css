@@ -485,7 +485,7 @@ button.sub:hover {
 }
 .progress-overlay .results {
   width: 100%;
-  padding: 1rem 6rem;
+  padding: 0rem 5rem;
   float: left;
 }
 .progress-overlay .results .progress-result {
@@ -584,6 +584,9 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
   margin-bottom: 2rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header a {
+  font-size: 2.8rem;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
   margin-bottom: 4rem;

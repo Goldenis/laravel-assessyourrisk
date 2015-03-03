@@ -485,7 +485,7 @@ button.sub:hover {
 }
 .progress-overlay .results {
   width: 100%;
-  padding: 1rem 6rem;
+  padding: 0rem 5rem;
   float: left;
 }
 .progress-overlay .results .progress-result {
@@ -584,6 +584,9 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
   margin-bottom: 2rem;
+}
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header a {
+  font-size: 2.8rem;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
   margin-bottom: 4rem;
@@ -1017,27 +1020,21 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif {
   position: absolute;
-  top: -10.5rem;
   margin: auto;
   left: 0;
   right: 0;
+  top: 0;
 }
 .anim-gif img {
   width: 9rem;
   max-width: 205px;
   min-width: 100px;
 }
-.anim-gif.birth {
-  top: -13rem;
-}
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
   min-width: 130px;
-}
-.anim-gif.stopwatch {
-  top: -13rem;
 }
 .anim-gif.stopwatch img {
   width: 13rem;
@@ -2010,6 +2007,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-delay: 0;
   pointer-events: none;
 }
+.question.gif {
+  padding-top: 11rem;
+}
 .question .prompt {
   left: 10%;
   width: 80%;
@@ -2130,6 +2130,138 @@ footer {
   .dot:last-of-type {
     margin-right: 0;
   }
+  .progress-overlay {
+    padding: 0;
+  }
+  .progress-overlay .results {
+    width: 100%;
+    padding: 0;
+  }
+  .progress-overlay .results .progress-result {
+    padding-bottom: 1rem;
+  }
+  .progress-overlay .results .progress-result .percentage.percquiz {
+    position: absolute;
+    top: 2.4rem;
+    text-align: center;
+    width: 100%;
+  }
+  .progress-overlay .results .progress-result .chart-4 {
+    margin: auto !important;
+  }
+  .progress-overlay .results .your-risk .risk-level {
+    color: #d7006d;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .progress-overlay .results .your-risk h2 {
+    margin: 50px 0;
+  }
+  .progress-overlay .results .your-risk p {
+    font-size: 1.4rem;
+    display: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
+    color: rgba(6, 6, 6, .50);
+  }
+  .progress-overlay .results .your-risk p.on {
+    display: block;
+  }
+  .progress-overlay .results .triggered-cancer-copy {
+    padding: 3rem;
+    width: calc(100% + 12rem);
+    margin-top: 3rem;
+    left: -6rem;
+    background: #fde4df;
+    display: none !important;
+  }
+  .progress-overlay .results .triggered-cancer-copy.show {
+    display: block !important;
+  }
+  .progress-overlay .results .paragraph-wrapper {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 24rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #555558;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box h3 {
+    margin-bottom: 2rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box a {
+    color: #555558;
+    font-size: 1.4rem;
+    text-decoration: underline;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
+    display: none;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
+    padding-bottom: 3rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "avg_bold";
+    letter-spacing: 0.1rem;
+    color: #d7006d;
+    border-bottom: 2px solid #d7006d;
+    padding-bottom: 5px;
+    position: absolute;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
+    color: #d7006d;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column {
+    width: 100%;
+    padding: 3rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
+    margin-bottom: 2rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
+    margin-bottom: 4rem;
+    display: none;
+  }
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
+    margin-bottom: 2rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
+    padding: 3rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
+    border: 3px solid #fff;
+    cursor: pointer;
+    color: #fff;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+    background: #fff;
+    color: #f6323e;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+    float: left;
+    min-height: 60px;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
+    width: 100%;
+    padding-top: 1.6rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .logo img {
@@ -2188,6 +2320,12 @@ footer {
   .progress-overlay .close-btn {
     display: none !important;
   }
+  .progress-overlay .share {
+    padding-right: 12.5%;
+  }
+  .progress-overlay .share .share-btn-wrapper {
+    width: 75%;
+  }
   .progress-overlay .progress .chart {
     margin: auto !important;
   }
@@ -2209,13 +2347,6 @@ footer {
   }
   .progress-overlay .questions .progress-question:hover {
     opacity: 0.8;
-  }
-  .progress-overlay .results {
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-  .progress-overlay .results .your-risk h2 {
-    margin: 20px 0;
   }
   .progress-overlay .cards .card {
     width: 100%;
@@ -2554,13 +2685,6 @@ footer {
   .question.weight-question {
     overflow-y: visible;
     overflow: visible;
-  }
-  .question.gif, .question.weight {
-    overflow-y: visible;
-    overflow: visible;
-  }
-  .question.gif .anim-gif, .question.weight .anim-gif {
-    top: -110px;
   }
   .btn-calculate {
     left: 64px;

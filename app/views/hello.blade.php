@@ -96,7 +96,7 @@
             <div class="results-copy-average on">
               <!-- paragraph-one (left) -->
               <div class="column"> 
-                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                <h3 class="column-header">Understanding Your Baseline Risk</h3>
                 <p>Your answers suggest that you are at <a href="">average baseline risk</a> for breast and ovarian cancer, just like the majority of women in the general population.  
                 This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.
                 <span class="more-results">75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about <a href="">risk-reduction</a> and <a href="">early detection</a> is still important.</span>
@@ -136,7 +136,7 @@
                   <!-- Added warning header -->
                   <h5 class="warning-header">There is potential that you may be High Risk. <br>Read on.</h5>
                 <!-- paragraph-one (left) -->
-                  <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                  <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>
                     Your answers suggest that you are at <a href="">increased baseline risk</a> for breast and ovarian cancer, 
                     either because of a <a href="">family history</a> of one of these cancers, some significant event in your personal health history, 
@@ -195,7 +195,9 @@
                   <p class="more-results">
                     We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.
                   </p>
-                  <a href="#" class="read-more">Read More</a>
+                  <div class="read-more-box">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
               </div>
             </div>
 
@@ -203,7 +205,7 @@
             <div class="results-copy-high">
               <!-- paragraph-one (left) -->
               <div class="column">  
-                <h3 class="column-header"><a href="">Understanding Your Baseline Risk</a></h3>
+                <h3 class="column-header">Understanding Your Baseline Risk</h3>
                 <p>Your answers suggest that you are at a <a href="">high baseline risk</a> for breast and ovarian cancer, due either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations.
                 <span class="more-results">(If you’ve not yet pursued genetic testing, doing so to confirm your risk level is advisable.)  Being at high-risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  
                   This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the <a href="">risk-reduction</a> and <a href="">early detection</a> options that are available to you.  
@@ -246,7 +248,9 @@
                 <p class="more-results">
                 We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
-                <a href="#" class="read-more">Read More</a>
+                <div class="read-more-box">
+                  <a href="#" class="read-more">Read More</a>
+                </div>
               </div>
             </div>
           </div>
@@ -347,7 +351,8 @@
           <div class="item period-high">
             <div class="section-title">PERIOD</div>
             <h4>Your period started early.</h4>
-            <p>Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen.  You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.</p>
+            <p>Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen.  
+              You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.</p>
           </div>                       
         </div>
       </div>
@@ -431,7 +436,7 @@
             </div>
             
             <div class="fact">
-              <h5>Research shows a <B>10% increase in breast cancer risk for every 10g of alcohol</B>—that’s one standard drink—consumed each day on average. Limit alcohol to one drink per day or eliminate it entirely.</h5>
+              <h5>Research shows a 10% increase in breast cancer risk for every 10g of alcohol—that’s <i>one</i> standard drink—consumed each day on average. Limit alcohol to one drink per day or eliminate it entirely.</h5>
             </div>
 
             <div class="fact">
@@ -439,7 +444,7 @@
             </div>
 
             <div class="fact">
-              <h5>One of the most common mutations — BRCA 1/2 — are present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
+              <h5>One of the most common mutations — <i>BRCA1</i> or <i>BRCA2</i> — are present in 1 in 400 individuals, 1 in 40 Ashkenazi Jews, 1 in 10 women diagnosed with breast cancer and 1 in 8 women diagnosed with ovarian cancer.</h5>
             </div>
 
             <div class="fact">
@@ -467,7 +472,7 @@
             </div>          
 
             <div class="fact">
-              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line - there are few lifestyle behaviors that reduce your ovarian cancer risk — except for taking birth control pills.</h5>
+              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line - there are few lifestyle behaviors that reduce your ovarian cancer risk — <i>except</i> for taking birth control pills.</h5>
             </div>
 
             <div class="fact">
@@ -652,7 +657,7 @@
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label">BRCA 1/2, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label"><i>BRCA1</i> or <i>BRCA2</i>, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" name="mutation-sub"  data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" name="mutation-sub"  data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
@@ -909,7 +914,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline last">
               <div class="arrow"><img src="img/arrow_right.png"></div>
-            	<h3 class="lifestyle-pledge-number">0 Women Have Pledged to Improve Their Lifestyles.</h3>
+            	<h3 class="lifestyle-pledge-number">0 Women Have Pledged to Improve Their Lifestyles</h3>
               <h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5> 
             	<button class="facebook lifestyle">Pledge</button>
               <button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>
@@ -1118,8 +1123,20 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette" data-src="family">
           <div class="headlines">
             <div class="headline">         
-              <h3>Women of certain races, lineages, and backgrounds may have an increased risk of developing breast and ovarian cancer.</h3>
-              <h5>For example, breast cancer is the most common cancer diagnosis among African American women. People of Ashkenazi Jewish ancestry are more likely to carry BRCA gene mutations, which puts them at higher risk.</h5>
+              <h3>Your Race and Ancestry Can Be a Factor</h3>
+              <h5>For example, breast cancer is the most common cancer diagnosis among African American women.  
+                And 1 in 40 individuals with Ashkenazi Jewish ancestry carry a BRCA 1 or BRCA 2 gene mutation, which puts them at higher risk.</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="vignette" data-src="family">
+          <div class="headlines">
+            <div class="headline">         
+              <h3>Having a Child Decreases Lifetime Risk</h3>
+              <h5>Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth.  
+                The earlier this transformation happens, the lower the risk of breast cancer.  
+                Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower lifetime risk than women who gave birth later or who are never pregnant.</h5>
             </div>
           </div>
         </div>
@@ -1135,12 +1152,10 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette" data-src="mother">
           <div class="headlines">
             <div class="headline">
-              <h3>Breastfeeding Lowers Risk</h3>
-              <h5>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life. Even better: the activity can help reduce the breast-fed baby’s own later-life risk. Now <i>that’s</i> win-win.</h5>
-            </div>
-            <div class="headline">
-              <h3>A woman’s childbearing history influences her risk of developing breast cancer</h3>
-              <h5>Pregnancy transforms and stabilizes the cells that comprise milk-producing glands and ducts, making them less susceptible to abnormal cell growth. The earlier this transformation happens, the lower the risk of breast cancer. Some studies have shown that women with first pregnancies under the age of 30 have a 40-50% lower risk than women who gave birth later or who are never pregnant.</h5>
+              <h3>Breastfeeding Lowers Risk for You <i>and</i> the Baby</h3>
+              <h5>Breastfeeding for 1-2 years lowers your risk by decreasing the number of periods you’ll get over the course of your life.  
+                Even better: the activity can help reduce the breast-fed baby’s own later-life risk.  
+                Now <i>that’s</i> win-win.</h5>
             </div>
           </div>
         </div>
@@ -1148,8 +1163,9 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <div class="vignette last" data-src="mother">
           <div class="headlines">
             <div class="headline">         
-              <h3>Birth Control Can Significantly Lower Your Ovarian Cancer Risk</h3>
-              <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half. Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
+              <h3>Birth Control is the #1 Factor for Decreased Ovarian Risk</h3>
+              <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  
+                Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
               <!-- <button class="facebook family">Pledge to Learn Your Family History</button><br> -->
             </div>
              <div class="headline">

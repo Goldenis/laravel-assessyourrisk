@@ -1,6 +1,11 @@
     var resultLevel = 'average';
     var savedQuestionsAnswers = {};
     var endCards = {};  
+    var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
+
+
+    var cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}];
+
 
 (function($, undefined) {
     var _$window;
@@ -85,6 +90,10 @@
         _scrollHandler();
     });
 
+        //cardsLow[0]{factbody: ''}
+        //['factbody', '']
+        //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
+        console.log(cardsLow[0]['factbody'])
 
     function _pageResize() {
         $('.module').scrollTop(0);
@@ -968,7 +977,7 @@
         }
 
         updateCharts();
-        //console.log('Object savedQuizProgress = ', savedQuizProgress)
+        console.log('Object savedQuizProgress = ', savedQuizProgress)
 
         // if (_currentQuestion == 0) return;
         //console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
@@ -998,9 +1007,27 @@
                 value.questionTxt = 'Your BMI Score is'
             }
 
-            $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + questionID + '.  ' + value.questionTxt + '%0D%0A' + value.questionanswer + '%0D%0A</div>')
+            $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + questionID + '.  ' + value.questionTxt + '%0D%0A' + value.questionanswer + '%0D%0A %0D%0A</div>')
             //emailqs = value.questionnumber + value.questionTxt + value.questionanswer 
         });
+
+
+        //  $.each(cardsLow, function( key, value ) {
+        //     if (value.facttitle === '' ) {return}
+                
+        //     $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + value.facttitle + '.  ' + value.factheadline + '%0D%0A' + value.factbody + '%0D%0A %0D%0A</div>')
+
+        // });
+
+
+        //  $.each(cardsHigh, function( key, value ) {
+        //     // console.log( value.facttitle );
+        //     // console.log( value.factheadline );
+        //     // console.log( value.factbody );
+
+        //     $('.email-content').append('<div class="cardshigh"> %0D%0A %0D%0A' + value.facttitle + '%0D%0A  ' + value.factheadline + '%0D%0A' + value.factbody + '%0D%0A %0D%0A</div>')
+        //     //emailqs = value.questionnumber + value.questionTxt + value.questionanswer 
+        // });
 
          var resultCopy = $('.results-copy-high').text();
 
@@ -1020,46 +1047,81 @@
         var cardsObj;
         var cardContent;
 
+// BMI
+// ALCOHOL
+// PHYSICAL ACTIVITY
+// BIRTH CONTROL
+// BREASTFEEDING
+// PREGNANCY
+
+//   var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
+
+
+// BMI
+// ALCOHOL
+// PHYSICAL ACTIVITY
+// BIRTH CONTROL
+// BREASTFEEDING
+// PREGNANCY
+
+//     var cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}];
+
 //bmi card
         if (savedQuizProgress[4] == '+1') { 
             $('.item.bmi-low').css({
                 display: 'block'
             })
             cardContent = $('.item.bmi-low').text();
-            cardsObj = {'fact': cardContent};
-            console.log(cardsObj)
+            //cardsHigh[0]['factbody'] = "new string";
+            cardsHigh[0]['facttitle'] = "";    
+            cardsHigh[0]['factheadline'] = "";     
+            cardsHigh[0]['factbody'] = "";    
         }    
-        else 
+        else if (savedQuizProgress[4] == '-1') { 
             $('.item.bmi-high').css({
                 display: 'block'
              })  
             cardContent = $('.item.bmi-high').text();
-            cardsObj = {'fact': cardContent};
-            console.log(cardsObj)        
-
+            cardsLow[0]['facttitle'] = "";    
+            cardsLow[0]['factheadline'] = "";     
+            cardsLow[0]['factbody'] = "";    
+        }
 
 //drinks card
-        if (savedQuizProgress[6] <= '2') { 
+        if (savedQuizProgress[6] <= '1') { 
             $('.item.alcohol-low').css({
                 display: 'block'
             })
+            cardsHigh[1]['facttitle'] = "";    
+            cardsHigh[1]['factheadline'] = "";     
+            cardsHigh[1]['factbody'] = "";             
         }    
-        else 
+        else if (savedQuizProgress[6] >= '2') { 
             $('.item.alcohol-high').css({
                 display: 'block'
              })            
-                
+            cardsLow[1]['facttitle'] = "";    
+            cardsLow[1]['factheadline'] = "";     
+            cardsLow[1]['factbody'] = "";                   
+        }
 
 //exercise card
         if (savedQuizProgress[9] == '+1') { 
             $('.item.exercise-low').css({
                 display: 'block'
             })
+            cardsHigh[2]['facttitle'] = "";    
+            cardsHigh[2]['factheadline'] = "";     
+            cardsHigh[2]['factbody'] = "";             
         }    
-        else 
+        else if (savedQuizProgress[9] == '-1') { 
             $('.item.exercise-high').css({
                 display: 'block'
              })   
+            cardsLow[2]['facttitle'] = "";    
+            cardsLow[2]['factheadline'] = "";     
+            cardsLow[2]['factbody'] = "";  
+        }
 
 //period card
         if (savedQuizProgress[13] == '-1') { 
@@ -1073,33 +1135,53 @@
             $('.item.birth-control-low').css({
                 display: 'block'
             })
+            cardsHigh[3]['facttitle'] = "";    
+            cardsHigh[3]['factheadline'] = "";     
+            cardsHigh[3]['factbody'] = "";             
         }    
-        else 
+        else if (savedQuizProgress[15] == '-1') {
             $('.item.birth-control-high').css({
                 display: 'block'
              })     
+            cardsLow[3]['facttitle'] = "";    
+            cardsLow[3]['factheadline'] = "";     
+            cardsLow[3]['factbody'] = "";  
+        }
 
 //pregnancy card
         if (savedQuizProgress[17] == '+1') { 
             $('.item.pregnancy-low').css({
                 display: 'block'
             })
+            cardsHigh[5]['facttitle'] = "";    
+            cardsHigh[5]['factheadline'] = "";     
+            cardsHigh[5]['factbody'] = "";             
         }    
-        else 
+        else if (savedQuizProgress[17] == '-1') { 
             $('.item.pregnancy-high').css({
                 display: 'block'
              })   
+            cardsLow[5]['facttitle'] = "";    
+            cardsLow[5]['factheadline'] = "";     
+            cardsLow[5]['factbody'] = "";           
+        }
 
 //BREASTFEEDING card
         if (savedQuizProgress[18] == '+1') { 
             $('.item.breastfeeding-low').css({
                 display: 'block'
             })   
+            cardsHigh[4]['facttitle'] = "";    
+            cardsHigh[4]['factheadline'] = "";     
+            cardsHigh[4]['factbody'] = ""; 
         }
-        if (savedQuizProgress[18] == '-1') { 
+        else if (savedQuizProgress[18] == '-1') { 
             $('.item.breastfeeding-high').css({
                 display: 'block'
-            })   
+            })  
+            cardsLow[4]['facttitle'] = "";    
+            cardsLow[4]['factheadline'] = "";     
+            cardsLow[4]['factbody'] = "";              
         }
     
 //previous cancer history

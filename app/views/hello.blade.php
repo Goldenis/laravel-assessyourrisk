@@ -312,6 +312,7 @@
             <p>One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.</p>
           </div>                                
         </div>
+
     <!-- Negative -->
         <div class="card negative">
           <div class="factors-title"><h3>Unfortunately Not Helping</h3></div>

@@ -41,8 +41,43 @@ function createPinkPDF (result, quizanswers) {
   var q17 = savedQuestionsAnswers[18]['questionTxt'];
   var ans17 = savedQuestionsAnswers[18]['questionanswer'];
 
+  var facttitle1 = cardsLow[0]['facttitle'];
+  var facthead1 = cardsLow[0]['factheadline'];
+  var factbody1 = cardsLow[0]['factbody'];
+  var facttitle2 = cardsLow[1]['facttitle'];
+  var facthead2 = cardsLow[1]['factheadline'];
+  var factbody2 = cardsLow[1]['factbody'];
+  var facttitle3 = cardsLow[2]['facttitle'];
+  var facthead3 = cardsLow[2]['factheadline'];
+  var factbody3 = cardsLow[2]['factbody'];
+  var facttitle4 = cardsLow[3]['facttitle'];
+  var facthead4 = cardsLow[3]['factheadline'];
+  var factbody4 = cardsLow[3]['factbody'];
+  var facttitle5 = cardsLow[4]['facttitle'];
+  var facthead5 = cardsLow[4]['factheadline'];
+  var factbody5 = cardsLow[4]['factbody'];
+  var facttitle6 = cardsLow[5]['facttitle'];
+  var facthead6 = cardsLow[5]['factheadline'];
+  var factbody6 = cardsLow[5]['factbody'];
 
-
+  var facttitlehigh1 = cardsHigh[0]['facttitle'];
+  var factheadhigh1 = cardsHigh[0]['factheadline'];
+  var factbodyhigh1 = cardsHigh[0]['factbody'];
+  var facttitlehigh2 = cardsHigh[1]['facttitle'];
+  var factheadhigh2 = cardsHigh[1]['factheadline'];
+  var factbodyhigh2 = cardsHigh[1]['factbody'];
+  var facttitlehigh3 = cardsHigh[2]['facttitle'];
+  var factheadhigh3 = cardsHigh[2]['factheadline'];
+  var factbodyhigh3 = cardsHigh[2]['factbody'];
+  var facttitlehigh4 = cardsHigh[3]['facttitle'];
+  var factheadhigh4 = cardsHigh[3]['factheadline'];
+  var factbodyhigh4 = cardsHigh[3]['factbody'];
+  var facttitlehigh5 = cardsHigh[4]['facttitle'];
+  var factheadhigh5 = cardsHigh[4]['factheadline'];
+  var factbodyhigh5 = cardsHigh[4]['factbody'];
+  var facttitlehigh6 = cardsHigh[5]['facttitle'];
+  var factheadhigh6 = cardsHigh[5]['factheadline'];
+  var factbodyhigh6 = cardsHigh[5]['factbody'];
 
   //test = "yoyo";
   //console.log(test)
@@ -82,6 +117,22 @@ var averageResults = {
     {
       text: 'First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. \n \n  In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.  \n  \n  \n ',
       style: 'body'
+    },
+    {
+      text: 'Working In Your Favor \n ',
+      style: 'subheader'
+    },
+    {
+      text: 'BMI',
+      style: 'question'
+    },
+    {
+      text: '' +facthead1,
+      style: 'question'
+    },
+    {
+      text: '' +factbody1,
+      style: 'question'
     },
     {
       text: 'Your Assessment Answers \n ',
@@ -291,11 +342,163 @@ var moderateResults = {
       style: 'subheader'
     },
     {
-      text: 'It can be daunting to face the idea of having a higher-than-average risk of breast and ovarian cancer. The good news is that knowledge is power and there are things you can do to take control and reduce your risk!  \n \n  First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. \n  \n Your doctor may also recommend increased risk-reduction and early detection strategies appropriate for women at increased risk, including starting mammograms at a younger age than recommended for women of average risk, or exploring the possibility of pharmaceutical risk-reduction options. \n \nIf you feel like you might benefit from getting support from other women in a similar situation, Bright Pink offers both 1:1 and group support programs for women at increased and high risk that you may find helpful. \n \n We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.  \n \n \n',
+      text: 'It can be daunting to face the idea of having a higher-than-average risk of breast and ovarian cancer. The good news is that knowledge is power and there are things you can do to take control and reduce your risk!  \n \n  First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. \n  \n Your doctor may also recommend increased risk-reduction and early detection strategies appropriate for women at increased risk, including starting mammograms at a younger age than recommended for women of average risk, or exploring the possibility of pharmaceutical risk-reduction options. \n \nIf you feel like you might benefit from getting support from other women in a similar situation, Bright Pink offers both 1:1 and group support programs for women at increased and high risk that you may find helpful. \n \n We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.  \n \n  \n \n \n \n \n \n',
       style: 'body'
     },
     {
-      text: 'Your Assessment Answers \n ',
+      text: 'Working In Your Favor \n ',
+      style: 'subheader'
+    },
+    {
+      text: '' +facttitle1,
+      style: 'question'
+    },
+    {
+      text: '' +facthead1,
+      style: 'question'
+    },
+    {
+      text: '' +factbody1,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle2,
+      style: 'question'
+    },
+    {
+      text: '' +facthead2,
+      style: 'question'
+    },
+    {
+      text: '' +factbody2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle3,
+      style: 'question'
+    },
+    {
+      text: '' +facthead3,
+      style: 'question'
+    },
+    {
+      text: '' +factbody3,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle4,
+      style: 'question'
+    },
+    {
+      text: '' +facthead4,
+      style: 'question'
+    },
+    {
+      text: '' +factbody4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle5,
+      style: 'question'
+    },
+    {
+      text: '' +facthead5,
+      style: 'question'
+    },
+    {
+      text: '' +factbody5,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle6,
+      style: 'question'
+    },
+    {
+      text: '' +facthead6,
+      style: 'question'
+    },
+    {
+      text: '' +factbody6,
+      style: 'question'
+    },
+    {
+      text: '\n \n  Unfortunately Not Helping \n ',
+      style: 'subheader'
+    },
+    {
+      text: '' +facttitlehigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh3,
+      style: 'question'
+    },
+     {
+      text: '' +facttitlehigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh5,
+      style: 'question'
+    },           
+    {
+      text: '' +facttitlehigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh6,
+      style: 'question'
+    }, 
+    {
+      text: '\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n \n \n \n \n \nYour Assessment Answers \n ',
       style: 'subheader'
     },
     {
@@ -447,11 +650,10 @@ var moderateResults = {
       alignment: 'center'
     },
     question: {
-      fontSize: 12,
-      bold: false
+      fontSize: 12
     },   
     answer: {
-      fontSize: 12,
+      fontSize: 11,
       italics: true,
       bold: true,
       fillcolor: 'yellow'
@@ -700,6 +902,8 @@ var highResults = {
 }
 
   pdfMake.createPdf(docDefinition).open();
+  var test = pdfMake.createPdf(docDefinition).open();
+  console.log(test)
 
 }
 

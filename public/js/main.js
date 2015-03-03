@@ -1413,7 +1413,6 @@ Do you know if I do%3F");
         var vig = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette);
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '.jpg';
-        alert(imgSrc)
 
         if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);

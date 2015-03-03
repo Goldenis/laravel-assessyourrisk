@@ -923,7 +923,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
 <!-- KNOW YOUR NORMAL -->
 
       <div class="module normal">
-        <div class="vignette main" data-src="breastAwareness">
+        <div class="vignette main" data-src="lifestyle">
           <div class="headlines">
             <div class="section-title">Understand Your Risk</div>
             <div class="headline">
@@ -954,7 +954,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        <div class="vignette" data-src="breastAwareness">
+        <div class="vignette" data-src="lifestyle">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -993,7 +993,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="breastAwareness">
+        <div class="vignette" data-src="lifestyle">
           <div class="headlines">
             <div class="headline">         
               <h3>The 4-1-1 on Ovarian Cancer</h3>
@@ -1029,7 +1029,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="breastAwareness">
+        <div class="vignette" data-src="lifestyle">
           <div class="headlines">
             <div class="headline">         
               <h3>You &amp; Your Doctor</h3>
@@ -1057,7 +1057,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="breastAwareness">
+        <div class="vignette" data-src="lifestyle">
           <!-- <div class="video">
             <video class="bg-video" type="video/mp4" loop></video>
           </div> -->
@@ -1107,7 +1107,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="family">
+        <div class="vignette" data-src="justbeyou_sequence">
           <div class="headlines">
             <div class="headline">         
               <h3>Family History &amp; Genetic Predisposition</h3>
@@ -1117,7 +1117,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         </div>
 
 <!-- added Spencer due to recent copy -->
-        <div class="vignette" data-src="family">
+        <div class="vignette" data-src="lifestyle">
           <div class="headlines">
             <div class="headline">         
               <h3>Your Race and Ancestry Can Be a Factor</h3>
@@ -1127,7 +1127,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette" data-src="family">
+        <div class="vignette" data-src="mother">
           <div class="headlines">
             <div class="headline">         
               <h3>Having a Child Decreases Lifetime Risk</h3>
@@ -1157,7 +1157,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           </div>
         </div>
 
-        <div class="vignette last" data-src="mother">
+        <div class="vignette last" data-src="lifestyle">
           <div class="headlines">
             <div class="headline">         
               <h3>Birth Control is the #1 Factor for Decreased Ovarian Risk</h3>

@@ -527,7 +527,6 @@ button.sub:hover {
   margin-top: 6rem;
   left: -6rem;
   background: #fde4df;
-  display: none !important;
 }
 .progress-overlay .results .triggered-cancer-copy.show {
   display: block !important;
@@ -2311,7 +2310,9 @@ footer {
   }
   .share {
     width: 100%;
-    padding: 3rem 1rem;
+    padding: 2rem 2rem;
+    margin: 0rem 0rem;
+    text-align: center;
     position: relative;
   }
   .progress-overlay {
@@ -2320,11 +2321,11 @@ footer {
   .progress-overlay .close-btn {
     display: none !important;
   }
-  .progress-overlay .share {
-    padding-right: 12.5%;
+  .progress-overlay .share .share-copy {
+    width: 100%;
   }
   .progress-overlay .share .share-btn-wrapper {
-    width: 75%;
+    width: 100%;
   }
   .progress-overlay .progress .chart {
     margin: auto !important;
@@ -2365,7 +2366,7 @@ footer {
     margin-bottom: 5rem;
   }
   .progress-overlay .vignettes {
-    padding: 1rem 2rem 3rem;
+    padding: 3rem 3rem 3rem;
     width: 100%;
     height: auto;
     border-left: none;
@@ -2397,7 +2398,7 @@ footer {
     width: 400px;
     height: 400px;
     left: calc(100% - 320px);
-    top: 25%;
+    top: 30%;
   }
   .intro .intro-message {
     position: absolute;
@@ -2408,7 +2409,7 @@ footer {
     right: 0;
     top: 70px;
     width: 100%;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
   }
   .intro p {
     font-size: 1.3rem;
@@ -2703,6 +2704,28 @@ footer {
     margin-top: -1rem;
     width: 100%;
     float: left;
+  }
+  .email-pdf-doctor {
+    padding: 3rem;
+  }
+  .email-pdf-doctor button {
+    border: 3px solid #fff;
+    cursor: pointer;
+    color: #fff;
+  }
+  .email-pdf-doctor button:hover {
+    background: #fff;
+    color: #f6323e;
+  }
+  .email-pdf-doctor .email-pdf-copy, .email-pdf-doctor .email-pdf-btns {
+    padding-top: 1rem;
+  }
+  .email-pdf-doctor .email-pdf-copy {
+    width: 100%;
+    padding-top: 1.6rem;
+  }
+  .email-pdf-doctor .email-pdf-btns {
+    width: 100%;
   }
 }
 .email-content {

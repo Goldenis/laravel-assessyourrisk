@@ -572,7 +572,7 @@ button {
             margin-top: 6rem;
             left: -6rem;
             background: $nude-xtra-light; 
-            display: none !important;
+            // display: none !important;
             &.show{
                 display: block !important; 
             }
@@ -2150,7 +2150,9 @@ footer {
     }
     .share {
         width: 100%;
-        padding: 3rem 1rem;
+        padding: 2rem 2rem;
+        margin: 0rem 0rem;
+        text-align: center;
         position: relative;
     }
     .progress-overlay {
@@ -2159,9 +2161,12 @@ footer {
             display: none !important;
         }
         .share {
-            padding-right: 12.5%;
+            .share-copy{
+                width: 100%
+            }
+            // padding-right: 12.5%;
             .share-btn-wrapper{
-                width: 75%;
+                width: 100%;
             }   
         }
         .progress {
@@ -2207,7 +2212,7 @@ footer {
             }
         }
         .vignettes {
-            padding: 1rem 2rem 3rem;
+            padding: 3rem 3rem 3rem;
             width: 100%;
             height: auto;
             border-left: none;
@@ -2245,7 +2250,7 @@ footer {
             width: 400px;
             height: 400px;
             left: calc(100% - 320px);
-            top: 25%;
+            top: 30%;
         }
         .intro-message {
             position: absolute;
@@ -2253,7 +2258,7 @@ footer {
             right: 0;
             top: 70px;
             width: 100%;
-            padding: 0 3rem;
+            padding: 1rem 3rem;
         }
         p {
             font-size: 1.3rem;
@@ -2556,6 +2561,36 @@ footer {
             margin-top: -1rem;
             width: 100%;
             float: left;
+        }
+    }
+    .email-pdf-doctor {
+        padding: 3rem;
+        button {
+            border: 3px solid #fff;
+            cursor: pointer;
+            color: #fff;
+            &:hover {
+                background: #fff;
+                color: $red;
+            }
+        }
+        .email-pdf-copy, .email-pdf-btns {
+            padding-top: 1rem;
+        }
+        .email-pdf-copy {
+            width: 100%;
+            padding-top: 1.6rem;
+        }
+        .email-pdf-btns {
+            width: 100%;
+        }
+    }
+    .your-risk {
+        // padding: 1rem 0rem;
+            .risk-level {
+                // color: $pink;
+                // margin-top: 3rem;
+                // margin-bottom: 3rem;
         }
     }
 }

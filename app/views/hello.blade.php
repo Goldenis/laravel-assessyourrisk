@@ -470,11 +470,11 @@
             </div>          
 
             <div class="fact">
-              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line - there are few lifestyle behaviors that reduce your ovarian cancer risk — <i>except</i> for taking birth control pills.</h5>
+              <h5>Research shows clear reduction in ovarian cancer risk with use of birth control pills. You might have heard oral contraceptives can increase breast cancer risk, but many studies show that if there is any increased risk at all, it is very small, and not associated with the most common, low-dose estrogen pills. Bottom line: there are few lifestyle behaviors that reduce your ovarian cancer risk — <i>except</i> for taking birth control pills.</h5>
             </div>
 
             <div class="fact">
-              <h5>A breast biopsy sometimes shows abnormal cells that are considered a “precancer” (called atypical hyperplasia, or cellular atypia.) Patients who have had precancerous cells on biopsy are more likely to have cancer later in life.</h5>
+              <h5>A breast biopsy sometimes shows abnormal cells that are considered a “precancer” (called atypical hyperplasia, or cellular atypia). Patients who have had precancerous cells on biopsy are more likely to have cancer later in life.</h5>
             </div>          
 
             <div class="fact">

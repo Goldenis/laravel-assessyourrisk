@@ -141,7 +141,7 @@
                     Your answers suggest that you are at <a href="http://www.brightpink.org/what-you-need-to-know/understand-risk/#understanding-increased-risk" target="_blank">increased baseline risk</a> for breast and ovarian cancer, 
                     either because of a <a href="http://www.brightpink.org/what-you-need-to-know/collect-your-family-history/" target="_blank">family history</a> of one of these cancers, some significant event in your personal health history, 
                     or because you or a family member has been diagnosed with a specific type of gene mutation associated with an increased risk of breast or ovarian cancer.
-                    <span class="more-results">If you have not already pursued genetic testing, we highly recommend that you talk with your doctor or a genetic counselor about whether your personal circumstances warrant it, to confirm that your baseline risk truly is only increased, and not actually high.  
+                    <span class="more-results">If you have not already pursued genetic testing, we highly recommend that you talk with your doctor or a genetic counselor about whether your personal circumstances warrant it, to <b>confirm that your baseline risk truly is only increased, and not actually high</b>.  
                     If you are at high risk, you will need to discuss enhanced risk management strategies with your doctor.</span>
                   </p>  
                   <p class="more-results">
@@ -692,7 +692,7 @@
             <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
             <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain Cancer</div></div>
+            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
             <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
             <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
           </div>     
@@ -704,7 +704,7 @@
         </div>
 
         <div class="question" data-question-id="8">
-          <div class="prompt">Have you ever been told by a doctor that you have “dense breasts”?</div>
+          <div class="prompt">Have you ever been told by a doctor that you have “dense breast tissue”?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>
@@ -858,7 +858,7 @@
           <div class="headlines">
             <div class="headline">         
               <h3>Fight Fat</h3>
-              <h5>Limit your intake and maintain a healthy weight. Fill up on cancer-fighting fruits and vegetables, make sure you get all your vitamins, and avoid red meat. Your body will thank you for it.</h5>
+              <h5>Maintain a healthy body weight, as there’s a clear correlation between obesity and breast cancer. Extra fatty tissue produces extra estrogen, which can increase your risk. </h5>
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
           </div>
@@ -1051,7 +1051,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <h6>Your well-woman exam should also include:</h6>
               <ul>
                 <li>Clinical breast and pelvic exam starting at age 20</li>
-                <li>A PAP smear — though it’s important to know these don’t check for ovarian cancer</li>
+                <li>A PAP smear — though it’s important to know these <i>don’t</i> check for ovarian cancer</li>
                 <li>Mammogram beginning at age 40— but if you if you have a family history, ten years before the age your youngest relative was diagnosed</li>
               </ul> 
             </div>
@@ -1112,7 +1112,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>Family History &amp; Genetic Predisposition</h3>
-              <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%. Lifetime ovarian cancer risk can be as high as 54%. Family history and genetic predisposition aren’t one in the same. For example, if a first-degree relative had breast cancer, your risk is increased even if you don’t have a genetic predisposition.</h5>
+              <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%. Lifetime ovarian cancer risk can be as high as 54%. Family history and genetic predisposition aren’t one in the same. For example, if a first-degree relative had breast cancer, your risk is increased <i>even if</i>j you don’t have a genetic predisposition.</h5>
             </div>
           </div>
         </div>

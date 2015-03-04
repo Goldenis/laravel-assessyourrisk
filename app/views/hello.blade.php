@@ -151,7 +151,7 @@
                   Living a proactive lifestyle is one of the most important things you can do.
                   </p>
                   <div class="triggered-cancer-copy increased more-results">
-                    <h3 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h3>
+                    <h5 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
                       <p>
                         The recommendation above regarding genetic testing is particularly relevant to you.  
                         <b>If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher.</b>  
@@ -173,8 +173,8 @@
                     The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. <span class="more-results"> 
                     You can learn more about <a href="http://www.brightpink.org/what-you-need-to-know/reduce-your-risk/" target="_blank">lifestyle risk-reduction</a> strategies on our website.</span>
                   </p>
-                  <p class="more-results red-text">
-                    <i>As mentioned above, if you’ve not yet had genetic testing</i>, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
+                  <p class="more-results">
+                    <i class="red-text">As mentioned above, if you’ve not yet had genetic testing</i>, we suggest you seek input from an OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails.  
                     He or she can also talk to you about how to manage and respond to the concerns you might have regarding the testing process and receiving a result.  
                     If you need help finding a genetic counselor to talk to in person or on the phone, you can find resources on our website <a href="http://www.brightpink.org/high-risk-support/genetic-counseling/" target="_blank">here</a>.  
                     And if you want to dip your toes in the water by asking a question online first, or reading some FAQs, visit our <a href="http://www.brightpink.org/high-risk-support/genetic-counseling/" target="_blank">Ask a Genetic Counselor</a> page.
@@ -205,7 +205,7 @@
                   Living a proactive lifestyle is one of the most important things you can do!</span>
                 </p>
                 <div class="triggered-cancer-copy high">
-                  <h3 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h3>
+                  <h5 class="column-header">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
                     <p>
                       Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis.  
                       We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
@@ -1065,7 +1065,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>Don’t Forget to Take Care on Your Own</h3>
-              <h5>Sign up for a monthly Breast Health Reminder™ to be breast self-aware— that’s one text a month.  
+              <h5>Sign up for a monthly Breast Health Reminder™ to be Breast Self Aware — that’s one text a month.  
                 Text PINK (“P-I-N-K”) to 59227.</h5>
               <ul>
                 <li>You will receive one message per month.  

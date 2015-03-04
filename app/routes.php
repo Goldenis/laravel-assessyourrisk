@@ -16,6 +16,13 @@ Route::get('/pledge/{id}/count', 'PledgeController@getCount');
 Route::post('/pledge', 'PledgeController@post');
 
 /**
+ * Mail endpoints --
+ *
+ */
+Route::post('email', 'MailController@post');
+
+
+/**
  * Count endpoints --
  *
  */

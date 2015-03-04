@@ -27,5 +27,8 @@ return array(
 		'model'  => 'User',
 		'secret' => '',
 	),
-
+	
+	'postmark' => array(
+			'api_key' => getenv("POSTMARK_API_KEY"),
+	),
 );

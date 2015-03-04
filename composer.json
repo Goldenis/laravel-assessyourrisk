@@ -10,7 +10,8 @@
 		"php" : ">=5.5.15",
 		"laravel/framework" : "4.2.*",
 		"facebook/php-sdk-v4" : "4.0.*",
-		"ext-mbstring": "*"
+		"ext-mbstring" : "*",
+		"snowfire/mail" : "dev-master"
 	},
 	"require-dev" : {
 		"heroku/heroku-buildpack-php" : "*",

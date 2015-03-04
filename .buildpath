@@ -22,11 +22,13 @@
 	<buildpathentry kind="src" path="vendor/d11wtq/boris/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/debug"/>
 	<buildpathentry excluding="Crypt/" kind="src" path="vendor/phpseclib/phpseclib/phpseclib"/>
+	<buildpathentry kind="src" path="vendor/snowfire/mail/src"/>
 	<buildpathentry kind="src" path="vendor/nesbot/carbon/src"/>
 	<buildpathentry kind="src" path="vendor/classpreloader/classpreloader/src"/>
 	<buildpathentry kind="src" path="vendor/stack/builder/src"/>
 	<buildpathentry excluding="Illuminate/Queue/|Illuminate/Support/" kind="src" path="vendor/laravel/framework/src"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="vendor/openbuildings/postmark/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/http-kernel"/>
 	<buildpathentry kind="src" path="vendor/monolog/monolog/src/Monolog"/>
 	<buildpathentry kind="src" path="vendor/symfony/filesystem"/>

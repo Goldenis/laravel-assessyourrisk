@@ -901,10 +901,25 @@ var highResults = {
       break;
 }
 
-  pdfMake.createPdf(docDefinition).open();
-  var test = pdfMake.createPdf(docDefinition).open();
-  console.log(test)
+//  pdfMake.createPdf(docDefinition).open();
+  pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
 
+//  console.log(test)
+
+}
+
+function doPostPDF(attachment) {
+	console.log(attachment)
+	$.ajax({
+		type : "POST",
+		url : "/email",
+		data : {
+			email : "nick.velloff@gmail.com",
+			attachment : attachment
+		}
+	}).done(function(msg) {
+		alert("PDF Sent");
+	});
 }
 
 function addQuestionsToPDF() {

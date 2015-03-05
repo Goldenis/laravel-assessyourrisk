@@ -15,13 +15,13 @@
     var tl = new TimelineLite();
 
     tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
-    var wheelScale = 1;
-    if($(window).width() <= 1024){
-      wheelScale = 1;
-    }
-    if($(window).width() <= 768){
-      wheelScale = Math.min(1,($(window).width()/320) * .6);
-    }
+    var wheelScale = Math.max(.8,1 * ($(window).width()/1024));
+    // if($(window).width() <= 1024){
+      
+    // }
+    // if($(window).width() <= 768){
+    //   wheelScale = Math.min(1,($(window).width()/320) * .6);
+    // }
     tl.to(wheel, 2, {scale:wheelScale, ease:Expo.easeOut})
     tl.to(logo, .5, {opacity:1}, "+=0");
     tl.from(second, 0.5, {opacity:0}, "-=.2");

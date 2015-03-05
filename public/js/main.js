@@ -127,7 +127,7 @@
             });
         }else{
             $('.wheel-container').css({
-                left: '25%'
+                left: _winW/5
             });
         }
         $('.education .dots h6').eq(1).css({
@@ -138,6 +138,11 @@
         })
         addCharts();
         updateCharts();
+        $('.wheel-container').css({
+            '-webkit-transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)',
+            '-moz-transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)',
+            'transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)'
+        })
     }
 
     function sizeBGMedia() {

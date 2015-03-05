@@ -4,6 +4,7 @@ var brightpinklogo = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAA
 
 function createPinkPDF (result, quizanswers) {
   
+
   var q1 = savedQuestionsAnswers[0]['questionTxt'];
   var ans1 = savedQuestionsAnswers[0]['questionanswer'];
   var q2 = savedQuestionsAnswers[1]['questionTxt'];
@@ -901,8 +902,8 @@ var highResults = {
       break;
 }
 
-//  pdfMake.createPdf(docDefinition).open();
-  pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
+  pdfMake.createPdf(docDefinition).open();
+  //pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
 
 //  console.log(test)
 

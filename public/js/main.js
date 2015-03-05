@@ -1057,6 +1057,7 @@
 // BREASTFEEDING
 // PREGNANCY
 
+
         if (savedQuizProgress[4] == '+1') { 
             $('.item.bmi-low').css({
                 display: 'block'
@@ -1181,6 +1182,54 @@
             //     display: 'block !important' 
             // })  
         }
+
+//supress cards when 40+ is selected 
+        if (savedQuizProgress[1] == '5') { 
+            
+
+            $('.item.birth-control-low').css({
+                display: 'none'
+            })
+            $('.item.birth-control-high').css({
+                display: 'none'
+            })
+            $('.item.pregnancy-low').css({
+                display: 'none'
+            })
+            $('.item.pregnancy-high').css({
+                display: 'none'
+            })
+            $('.item.breastfeeding-low').css({
+                display: 'none'
+            }) 
+            $('.item.breastfeeding-high').css({
+                display: 'none'
+            })             
+
+            cardsLow[3]['facttitle'] = "";    
+            cardsLow[3]['factheadline'] = "";     
+            cardsLow[3]['factbody'] = "";  
+            cardsHigh[3]['facttitle'] = "";    
+            cardsHigh[3]['factheadline'] = "";     
+            cardsHigh[3]['factbody'] = "";  
+
+            cardsLow[4]['facttitle'] = "";    
+            cardsLow[4]['factheadline'] = "";     
+            cardsLow[4]['factbody'] = "";  
+            cardsHigh[4]['facttitle'] = "";    
+            cardsHigh[4]['factheadline'] = "";     
+            cardsHigh[4]['factbody'] = "";  
+
+            cardsLow[5]['facttitle'] = "";    
+            cardsLow[5]['factheadline'] = "";     
+            cardsLow[5]['factbody'] = "";  
+            cardsHigh[5]['facttitle'] = "";    
+            cardsHigh[5]['factheadline'] = "";     
+            cardsHigh[5]['factbody'] = "";  
+
+
+        } 
+
 
     }
 

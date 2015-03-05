@@ -1198,55 +1198,80 @@
         e.stopPropagation();
         switch ($(this).closest(".question").attr("data-question-id")) {
             case "14":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
-Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
+I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
 %0D%0A\
-- Breast cancer diagnosed at age 50 or under \
 %0D%0A\
-- Triple negative (ER/PR/her2-) breast cancer \
+One of the questions I’d love your help answering is: \
 %0D%0A\
-- More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast) \
 %0D%0A\
-- Male breast cancer \
+      Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
 %0D%0A\
-- Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer \
+          - Breast cancer diagnosed at age 50 or under \
 %0D%0A\
-- Two or more close relatives with breast cancer at any age \
+          - Triple negative (ER/PR/her2-) breast cancer \
+%0D%0A\
+          - More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast) \
+%0D%0A\
+          - Male breast cancer \
+%0D%0A\
+          - Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer \
+%0D%0A\
+          - Two or more close relatives with breast cancer at any age \
 %0D%0A\
 %0D%0A\
 Do you know if anybody in the family has been diagnosed with any of these%3F");
                 break;
             case "17":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
-Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one%3F \
-%0D%0A\
-- Breast cancer diagnosed at age 50 or under \
-- Ovarian cancer \
-- Pancreatic cancer \
-- Thyroid cancer \
-- Uterine cancer \
-- Sarcoma cancer \
-- Leukemia or Lymphoma \
-- Melanoma cancer \
-- Adrenocortical Carcinoma \
-- Stomach cancer \
-- Brain Cancer \
+I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
 %0D%0A\
 %0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F")
+One of the questions I’d love your help answering is: \
+%0D%0A\
+%0D%0A\
+      Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one%3F \
+%0D%0A\
+          - Breast cancer diagnosed at age 50 or under \
+%0D%0A\
+          - Ovarian cancer \
+%0D%0A\
+          - Pancreatic cancer \
+%0D%0A\
+          - Thyroid cancer \
+%0D%0A\
+          - Uterine cancer \
+%0D%0A\
+          - Sarcoma cancer \
+%0D%0A\
+          - Leukemia or lymphoma \
+%0D%0A\
+          - Melanoma cancer \
+%0D%0A\
+          - Adrenocortical Carcinoma \
+%0D%0A\
+          - Stomach cancer \
+%0D%0A\
+          - Brain cancer \
+%0D%0A\
+%0D%0A\
+Do you know if anybody in the family has been diagnosed with any of these%3F");
                 break;
             case "20":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hey, %0D%0A \
-I'm doing a breast and ovarian cancer risk assessment on http://brightpink.com/assessment and one of the questions is: \
+                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
-Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \
+I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
+%0D%0A\
+%0D%0A\
+One of the questions I’d love your help answering is: \
+%0D%0A\
+%0D%0A\
+      Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \
 %0D%0A\
 %0D%0A\
 Do you know if I do%3F");

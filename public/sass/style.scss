@@ -339,7 +339,7 @@ button {
     }
 }
 .red-text {
-    color: $red;
+    color: $pink;
 }
 .bg-video {
     opacity: 0;
@@ -662,27 +662,90 @@ button {
                     margin: 0 auto;
                     color: #fff;
                     background: $pink;
-                    padding: 3rem;
+                    padding: 3rem 6rem;
+                    overflow: hidden;
+                    .email-fields{
+                        @include transition(.8s,ease-in-out);
+                        position: absolute;
+                        left: 0;
+                        padding: 0 6rem;
+                        top: -100%;
+                        width: 100%;
+                        h4{
+                            float: left;
+                            margin-right: 6rem;
+                            top: 6px;
+                            width: 50%;
+                            text-align: left;
+                        }
+                        button{
+                            float: left;
+                            margin-top: 0;
+                            margin-right: 2rem;
+                        }
+                        .cancel{
+                            padding: 16px 0 6px 0;
+                            margin-right: 0rem;
+                            border: none;
+                            border-bottom: 2px solid #fff;
+                            @include rounded(0);
+                            &:hover{
+                                background: transparent;
+                                color: $nude;
+                                border-color: $nude !important;
+                            }
+                        }
+                        input[type="text"]{
+                            padding: 10px 20px;
+                            margin: 0 2rem 0 0;
+                            float: left;
+                            width: 20%;
+                            border: none;
+                            font-size: 1.4rem;
+                            top: 2px;
+                            min-width: 200px;
+                        }
+                    }
                     button {
                         border: 3px solid #fff;
                         cursor: pointer;
                         color: #fff;
+                        margin-right: 1rem;
                         &:hover {
                             background: #fff;
                             color: $red;
+                            border-color: #fff !important;
                         }
                     }
                     .email-pdf-copy, .email-pdf-btns {
+                        @include transition(.8s,ease-in-out);
                         // border: 1px solid white;
                         float: left;
                         min-height: 60px;
+                        top: 0;
                     }
                     .email-pdf-copy {
+                        @include transition(.8s,ease-in-out);
                         width: 50%;
+                        margin-right: 6rem;
                         padding-top: 1.6rem;
+                        text-align: left;
                     }
                     .email-pdf-btns {
-                        width: 50%;
+                        @include transition(.8s,ease-in-out);
+                        width: calc(50% - 6rem);
+                        text-align: left;
+                    }
+                    &.show-fields{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields{
+                            top: 4rem;
+                        }
                     }
                 }
         }
@@ -932,8 +995,8 @@ button {
     z-index: 20;
     background: rgba(255,255,255,.9);
     padding: 16px;
-    // left: 3rem;
     @include centerH;
+    @include transition(.3s);
 }
 .dot {
     color: #ccc;
@@ -953,7 +1016,6 @@ button {
     &.active {
         background: $pink;
         border-color: $pink;
-        top: -2px;
     }
 }
 .tooltip-bottom {
@@ -990,6 +1052,16 @@ button {
     &.column-right {
         width: auto;
         display: inline-block;
+    }
+    &.age-list{
+        max-width: 85%;
+        left: 35px;
+        .checkbox{
+            max-width: 140px;
+            min-width: 80px;
+            float: left;
+            width: 50%;
+        }
     }
 }
 .checkbox {
@@ -1132,7 +1204,7 @@ input[type="checkbox"], input[type="radio"] {
         width: 400px;
         height: 400px;
         left: 40%;
-        top: 24%;
+        top: 28%;
         position: absolute;
         overflow: hidden;
         cursor: pointer;
@@ -1173,8 +1245,9 @@ input[type="checkbox"], input[type="radio"] {
     .intro-message {
         position: absolute;
         @include centerV;
-        right: 7%;
-        width: calc(100% - 1300px);
+        right: 15%;
+        width: calc(100% - 1000px);
+        max-width: 460px;
         min-width: 250px;
     }
     p {
@@ -1285,13 +1358,18 @@ input[type="checkbox"], input[type="radio"] {
         margin-left: -60px;
         width: 60px;
         display: inline-block;
+        opacity: 0;
+        @include transition(.5s);
         img{
             margin-left: -8px;
             margin-right: 4px;
-            top: -1px;
+            top: 1px;
         }
         &:hover{
             color: $red;
+        }
+        &.active{
+            opacity: 1;
         }
     }
     .drink-slider {
@@ -1345,6 +1423,13 @@ input[type="checkbox"], input[type="radio"] {
 			top: 50%;
         }
     }
+    .dots{
+        opacity: 0;
+        &.active{
+            opacity: 1;
+        }
+    }
+        
 }
 .assessment-intro {
     position: absolute;
@@ -1402,7 +1487,6 @@ input[type="checkbox"], input[type="radio"] {
             &.active {
                 width: 8px;
                 height: 8px;
-                top: -2px;
                 opacity: 1;
             }
         }
@@ -1935,6 +2019,9 @@ footer {
             height: 400px;
             left: 20%;
         }
+        .intro-message {
+            right: 10%;
+        }
     }
     .dots{
         h6{
@@ -1948,7 +2035,6 @@ footer {
         &.active {
             width: 8px;
             height: 8px;
-            top: 2px;
         }
         &:last-of-type {
             margin-right: 0;
@@ -1998,15 +2084,16 @@ footer {
             }
             .triggered-cancer-copy {
                 padding: 3rem;
-                width: calc(100% + 12rem);
+                width: calc(100% + 6rem);
                 margin-top: 3rem;
-                left: -6rem;
+                left: -3rem;
                 background: $nude-xtra-light; 
                 display: none !important;
                 &.show{
                     display: block !important; 
                 }
             }
+
 
             .paragraph-wrapper {
                 width: 100%;
@@ -2068,9 +2155,10 @@ footer {
                     .warning-header {
                         margin-bottom: 2rem;
                     }
+
                 }
                 .email-pdf-doctor {
-                    padding: 3rem;
+                    padding: 2rem 3rem;
                     button {
                         border: 3px solid #fff;
                         cursor: pointer;
@@ -2083,7 +2171,7 @@ footer {
                     .email-pdf-copy, .email-pdf-btns {
                         // border: 1px solid white;
                         float: left;
-                        min-height: 60px;
+                        min-height: 20px;
                     }
                     .email-pdf-copy {
                         width: 100%;
@@ -2091,14 +2179,83 @@ footer {
                     }
                     .email-pdf-btns {
                         width: 100%;
+                        padding-top: 0;
+                        margin-bottom: 1rem;
+                    }
+
+                    .email-fields{
+                        padding: 0 3rem;
+                        h4{
+                            margin-right: 0rem;
+                            margin-bottom: 1rem;
+                            width: 100%;
+                        }
+                        button{
+                            margin-right: 1.5rem;
+                        }
+                        input[type="text"]{
+                            padding: 10px 20px;
+                            margin: 0 2rem 1.5rem 0;
+                            width: 100%;
+                            max-width: 300px;
+                        }
+                    }
+                    button {
+                        margin-right: 1.5rem;
+                        &:hover {
+                            background: #fff;
+                            color: $red;
+                            border-color: #fff !important;
+                        }
+                    }
+                    &.show-fields{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields{
+                            top: 2.5rem;
+                        }
                     }
                 }
+            }
+        }
+        .cards {
+            .card-intro-text {
+                padding: 2rem 2rem;
+                width: 70%;
+                h2{
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+            .card {
+                width: 100%;
+                margin: 0%;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                margin-top: 6rem;               
+                &:nth-of-type {
+                    margin-top: 6rem;
+                }
+                .factors-title {
+                    top: -50px;
+                }
+            }
+            .bad-gene, .bmi-high, .drinks-high{
+                margin-bottom: 5rem;
             }
         }
     }
 }
 @media only(max-width: 768px) {
     .logo {
+        @include centerH;
+        margin-left: -4px;
         img {
             min-width: 100px;
             width: 100px;
@@ -2111,9 +2268,9 @@ footer {
         display: block;
         position: fixed;
         right: 0;
-        top: 0;
-        padding: 1.4rem;
-        width: 5rem;
+        top: 2px;
+        padding: 3rem 2.5rem;
+        width: 7rem;
         height: 4.5rem;
         z-index: 2000;
         cursor: pointer;
@@ -2142,7 +2299,6 @@ footer {
         &.active {
             width: 8px;
             height: 8px;
-            top: 2px;
         }
         &:last-of-type {
             margin-right: 0;
@@ -2193,24 +2349,7 @@ footer {
                 }
             }
         }
-        .cards {
-            .card {
-                width: 100%;
-                margin: 0%;
-                padding: 2rem;
-                margin-bottom: 2rem;
-                margin-top: 6rem;               
-                &:nth-of-type {
-                    margin-top: 6rem;
-                }
-                .factors-title {
-                    top: -50px;
-                }
-            }
-            .bad-gene, .bmi-high, .drinks-high{
-                margin-bottom: 5rem;
-            }
-        }
+        
         .vignettes {
             padding: 3rem 3rem 3rem;
             width: 100%;
@@ -2239,6 +2378,17 @@ footer {
             }
         }
     }
+    .landscape-overlay{
+        padding: 3rem;
+        img{
+            position: absolute;
+            right: 3rem;
+            bottom: 0px;
+        }
+        &.active{
+            top: 0;
+        }
+    }
     .border {
         border: 0px solid $light-gray;
         &.white {
@@ -2256,9 +2406,13 @@ footer {
             position: absolute;
             @include transform(translate(0, 0));
             right: 0;
+            left: 0;
+            margin: auto;
             top: 70px;
             width: 100%;
+            max-width: 500px;
             padding: 1rem 3rem;
+            text-align: center;
         }
         p {
             font-size: 1.3rem;
@@ -2322,7 +2476,6 @@ footer {
                 &.active {
                     width: 4px;
                     height: 4px;
-                    top: 0;
                 }
             }
         }
@@ -2411,12 +2564,12 @@ footer {
                 @include transition(.3s, ease-out);
                 position: absolute;
                 left: auto;
-                right: 15px;
+                right: 25px;
                 margin-top: .7rem;
                 top: 14px;
                 opacity: .5;
                 img{
-                    width: 40px;
+                    width: 25px;
                 }
             }
             .understand, .assess, .assess-start, .lets-go {
@@ -2449,7 +2602,7 @@ footer {
             }
             .assess{
                 .arrow{
-                    left: 20px;
+                    left: 25px;
                     right: auto;
                 }
                 &:hover{

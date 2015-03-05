@@ -287,7 +287,7 @@ button.sub:hover {
   border-color: #f6323e !important;
 }
 .red-text {
-  color: #f6323e;
+  color: #d7006d;
 }
 .bg-video {
   opacity: 0;
@@ -606,27 +606,118 @@ button.sub:hover {
   margin: 0 auto;
   color: #fff;
   background: #d7006d;
-  padding: 3rem;
+  padding: 3rem 6rem;
+  overflow: hidden;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+  -webkit-transition: all 0.8s 0 ease-in-out;
+  -moz-transition: all 0.8s 0 ease-in-out;
+  -o-transition: all 0.8s 0 ease-in-out;
+  -ms-transition: all 0.8s 0 ease-in-out;
+  transition: all 0.8s 0 ease-in-out;
+  -moz-transition-duration: 0.8s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  position: absolute;
+  left: 0;
+  padding: 0 6rem;
+  top: -100%;
+  width: 100%;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+  float: left;
+  margin-right: 6rem;
+  top: 6px;
+  width: 50%;
+  text-align: left;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+  float: left;
+  margin-top: 0;
+  margin-right: 2rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel {
+  padding: 16px 0 6px 0;
+  margin-right: 0rem;
+  border: none;
+  border-bottom: 2px solid #fff;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel:hover {
+  background: transparent;
+  color: #ffb4aa;
+  border-color: #ffb4aa !important;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+  padding: 10px 20px;
+  margin: 0 2rem 0 0;
+  float: left;
+  width: 20%;
+  border: none;
+  font-size: 1.4rem;
+  top: 2px;
+  min-width: 200px;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
   border: 3px solid #fff;
   cursor: pointer;
   color: #fff;
+  margin-right: 1rem;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
   background: #fff;
   color: #f6323e;
+  border-color: #fff !important;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+  -webkit-transition: all 0.8s 0 ease-in-out;
+  -moz-transition: all 0.8s 0 ease-in-out;
+  -o-transition: all 0.8s 0 ease-in-out;
+  -ms-transition: all 0.8s 0 ease-in-out;
+  transition: all 0.8s 0 ease-in-out;
+  -moz-transition-duration: 0.8s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
   float: left;
   min-height: 60px;
+  top: 0;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
+  -webkit-transition: all 0.8s 0 ease-in-out;
+  -moz-transition: all 0.8s 0 ease-in-out;
+  -o-transition: all 0.8s 0 ease-in-out;
+  -ms-transition: all 0.8s 0 ease-in-out;
+  transition: all 0.8s 0 ease-in-out;
+  -moz-transition-duration: 0.8s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
   width: 50%;
+  margin-right: 6rem;
   padding-top: 1.6rem;
+  text-align: left;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
-  width: 50%;
+  -webkit-transition: all 0.8s 0 ease-in-out;
+  -moz-transition: all 0.8s 0 ease-in-out;
+  -o-transition: all 0.8s 0 ease-in-out;
+  -ms-transition: all 0.8s 0 ease-in-out;
+  transition: all 0.8s 0 ease-in-out;
+  -moz-transition-duration: 0.8s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  width: calc(50% - 6rem);
+  text-align: left;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+  top: 4rem;
 }
 .progress-overlay .results .sub {
   background: transparent;
@@ -904,6 +995,14 @@ button.sub:hover {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-transition: all 0.3s 0 ;
+  -moz-transition: all 0.3s 0 ;
+  -o-transition: all 0.3s 0 ;
+  -ms-transition: all 0.3s 0 ;
+  transition: all 0.3s 0 ;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .dot {
   color: #ccc;
@@ -933,7 +1032,6 @@ button.sub:hover {
 .dot.active {
   background: #d7006d;
   border-color: #d7006d;
-  top: -2px;
 }
 .tooltip-bottom {
   width: auto;
@@ -970,6 +1068,16 @@ button.sub:hover {
 .checkbox-list.column-right {
   width: auto;
   display: inline-block;
+}
+.checkbox-list.age-list {
+  max-width: 85%;
+  left: 35px;
+}
+.checkbox-list.age-list .checkbox {
+  max-width: 140px;
+  min-width: 80px;
+  float: left;
+  width: 50%;
 }
 .checkbox {
   margin: 1rem 0;
@@ -1101,7 +1209,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 400px;
   height: 400px;
   left: 40%;
-  top: 24%;
+  top: 28%;
   position: absolute;
   overflow: hidden;
   cursor: pointer;
@@ -1148,8 +1256,9 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 7%;
-  width: calc(100% - 1300px);
+  right: 15%;
+  width: calc(100% - 1000px);
+  max-width: 460px;
   min-width: 250px;
 }
 .intro p {
@@ -1278,14 +1387,26 @@ input[type="checkbox"], input[type="radio"] {
   margin-left: -60px;
   width: 60px;
   display: inline-block;
+  opacity: 0;
+  -webkit-transition: all 0.5s 0 ;
+  -moz-transition: all 0.5s 0 ;
+  -o-transition: all 0.5s 0 ;
+  -ms-transition: all 0.5s 0 ;
+  transition: all 0.5s 0 ;
+  -moz-transition-duration: 0.5s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
 }
 .assessment .btn-back img {
   margin-left: -8px;
   margin-right: 4px;
-  top: -1px;
+  top: 1px;
 }
 .assessment .btn-back:hover {
   color: #f6323e;
+}
+.assessment .btn-back.active {
+  opacity: 1;
 }
 .assessment .drink-slider {
   display: inline-block;
@@ -1349,6 +1470,12 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 1;
   transform: perspective(1000px) translateY(-50%);
   top: 50%;
+}
+.assessment .dots {
+  opacity: 0;
+}
+.assessment .dots.active {
+  opacity: 1;
 }
 .assessment-intro {
   position: absolute;
@@ -1416,7 +1543,6 @@ input[type="checkbox"], input[type="radio"] {
 .education .dots .dot.active {
   width: 8px;
   height: 8px;
-  top: -2px;
   opacity: 1;
 }
 .education .module {
@@ -2113,6 +2239,9 @@ footer {
     height: 400px;
     left: 20%;
   }
+  .intro .intro-message {
+    right: 10%;
+  }
   .dots h6 {
     display: none;
   }
@@ -2124,7 +2253,6 @@ footer {
   .dot.active {
     width: 8px;
     height: 8px;
-    top: 2px;
   }
   .dot:last-of-type {
     margin-right: 0;
@@ -2170,9 +2298,9 @@ footer {
   }
   .progress-overlay .results .triggered-cancer-copy {
     padding: 3rem;
-    width: calc(100% + 12rem);
+    width: calc(100% + 6rem);
     margin-top: 3rem;
-    left: -6rem;
+    left: -3rem;
     background: #fde4df;
     display: none !important;
   }
@@ -2239,7 +2367,7 @@ footer {
     margin-bottom: 2rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
-    padding: 3rem;
+    padding: 2rem 3rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
     border: 3px solid #fff;
@@ -2252,7 +2380,7 @@ footer {
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     float: left;
-    min-height: 60px;
+    min-height: 20px;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
     width: 100%;
@@ -2260,9 +2388,79 @@ footer {
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     width: 100%;
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+    padding: 0 3rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+    margin-right: 1.5rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+    padding: 10px 20px;
+    margin: 0 2rem 1.5rem 0;
+    width: 100%;
+    max-width: 300px;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
+    margin-right: 1.5rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+    background: #fff;
+    color: #f6323e;
+    border-color: #fff !important;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+    top: 2.5rem;
+  }
+  .progress-overlay .cards .card-intro-text {
+    padding: 2rem 2rem;
+    width: 70%;
+  }
+  .progress-overlay .cards .card-intro-text h2 {
+    font-size: 2.5rem;
+  }
+  .progress-overlay .cards .card-intro-text p {
+    font-size: 1.5rem;
+  }
+  .progress-overlay .cards .card {
+    width: 100%;
+    margin: 0%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+  }
+  .progress-overlay .cards .card:nth-of-type {
+    margin-top: 6rem;
+  }
+  .progress-overlay .cards .card .factors-title {
+    top: -50px;
+  }
+  .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
+    margin-bottom: 5rem;
   }
 }
 @media (max-width: 768px) {
+  .logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: -4px;
+  }
   .logo img {
     min-width: 100px;
     width: 100px;
@@ -2274,9 +2472,9 @@ footer {
     display: block;
     position: fixed;
     right: 0;
-    top: 0;
-    padding: 1.4rem;
-    width: 5rem;
+    top: 2px;
+    padding: 3rem 2.5rem;
+    width: 7rem;
     height: 4.5rem;
     z-index: 2000;
     cursor: pointer;
@@ -2303,7 +2501,6 @@ footer {
   .dot.active {
     width: 8px;
     height: 8px;
-    top: 2px;
   }
   .dot:last-of-type {
     margin-right: 0;
@@ -2349,22 +2546,6 @@ footer {
   .progress-overlay .questions .progress-question:hover {
     opacity: 0.8;
   }
-  .progress-overlay .cards .card {
-    width: 100%;
-    margin: 0%;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 6rem;
-  }
-  .progress-overlay .cards .card:nth-of-type {
-    margin-top: 6rem;
-  }
-  .progress-overlay .cards .card .factors-title {
-    top: -50px;
-  }
-  .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
-    margin-bottom: 5rem;
-  }
   .progress-overlay .vignettes {
     padding: 3rem 3rem 3rem;
     width: 100%;
@@ -2388,6 +2569,17 @@ footer {
   .male-overlay h1 .share-btn {
     font-size: 1em;
   }
+  .landscape-overlay {
+    padding: 3rem;
+  }
+  .landscape-overlay img {
+    position: absolute;
+    right: 3rem;
+    bottom: 0px;
+  }
+  .landscape-overlay.active {
+    top: 0;
+  }
   .border {
     border: 0px solid #ccc;
   }
@@ -2407,9 +2599,13 @@ footer {
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     right: 0;
+    left: 0;
+    margin: auto;
     top: 70px;
     width: 100%;
+    max-width: 500px;
     padding: 1rem 3rem;
+    text-align: center;
   }
   .intro p {
     font-size: 1.3rem;
@@ -2471,7 +2667,6 @@ footer {
   .education .dots .dot.active {
     width: 4px;
     height: 4px;
-    top: 0;
   }
   .education .module .main {
     left: 0px;
@@ -2563,13 +2758,13 @@ footer {
     -moz-transition-delay: 0;
     position: absolute;
     left: auto;
-    right: 15px;
+    right: 25px;
     margin-top: 0.7rem;
     top: 14px;
     opacity: 0.5;
   }
   .right-column .toggle-box .arrow img {
-    width: 40px;
+    width: 25px;
   }
   .right-column .toggle-box .understand, .right-column .toggle-box .assess, .right-column .toggle-box .assess-start, .right-column .toggle-box .lets-go {
     padding: 0.7rem 2rem;
@@ -2596,7 +2791,7 @@ footer {
     left: auto;
   }
   .right-column .toggle-box .assess .arrow {
-    left: 20px;
+    left: 25px;
     right: auto;
   }
   .right-column .toggle-box .assess:hover .arrow {

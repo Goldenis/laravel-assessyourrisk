@@ -136,6 +136,8 @@
         $('.education .dots h6').eq(2).css({
             left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * 22
         })
+        addCharts();
+        updateCharts();
     }
 
     function sizeBGMedia() {

@@ -34,7 +34,8 @@ class MailController extends \BaseController {
 			$statusCode = 200;
 			$email = Input::get ( 'email' );
 			$attachment = Input::get ( 'attachment' );
-			
+			$isDoctor = Input::get ( 'isDoctor' );
+			 
 			$validator = Validator::make ( array (
 					'email' => $email,
 					'attachment' => $attachment
@@ -53,17 +54,20 @@ class MailController extends \BaseController {
 					$response ['errors'] [] = $message;
 				}
 			} else {
-				
-				$messageCopy = "Attached are your results from the form.";
+
+				$template = 'emails.user';
+				if ($isDoctor == 'true') {
+					$template = 'emails.doctor';
+				}
 				
 				Log::info ( '>> Validator passed.' );
-				Mail::send('emails.welcome', array('messageCopy' => $messageCopy), function($message) use ($email, $attachment)
+				Mail::send($template, array(), function($message) use ($email, $attachment)
 				{
 					
-					$messageSubject = "Got the PDF working";
+					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";
 					
 					$message->from('nickvelloff@theexperiment.io', 'Nick Velloff');
-					$message->to($email)->cc("trevorobrien@theexperiment.io");
+					$message->to($email); //->cc("trevorobrien@theexperiment.io");
 					$message->subject($messageSubject);	
 					$pdf_encoded = base64_decode($attachment);
 					$message->embedData($pdf_encoded, "results.pdf", "application/pdf");

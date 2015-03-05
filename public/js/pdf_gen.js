@@ -916,7 +916,8 @@ function doPostPDF(attachment) {
 		url : "/email",
 		data : {
 			email : "nick.velloff@gmail.com",
-			attachment : attachment
+			attachment : attachment,
+			isDoctor : "true"
 		}
 	}).done(function(msg) {
 		alert("PDF Sent");

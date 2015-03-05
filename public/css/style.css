@@ -2575,6 +2575,9 @@ footer {
     right: 3rem;
     bottom: 0px;
   }
+  .landscape-overlay.active {
+    top: 0;
+  }
   .border {
     border: 0px solid #ccc;
   }

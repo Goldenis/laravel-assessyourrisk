@@ -2383,6 +2383,9 @@ footer {
             right: 3rem;
             bottom: 0px;
         }
+        &.active{
+            top: 0;
+        }
     }
     .border {
         border: 0px solid $light-gray;

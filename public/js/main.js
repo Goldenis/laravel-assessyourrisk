@@ -103,10 +103,16 @@
             _smallScreen = true;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
+            if(_winW > _winH){
+                $('.landscape-overlay').addClass('active')    
+            }else{
+                $('.landscape-overlay').removeClass('active')
+            }
         } else {
             _smallScreen = false;
             $('.module-hero h1').eq(1).html('Knowing Your Normal')
             $('.module-hero h1').eq(2).html('Family & Health History')
+            $('.landscape-overlay').removeClass('active')
         }
         sizeBGMedia();
         setFontScale($('html'), 11, 16, 'px');

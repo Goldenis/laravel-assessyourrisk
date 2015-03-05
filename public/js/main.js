@@ -1722,7 +1722,7 @@ Do you know if I do%3F");
 })(jQuery);
 
     function shareMail(){
-        window.open("mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, %0D%0A \
+        window.open("mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, \
 %0D%0A\
 %0D%0A\
 I want to share something important with you. \

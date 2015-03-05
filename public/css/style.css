@@ -287,6 +287,9 @@ button.sub:hover {
   border-color: #f6323e !important;
 }
 .red-text {
+  color: #f6323e;
+}
+.pink-text {
   color: #d7006d;
 }
 .bg-video {
@@ -522,11 +525,7 @@ button.sub:hover {
 }
 .progress-overlay .results .triggered-cancer-copy {
   padding: 3rem 0 0;
-  padding: 6rem;
-  width: calc(100% + 12rem);
-  margin-top: 6rem;
-  left: -6rem;
-  background: #fde4df;
+  display: none !important;
 }
 .progress-overlay .results .triggered-cancer-copy.show {
   display: block !important;
@@ -596,7 +595,6 @@ button.sub:hover {
   color: #555558;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
-  color: #f6323e;
   margin-bottom: 2rem;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {

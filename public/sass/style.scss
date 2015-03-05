@@ -339,6 +339,9 @@ button {
     }
 }
 .red-text {
+    color: $red;
+}
+.pink-text {
     color: $pink;
 }
 .bg-video {
@@ -567,12 +570,7 @@ button {
         }
         .triggered-cancer-copy {
             padding: 3rem 0 0;
-            padding: 6rem;
-            width: calc(100% + 12rem);
-            margin-top: 6rem;
-            left: -6rem;
-            background: $nude-xtra-light; 
-            // display: none !important;
+            display: none !important;
             &.show{
                 display: block !important; 
             }
@@ -645,7 +643,7 @@ button {
                     }
                 }
                 .warning-header {
-                    color: $red;
+                    // color: $red;
                     margin-bottom: 2rem;
 
                     // background: $nude-xtra-light;

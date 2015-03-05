@@ -908,6 +908,11 @@
             //savedQuizProgress[String(_currentQuestion)] = ansTxt;
         }
 
+            questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
+            
+            questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+
+
             savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
             savedQuizProgress[String(_currentQuestion)] = ansTxt;
             updateCharts();

@@ -258,8 +258,13 @@
                 <h4>Would you like a copy of your results?</h4>
               </div>
               <div class="email-pdf-btns">
-                <button class="sub email">EMAIL</button><button class="pdf">PDF</button><button class="sub email">SHARE WITH MY DOCTOR</button>
-              </div>         
+                <button class="sub email">EMAIL</button><button class="pdf">PDF</button><button class="sub email-doctor">SHARE WITH MY DOCTOR</button>
+              </div>
+ 
+              <div class="email-fields">
+                <h4>Share results with my doctor.</h4>
+                <input type="text" placeholder="Dr's email address"><button class="sub">SEND</button><button class="sub cancel">Cancel</button>
+              </div>
             </div>
 <!-- paragraph wrapper close -->
         </div>
@@ -522,8 +527,8 @@
           <div class="prompt">How old are you?</div>
    
           <div class="answers">
-            <div class="checkbox-list">
-              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">Under 20</div></div>
+            <div class="checkbox-list age-list">
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">10-20</div></div>
               <div class="checkbox" data-answer-id="2"><input type="radio" name="age-radio" data-answer-id="2"><div class="label">20-30</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="age-radio" data-answer-id="3"><div class="label">31-35</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="age-radio" data-answer-id="4"><div class="label">36-40</div></div>

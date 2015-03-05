@@ -436,6 +436,12 @@
         $('.progress-overlay .email-pdf').on('click', function() {
             window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
+        $('.email-doctor').on('click', function() {
+            $('.email-pdf-doctor').addClass('show-fields');
+        })
+        $('.email-fields button.cancel').on('click', function() {
+            $('.email-pdf-doctor').removeClass('show-fields');
+        })
         $('.sub.email').on('click', function() {
             console.log('click');
             var content = $('.email-content').text();
@@ -455,6 +461,7 @@
             $('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+            $('.assessment-dots').addClass('active');
         })
         $('.ask').on('click', askHandler);
         $('.btn-calculate').on('click', function(e) {
@@ -1344,6 +1351,7 @@ Do you know if I do%3F");
             $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
+            $('.assessment-dots .btn-back').addClass('active')
         }, 1000)
         $('.question').eq(_currentQuestion).addClass('in')
         $('.question').eq(_currentQuestion).removeClass('out-up')
@@ -1416,6 +1424,9 @@ Do you know if I do%3F");
             $('.question').eq(_currentQuestion).removeClass('out-up')
             $('.question').eq(_currentQuestion).addClass('in')
             $('.assessment .share').removeClass('in')
+            if(_currentQuestion == 0){
+                $('.assessment-dots .btn-back').removeClass('active')
+            }
         }
     }
     function nextVignette() {

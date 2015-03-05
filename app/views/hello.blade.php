@@ -1197,7 +1197,11 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
         <a href="#"><span class="icon-twitter"></span></a>
       </div>
     </footer>
-
+    
+    <div class="overlay landscape-overlay">
+      <img src="img/rotate-icon.png">
+      <h1>Please rotate<br>your device</h1>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/vendor/jquery.address-1.6.min.js"></script>

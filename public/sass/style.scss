@@ -2091,6 +2091,7 @@ footer {
                 }
             }
 
+
             .paragraph-wrapper {
                 width: 100%;
                 background: #fff;
@@ -2218,10 +2219,40 @@ footer {
                 }
             }
         }
+        .cards {
+            .card-intro-text {
+                padding: 2rem 2rem;
+                width: 70%;
+                h2{
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+            .card {
+                width: 100%;
+                margin: 0%;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                margin-top: 6rem;               
+                &:nth-of-type {
+                    margin-top: 6rem;
+                }
+                .factors-title {
+                    top: -50px;
+                }
+            }
+            .bad-gene, .bmi-high, .drinks-high{
+                margin-bottom: 5rem;
+            }
+        }
     }
 }
 @media only(max-width: 768px) {
     .logo {
+        @include centerH;
+        margin-left: -4px;
         img {
             min-width: 100px;
             width: 100px;
@@ -2234,9 +2265,9 @@ footer {
         display: block;
         position: fixed;
         right: 0;
-        top: 0;
-        padding: 3rem 3rem;
-        width: 8rem;
+        top: 2px;
+        padding: 3rem 2.5rem;
+        width: 7rem;
         height: 4.5rem;
         z-index: 2000;
         cursor: pointer;
@@ -2316,24 +2347,7 @@ footer {
                 }
             }
         }
-        .cards {
-            .card {
-                width: 100%;
-                margin: 0%;
-                padding: 2rem;
-                margin-bottom: 2rem;
-                margin-top: 6rem;               
-                &:nth-of-type {
-                    margin-top: 6rem;
-                }
-                .factors-title {
-                    top: -50px;
-                }
-            }
-            .bad-gene, .bmi-high, .drinks-high{
-                margin-bottom: 5rem;
-            }
-        }
+        
         .vignettes {
             padding: 3rem 3rem 3rem;
             width: 100%;
@@ -2360,6 +2374,14 @@ footer {
             .share-btn {
                 font-size: 1em;
             }
+        }
+    }
+    .landscape-overlay{
+        padding: 3rem;
+        img{
+            position: absolute;
+            right: 3rem;
+            bottom: 0px;
         }
     }
     .border {

@@ -101,6 +101,7 @@
         _winW = _$window.width();
         if (_winW <= 768) {
             _smallScreen = true;
+            minS = .6;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
             if(_winW > _winH){
@@ -110,6 +111,7 @@
             }
         } else {
             _smallScreen = false;
+            minS = .8;
             $('.module-hero h1').eq(1).html('Knowing Your Normal')
             $('.module-hero h1').eq(2).html('Family & Health History')
             $('.landscape-overlay').removeClass('active')
@@ -139,9 +141,9 @@
         addCharts();
         updateCharts();
         $('.wheel-container').css({
-            '-webkit-transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)',
-            '-moz-transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)',
-            'transform': 'matrix('+Math.max(.8,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(.8,1 * ($(window).width()/1024))+', 0, 0)'
+            '-webkit-transform': 'matrix('+Math.max(minS,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(minS,1 * ($(window).width()/1024))+', 0, 0)',
+            '-moz-transform': 'matrix('+Math.max(minS,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(minS,1 * ($(window).width()/1024))+', 0, 0)',
+            'transform': 'matrix('+Math.max(minS,1 * ($(window).width()/1024))+', 0, 0,'+ Math.max(minS,1 * ($(window).width()/1024))+', 0, 0)'
         })
     }
 

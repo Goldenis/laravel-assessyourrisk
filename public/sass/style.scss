@@ -995,7 +995,6 @@ button {
     z-index: 20;
     background: rgba(255,255,255,.9);
     padding: 16px;
-    // left: 3rem;
     @include centerH;
     @include transition(.3s);
 }

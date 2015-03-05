@@ -15,7 +15,12 @@
     var tl = new TimelineLite();
 
     tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
-    var wheelScale = Math.max(.8,1 * ($(window).width()/1024));
+    if($(window).width() < 768){
+        minS = .6;
+    }else{
+        minS = .8;
+    }
+    var wheelScale = Math.max(minS,1 * ($(window).width()/1024));
     // if($(window).width() <= 1024){
       
     // }

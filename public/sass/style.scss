@@ -2010,6 +2010,10 @@ footer {
     border: 1px solid $darkColor;
     display: none;
 }
+
+
+////////////////////////////////////////////////////// TABLET
+
 @media only(max-width: 1024px) {
     .intro {
         .wheel-container {
@@ -2250,7 +2254,12 @@ footer {
         }
     }
 }
+
+
+///////////////////////////////////////////// PHONE
+
 @media only(max-width: 768px) {
+
     .logo {
         @include centerH;
         margin-left: -4px;
@@ -2308,6 +2317,107 @@ footer {
         margin: 0rem 0rem;
         text-align: center;
         position: relative;
+    }
+    #height-question {
+        margin-top: 2rem;
+    }
+    .question {
+        position: absolute;
+        display: block;
+        @include transform(translateY(-50%));
+        top: 60%;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        height: auto;
+        max-height: 100%;
+        padding: 0;
+        text-align: center;
+        @include transition(.5s, ease-out);
+        pointer-events: none;
+
+        &.gif{
+            padding-top: 8rem;
+        }
+        .prompt {
+            left: 10%;
+            width: 80%;
+            text-align: center;
+            font-family: 'avg_bold';
+            font-size: 2.3rem;
+            line-height: 3.2rem;
+            z-index: 30;
+        }
+        .weight-header {
+            margin: 1rem 0;
+        }
+        .height-header {
+            margin-bottom: 1rem;
+        }
+        .weight-answer {
+            margin: 16rem 0 0 0;
+            button {
+                  margin: 1rem 0 !important;
+            }
+        }
+        .bmi-result {
+            display: block;
+            opacity: 0;
+            font-family: "avg_bold";
+            background: #fff;
+            color: $pink;
+            position: absolute;
+            width: 100%;
+            top: 30%;
+            height: auto;
+            text-align: center;
+            @include transition(1s);
+        }
+        #famdiag-check-btn #mobile-button-left {
+            margin: 2rem 0;
+        }
+        &.in {
+            visibility: visible;
+            opacity: 1 !important;
+            @include transform(translateY(-50%));
+            @include transition(1s, ease-out, all, .5s);
+            top: 50%;
+            pointer-events: auto;
+            // overflow-y: scroll;
+            // -webkit-overflow-scrolling: touch;
+        }
+        &.out-up {
+            @include transform(perspective(1000px) translateY(-50%));
+            top: 40%;
+        }
+    }
+    .anim-gif{
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        img {
+            width: 6rem;
+            max-width: 205px;
+            min-width: 60px;
+        }
+        &.birth{
+            img {
+            -webkit-transform: rotate(45deg);
+            width: 8rem;
+            max-width: 205px;
+            min-width: 80px;
+            }
+        }    
+        &.stopwatch{
+            img {
+                width: 9rem;
+                max-width: 205px;
+                min-width: 80px;
+            }
+        }    
     }
     .progress-overlay {
         -webkit-overflow-scrolling: touch;
@@ -2428,11 +2538,16 @@ footer {
         .share{
             margin: 0;
         }
+        .
         .drink-slider {
             .drinks {
                 width: 120%;
             }
             .drink {
+                button {
+                    left: -8%;
+                    margin: 2rem 0;
+                }
                 margin-right: 0px;
                 margin-left: -19px;
                 float: left;

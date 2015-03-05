@@ -560,7 +560,7 @@
         
         <div class="question weight-question" data-question-id="3">
           <div class="weight-wrapper">  
-            <div class="prompt">What is your weight?</div>
+            <div class="prompt weight-header">What is your weight?</div>
             <div class="visual">
               <div class="weight-container-mask">
                 <div class="weight-container">
@@ -584,7 +584,7 @@
           </div>
 
           <div class="height-wrapper">  
-            <div class="prompt">What is your height?</div>
+            <div class="prompt height-header">What is your height?</div>
             <div class="visual">
                 <div class="height-container-mask">
                   <div class="height-container">
@@ -703,7 +703,7 @@
           </div>     
 
           <div class="answers">
-            <button>Continue</button>
+            <button id="mobile-button-left">Continue</button>
             <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
         </div>
@@ -785,7 +785,7 @@
         </div>
         <div class="share">
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
     </section>

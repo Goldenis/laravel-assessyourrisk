@@ -1503,7 +1503,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
   z-index: 3;
-  top: 13rem;
+  top: 30%;
 }
 .assessment-intro a, .assessment-intro a:visited {
   color: #d7006d;
@@ -2335,11 +2335,7 @@ footer {
     display: block;
   }
   .progress-overlay .results .triggered-cancer-copy {
-    padding: 3rem;
-    width: calc(100% + 6rem);
-    margin-top: 3rem;
-    left: -3rem;
-    background: #fde4df;
+    padding: 2rem 0 0;
     display: none !important;
   }
   .progress-overlay .results .triggered-cancer-copy.show {
@@ -2423,6 +2419,7 @@ footer {
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
     width: 100%;
     padding-top: 1.6rem;
+    padding-bottom: 2rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     width: 100%;
@@ -2474,7 +2471,7 @@ footer {
   }
   .progress-overlay .cards .card-intro-text {
     padding: 2rem 2rem;
-    width: 70%;
+    width: 100%;
   }
   .progress-overlay .cards .card-intro-text h2 {
     font-size: 2.5rem;
@@ -2486,14 +2483,11 @@ footer {
     width: 100%;
     margin: 0%;
     padding: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 6rem;
+    margin-bottom: 4rem;
+    margin-top: 10rem;
   }
   .progress-overlay .cards .card:nth-of-type {
     margin-top: 6rem;
-  }
-  .progress-overlay .cards .card .factors-title {
-    top: -50px;
   }
   .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
     margin-bottom: 5rem;
@@ -2563,9 +2557,6 @@ footer {
     text-align: center;
     position: relative;
   }
-  #height-question {
-    margin-top: 2rem;
-  }
   .question {
     position: absolute;
     display: block;
@@ -2607,9 +2598,6 @@ footer {
   .question .weight-header {
     margin: 1rem 0;
   }
-  .question .height-header {
-    margin-bottom: 1rem;
-  }
   .question .weight-answer {
     margin: 16rem 0 0 0;
   }
@@ -2624,7 +2612,7 @@ footer {
     color: #d7006d;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 50%;
     height: auto;
     text-align: center;
     -webkit-transition: all 1s 0 ;
@@ -2838,7 +2826,7 @@ footer {
   .assessment-intro {
     position: absolute;
     width: calc(100% - 5.1rem);
-    top: 12rem;
+    top: 30%;
     left: 3rem;
   }
   .assessment-intro .action {

@@ -1456,7 +1456,7 @@ input[type="checkbox"], input[type="radio"] {
         color: $pink;
         font-size: 1em;
     }
-    top: 13rem;
+    top: 30%;
     .action {
         position: relative;
     }
@@ -2113,11 +2113,7 @@ footer {
                 }
             }
             .triggered-cancer-copy {
-                padding: 3rem;
-                width: calc(100% + 6rem);
-                margin-top: 3rem;
-                left: -3rem;
-                background: $nude-xtra-light; 
+                padding: 2rem 0 0;
                 display: none !important;
                 &.show{
                     display: block !important; 
@@ -2206,6 +2202,7 @@ footer {
                     .email-pdf-copy {
                         width: 100%;
                         padding-top: 1.6rem;
+                        padding-bottom: 2rem;
                     }
                     .email-pdf-btns {
                         width: 100%;
@@ -2266,7 +2263,7 @@ footer {
         .cards {
             .card-intro-text {
                 padding: 2rem 2rem;
-                width: 70%;
+                width: 100%;
                 h2{
                     font-size: 2.5rem;
                 }
@@ -2278,13 +2275,13 @@ footer {
                 width: 100%;
                 margin: 0%;
                 padding: 2rem;
-                margin-bottom: 2rem;
-                margin-top: 6rem;               
+                margin-bottom: 4rem;
+                margin-top: 10rem;               
                 &:nth-of-type {
                     margin-top: 6rem;
                 }
                 .factors-title {
-                    top: -50px;
+                    
                 }
             }
             .bad-gene, .bmi-high, .drinks-high{
@@ -2365,7 +2362,7 @@ footer {
         position: relative;
     }
     #height-question {
-        margin-top: 2rem;
+        // margin-top: 2rem;
     }
     .question {
         position: absolute;
@@ -2398,9 +2395,6 @@ footer {
         .weight-header {
             margin: 1rem 0;
         }
-        .height-header {
-            margin-bottom: 1rem;
-        }
         .weight-answer {
             margin: 16rem 0 0 0;
             button {
@@ -2415,7 +2409,7 @@ footer {
             color: $pink;
             position: absolute;
             width: 100%;
-            top: 30%;
+            top: 50%;
             height: auto;
             text-align: center;
             @include transition(1s);
@@ -2628,7 +2622,7 @@ footer {
     .assessment-intro {
         position: absolute;
         width: calc(100% - 5.1rem);
-        top: 12rem;
+        top: 30%;
         left: 3rem;
         .action {
             display: none;

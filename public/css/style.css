@@ -1059,7 +1059,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 18.5rem;
+  top: 20rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -3080,6 +3080,7 @@ footer {
   }
   .btn-calculate {
     left: 64px;
+    top: 18.5rem;
   }
   .checkbox {
     margin: 0.7rem 0;

@@ -2441,11 +2441,12 @@ footer {
             right: 0;
             left: 0;
             margin: auto;
-            top: 70px;
-            width: 100%;
+            top: 66px;
+            width: calc(100% - 4rem);
             max-width: 500px;
-            padding: 1rem 3rem;
+            padding: 1.5rem 0;
             text-align: center;
+            border-top: 1px solid #dedede;
         }
         p {
             font-size: 1.3rem;
@@ -2590,7 +2591,7 @@ footer {
         right: auto;
         top: auto;
         left: 0;
-        bottom: 0px;
+        bottom: -60px;
         width: 100%;
         height: 60px;
         z-index: 1113;
@@ -2656,6 +2657,9 @@ footer {
         }
         .dashboard {
             display: none;
+        }
+        &.active{
+            bottom: 0;
         }
         &.in {
             bottom: 0;

@@ -91,10 +91,10 @@
         _scrollHandler();
     });
 
-        //cardsLow[0]{factbody: ''}
-        //['factbody', '']
-        //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
-        console.log(cardsLow[0]['factbody'])
+    //cardsLow[0]{factbody: ''}
+    //['factbody', '']
+    //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
+    console.log(cardsLow[0]['factbody'])
 
     function _pageResize() {
         $('.module').scrollTop(0);
@@ -1738,6 +1738,9 @@ Do you know if I do%3F");
         _registerEventListeners();
         _pageResize();
         initialized = true;
+        setTimeout(function(){
+            $('.right-column').addClass('active')
+        },6000)
 
     });
 })(jQuery);

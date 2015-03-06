@@ -44,14 +44,14 @@ var height = $(document).ready(
 				var currentY;
 				
 				if (isTouch) {
-					touchMove = $(window).bind('touchmove', function(e) {
+					$(window).bind('touchmove', function(e) {
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 						move(touch);
 					});
 					
-					touchEnd = $(window).bind('touchend', function(e) {
+					$(window).bind('touchend', function(e) {
 						e.preventDefault();
 						endInteraction();
 						endTrackingTouch();
@@ -106,13 +106,14 @@ var height = $(document).ready(
 			}
 			
 			function endTrackingTouch() {
-				$(window).unbind(touchMove);
-				$(window).unbind(touchEnd);
+				$(window).off('touchmove');
+				$(window).off('touchend');
+				$(window).off('mousemove');
 			}
 			
 			function slideH(obj, degree, time) {
 				TweenLite.killTweensOf(obj);
 				TweenLite.to(obj, time, {css:{top:degree}, ease:Power3.easeOut});
-	        }
+	    }
 			
 		});

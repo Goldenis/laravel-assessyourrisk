@@ -32,14 +32,14 @@ var weight = $(document).ready(
 				var currentX;
 				
 				if (isTouch) {
-					var touchmove = $(window).bind('touchmove', function(e) {
+					touchmove = $(window).bind('touchmove', function(e) {
 						e.preventDefault();
 						touch = e.originalEvent.touches[0]
 						|| e.originalEvent.changedTouches[0];
 						move(touch);
 					});
 					
-					var touchend = $(window).bind('touchend', function(e) {
+					touchend = $(window).bind('touchend', function(e) {
 						e.preventDefault();
 						endTrackingTouch();
 					});

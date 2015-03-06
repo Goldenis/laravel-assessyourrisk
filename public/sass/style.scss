@@ -662,7 +662,7 @@ button {
                     background: $pink;
                     padding: 3rem 6rem;
                     overflow: hidden;
-                    .email-fields{
+                    .email-fields-doctor, .email-fields-user{
                         @include transition(.8s,ease-in-out);
                         position: absolute;
                         left: 0;
@@ -734,17 +734,28 @@ button {
                         width: calc(50% - 6rem);
                         text-align: left;
                     }
-                    &.show-fields{
+                    &.show-fields-dr{
                         .email-pdf-btns{
                             top: 20rem;
                         }
                         .email-pdf-copy{
                             top: 20rem;
                         }
-                        .email-fields{
+                        .email-fields-doctor{
                             top: 4rem;
                         }
                     }
+                    &.show-fields-user{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields-user{
+                            top: 4rem;
+                        }
+                    }                    
                 }
         }
 
@@ -2181,7 +2192,7 @@ footer {
                         margin-bottom: 1rem;
                     }
 
-                    .email-fields{
+                    .email-fields-doctor, .email-fields-user{
                         padding: 0 3rem;
                         h4{
                             margin-right: 0rem;
@@ -2206,17 +2217,28 @@ footer {
                             border-color: #fff !important;
                         }
                     }
-                    &.show-fields{
+                    &.show-fields-dr{
                         .email-pdf-btns{
                             top: 20rem;
                         }
                         .email-pdf-copy{
                             top: 20rem;
                         }
-                        .email-fields{
+                        .email-fields-doctor{
                             top: 2.5rem;
                         }
                     }
+                    &.show-fields-user{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields-user{
+                            top: 2.5rem;
+                        }
+                    }                    
                 }
             }
         }

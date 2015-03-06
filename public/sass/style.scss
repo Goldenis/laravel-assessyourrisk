@@ -570,7 +570,7 @@ button {
             }
         }
         .triggered-cancer-copy {
-            padding: 3rem 0 0;
+            padding: 2rem 0;
             display: none !important;
             &.show{
                 display: block !important; 
@@ -725,14 +725,14 @@ button {
                     }
                     .email-pdf-copy {
                         @include transition(.8s,ease-in-out);
-                        width: 50%;
+                        width: 48%;
                         margin-right: 6rem;
                         padding-top: 1.6rem;
                         text-align: left;
                     }
                     .email-pdf-btns {
                         @include transition(.8s,ease-in-out);
-                        width: calc(50% - 6rem);
+                        width: calc(52% - 6rem);
                         text-align: left;
                     }
                     &.show-fields-dr{
@@ -1305,6 +1305,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 .weight-answer {
     margin-top: 15rem;
+    .submit-weight {
+        margin: 0 !important;
+    }
 }
 .height-container-mask {
     .height-container {
@@ -1453,7 +1456,7 @@ input[type="checkbox"], input[type="radio"] {
         color: $pink;
         font-size: 1em;
     }
-    top: 13rem;
+    top: 30%;
     .action {
         position: relative;
     }
@@ -2002,7 +2005,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
     height: 310px;
     transform: perspective(1000px) translateY(-50%);
-	top: 40%;
+	top: 50%;
 }
 &.in {
     visibility: visible;
@@ -2023,6 +2026,10 @@ footer {
     border: 1px solid $darkColor;
     display: none;
 }
+
+
+////////////////////////////////////////////////////// TABLET
+
 @media only(max-width: 1024px) {
     .intro {
         .wheel-container {
@@ -2106,11 +2113,7 @@ footer {
                 }
             }
             .triggered-cancer-copy {
-                padding: 3rem;
-                width: calc(100% + 6rem);
-                margin-top: 3rem;
-                left: -3rem;
-                background: $nude-xtra-light; 
+                padding: 2rem 0 0;
                 display: none !important;
                 &.show{
                     display: block !important; 
@@ -2199,6 +2202,7 @@ footer {
                     .email-pdf-copy {
                         width: 100%;
                         padding-top: 1.6rem;
+                        padding-bottom: 2rem;
                     }
                     .email-pdf-btns {
                         width: 100%;
@@ -2259,7 +2263,7 @@ footer {
         .cards {
             .card-intro-text {
                 padding: 2rem 2rem;
-                width: 70%;
+                width: 100%;
                 h2{
                     font-size: 2.5rem;
                 }
@@ -2271,13 +2275,13 @@ footer {
                 width: 100%;
                 margin: 0%;
                 padding: 2rem;
-                margin-bottom: 2rem;
-                margin-top: 6rem;               
+                margin-bottom: 4rem;
+                margin-top: 10rem;               
                 &:nth-of-type {
                     margin-top: 6rem;
                 }
                 .factors-title {
-                    top: -50px;
+                    
                 }
             }
             .bad-gene, .bmi-high, .drinks-high{
@@ -2286,7 +2290,12 @@ footer {
         }
     }
 }
+
+
+///////////////////////////////////////////// PHONE
+
 @media only(max-width: 768px) {
+
     .logo {
         @include centerH;
         top: 1rem;
@@ -2351,6 +2360,107 @@ footer {
         margin: 0rem 0rem;
         text-align: center;
         position: relative;
+    }
+    #height-question {
+        // margin-top: 2rem;
+    }
+    .question {
+        position: absolute;
+        display: block;
+        @include transform(translateY(-50%));
+        top: 60%;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        height: auto;
+        max-height: 100%;
+        padding: 0;
+        text-align: center;
+        @include transition(.5s, ease-out);
+        pointer-events: none;
+
+        &.gif{
+            padding-top: 8rem;
+        }
+        .prompt {
+            left: 10%;
+            width: 80%;
+            text-align: center;
+            font-family: 'avg_bold';
+            font-size: 2.3rem;
+            line-height: 3.2rem;
+            z-index: 30;
+        }
+        .weight-header {
+            margin: 1rem 0;
+        }
+        .weight-answer {
+            margin: 16rem 0 0 0;
+            button {
+                  margin: 1rem 0 !important;
+            }
+        }
+        .bmi-result {
+            display: block;
+            opacity: 0;
+            font-family: "avg_bold";
+            background: #fff;
+            color: $pink;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            height: auto;
+            text-align: center;
+            @include transition(1s);
+        }
+        #famdiag-check-btn {
+            margin: 2rem 0;
+        }
+        #mobile-button-left {
+            margin: 2rem 0;
+        }
+        &.in {
+            visibility: visible;
+            opacity: 1 !important;
+            @include transform(translateY(-50%));
+            @include transition(1s, ease-out, all, .5s);
+            top: 50%;
+            pointer-events: auto;
+            // overflow-y: scroll;
+            // -webkit-overflow-scrolling: touch;
+        }
+        &.out-up {
+            @include transform(perspective(1000px) translateY(-50%));
+            top: 40%;
+        }
+    }
+    .anim-gif{
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        img {
+            width: 6rem;
+            max-width: 205px;
+            min-width: 60px;
+        }
+        &.birth{
+            img {
+            -webkit-transform: rotate(45deg);
+            width: 8rem;
+            max-width: 205px;
+            min-width: 80px;
+            }
+        }    
+        &.stopwatch{
+            img {
+                width: 9rem;
+                max-width: 205px;
+                min-width: 80px;
+            }
+        }    
     }
     .progress-overlay {
         -webkit-overflow-scrolling: touch;
@@ -2481,11 +2591,16 @@ footer {
         .share{
             margin: 0;
         }
+        .
         .drink-slider {
             .drinks {
                 width: 120%;
             }
             .drink {
+                button {
+                    left: -8%;
+                    margin: 2rem 0;
+                }
                 margin-right: 0px;
                 margin-left: -19px;
                 float: left;
@@ -2507,7 +2622,7 @@ footer {
     .assessment-intro {
         position: absolute;
         width: calc(100% - 5.1rem);
-        top: 12rem;
+        top: 30%;
         left: 3rem;
         .action {
             display: none;
@@ -2767,6 +2882,7 @@ footer {
     }
     .btn-calculate {
         left: 64px;
+        top: 18.5rem;
     }
     .checkbox {
         margin: .7rem 0;

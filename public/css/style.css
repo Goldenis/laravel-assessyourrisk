@@ -525,7 +525,7 @@ button.sub:hover {
   display: block;
 }
 .progress-overlay .results .triggered-cancer-copy {
-  padding: 3rem 0 0;
+  padding: 2rem 0;
   display: none !important;
 }
 .progress-overlay .results .triggered-cancer-copy.show {
@@ -692,7 +692,7 @@ button.sub:hover {
   -moz-transition-duration: 0.8s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  width: 50%;
+  width: 48%;
   margin-right: 6rem;
   padding-top: 1.6rem;
   text-align: left;
@@ -706,7 +706,7 @@ button.sub:hover {
   -moz-transition-duration: 0.8s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  width: calc(50% - 6rem);
+  width: calc(52% - 6rem);
   text-align: left;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
@@ -1059,7 +1059,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 18.5rem;
+  top: 20rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -1319,6 +1319,9 @@ input[type="checkbox"], input[type="radio"] {
 .weight-answer {
   margin-top: 15rem;
 }
+.weight-answer .submit-weight {
+  margin: 0 !important;
+}
 .height-container-mask {
   position: absolute;
   left: 50%;
@@ -1500,7 +1503,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
   z-index: 3;
-  top: 13rem;
+  top: 30%;
 }
 .assessment-intro a, .assessment-intro a:visited {
   color: #d7006d;
@@ -2204,7 +2207,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
   height: 310px;
   transform: perspective(1000px) translateY(-50%);
-  top: 40%;
+  top: 50%;
 }
 .in {
   visibility: visible;
@@ -2332,11 +2335,7 @@ footer {
     display: block;
   }
   .progress-overlay .results .triggered-cancer-copy {
-    padding: 3rem;
-    width: calc(100% + 6rem);
-    margin-top: 3rem;
-    left: -3rem;
-    background: #fde4df;
+    padding: 2rem 0 0;
     display: none !important;
   }
   .progress-overlay .results .triggered-cancer-copy.show {
@@ -2420,6 +2419,7 @@ footer {
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
     width: 100%;
     padding-top: 1.6rem;
+    padding-bottom: 2rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     width: 100%;
@@ -2471,7 +2471,7 @@ footer {
   }
   .progress-overlay .cards .card-intro-text {
     padding: 2rem 2rem;
-    width: 70%;
+    width: 100%;
   }
   .progress-overlay .cards .card-intro-text h2 {
     font-size: 2.5rem;
@@ -2483,14 +2483,11 @@ footer {
     width: 100%;
     margin: 0%;
     padding: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 6rem;
+    margin-bottom: 4rem;
+    margin-top: 10rem;
   }
   .progress-overlay .cards .card:nth-of-type {
     margin-top: 6rem;
-  }
-  .progress-overlay .cards .card .factors-title {
-    top: -50px;
   }
   .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
     margin-bottom: 5rem;
@@ -2559,6 +2556,127 @@ footer {
     margin: 0rem 0rem;
     text-align: center;
     position: relative;
+  }
+  .question {
+    position: absolute;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 60%;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    max-height: 100%;
+    padding: 0;
+    text-align: center;
+    -webkit-transition: all 0.5s 0 ease-out;
+    -moz-transition: all 0.5s 0 ease-out;
+    -o-transition: all 0.5s 0 ease-out;
+    -ms-transition: all 0.5s 0 ease-out;
+    transition: all 0.5s 0 ease-out;
+    -moz-transition-duration: 0.5s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+    pointer-events: none;
+  }
+  .question.gif {
+    padding-top: 8rem;
+  }
+  .question .prompt {
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    font-family: 'avg_bold';
+    font-size: 2.3rem;
+    line-height: 3.2rem;
+    z-index: 30;
+  }
+  .question .weight-header {
+    margin: 1rem 0;
+  }
+  .question .weight-answer {
+    margin: 16rem 0 0 0;
+  }
+  .question .weight-answer button {
+    margin: 1rem 0 !important;
+  }
+  .question .bmi-result {
+    display: block;
+    opacity: 0;
+    font-family: "avg_bold";
+    background: #fff;
+    color: #d7006d;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: auto;
+    text-align: center;
+    -webkit-transition: all 1s 0 ;
+    -moz-transition: all 1s 0 ;
+    -o-transition: all 1s 0 ;
+    -ms-transition: all 1s 0 ;
+    transition: all 1s 0 ;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+  }
+  .question #famdiag-check-btn {
+    margin: 2rem 0;
+  }
+  .question #mobile-button-left {
+    margin: 2rem 0;
+  }
+  .question.in {
+    visibility: visible;
+    opacity: 1 !important;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 1s 0.5s ease-out;
+    -moz-transition: all 1s 0.5s ease-out;
+    -o-transition: all 1s 0.5s ease-out;
+    -ms-transition: all 1s 0.5s ease-out;
+    transition: all 1s 0.5s ease-out;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0.5s;
+    top: 50%;
+    pointer-events: auto;
+  }
+  .question.out-up {
+    -webkit-transform: perspective(1000px) translateY(-50%);
+    -moz-transform: perspective(1000px) translateY(-50%);
+    -o-transform: perspective(1000px) translateY(-50%);
+    transform: perspective(1000px) translateY(-50%);
+    top: 40%;
+  }
+  .anim-gif {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .anim-gif img {
+    width: 6rem;
+    max-width: 205px;
+    min-width: 60px;
+  }
+  .anim-gif.birth img {
+    -webkit-transform: rotate(45deg);
+    width: 8rem;
+    max-width: 205px;
+    min-width: 80px;
+  }
+  .anim-gif.stopwatch img {
+    width: 9rem;
+    max-width: 205px;
+    min-width: 80px;
   }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
@@ -2681,18 +2799,22 @@ footer {
   .assessment .share {
     margin: 0;
   }
-  .assessment .drink-slider .drinks {
+  .assessment . .drink-slider .drinks {
     width: 120%;
   }
-  .assessment .drink-slider .drink {
+  .assessment . .drink-slider .drink {
     margin-right: 0px;
     margin-left: -19px;
     float: left;
   }
-  .assessment .drink-slider .drink:first-of-type {
+  .assessment . .drink-slider .drink button {
+    left: -8%;
+    margin: 2rem 0;
+  }
+  .assessment . .drink-slider .drink:first-of-type {
     margin-left: 0;
   }
-  .assessment .drink-slider .drink img {
+  .assessment . .drink-slider .drink img {
     left: 0px;
   }
   .assessment .btn-back {
@@ -2704,7 +2826,7 @@ footer {
   .assessment-intro {
     position: absolute;
     width: calc(100% - 5.1rem);
-    top: 12rem;
+    top: 30%;
     left: 3rem;
   }
   .assessment-intro .action {
@@ -2958,6 +3080,7 @@ footer {
   }
   .btn-calculate {
     left: 64px;
+    top: 18.5rem;
   }
   .checkbox {
     margin: 0.7rem 0;

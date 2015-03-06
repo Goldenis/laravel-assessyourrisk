@@ -2727,6 +2727,7 @@ footer {
         }
         &.in{
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
         &.weight-question {
             overflow-y: visible;

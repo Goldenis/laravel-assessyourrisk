@@ -607,7 +607,7 @@ button.sub:hover {
   padding: 3rem 6rem;
   overflow: hidden;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -622,19 +622,19 @@ button.sub:hover {
   top: -100%;
   width: 100%;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
   float: left;
   margin-right: 6rem;
   top: 6px;
   width: 50%;
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
   float: left;
   margin-top: 0;
   margin-right: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel {
   padding: 16px 0 6px 0;
   margin-right: 0rem;
   border: none;
@@ -643,12 +643,12 @@ button.sub:hover {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel:hover {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel:hover, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel:hover {
   background: transparent;
   color: #ffb4aa;
   border-color: #ffb4aa !important;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
   padding: 10px 20px;
   margin: 0 2rem 0 0;
   float: left;
@@ -708,13 +708,22 @@ button.sub:hover {
   width: calc(50% - 6rem);
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+  top: 4rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
   top: 4rem;
 }
 .progress-overlay .results .sub {
@@ -1131,20 +1140,20 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
 }
 .anim-gif img {
-  width: 9rem;
+  width: 8rem;
   max-width: 205px;
-  min-width: 100px;
+  min-width: 80px;
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
-  min-width: 130px;
+  min-width: 100px;
 }
 .anim-gif.stopwatch img {
-  width: 13rem;
+  width: 12rem;
   max-width: 205px;
-  min-width: 150px;
+  min-width: 100px;
 }
 .menu-icon {
   z-index: 100000000;
@@ -1398,7 +1407,7 @@ input[type="checkbox"], input[type="radio"] {
 .assessment .btn-back img {
   margin-left: -8px;
   margin-right: 4px;
-  top: 1px;
+  top: 0px;
 }
 .assessment .btn-back:hover {
   color: #f6323e;
@@ -2160,6 +2169,11 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .question.in {
   visibility: visible;
@@ -2247,10 +2261,18 @@ footer {
     width: 5px;
     height: 5px;
     margin-right: 0.8rem;
+    border: 1px solid #555558;
+    opacity: 0.2;
+  }
+  .dot.on {
+    background: #555558;
+    opacity: 0.5;
   }
   .dot.active {
     width: 8px;
     height: 8px;
+    background: #d7006d !important;
+    opacity: 1;
   }
   .dot:last-of-type {
     margin-right: 0;
@@ -2389,18 +2411,18 @@ footer {
     padding-top: 0;
     margin-bottom: 1rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
     padding: 0 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
     margin-right: 0rem;
     margin-bottom: 1rem;
     width: 100%;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
     margin-right: 1.5rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
     padding: 10px 20px;
     margin: 0 2rem 1.5rem 0;
     width: 100%;
@@ -2414,13 +2436,22 @@ footer {
     color: #f6323e;
     border-color: #fff !important;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+    top: 2.5rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
     top: 2.5rem;
   }
   .progress-overlay .cards .card-intro-text {
@@ -2457,6 +2488,7 @@ footer {
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
+    top: 1rem;
     margin-left: -4px;
   }
   .logo img {
@@ -2471,7 +2503,7 @@ footer {
     position: fixed;
     right: 0;
     top: 2px;
-    padding: 3rem 2.5rem;
+    padding: 2.3rem 2.5rem;
     width: 7rem;
     height: 4.5rem;
     z-index: 2000;
@@ -2487,11 +2519,13 @@ footer {
     background: #fff;
   }
   .dots {
+    padding: 8px 10px 10px;
     bottom: 5rem;
     width: 100%;
     text-align: center;
   }
   .dot {
+    top: -3px;
     width: 4px;
     height: 4px;
     margin-right: 0.45rem;
@@ -2499,13 +2533,14 @@ footer {
   .dot.active {
     width: 8px;
     height: 8px;
+    top: -1px;
   }
   .dot:last-of-type {
     margin-right: 0;
   }
   .share {
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 2rem 0rem;
     margin: 0rem 0rem;
     text-align: center;
     position: relative;
@@ -2723,11 +2758,12 @@ footer {
     right: 0;
     left: 0;
     margin: auto;
-    top: 70px;
-    width: 100%;
+    top: 66px;
+    width: calc(100% - 4rem);
     max-width: 500px;
-    padding: 1rem 3rem;
+    padding: 1.5rem 0;
     text-align: center;
+    border-top: 1px solid #dedede;
   }
   .intro p {
     font-size: 1.3rem;
@@ -2762,6 +2798,12 @@ footer {
   }
   .assessment . .drink-slider .drink img {
     left: 0px;
+  }
+  .assessment .btn-back {
+    top: -3px;
+  }
+  .assessment .dots {
+    border-top: 1px solid #dedede;
   }
   .assessment-intro {
     position: absolute;
@@ -2862,7 +2904,7 @@ footer {
     right: auto;
     top: auto;
     left: 0;
-    bottom: 0px;
+    bottom: -60px;
     width: 100%;
     height: 60px;
     z-index: 1113;
@@ -2884,7 +2926,7 @@ footer {
     -moz-transition-delay: 0;
     position: absolute;
     left: auto;
-    right: 25px;
+    right: 20px;
     margin-top: 0.7rem;
     top: 14px;
     opacity: 0.5;
@@ -2928,6 +2970,9 @@ footer {
   }
   .right-column .dashboard {
     display: none;
+  }
+  .right-column.active {
+    bottom: 0;
   }
   .right-column.in {
     bottom: 0;
@@ -2981,6 +3026,7 @@ footer {
     left: 0;
   }
   .assessment-wrap {
+    border-top: 1px solid #ccc;
     height: calc(100% - 82px);
   }
   .question {
@@ -2992,7 +3038,7 @@ footer {
   .question .prompt {
     width: 100%;
     left: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2rem;
   }
   .question.drinks-question {
@@ -3003,6 +3049,7 @@ footer {
   }
   .question.in {
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .question.weight-question {
     overflow-y: visible;
@@ -3018,13 +3065,11 @@ footer {
   }
   .checkbox-list.column-left {
     width: 100%;
-    float: left;
     margin-bottom: 0;
   }
   .checkbox-list.column-right {
     margin-top: -1rem;
     width: 100%;
-    float: left;
   }
   .email-pdf-doctor {
     padding: 3rem;

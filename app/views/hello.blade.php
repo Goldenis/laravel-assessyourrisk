@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
-    <meta name="description" content="">
+    <meta name="description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!">
     <meta property="og:url" content="http://brightenup.sew.la" /> 
     <meta property="og:title" content="BrightPink Assessment" />
     <meta property="og:description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" /> 
@@ -260,10 +260,13 @@
               <div class="email-pdf-btns">
                 <button class="sub email">EMAIL</button><button class="pdf">PDF</button><button class="sub email-doctor">SHARE WITH MY DOCTOR</button>
               </div>
- 
-              <div class="email-fields">
+              <div class="email-fields-doctor">
                 <h4>Share results with my doctor.</h4>
-                <input type="text" placeholder="Dr's email address"><button class="sub">SEND</button><button class="sub cancel">Cancel</button>
+                <input type="text" placeholder="Dr's email address"><button class="sub send-dr-email">SEND</button><button class="sub cancel">Cancel</button>
+              </div> 
+              <div class="email-fields-user">
+                <h4>Share my results with me.</h4>
+                <input type="text" placeholder="My email address"><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
               </div>
             </div>
 <!-- paragraph wrapper close -->

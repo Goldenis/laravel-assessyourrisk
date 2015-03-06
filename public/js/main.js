@@ -1,4 +1,5 @@
     var resultLevel = 'average';
+    var isDoctorEmail = null;
     var savedQuestionsAnswers = {};
     var endCards = {};  
     var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
@@ -90,10 +91,10 @@
         _scrollHandler();
     });
 
-        //cardsLow[0]{factbody: ''}
-        //['factbody', '']
-        //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
-        console.log(cardsLow[0]['factbody'])
+    //cardsLow[0]{factbody: ''}
+    //['factbody', '']
+    //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
+    console.log(cardsLow[0]['factbody'])
 
     function _pageResize() {
         $('.module').scrollTop(0);
@@ -354,6 +355,7 @@
         });
 
         $('.testPDF, .pdf').on('click', function() {
+            isDoctorEmail = null;
             createPinkPDF(resultLevel, savedQuestionsAnswers);
         })
 
@@ -452,17 +454,36 @@
             window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
         })
         $('.email-doctor').on('click', function() {
-            $('.email-pdf-doctor').addClass('show-fields');
-        })
-        $('.email-fields button.cancel').on('click', function() {
-            $('.email-pdf-doctor').removeClass('show-fields');
-        })
-        $('.sub.email').on('click', function() {
-            console.log('click');
-            var content = $('.email-content').text();
-            window.open('mailto:?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
+            console.log('click dr email');            
+            $('.email-pdf-doctor').addClass('show-fields-dr');
         })
 
+        $('.sub.email').on('click', function() {
+            console.log('click my email');
+             $('.email-pdf-doctor').addClass('show-fields-user');
+            //var content = $('.email-content').text();
+            //window.open('mailto:?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
+        })
+
+        $('.email-fields-doctor button.cancel').on('click', function() {
+            $('.email-pdf-doctor').removeClass('show-fields-dr');
+        })
+        $('.email-fields-user button.cancel').on('click', function() {
+            $('.email-pdf-doctor').removeClass('show-fields-user');
+        })        
+        
+        $('.sub.send-dr-email').on('click', function() {
+            console.log('drclick')
+            isDoctorEmail = true;
+            console.log(isDoctorEmail)
+            createPinkPDF(resultLevel, savedQuestionsAnswers);
+        })
+        $('.sub.send-user-email').on('click', function() {
+            console.log('userclick')
+            isDoctorEmail = false;
+            console.log(isDoctorEmail)
+            createPinkPDF(resultLevel, savedQuestionsAnswers);
+        })
 
         $('.progress-overlay .share-btn').on('click', function() {
             //window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
@@ -1717,6 +1738,9 @@ Do you know if I do%3F");
         _registerEventListeners();
         _pageResize();
         initialized = true;
+        setTimeout(function(){
+            $('.right-column').addClass('active')
+        },6000)
 
     });
 })(jQuery);

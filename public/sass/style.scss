@@ -662,7 +662,7 @@ button {
                     background: $pink;
                     padding: 3rem 6rem;
                     overflow: hidden;
-                    .email-fields{
+                    .email-fields-doctor, .email-fields-user{
                         @include transition(.8s,ease-in-out);
                         position: absolute;
                         left: 0;
@@ -734,17 +734,28 @@ button {
                         width: calc(50% - 6rem);
                         text-align: left;
                     }
-                    &.show-fields{
+                    &.show-fields-dr{
                         .email-pdf-btns{
                             top: 20rem;
                         }
                         .email-pdf-copy{
                             top: 20rem;
                         }
-                        .email-fields{
+                        .email-fields-doctor{
                             top: 4rem;
                         }
                     }
+                    &.show-fields-user{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields-user{
+                            top: 4rem;
+                        }
+                    }                    
                 }
         }
 
@@ -1117,23 +1128,23 @@ input[type="checkbox"], input[type="radio"] {
     right: 0;
     top: 0;
     img {
-        width: 9rem;
+        width: 8rem;
         max-width: 205px;
-        min-width: 100px;
+        min-width: 80px;
     }
     &.birth{
         img {
         -webkit-transform: rotate(45deg);
         width: 11rem;
         max-width: 205px;
-        min-width: 130px;
+        min-width: 100px;
         }
     }    
     &.stopwatch{
         img {
-            width: 13rem;
+            width: 12rem;
             max-width: 205px;
-            min-width: 150px;
+            min-width: 100px;
         }
     }    
 }
@@ -1361,7 +1372,7 @@ input[type="checkbox"], input[type="radio"] {
         img{
             margin-left: -8px;
             margin-right: 4px;
-            top: 1px;
+            top: 0px;
         }
         &:hover{
             color: $red;
@@ -1965,6 +1976,7 @@ input[type="checkbox"], input[type="radio"] {
         height: auto;
         text-align: center;
         @include transition(1s);
+        @include centerV;
     }
     &.in {
         visibility: visible;
@@ -2034,10 +2046,18 @@ footer {
         width: 5px;
         height: 5px;
         margin-right: .8rem;
+        border: 1px solid $darkColor;
+        opacity: .2;
+        &.on{
+            background: $darkColor;
+            opacity: .5;
+        }
         &.active {
             width: 8px;
             height: 8px;
-        }
+            background: $pink !important;
+            opacity: 1;
+        }        
         &:last-of-type {
             margin-right: 0;
         }
@@ -2185,7 +2205,7 @@ footer {
                         margin-bottom: 1rem;
                     }
 
-                    .email-fields{
+                    .email-fields-doctor, .email-fields-user{
                         padding: 0 3rem;
                         h4{
                             margin-right: 0rem;
@@ -2210,17 +2230,28 @@ footer {
                             border-color: #fff !important;
                         }
                     }
-                    &.show-fields{
+                    &.show-fields-dr{
                         .email-pdf-btns{
                             top: 20rem;
                         }
                         .email-pdf-copy{
                             top: 20rem;
                         }
-                        .email-fields{
+                        .email-fields-doctor{
                             top: 2.5rem;
                         }
                     }
+                    &.show-fields-user{
+                        .email-pdf-btns{
+                            top: 20rem;
+                        }
+                        .email-pdf-copy{
+                            top: 20rem;
+                        }
+                        .email-fields-user{
+                            top: 2.5rem;
+                        }
+                    }                    
                 }
             }
         }
@@ -2262,6 +2293,7 @@ footer {
 
     .logo {
         @include centerH;
+        top: 1rem;
         margin-left: -4px;
         img {
             min-width: 100px;
@@ -2276,7 +2308,7 @@ footer {
         position: fixed;
         right: 0;
         top: 2px;
-        padding: 3rem 2.5rem;
+        padding: 2.3rem 2.5rem;
         width: 7rem;
         height: 4.5rem;
         z-index: 2000;
@@ -2294,18 +2326,21 @@ footer {
         }
     }
     .dots {
+        padding: 8px 10px 10px;
         bottom: 5rem;
         // left: 0;
         width: 100%;
         text-align: center;
     }
     .dot {
+        top: -3px;
         width: 4px;
         height: 4px;
         margin-right: .45rem;
         &.active {
             width: 8px;
             height: 8px;
+            top: -1px;
         }
         &:last-of-type {
             margin-right: 0;
@@ -2313,7 +2348,7 @@ footer {
     }
     .share {
         width: 100%;
-        padding: 2rem 2rem;
+        padding: 2rem 0rem;
         margin: 0rem 0rem;
         text-align: center;
         position: relative;
@@ -2519,11 +2554,12 @@ footer {
             right: 0;
             left: 0;
             margin: auto;
-            top: 70px;
-            width: 100%;
+            top: 66px;
+            width: calc(100% - 4rem);
             max-width: 500px;
-            padding: 1rem 3rem;
+            padding: 1.5rem 0;
             text-align: center;
+            border-top: 1px solid #dedede;
         }
         p {
             font-size: 1.3rem;
@@ -2561,6 +2597,12 @@ footer {
                     left: 0px;
                 }
             }
+        }
+        .btn-back{
+            top: -3px;
+        }
+        .dots{
+            border-top: 1px solid #dedede;
         }
     }
     .assessment-intro {
@@ -2667,7 +2709,7 @@ footer {
         right: auto;
         top: auto;
         left: 0;
-        bottom: 0px;
+        bottom: -60px;
         width: 100%;
         height: 60px;
         z-index: 1113;
@@ -2680,7 +2722,7 @@ footer {
                 @include transition(.3s, ease-out);
                 position: absolute;
                 left: auto;
-                right: 25px;
+                right: 20px;
                 margin-top: .7rem;
                 top: 14px;
                 opacity: .5;
@@ -2734,6 +2776,9 @@ footer {
         .dashboard {
             display: none;
         }
+        &.active{
+            bottom: 0;
+        }
         &.in {
             bottom: 0;
             .assess-start {
@@ -2782,13 +2827,14 @@ footer {
         }
     }
     .assessment-wrap {
+        border-top: 1px solid $light-gray;
         height: calc(100% - 82px);
     }
     .question {
         .prompt {
             width: 100%;
             left: 0;
-            font-size: 2rem;
+            font-size: 1.8rem;
             line-height: 2rem;
         }
         text-align: center;
@@ -2803,6 +2849,7 @@ footer {
         }
         &.in{
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
         &.weight-question {
             overflow-y: visible;
@@ -2823,13 +2870,11 @@ footer {
         left: 0;
         &.column-left {
             width: 100%;
-            float: left;
             margin-bottom: 0;
         }
         &.column-right {
             margin-top: -1rem;
             width: 100%;
-            float: left;
         }
     }
     .email-pdf-doctor {

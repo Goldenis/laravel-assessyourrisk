@@ -61,7 +61,7 @@ class MailController extends \BaseController {
 				}
 				
 				Log::info ( '>> Validator passed.' );
-				Mail::send($template, function($message) use ($email, $attachment)
+				Mail::send($template, array(), function($message) use ($email, $attachment)
 				{
 					
 					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";

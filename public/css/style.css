@@ -1133,20 +1133,20 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
 }
 .anim-gif img {
-  width: 9rem;
+  width: 8rem;
   max-width: 205px;
-  min-width: 100px;
+  min-width: 80px;
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
-  min-width: 130px;
+  min-width: 100px;
 }
 .anim-gif.stopwatch img {
-  width: 13rem;
+  width: 12rem;
   max-width: 205px;
-  min-width: 150px;
+  min-width: 100px;
 }
 .menu-icon {
   z-index: 100000000;
@@ -1400,7 +1400,7 @@ input[type="checkbox"], input[type="radio"] {
 .assessment .btn-back img {
   margin-left: -8px;
   margin-right: 4px;
-  top: 1px;
+  top: 0px;
 }
 .assessment .btn-back:hover {
   color: #f6323e;
@@ -2162,6 +2162,11 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .question.in {
   visibility: visible;
@@ -2242,6 +2247,9 @@ footer {
   .intro .intro-message {
     right: 10%;
   }
+  .dots {
+    border-top: 1px solid #dedede;
+  }
   .dots h6 {
     display: none;
   }
@@ -2249,10 +2257,18 @@ footer {
     width: 5px;
     height: 5px;
     margin-right: 0.8rem;
+    border: 1px solid #555558;
+    opacity: 0.2;
+  }
+  .dot.on {
+    background: #555558;
+    opacity: 0.5;
   }
   .dot.active {
     width: 8px;
     height: 8px;
+    background: #d7006d !important;
+    opacity: 1;
   }
   .dot:last-of-type {
     margin-right: 0;
@@ -2459,6 +2475,7 @@ footer {
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
+    top: 1rem;
     margin-left: -4px;
   }
   .logo img {
@@ -2473,7 +2490,7 @@ footer {
     position: fixed;
     right: 0;
     top: 2px;
-    padding: 3rem 2.5rem;
+    padding: 2.3rem 2.5rem;
     width: 7rem;
     height: 4.5rem;
     z-index: 2000;
@@ -2489,11 +2506,13 @@ footer {
     background: #fff;
   }
   .dots {
+    padding: 8px 10px 10px;
     bottom: 5rem;
     width: 100%;
     text-align: center;
   }
   .dot {
+    top: -3px;
     width: 4px;
     height: 4px;
     margin-right: 0.45rem;
@@ -2501,6 +2520,7 @@ footer {
   .dot.active {
     width: 8px;
     height: 8px;
+    top: -1px;
   }
   .dot:last-of-type {
     margin-right: 0;
@@ -2637,6 +2657,9 @@ footer {
   .assessment .drink-slider .drink img {
     left: 0px;
   }
+  .assessment .btn-back {
+    top: -3px;
+  }
   .assessment-intro {
     position: absolute;
     width: calc(100% - 5.1rem);
@@ -2758,7 +2781,7 @@ footer {
     -moz-transition-delay: 0;
     position: absolute;
     left: auto;
-    right: 25px;
+    right: 20px;
     margin-top: 0.7rem;
     top: 14px;
     opacity: 0.5;
@@ -2855,6 +2878,7 @@ footer {
     left: 0;
   }
   .assessment-wrap {
+    border-top: 1px solid #ccc;
     height: calc(100% - 82px);
   }
   .question {
@@ -2866,7 +2890,7 @@ footer {
   .question .prompt {
     width: 100%;
     left: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2rem;
   }
   .question.drinks-question {
@@ -2892,13 +2916,11 @@ footer {
   }
   .checkbox-list.column-left {
     width: 100%;
-    float: left;
     margin-bottom: 0;
   }
   .checkbox-list.column-right {
     margin-top: -1rem;
     width: 100%;
-    float: left;
   }
   .email-pdf-doctor {
     padding: 3rem;

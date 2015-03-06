@@ -1119,23 +1119,23 @@ input[type="checkbox"], input[type="radio"] {
     right: 0;
     top: 0;
     img {
-        width: 9rem;
+        width: 8rem;
         max-width: 205px;
-        min-width: 100px;
+        min-width: 80px;
     }
     &.birth{
         img {
         -webkit-transform: rotate(45deg);
         width: 11rem;
         max-width: 205px;
-        min-width: 130px;
+        min-width: 100px;
         }
     }    
     &.stopwatch{
         img {
-            width: 13rem;
+            width: 12rem;
             max-width: 205px;
-            min-width: 150px;
+            min-width: 100px;
         }
     }    
 }
@@ -1363,7 +1363,7 @@ input[type="checkbox"], input[type="radio"] {
         img{
             margin-left: -8px;
             margin-right: 4px;
-            top: 1px;
+            top: 0px;
         }
         &:hover{
             color: $red;
@@ -1967,6 +1967,7 @@ input[type="checkbox"], input[type="radio"] {
         height: auto;
         text-align: center;
         @include transition(1s);
+        @include centerV;
     }
     &.in {
         visibility: visible;
@@ -2024,6 +2025,7 @@ footer {
         }
     }
     .dots{
+        border-top: 1px solid #dedede;
         h6{
             display: none;
         }
@@ -2032,10 +2034,18 @@ footer {
         width: 5px;
         height: 5px;
         margin-right: .8rem;
+        border: 1px solid $darkColor;
+        opacity: .2;
+        &.on{
+            background: $darkColor;
+            opacity: .5;
+        }
         &.active {
             width: 8px;
             height: 8px;
-        }
+            background: $pink !important;
+            opacity: 1;
+        }        
         &:last-of-type {
             margin-right: 0;
         }
@@ -2255,6 +2265,7 @@ footer {
 @media only(max-width: 768px) {
     .logo {
         @include centerH;
+        top: 1rem;
         margin-left: -4px;
         img {
             min-width: 100px;
@@ -2269,7 +2280,7 @@ footer {
         position: fixed;
         right: 0;
         top: 2px;
-        padding: 3rem 2.5rem;
+        padding: 2.3rem 2.5rem;
         width: 7rem;
         height: 4.5rem;
         z-index: 2000;
@@ -2287,18 +2298,21 @@ footer {
         }
     }
     .dots {
+        padding: 8px 10px 10px;
         bottom: 5rem;
         // left: 0;
         width: 100%;
         text-align: center;
     }
     .dot {
+        top: -3px;
         width: 4px;
         height: 4px;
         margin-right: .45rem;
         &.active {
             width: 8px;
             height: 8px;
+            top: -1px;
         }
         &:last-of-type {
             margin-right: 0;
@@ -2446,6 +2460,9 @@ footer {
                 }
             }
         }
+        .btn-back{
+            top: -3px;
+        }
     }
     .assessment-intro {
         position: absolute;
@@ -2564,7 +2581,7 @@ footer {
                 @include transition(.3s, ease-out);
                 position: absolute;
                 left: auto;
-                right: 25px;
+                right: 20px;
                 margin-top: .7rem;
                 top: 14px;
                 opacity: .5;
@@ -2666,13 +2683,14 @@ footer {
         }
     }
     .assessment-wrap {
+        border-top: 1px solid $light-gray;
         height: calc(100% - 82px);
     }
     .question {
         .prompt {
             width: 100%;
             left: 0;
-            font-size: 2rem;
+            font-size: 1.8rem;
             line-height: 2rem;
         }
         text-align: center;
@@ -2707,13 +2725,11 @@ footer {
         left: 0;
         &.column-left {
             width: 100%;
-            float: left;
             margin-bottom: 0;
         }
         &.column-right {
             margin-top: -1rem;
             width: 100%;
-            float: left;
         }
     }
     .email-pdf-doctor {

@@ -481,6 +481,7 @@ button {
     -webkit-overflow-scrolling: touch;
     border: none;
     text-align: center;
+    z-index: 2001;
     .close-btn {
         background: $nude;
     }
@@ -1045,7 +1046,7 @@ button {
     left: 0;
     position: absolute;
     left: 0px;
-    top: 20rem;
+    top: 18.5rem;
     z-index: 10;
 }
 .checkbox-list {
@@ -2028,6 +2029,10 @@ footer {
             width: 400px;
             height: 400px;
             left: 20%;
+            &.shrink{
+                @include transition(1s,ease-in-out);
+                @include transform(scale(.5) translateY(-50px) !important);
+            }
         }
         .intro-message {
             right: 10%;
@@ -2287,8 +2292,8 @@ footer {
         top: 1rem;
         margin-left: -4px;
         img {
-            min-width: 100px;
-            width: 100px;
+            min-width: 90px;
+            width: 90px;
         }
     }
     .logo-white {
@@ -2298,8 +2303,8 @@ footer {
         display: block;
         position: fixed;
         right: 0;
-        top: 2px;
-        padding: 2.3rem 2.5rem;
+        top: 0px;
+        padding: 2.1rem 2.5rem;
         width: 7rem;
         height: 4.5rem;
         z-index: 2000;
@@ -2307,13 +2312,16 @@ footer {
         .line {
             width: 100%;
             height: 3px;
-            background: $pink;
+            background: $light-gray;
             margin-bottom: 4px;
         }
         &.left {
             .line {
                 background: #fff;
             }
+        }
+        &.close{
+            
         }
     }
     .dots {
@@ -2347,11 +2355,15 @@ footer {
     .progress-overlay {
         -webkit-overflow-scrolling: touch;
         .close-btn {
-            display: none !important;
+            top: 0px;
+            right: 10px;
+            border-width: 1px;
+            padding: 1rem 1.15rem 1rem 1.35rem;
         }
         .share {
             .share-copy{
-                width: 100%
+                width: 90%;
+                left: 5%;
             }
             // padding-right: 12.5%;
             .share-btn-wrapper{
@@ -2441,7 +2453,7 @@ footer {
             right: 0;
             left: 0;
             margin: auto;
-            top: 66px;
+            top: 60px;
             width: calc(100% - 4rem);
             max-width: 500px;
             padding: 1.5rem 0;
@@ -2457,7 +2469,12 @@ footer {
     }
     .assessment {
         width: 100%;
-        padding: 6rem 3rem 0;
+        padding: 6rem 2.5rem 0;
+        #height-question {
+            height: 300px;
+            transform: perspective(1000px) translateY(-50%);
+            top: 45%;
+        }
         .bottle {
             left: 20px;
         }
@@ -2628,8 +2645,8 @@ footer {
                 z-index: 3;
             }
             .assess-start {
-                border-top: 4px solid #fff;
-                padding-top: .4rem;
+                // border-top: 4px solid #fff;
+                padding-top: .7rem;
                 left: 0;
                 z-index: 3;
             }
@@ -2710,19 +2727,21 @@ footer {
     }
     .assessment-wrap {
         border-top: 1px solid $light-gray;
-        height: calc(100% - 82px);
+        height: calc(100% - 62px);
     }
     .question {
-        .prompt {
-            width: 100%;
-            left: 0;
-            font-size: 1.8rem;
-            line-height: 2rem;
-        }
         text-align: center;
         height: auto;
         width: 100%;
         padding: 2rem 0 5rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        .prompt {
+            width: 100%;
+            left: 0;
+            font-size: 1.7rem;
+            line-height: 2rem;
+        }
         &.drinks-question {
             overflow: visible;
             button {
@@ -2730,21 +2749,27 @@ footer {
             }
         }
         &.in{
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
         }
         &.weight-question {
             overflow-y: visible;
             overflow: visible;
         }
         &.gif{
+            padding-top: 7.5rem;
             .anim-gif{
-                
+                img{
+                    width: 60px;
+                    min-width: 60px;
+                    top: 5px;
+                }
             }
         }
     }
     .btn-calculate {
         left: 64px;
+    }
+    .checkbox {
+        margin: .7rem 0;
     }
     .checkbox-list {
         text-align: left;

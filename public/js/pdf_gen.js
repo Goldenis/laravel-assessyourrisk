@@ -902,21 +902,35 @@ var highResults = {
       break;
 }
 
-  pdfMake.createPdf(docDefinition).open();
-  //pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
 
+  if (isDoctorEmail === true) {
+    pdfMake.createPdf(docDefinition).getBase64(doPostPDF, 'true');
+    isDoctorEmail = null;
+    return;
+  }
+  else if (isDoctorEmail === false) {
+     pdfMake.createPdf(docDefinition).getBase64(doPostPDF, 'false');  
+     isDoctorEmail = null; 
+     return;
+  }
+  else if (isDoctorEmail === null) {
+    pdfMake.createPdf(docDefinition).open();
+    isDoctorEmail = null; 
+    return;
+  } 
 //  console.log(test)
 
 }
 
-function doPostPDF(attachment) {
-	console.log(attachment)
+function doPostPDF(attachment, isDoctor) {
+	//console.log(attachment)
 	$.ajax({
 		type : "POST",
 		url : "/email",
 		data : {
-			email : "nick.velloff@gmail.com",
-			attachment : attachment
+			email : "trevorobrien@theexperiment.io",
+			attachment : attachment,
+			isDoctor : isDoctor
 		}
 	}).done(function(msg) {
 		alert("PDF Sent");

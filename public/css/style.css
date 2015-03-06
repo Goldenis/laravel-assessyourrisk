@@ -287,6 +287,9 @@ button.sub:hover {
   border-color: #f6323e !important;
 }
 .red-text {
+  color: #f6323e;
+}
+.pink-text {
   color: #d7006d;
 }
 .bg-video {
@@ -522,11 +525,7 @@ button.sub:hover {
 }
 .progress-overlay .results .triggered-cancer-copy {
   padding: 3rem 0 0;
-  padding: 6rem;
-  width: calc(100% + 12rem);
-  margin-top: 6rem;
-  left: -6rem;
-  background: #fde4df;
+  display: none !important;
 }
 .progress-overlay .results .triggered-cancer-copy.show {
   display: block !important;
@@ -596,7 +595,6 @@ button.sub:hover {
   color: #555558;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
-  color: #f6323e;
   margin-bottom: 2rem;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
@@ -609,7 +607,7 @@ button.sub:hover {
   padding: 3rem 6rem;
   overflow: hidden;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -624,19 +622,19 @@ button.sub:hover {
   top: -100%;
   width: 100%;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
   float: left;
   margin-right: 6rem;
   top: 6px;
   width: 50%;
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
   float: left;
   margin-top: 0;
   margin-right: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel {
   padding: 16px 0 6px 0;
   margin-right: 0rem;
   border: none;
@@ -645,12 +643,12 @@ button.sub:hover {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields .cancel:hover {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel:hover, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel:hover {
   background: transparent;
   color: #ffb4aa;
   border-color: #ffb4aa !important;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
   padding: 10px 20px;
   margin: 0 2rem 0 0;
   float: left;
@@ -710,13 +708,22 @@ button.sub:hover {
   width: calc(50% - 6rem);
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+  top: 4rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+  top: 20rem;
+}
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
   top: 4rem;
 }
 .progress-overlay .results .sub {
@@ -2407,18 +2414,18 @@ footer {
     padding-top: 0;
     margin-bottom: 1rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
     padding: 0 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields h4 {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
     margin-right: 0rem;
     margin-bottom: 1rem;
     width: 100%;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields button {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
     margin-right: 1.5rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields input[type="text"] {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
     padding: 10px 20px;
     margin: 0 2rem 1.5rem 0;
     width: 100%;
@@ -2432,13 +2439,22 @@ footer {
     color: #f6323e;
     border-color: #fff !important;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-pdf-copy {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields .email-fields {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+    top: 2.5rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+    top: 20rem;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
     top: 2.5rem;
   }
   .progress-overlay .cards .card-intro-text {

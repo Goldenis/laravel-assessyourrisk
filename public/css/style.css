@@ -2254,9 +2254,6 @@ footer {
   .intro .intro-message {
     right: 10%;
   }
-  .dots {
-    border-top: 1px solid #dedede;
-  }
   .dots h6 {
     display: none;
   }
@@ -2543,7 +2540,7 @@ footer {
   }
   .share {
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 2rem 0rem;
     margin: 0rem 0rem;
     text-align: center;
     position: relative;
@@ -2675,6 +2672,9 @@ footer {
   }
   .assessment .btn-back {
     top: -3px;
+  }
+  .assessment .dots {
+    border-top: 1px solid #dedede;
   }
   .assessment-intro {
     position: absolute;

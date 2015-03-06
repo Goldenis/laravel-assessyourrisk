@@ -2374,7 +2374,10 @@ footer {
             text-align: center;
             @include transition(1s);
         }
-        #famdiag-check-btn #mobile-button-left {
+        #famdiag-check-btn {
+            margin: 2rem 0;
+        }
+        #mobile-button-left {
             margin: 2rem 0;
         }
         &.in {

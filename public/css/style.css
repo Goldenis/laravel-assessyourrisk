@@ -2583,7 +2583,7 @@ footer {
     -moz-transition-property: all;
     -moz-transition-delay: 0;
   }
-  .question #famdiag-check-btn {
+  .question #famdiag-check-btn #mobile-button-left {
     margin: 2rem 0;
   }
   .question.in {
@@ -2630,9 +2630,9 @@ footer {
     min-width: 80px;
   }
   .anim-gif.stopwatch img {
-    width: 13rem;
+    width: 9rem;
     max-width: 205px;
-    min-width: 150px;
+    min-width: 80px;
   }
   .progress-overlay {
     -webkit-overflow-scrolling: touch;
@@ -2745,22 +2745,22 @@ footer {
   .assessment .share {
     margin: 0;
   }
-  .assessment . -slider .drinks {
+  .assessment . .drink-slider .drinks {
     width: 120%;
   }
-  .assessment . -slider .drink {
+  .assessment . .drink-slider .drink {
     margin-right: 0px;
     margin-left: -19px;
     float: left;
   }
-  .assessment . -slider .drink button {
+  .assessment . .drink-slider .drink button {
     left: -8%;
     margin: 2rem 0;
   }
-  .assessment . -slider .drink:first-of-type {
+  .assessment . .drink-slider .drink:first-of-type {
     margin-left: 0;
   }
-  .assessment . -slider .drink img {
+  .assessment . .drink-slider .drink img {
     left: 0px;
   }
   .assessment-intro {

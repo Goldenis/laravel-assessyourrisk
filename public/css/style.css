@@ -437,6 +437,7 @@ button.sub:hover {
   -webkit-overflow-scrolling: touch;
   border: none;
   text-align: center;
+  z-index: 2001;
 }
 .progress-overlay .close-btn {
   background: #ffb4aa;
@@ -1058,7 +1059,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 20rem;
+  top: 18.5rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -2254,6 +2255,20 @@ footer {
     height: 400px;
     left: 20%;
   }
+  .intro .wheel-container.shrink {
+    -webkit-transition: all 1s 0 ease-in-out;
+    -moz-transition: all 1s 0 ease-in-out;
+    -o-transition: all 1s 0 ease-in-out;
+    -ms-transition: all 1s 0 ease-in-out;
+    transition: all 1s 0 ease-in-out;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+    -webkit-transform: scale(0.5) translateY(-50px) !important;
+    -moz-transform: scale(0.5) translateY(-50px) !important;
+    -o-transform: scale(0.5) translateY(-50px) !important;
+    transform: scale(0.5) translateY(-50px) !important;
+  }
   .intro .intro-message {
     right: 10%;
   }
@@ -2495,8 +2510,8 @@ footer {
     margin-left: -4px;
   }
   .logo img {
-    min-width: 100px;
-    width: 100px;
+    min-width: 90px;
+    width: 90px;
   }
   .logo-white {
     display: none;
@@ -2505,8 +2520,8 @@ footer {
     display: block;
     position: fixed;
     right: 0;
-    top: 2px;
-    padding: 2.3rem 2.5rem;
+    top: 0px;
+    padding: 2.1rem 2.5rem;
     width: 7rem;
     height: 4.5rem;
     z-index: 2000;
@@ -2515,7 +2530,7 @@ footer {
   .menu-icon .line {
     width: 100%;
     height: 3px;
-    background: #d7006d;
+    background: #ccc;
     margin-bottom: 4px;
   }
   .menu-icon.left .line {
@@ -2679,10 +2694,14 @@ footer {
     -webkit-overflow-scrolling: touch;
   }
   .progress-overlay .close-btn {
-    display: none !important;
+    top: 0px;
+    right: 10px;
+    border-width: 1px;
+    padding: 1rem 1.15rem 1rem 1.35rem;
   }
   .progress-overlay .share .share-copy {
-    width: 100%;
+    width: 90%;
+    left: 5%;
   }
   .progress-overlay .share .share-btn-wrapper {
     width: 100%;
@@ -2764,7 +2783,7 @@ footer {
     right: 0;
     left: 0;
     margin: auto;
-    top: 66px;
+    top: 60px;
     width: calc(100% - 4rem);
     max-width: 500px;
     padding: 1.5rem 0;
@@ -2779,7 +2798,12 @@ footer {
   }
   .assessment {
     width: 100%;
-    padding: 6rem 3rem 0;
+    padding: 6rem 2.5rem 0;
+  }
+  .assessment #height-question {
+    height: 300px;
+    transform: perspective(1000px) translateY(-50%);
+    top: 45%;
   }
   .assessment .bottle {
     left: 20px;
@@ -2956,8 +2980,7 @@ footer {
     z-index: 3;
   }
   .right-column .toggle-box .assess-start {
-    border-top: 4px solid #fff;
-    padding-top: 0.4rem;
+    padding-top: 0.7rem;
     left: 0;
     z-index: 3;
   }
@@ -3033,18 +3056,20 @@ footer {
   }
   .assessment-wrap {
     border-top: 1px solid #ccc;
-    height: calc(100% - 82px);
+    height: calc(100% - 62px);
   }
   .question {
     text-align: center;
     height: auto;
     width: 100%;
     padding: 2rem 0 5rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .question .prompt {
     width: 100%;
     left: 0;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 2rem;
   }
   .question.drinks-question {
@@ -3053,16 +3078,23 @@ footer {
   .question.drinks-question button {
     left: -20%;
   }
-  .question.in {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
   .question.weight-question {
     overflow-y: visible;
     overflow: visible;
   }
+  .question.gif {
+    padding-top: 7.5rem;
+  }
+  .question.gif .anim-gif img {
+    width: 60px;
+    min-width: 60px;
+    top: 5px;
+  }
   .btn-calculate {
     left: 64px;
+  }
+  .checkbox {
+    margin: 0.7rem 0;
   }
   .checkbox-list {
     text-align: left;

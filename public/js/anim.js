@@ -16,7 +16,7 @@
 
     tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
     if($(window).width() < 768){
-        minS = .6;
+        minS = .7;
     }else{
         minS = .8;
     }

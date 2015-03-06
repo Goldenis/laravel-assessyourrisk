@@ -102,7 +102,7 @@
         _winW = _$window.width();
         if (_winW <= 768) {
             _smallScreen = true;
-            minS = .6;
+            minS = .7;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
             if(_winW > _winH){
@@ -1739,7 +1739,8 @@ Do you know if I do%3F");
         _pageResize();
         initialized = true;
         setTimeout(function(){
-            $('.right-column').addClass('active')
+            $('.right-column').addClass('active');
+            $('.wheel-container').addClass('shrink');
         },6000)
 
     });

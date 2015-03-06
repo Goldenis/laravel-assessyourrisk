@@ -569,7 +569,7 @@ button {
             }
         }
         .triggered-cancer-copy {
-            padding: 3rem 0 0;
+            padding: 2rem 0;
             display: none !important;
             &.show{
                 display: block !important; 
@@ -724,14 +724,14 @@ button {
                     }
                     .email-pdf-copy {
                         @include transition(.8s,ease-in-out);
-                        width: 50%;
+                        width: 48%;
                         margin-right: 6rem;
                         padding-top: 1.6rem;
                         text-align: left;
                     }
                     .email-pdf-btns {
                         @include transition(.8s,ease-in-out);
-                        width: calc(50% - 6rem);
+                        width: calc(52% - 6rem);
                         text-align: left;
                     }
                     &.show-fields-dr{
@@ -1304,6 +1304,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 .weight-answer {
     margin-top: 15rem;
+    .submit-weight {
+        margin: 0 !important;
+    }
 }
 .height-container-mask {
     .height-container {
@@ -2001,7 +2004,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
     height: 310px;
     transform: perspective(1000px) translateY(-50%);
-	top: 40%;
+	top: 50%;
 }
 &.in {
     visibility: visible;

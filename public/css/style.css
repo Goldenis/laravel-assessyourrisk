@@ -524,7 +524,7 @@ button.sub:hover {
   display: block;
 }
 .progress-overlay .results .triggered-cancer-copy {
-  padding: 3rem 0 0;
+  padding: 2rem 0;
   display: none !important;
 }
 .progress-overlay .results .triggered-cancer-copy.show {
@@ -691,7 +691,7 @@ button.sub:hover {
   -moz-transition-duration: 0.8s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  width: 50%;
+  width: 48%;
   margin-right: 6rem;
   padding-top: 1.6rem;
   text-align: left;
@@ -705,7 +705,7 @@ button.sub:hover {
   -moz-transition-duration: 0.8s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  width: calc(50% - 6rem);
+  width: calc(52% - 6rem);
   text-align: left;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
@@ -1317,6 +1317,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 .weight-answer {
   margin-top: 15rem;
+}
+.weight-answer .submit-weight {
+  margin: 0 !important;
 }
 .height-container-mask {
   position: absolute;
@@ -2203,7 +2206,7 @@ input[type="checkbox"], input[type="radio"] {
 #height-question {
   height: 310px;
   transform: perspective(1000px) translateY(-50%);
-  top: 40%;
+  top: 50%;
 }
 .in {
   visibility: visible;
@@ -2618,7 +2621,10 @@ footer {
     -moz-transition-property: all;
     -moz-transition-delay: 0;
   }
-  .question #famdiag-check-btn #mobile-button-left {
+  .question #famdiag-check-btn {
+    margin: 2rem 0;
+  }
+  .question #mobile-button-left {
     margin: 2rem 0;
   }
   .question.in {

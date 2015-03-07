@@ -2319,6 +2319,12 @@ footer {
         }
         .toggle-box{
             height: calc(100% - 320px);
+            .understand{
+                padding: 3rem 2rem;
+            }
+        }
+        .fact{
+            width: 100%;
         }
     }
     .logo-white{
@@ -2649,7 +2655,7 @@ footer {
     }
     .assessment {
         width: 100%;
-        padding: 6rem 2.5rem 0;
+        padding: 5.25rem 2.5rem 0;
         #height-question {
             height: 300px;
             transform: perspective(1000px) translateY(-50%);

@@ -132,7 +132,7 @@
             $('.landscape-overlay').removeClass('active')
         }
         sizeBGMedia();
-        setFontScale($('html'), 12, 16, 'px');
+        setFontScale($('html'), 11, 16, 'px');
         setHeadlineTops();
         if(_smallScreen){
             $('.wheel-container').css({

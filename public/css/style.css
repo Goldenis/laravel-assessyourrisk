@@ -2524,6 +2524,12 @@ footer {
   .right-column .toggle-box {
     height: calc(100% - 320px);
   }
+  .right-column .toggle-box .understand {
+    padding: 3rem 2rem;
+  }
+  .right-column .fact {
+    width: 100%;
+  }
   .logo-white {
     bottom: 30px;
   }

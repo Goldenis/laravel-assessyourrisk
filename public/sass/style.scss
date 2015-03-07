@@ -1122,7 +1122,6 @@ input[type="checkbox"], input[type="radio"] {
     img {
         width: 12rem;
         max-width: 185px;
-        min-width: 140px;
     }
 }
 .anim-gif{
@@ -2305,9 +2304,63 @@ footer {
 }
 
 
+@media only(max-width: 950px) {
+    .right-column{
+        .dashboard{
+            height: 320px;
+            .progress{
+                position: relative;
+                width: 45%;
+                height: 40%;
+                top: 12%;
+                left: 55px;
+                float: none;
+            }
+        }
+        .toggle-box{
+            height: calc(100% - 320px);
+        }
+    }
+    .logo-white{
+        bottom: 30px;
+        img{
+            width: 80%;
+        }
+    }
+    .assessment {
+        .drink-slider {
+            .bottle {
+                margin-top: 15px;
+            }
+            .drinks {
+                width: 120%;
+                margin-top: 65px;
+            }
+            .drink {
+                button {
+                    left: -8%;
+                    margin: 2rem 0;
+                }
+                margin-right: 0px;
+                margin-left: -5px;
+                float: left;
+                @media screen and(max-width: 500px) {
+                    margin-left: -19px;
+                }
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                img {
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+
 ///////////////////////////////////////////// PHONE
 
-@media only(max-width: 768px) {
+@media only(max-width: 600px) {
 
     .logo {
         @include centerH;

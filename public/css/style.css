@@ -1134,7 +1134,6 @@ input[type="checkbox"], input[type="radio"] {
 .logo-white img {
   width: 12rem;
   max-width: 185px;
-  min-width: 140px;
 }
 .anim-gif {
   position: absolute;
@@ -2510,7 +2509,56 @@ footer {
     margin-bottom: 5rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 950px) {
+  .right-column .dashboard {
+    height: 320px;
+  }
+  .right-column .dashboard .progress {
+    position: relative;
+    width: 45%;
+    height: 40%;
+    top: 12%;
+    left: 55px;
+    float: none;
+  }
+  .right-column .toggle-box {
+    height: calc(100% - 320px);
+  }
+  .logo-white {
+    bottom: 30px;
+  }
+  .logo-white img {
+    width: 80%;
+  }
+  .assessment .drink-slider .bottle {
+    margin-top: 15px;
+  }
+  .assessment .drink-slider .drinks {
+    width: 120%;
+    margin-top: 65px;
+  }
+  .assessment .drink-slider .drink {
+    margin-right: 0px;
+    margin-left: -5px;
+    float: left;
+  }
+  .assessment .drink-slider .drink button {
+    left: -8%;
+    margin: 2rem 0;
+  }
+  .assessment .drink-slider .drink:first-of-type {
+    margin-left: 0;
+  }
+  .assessment .drink-slider .drink img {
+    left: 0px;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 500px) {
+  .assessment .drink-slider .drink {
+    margin-left: -19px;
+  }
+}
+@media (max-width: 600px) {
   .logo {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -3163,7 +3211,7 @@ footer {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 500px) {
+@media screen and (max-width: 600px) and (max-width: 500px) {
   .assessment .drink-slider .drink {
     margin-left: -19px;
   }

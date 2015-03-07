@@ -14,6 +14,8 @@
     var _winH;
     var _winW;
     var _smallScreen;
+    var _airScreen;
+    var _lapScreen;
     var _isTouchDevice = Modernizr.touch;
     var _ie = window.navigator.userAgent.indexOf("MSIE ") >= 0;
     if (_ie) {
@@ -100,8 +102,10 @@
         $('.module').scrollTop(0);
         _winH = _$window.height();
         _winW = _$window.width();
-        if (_winW <= 768) {
+        if (_winW <= 600) {
             _smallScreen = true;
+            _airScreen = false;
+            _lapScreen = false;
             minS = .7;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
@@ -110,21 +114,35 @@
             }else{
                 $('.landscape-overlay').removeClass('active')
             }
+        }else if(_winW <= 960){
+            _smallScreen = false;
+            _lapScreen = false;
+            _airScreen = true;
+            minS = .8;
+            $('.module-hero h1').eq(1).html('Your Normal')
+            $('.module-hero h1').eq(2).html('Family History')
+            $('.landscape-overlay').removeClass('active')
         } else {
             _smallScreen = false;
+            _airScreen = false;
+            _lapScreen = true;
             minS = .8;
             $('.module-hero h1').eq(1).html('Knowing Your Normal')
             $('.module-hero h1').eq(2).html('Family & Health History')
             $('.landscape-overlay').removeClass('active')
         }
         sizeBGMedia();
-        setFontScale($('html'), 11, 16, 'px');
+        setFontScale($('html'), 12, 16, 'px');
         setHeadlineTops();
         if(_smallScreen){
             $('.wheel-container').css({
                 left: Math.max(-27,((_winW - 320) + ((320-_winW)/2)-27))
             });
-        }else if(_winW < 1024){
+        }else if(_airScreen){
+            $('.wheel-container').css({
+                left: _winW/10
+            });
+        }else if(_lapScreen){
             $('.wheel-container').css({
                 left: _winW/10
             });
@@ -616,12 +634,16 @@
         var min = 50;
         if (_smallScreen) {
             min = 20;
+        }else if (_airScreen) {
+            min = 40;
         }
         l = Math.max(min, $('.bottle').position().left - distance);
         l = Math.min(l, 550);
         var glassW = 59;
         if (_smallScreen) {
             glassW = 25;
+        }else if (_airScreen){
+            glassW = 38;
         }
         currentGlass = Math.floor((l - 5) / glassW);
         for (var i = 0; i < $('.drink').length; i++) {

@@ -13,7 +13,7 @@
 
     //instantiate a TimelineLite    
     var tl = new TimelineLite();
-    if($(window).width() < 768){
+    if($(window).width() <= 600){
         minS = .7;
         tl.from(wheel, 1, {opacity:0, scale:.2}, "+=.1");
     }else{

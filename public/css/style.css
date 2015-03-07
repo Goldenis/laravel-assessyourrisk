@@ -1059,7 +1059,7 @@ button.sub:hover {
   left: 0;
   position: absolute;
   left: 0px;
-  top: 20rem;
+  top: 18.5rem;
   z-index: 10;
 }
 .checkbox-list {
@@ -1114,6 +1114,8 @@ input[type="checkbox"], input[type="radio"] {
   left: 3rem;
   margin-left: 0px;
   opacity: 0;
+  cursor: pointer;
+  z-index: 1113;
 }
 .logo.out {
   opacity: 0 !important;
@@ -1214,8 +1216,8 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0;
 }
 .intro .wheel-container {
-  width: 400px;
-  height: 400px;
+  width: 373px;
+  height: 373px;
   left: 40%;
   top: 28%;
   position: absolute;
@@ -1256,6 +1258,20 @@ input[type="checkbox"], input[type="radio"] {
   right: 0;
   bottom: 0;
   pointer-events: none;
+  -webkit-transition: all 5s 0 ease-out;
+  -moz-transition: all 5s 0 ease-out;
+  -o-transition: all 5s 0 ease-out;
+  -ms-transition: all 5s 0 ease-out;
+  transition: all 5s 0 ease-out;
+  -moz-transition-duration: 5s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.intro #wheel-overlay.turn {
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
 }
 .intro .intro-message {
   position: absolute;
@@ -2251,8 +2267,6 @@ footer {
 }
 @media (max-width: 1024px) {
   .intro .wheel-container {
-    width: 400px;
-    height: 400px;
     left: 20%;
   }
   .intro .wheel-container.shrink {
@@ -2757,8 +2771,6 @@ footer {
     border: 0px solid #fff;
   }
   .intro .wheel-container {
-    width: 400px;
-    height: 400px;
     left: calc(100% - 320px);
     top: 30%;
   }
@@ -3064,7 +3076,7 @@ footer {
     overflow: visible;
   }
   .question.drinks-question button {
-    left: -20%;
+    left: -8%;
   }
   .question.weight-question {
     overflow-y: visible;

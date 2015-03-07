@@ -67,68 +67,68 @@ var wheel = $(document).ready(
 				svg.selectAll('#ovarian g g path').style('fill', bit ? "#fff" : "#D8076D")
 			}
 			
-			if (doAllowDrag) {
-				wheelBase.mousedown (function(e) {
-					e.preventDefault();
-					moved = 0;
-					touch = e;
-					touchStartPos = touch.pageX;
-					startTrackingTouch(false);
-				});
+			// if (doAllowDrag) {
+			// 	wheelBase.mousedown (function(e) {
+			// 		e.preventDefault();
+			// 		moved = 0;
+			// 		touch = e;
+			// 		touchStartPos = touch.pageX;
+			// 		// startTrackingTouch(false);
+			// 	});
 				
-				wheelBase.bind('touchstart', function(e) {
-					e.preventDefault();
-					moved = 0;
-					touch = e.originalEvent.touches[0]
-						|| e.originalEvent.changedTouches[0];
-					touchStartPos = touch.pageX;
-					startTrackingTouch(true);
-				});
-			}
+			// 	wheelBase.bind('touchstart', function(e) {
+			// 		e.preventDefault();
+			// 		moved = 0;
+			// 		touch = e.originalEvent.touches[0]
+			// 			|| e.originalEvent.changedTouches[0];
+			// 		touchStartPos = touch.pageX;
+			// 		// startTrackingTouch(true);
+			// 	});
+			// }
 			
 			
-			function startTrackingTouch(isTouch) {
+			// function startTrackingTouch(isTouch) {
 								
-				var currentX;
+			// 	var currentX;
 				
-				if (isTouch) {
-					var touchmove = $(window).bind('touchmove', function(e) {
-						e.preventDefault();
-						touch = e.originalEvent.touches[0]
-						|| e.originalEvent.changedTouches[0];
-						move(touch);
-					});
+			// 	if (isTouch) {
+			// 		var touchmove = $(window).bind('touchmove', function(e) {
+			// 			e.preventDefault();
+			// 			touch = e.originalEvent.touches[0]
+			// 			|| e.originalEvent.changedTouches[0];
+			// 			move(touch);
+			// 		});
 					
-					var touchend = $(window).bind('touchend', function(e) {
-						e.preventDefault();
-						endTrackingTouch();
-					});
+			// 		var touchend = $(window).bind('touchend', function(e) {
+			// 			e.preventDefault();
+			// 			endTrackingTouch();
+			// 		});
 					
-				} else {
+			// 	} else {
 					
-					$(window).mousemove(function(e) {
-						e.preventDefault();
-						touch = e;
-						move(touch);
-					});
+			// 		$(window).mousemove(function(e) {
+			// 			e.preventDefault();
+			// 			touch = e;
+			// 			move(touch);
+			// 		});
 					
-					$(window).mouseup(function(e) {
-						e.preventDefault();
-						endTrackingTouch();
-					});
-				}
-			}
+			// 		$(window).mouseup(function(e) {
+			// 			e.preventDefault();
+			// 			endTrackingTouch();
+			// 		});
+			// 	}
+			// }
 			
 			
-			function move(touch) {
-				currentX = touch.pageX;
-				moved = currentX - touchStartPos;
-				rot += moved * 10;
-				rotate(wheelBase, rot, 10);
-//				rot += moved*2;
-//				rotate(wheelBase, rot, 1);
-				touchStartPos = currentX;
-			}
+// 			function move(touch) {
+// 				currentX = touch.pageX;
+// 				moved = currentX - touchStartPos;
+// 				rot += moved * 10;
+// 				rotate(wheelBase, rot, 6);
+// //				rot += moved*2;
+// //				rotate(wheelBase, rot, 1);
+// 				touchStartPos = currentX;
+// 			}
 				
 			function endTrackingTouch() {
 								
@@ -148,7 +148,8 @@ var wheel = $(document).ready(
 			}
 			
 			function spinOnLoad() {
-				rotate(wheelBase, Math.random() * 500 + 1000, 8);
+				$('#wheel-overlay').addClass('turn');
+				rotate(wheelBase, Math.random() * 500 + 1000, 5);
         $('.spin').css({display: "none"})
 			}
 			

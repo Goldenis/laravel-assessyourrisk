@@ -38,7 +38,7 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-    <img src="img/brightpink_logo.png">
+      <a href="/"><img src="img/brightpink_logo.png"></a>
 
     </div>
     <div class="email-content"></div>

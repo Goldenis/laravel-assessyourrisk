@@ -1097,6 +1097,8 @@ input[type="checkbox"], input[type="radio"] {
     left: 3rem;
     margin-left: 0px;
     opacity: 0;
+    cursor: pointer;
+    z-index: 1113;
     // opacity: 0 !important;
     // @include transition(.5s);
     &.out {
@@ -1211,8 +1213,8 @@ input[type="checkbox"], input[type="radio"] {
     //   }
     // }
     .wheel-container {
-        width: 400px;
-        height: 400px;
+        width: 373px;
+        height: 373px;
         left: 40%;
         top: 28%;
         position: absolute;
@@ -1251,6 +1253,10 @@ input[type="checkbox"], input[type="radio"] {
         right: 0;
         bottom: 0;
         pointer-events: none;
+        @include transition(5s,ease-out);
+        &.turn{
+            @include transform(rotate(-360deg));
+        }
     }
     .intro-message {
         position: absolute;
@@ -2033,8 +2039,6 @@ footer {
 @media only(max-width: 1024px) {
     .intro {
         .wheel-container {
-            width: 400px;
-            height: 400px;
             left: 20%;
             &.shrink{
                 @include transition(1s,ease-in-out);
@@ -2552,8 +2556,6 @@ footer {
     }
     .intro {
         .wheel-container {
-            width: 400px;
-            height: 400px;
             left: calc(100% - 320px);
             top: 30%;
         }

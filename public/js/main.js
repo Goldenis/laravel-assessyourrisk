@@ -183,6 +183,9 @@
     }
 
     function setFontScale(el, min, max, type) {
+        if(_airScreen){
+            min = 12;
+        }
         type = typeof type !== "undefined" ? type : "rem";
         el.css({
             'font-size': Math.min(max, Math.max(min, max * ((_winW * _winH) / 1348438))) + type
@@ -613,7 +616,7 @@
             var x = touch.pageX;
             var distance = 0;
             var l;
-
+            _$window.off('touchmove');
             _$window.on('touchmove', function(e) {
                 var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
                 var newX = touch.pageX;
@@ -638,6 +641,7 @@
             min = 40;
         }
         l = Math.max(min, $('.bottle').position().left - distance);
+        console.log(l,$('.bottle').position().left,x,newX)
         l = Math.min(l, 550);
         var glassW = 59;
         if (_smallScreen) {

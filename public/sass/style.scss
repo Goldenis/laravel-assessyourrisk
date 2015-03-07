@@ -446,7 +446,7 @@ button {
     top: 10px;
     right: 20px;
     z-index: 2;
-    padding: 1rem 1.3rem;
+    padding: 1rem 1.15rem 1rem 1.35rem;
     background: transparent;
 }
 .share {
@@ -1131,10 +1131,12 @@ input[type="checkbox"], input[type="radio"] {
     left: 0;
     right: 0;
     top: 0;
-    img {
-        width: 8rem;
-        max-width: 205px;
-        min-width: 80px;
+    &.calendar{
+        img{
+            width: 8rem;
+            max-width: 205;
+            min-width: 60px;
+        }
     }
     &.birth{
         img {
@@ -1961,6 +1963,7 @@ input[type="checkbox"], input[type="radio"] {
     max-height: 100%;
     padding: 0;
     text-align: center;
+    z-index: 1;
     @include transition(.5s, ease-out);
     pointer-events: none;
 
@@ -1990,6 +1993,7 @@ input[type="checkbox"], input[type="radio"] {
         @include centerV;
     }
     &.in {
+        z-index: 2;
         visibility: visible;
         opacity: 1 !important;
         @include transform(translateY(-50%));
@@ -2089,6 +2093,12 @@ footer {
                     margin: auto !important;
                 }
             }   
+            h2{
+                font-size: 3rem;
+            }
+            h3{
+                font-size: 2rem;
+            }
             .your-risk {
                 .risk-level {
                     color: $pink;
@@ -2283,7 +2293,8 @@ footer {
                     margin-top: 6rem;
                 }
                 .factors-title {
-                    
+                    @include transform(translateY(-100%));
+                    top: -13px;
                 }
             }
             .bad-gene, .bmi-high, .drinks-high{
@@ -2443,10 +2454,12 @@ footer {
         left: 0;
         right: 0;
         top: 0;
-        img {
+        &.calendar{
+            img {
             width: 6rem;
             max-width: 205px;
             min-width: 60px;
+            }
         }
         &.birth{
             img {
@@ -2470,7 +2483,7 @@ footer {
             top: 0px;
             right: 10px;
             border-width: 1px;
-            padding: 1rem 1.15rem 1rem 1.35rem;
+            padding: .7rem .9rem .65rem .9rem;
         }
         .share {
             .share-copy{
@@ -2517,6 +2530,7 @@ footer {
                 margin-top: 20px;
             }
             h3 {
+                font-size: 2rem;
                 .percent {
                     font-size: .4rem;
                 }
@@ -2588,15 +2602,16 @@ footer {
             transform: perspective(1000px) translateY(-50%);
             top: 45%;
         }
-        .bottle {
-            left: 20px;
-        }
         .share{
             margin: 0;
         }
         .drink-slider {
+            .bottle {
+                margin-top: 15px;
+            }
             .drinks {
                 width: 120%;
+                margin-top: 65px;
             }
             .drink {
                 button {
@@ -2867,6 +2882,9 @@ footer {
             button {
                 left: -8%;
             }
+            .prompt{
+                font-size: 1.5rem;
+            }
         }
         &.in{
         }
@@ -2877,10 +2895,17 @@ footer {
         &.gif{
             padding-top: 7.5rem;
             .anim-gif{
-                img{
+                &.calendar{
+                    img{
                     width: 60px;
                     min-width: 60px;
                     top: 5px;
+                    }
+                }
+                &.stopwatch,&.birth{
+                    img{
+                    top: -8px;
+                    }
                 }
             }
         }

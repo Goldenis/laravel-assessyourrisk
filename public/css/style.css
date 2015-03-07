@@ -406,7 +406,7 @@ button.sub:hover {
   top: 10px;
   right: 20px;
   z-index: 2;
-  padding: 1rem 1.3rem;
+  padding: 1rem 1.15rem 1rem 1.35rem;
   background: transparent;
 }
 .share {
@@ -1143,10 +1143,10 @@ input[type="checkbox"], input[type="radio"] {
   right: 0;
   top: 0;
 }
-.anim-gif img {
+.anim-gif.calendar img {
   width: 8rem;
-  max-width: 205px;
-  min-width: 80px;
+  max-width: 205;
+  min-width: 60px;
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
@@ -2150,6 +2150,7 @@ input[type="checkbox"], input[type="radio"] {
   max-height: 100%;
   padding: 0;
   text-align: center;
+  z-index: 1;
   -webkit-transition: all 0.5s 0 ease-out;
   -moz-transition: all 0.5s 0 ease-out;
   -o-transition: all 0.5s 0 ease-out;
@@ -2197,6 +2198,7 @@ input[type="checkbox"], input[type="radio"] {
   transform: translateY(-50%);
 }
 .question.in {
+  z-index: 2;
   visibility: visible;
   opacity: 1 !important;
   -webkit-transform: translateY(-50%);
@@ -2315,6 +2317,12 @@ footer {
   }
   .progress-overlay .results .progress-result .chart-4 {
     margin: auto !important;
+  }
+  .progress-overlay .results h2 {
+    font-size: 3rem;
+  }
+  .progress-overlay .results h3 {
+    font-size: 2rem;
   }
   .progress-overlay .results .your-risk .risk-level {
     color: #d7006d;
@@ -2491,6 +2499,13 @@ footer {
   .progress-overlay .cards .card:nth-of-type {
     margin-top: 6rem;
   }
+  .progress-overlay .cards .card .factors-title {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    top: -13px;
+  }
   .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
     margin-bottom: 5rem;
   }
@@ -2664,7 +2679,7 @@ footer {
     right: 0;
     top: 0;
   }
-  .anim-gif img {
+  .anim-gif.calendar img {
     width: 6rem;
     max-width: 205px;
     min-width: 60px;
@@ -2687,7 +2702,7 @@ footer {
     top: 0px;
     right: 10px;
     border-width: 1px;
-    padding: 1rem 1.15rem 1rem 1.35rem;
+    padding: 0.7rem 0.9rem 0.65rem 0.9rem;
   }
   .progress-overlay .share .share-copy {
     width: 90%;
@@ -2727,6 +2742,9 @@ footer {
   }
   .progress-overlay .vignettes .sections {
     margin-top: 20px;
+  }
+  .progress-overlay .vignettes h3 {
+    font-size: 2rem;
   }
   .progress-overlay .vignettes h3 .percent {
     font-size: 0.4rem;
@@ -2810,14 +2828,15 @@ footer {
     transform: perspective(1000px) translateY(-50%);
     top: 45%;
   }
-  .assessment .bottle {
-    left: 20px;
-  }
   .assessment .share {
     margin: 0;
   }
+  .assessment .drink-slider .bottle {
+    margin-top: 15px;
+  }
   .assessment .drink-slider .drinks {
     width: 120%;
+    margin-top: 65px;
   }
   .assessment .drink-slider .drink {
     margin-right: 0px;
@@ -3083,6 +3102,9 @@ footer {
   .question.drinks-question button {
     left: -8%;
   }
+  .question.drinks-question .prompt {
+    font-size: 1.5rem;
+  }
   .question.weight-question {
     overflow-y: visible;
     overflow: visible;
@@ -3090,10 +3112,13 @@ footer {
   .question.gif {
     padding-top: 7.5rem;
   }
-  .question.gif .anim-gif img {
+  .question.gif .anim-gif.calendar img {
     width: 60px;
     min-width: 60px;
     top: 5px;
+  }
+  .question.gif .anim-gif.stopwatch img, .question.gif .anim-gif.birth img {
+    top: -8px;
   }
   .btn-calculate {
     left: 64px;

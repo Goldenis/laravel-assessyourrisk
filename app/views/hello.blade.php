@@ -278,7 +278,7 @@
       <div class="cards">      
 
       <div class="card-intro-text">
-        <h2>Life Affects Your Life: Understanding Your Other Risk Factors.</h2><br><br>
+        <h3>Life Affects Your Life: Understanding Your Other Risk Factors.</h3><br><br>
         <p>Your baseline risk above is your starting point.  
           The lifestyle and personal health history factors below can potentially increase or decrease that baseline risk.  
           Talk to your doctor about how these risk factors may be affecting your total risk—make it a goal to get or keep as much as you can working in your favor.
@@ -524,7 +524,7 @@
         </div>
 
         <div class="question gif" data-question-id="2">
-            <div class="anim-gif">
+            <div class="anim-gif calendar">
                <img src="img/Calendar.gif">
             </div>
           <div class="prompt">How old are you?</div>

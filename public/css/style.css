@@ -2816,22 +2816,22 @@ footer {
   .assessment .share {
     margin: 0;
   }
-  .assessment . .drink-slider .drinks {
+  .assessment .drink-slider .drinks {
     width: 120%;
   }
-  .assessment . .drink-slider .drink {
+  .assessment .drink-slider .drink {
     margin-right: 0px;
-    margin-left: -19px;
+    margin-left: -5px;
     float: left;
   }
-  .assessment . .drink-slider .drink button {
+  .assessment .drink-slider .drink button {
     left: -8%;
     margin: 2rem 0;
   }
-  .assessment . .drink-slider .drink:first-of-type {
+  .assessment .drink-slider .drink:first-of-type {
     margin-left: 0;
   }
-  .assessment . .drink-slider .drink img {
+  .assessment .drink-slider .drink img {
     left: 0px;
   }
   .assessment .btn-back {
@@ -3136,6 +3136,11 @@ footer {
   }
   .email-pdf-doctor .email-pdf-btns {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 500px) {
+  .assessment .drink-slider .drink {
+    margin-left: -19px;
   }
 }
 .email-content {

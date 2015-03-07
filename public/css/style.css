@@ -1119,6 +1119,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .logo.out {
   opacity: 0 !important;
+  visibility: hidden;
 }
 .logo img {
   width: 10rem;
@@ -2268,20 +2269,7 @@ footer {
 @media (max-width: 1024px) {
   .intro .wheel-container {
     left: 20%;
-  }
-  .intro .wheel-container.shrink {
-    -webkit-transition: all 1s 0 ease-in-out;
-    -moz-transition: all 1s 0 ease-in-out;
-    -o-transition: all 1s 0 ease-in-out;
-    -ms-transition: all 1s 0 ease-in-out;
-    transition: all 1s 0 ease-in-out;
-    -moz-transition-duration: 1s;
-    -moz-transition-property: all;
-    -moz-transition-delay: 0;
-    -webkit-transform: scale(0.5) translateY(-50px) !important;
-    -moz-transform: scale(0.5) translateY(-50px) !important;
-    -o-transform: scale(0.5) translateY(-50px) !important;
-    transform: scale(0.5) translateY(-50px) !important;
+    top: calc(50% - 200px);
   }
   .intro .intro-message {
     right: 10%;
@@ -2771,8 +2759,26 @@ footer {
     border: 0px solid #fff;
   }
   .intro .wheel-container {
-    left: calc(100% - 320px);
-    top: 30%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -5px;
+  }
+  .intro .wheel-container.shrink {
+    -webkit-transition: all 1s 0 ease-in-out;
+    -moz-transition: all 1s 0 ease-in-out;
+    -o-transition: all 1s 0 ease-in-out;
+    -ms-transition: all 1s 0 ease-in-out;
+    transition: all 1s 0 ease-in-out;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+    -webkit-transform: scale(0.5) translateY(-50px) !important;
+    -moz-transform: scale(0.5) translateY(-50px) !important;
+    -o-transform: scale(0.5) translateY(-50px) !important;
+    transform: scale(0.5) translateY(-50px) !important;
   }
   .intro .intro-message {
     position: absolute;
@@ -2783,12 +2789,11 @@ footer {
     right: 0;
     left: 0;
     margin: auto;
-    top: 60px;
+    top: 250px;
     width: calc(100% - 4rem);
     max-width: 500px;
     padding: 1.5rem 0;
     text-align: center;
-    border-top: 1px solid #dedede;
   }
   .intro p {
     font-size: 1.3rem;

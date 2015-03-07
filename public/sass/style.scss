@@ -1103,6 +1103,7 @@ input[type="checkbox"], input[type="radio"] {
     // @include transition(.5s);
     &.out {
         opacity: 0 !important;
+        visibility: hidden;
     }
     //opacity: 0;
     //@include transition(.5s);
@@ -2040,10 +2041,7 @@ footer {
     .intro {
         .wheel-container {
             left: 20%;
-            &.shrink{
-                @include transition(1s,ease-in-out);
-                @include transform(scale(.5) translateY(-50px) !important);
-            }
+            top: calc(50% - 200px);
         }
         .intro-message {
             right: 10%;
@@ -2556,8 +2554,12 @@ footer {
     }
     .intro {
         .wheel-container {
-            left: calc(100% - 320px);
-            top: 30%;
+            @include centerH;
+            top: -5px;
+            &.shrink{
+                @include transition(1s,ease-in-out);
+                @include transform(scale(.5) translateY(-50px) !important);
+            }
         }
         .intro-message {
             position: absolute;
@@ -2565,12 +2567,11 @@ footer {
             right: 0;
             left: 0;
             margin: auto;
-            top: 60px;
+            top: 250px;
             width: calc(100% - 4rem);
             max-width: 500px;
             padding: 1.5rem 0;
             text-align: center;
-            border-top: 1px solid #dedede;
         }
         p {
             font-size: 1.3rem;

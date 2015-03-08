@@ -480,6 +480,9 @@ button.sub:hover {
   width: 62%;
   height: 100%;
   float: left;
+  height: 0;
+  padding: 0;
+  margin: 0;
 }
 .progress-overlay .questions .progress-question {
   margin-top: 50px;
@@ -1393,7 +1396,9 @@ input[type="checkbox"], input[type="radio"] {
   left: -50px;
 }
 .assessment-wrap {
-  height: calc(100% - 142px);
+  height: calc(100% - 50px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .assessment {
   width: 75%;
@@ -1494,29 +1499,42 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-duration: 1s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+  top: 50%;
   color: #555558;
 }
 .assessment .share .btn-results {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 .assessment .share.in {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: perspective(1000px) translateY(-50%);
+  -moz-transform: perspective(1000px) translateY(-50%);
+  -o-transform: perspective(1000px) translateY(-50%);
   transform: perspective(1000px) translateY(-50%);
-  top: 50%;
 }
 .assessment .dots {
   opacity: 0;
+  visibility: hidden;
 }
 .assessment .dots.active {
   opacity: 1;
+  visibility: visible;
+}
+@media (max-height: 575px) {
+  .assessment .dots {
+    border-top: 1px solid #ccc;
+  }
 }
 .assessment-intro {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  width: 62%;
-  left: 19%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 5% 10%;
+  height: calc(100% - 62px);
+  left: 0;
   -webkit-transition: all 0.4s 0 ;
   -moz-transition: all 0.4s 0 ;
   -o-transition: all 0.4s 0 ;
@@ -1526,7 +1544,6 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
   z-index: 3;
-  top: 30%;
 }
 .assessment-intro a, .assessment-intro a:visited {
   color: #d7006d;
@@ -1567,7 +1584,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .dots .dot {
   margin-right: 14px;
-  border: 1px solid rgba(255, 255, 255, .5);
+  border: 2px solid #fff;
   background: transparent;
 }
 .education .dots .dot.on {
@@ -1575,9 +1592,11 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0.6;
 }
 .education .dots .dot.active {
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 8px;
   height: 8px;
   opacity: 1;
+  top: 1px;
 }
 .education .module {
   position: absolute;
@@ -1919,10 +1938,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .progress {
   position: relative;
-  width: 45%;
+  width: 40%;
   height: 100%;
   top: 22%;
-  left: 10%;
+  left: 55px;
   float: left;
 }
 .progress .percentage {
@@ -2148,7 +2167,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  top: 60%;
+  top: 50%;
   visibility: hidden;
   opacity: 0;
   width: 100%;
@@ -2228,7 +2247,6 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transform: perspective(1000px) translateY(-50%);
   -o-transform: perspective(1000px) translateY(-50%);
   transform: perspective(1000px) translateY(-50%);
-  top: 40%;
 }
 #height-question {
   height: 310px;
@@ -2517,9 +2535,9 @@ footer {
     margin-bottom: 5rem;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 960px) {
   .right-column .dashboard {
-    height: 320px;
+    height: 300px;
   }
   .right-column .dashboard .progress {
     position: relative;
@@ -2528,21 +2546,35 @@ footer {
     top: 12%;
     left: 55px;
     float: none;
+    margin-bottom: 10px;
   }
   .right-column .toggle-box {
-    height: calc(100% - 320px);
+    height: calc(100% - 300px);
   }
   .right-column .toggle-box .understand {
     padding: 3rem 2rem;
   }
   .right-column .fact {
+    display: none;
     width: 100%;
+  }
+  .right-column.down {
+    height: 78%;
   }
   .logo-white {
     bottom: 30px;
   }
   .logo-white img {
     width: 80%;
+  }
+  .assessment .assessment-intro {
+    height: auto;
+    max-height: calc(100% - 62px);
+    top: 50%;
+    -webkit-transform: translateY(-50%) !important;
+    -moz-transform: translateY(-50%) !important;
+    -o-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
   }
   .assessment .drink-slider .bottle {
     margin-top: 15px;
@@ -2567,9 +2599,14 @@ footer {
     left: 0px;
   }
 }
-@media screen and (max-width: 950px) and (max-width: 500px) {
+@media (max-width: 960px) and (max-width: 500px) {
   .assessment .drink-slider .drink {
     margin-left: -19px;
+  }
+}
+@media (max-width: 750px) {
+  .right-column .toggle-box .understand h4 {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 600px) {
@@ -2643,7 +2680,7 @@ footer {
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    top: 60%;
+    top: 50%;
     visibility: hidden;
     opacity: 0;
     width: 100%;
@@ -2732,7 +2769,6 @@ footer {
     -moz-transform: perspective(1000px) translateY(-50%);
     -o-transform: perspective(1000px) translateY(-50%);
     transform: perspective(1000px) translateY(-50%);
-    top: 40%;
   }
   .anim-gif {
     position: absolute;
@@ -2781,9 +2817,6 @@ footer {
     width: 100%;
   }
   .progress-overlay .questions {
-    height: 0;
-    padding: 0;
-    margin: 0;
     width: 100%;
   }
   .progress-overlay .questions .progress-question {
@@ -2849,6 +2882,16 @@ footer {
   }
   .male-overlay h1 .share-btn:hover a {
     margin-top: -2px;
+  }
+  .share-btn a {
+    -webkit-transition: all 1s 0 ;
+    -moz-transition: all 1s 0 ;
+    -o-transition: all 1s 0 ;
+    -ms-transition: all 1s 0 ;
+    transition: all 1s 0 ;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
   }
   .landscape-overlay {
     padding: 3rem;
@@ -2921,6 +2964,10 @@ footer {
   }
   .assessment .share {
     margin: 0;
+    padding-bottom: 4rem;
+  }
+  .assessment .share .btn-results {
+    margin-bottom: 1.5rem;
   }
   .assessment .drink-slider .bottle {
     margin-top: 15px;
@@ -2955,6 +3002,7 @@ footer {
     width: calc(100% - 5.1rem);
     top: 30%;
     left: 3rem;
+    padding: 0;
   }
   .assessment-intro .action {
     display: none;
@@ -3200,6 +3248,12 @@ footer {
     overflow-y: visible;
     overflow: visible;
   }
+  .question.weight-question .visual {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+  }
   .question.gif {
     padding-top: 7.5rem;
   }
@@ -3254,7 +3308,7 @@ footer {
     width: 100%;
   }
 }
-@media screen and (max-width: 600px) and (max-width: 500px) {
+@media (max-width: 600px) and (max-width: 500px) {
   .assessment .drink-slider .drink {
     margin-left: -19px;
   }

@@ -598,7 +598,7 @@
             var x = e.pageX;
             var distance = 0;
             var l;
-
+            _$window.off('mousemove');
             _$window.on('mousemove', function(e) {
                 var newX = e.pageX;
                 dragBottle(x, newX)
@@ -1440,6 +1440,9 @@ Do you know if I do%3F");
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
             $('.assessment-dots .btn-back').addClass('active')
         }, 1000)
+        setTimeout(function(){
+            $('.assessment-wrap').scrollTop(0);
+        }, 500)
         $('.question').eq(_currentQuestion).addClass('in')
         $('.question').eq(_currentQuestion).removeClass('out-up')
     }

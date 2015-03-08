@@ -38,7 +38,7 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-      <a href="/"><img src="img/brightpink_logo.png"></a>
+      <a href="http://www.brightpink.org/" target="_blank"><img src="img/brightpink_logo.png"></a>
 
     </div>
     <div class="email-content"></div>
@@ -842,6 +842,7 @@
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
               <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
+              <h6 class="scroll-dive">Scroll</h6>
             </div>
           </div>
         </div>
@@ -939,6 +940,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <h3>Know What’s Normal For You</h3>
               <h5>Every body is different.  In order to know what’s up with <i>yours</i>, you have to be self-aware. It’s important to know what’s normal for <i>you</i> — that way, you’re equipped to recognize a change over time.</h5>
               <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
+              <h6 class="scroll-dive">Scroll</h6>
             </div>
           </div>
         </div>
@@ -951,7 +953,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <h3>You Need to Know the Lay of the Land</h3>
               <h5>80% of breast cancers in young women are found by young women themselves.  
                 Get to know what your breasts feel like.  
-                They cover more real estate than you may realize: breast tissue extends up to the collarbone, around your side underneath your armpits, and into your breastbone.</h5>
+                They cover more real estate than you may realize: breast tissue extends up to the collarbone, around to your armpits, and into your breastbone.</h5>
         
         <!--       <ul>
                 <li>Pay attention to changes in size, shape, contour, and color</li>
@@ -1015,8 +1017,8 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline"> 
               <h3>What to Watch For</h3> 
-              <h5>Some clear signs of ovarian cancer can be symptoms like these, <i>when they persist or worsen for 2-3 weeks:</i></h5>
-              <h6 class="primary-headline">Primary</h6>
+              <h5>Signs of ovarian cancer are symptoms like these, <i>when they persist or worsen for 2-3 weeks:</i></h5>
+              <h5 class="primary-headline">Primary</h5>
               <ul>
                 <li>Pelvic or abdominal pain</li>
                 <li>Feeling the need to urinate frequently</li>
@@ -1024,7 +1026,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <li>Difficulty eating or feeling full quickly</li>
               </ul> 
              <!--  <br> -->
-              <h6>Secondary</h6>
+              <h5>Secondary</h5>
               <ul>
                 <li>Constipation</li>
                 <li>Menstrual changes</li>
@@ -1056,7 +1058,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
               <h3>The Well-Woman Exam</h3>
               <h5>These annual exams, which are covered in all insurance policies, should include a clinical breast exam that thoroughly covers all breast tissue and typically lasts several minutes.</h5>
               <br>
-              <h6>Your well-woman exam should also include:</h6>
+              <h5>Your well-woman exam should also include:</h5>
               <ul>
                 <li>Clinical breast and pelvic exam starting at age 20</li>
                 <li>A PAP smear — though it’s important to know these <i>don’t</i> check for ovarian cancer</li>
@@ -1074,16 +1076,14 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             <div class="headline">         
               <h3>Don’t Forget to Take Care on Your Own</h3>
               <h5>Sign up for a monthly Breast Health Reminder™ to be Breast Self Aware — that’s one text a month.  
-                Text PINK (“P-I-N-K”) to 59227.</h5>
-              <ul>
-                <li>You will receive one message per month.  
-                  Message will include instructions to quit.  
+                Text <b>PINK</b> to 59227.</h5>
+                <p class="legalese">You will receive one message per month.  
                   Text <b>STOP</b> to quit or <b>HELP</b> for info.  
                   Message and data rates may apply.  
                   No purchase necessary.  Automated messages will be delivered to the phone number you provide at opt-in.  
-                  View Privacy Policy and Terms & Conditions <a href="http://mp.vibescm.com/p/1fdrw9">here</a>.  
-                  All consumer information collected is subject to Bright Pink's Privacy Policy.</li>
-              </ul>
+                  View Privacy Policy and Terms & Conditions <a href="http://www.brightpink.org/privacy-policy/">here</a>.
+                </p>
+              
               <!-- <button class="text-me">Text Me.</button> -->
               <!-- <button class="btn-continue sub">CONTINUE</button> -->
             </div>
@@ -1109,9 +1109,10 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">
               <div class="section-title">Understand Your Risk</div>
-              <h3>If you have breast and ovaries, you are at risk.</h3>  
-              <h5>Family and health history is the <u>most important</u> thing to look at when it comes to being proactive about your health.</h5>
+              <h3>The Most Important Part of Understanding Risk</h3>  
+              <h5>More than anything else, family and health history have a powerful impact on your risk level; understanding the past can help you be proactive about your future.</h5>
               <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
+              <h6 class="scroll-dive">Scroll</h6>
             </div>
           </div>
         </div>
@@ -1120,7 +1121,10 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>Family History &amp; Genetic Predisposition</h3>
-              <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%. Lifetime ovarian cancer risk can be as high as 54%. Family history and genetic predisposition aren’t one in the same. For example, if a first-degree relative had breast cancer, your risk is increased <i>even if</i>j you don’t have a genetic predisposition.</h5>
+              <h5>For a woman with family history or a genetic predisposition, lifetime breast cancer risk can be up to 87%.  
+                Lifetime ovarian cancer risk can be as high as 54%.  
+                Family history and genetic predisposition aren’t one in the same.  
+                For example, if a first-degree relative had breast cancer, your risk is increased <i>even if</i> you don’t have a genetic predisposition.</h5>
             </div>
           </div>
         </div>
@@ -1146,14 +1150,6 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
             </div>
           </div>
         </div>
-        
-        <div class="vignette" data-src="family">
-          <div class="headlines">
-            <div class="headline">         
-              <h3>Your Personal Health History &amp; Lifestyle Choices Have a Big Effect As Well</h3>
-            </div>
-          </div>
-        </div>
 
         <div class="vignette" data-src="mother">
           <div class="headlines">
@@ -1170,7 +1166,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
           <div class="headlines">
             <div class="headline">         
               <h3>Birth Control is the #1 Factor for Decreased Ovarian Risk</h3>
-              <h5>Taking birth control pills for 5 years — even non consecutive — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  
+              <h5>Taking birth control pills for 5 years — even non-consecutively — in your 20s and 30s can reduce your ovarian cancer risk by nearly half.  
                 Oral contraceptives are the single most important lifestyle choice you can make when it comes to the health of your ovaries.</h5>
               <!-- <button class="facebook family">Pledge to Learn Your Family History</button><br> -->
             </div>

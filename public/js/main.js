@@ -144,7 +144,7 @@
             });
         }else if(_lapScreen){
             $('.wheel-container').css({
-                left: _winW/10
+                left: _winW/5
             });
         }else{
             $('.wheel-container').css({

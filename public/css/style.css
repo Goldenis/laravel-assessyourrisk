@@ -3005,18 +3005,18 @@ footer {
   .assessment .dots {
     border-top: 1px solid #dedede;
   }
-  .assessment-intro {
+  .assessment .assessment-intro {
     position: absolute;
-    width: calc(100% - 5.1rem);
-    top: 30%;
-    left: 3rem;
+    width: calc(100% - 5.5rem);
+    left: 2.75rem;
     padding: 0;
+    margin: 0;
   }
-  .assessment-intro .action {
+  .assessment .assessment-intro .action {
     display: none;
   }
-  .assessment-intro h4 {
-    font-size: 1.2rem;
+  .assessment .assessment-intro h4 {
+    font-size: 1.25rem;
   }
   .education .dots {
     bottom: 6rem;

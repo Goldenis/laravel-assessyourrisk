@@ -1569,6 +1569,9 @@ input[type="checkbox"], input[type="radio"] {
             .headlines {
                 top: 6%;
             }
+            .headline {
+                // opacity: 1 !important;
+            }
         }
     }
     .nav {
@@ -1683,7 +1686,8 @@ input[type="checkbox"], input[type="radio"] {
     .btn-begin {
         @include transform(rotate(90deg));
         width: 30px;
-        margin-top: 50px;
+        margin: 50px 0;
+        display: block;
         &:hover {
             border-color: $red;
         }
@@ -1751,9 +1755,38 @@ input[type="checkbox"], input[type="radio"] {
         z-index: 12;
         height: auto;
         left: calc(33.333% - 7px);
+        h5 {
+            margin-top: .4rem;
+        }
+        .arrow {
+            @include transition(1s, ease-out);
+            opacity: .2;
+        }
+        .scroll-dive {
+            @include transition(1s, ease-out);
+            opacity: .2;
+            color: $pink;
+            text-transform: uppercase;
+        }
+        &:hover {
+            .arrow{
+                bottom: -10px;
+                opacity: 1;
+            }
+            .scroll-dive {
+                opacity: 1;
+            }
+        }
         .primary-headline {
             margin-top: 1.4rem;
             }
+        .legalese {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            a {
+                font-size: 1rem;
+            }
+        }
         .headline {
             width: 100%;
             height: auto;
@@ -1793,9 +1826,11 @@ input[type="checkbox"], input[type="radio"] {
                 padding-bottom: 12rem;
             }
         }
-        ul, p {
+        ul {
+            font-family: $headline-font;
+            font-weight: normal;
             font-size: 1.4rem;
-            text-shadow: 1px 1px 2px rgb(20,20,20);
+            // text-shadow: 1px 1px 2px rgb(20,20,20);
             a {
                 font-size: 1.4rem;
             }

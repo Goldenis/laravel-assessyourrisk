@@ -1647,6 +1647,9 @@ input[type="checkbox"], input[type="radio"] {
 .education .module .main .headlines {
   top: 6%;
 }
+.education .module .main .headline {
+  opacity: 1 !important;
+}
 .education .nav {
   width: 25%;
   position: absolute;
@@ -1789,7 +1792,8 @@ input[type="checkbox"], input[type="radio"] {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
   width: 30px;
-  margin-top: 50px;
+  margin: 50px 0;
+  display: block;
 }
 .education .btn-begin:hover {
   border-color: #f6323e;
@@ -1873,8 +1877,49 @@ input[type="checkbox"], input[type="radio"] {
   height: auto;
   left: calc(33.333% - 7px);
 }
+.education .headlines h5 {
+  margin-top: 0.4rem;
+}
+.education .headlines .arrow {
+  -webkit-transition: all 1s 0 ease-out;
+  -moz-transition: all 1s 0 ease-out;
+  -o-transition: all 1s 0 ease-out;
+  -ms-transition: all 1s 0 ease-out;
+  transition: all 1s 0 ease-out;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  opacity: 0.2;
+}
+.education .headlines .scroll-dive {
+  -webkit-transition: all 1s 0 ease-out;
+  -moz-transition: all 1s 0 ease-out;
+  -o-transition: all 1s 0 ease-out;
+  -ms-transition: all 1s 0 ease-out;
+  transition: all 1s 0 ease-out;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  opacity: 0.2;
+  color: #d7006d;
+  text-transform: uppercase;
+}
+.education .headlines:hover .arrow {
+  bottom: -10px;
+  opacity: 1;
+}
+.education .headlines:hover .scroll-dive {
+  opacity: 1;
+}
 .education .headlines .primary-headline {
   margin-top: 1.4rem;
+}
+.education .headlines .legalese {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+.education .headlines .legalese a {
+  font-size: 1rem;
 }
 .education .headlines .headline {
   width: 100%;
@@ -1922,11 +1967,12 @@ input[type="checkbox"], input[type="radio"] {
   margin-bottom: 12rem;
   padding-bottom: 12rem;
 }
-.education .headlines ul, .education .headlines p {
+.education .headlines ul {
+  font-family: 'avg_bold', sans-serif;
+  font-weight: normal;
   font-size: 1.4rem;
-  text-shadow: 1px 1px 2px #141414;
 }
-.education .headlines ul a, .education .headlines p a {
+.education .headlines ul a {
   font-size: 1.4rem;
 }
 .education.in {

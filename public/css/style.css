@@ -495,6 +495,9 @@ button.sub:hover {
   padding: 0rem 5rem;
   float: left;
 }
+.progress-overlay .results h5 {
+  font-size: 1.3rem;
+}
 .progress-overlay .results .progress-result {
   padding-bottom: 1rem;
 }

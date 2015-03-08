@@ -79,11 +79,14 @@ function createPinkPDF (result, quizanswers) {
   var facttitlehigh6 = cardsHigh[5]['facttitle'];
   var factheadhigh6 = cardsHigh[5]['factheadline'];
   var factbodyhigh6 = cardsHigh[5]['factbody'];
+  var facttitlehigh7 = cardsHigh[6]['facttitle'];
+  var factheadhigh7 = cardsHigh[6]['factheadline'];
+  var factbodyhigh7 = cardsHigh[6]['factbody'];
 
-  //test = "yoyo";
-  //console.log(test)
+  var cancercontentlow = cancerContent[0]['content'];
+  var cancercontentmid = cancerContent[1]['content'];
+  var cancercontenthigh = cancerContent[2]['content'];
 
-  //addQuestionsToPDF();
   var docDefinition; 
 var averageResults = {  
  header: {
@@ -111,6 +114,11 @@ var averageResults = {
         'Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population. This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important. \n \n \n',
       style: 'body'  
     },
+    { 
+      text: 
+        ' \n \n \n' +cancercontentlow,
+      style: 'body'  
+    },
     {
       text: 'WHAT TO DO NOW \n ',
       style: 'subheader'
@@ -124,7 +132,7 @@ var averageResults = {
       style: 'subheader'
     },
     {
-      text: 'BMI',
+      text: '' +facttitle1,
       style: 'question'
     },
     {
@@ -136,7 +144,155 @@ var averageResults = {
       style: 'question'
     },
     {
-      text: 'Your Assessment Answers \n ',
+      text: '' +facttitle2,
+      style: 'question'
+    },
+    {
+      text: '' +facthead2,
+      style: 'question'
+    },
+    {
+      text: '' +factbody2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle3,
+      style: 'question'
+    },
+    {
+      text: '' +facthead3,
+      style: 'question'
+    },
+    {
+      text: '' +factbody3,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle4,
+      style: 'question'
+    },
+    {
+      text: '' +facthead4,
+      style: 'question'
+    },
+    {
+      text: '' +factbody4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle5,
+      style: 'question'
+    },
+    {
+      text: '' +facthead5,
+      style: 'question'
+    },
+    {
+      text: '' +factbody5,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle6,
+      style: 'question'
+    },
+    {
+      text: '' +facthead6,
+      style: 'question'
+    },
+    {
+      text: '' +factbody6,
+      style: 'question'
+    },
+    {
+      text: '\n \n  Unfortunately Not Helping \n ',
+      style: 'subheader'
+    },
+    {
+      text: '' +facttitlehigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh3,
+      style: 'question'
+    },
+     {
+      text: '' +facttitlehigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh5,
+      style: 'question'
+    },           
+    {
+      text: '' +facttitlehigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh6,
+      style: 'question'
+    }, 
+    {
+      text: '' +facttitlehigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh7,
+      style: 'question'
+    }, 
+    {
+      text: '\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n \n \n \n \n \nYour Assessment Answers \n ',
       style: 'subheader'
     },
     {
@@ -156,7 +312,7 @@ var averageResults = {
       style: 'answer'
     },
     {
-      text: '3.  '+q3,
+      text: '3.   Your BMI score is:',
       style: 'question'
     },
     {
@@ -288,11 +444,10 @@ var averageResults = {
       alignment: 'center'
     },
     question: {
-      fontSize: 12,
-      bold: false
+      fontSize: 12
     },   
     answer: {
-      fontSize: 12,
+      fontSize: 11,
       italics: true,
       bold: true,
       fillcolor: 'yellow'
@@ -336,6 +491,11 @@ var moderateResults = {
     { 
       text: 
         'Your answers suggest that you are at increased baseline risk for breast and ovarian cancer, either because of a family history of one of these cancers, some significant event in your personal health history, or because you or a family member has been diagnosed with a specific type of gene mutation associated with an increased risk of breast or ovarian cancer. If you have not already pursued genetic testing, we highly recommend that you talk with your doctor or a genetic counselor about whether your personal circumstances warrant it, to confirm that your baseline risk truly is only increased, and not actually high. If you are at high risk, you will need to discuss enhanced risk management strategies with your doctor. \n \n Being at increased risk means that you have up to a 25% chance of developing breast cancer and up to a 5.5% chance of ovarian cancer at some point in your lifetime. These percentages mean that your risk for both cancers is more than twice that of women in the general population, which is significant. It’s a great thing that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Living a proactive lifestyle is one of the most important things you can do. \n \n \n',
+      style: 'body'  
+    },
+    { 
+      text: 
+        '' +cancercontentmid,
       style: 'body'  
     },
     {
@@ -499,6 +659,18 @@ var moderateResults = {
       style: 'question'
     }, 
     {
+      text: '' +facttitlehigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh7,
+      style: 'question'
+    }, 
+    {
       text: '\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n \n \n \n \n \nYour Assessment Answers \n ',
       style: 'subheader'
     },
@@ -519,7 +691,7 @@ var moderateResults = {
       style: 'answer'
     },
     {
-      text: '3.  '+q3,
+      text: '3.   Your BMI score is:',
       style: 'question'
     },
     {
@@ -702,6 +874,11 @@ var highResults = {
         'Your answers suggest that you are at a high baseline risk for breast and ovarian cancer, due either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been diagnosed with one of these mutations. (If you’ve not yet pursued genetic testing, doing so to confirm your risk level is advisable.) Being at high risk means that you have up to an 87% chance of getting breast cancer and up to a 54% chance of getting ovarian cancer.  This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the risk reduction and early detection options that are available to you. Living a proactive lifestyle is one of the most important things you can do! \n \n \n',
       style: 'body'  
     },
+    { 
+      text: 
+        ' \n \n \n' +cancercontenthigh,
+      style: 'body'  
+    },    
     {
       text: 'WHAT TO DO NOW \n ',
       style: 'subheader'
@@ -711,7 +888,171 @@ var highResults = {
       style: 'body'
     },
     {
-      text: 'Your Assessment Answers \n ',
+      text: 'Working In Your Favor \n ',
+      style: 'subheader'
+    },
+    {
+      text: '' +facttitle1,
+      style: 'question'
+    },
+    {
+      text: '' +facthead1,
+      style: 'question'
+    },
+    {
+      text: '' +factbody1,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle2,
+      style: 'question'
+    },
+    {
+      text: '' +facthead2,
+      style: 'question'
+    },
+    {
+      text: '' +factbody2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle3,
+      style: 'question'
+    },
+    {
+      text: '' +facthead3,
+      style: 'question'
+    },
+    {
+      text: '' +factbody3,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle4,
+      style: 'question'
+    },
+    {
+      text: '' +facthead4,
+      style: 'question'
+    },
+    {
+      text: '' +factbody4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle5,
+      style: 'question'
+    },
+    {
+      text: '' +facthead5,
+      style: 'question'
+    },
+    {
+      text: '' +factbody5,
+      style: 'question'
+    },
+    {
+      text: '' +facttitle6,
+      style: 'question'
+    },
+    {
+      text: '' +facthead6,
+      style: 'question'
+    },
+    {
+      text: '' +factbody6,
+      style: 'question'
+    },
+    {
+      text: '\n \n  Unfortunately Not Helping \n ',
+      style: 'subheader'
+    },
+    {
+      text: '' +facttitlehigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh1,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh2,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh3,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh3,
+      style: 'question'
+    },
+     {
+      text: '' +facttitlehigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh4,
+      style: 'question'
+    },
+    {
+      text: '' +facttitlehigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh5,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh5,
+      style: 'question'
+    },           
+    {
+      text: '' +facttitlehigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh6,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh6,
+      style: 'question'
+    }, 
+    {
+      text: '' +facttitlehigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factheadhigh7,
+      style: 'question'
+    },
+    {
+      text: '' +factbodyhigh7,
+      style: 'question'
+    }, 
+    {
+      text: '\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n \n \n \n \n \nYour Assessment Answers \n ',
       style: 'subheader'
     },
     {
@@ -731,7 +1072,7 @@ var highResults = {
       style: 'answer'
     },
     {
-      text: '3.  '+q3,
+      text: '3.   Your BMI score is:',
       style: 'question'
     },
     {
@@ -861,13 +1202,12 @@ var highResults = {
       fontSize: 16,
       bold: true,
       alignment: 'center'
-    },    
+    },
     question: {
-      fontSize: 12,
-      bold: false
+      fontSize: 12
     },   
     answer: {
-      fontSize: 12,
+      fontSize: 11,
       italics: true,
       bold: true,
       fillcolor: 'yellow'
@@ -902,44 +1242,39 @@ var highResults = {
       break;
 }
 
+  var attachment;
 
   if (isDoctorEmail === true) {
-    pdfMake.createPdf(docDefinition).getBase64(doPostPDF, 'true');
-    isDoctorEmail = null;
+    pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
+    console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-     pdfMake.createPdf(docDefinition).getBase64(doPostPDF, 'false');  
-     isDoctorEmail = null; 
+     pdfMake.createPdf(docDefinition).getBase64(doPostPDF);  
+     console.log('is false')
      return;
   }
   else if (isDoctorEmail === null) {
     pdfMake.createPdf(docDefinition).open();
-    isDoctorEmail = null; 
+    console.log('is null')
     return;
   } 
-//  console.log(test)
-
 }
 
-function doPostPDF(attachment, isDoctor) {
-	//console.log(attachment)
+function doPostPDF(attachment) {
+	console.log(isDoctorEmail)
 	$.ajax({
 		type : "POST",
 		url : "/email",
 		data : {
 			email : "trevorobrien@theexperiment.io",
 			attachment : attachment,
-			isDoctor : isDoctor
+			isDoctor : isDoctorEmail
 		}
 	}).done(function(msg) {
-		alert("PDF Sent");
+		isDoctorEmail = null;
 	});
 }
 
-function addQuestionsToPDF() {
 
-  test = savedQuestionsAnswers[0]['questionTxt'];
-
-}
 

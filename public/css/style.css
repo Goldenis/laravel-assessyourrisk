@@ -837,6 +837,7 @@ button.sub:hover {
   top: 3rem;
 }
 .share-btn {
+  overflow: hidden;
   -webkit-transition: all 0.3s 0 ease-out;
   -moz-transition: all 0.3s 0 ease-out;
   -o-transition: all 0.3s 0 ease-out;
@@ -845,6 +846,9 @@ button.sub:hover {
   -moz-transition-duration: 0.3s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
+}
+.share-btn a {
+  margin-top: 30px;
 }
 .share-btn a:nth-of-type(1) {
   position: absolute;
@@ -877,6 +881,9 @@ button.sub:hover {
   padding-left: 3rem;
   padding-right: 3rem;
   color: transparent;
+}
+.share-btn:hover a {
+  margin-top: 0;
 }
 .share-btn:hover img {
   opacity: 0.7;
@@ -1885,6 +1892,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .headlines .headline.last {
   margin-bottom: 12rem;
+  padding-bottom: 12rem;
 }
 .education .headlines ul, .education .headlines p {
   font-size: 1.4rem;
@@ -2329,7 +2337,7 @@ footer {
     margin-bottom: 3rem;
   }
   .progress-overlay .results .your-risk h2 {
-    margin: 50px 0;
+    margin: 40px 0 30px;
   }
   .progress-overlay .results .your-risk p {
     font-size: 1.4rem;
@@ -2756,7 +2764,8 @@ footer {
     top: 0px;
     right: 10px;
     border-width: 1px;
-    padding: 0.7rem 0.9rem 0.65rem 0.9rem;
+    border-color: rgba(213, 15, 109, .2);
+    padding: 0.7rem 0.8rem 0.65rem 0.9rem;
   }
   .progress-overlay .share .share-copy {
     width: 90%;
@@ -2772,7 +2781,9 @@ footer {
     width: 100%;
   }
   .progress-overlay .questions {
-    padding: 1rem 2rem;
+    height: 0;
+    padding: 0;
+    margin: 0;
     width: 100%;
   }
   .progress-overlay .questions .progress-question {
@@ -2787,6 +2798,9 @@ footer {
   .progress-overlay .questions .progress-question:hover {
     opacity: 0.8;
   }
+  .progress-overlay h3 {
+    font-size: 2rem;
+  }
   .progress-overlay .vignettes {
     padding: 3rem 3rem 3rem;
     width: 100%;
@@ -2797,21 +2811,44 @@ footer {
   .progress-overlay .vignettes .sections {
     margin-top: 20px;
   }
-  .progress-overlay .vignettes h3 {
-    font-size: 2rem;
-  }
-  .progress-overlay .vignettes h3 .percent {
-    font-size: 0.4rem;
-  }
   .overlay {
     padding: 4% 3%;
     border: 0px solid #ffb4aa;
+  }
+  .male-overlay {
+    z-index: 2001;
   }
   .male-overlay h1 {
     font: 3.4rem/1.5 "avg_bold";
   }
   .male-overlay h1 .share-btn {
     font-size: 1em;
+  }
+  .male-overlay h1 .share-btn a {
+    margin-top: -40px;
+    -webkit-transition: all 0.6s 0 ease-out;
+    -moz-transition: all 0.6s 0 ease-out;
+    -o-transition: all 0.6s 0 ease-out;
+    -ms-transition: all 0.6s 0 ease-out;
+    transition: all 0.6s 0 ease-out;
+    -moz-transition-duration: 0.6s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+  }
+  .male-overlay h1 .share-btn a:nth-of-type(1) {
+    left: 0.3rem;
+  }
+  .male-overlay h1 .share-btn a:nth-of-type(2) {
+    left: 3.6rem;
+  }
+  .male-overlay h1 .share-btn a:nth-of-type(3) {
+    left: 7rem;
+  }
+  .male-overlay h1 .share-btn img {
+    width: 2.5rem;
+  }
+  .male-overlay h1 .share-btn:hover a {
+    margin-top: -2px;
   }
   .landscape-overlay {
     padding: 3rem;

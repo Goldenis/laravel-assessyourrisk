@@ -121,6 +121,7 @@ $headline-font: 'avg_bold', sans-serif;
 $bgColor: #fff;
 $darkColor: #555558;
 $pink: #D7006D;
+$pink-50: rgba(213,15,109,.2);
 $nude: #FFB4AA;
 $nude-light: #fdd5ce;
 $nude-xtra-light: #FDE4DF;
@@ -520,6 +521,9 @@ button {
         width: 62%;
         height: 100%;
         float: left;
+        height: 0;
+        padding: 0;
+        margin: 0;
         .progress-question {
             margin-top: 50px;
             &:last-of-type {
@@ -875,7 +879,11 @@ button {
     }
 }
 .share-btn{
+    overflow: hidden;
     @include transition(.3s,ease-out);
+    a{
+        margin-top: 30px;
+    }
     a:nth-of-type(1){
         position: absolute;
         left: 1.2rem;
@@ -900,6 +908,9 @@ button {
         padding-left: 3rem;
         padding-right: 3rem;
         color: transparent;
+        a{
+            margin-top: 0;
+        }
         img{
             opacity: .7;
             &:hover{
@@ -1764,6 +1775,7 @@ input[type="checkbox"], input[type="radio"] {
             }
             &.last {
                 margin-bottom: 12rem;
+                padding-bottom: 12rem;
             }
         }
         ul, p {
@@ -2105,7 +2117,7 @@ footer {
                     margin-bottom: 3rem;
                 }
                 h2 {
-                    margin: 50px 0;
+                    margin: 40px 0 30px;
                 }
                 p {
                     font-size: 1.4rem;
@@ -2542,7 +2554,8 @@ footer {
             top: 0px;
             right: 10px;
             border-width: 1px;
-            padding: .7rem .9rem .65rem .9rem;
+            border-color: $pink-50;
+            padding: .7rem .8rem .65rem .9rem;
         }
         .share {
             .share-copy{
@@ -2563,7 +2576,6 @@ footer {
             }
         }
         .questions {
-            padding: 1rem 2rem;
             width: 100%;
             .progress-question {
                 margin-top: 50px;
@@ -2578,7 +2590,9 @@ footer {
                 }
             }
         }
-        
+        h3 {
+            font-size: 2rem;
+        }
         .vignettes {
             padding: 3rem 3rem 3rem;
             width: 100%;
@@ -2588,12 +2602,6 @@ footer {
             .sections {
                 margin-top: 20px;
             }
-            h3 {
-                font-size: 2rem;
-                .percent {
-                    font-size: .4rem;
-                }
-            }
         }
     }
     .overlay {
@@ -2601,10 +2609,32 @@ footer {
         border: 0px solid $nude;
     }
     .male-overlay {
+        z-index: 2001;
         h1 {
             font: 3.4rem/1.5 "avg_bold";
-            .share-btn {
+            .share-btn{
                 font-size: 1em;
+                a{
+                    margin-top: -40px;
+                    @include transition(.6s,ease-out);
+                }
+                a:nth-of-type(1){
+                    left: 0.3rem;
+                }
+                a:nth-of-type(2){
+                    left: 3.6rem;
+                }
+                a:nth-of-type(3) {
+                    left: 7rem;
+                }
+                img{
+                    width: 2.5rem;
+                }
+                &:hover{
+                    a{
+                        margin-top: -2px;
+                    }
+                }
             }
         }
     }

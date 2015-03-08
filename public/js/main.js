@@ -60,7 +60,7 @@
     var _currentVideo;
     var _currentImage;
     var _currentPath = '/';
-
+    var _currentLevel;
 
     // setInterval(function(){
     //   $('.person').html(people[Math.floor(Math.random()*people.length)])
@@ -500,13 +500,13 @@
             console.log('drclick')
             isDoctorEmail = true;
             console.log(isDoctorEmail)
-            createPinkPDF(resultLevel, savedQuestionsAnswers);
+            createPinkPDF(resultLevel);
         })
         $('.sub.send-user-email').on('click', function() {
             console.log('userclick')
             isDoctorEmail = false;
             console.log(isDoctorEmail)
-            createPinkPDF(resultLevel, savedQuestionsAnswers);
+            createPinkPDF(resultLevel);
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
@@ -903,9 +903,37 @@
     }
 
 
-    function addResultCards (){
+    function addResultCopy (level){
 
-        console.log()
+        $('.results-copy-average').removeClass('on'); 
+        $('.results-copy-moderate').removeClass('on'); 
+        $('.results-copy-high').removeClass('on'); 
+
+        if ($.inArray("1|-2", savedQuizProgress[8]) > -1 ) {
+            console.log('high')
+            resultLevel = 'high';   
+            $('.risk-level').html('High');
+        //using result level for pdf work
+            $('.results-copy-high').addClass('on'); 
+            return;             
+        }
+
+        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[15] === '-1' || savedQuizProgress[16] === '-1' ) { 
+
+//|| savedQuizProgress[10] === '11|+1' ||savedQuizProgress[10] === '12|-1' || savedQuizProgress[12] !== '7|0' || savedQuizProgress[15] === '-1' || savedQuizProgress[16] === '-1'
+
+            console.log('moderate1')
+            resultLevel = 'moderate';   
+            $('.risk-level').html('Increased');
+        //using result level for pdf work
+            $('.results-copy-moderate').addClass('on'); 
+            return;
+        }
+         
+            resultLevel = 'average';   
+            $('.risk-level').html('Average');
+        //using result level for pdf work
+            $('.results-copy-average').addClass('on');   
 
     }
 
@@ -940,8 +968,7 @@
 
 //doesn't affect risk level
 
-        if (_currentQuestion == 4 || _currentQuestion == 6 || _currentQuestion == 9  || _currentQuestion == 15 || _currentQuestion == 17 || _currentQuestion == 18) 
-            {
+        if (_currentQuestion == 4 || _currentQuestion == 6 || _currentQuestion == 9  || _currentQuestion == 15 || _currentQuestion == 17 || _currentQuestion == 18) {
 
             if (_currentQuestion == 4) {
                 console.log(bmi)    
@@ -959,23 +986,19 @@
             }
 
 
-       if (_currentQuestion == 6) {
-            ansTxt = currentGlass;
-            answers = currentGlass + "  alcohol drinks a day";            
+           if (_currentQuestion == 6) {
+                ansTxt = currentGlass;
+                answers = currentGlass + "  alcohol drinks a day";            
+            }
 
-            //savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
-            //savedQuizProgress[String(_currentQuestion)] = ansTxt;
-        }
-
-            questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
-            
-            questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+                questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();           
+                questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
 
-            savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
-            savedQuizProgress[String(_currentQuestion)] = ansTxt;
-            updateCharts();
-            return;
+                savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
+                savedQuizProgress[String(_currentQuestion)] = ansTxt;
+                updateCharts();
+                return;
         };
 
         var age = $('input[name="age-radio"]:checked');
@@ -990,8 +1013,6 @@
             ansTxt = cancerHistoryCheck.attr("data-answer-id");
             answers = cancerHistoryCheck.next().html();
         }
-
-
 
         if (_currentQuestion == 5) {
             var data = [];
@@ -1013,9 +1034,10 @@
           console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
-            $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
+            $('input[name="mutation-sub"]:checked').removeAttr('checked');
+            $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active');
             _currentQuestion = 8;
-            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
             savedQuizProgress[7] = ansTxt;
             delete savedQuizProgress[8];
             var specialQ = {'questionnumber': '7', 'questionTxt' : 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?', 'questionanswer' : answers};
@@ -1033,17 +1055,8 @@
             });
             ansTxt = data;
             answers = ans8Text;
-
-            if (ansTxt == '1|-2') {
-                console.log('high')
-                $('.risk-level').html('High');
-//using result level for pdf work
-                resultLevel = 'high';
-                $('.results-copy-average, .results-copy-moderate').removeClass('on');  
-                $('.results-copy-high').addClass('on');                   
-            }
-
         }
+        
         if (_currentQuestion == 10) {
             var data = [];
             var ans10Text = [];             
@@ -1054,18 +1067,8 @@
             ansTxt = data;
             answers = ans10Text;
         }
-
-
-        if (ansTxt == '-1' && $('.risk-level').html() == 'Average') {
-            $('.risk-level').html('Increased');
-            resultLevel = 'moderate';
-            $('.results-copy-average').removeClass('on');   
-            $('.results-copy-moderate').addClass('on');  
-
-        }
         
-        questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();
-        
+        questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();        
         questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
         savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
@@ -1078,6 +1081,7 @@
         }
 
         updateCharts();
+        addResultCopy(resultLevel);  
         console.log('Object savedQuizProgress = ', savedQuizProgress)
 
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
@@ -1101,7 +1105,6 @@
 // BIRTH CONTROL
 // BREASTFEEDING
 // PREGNANCY
-
 
         if (savedQuizProgress[4] == '+1') { 
             $('.item.bmi-low').css({

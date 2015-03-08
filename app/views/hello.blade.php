@@ -262,11 +262,11 @@
               </div>
               <div class="email-fields-doctor">
                 <h4>Share results with my doctor.</h4>
-                <input type="text" placeholder="Dr's email address"><button class="sub send-dr-email">SEND</button><button class="sub cancel">Cancel</button>
+                <input type="text" placeholder="Dr's email address" id="dr-email-address"><button class="sub send-dr-email">SEND</button><button class="sub cancel">Cancel</button>
               </div> 
               <div class="email-fields-user">
                 <h4>Share my results with me.</h4>
-                <input type="text" placeholder="My email address"><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
+                <input type="text" placeholder="My email address" id="user-email-address"><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
               </div>
             </div>
 <!-- paragraph wrapper close -->

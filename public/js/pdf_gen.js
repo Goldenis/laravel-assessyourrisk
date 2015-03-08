@@ -1263,17 +1263,30 @@ var highResults = {
 
 function doPostPDF(attachment) {
 	console.log(isDoctorEmail)
+  var emailAddress;
+
+  if (isDoctorEmail === true){
+    emailAddress = $('#dr-email-address').val();
+  }
+  else if (isDoctorEmail === false){
+    emailAddress = $('#user-email-address').val();
+  }
+
 	$.ajax({
 		type : "POST",
 		url : "/email",
 		data : {
-			email : "trevorobrien@theexperiment.io",
+			email : emailAddress,
 			attachment : attachment,
 			isDoctor : isDoctorEmail
 		}
 	}).done(function(msg) {
 		isDoctorEmail = null;
 	});
+
+  $('.email-pdf-doctor').removeClass('show-fields-user');
+  $('.email-pdf-doctor').removeClass('show-fields-dr');
+
 }
 
 

@@ -1238,33 +1238,12 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src='js/pdf_gen.js'></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
-    <script type="text/javascript">
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '757106917704007',
-          xfbml      : true,
-          version    : 'v2.2',
-          cookie   : true,
-          status     : true
-        });
-      };
-    
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-    </script>
-
     <script>
         window.fbAsyncInit = function() {
           // init the FB JS SDK
           FB.init({
             appId      : '753349004746465',                        // App ID from the app dashboard
-            channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+            // channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
             status     : true,                                 // Check Facebook Login status
             xfbml      : true,                                  // Look for social plugins on the page
             version    : 'v2.2'

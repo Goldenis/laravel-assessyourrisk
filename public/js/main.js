@@ -1082,41 +1082,9 @@
 
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
         //console.log(savedQuestionsAnswers[0].questionTxt)
-
-        //getUserAnswersForEmail();
     
     }
 
-    function getUserAnswersForEmail() {
-        var emailqs;
-        
-         $('.email-content').html('');
-
-         $.each(savedQuestionsAnswers, function( key, value ) {
-            // console.log( value.questionnumber );
-            // console.log( value.questionTxt );
-            // console.log( value.questionanswer );
-            var questionID = parseInt(value.questionnumber + 1);
-
-            if (key == 3) {
-                questionID = value.questionnumber - 1;
-                return; 
-            }
-
-            if (key == 4) {
-                value.questionTxt = 'Your BMI Score is'
-            }
-
-            $('.email-content').append('<div class="email-content-q"> %0D%0A %0D%0A' + questionID + '.  ' + value.questionTxt + '%0D%0A' + value.questionanswer + '%0D%0A %0D%0A</div>')
-        });
-
-
-
-         var resultCopy = $('.results-copy-high').text();
-
-         //console.log(resultCopy)
-
-    }
 
     function addCustomResults() {
 

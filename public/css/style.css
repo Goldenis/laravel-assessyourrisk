@@ -1639,8 +1639,8 @@ input[type="checkbox"], input[type="radio"] {
 .education .module .main {
   left: 10px;
   height: 100%;
-  background: #ffb4aa;
-  opacity: 0.9 !important;
+  background: rgba(255, 180, 170, 0.9);
+  opacity: 1 !important;
   color: #fff;
   margin-bottom: 200px;
 }
@@ -1878,35 +1878,38 @@ input[type="checkbox"], input[type="radio"] {
   margin-top: 0.4rem;
 }
 .education .headlines .arrow {
-  -webkit-transition: all 1s 0 ease-out;
-  -moz-transition: all 1s 0 ease-out;
-  -o-transition: all 1s 0 ease-out;
-  -ms-transition: all 1s 0 ease-out;
-  transition: all 1s 0 ease-out;
-  -moz-transition-duration: 1s;
+  -webkit-transition: all 0.5s 0 ease-out;
+  -moz-transition: all 0.5s 0 ease-out;
+  -o-transition: all 0.5s 0 ease-out;
+  -ms-transition: all 0.5s 0 ease-out;
+  transition: all 0.5s 0 ease-out;
+  -moz-transition-duration: 0.5s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  opacity: 0.2;
+  opacity: 0.5;
+  top: 0;
+  margin-top: 30px;
 }
 .education .headlines .scroll-dive {
-  -webkit-transition: all 1s 0 ease-out;
-  -moz-transition: all 1s 0 ease-out;
-  -o-transition: all 1s 0 ease-out;
-  -ms-transition: all 1s 0 ease-out;
-  transition: all 1s 0 ease-out;
-  -moz-transition-duration: 1s;
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
   -moz-transition-property: all;
   -moz-transition-delay: 0;
-  opacity: 0.2;
+  opacity: 0.5;
+  margin-top: 3rem;
   color: #d7006d;
-  text-transform: uppercase;
 }
 .education .headlines:hover .arrow {
-  bottom: -10px;
+  top: 10px;
   opacity: 1;
 }
 .education .headlines:hover .scroll-dive {
   opacity: 1;
+  color: white;
 }
 .education .headlines .primary-headline {
   margin-top: 1.4rem;
@@ -2429,7 +2432,7 @@ footer {
     display: block !important;
   }
   .progress-overlay .results .paragraph-wrapper {
-    width: 100%;
+    width: 96%;
     background: #fff;
     position: relative;
     display: inline-block;
@@ -2437,6 +2440,7 @@ footer {
   }
   .progress-overlay .results .paragraph-wrapper .paragraph-box {
     width: 100%;
+    padding: 3rem;
     float: left;
     text-align: left;
     color: #555558;
@@ -2556,6 +2560,9 @@ footer {
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
     top: 2.5rem;
   }
+  .progress-overlay .cards {
+    padding: 2%;
+  }
   .progress-overlay .cards .card-intro-text {
     padding: 2rem 2rem;
     width: 100%;
@@ -2569,7 +2576,7 @@ footer {
   .progress-overlay .cards .card {
     width: 100%;
     margin: 0%;
-    padding: 2rem;
+    padding: 4rem;
     margin-bottom: 4rem;
     margin-top: 10rem;
   }
@@ -2824,6 +2831,9 @@ footer {
     -o-transform: perspective(1000px) translateY(-50%);
     transform: perspective(1000px) translateY(-50%);
   }
+  .stopwatch-question {
+    top: 45% !important;
+  }
   .anim-gif {
     position: absolute;
     margin: auto;
@@ -3002,7 +3012,7 @@ footer {
     text-align: center;
   }
   .intro p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .intro #Begin {
     display: none;
@@ -3177,7 +3187,7 @@ footer {
     right: 20px;
     margin-top: 0.7rem;
     top: 14px;
-    opacity: 0.5;
+    opacity: 0.8;
   }
   .right-column .toggle-box .arrow img {
     width: 25px;
@@ -3340,6 +3350,20 @@ footer {
   .checkbox-list.column-right {
     margin-top: -1rem;
     width: 100%;
+  }
+  .paragraph-wrapper {
+    width: 100% !important;
+    background: #fff;
+  }
+  .paragraph-wrapper .paragraph-box {
+    width: 100%;
+    padding: 0rem !important;
+  }
+  .cards {
+    padding: 0% !important;
+  }
+  .cards .card {
+    padding: 3rem !important;
   }
   .email-pdf-doctor {
     padding: 3rem;

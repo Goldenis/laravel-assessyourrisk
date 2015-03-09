@@ -134,7 +134,7 @@
             <div class="results-copy-moderate">
               <div class="column">
                   <!-- Added warning header -->
-                  <h5 class="warning-header pink-text">There is potential that you may be High Risk. <br>Read on.</h5>
+                  <h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
                 <!-- paragraph-one (left) -->
                   <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>
@@ -426,7 +426,7 @@
             </div>
 
             <div class="fact">
-              <h5>If a woman has had breast cancer, she’s also at increased risk for developing ovarian cancer. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
+              <h5>Certain genetic mutations can cause an increased risk for both breast and ovarian cancers. An ovary may only be the size of an almond, but it’s powerful - <b>2/3 of women diagnosed with ovarian cancer will die from their disease.</b></h5>
             </div>
 
             <div class="fact">
@@ -510,7 +510,7 @@
       </div>
       <section class="assessment-intro in">
         <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your <span class="pink-text">personal level of risk</span> for breast and ovarian cancer.  By looking at your <span class="pink-text">health and family history</span> alongside some of your <span class="pink-text">lifestyle</span> choices, you’ll not only learn more about your risk, but also about <span class="pink-text">actions</span> you can take to reduce it.<br><br><i>You</i> have the power to save your life.</h4>            
-        <button class="action">Let’s Go.</button>
+        <button class="action">Let’s Go</button>
       </section>
 
       <div class="assessment-wrap">
@@ -674,7 +674,7 @@
           </div>
         </div>        
 
-        <div class="question gif" data-question-id="5">
+        <div class="question gif stopwatch-question" data-question-id="5">
             <div class="anim-gif stopwatch">
                <img src="img/Stopwatch.gif">
             </div>        
@@ -841,8 +841,8 @@
               <div class="section-title">Understand Your Risk</div>
               <h3>Turns out, <i>life</i> affects your life</h3>
               <h5>Day-to-day decisions directly link to your risk of getting cancer. The stakes are high—make sure you’re doing all you can to make the most of it. Now that’s living proactively.</h5>
-              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>
               <h6 class="scroll-dive">Scroll</h6>
+              <div class="btn-begin arrow"><img src="img/arrow_right.png"></div>              
             </div>
           </div>
         </div>

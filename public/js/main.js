@@ -352,7 +352,7 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            //window._currentPath = '/assessment';
+            window._currentPath = '/assessment';
             $.address.path('/assessment');
             //$.address.path('/assessment');
         })
@@ -552,12 +552,12 @@
         $('.assess').on('click', function() {
             toggleColumn();
             window._currentPath = '/assessment';
-            $.address.path('/assessment');
+            $.address.value('/assessment');
         })
         $('.understand').on('click', function() {
             toggleColumn();
             window._currentPath = '/education';
-            $.address.path('/education');
+            $.address.value('/education');
         })
         $('.module-hero').on('click', function() {
             changeModule($(this).index());
@@ -1099,7 +1099,7 @@
         // var bmiHigh = savedQuizProgress[2] == '-1';
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
-
+        addResultCopy(resultLevel);  
         var cardsObj;
         var cardContent;
 
@@ -1698,9 +1698,46 @@ Do you know if I do%3F");
         var oldPath = _currentPath;
         var newPath = event.value;
 
+        console.log('oldpath', oldPath)
+        console.log('newpath', newPath)
+
+        if (oldPath === '/education' && newPath === '/assessment' ){
+            console.log('true')
+            toggleColumn();
+            _currentPath = newPath;
+        }
+        else if (oldPath === '/assessment' && newPath === '/assessment' ){
+            console.log('true')
+            toggleColumn();
+            _currentPath = newPath;
+        }
+        else if (oldPath === '/education' && newPath === '/intro' ){
+            console.log('true')
+            toggleColumn();
+            _currentPath = '/assessment';
+        } 
+        else if (oldPath === '/intro' && newPath === '/intro' ){
+            console.log('true')
+            toggleColumn();
+            _currentPath = '/assessment';
+        }  
+         else if (oldPath === '/intro' && newPath === '/assessment' ){
+            console.log('true')
+            // toggleColumn();
+            _currentPath = newPath;
+        }                       
+        // else if (oldPath === '/education' && newPath === '/intro' ){
+        //     console.log('trueintro')
+        //     //toggleColumn();
+        //     window.location.href = '/#' +newPath;
+        //     _currentPath = newPath;
+        // }
+
 
         if (event.value == '/education') {
-            console.log('education');            
+            console.log(_currentView)
+            console.log('education'); 
+            //_currentView = "left";           
             hideIntro();
             addCharts();
             toggleColumn();
@@ -1712,12 +1749,16 @@ Do you know if I do%3F");
             toggleColumn();
             _currentPath = newPath;            
         } else if (event.value == '/assessment') {
+            //_currentView = "right";
             console.log('assessment');
-            _currentPath = newPath;
+            console.log(_currentView)
             hideIntro();
             addCharts();
+            //toggleColumn();
+            _currentPath = newPath;
         } else {
             console.log('intro view')       
+            console.log(_currentView)
             startIntro();
             $.address.path('/intro');
             _currentPath = newPath;

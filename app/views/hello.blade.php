@@ -689,24 +689,24 @@
         <div class="question cb3" data-question-id="17">
           <div class="prompt">Within <span class="pink-text">one side</span> of the family (both on mom’s side or both on dad’s side), is there breast cancer <span class="pink-text">and</span> one of the following cancers?</div>
           <div class="checkbox-list column-left">        
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="cancer-plus-chk" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="cancer-plus-chk" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="cancer-plus-chk" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="cancer-plus-chk" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" name="cancer-plus-chk" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
           <div class="checkbox-list column-right">
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
-            <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
-            <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="cancer-plus-chk" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox" data-answer-id="8"><input type="checkbox" name="cancer-plus-chk" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox" data-answer-id="9"><input type="checkbox" name="cancer-plus-chk" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox" data-answer-id="10"><input type="checkbox" name="cancer-plus-chk" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" name="cancer-plus-chk" data-answer-id="11|+1"><div class="label">None of the above</div></div>
           </div>     
 
           <div class="answers">
-            <button id="mobile-button-left">Continue</button>
+            <button id="mobile-button-left" disabled>Continue</button>
             <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
         </div>

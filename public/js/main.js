@@ -374,6 +374,11 @@
             $('#mutation-btn').prop('disabled', !this.checked);
         });
 
+        $('input[name="cancer-plus-chk"]').change(function(){
+            $('#mobile-button-left').prop('disabled', !this.checked);
+        });
+
+
         $('input[name="mutation-sub"]').change(function(){
             $('#mutation-sub-btn').prop('disabled', !this.checked);
         });

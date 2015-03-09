@@ -1647,9 +1647,6 @@ input[type="checkbox"], input[type="radio"] {
 .education .module .main .headlines {
   top: 6%;
 }
-.education .module .main .headline {
-  opacity: 1 !important;
-}
 .education .nav {
   width: 25%;
   position: absolute;

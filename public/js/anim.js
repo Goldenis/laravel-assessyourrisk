@@ -3,7 +3,6 @@
 
  function startIntro () {
     var wheel = $('.wheel-container'),
-        second = $('.intro-message'),
         logo = $('.logo');
 
     $('.intro').removeClass('out-up');
@@ -29,7 +28,6 @@
     // }
     tl.to(wheel, 2, {scale:wheelScale, y: 10, ease:Expo.easeOut})
     tl.to(logo, 1.5, {opacity:1}, "+=0");
-    tl.from(second, 1.5, {opacity:0}, "+=2.1");
 
     //add a label 0.5 seconds later to mark the placement of the next tween
     tl.add("stagger", "+=0.2")

@@ -112,6 +112,8 @@
             minS = .7;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
+            $('.vignettes h3').eq(1).html('Normal')
+            $('.vignettes h3').eq(2).html('Family')
             if(_winW > _winH){
                 $('.landscape-overlay').addClass('active')    
             }else{
@@ -122,6 +124,8 @@
             _lapScreen = false;
             _airScreen = true;
             minS = .8;
+            $('.vignettes h3').eq(1).html('Know Your Normal')
+            $('.vignettes h3').eq(2).html('Family & Health History')
             $('.module-hero h1').eq(1).html('Your Normal')
             $('.module-hero h1').eq(2).html('Family History')
             $('.landscape-overlay').removeClass('active')
@@ -130,6 +134,8 @@
             _airScreen = false;
             _lapScreen = true;
             minS = .8;
+            $('.vignettes h3').eq(1).html('Know Your Normal')
+            $('.vignettes h3').eq(2).html('Family & Health History')
             $('.module-hero h1').eq(1).html('Knowing Your Normal')
             $('.module-hero h1').eq(2).html('Family & Health History')
             $('.landscape-overlay').removeClass('active')
@@ -561,6 +567,7 @@
         })
         $('.module-hero').on('click', function() {
             changeModule($(this).index());
+            $('.menu-icon').addClass('module-open')
         })
         $('.progress-overlay .vignettes h3').on('click', function() {
             changeModule($('.progress-overlay .vignettes h3').index($(this)));
@@ -1375,6 +1382,7 @@ Do you know if I do%3F");
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
+                $('.progress-overlay').scrollTop(500);
             },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({

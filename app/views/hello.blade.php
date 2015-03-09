@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/anim.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
     <script>
 
@@ -57,16 +58,7 @@
       <div class="question-stats">
       </div>
       <button class="sub close-btn">✕</button>
-      <div class="share">
-        <div class="share-copy">
-          <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
-        </div>
-        <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/assessment" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/assessment" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
-        </div>
-      </div>
       <div class="vignettes">
-      	<div class='section-title'>Understand</div>
         <!-- <div class="progress">
           <div class="percentage percdive"></div>
           <div class="chart chart-5"></div>
@@ -76,6 +68,14 @@
           <h3>Your Normal</h3><br>
           <h3>Family & Health History</h3>
         </div>  
+      </div>
+      <div class="share">
+        <div class="share-copy">
+          <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
+        </div>
+        <div class="share-btn-wrapper">
+          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/assessment" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/assessment" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
+        </div>
       </div>
       
       <div class="results">
@@ -1206,7 +1206,6 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>  
     <script src="js/main.js"></script>
-    <script src="js/anim.js"></script>
 
      <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>

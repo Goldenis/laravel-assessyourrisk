@@ -1211,22 +1211,22 @@
         }
 
 //BREASTFEEDING card
-        if (savedQuizProgress[18] == '+1') { 
-            $('.item.breastfeeding-low').css({
-                display: 'block'
-            })   
-            cardsHigh[4]['facttitle'] = "";    
-            cardsHigh[4]['factheadline'] = "";     
-            cardsHigh[4]['factbody'] = ""; 
-        }
-        else if (savedQuizProgress[18] == '-1') { 
-            $('.item.breastfeeding-high').css({
-                display: 'block'
-            })  
-            cardsLow[4]['facttitle'] = "";    
-            cardsLow[4]['factheadline'] = "";     
-            cardsLow[4]['factbody'] = "";              
-        }
+        // if (savedQuizProgress[18] == '+1') { 
+        //     $('.item.breastfeeding-low').css({
+        //         display: 'block'
+        //     })   
+        //     cardsHigh[4]['facttitle'] = "";    
+        //     cardsHigh[4]['factheadline'] = "";     
+        //     cardsHigh[4]['factbody'] = ""; 
+        // }
+        // else if (savedQuizProgress[18] == '-1') { 
+        //     $('.item.breastfeeding-high').css({
+        //         display: 'block'
+        //     })  
+        //     cardsLow[4]['facttitle'] = "";    
+        //     cardsLow[4]['factheadline'] = "";     
+        //     cardsLow[4]['factbody'] = "";              
+        // }
     
 //previous cancer history
       if (savedQuizProgress[2] == '-1') { 

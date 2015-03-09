@@ -756,7 +756,7 @@
         
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="0">No</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 

@@ -44,7 +44,7 @@
     <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
+      <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/assessment" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/assessment" onclick="shareMail();"><img src="img/mail.svg"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -62,7 +62,7 @@
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
+          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/assessment" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/assessment" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
       <div class="vignettes">
@@ -125,7 +125,7 @@
                 In addition to finding out more about <a href="" target="_blank">risk-reduction</a> and <a href="" target="_blank">early detection</a>, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
                 <div class="read-more-box">
-                  <a href="#" class="read-more">Read More</a>
+                  <a href="#/assessment" class="read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -189,7 +189,7 @@
                     We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.
                   </p>
                   <div class="read-more-box">
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="#/assessment" class="read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@
                 We also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together. 
                 </p>
                 <div class="read-more-box">
-                  <a href="#" class="read-more">Read More</a>
+                  <a href="#/assessment" class="read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -262,11 +262,11 @@
               </div>
               <div class="email-fields-doctor">
                 <h4>Share results with my doctor.</h4>
-                <input type="text" placeholder="Dr's email address"><button class="sub send-dr-email">SEND</button><button class="sub cancel">Cancel</button>
+                <input type="text" placeholder="Dr's email address" id="dr-email-address"><button class="sub send-dr-email">SEND</button><button class="sub cancel">Cancel</button>
               </div> 
               <div class="email-fields-user">
                 <h4>Share my results with me.</h4>
-                <input type="text" placeholder="My email address"><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
+                <input type="text" placeholder="My email address" id="user-email-address"><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
               </div>
             </div>
 <!-- paragraph wrapper close -->
@@ -689,24 +689,24 @@
         <div class="question cb3" data-question-id="17">
           <div class="prompt">Within <span class="pink-text">one side</span> of the family (both on mom’s side or both on dad’s side), is there breast cancer <span class="pink-text">and</span> one of the following cancers?</div>
           <div class="checkbox-list column-left">        
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
-            <div class="checkbox" data-answer-id="2"><input type="checkbox" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
-            <div class="checkbox" data-answer-id="3"><input type="checkbox" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
-            <div class="checkbox" data-answer-id="6"><input type="checkbox" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="cancer-plus-chk" data-answer-id="1|-1"><div class="label">Ovarian cancer</div></div>
+            <div class="checkbox" data-answer-id="2"><input type="checkbox" name="cancer-plus-chk" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
+            <div class="checkbox" data-answer-id="3"><input type="checkbox" name="cancer-plus-chk" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="cancer-plus-chk" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="6"><input type="checkbox" name="cancer-plus-chk" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
           <div class="checkbox-list column-right">
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
-            <div class="checkbox" data-answer-id="8"><input type="checkbox" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
-            <div class="checkbox" data-answer-id="9"><input type="checkbox" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
-            <div class="checkbox" data-answer-id="10"><input type="checkbox" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" data-answer-id="11|+1"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="cancer-plus-chk" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
+            <div class="checkbox" data-answer-id="8"><input type="checkbox" name="cancer-plus-chk" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
+            <div class="checkbox" data-answer-id="9"><input type="checkbox" name="cancer-plus-chk" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
+            <div class="checkbox" data-answer-id="10"><input type="checkbox" name="cancer-plus-chk" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" name="cancer-plus-chk" data-answer-id="11|+1"><div class="label">None of the above</div></div>
           </div>     
 
           <div class="answers">
-            <button id="mobile-button-left">Continue</button>
+            <button id="mobile-button-left" disabled>Continue</button>
             <button class="sub ask" data-answer-id="13">Help me ask them</button>
           </div>
         </div>
@@ -756,7 +756,7 @@
         
           <div class="answers">
             <button data-answer-id="+1">Yes</button>
-            <button data-answer-id="0">No</button>
+            <button data-answer-id="-1">No</button>
           </div>
         </div>
 
@@ -788,7 +788,7 @@
         </div>
         <div class="share">
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/assessment" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/assessment" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -1180,7 +1180,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
+                <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.svg"></a><a href="#/education" onclick="fb_share('http://brightenup.sew.la', 'BrightPink Assessment', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://brightenup.sew.la/img/brightpink_logo.png', 520, 350)"><img src="img/facebook.svg"></a><a href="#/education" onclick="shareMail();"><img src="img/mail.svg"></a>SHARE</button>
               </div>
             </div>
           </div>

@@ -495,7 +495,7 @@
         })   
 
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','emailWindow');
+            window.open('mailto:name@email.com?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','emailWindow');
         closeEmailWindow();
         })
         $('.email-doctor').on('click', function() {
@@ -507,7 +507,7 @@
             console.log('click my email');
              $('.email-pdf-doctor').addClass('show-fields-user');
             //var content = $('.email-content').text();
-            //window.open('mailto:?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
+            //window.open('mailto:name@email.com?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
         })
 
         $('.email-fields-doctor button.cancel').on('click', function() {
@@ -531,8 +531,11 @@
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
-            //window.open('mailto:?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
+            //window.open('mailto:name@email.com?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
+
+        $('.mail-icon').on('click',shareMail);
+
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
             $('.right-column').addClass('in2')
@@ -1310,7 +1313,7 @@
         e.stopPropagation();
         switch ($(this).closest(".question").attr("data-question-id")) {
             case "14":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
+                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
 I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
@@ -1338,7 +1341,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F",'e
         closeEmailWindow();
                 break;
             case "17":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
+                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
 I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
@@ -1376,7 +1379,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F",'e
         closeEmailWindow();
                 break;
             case "20":
-                window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
+                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
 %0D%0A\
 %0D%0A\
 I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
@@ -1824,7 +1827,7 @@ Do you know if I do%3F",'emailWindow');
 })(jQuery);
 
     function shareMail(){
-        var emailWindow = window.open("mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, \
+        var emailWindow = window.open("mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, \
 %0D%0A\
 %0D%0A\
 I want to share something important with you. \
@@ -1835,7 +1838,6 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 %0D%0A\
 1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org .",'emailWindow');
         closeEmailWindow();
-        return false;
     }
             function closeEmailWindow(){
             if (emailWindow && emailWindow.open && !emailWindow.closed){      

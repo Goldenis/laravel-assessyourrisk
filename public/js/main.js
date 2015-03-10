@@ -666,7 +666,7 @@
         }
         l = Math.max(min, $('.bottle').position().left - distance);
         //console.log(l,$('.bottle').position().left,x,newX)
-        l = Math.min(l, 550);
+        l = Math.min(l, 370);
         var glassW = 59;
         if (_smallScreen) {
             glassW = 25;
@@ -1396,7 +1396,9 @@ Do you know if I do%3F",'_blank');
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
-                $('.progress-overlay').scrollTop(450);
+                if(_smallScreen){
+                    $('.progress-overlay').scrollTop(450);
+                }
             },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({

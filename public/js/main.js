@@ -1382,7 +1382,7 @@ Do you know if I do%3F");
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
-                $('.progress-overlay').scrollTop(500);
+                $('.progress-overlay').scrollTop(450);
             },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({

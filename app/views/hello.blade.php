@@ -323,7 +323,7 @@
 
     <!-- Negative -->
         <div class="card negative">
-          <div class="factors-title"><h3>Unfortunately Not Helping</h3></div>
+          <div class="factors-title"><h3>Not Working in Your Favor</h3></div>
           <div class="item bmi-high">
             <div class="section-title">BMI</div>
             <h4>Your BMI is outside of the healthy range.</h4>
@@ -531,7 +531,7 @@
    
           <div class="answers">
             <div class="checkbox-list age-list">
-              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">&lt;20</div></div>
+              <div class="checkbox" data-answer-id="1"><input type="radio" name="age-radio" data-answer-id="1"><div class="label">&lt; 20</div></div>
               <div class="checkbox" data-answer-id="2"><input type="radio" name="age-radio" data-answer-id="2"><div class="label">20-30</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="age-radio" data-answer-id="3"><div class="label">31-35</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="age-radio" data-answer-id="4"><div class="label">36-40</div></div>

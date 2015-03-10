@@ -1835,6 +1835,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 %0D%0A\
 1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org .",'emailWindow');
         closeEmailWindow();
+        return false;
     }
             function closeEmailWindow(){
             if (emailWindow && emailWindow.open && !emailWindow.closed){      

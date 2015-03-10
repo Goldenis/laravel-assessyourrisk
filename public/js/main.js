@@ -495,7 +495,7 @@
         })   
 
         $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','');
+            window.open('mailto:?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','_blank');
         })
         $('.email-doctor').on('click', function() {
             console.log('click dr email');            
@@ -1333,7 +1333,7 @@ One of the questions I’d love your help answering is: \
           - Two or more close relatives with breast cancer at any age \
 %0D%0A\
 %0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F");
+Do you know if anybody in the family has been diagnosed with any of these%3F",'_blank');
                 break;
             case "17":
                 window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
@@ -1370,7 +1370,7 @@ One of the questions I’d love your help answering is: \
           - Brain cancer \
 %0D%0A\
 %0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F");
+Do you know if anybody in the family has been diagnosed with any of these%3F",'_blank');
                 break;
             case "20":
                 window.open("mailto:?subject=Can you help me answer this%3F&body=Hello, \
@@ -1385,7 +1385,7 @@ One of the questions I’d love your help answering is: \
       Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \
 %0D%0A\
 %0D%0A\
-Do you know if I do%3F");
+Do you know if I do%3F",'_blank');
                 break;
         }
     }
@@ -1827,6 +1827,6 @@ I want to share something important with you. \
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. \
 %0D%0A\
 %0D%0A\
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org .");
+1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org .",'_blank');
     }
 

@@ -883,6 +883,7 @@ button {
     @include transition(.3s,ease-out);
     a{
         margin-top: 30px;
+        cursor: pointer;
     }
     a:nth-of-type(1){
         position: absolute;
@@ -2707,7 +2708,7 @@ footer {
                 font-size: 1em;
                 a{
                     margin-top: -40px;
-                    @include transition(.6s,ease-out);
+                    @include transition(1.2s,ease-out);
                 }
                 a:nth-of-type(1){
                     left: 0.3rem;

@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="js/anim.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
     <script>
 
@@ -1203,6 +1202,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="js/vendor/jquery.address-1.6.min.js"></script>
     <script src="js/plugins.js"></script>  
     <script src="js/main.js"></script>
+    <script src="js/anim.js"></script>
 
      <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
@@ -1214,16 +1214,6 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
     <script src="js/svg/DonutChartBuilder.js"></script>
     <script src="js/svg/SVGHelper.js"></script>
 
-    <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
-    <script
-      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js">
-    </script>
-    <script
-      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js">
-    </script>
-    <script
-      src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
-    </script>
     <script src="js/roulette.js"></script>
     <script src='js/vendor/pdfmake/build/pdfmake.min.js'></script>
     <script src='js/vendor/pdfmake/build/vfs_fonts.js'></script>

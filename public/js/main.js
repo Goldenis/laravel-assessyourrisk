@@ -923,7 +923,7 @@
             return;             
         }
 
-        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[15] === '-1' || savedQuizProgress[16] === '-1') { 
+        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[16] === '-1') { 
 
             console.log('moderate1')
             resultLevel = 'moderate';   
@@ -1426,9 +1426,8 @@ Do you know if I do%3F");
     }
 
     function prevQuestion(){
-        if(_currentQuestion > 0){
 
-            console.log(_currentQuestion)
+        if(_currentQuestion > 0){
 
             console.log(savedQuizProgress[7])
             if (_currentQuestion == 9 && savedQuizProgress[7] == '+1') {
@@ -1495,6 +1494,8 @@ Do you know if I do%3F");
             if(_currentQuestion == 0){
                 $('.assessment-dots .btn-back').removeClass('active')
             }
+            console.log(_currentQuestion)
+
         }
     }
     function nextVignette() {

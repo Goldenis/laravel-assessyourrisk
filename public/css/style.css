@@ -1236,7 +1236,6 @@ input[type="checkbox"], input[type="radio"] {
   position: absolute;
   overflow: hidden;
   cursor: pointer;
-  opacity: 0;
 }
 .intro #wheel-base {
   position: absolute;

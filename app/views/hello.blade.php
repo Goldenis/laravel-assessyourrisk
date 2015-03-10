@@ -632,9 +632,6 @@
 	            <div class="drink" data-answer-id="5"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="6"><img src="img/assessment/drink_fill.png"></div>
 	            <div class="drink" data-answer-id="7"><img src="img/assessment/drink_fill.png"></div>
-	            <div class="drink" data-answer-id="8"><img src="img/assessment/drink_fill.png"></div>
-	            <div class="drink" data-answer-id="9"><img src="img/assessment/drink_fill.png"></div>
-	            <div class="drink" data-answer-id="10"><img src="img/assessment/drink_fill.png"></div>
 	            <br><br><br>
 	            <button>Continue</button>
 	          </div>

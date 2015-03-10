@@ -398,7 +398,10 @@
         $('.facebook.lifestyle').on('click', function() {
             console.log('clicked')
 
-            $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles')
+            $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles');
+
+            $('.lifestyle-pledge-number').next().text('');
+
             $('.facebook.lifestyle').css({
                 display: "none"
             })
@@ -419,6 +422,9 @@
             console.log('clicked')
 
             $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
+
+            $('.knowing-pledge-number').next().text('');
+
             $('.facebook.knowing').css({
                 display: "none"
             })
@@ -440,6 +446,9 @@
             console.log('clicked')
 
             $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
+
+            $('.family-pledge-number').next().text('');
+
             $('.facebook.family').css({
                 display: "none"
             })
@@ -1009,6 +1018,10 @@
                 savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
                 savedQuizProgress[String(_currentQuestion)] = ansTxt;
                 updateCharts();
+
+                console.log('Object savedQuizProgress = ', savedQuizProgress)
+                console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+                
                 return;
         };
 
@@ -1092,7 +1105,8 @@
         }
 
         updateCharts();
-        addResultCopy(resultLevel);  
+        addResultCopy(resultLevel);
+        addCustomResults();  
         console.log('Object savedQuizProgress = ', savedQuizProgress)
 
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)

@@ -112,6 +112,8 @@
             minS = .7;
             $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
+            $('.vignettes h3').eq(1).html('Normal')
+            $('.vignettes h3').eq(2).html('Family')
             if(_winW > _winH){
                 $('.landscape-overlay').addClass('active')    
             }else{
@@ -122,6 +124,8 @@
             _lapScreen = false;
             _airScreen = true;
             minS = .8;
+            $('.vignettes h3').eq(1).html('Know Your Normal')
+            $('.vignettes h3').eq(2).html('Family & Health History')
             $('.module-hero h1').eq(1).html('Your Normal')
             $('.module-hero h1').eq(2).html('Family History')
             $('.landscape-overlay').removeClass('active')
@@ -130,6 +134,8 @@
             _airScreen = false;
             _lapScreen = true;
             minS = .8;
+            $('.vignettes h3').eq(1).html('Know Your Normal')
+            $('.vignettes h3').eq(2).html('Family & Health History')
             $('.module-hero h1').eq(1).html('Knowing Your Normal')
             $('.module-hero h1').eq(2).html('Family & Health History')
             $('.landscape-overlay').removeClass('active')
@@ -561,6 +567,7 @@
         })
         $('.module-hero').on('click', function() {
             changeModule($(this).index());
+            $('.menu-icon').addClass('module-open')
         })
         $('.progress-overlay .vignettes h3').on('click', function() {
             changeModule($('.progress-overlay .vignettes h3').index($(this)));
@@ -923,7 +930,7 @@
             return;             
         }
 
-        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[15] === '-1' || savedQuizProgress[16] === '-1') { 
+        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[16] === '-1') { 
 
             console.log('moderate1')
             resultLevel = 'moderate';   
@@ -1375,6 +1382,7 @@ Do you know if I do%3F");
             addCustomResults()
             setTimeout(function(){
                 openProgressOverlay();
+                $('.progress-overlay').scrollTop(500);
             },1000)
             $('.assessment .share').addClass('in')
             $('.results, .cards').css({
@@ -1426,9 +1434,8 @@ Do you know if I do%3F");
     }
 
     function prevQuestion(){
-        if(_currentQuestion > 0){
 
-            console.log(_currentQuestion)
+        if(_currentQuestion > 0){
 
             console.log(savedQuizProgress[7])
             if (_currentQuestion == 9 && savedQuizProgress[7] == '+1') {
@@ -1495,6 +1502,8 @@ Do you know if I do%3F");
             if(_currentQuestion == 0){
                 $('.assessment-dots .btn-back').removeClass('active')
             }
+            console.log(_currentQuestion)
+
         }
     }
     function nextVignette() {

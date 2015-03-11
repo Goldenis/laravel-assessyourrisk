@@ -494,10 +494,8 @@
             }
         })   
 
-        $('.progress-overlay .email-pdf').on('click', function() {
-            window.open('mailto:name@email.com?subject=111Here are the results of your risk assessment&amp;body=I thought you might find this information interesting','emailWindow');
-        closeEmailWindow();
-        })
+        //$('.progress-overlay .email-pdf').on('click', function() {
+
         $('.email-doctor').on('click', function() {
             console.log('click dr email');            
             $('.email-pdf-doctor').addClass('show-fields-dr');
@@ -506,8 +504,6 @@
         $('.sub.email').on('click', function() {
             console.log('click my email');
              $('.email-pdf-doctor').addClass('show-fields-user');
-            //var content = $('.email-content').text();
-            //window.open('mailto:name@email.com?subject=Here are the results of your risk assessment&amp;body=Your Questions %0D%0A' + content)
         })
 
         $('.email-fields-doctor button.cancel').on('click', function() {
@@ -531,10 +527,10 @@
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
-            //window.open('mailto:name@email.com?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
+            
         })
 
-        $('.mail-icon').on('click',shareMail);
+        //$('.mail-icon').on('click',shareMail());
 
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
@@ -1311,90 +1307,6 @@
 
     function askHandler(e) {
         e.stopPropagation();
-        switch ($(this).closest(".question").attr("data-question-id")) {
-            case "14":
-                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
-%0D%0A\
-%0D%0A\
-I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
-%0D%0A\
-%0D%0A\
-One of the questions I’d love your help answering is: \
-%0D%0A\
-%0D%0A\
-      Have any of your immediate family members (parent, sibling, grandparent or aunt/uncle) been diagnosed with any of the following%3F \
-%0D%0A\
-          - Breast cancer diagnosed at age 50 or under \
-%0D%0A\
-          - Triple negative (ER/PR/her2-) breast cancer \
-%0D%0A\
-          - More than one breast cancer (cancer in both breasts, or two separate breast cancers in one breast) \
-%0D%0A\
-          - Male breast cancer \
-%0D%0A\
-          - Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer \
-%0D%0A\
-          - Two or more close relatives with breast cancer at any age \
-%0D%0A\
-%0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F",'emailWindow');
-        closeEmailWindow();
-                break;
-            case "17":
-                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
-%0D%0A\
-%0D%0A\
-I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
-%0D%0A\
-%0D%0A\
-One of the questions I’d love your help answering is: \
-%0D%0A\
-%0D%0A\
-      Within one side of the family (both on mom’s side or both on dad’s side), is there breast cancer and one of the following cancers, either in one person or in more than one%3F \
-%0D%0A\
-          - Breast cancer diagnosed at age 50 or under \
-%0D%0A\
-          - Ovarian cancer \
-%0D%0A\
-          - Pancreatic cancer \
-%0D%0A\
-          - Thyroid cancer \
-%0D%0A\
-          - Uterine cancer \
-%0D%0A\
-          - Sarcoma cancer \
-%0D%0A\
-          - Leukemia or lymphoma \
-%0D%0A\
-          - Melanoma cancer \
-%0D%0A\
-          - Adrenocortical Carcinoma \
-%0D%0A\
-          - Stomach cancer \
-%0D%0A\
-          - Brain cancer \
-%0D%0A\
-%0D%0A\
-Do you know if anybody in the family has been diagnosed with any of these%3F",'emailWindow');
-        closeEmailWindow();
-                break;
-            case "20":
-                window.open("mailto:name@email.com?subject=Can you help me answer this%3F&body=Hello, \
-%0D%0A\
-%0D%0A\
-I’m using a tool created by Bright Pink that helps me assess my personal level of breast and ovarian cancer risk.  Family and health history is one of the most influential factors. \
-%0D%0A\
-%0D%0A\
-One of the questions I’d love your help answering is: \
-%0D%0A\
-%0D%0A\
-      Do you have one or more immediate family members (parent, sibling, grandparent, aunt/uncle) that have had breast cancer at age 50 or older%3F \
-%0D%0A\
-%0D%0A\
-Do you know if I do%3F",'emailWindow');
-        closeEmailWindow();
-                break;
-        }
     }
     
     function answerQuestion(answer) {
@@ -1825,20 +1737,3 @@ Do you know if I do%3F",'emailWindow');
 
     });
 })(jQuery);
-
-    function shareMail(){
-        var emailWindow = window.open("mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, \
-%0D%0A\
-%0D%0A\
-I want to share something important with you. \
-%0D%0A\
-%0D%0A\
-Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. \
-%0D%0A\
-%0D%0A\
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org .",'emailWindow');
-        closeEmailWindow();
-    }
-            function closeEmailWindow(){
-            
-        }    

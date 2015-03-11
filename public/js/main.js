@@ -494,7 +494,6 @@
             }
         })   
 
-        $('.progress-overlay .email-pdf').on('click', function() {
 
         $('.email-doctor').on('click', function() {
             console.log('click dr email');            

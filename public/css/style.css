@@ -1141,6 +1141,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
   min-width: 100px;
@@ -1902,7 +1905,7 @@ input[type="checkbox"], input[type="radio"] {
   margin: 1rem 0;
 }
 .education .headlines .legalese a {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .education .headlines .headline {
   width: 100%;
@@ -1956,7 +1959,7 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 1.4rem;
 }
 .education .headlines ul a {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .education.in {
   left: 0;

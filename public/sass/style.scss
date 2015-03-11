@@ -1150,7 +1150,7 @@ input[type="checkbox"], input[type="radio"] {
     }
     &.birth{
         img {
-        -webkit-transform: rotate(45deg);
+        @include transform(rotate(45deg));  
         width: 11rem;
         max-width: 205px;
         min-width: 100px;
@@ -1786,7 +1786,7 @@ input[type="checkbox"], input[type="radio"] {
             font-size: 1.1rem;
             margin: 1rem 0;
             a {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
         }
         .headline {
@@ -1834,7 +1834,7 @@ input[type="checkbox"], input[type="radio"] {
             font-size: 1.4rem;
             // text-shadow: 1px 1px 2px rgb(20,20,20);
             a {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
         }
     }

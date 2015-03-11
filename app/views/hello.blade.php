@@ -690,7 +690,7 @@
             <div class="checkbox" data-answer-id="2"><input type="checkbox" name="cancer-plus-chk" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" name="cancer-plus-chk" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" name="cancer-plus-chk" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma</div></div>
             <div class="checkbox" data-answer-id="6"><input type="checkbox" name="cancer-plus-chk" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
           <div class="checkbox-list column-right">
@@ -1078,7 +1078,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                   Text <b>STOP</b> to quit or <b>HELP</b> for info.  
                   Message and data rates may apply.  
                   No purchase necessary.  Automated messages will be delivered to the phone number you provide at opt-in.  
-                  View Privacy Policy and Terms & Conditions <a href="http://www.brightpink.org/privacy-policy/">here</a>.
+                  View Privacy Policy and Terms & Conditions <a href="http://www.brightpink.org/privacy-policy/" target="_blank">here</a>.
                 </p>
               
               <!-- <button class="text-me">Text Me.</button> -->

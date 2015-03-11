@@ -35,7 +35,8 @@ class MailController extends \BaseController {
 			$email = Input::get ( 'email' );
 			$attachment = Input::get ( 'attachment' );
 			$isDoctor = Input::get ( 'isDoctor' );
-			 
+			$userName = Input::get ( 'userName' );
+			
 			$validator = Validator::make ( array (
 					'email' => $email,
 					'attachment' => $attachment
@@ -61,7 +62,7 @@ class MailController extends \BaseController {
 				}
 				
 				Log::info ( '>> Validator passed.' );
-				Mail::send($template, array(), function($message) use ($email, $attachment)
+				Mail::send($template, array('userName' => $userName), function($message) use ($email, $attachment)
 				{
 					
 					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";

@@ -18,7 +18,7 @@
   </style>
 </head>
 <body>
-<p class="p1">Dear Dr.  __________________</p>
+<p class="p1">Dear Dr. {{ $userName }}</p>
 <p class="p1"> </p>
 <p class="p1">I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.</p>
 <p class="p2"><br></p>

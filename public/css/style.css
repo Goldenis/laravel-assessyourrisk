@@ -581,6 +581,7 @@ button.sub:hover {
   color: #555558;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
+  padding: 6rem 6rem 0rem 6rem;
   margin-bottom: 2rem;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {

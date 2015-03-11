@@ -149,9 +149,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 
           <!-- Increased (Moderate) -->
             <div class="results-copy-moderate">
+              <h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
               <div class="column">
-                  <!-- Added warning header -->
-                  <h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
                 <!-- paragraph-one (left) -->
                   <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>

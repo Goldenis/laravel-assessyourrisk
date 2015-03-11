@@ -534,7 +534,7 @@
             //window.open('mailto:name@email.com?subject=Saving your life&body=You’re welcome: http://www.brightpink.com/assessment','');
         })
 
-        //$('.mail-icon').on('click',shareMail);
+        $('.mail-icon').on('click',shareMail);
 
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {

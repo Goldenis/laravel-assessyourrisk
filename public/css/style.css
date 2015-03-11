@@ -2927,12 +2927,12 @@ footer {
   }
   .male-overlay h1 .share-btn a {
     margin-top: -40px;
-    -webkit-transition: all 0.6s 0 ease-out;
-    -moz-transition: all 0.6s 0 ease-out;
-    -o-transition: all 0.6s 0 ease-out;
-    -ms-transition: all 0.6s 0 ease-out;
-    transition: all 0.6s 0 ease-out;
-    -moz-transition-duration: 0.6s;
+    -webkit-transition: all 1.2s 0 ease-out;
+    -moz-transition: all 1.2s 0 ease-out;
+    -o-transition: all 1.2s 0 ease-out;
+    -ms-transition: all 1.2s 0 ease-out;
+    transition: all 1.2s 0 ease-out;
+    -moz-transition-duration: 1.2s;
     -moz-transition-property: all;
     -moz-transition-delay: 0;
   }

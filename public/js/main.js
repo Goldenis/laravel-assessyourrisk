@@ -361,6 +361,11 @@
             window._currentPath = '/assessment';
             $.address.path('/assessment');
             //$.address.path('/assessment');
+            
+            woopra.track("click", {
+                intent: "begin",
+                type: "button"
+            });
         })
 
 //buttons
@@ -390,6 +395,10 @@
         });
 
         $('.testPDF, .pdf').on('click', function() {
+        	woopra.track("click", {
+                intent: "getPDF",
+                type: "button"
+            });
             isDoctorEmail = null;
             createPinkPDF(resultLevel);
         })
@@ -397,7 +406,13 @@
 
         $('.facebook.lifestyle').on('click', function() {
             console.log('clicked')
-
+            
+            woopra.track("click", {
+                intent: "pledge",
+                location: "lifestyle",
+                type: "button"
+            });
+            
             $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles');
 
             $('.lifestyle-pledge-number').next().text('');
@@ -420,7 +435,13 @@
 
         $('.facebook.knowing').on('click', function() {
             console.log('clicked')
-
+            
+            woopra.track("click", {
+                intent: "pledge",
+                location: "knowing",
+                type: "button"
+            });
+            
             $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
 
             $('.knowing-pledge-number').next().text('');
@@ -444,7 +465,13 @@
 
         $('.facebook.family').on('click', function() {
             console.log('clicked')
-
+            
+            woopra.track("click", {
+                intent: "pledge",
+                location: "family",
+                type: "button"
+            });
+            
             $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
 
             $('.family-pledge-number').next().text('');
@@ -482,11 +509,25 @@
 
         $('.paragraph-box .read-more').on('click', function() {
             if($(this).html() == 'Read More'){
+            	
+            	woopra.track("click", {
+                    intent: "expand",
+                    location: "Read More",
+                    type: "button"
+                });
+            	
                 $(this).html('Read Less');
                 $('.more-results').css({
                     display: 'block'
                 })
             }else{
+            	
+            	woopra.track("click", {
+                    intent: "collapse",
+                    location: "Read More",
+                    type: "button"
+                });
+            	
                 $(this).html('Read More');
                 $('.more-results').css({
                     display: 'none'
@@ -496,12 +537,27 @@
 
 
         $('.email-doctor').on('click', function() {
-            console.log('click dr email');            
+            console.log('click dr email');
+            
+            woopra.track("click", {
+                intent: "email",
+                location: "doctor",
+                type: "button"
+            });
+            
             $('.email-pdf-doctor').addClass('show-fields-dr');
         })
 
         $('.sub.email').on('click', function() {
             console.log('click my email');
+            
+            woopra.track("click", {
+                intent: "email",
+                location: "mydelf",
+                type: "button"
+            });
+            
+            
              $('.email-pdf-doctor').addClass('show-fields-user');
         })
 
@@ -514,19 +570,37 @@
         
         $('.sub.send-dr-email').on('click', function() {
             console.log('drclick')
+            
+            woopra.track("click", {
+                intent: "complete email",
+                location: "doctor",
+                type: "button"
+            });
+            
             isDoctorEmail = true;
             console.log(isDoctorEmail)
             createPinkPDF(resultLevel);
         })
         $('.sub.send-user-email').on('click', function() {
             console.log('userclick')
+            
+            woopra.track("click", {
+                intent: "complete email",
+                location: "user",
+                type: "button"
+            });
+            
             isDoctorEmail = false;
             console.log(isDoctorEmail)
             createPinkPDF(resultLevel);
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
-            
+        	woopra.track("click", {
+                intent: "share",
+                location: "social",
+                type: "button"
+            });
         })
 
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
@@ -562,11 +636,21 @@
             $(this).next().removeClass("show")
         })
         $('.assess').on('click', function() {
+        	woopra.track("click", {
+                intent: "toggle",
+                location: "assessment",
+                type: "button"
+            });
             toggleColumn();
             window._currentPath = '/assessment';
             $.address.value('/assessment');
         })
         $('.understand').on('click', function() {
+        	woopra.track("click", {
+                intent: "toggle",
+                location: "education",
+                type: "button"
+            });
             toggleColumn();
             window._currentPath = '/education';
             $.address.value('/education');
@@ -602,6 +686,11 @@
             changeModule($(this).index());
         })
         $('.text-me').on('click', function() {
+        	woopra.track("click", {
+                intent: "text me",
+                location: "reminders",
+                type: "button"
+            });
             window.open('http://www.brightpink.org/awareness-to-action/breast-health-reminders/');
         })
         $('.btn-begin').on('click', function() {
@@ -702,7 +791,13 @@
     }
 
     function hideIntro() {
-
+    	
+    	woopra.track("click", {
+            intent: "navigate",
+            location: "hide intro",
+            type: "button"
+        });
+    	
         console.log('hideIntro');
          // $('.logo').css('opacity', 1);
          TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
@@ -714,6 +809,13 @@
     };
 
     function goHome(){
+    	
+    	woopra.track("click", {
+            intent: "navigate",
+            location: "home",
+            type: "button"
+        });
+    	
         console.log('goHome');
         TweenLite.to($('.logo'), .5, {opacity: 1, delay: 0});
         TweenLite.to($('.intro'), .5, {opacity: 1, delay: 1});
@@ -918,6 +1020,13 @@
 
         lastDeepSave = id;
         updateCharts();
+//TODO         
+        // user progress the the 
+        woopra.track("progress", {
+            module: _currentModule,
+            vignette: _currentVignette,
+            headline: _currentHeadline.index()
+        });
     }
 
 

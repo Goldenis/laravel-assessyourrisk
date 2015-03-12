@@ -52,8 +52,8 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-      <a href="http://www.brightpink.org/" target="_blank"><img src="img/AssessYourRiskLogo_horizontal_RGB_BPlockup.png"></a>
-
+      <a href="http://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png") }}></a>
+      
     </div>
     <div class="email-content"></div>
     <div class="overlay male-overlay">
@@ -534,7 +534,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         <div class="assess">
           <h4>Assess<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_left.png"></div>
-          <div class="logo-white"><img src="img/AssessYourRiskLogo_horizontal_RGB_BPlockup.png"></div>
+          <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
+          <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png') }}></div>
         </div>
       </div>
     </div>

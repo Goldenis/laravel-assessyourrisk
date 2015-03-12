@@ -1362,7 +1362,7 @@
     
 //previous cancer history
       if (savedQuizProgress[2] === '-1') { 
-            $('.triggered-cancer-copy').addClass('show');
+            $('.triggered-cancer-copy').addClass('showable');
         }
 
 //supress cards when 40+ is selected 

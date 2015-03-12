@@ -1104,7 +1104,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .logo {
   position: absolute;
-  top: 1.5rem;
+  top: 3rem;
   left: 3rem;
   margin-left: 0px;
   opacity: 0;
@@ -1116,8 +1116,8 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
 }
 .logo img {
-  width: 10rem;
-  max-width: 205px;
+  width: 20rem;
+  max-width: 200px;
   min-width: 140px;
 }
 .logo-white {

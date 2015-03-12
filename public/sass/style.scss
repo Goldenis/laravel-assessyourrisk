@@ -1100,7 +1100,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .logo {
     position: absolute;
-    top: 1.5rem;
+    top: 3rem;
     left: 3rem;
     margin-left: 0px;
     opacity: 0;
@@ -1115,8 +1115,8 @@ input[type="checkbox"], input[type="radio"] {
     //opacity: 0;
     //@include transition(.5s);
     img {
-        width: 10rem;
-        max-width: 205px;
+        width: 20rem;
+        max-width: 240px;
         min-width: 140px;
     }
 }

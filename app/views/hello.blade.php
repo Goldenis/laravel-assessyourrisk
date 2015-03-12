@@ -166,14 +166,16 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
                   It’s a great thing that you’ve identified this risk and are here learning more about the <a href="http://www.brightpink.org/what-you-need-to-know/reduce-your-risk/" target="_blank">risk-reduction</a> and <a href="http://www.brightpink.org/what-you-need-to-know/early-detection/" target="_blank">early detection</a> options that are available to you.  
                   Living a proactive lifestyle is one of the most important things you can do.
                   </p>
-                  <div class="triggered-cancer-copy increased more-results">
-                    <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
-                      <p>
-                        The recommendation above regarding genetic testing is particularly relevant to you.  
-                        <b>If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher.</b>  
-                        (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.)  
-                        And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
-                      </p>
+                  <div class="more-results">
+                    <div class="triggered-cancer-copy increased">
+                      <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
+                        <p>
+                          The recommendation above regarding genetic testing is particularly relevant to you.  
+                          <b>If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher.</b>  
+                          (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.)  
+                          And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
+                        </p>
+                    </div>
                   </div>
               </div>
               <!-- column-two (right) -->

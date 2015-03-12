@@ -576,7 +576,7 @@ button {
         .triggered-cancer-copy {
             padding: 2rem 0;
             display: none !important;
-            &.show{
+            &.showable{
                 display: block !important; 
             }
         }
@@ -2185,7 +2185,7 @@ footer {
             .triggered-cancer-copy {
                 padding: 2rem 0 0;
                 display: none !important;
-                &.show{
+                &.showable{
                     display: block !important; 
                 }
             }

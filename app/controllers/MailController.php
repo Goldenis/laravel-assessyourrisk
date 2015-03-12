@@ -67,7 +67,7 @@ class MailController extends \BaseController {
 					
 					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";
 					
-					$message->from('nickvelloff@theexperiment.io', 'Nick Velloff');
+					$message->from('assessyourrisk@brightpink.org');
 					$message->to($email); //->cc("trevorobrien@theexperiment.io");
 					$message->subject($messageSubject);	
 					$pdf_encoded = base64_decode($attachment);

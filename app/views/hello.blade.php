@@ -13,8 +13,22 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
+    
+    <!-- Start of Woopra Code -->
     <script>
+    (function(){
+            var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
 
+    woopra.config({
+        domain: 'brightpink.com'
+    });
+    woopra.track();
+    </script>
+    <!-- End of Woopra Code -->
+    
+    <script>
+    
     function fb_share(url, title, descr, image) {
     FB.ui( {
         method: 'feed',
@@ -38,8 +52,8 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-      <a href="http://www.brightpink.org/" target="_blank"><img src="img/brightpink_logo.png"></a>
-
+      <a href="http://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png") }}></a>
+      
     </div>
     <div class="email-content"></div>
     <div class="overlay male-overlay">
@@ -118,15 +132,17 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
                 This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer.  
                 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about <a href="http://www.brightpink.org/what-you-need-to-know/reduce-your-risk/" target="_blank">risk-reduction</a> and <a href="http://www.brightpink.org/what-you-need-to-know/early-detection/" target="_blank">early detection</a> is still important.
                 </p>
-                <div class="triggered-cancer-copy average more-results">
-                  <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
-                    <p>
-                      It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk.  
-                      The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway).  
-                      <b>And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it.</b>  
-                      This testing will help determine if your cancer was likely the result of a gene mutation.  
-                      If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor.
-                    </p>
+                <div class="more-results">
+                  <div class="triggered-cancer-copy average">
+                    <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
+                      <p>
+                        It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk.  
+                        The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway).  
+                        <b>And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it.</b>  
+                        This testing will help determine if your cancer was likely the result of a gene mutation.  
+                        If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor.
+                      </p>
+                  </div>
                 </div>
               </div>
               <!-- paragraph-two (right) -->
@@ -149,9 +165,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 
           <!-- Increased (Moderate) -->
             <div class="results-copy-moderate">
+              <h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
               <div class="column">
-                  <!-- Added warning header -->
-                  <h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
                 <!-- paragraph-one (left) -->
                   <h3 class="column-header">Understanding Your Baseline Risk</h3>
                   <p>
@@ -167,14 +182,16 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
                   It’s a great thing that you’ve identified this risk and are here learning more about the <a href="http://www.brightpink.org/what-you-need-to-know/reduce-your-risk/" target="_blank">risk-reduction</a> and <a href="http://www.brightpink.org/what-you-need-to-know/early-detection/" target="_blank">early detection</a> options that are available to you.  
                   Living a proactive lifestyle is one of the most important things you can do.
                   </p>
-                  <div class="triggered-cancer-copy increased more-results">
-                    <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
-                      <p>
-                        The recommendation above regarding genetic testing is particularly relevant to you.  
-                        <b>If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher.</b>  
-                        (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.)  
-                        And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
-                      </p>
+                  <div class="more-results">
+                    <div class="triggered-cancer-copy increased">
+                      <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
+                        <p>
+                          The recommendation above regarding genetic testing is particularly relevant to you.  
+                          <b>If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher.</b>  
+                          (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.)  
+                          And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
+                        </p>
+                    </div>
                   </div>
               </div>
               <!-- column-two (right) -->
@@ -221,12 +238,14 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
                   This is significant, so it’s a great thing that you’ve identified this risk and are here learning more about the <a href="http://www.brightpink.org/what-you-need-to-know/reduce-your-risk/#high-risk-reduction" target="_blank">risk-reduction</a> and <a href="http://www.brightpink.org/what-you-need-to-know/early-detection/#high-risk-screening-recommendation" target="_blank">early detection</a> options that are available to you.  
                   Living a proactive lifestyle is one of the most important things you can do!
                 </p>
-                <div class="triggered-cancer-copy high">
-                  <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
-                    <p>
-                      Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis.  
-                      We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
-                    </p>
+                <div class="more-results">
+                  <div class="triggered-cancer-copy high">
+                    <h5 class="column-header pink-text">Since You've Been Diagnosed With Breast or Ovarian Cancer:</h5>
+                      <p>
+                        Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis.  
+                        We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate.
+                      </p>
+                  </div>
                 </div>
               </div>
               <!-- paragraph-two (right) -->
@@ -520,7 +539,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         <div class="assess">
           <h4>Assess<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_left.png"></div>
-          <div class="logo-white"><img src="img/brightpink_logo_white.png"></div>
+          <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
+          <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png') }}></div>
         </div>
       </div>
     </div>
@@ -737,7 +757,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="2"><input type="checkbox" name="cancer-plus-chk" data-answer-id="2|-1"><div class="label">Pancreatic cancer</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" name="cancer-plus-chk" data-answer-id="3|-1"><div class="label">Thyroid cancer</div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" name="cancer-plus-chk" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
-            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma cancer</div></div>
+            <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma</div></div>
             <div class="checkbox" data-answer-id="6"><input type="checkbox" name="cancer-plus-chk" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
           </div>
           <div class="checkbox-list column-right">
@@ -1180,7 +1200,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                   Text <b>STOP</b> to quit or <b>HELP</b> for info.  
                   Message and data rates may apply.  
                   No purchase necessary.  Automated messages will be delivered to the phone number you provide at opt-in.  
-                  View Privacy Policy and Terms & Conditions <a href="http://www.brightpink.org/privacy-policy/">here</a>.
+                  View Privacy Policy and Terms & Conditions <a href="http://www.brightpink.org/privacy-policy/" target="_blank">here</a>.
                 </p>
               
               <!-- <button class="text-me">Text Me.</button> -->

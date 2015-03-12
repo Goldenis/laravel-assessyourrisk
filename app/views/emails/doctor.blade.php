@@ -18,11 +18,11 @@
   </style>
 </head>
 <body>
-<p class="p1">Dear Dr. {{ $userName }}</p>
+<p class="p1">Dear Doctor,</p>
 <p class="p1"> </p>
 <p class="p1">I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.</p>
 <p class="p2"><br></p>
-<p class="p1">Thank you!</p>
+<p class="p1">Thank you, {{ $userName }}</p>
 <p class="p2"><br></p>
 <p class="p1"><b><i>About Bright Pink and the Assess Your Risk Quiz </i></b></p>
 <p class="p1">Bright Pink is the only national non-profit organization focused on the prevention and early detection of breast and ovarian cancer in young women. Visit <span class="s1">BrightPink.org</span> to learn more about the organization and <span class="s1">AssessYourRisk.org</span> to see the quiz that produced these results. Bright Pink also provides resources for physicians to support the management of patient breast and ovarian cancer risk at <span class="s1">BrightPink.org/Medical-Professionals</span>.</p>

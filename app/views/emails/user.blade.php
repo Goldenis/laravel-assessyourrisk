@@ -18,6 +18,6 @@
   </style>
 </head>
 <body>
-<p class="p1">This is the version that will be sent to the user.</p>
+<p class="p1">Hi {{ $userName }}. Attached is a PDF copy of your results from the Bright Pink Assessment tool.  Thanks for taking part.</p>
 </body>
 </html>

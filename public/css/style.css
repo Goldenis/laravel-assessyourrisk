@@ -513,7 +513,7 @@ button.sub:hover {
   padding: 2rem 0;
   display: none !important;
 }
-.progress-overlay .results .triggered-cancer-copy.show {
+.progress-overlay .results .triggered-cancer-copy.showable {
   display: block !important;
 }
 .progress-overlay .results .paragraph-wrapper {
@@ -581,7 +581,8 @@ button.sub:hover {
   color: #555558;
 }
 .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
-  margin-bottom: 2rem;
+  padding: 6rem 6rem 0rem 6rem;
+  margin-bottom: -3rem;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
   position: absolute;
@@ -740,7 +741,7 @@ button.sub:hover {
   display: none;
 }
 .progress-overlay .cards .card-intro-text {
-  padding: 4rem 20rem;
+  padding: 4rem 20rem 8rem;
 }
 .progress-overlay .cards .card-intro-text p {
   font-size: 1.8rem;
@@ -1103,7 +1104,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .logo {
   position: absolute;
-  top: 1.5rem;
+  top: 3rem;
   left: 3rem;
   margin-left: 0px;
   opacity: 0;
@@ -1115,8 +1116,8 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
 }
 .logo img {
-  width: 10rem;
-  max-width: 205px;
+  width: 20rem;
+  max-width: 240px;
   min-width: 140px;
 }
 .logo-white {
@@ -1142,6 +1143,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 .anim-gif.birth img {
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 11rem;
   max-width: 205px;
   min-width: 100px;
@@ -1903,7 +1907,7 @@ input[type="checkbox"], input[type="radio"] {
   margin: 1rem 0;
 }
 .education .headlines .legalese a {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .education .headlines .headline {
   width: 100%;
@@ -1957,7 +1961,7 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 1.4rem;
 }
 .education .headlines ul a {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .education.in {
   left: 0;
@@ -2412,7 +2416,7 @@ footer {
     padding: 2rem 0 0;
     display: none !important;
   }
-  .progress-overlay .results .triggered-cancer-copy.show {
+  .progress-overlay .results .triggered-cancer-copy.showable {
     display: block !important;
   }
   .progress-overlay .results .paragraph-wrapper {

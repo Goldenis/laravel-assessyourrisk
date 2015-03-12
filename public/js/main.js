@@ -494,15 +494,18 @@
             }
         })   
 
-        //$('.progress-overlay .email-pdf').on('click', function() {
 
         $('.email-doctor').on('click', function() {
-            console.log('click dr email');            
+            console.log('click dr email');       
+                // cancels the form submission
+            event.preventDefault();     
             $('.email-pdf-doctor').addClass('show-fields-dr');
         })
 
         $('.sub.email').on('click', function() {
             console.log('click my email');
+                // cancels the form submission
+             event.preventDefault();
              $('.email-pdf-doctor').addClass('show-fields-user');
         })
 

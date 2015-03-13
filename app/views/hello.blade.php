@@ -832,7 +832,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
         </div>
 
         <div class="question" data-question-id="20">
-          <div class="prompt">Do you have one or more <span class="pink-text">immediate family members</span> (parent, sibling, grandparent, aunt or uncle) that have had breast cancer at age 50 or older?</div>
+          <div class="prompt">Do you have one or more <span class="pink-text">immediate family members</span> (parent, sibling, grandparent, aunt or uncle) that have had breast cancer <span class="pink-text">at age 50 or older</span>?</div>
         
           <div class="answers">
             <button data-answer-id="-1">Yes</button>

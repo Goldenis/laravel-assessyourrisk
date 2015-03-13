@@ -613,7 +613,7 @@ button.sub:hover {
   float: left;
   margin-right: 6rem;
   top: 6px;
-  width: 50%;
+  width: 33%;
   text-align: left;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
@@ -1156,6 +1156,7 @@ input[type="checkbox"], input[type="radio"] {
   min-width: 100px;
 }
 .menu-icon {
+  display: none;
   z-index: 100000000;
   position: absolute;
   top: 100px;

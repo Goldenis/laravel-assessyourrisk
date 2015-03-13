@@ -537,8 +537,8 @@
 
 
         $('.email-doctor').on('click', function() {
-            console.log('click dr email');
-            
+            event.preventDefault();     
+     
             woopra.track("click", {
                 intent: "email",
                 location: "doctor",
@@ -550,6 +550,8 @@
 
         $('.sub.email').on('click', function() {
             console.log('click my email');
+                // cancels the form submission
+             event.preventDefault();
             
             woopra.track("click", {
                 intent: "email",
@@ -558,7 +560,7 @@
             });
             
             
-             $('.email-pdf-doctor').addClass('show-fields-user');
+            $('.email-pdf-doctor').addClass('show-fields-user');
         })
 
         $('.email-fields-doctor button.cancel').on('click', function() {
@@ -602,6 +604,8 @@
                 type: "button"
             });
         })
+
+        //$('.mail-icon').on('click',shareMail());
 
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
@@ -1045,7 +1049,7 @@
             return;             
         }
 
-        if (savedQuizProgress[2] === '-1' || savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("11|+1", savedQuizProgress[10]) ===-1 ) || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[16] === '-1') { 
+        if (savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("12|0", savedQuizProgress[10]) ===-1 )|| savedQuizProgress[11] === '-1' || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[16] === '-1') { 
 
             console.log('moderate1')
             resultLevel = 'moderate';   
@@ -1055,12 +1059,13 @@
             return;
         }
   
+        else {
             console.log('average')       
             resultLevel = 'average';   
             $('.risk-level').html('Average');
         //using result level for pdf work
             $('.results-copy-average').addClass('on');   
-
+        }
     }
 
 

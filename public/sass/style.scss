@@ -1414,6 +1414,9 @@ input[type="checkbox"], input[type="radio"] {
             cursor: pointer;
             left: 50px;
             //@include transition(.3s,ease-out,-webkit-transform);
+            img{
+                left:-50%;
+            }
         }
         .drinks {
             margin-top: 80px;

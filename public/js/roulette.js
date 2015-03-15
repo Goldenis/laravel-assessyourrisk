@@ -1,4 +1,23 @@
+function cloneToDoc(node,doc){
+	var doc = doc || document;
+	var clone = doc.createElementNS(node.namespaceURI,node.nodeName);
+	for (var i=0,len=node.attributes.length;i<len;++i){
+		var a = node.attributes[i];
+		if (/^xmlns\b/.test(a.nodeName)) continue; // IE can't create these
+		clone.setAttributeNS(a.namespaceURI,a.nodeName,a.nodeValue);
+	}
+	for (var i=0,len=node.childNodes.length;i<len;++i){
+		var c = node.childNodes[i];
+		clone.insertBefore(
+			c.nodeType==1 ? cloneToDoc(c,doc) : doc.createTextNode(c.nodeValue),
+			null
+		)
+	}
+	return clone;
+}
+
 var wheel = $(document).ready(
+
 		function() {
 			/*
 			 * SET doAllowDrag to false to disable the mouse spin
@@ -22,6 +41,7 @@ var wheel = $(document).ready(
 					return;
 				}
 				var svgNode = documentFragment.getElementsByTagName("svg")[0];
+
 				main_chart_div.node().appendChild(svgNode);
 				svg = main_chart_div.select("svg")
 				doSetHighlighted('you')

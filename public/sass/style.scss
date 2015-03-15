@@ -1964,6 +1964,8 @@ input[type="checkbox"], input[type="radio"] {
         @include transition(.5s, linear);
         .label {
             position: absolute;
+            -ms-transform: rotate(-90deg); /* IE 9 */
+            -ms-transform-origin: 50% 50%; /* IE 9 */
             @include transform(rotate(-90deg));
             @include transform-origin(50% 50%);
             top: 50%;

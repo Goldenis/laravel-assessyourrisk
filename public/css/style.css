@@ -2147,6 +2147,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .right-column .dashboard .label {
   position: absolute;
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -ms-transform-origin: 50% 50%;
+  /* IE 9 */
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);

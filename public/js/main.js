@@ -378,7 +378,15 @@
         });
 
         $('input[name="famdiag-check"]').change(function(){
-            $('#famdiag-check-btn').prop('disabled', !this.checked);
+            var allCheckboxes = $('input[name="famdiag-check"]');
+            var noneChecked = true;
+            allCheckboxes.each(function(index, item){
+                if (item.checked){
+                    noneChecked = false;
+                    return false;
+                }
+            });
+            $('#famdiag-check-btn').prop('disabled', noneChecked);
         });
 
         $('input[name="mutation-radio"]').change(function(){
@@ -386,7 +394,15 @@
         });
 
         $('input[name="cancer-plus-chk"]').change(function(){
-            $('#mobile-button-left').prop('disabled', !this.checked);
+            var allCheckboxes = $('input[name="cancer-plus-chk"]');
+            var noneChecked = true;
+            allCheckboxes.each(function(index, item){
+                if (item.checked){
+                    noneChecked = false;
+                    return false;
+                }
+            });
+            $('#mobile-button-left').prop('disabled', noneChecked);
         });
 
 
@@ -966,7 +982,7 @@
         // BMI = Formula: weight (lb) / [height (in)]2 x 703
         var BMI = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
         $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
-        console.log(BMI)
+       
         /*
         BMI
         Weight Status
@@ -1041,7 +1057,7 @@
         $('.results-copy-high').removeClass('on'); 
 
         if ($.inArray("1|-2", savedQuizProgress[8]) > -1 ) {
-            console.log('high')
+
             resultLevel = 'high';   
             $('.risk-level').html('High');
         //using result level for pdf work
@@ -1051,7 +1067,7 @@
 
         if (savedQuizProgress[7] === '-1' || ($.inArray("2|-1", savedQuizProgress[8]) !==-1) || ($.inArray("3|-1", savedQuizProgress[8]) !==-1) || ($.inArray("7|0", savedQuizProgress[5]) ===-1 )  || ($.inArray("12|0", savedQuizProgress[10]) ===-1 )|| savedQuizProgress[11] === '-1' || savedQuizProgress[12] === '-1' || savedQuizProgress[14] === '-1' || savedQuizProgress[16] === '-1') { 
 
-            console.log('moderate1')
+
             resultLevel = 'moderate';   
             $('.risk-level').html('Increased');
         //using result level for pdf work
@@ -1060,7 +1076,7 @@
         }
   
         else {
-            console.log('average')       
+  
             resultLevel = 'average';   
             $('.risk-level').html('Average');
         //using result level for pdf work
@@ -1102,7 +1118,7 @@
         if (_currentQuestion == 4 || _currentQuestion == 6 || _currentQuestion == 9  || _currentQuestion == 15 || _currentQuestion == 17 || _currentQuestion == 18) {
 
             if (_currentQuestion == 4) {
-                console.log(bmi)    
+  
                 answers = bmi + " BMI Result"
                 if (bmi < 18.5) {
                     ansTxt = "-1";
@@ -1130,9 +1146,7 @@
                 savedQuizProgress[String(_currentQuestion)] = ansTxt;
                 updateCharts();
 
-                console.log('Object savedQuizProgress = ', savedQuizProgress)
-                console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
-                
+              
                 return;
         };
 

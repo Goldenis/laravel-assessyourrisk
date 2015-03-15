@@ -1450,6 +1450,9 @@ input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
   left: 50px;
 }
+.assessment .drink-slider .bottle img {
+  left: -50%;
+}
 .assessment .drink-slider .drinks {
   margin-top: 80px;
 }

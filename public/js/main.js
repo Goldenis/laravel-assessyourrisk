@@ -724,6 +724,9 @@
             showNextHeadline();
         })
         $('.bottle').on('mousedown', function(e) {
+            if (e.which !== 1){
+                return;
+            }
             e.preventDefault();
             var x = e.pageX;
             var distance = 0;

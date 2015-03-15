@@ -1126,8 +1126,8 @@ input[type="checkbox"], input[type="radio"] {
   margin-left: 0px;
 }
 .logo-white img {
-  width: 12rem;
-  max-width: 185px;
+  width: 18rem;
+  max-width: 250px;
 }
 .anim-gif {
   position: absolute;
@@ -2204,6 +2204,32 @@ input[type="checkbox"], input[type="radio"] {
   width: 100%;
   left: 0;
 }
+.right-column .copyright {
+  position: absolute;
+  bottom: 0px;
+  z-index: 200;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0 10% 0.7rem;
+}
+@media (max-width: 600px) {
+  .right-column .copyright {
+    display: none;
+    width: 100%;
+    padding: 0.7rem 2rem;
+  }
+}
+.right-column .copyright .legal a {
+  font-size: 1rem;
+}
+@media (min-width: 600px) {
+  .right-column .copyright .legal a:hover {
+    color: #fff;
+  }
+}
+.right-column .copyright .legal a:last-child {
+  white-space: nowrap;
+}
 .question {
   position: absolute;
   display: block;
@@ -2670,8 +2696,8 @@ footer {
     margin-left: -4px;
   }
   .logo img {
-    min-width: 90px;
-    width: 90px;
+    min-width: 160px;
+    width: 160px;
   }
   .logo-white {
     display: none;
@@ -2989,7 +3015,7 @@ footer {
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    top: -5px;
+    top: 10px;
   }
   .intro .wheel-container.shrink {
     -webkit-transition: all 1s 0 ease-in-out;
@@ -3032,7 +3058,7 @@ footer {
   }
   .assessment {
     width: 100%;
-    padding: 5.5rem 2.5rem 0;
+    padding: 6.5rem 2.5rem 0;
   }
   .assessment #height-question {
     height: 300px;

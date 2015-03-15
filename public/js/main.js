@@ -536,7 +536,7 @@
         })   
 
 
-        $('.email-doctor').on('click', function() {
+        $('.email-doctor').on('click', function(event) {
             event.preventDefault();     
      
             woopra.track("click", {
@@ -548,7 +548,7 @@
             $('.email-pdf-doctor').addClass('show-fields-dr');
         })
 
-        $('.sub.email').on('click', function() {
+        $('.sub.email').on('click', function(event) {
             console.log('click my email');
                 // cancels the form submission
              event.preventDefault();

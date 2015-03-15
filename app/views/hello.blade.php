@@ -21,7 +21,7 @@
     })("woopra");
 
     woopra.config({
-        domain: 'brightpink.com'
+        domain: 'assessyourrisk.org'
     });
     woopra.track();
     </script>
@@ -452,7 +452,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         <h3>Assess Your Risk<br></h3>
         </div>
         <div class="lets-go">
-        <h3>Let’s Start.<br></h3>
+        <h3>Let’s Go<br></h3>
         </div>
         <div class="understand">
           <h4>Understand<br>Your Risk<br></h4>
@@ -543,6 +543,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png') }}></div>
         </div>
       </div>
+      <div class="copyright">Copyright &copy; <?php echo date("Y"); ?> Bright Pink <div class="legal"><a href="">Privacy Policy</a> <a href="">Terms and Conditions</a></div></div>
     </div>
 
     <!-- ASSESSMENT-->

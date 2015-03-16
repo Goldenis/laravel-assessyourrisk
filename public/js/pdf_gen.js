@@ -1230,24 +1230,24 @@ switch (result) {
 }
 
   if (isDoctorEmail === true) {
-  	doPostPDF();
-    console.log('is true')
+  	doPostPDF(content);
+    console.log('is true');
     return;
   }
   else if (isDoctorEmail === false) {
-  	 doPostPDF();
-     console.log('is false')
+  	 doPostPDF(content);
+     console.log('is false');
      return;
   }
   else if (isDoctorEmail === null) {
     
-    console.log('is null')
+    console.log('is null');
     return;
   } 
 }
 
 function doPostPDF(content) {
-	console.log(isDoctorEmail)
+	console.log(isDoctorEmail);
   var emailAddress;
   var userName;
 

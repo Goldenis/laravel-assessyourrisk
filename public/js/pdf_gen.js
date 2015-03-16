@@ -1212,7 +1212,7 @@ var highResults = {
   }   
 }
 
-var pdf14isif;
+var poop;
 
 var downloadtest = function(url, data, method){
   //url and data options required
@@ -1225,7 +1225,7 @@ var downloadtest = function(url, data, method){
 
     //send request
     $.post(url, function(data) {
-		pdf14isif = data;
+		poop = data;
 	});
   }
 };
@@ -1261,12 +1261,12 @@ switch (result) {
   var attachment;
 
   if (isDoctorEmail === true) {
-    pdf14isif.getBase64(doPostPDF);
+    .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was
     console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-     pdf14isif.getBase64(doPostPDF);  
+     .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was 
      console.log('is false')
      return;
   }

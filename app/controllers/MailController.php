@@ -70,7 +70,7 @@ class MailController extends \BaseController {
 					$message->from('assessyourrisk@brightpink.org');
 					$message->to($email); //->cc("trevorobrien@theexperiment.io");
 					$message->subject($messageSubject);	
-					$pdf_encoded = base64_decode($attachment);
+					$pdf_encoded = $attachment;
 					$message->embedData($pdf_encoded, "results.pdf", "application/pdf");
 				});
 			}

@@ -1212,8 +1212,38 @@ var highResults = {
   }   
 }
 
+var pdf14isif;
 
-  switch (result) {
+var downloadtest = function(url, data, method){
+  //url and data options required
+  if(url && data){ 
+    //data can be string of parameters or array/object
+    data = jQuery.param(data);
+ 
+    // make the entire request against a url instead of as form params
+    url += '?' + data
+
+    //send request
+    $.post(url, function(data) {
+		pdf14isif = data;
+	});
+  }
+};
+
+var testpdfcontent = '<h1>YOUR BASELINE RISK IS: AVERAGE</h1><p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population. This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.</p><p>'+cancercontentlow+'</p><h2>WHAT TO DO NOW</h2><p>First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. <p>In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.</p>';
+       
+var data = {
+  doc: {
+    test: true,
+    document_type: 'pdf',
+    name: 'testy', 
+    document_content: testpdfcontent,
+    strict: 'none'
+  },
+  user_credentials: 'tKzuxFZubMdFGdQXRlV8'
+};
+
+switch (result) {
     case 'average':
       console.log('average');
       docDefinition = averageResults;
@@ -1231,17 +1261,17 @@ var highResults = {
   var attachment;
 
   if (isDoctorEmail === true) {
-    pdfMake.createPdf(docDefinition).getBase64(doPostPDF);
+    pdf14isif.getBase64(doPostPDF);
     console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-     pdfMake.createPdf(docDefinition).getBase64(doPostPDF);  
+     pdf14isif.getBase64(doPostPDF);  
      console.log('is false')
      return;
   }
   else if (isDoctorEmail === null) {
-    pdfMake.createPdf(docDefinition).open();
+    downloadtest("http://docraptor.com/docs", data);
     console.log('is null')
     return;
   } 

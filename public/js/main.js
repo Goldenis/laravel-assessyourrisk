@@ -1457,45 +1457,49 @@
         }
         $('.fact').eq(_currentQuestion).removeClass('in');
         $('.fact').eq(_currentQuestion).addClass('out');
-        switch (_currentQuestion) {
-            case 0:
-                if (answer.html() != "Yes") {
-                    $('.male-overlay').addClass('in');
-                    overlayOpen = true;
-                }
-                break;
-            case 1:
-                if (answer.html() == "Yes") {
-                    $('.male-overlay').addClass('in');
-                    overlayOpen = true;
-                }
-                break;
-        }
-        $('.progress-overlay .progress-question').eq(_currentQuestion).css({
-            opacity: .3
-        })
-        $('.question').eq(_currentQuestion).addClass('out-up')
-        $('.question').eq(_currentQuestion).removeClass('in')
+        // switch (_currentQuestion) {
+        //     case 0:
+        //         if (answer.html() != "Yes") {
+        //             $('.male-overlay').addClass('in');
+        //             overlayOpen = true;
+        //         }
+        //         break;
+        //     case 1:
+        //         if (answer.html() == "Yes") {
+        //             $('.male-overlay').addClass('in');
+        //             overlayOpen = true;
+        //         }
+        //         break;
+        // }
+        if(_currentQuestion == 0 && answer.html() !== "Yes"){
+                $('.male-overlay').addClass('in');
+                overlayOpen = true; 
+        } else {
+           $('.progress-overlay .progress-question').eq(_currentQuestion).css({
+               opacity: .3
+           })
+           $('.question').eq(_currentQuestion).addClass('out-up')
+           $('.question').eq(_currentQuestion).removeClass('in')
 
-        if (!$(this).hasClass('submit-weight')) {
-            handleSaveQuizAnswer(answer)
+           if (!$(this).hasClass('submit-weight')) {
+               handleSaveQuizAnswer(answer)
+           }
+           var _oldQuestion = _currentQuestion;
+           _currentQuestion++;
+           setTimeout(function() {
+               $('.fact').eq(_currentQuestion).addClass('in');
+               $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
+               $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
+               $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
+               $('.assessment-dots .btn-back').addClass('active')
+           }, 1000)
+           setTimeout(function(){
+               $('.assessment-wrap').scrollTop(0);
+           }, 500)
+           $('.question').eq(_currentQuestion).addClass('in')
+           $('.question').eq(_currentQuestion).removeClass('out-up') 
         }
-        var _oldQuestion = _currentQuestion;
-        _currentQuestion++;
-        setTimeout(function() {
-            $('.fact').eq(_currentQuestion).addClass('in');
-            $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
-            $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
-            $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
-            $('.assessment-dots .btn-back').addClass('active')
-        }, 1000)
-        setTimeout(function(){
-            $('.assessment-wrap').scrollTop(0);
-        }, 500)
-        $('.question').eq(_currentQuestion).addClass('in')
-        $('.question').eq(_currentQuestion).removeClass('out-up')
     }
-
     function prevQuestion(){
 
         if(_currentQuestion > 0){

@@ -1243,6 +1243,9 @@ switch (result) {
   var attachment;
 
   if (isDoctorEmail === true) {
+  	$.ajaxSetup({
+    	crossDomain: true
+	});
   	$.post('https://www.hypdf.com/htmltopdf', pdfParams, function(data) {
   		console.log(data);
   		console.log(data.url);

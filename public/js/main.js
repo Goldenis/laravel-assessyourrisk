@@ -1866,6 +1866,7 @@
             $('.right-column').addClass('active');
             $('.wheel-container').addClass('shrink');
         },6000)
+        $('input, textarea').placeholder(); // Initialize jquery-placeholder
 
     });
 })(jQuery);

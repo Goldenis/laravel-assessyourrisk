@@ -31,17 +31,21 @@
 @mixin center {
     left: 50%;
     top: 50%;
+    -ms-transform: translate(-50%, -50%);
     @include transform(translate(-50%, -50%));
 }
 @mixin centerH {
     left: 50%;
+    -ms-transform: translateX(-50%);
     @include transform(translateX(-50%));
 }
 @mixin centerV {
     top: 50%;
+    -ms-transform: translateY(-50%);
     @include transform(translateY(-50%));
 }
 @mixin transform($transform) {
+    -ms-transform: $transform;
     -webkit-transform: $transform;
     -moz-transform: $transform;
     -o-transform: $transform;
@@ -49,6 +53,7 @@
 }
 // REMOVE IF THERE IS NO 3D
 @mixin transform-origin($transformOrigin) {
+    -ms-transform-origin: $transformOrigin;
     -webkit-transform-origin: $transformOrigin;
     -moz-transform-origin: $transformOrigin;
 }
@@ -1481,6 +1486,7 @@ input[type="checkbox"], input[type="radio"] {
     left: 0;
     @include transition(.4s);
     top: 50%;
+    -ms-transform: translateY(-50%) !important;
     @include transform(translateY(-50%) !important);
     z-index: 3;
     a, a:visited {
@@ -1507,6 +1513,7 @@ input[type="checkbox"], input[type="radio"] {
         z-index: 3;
         padding: 0;
         text-align: left;
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
         h6 {
@@ -2568,6 +2575,7 @@ footer {
     .question {
         position: absolute;
         display: block;
+        -ms-transform: translateY(-50%);
         @include transform(translateY(-50%));
         top: 50%;
         visibility: hidden;
@@ -2624,6 +2632,7 @@ footer {
         &.in {
             visibility: visible;
             opacity: 1 !important;
+            -ms-transform: translateY(-50%);
             @include transform(translateY(-50%));
             @include transition(1s, ease-out, all, .5s);
             top: 50%;
@@ -2791,11 +2800,13 @@ footer {
             top: 10px;
             &.shrink{
                 @include transition(1s,ease-in-out);
+                -ms-transform: scale(.5) translateY(-50%) !important;
                 @include transform(scale(.5) translateY(-50px) !important);
             }
         }
         .intro-message {
             position: absolute;
+            -ms-transform: translate(0, 0);
             @include transform(translate(0, 0));
             right: 0;
             left: 0;
@@ -2820,6 +2831,7 @@ footer {
         padding: 6.5rem 2.5rem 0;
         #height-question {
             height: 300px;
+            -ms-transform: perspective(1000px) translateY(-50%);
             transform: perspective(1000px) translateY(-50%);
             top: 45%;
         }
@@ -3124,6 +3136,7 @@ footer {
             overflow-y: visible;
             overflow: visible;
             .visual{
+                -ms-transform: scale(.9);
                 @include transform(scale(.9));
             }
         }

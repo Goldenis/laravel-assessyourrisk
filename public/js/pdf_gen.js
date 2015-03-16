@@ -1212,18 +1212,7 @@ var highResults = {
   }   
 }
 
-var testpdfcontent = '<h1>YOUR BASELINE RISK IS: AVERAGE</h1><p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population. This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.</p><p>'+cancercontentlow+'</p><h2>WHAT TO DO NOW</h2><p>First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. <p>In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.</p>';
-
-var pdfParams = {
-	user: 'app29096163@heroku.com',
-	password: 'wSTMougxX0C8ptb',
-	test: true,
-	bucket: 'brightenup',
-	content: testpdfcontent,
-	//key: 'CHANGE_FILE_NAME.pdf',
-	public: true
-};
-
+var content = '<h1>YOUR BASELINE RISK IS: AVERAGE</h1><p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population. This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.</p><p>'+cancercontentlow+'</p><h2>WHAT TO DO NOW</h2><p>First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. <p>In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.</p>';
 
 switch (result) {
     case 'average':
@@ -1240,24 +1229,13 @@ switch (result) {
       break;
 }
 
-  var attachment;
-
   if (isDoctorEmail === true) {
-  	$.ajaxSetup({
-    	crossDomain: true
-	});
-  	$.post('https://www.hypdf.com/htmltopdf', pdfParams, function(data) {
-  		console.log(data);
-  		console.log(data.url);
-  	});
+
     console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-  	$.post('https://www.hypdf.com/htmltopdf', pdfParams, function(data) {
-  		console.log(data);
-  		console.log(data.url);
-  	});
+
      console.log('is false')
      return;
   }
@@ -1268,7 +1246,7 @@ switch (result) {
   } 
 }
 
-function doPostPDF(attachment) {
+function doPostPDF(content) {
 	console.log(isDoctorEmail)
   var emailAddress;
   var userName;
@@ -1287,7 +1265,7 @@ function doPostPDF(attachment) {
 		url : "/email",
 		data : {
 			email : emailAddress,
-			attachment : attachment,
+			content : content,
 			isDoctor : isDoctorEmail,
       userName : userName
 		}

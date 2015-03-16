@@ -33,16 +33,16 @@ class MailController extends \BaseController {
 		try {
 			$statusCode = 200;
 			$email = Input::get ( 'email' );
-			$attachment = Input::file ( 'attachment' );
+			$content = Input::get ('content');
 			$isDoctor = Input::get ( 'isDoctor' );
 			$userName = Input::get ( 'userName' );
 			
 			$validator = Validator::make ( array (
 					'email' => $email,
-					'attachment' => $attachment
+					'content' => $content
 			), array (
 					'email' => 'required|email',
-					'attachment' => 'required'
+					'content' => 'required'
 			) );
 				
 			if ($validator->fails ()) {
@@ -55,6 +55,30 @@ class MailController extends \BaseController {
 					$response ['errors'] [] = $message;
 				}
 			} else {
+
+				$url = "https://www.hypdf.com/htmltopdf";
+
+				$data = array(
+				  'user' => 'app29096163@heroku.com',
+				  'password' => 'wSTMougxX0C8ptb',
+				  'test' => 'true',
+				  'bucket' => 'brightenup',
+				  'public': 'true'
+				  'content' => $content
+				);
+
+				$opts = array('http' =>
+				  array(
+				      'method'  => 'POST',
+				      'header'  => 'Content-type: application/json',
+				      'content' => json_encode($data)
+				  )
+				);
+
+				$context = stream_context_create($opts);
+				$json = file_get_contents($url, false, $context);
+				$response = json_decode($json);
+				dd($response);
 
 				$template = 'emails.user';
 				if ($isDoctor == 'true') {
@@ -70,8 +94,6 @@ class MailController extends \BaseController {
 					$message->from('assessyourrisk@brightpink.org');
 					$message->to($email); //->cc("trevorobrien@theexperiment.io");
 					$message->subject($messageSubject);	
-					$pdf_encoded = $attachment;
-					$message->embedData($pdf_encoded, "results.pdf", "application/pdf");
 				});
 			}
 			// Send activation code to the user so he can activate the account

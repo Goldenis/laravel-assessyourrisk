@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
-    
+    <script type='application/javascript' src='/js/vendor/base64.min.js'></script>
+
     <!-- Start of Woopra Code -->
     <script>
     (function(){

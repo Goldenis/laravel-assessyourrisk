@@ -78,7 +78,7 @@ class MailController extends \BaseController {
 				$context = stream_context_create($opts);
 				$json = file_get_contents($url, false, $context);
 				$pdf = json_decode($json);
-                echo $pdf
+                echo $pdf;
 
 				$template = 'emails.user';
 				if ($isDoctor == 'true') {

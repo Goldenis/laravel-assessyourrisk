@@ -1214,7 +1214,7 @@ var highResults = {
 
 var poop;
 
-var downloadtest = function(url, data, method){
+var downloadtest = function(url, data, encode64){
   //url and data options required
   if(url && data){ 
     //data can be string of parameters or array/object
@@ -1225,6 +1225,11 @@ var downloadtest = function(url, data, method){
 
     //send request
     $.post(url, function(data) {
+    	if (encode64){
+    		poop = Base64.encode(data);
+    		doPostPDF(poop);
+    		return;
+    	}
 		poop = data;
 	});
   }
@@ -1261,12 +1266,15 @@ switch (result) {
   var attachment;
 
   if (isDoctorEmail === true) {
-    .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was
+    // .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was
+    downloadtest("http://docraptor.com/docs", data, true);
+
     console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-     .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was 
+     // .getBase64(doPostPDF); // need to convert pdf binary "poop" to base 64 here, this was where pdfMake was 
+     downloadtest("http://docraptor.com/docs", data, true);
      console.log('is false')
      return;
   }

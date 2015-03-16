@@ -78,7 +78,6 @@ class MailController extends \BaseController {
 				$context = stream_context_create($opts);
 				$json = file_get_contents($url, false, $context);
 				$pdf = json_decode($json);
-                echo $pdf;
 
 				$template = 'emails.user';
 				if ($isDoctor == 'true') {
@@ -86,7 +85,7 @@ class MailController extends \BaseController {
 				}
 				
 				Log::info ( '>> Validator passed.' );
-				Mail::send($template, array('userName' => $userName), function($message) use ($email)
+				Mail::send($template, array('userName' => $userName, 'pdf' => $pdf), function($message) use ($email)
 				{
 					
 					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";

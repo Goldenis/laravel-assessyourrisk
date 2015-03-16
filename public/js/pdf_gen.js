@@ -1230,12 +1230,12 @@ switch (result) {
 }
 
   if (isDoctorEmail === true) {
-
+  	doPostPDF();
     console.log('is true')
     return;
   }
   else if (isDoctorEmail === false) {
-
+  	 doPostPDF();
      console.log('is false')
      return;
   }
@@ -1267,7 +1267,7 @@ function doPostPDF(content) {
 			email : emailAddress,
 			content : content,
 			isDoctor : isDoctorEmail,
-      userName : userName
+      		userName : userName
 		}
 	}).done(function(msg) {
 		isDoctorEmail = null;

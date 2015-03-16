@@ -22,7 +22,7 @@
 <p class="p2"><br></p>
 <p class="p1">Below is a link to download a copy of your results from Bright Pink's breast and ovarian cancer assessment.</p>
 <p class="p2"><br></p>
-<p class="p1">{{ $pdf }}</p>
+<p class="p1">{{ dd($pdf) }}</p>
 <p class="p2"><br></p>
 <p class="p1">You've done a powerful thing by assessing your own risk—consider sharing the tool with the women you care about so they can do the same.</p>
 <p class="p2"><br></p>

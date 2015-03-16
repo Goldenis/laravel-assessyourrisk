@@ -63,7 +63,7 @@ class MailController extends \BaseController {
 				  'password' => 'wSTMougxX0C8ptb',
 				  'test' => 'true',
 				  'bucket' => 'brightenup',
-				  'public': 'true'
+				  'public': 'true',
 				  'content' => $content
 				);
 

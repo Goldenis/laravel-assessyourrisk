@@ -1226,8 +1226,8 @@ var downloadtest = function(url, data, encode64){
     //send request
     $.post(url, function(data) {
     	if (encode64){
-    		poop = Base64.encode(data);
-    		doPostPDF(poop);
+    		// poop = Base64.encode(data);
+    		doPostPDF(data);
     		return;
     	}
 		poop = data;

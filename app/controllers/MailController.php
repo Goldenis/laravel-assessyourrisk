@@ -33,7 +33,7 @@ class MailController extends \BaseController {
 		try {
 			$statusCode = 200;
 			$email = Input::get ( 'email' );
-			$attachment = Input::get ( 'attachment' );
+			$attachment = Input::file ( 'attachment' );
 			$isDoctor = Input::get ( 'isDoctor' );
 			$userName = Input::get ( 'userName' );
 			

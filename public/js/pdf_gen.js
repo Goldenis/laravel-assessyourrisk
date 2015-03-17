@@ -1471,11 +1471,13 @@ function doPostPDF(content) {
 		userName : userName
 	}
   }).done(function(msg) {
-		var pdf_url = msg.pdf_url;
-		window.open(pdf_url, 'pdf');
+  		if (msg.pdf_url) {
+  			var pdf_url = msg.pdf_url;
+			window.open(pdf_url, 'pdf');
+  		}
 		isDoctorEmail = null;
   });
-
+  $('.testPDF, .pdf').removeAttr('disabled');
   $('.email-pdf-doctor').removeClass('show-fields-user');
   $('.email-pdf-doctor').removeClass('show-fields-dr');
 

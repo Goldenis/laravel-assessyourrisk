@@ -2072,7 +2072,7 @@ input[type="checkbox"], input[type="radio"] {
     display: block;
     @include transform(translateY(-50%));
     top: 50%;
-    display: none;
+    visibility: hidden;
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -2111,7 +2111,7 @@ input[type="checkbox"], input[type="radio"] {
     }
     &.in {
         z-index: 2;
-        display: block;
+        visibility: visible;
         opacity: 1 !important;
         @include transform(translateY(-50%));
         @include transition(1s, ease-out, all, .5s);

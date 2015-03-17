@@ -78,42 +78,43 @@ class MailController extends \BaseController {
 				['email' => 'required|email']
 			);
 				
-			if ($emailValidator->fails()) {
-				if ($isDoctor == 'null') {
-					// Return the pdf url
-					$pdf = createPdf($content);
-					$statusCode = 200;
-					$response ['pdf_url'] = $pdf->url;
-					return Response::json ($response, $statusCode);
-				} else {
+			if ($isDoctor == 'null') {
+				// Return the pdf url
+				$pdf = createPdf($content);
+				$statusCode = 200;
+				$response ['pdf_url'] = $pdf->url;
+				//return Response::json ($response, $statusCode);
+			} else {
+				if ($emailValidator->fails()) {
 					// Email validation failed
 					Log::info ( '>> Validator failed.' );
-	
+
 					$statusCode = 401;
 					$messages = $validator->messages ();
 					$response ['errors'] = [ ];
 					foreach ( $messages->all () as $message ) {
 						$response ['errors'] [] = $message;
 					}
-				}
-			} else {
-				$pdf = createPdf($content);
-				$template = 'emails.user';
-				if ($isDoctor == 'true') {
-					$template = 'emails.doctor';
-				}
-				
-				Log::info ( '>> Validator passed.' );
-				Mail::send($template, array('userName' => $userName, 'pdf' => $pdf), function($message) use ($email)
-				{
+				} else {
+					$pdf = createPdf($content);
+					$template = 'emails.user';
+					if ($isDoctor == 'true') {
+						$template = 'emails.doctor';
+					}
 					
-					$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";
-					
-					$message->from('assessyourrisk@brightpink.org');
-					$message->to($email); //->cc("trevorobrien@theexperiment.io");
-					$message->subject($messageSubject);	
-				});
+					Log::info ( '>> Validator passed.' );
+					Mail::send($template, array('userName' => $userName, 'pdf' => $pdf), function($message) use ($email)
+					{
+						
+						$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";
+						
+						$message->from('assessyourrisk@brightpink.org');
+						$message->to($email); //->cc("trevorobrien@theexperiment.io");
+						$message->subject($messageSubject);	
+					});
+				}
 			}
+
 			// Send activation code to the user so he can activate the account
 		} catch ( Exception $ex ) {
 			Log::info ( '>> Exception' . ($ex->getMessage()) );

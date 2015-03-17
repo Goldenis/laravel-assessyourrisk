@@ -1615,6 +1615,8 @@
 
         if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);
+        } else if ($('html').hasClass('ie9')) {
+            loadBGImg(imgSrc);
         } else {
             var src = vig.data('src') + videoType;
             loadBGVideo(vig, src, cloudfrontURL);

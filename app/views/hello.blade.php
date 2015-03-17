@@ -91,6 +91,11 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <div class="line"></div>
     </div>
 
+        <div class="overlay fact-overlay">
+          <button class="sub close-btn">✕</button>
+              
+        </div>
+
     <div class="overlay menu-overlay">
       <button class="sub close-btn">✕</button>
       <div class="vignettes">
@@ -641,7 +646,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <div class="answers">
             <div class="checkbox-list">
               <div class="checkbox" data-answer-id="1"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Breast cancer</div></div>
-              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer (epithelial; non-germ cell) or Fallopian tube cancer</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>              
               <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
             </div>

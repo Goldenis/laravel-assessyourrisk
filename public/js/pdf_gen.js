@@ -85,6 +85,12 @@ function createPinkPDF (result) {
   var cancercontentmid = cancerContent[1]['content'];
   var cancercontenthigh = cancerContent[2]['content'];
 
+  if (ans2 === 'Neither') {
+  	cancercontentlow = '';
+  	cancercontentmid = '';
+  	cancercontenthigh = '';
+  }
+
   var docDefinition; 
 var averageResults = {  
  pageMargins: [40, 80, 40, 40],

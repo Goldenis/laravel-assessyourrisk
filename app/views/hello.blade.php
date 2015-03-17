@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -49,6 +52,16 @@
   
     }
     </script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KB6WGC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KB6WGC');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <div class="border"></div>
@@ -1326,6 +1339,14 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         <a href="#"><span class="icon-twitter"></span></a>
       </div>
     </footer>
+
+    <!--[if lt IE 9]>
+    <div class="overlay ie-overlay in">
+      <h1>Please upgrade your browser</h1>
+      <p>Unfortunately, your browser is outdated and likely insecure.  Please find the <a href="http://browsehappy.com/">most recent version of the browswer for your system here</a>, install it and return to the site.</p>
+    </div>
+    <![endif]-->
+
     
     <div class="overlay landscape-overlay">
       <img src="img/rotate-icon.png">
@@ -1349,8 +1370,6 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
     <script src="js/svg/SVGHelper.js"></script>
 
     <script src="js/roulette.js"></script>
-    <script src='js/vendor/pdfmake/build/pdfmake.min.js'></script>
-    <script src='js/vendor/pdfmake/build/vfs_fonts.js'></script>
     <script src='js/pdf_gen.js'></script>
 
       <!-- CLIENT SIDE FACEBOOK SDK INCLUSION -->
@@ -1384,6 +1403,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+
+        <script type="text/javascript" src="//tfaforms.com/js/ga_crossdomain_tracking.js"></script>
 
         <!--[if lt IE11]>-->
       <script>

@@ -376,6 +376,18 @@ button.sub:hover {
 .overlay.in .close-btn {
   display: block;
 }
+.overlay.ie-overlay {
+  position: absolute;
+  padding: 0;
+  border: 0px;
+}
+.overlay.ie-overlay h1 {
+  text-align: center;
+}
+.overlay.ie-overlay p {
+  color: #fff;
+  text-align: center;
+}
 .question-stats {
   display: none;
 }
@@ -3548,4 +3560,7 @@ footer {
 }
 .clearfix {
   *zoom: 1;
+}
+.lt-ie9 .overlay.landscape-overlay {
+  display: none;
 }

@@ -439,6 +439,19 @@ button {
             display: block;
         }
     }
+
+    &.ie-overlay {
+        position: absolute;
+        padding: 0;
+        border: 0px;
+        h1 {
+            text-align: center;
+        }
+        p {
+            color: #FFF;
+            text-align: center;
+        }
+    }
 }
 .question-stats {
     display: none;
@@ -3279,4 +3292,8 @@ footer {
 }
 .clearfix {
     *zoom: 1;
+}
+
+.lt-ie9 .overlay.landscape-overlay {
+    display: none;
 }

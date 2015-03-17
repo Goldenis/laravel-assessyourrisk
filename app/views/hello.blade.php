@@ -91,8 +91,13 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <div class="line"></div>
     </div>
 
-        <div class="overlay fact-overlay">
-          <button class="sub close-btn">✕</button>
+    <div class="fact-icon">
+      i
+    </div>
+
+        <div class="fact-overlay">
+          <button class="sub close-btn">✕</button> 
+          <div class="return"><div class="arrow"><img src="img/arrow_left.png"></div> <h4>Return to Assessment</h4></div>
               
         </div>
 
@@ -512,7 +517,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
-              <h5>You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
+              <h5>You and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
             <div class="fact">

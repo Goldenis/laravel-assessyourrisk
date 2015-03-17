@@ -489,7 +489,7 @@ button {
         width: 12%;
     }
 }
-.progress-overlay {
+.progress-overlay, .menu-overlay {
     overflow: hidden;
     padding: 0;
     background: $nude;
@@ -2192,7 +2192,7 @@ footer {
             margin-right: 0;
         }
     }
-    .progress-overlay {
+    .progress-overlay, .menu-overlay {
         padding: 0;
         .results {
             width: 100%;
@@ -2544,6 +2544,8 @@ footer {
             margin-bottom: 4px;
         }
         &.left {
+            opacity: 1;
+            visibility: visible;
             .line {
                 background: #fff;
             }
@@ -2552,8 +2554,8 @@ footer {
             
         }
         &.module-open{
-            opacity: 1;
-            visibility: visible;
+            // opacity: 1;
+            // visibility: visible;
         }
     }
     .dots {
@@ -2691,7 +2693,7 @@ footer {
             }
         }    
     }
-    .progress-overlay {
+    .progress-overlay, .menu-overlay {
         -webkit-overflow-scrolling: touch;
         .close-btn {
             top: 0px;

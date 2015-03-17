@@ -452,10 +452,21 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">
+     
+
+       
       <div class="wheel-container">
+        <!--[if lt IE 10]>
+        <img src="img/wheel_fallback.jpg">
+        <![endif]-->
         <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
         <div id="wheel-overlay"></div>
+
+        
+
+        
       </div>
+
       <div class="intro-message">
         <p>
           <b><span class="pink-text">1 in 8</span> women will develop breast cancer at some point in her lifetime.  <span class="pink-text">1 in 67</span> will develop ovarian cancer.</b>  

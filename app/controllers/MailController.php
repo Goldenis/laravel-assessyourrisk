@@ -78,8 +78,7 @@ class MailController extends \BaseController {
 				['email' => 'required|email']
 			);
 			
-			Log::info (gettype($isDoctor));
-			if ($isDoctor == 'null') {
+			if (!$isDoctor) {
 				// Return the pdf url
 				$pdf = createPdf($content);
 				$statusCode = 200;

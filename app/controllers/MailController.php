@@ -23,7 +23,7 @@ function createPdf($content) {
 	$context = stream_context_create($opts);
 	$json = file_get_contents($url, false, $context);
 	$pdf = json_decode($json);
-	return $pdf
+	return $pdf;
 }
 
 class MailController extends \BaseController {

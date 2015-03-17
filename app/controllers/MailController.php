@@ -8,6 +8,7 @@ function createPdf($content) {
 	  'test' => 'false',
 	  'bucket' => 'brightenup',
 	  'public'=> 'true',
+	  'header_html' => '<h1>BRIGHT PINK</h1>'
 	  'content' => $content
 	);
 

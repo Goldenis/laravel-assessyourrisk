@@ -79,7 +79,7 @@ class MailController extends \BaseController {
 			);
 				
 			if ($emailValidator->fails()) {
-				if (is_null($isDoctor)) {
+				if ($isDoctor == 'null') {
 					// Return the pdf url
 					$pdf = createPdf($content);
 					$statusCode = 200;

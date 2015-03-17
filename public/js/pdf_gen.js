@@ -1471,7 +1471,8 @@ function doPostPDF(content) {
 		userName : userName
 	}
   }).done(function(msg) {
-		console.log(msg);
+		var pdf_url = msg.pdf_url;
+		window.open(pdf_url, 'pdf');
 		isDoctorEmail = null;
   });
 

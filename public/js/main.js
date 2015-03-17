@@ -448,6 +448,7 @@
         });
 
         $('.testPDF, .pdf').on('click', function() {
+            $(this).attr('disabled', 'disabled');
         	woopra.track("click", {
                 intent: "getPDF",
                 type: "button"

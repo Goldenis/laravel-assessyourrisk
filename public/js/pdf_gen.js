@@ -1442,14 +1442,14 @@ switch (result) {
      return;
   }
   else if (isDoctorEmail === null) {
-    
+    doPostPDF(content);
     console.log('is null');
     return;
   } 
 }
 
 function doPostPDF(content) {
-	console.log(isDoctorEmail);
+  console.log(isDoctorEmail);
   var emailAddress;
   var userName;
 
@@ -1461,20 +1461,23 @@ function doPostPDF(content) {
     emailAddress = $('#user-email-address').val();
     userName = $('#your-name').val();
   }
-
-	$.ajax({
-		type : "POST",
-		url : "/email",
-		data : {
-			email : emailAddress,
-			content : content,
-			isDoctor : isDoctorEmail,
-      		userName : userName
-		}
-	}).done(function(msg) {
+  $.ajax({
+	type : "POST",
+	url : "/email",
+	data : {
+		email : emailAddress,
+		content : content,
+		isDoctor : isDoctorEmail,
+		userName : userName
+	}
+  }).done(function(msg) {
+  		if (msg.pdf_url) {
+  			var pdf_url = msg.pdf_url;
+			window.open(pdf_url, 'pdf');
+  		}
 		isDoctorEmail = null;
-	});
-
+  });
+  $('.testPDF, .pdf').removeAttr('disabled');
   $('.email-pdf-doctor').removeClass('show-fields-user');
   $('.email-pdf-doctor').removeClass('show-fields-dr');
 

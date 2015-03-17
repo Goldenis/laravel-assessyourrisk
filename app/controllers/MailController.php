@@ -5,7 +5,7 @@ function createPdf($content) {
 	$data = array(
 	  'user' => 'app29096163@heroku.com',
 	  'password' => 'wSTMougxX0C8ptb',
-	  'test' => 'true',
+	  'test' => 'false',
 	  'bucket' => 'brightenup',
 	  'public' => 'true',
 	  'header_html' => 'http://brightenup.sew.la/pdf/header',

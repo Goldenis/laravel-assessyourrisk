@@ -660,6 +660,7 @@
 
         //$('.mail-icon').on('click',shareMail());
 
+        $('.menu-overlay .close-btn').on('click', closeMenuOverlay);
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
             $('.right-column').addClass('in2')
@@ -716,9 +717,9 @@
             changeModule($(this).index());
             $('.menu-icon').addClass('module-open')
         })
-        $('.progress-overlay .vignettes h3').on('click', function() {
+        $('.menu-overlay .vignettes h3').on('click', function() {
             changeModule($('.progress-overlay .vignettes h3').index($(this)));
-            closeProgressOverlay();
+            closeMenuOverlay();
             $('.assessment').removeClass('in');
             $('.right-column').addClass('left');
             $('.menu-icon').addClass('left');
@@ -732,7 +733,14 @@
             $('.menu-icon').removeClass('left');
             $('.education').removeClass('in');
         })
-        $('.menu-icon, .btn-results').on('click', function() {
+        $('.menu-icon').on('click', function() {
+            if (!overlayOpen) {
+                openMenuOverlay();
+            } else {
+                closeMenuOverlay();
+            }
+        })
+        $('.btn-results').on('click', function() {
             if (!overlayOpen) {
                 openProgressOverlay();
             } else {
@@ -883,6 +891,16 @@
         $('.right-column').removeClass('in')
         $('.assessment').removeClass('in');
         $('.border').removeClass('white');
+    }
+
+    function openMenuOverlay() {
+        $('.menu-overlay').addClass('in');
+        overlayOpen = true;
+    }
+      
+    function closeMenuOverlay() {
+        $('.menu-overlay').removeClass("in");
+        overlayOpen = false;
     }
 
     function openProgressOverlay() {

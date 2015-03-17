@@ -460,6 +460,59 @@ var averageResults = {
   }   
 }
 
+var averageResultsContent = 
+	'<html><body>'+
+	'<h1>YOUR BASELINE RISK IS: AVERAGE</h1>'+
+	'<p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer, 
+	just like the majority of women in the general population. This means you have a 12% chance 
+	of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 
+	75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive 
+	about risk-reduction and early detection is still important.</p>'+
+	'<p>'+cancercontentlow+'</p>'+
+	'<h2>WHAT TO DO NOW</h2>'+
+	'<p>First, review the section below to better understand which of your lifestyle choices could 
+	be negatively affecting your risk. Gene mutations are funny things—no one really knows what 
+	“flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or 
+	eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can 
+	learn more about lifestyle risk-reduction strategies on our website.</p>'+
+	'<p>In addition to finding out more about risk-reduction and early detection, we also encourage 
+	you to print out these results or let us email them to you so that you can take them to your doctor 
+	and discuss creating a risk-reduction and early detection strategy together.</p>'+
+	'<h2>Working In Your Favor</h2>'+
+	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
+	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
+	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
+	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
+	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
+	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
+	'<h2>Not Working in Your Favor</h2>'+
+	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
+	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
+	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
+	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
+	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
+	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
+	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
+	'<h2>Your Assessment Answers</h2>'+
+	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
+	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
+	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+
+	'<dl><dt>4.  '+q4+'</dt><dd>'+ans4+'</dd></dl>'+
+	'<dl><dt>5.  '+q5+'</dt><dd>'+ans5+'</dd></dl>'+
+	'<dl><dt>6.  '+q6+'</dt><dd>'+ans6+'</dd></dl>'+
+	'<dl><dt>7.  '+q7+'</dt><dd>'+ans7+'</dd></dl>'+
+	'<dl><dt>8.  '+q8+'</dt><dd>'+ans8+'</dd></dl>'+
+	'<dl><dt>9.  '+q9+'</dt><dd>'+ans9+'</dd></dl>'+
+	'<dl><dt>10.  '+q10+'</dt><dd>'+ans10+'</dd></dl>'+
+	'<dl><dt>11.  '+q11+'</dt><dd>'+ans11+'</dd></dl>'+
+	'<dl><dt>12.  '+q12+'</dt><dd>'+ans12+'</dd></dl>'+
+	'<dl><dt>13.  '+q13+'</dt><dd>'+ans13+'</dd></dl>'+
+	'<dl><dt>14.  '+q14+'</dt><dd>'+ans14+'</dd></dl>'+
+	'<dl><dt>15.  '+q15+'</dt><dd>'+ans15+'</dd></dl>'+
+	'<dl><dt>16.  '+q16+'</dt><dd>'+ans16+'</dd></dl>'+
+	'<dl><dt>17.  '+q17+'</dt><dd>'+ans17+'</dd></dl>'+
+	'</body></html>';
+
 
 var moderateResults = {  
  pageMargins: [40, 80, 40, 40],
@@ -834,6 +887,74 @@ var moderateResults = {
     }
   }   
 }
+
+var moderateResultsContent = 
+	'<html><body>'+
+	'<h1>YOUR BASELINE RISK IS: INCREASED</h1>'+
+	'<p>Your answers suggest that you are at increased baseline risk for breast and ovarian cancer, 
+	either because of a family history of one of these cancers, some significant event in your personal 
+	health history, or because you or a family member has been diagnosed with a specific type of gene 
+	mutation associated with an increased risk of breast or ovarian cancer. If you have not already 
+	pursued genetic testing, we highly recommend that you talk with your doctor or a genetic counselor 
+	about whether your personal circumstances warrant it, to confirm that your baseline risk truly is 
+	only increased, and not actually high. If you are at high risk, you will need to discuss enhanced 
+	risk management strategies with your doctor.
+	</p>Being at increased risk means that you have up to 
+	a 25% chance of developing breast cancer and up to a 5.5% chance of ovarian cancer at some point in 
+	your lifetime. These percentages mean that your risk for both cancers is more than twice that of women 
+	in the general population, which is significant. It’s a great thing that you’ve identified this risk and 
+	are here learning more about the risk reduction and early detection options that are available to you. 
+	Living a proactive lifestyle is one of the most important things you can do.</p>'+
+	'<p>'+cancercontentmid+'</p>'+
+	'<h2>WHAT TO DO NOW</h2>'+
+	'<p>It can be daunting to face the idea of having a higher-than-average risk of breast and ovarian cancer. 
+	The good news is that knowledge is power and there are things you can do to take control and reduce your risk!</p>
+	<p>First, review the section below to better understand which of your lifestyle choices could be negatively 
+	affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes 
+	cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help 
+	reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on 
+	our website.</p>
+	<p>Your doctor may also recommend increased risk-reduction and early detection strategies appropriate for women 
+	at increased risk, including starting mammograms at a younger age than recommended for women of average risk, or 
+	exploring the possibility of pharmaceutical risk-reduction options.<p>
+	<p>If you feel like you might benefit from getting support from other women in a similar situation, Bright Pink 
+	offers both 1:1 and group support programs for women at increased and high risk that you may find helpful.</p>
+	<p>We also encourage you to print out these results or let us email them to you so that you can take them to 
+	your doctor and discuss creating a risk-reduction and early detection strategy together.</p>',
+	'<h2>Working In Your Favor</h2>'+
+	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
+	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
+	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
+	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
+	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
+	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
+	'<h2>Not Working in Your Favor</h2>'+
+	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
+	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
+	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
+	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
+	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
+	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
+	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
+	'<h2>Your Assessment Answers</h2>'+
+	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
+	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
+	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+
+	'<dl><dt>4.  '+q4+'</dt><dd>'+ans4+'</dd></dl>'+
+	'<dl><dt>5.  '+q5+'</dt><dd>'+ans5+'</dd></dl>'+
+	'<dl><dt>6.  '+q6+'</dt><dd>'+ans6+'</dd></dl>'+
+	'<dl><dt>7.  '+q7+'</dt><dd>'+ans7+'</dd></dl>'+
+	'<dl><dt>8.  '+q8+'</dt><dd>'+ans8+'</dd></dl>'+
+	'<dl><dt>9.  '+q9+'</dt><dd>'+ans9+'</dd></dl>'+
+	'<dl><dt>10.  '+q10+'</dt><dd>'+ans10+'</dd></dl>'+
+	'<dl><dt>11.  '+q11+'</dt><dd>'+ans11+'</dd></dl>'+
+	'<dl><dt>12.  '+q12+'</dt><dd>'+ans12+'</dd></dl>'+
+	'<dl><dt>13.  '+q13+'</dt><dd>'+ans13+'</dd></dl>'+
+	'<dl><dt>14.  '+q14+'</dt><dd>'+ans14+'</dd></dl>'+
+	'<dl><dt>15.  '+q15+'</dt><dd>'+ans15+'</dd></dl>'+
+	'<dl><dt>16.  '+q16+'</dt><dd>'+ans16+'</dd></dl>'+
+	'<dl><dt>17.  '+q17+'</dt><dd>'+ans17+'</dd></dl>'+
+	'</body></html>';
 
 
 
@@ -1212,20 +1333,101 @@ var highResults = {
   }   
 }
 
-var content = '<h1>YOUR BASELINE RISK IS: AVERAGE</h1><p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer, just like the majority of women in the general population. This means you have a 12% chance of getting breast cancer—that’s one in eight women—and a 1.5% chance of getting ovarian cancer. 75% of all breast and ovarian cancers are diagnosed in average risk women, so being proactive about risk-reduction and early detection is still important.</p><p>'+cancercontentlow+'</p><h2>WHAT TO DO NOW</h2><p>First, review the section below to better understand which of your lifestyle choices could be negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more about lifestyle risk-reduction strategies on our website. <p>In addition to finding out more about risk-reduction and early detection, we also encourage you to print out these results or let us email them to you so that you can take them to your doctor and discuss creating a risk-reduction and early detection strategy together.</p>';
+var highResultsContent = 
+	'<html><body>'+
+	'<h1>YOUR BASELINE RISK IS: HIGH</h1>'+
+	'<p>Your answers suggest that you are at a high baseline risk for breast and ovarian cancer, due 
+	either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if 
+	you’ve not yet undergone genetic testing yourself, having a 1st degree relative who has been 
+	diagnosed with one of these mutations. (If you’ve not yet pursued genetic testing, doing so to 
+	confirm your risk level is advisable.) Being at high risk means that you have up to an 87% chance 
+	of getting breast cancer and up to a 54% chance of getting ovarian cancer.  This is significant, 
+	so it’s a great thing that you’ve identified this risk and are here learning more about the risk 
+	reduction and early detection options that are available to you. Living a proactive lifestyle is 
+	one of the most important things you can do!</p>'+
+	'<p>'+cancercontenthigh+'</p>'+
+	'<h2>WHAT TO DO NOW</h2>'+
+	'<p>It can be scary to face the idea of those lifetime risk numbers. The good news is that knowledge
+	 is power and there are things you can do to take control and reduce your risk!</p>
+	 <p>First, review the section below to better understand which of your lifestyle choices could be 
+	 negatively affecting your risk. Gene mutations are funny things—no one really knows what “flips the 
+	 switch” and causes cancer to develop. The good news is that taking steps to reduce or eliminate 
+	 modifiable risk factors may help reduce the likelihood of that switch flipping. You can learn more 
+	 about lifestyle risk-reduction strategies on our website.</p>
+	 <p>As mentioned above, if you’ve not yet had genetic testing, we suggest you seek input from an 
+	 OB/GYN or a genetic counselor, to discuss whether you’re a candidate as well as what the process entails. 
+	 He or she can also talk to you about how to manage and respond to the concerns you might have regarding 
+	 the testing process and receiving a result. It’s important to note that until you’ve had genetic testing 
+	 done, you don’t know for sure that you’re high risk. If you need help finding a genetic counselor to talk 
+	 to in person or on the phone, you can find resources here. And if you want to dip your toes in the water 
+	 by asking a question online first, or reading some FAQs, visit our Ask a Genetic Counselor page.</p>
+	 <p>If you have a diagnosed gene mutation, but are choosing not to have risk-reducing surgery, or if 
+	 you haven’t yet had risk-reducing surgeries but plan to later, we encourage you to be in close contact 
+	 with your OB/GYN or another physician you trust about what kind of increased screening protocol he or she 
+	 recommends for you. You can learn more about the increased screening typically recommended for high-risk 
+	 women here. And if you want more information about what those risk-reducing surgeries are, you can find it here.</p>
+	 <p>If you have a diagnosed gene mutation and have undergone risk-reducing breast and/or ovarian surgeries, 
+	 congratulations on crossing a big and important hurdle. We recommend staying in close touch with your physician
+	 even though the surgeries are complete or partially complete. He or she should talk to you about what kind of 
+	 screening is recommended for you now; if you haven’t had that conversation yet, ask for it!</p>
+	 <p>Regardless of where you are on the testing/screening/surgery spectrum, you may find that you want support 
+	 from other women in a similar situation, or maybe that you want to lend support and guidance to someone who’s 
+	 a little further behind you in the process of risk assessment and management. Bright Pink offers both 1:1 and 
+	 group support programs that you may find helpful.</p>
+	 <p>We also encourage you to print out these results or let us email them to you so that you can take them to 
+	 your doctor and discuss creating a risk-reduction and early detection strategy together.</p>',
+	'<h2>Working In Your Favor</h2>'+
+	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
+	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
+	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
+	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
+	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
+	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
+	'<h2>Not Working in Your Favor</h2>'+
+	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
+	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
+	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
+	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
+	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
+	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
+	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
+	'<h2>Your Assessment Answers</h2>'+
+	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
+	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
+	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+
+	'<dl><dt>4.  '+q4+'</dt><dd>'+ans4+'</dd></dl>'+
+	'<dl><dt>5.  '+q5+'</dt><dd>'+ans5+'</dd></dl>'+
+	'<dl><dt>6.  '+q6+'</dt><dd>'+ans6+'</dd></dl>'+
+	'<dl><dt>7.  '+q7+'</dt><dd>'+ans7+'</dd></dl>'+
+	'<dl><dt>8.  '+q8+'</dt><dd>'+ans8+'</dd></dl>'+
+	'<dl><dt>9.  '+q9+'</dt><dd>'+ans9+'</dd></dl>'+
+	'<dl><dt>10.  '+q10+'</dt><dd>'+ans10+'</dd></dl>'+
+	'<dl><dt>11.  '+q11+'</dt><dd>'+ans11+'</dd></dl>'+
+	'<dl><dt>12.  '+q12+'</dt><dd>'+ans12+'</dd></dl>'+
+	'<dl><dt>13.  '+q13+'</dt><dd>'+ans13+'</dd></dl>'+
+	'<dl><dt>14.  '+q14+'</dt><dd>'+ans14+'</dd></dl>'+
+	'<dl><dt>15.  '+q15+'</dt><dd>'+ans15+'</dd></dl>'+
+	'<dl><dt>16.  '+q16+'</dt><dd>'+ans16+'</dd></dl>'+
+	'<dl><dt>17.  '+q17+'</dt><dd>'+ans17+'</dd></dl>'+
+	'</body></html>';
+
+var content;
 
 switch (result) {
     case 'average':
       console.log('average');
-      docDefinition = averageResults;
+      // docDefinition = averageResults;
+      content = averageResultsContent;
       break;
     case 'moderate':
       console.log('moderate');
-      docDefinition = moderateResults;      
+      // docDefinition = moderateResults;
+      content = moderateResultsContent;   
       break;
     case 'high':
       console.log('high');
-      docDefinition = highResults;      
+      // docDefinition = highResults;
+      content = highResultsContent;
       break;
 }
 

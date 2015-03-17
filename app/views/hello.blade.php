@@ -670,7 +670,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
             <div class="checkbox" data-answer-id="4"><input type="checkbox" name="famdiag-check" data-answer-id="4|-1"><div class="label">Male breast cancer</div></div>
             <div class="checkbox" data-answer-id="5"><input type="checkbox" name="famdiag-check" data-answer-id="5|-1"><div class="label">Ovarian cancer, primary peritoneal cancer, or fallopian tube cancer</div></div>
             <div class="checkbox" data-answer-id="6"><input type="checkbox" name="famdiag-check" data-answer-id="6|-1"><div class="label">Two or more close relatives with breast cancer at any age</div></div>
-            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="famdiag-check" data-answer-id="7|0"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="7"><input type="checkbox" name="famdiag-check" class="none-of-above" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
           <div class="answers">
@@ -781,8 +781,8 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="8"><input type="checkbox" name="cancer-plus-chk" data-answer-id="8|-1"><div class="label">Adrenocortical Carcinoma</div></div>
             <div class="checkbox" data-answer-id="9"><input type="checkbox" name="cancer-plus-chk" data-answer-id="9|-1"><div class="label">Stomach cancer</div></div>
             <div class="checkbox" data-answer-id="10"><input type="checkbox" name="cancer-plus-chk" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
-            <div class="checkbox" data-answer-id="12"><input type="checkbox" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
-            <div class="checkbox" data-answer-id="11"><input type="checkbox" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">None of the above</div></div>
+            <div class="checkbox" data-answer-id="12"><input type="checkbox" class="not-sure" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="11"><input type="checkbox" class="none-of-above" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">None of the above</div></div>
           </div>     
 
           <div class="answers">

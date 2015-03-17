@@ -380,9 +380,26 @@
         $('input[name="famdiag-check"]').change(function(){
             var allCheckboxes = $('input[name="famdiag-check"]');
             var noneChecked = true;
+            var isChecked = $(this).prop('checked');
+            if(isChecked){
+                if ($(this).hasClass('not-sure') || $(this).hasClass('none-of-above')){
+                    $(allCheckboxes).prop('checked', false);
+                }
+                else
+                {
+                    $('input[name="famdiag-check"].not-sure').prop('checked', false);
+                    $('input[name="famdiag-check"].none-of-above').prop('checked', false);
+                    
+                }
+
+
+                $(this).prop('checked', true);
+            }
             allCheckboxes.each(function(index, item){
+
                 if (item.checked){
                     noneChecked = false;
+                    
                     return false;
                 }
             });
@@ -395,10 +412,27 @@
 
         $('input[name="cancer-plus-chk"]').change(function(){
             var allCheckboxes = $('input[name="cancer-plus-chk"]');
+            var isChecked = $(this).prop('checked');
             var noneChecked = true;
+            if (isChecked){
+                if ($(this).hasClass('not-sure') || $(this).hasClass('none-of-above')){
+                    $(allCheckboxes).prop('checked', false);
+                }
+                else
+                {
+                    $('input[name="cancer-plus-chk"].not-sure').prop('checked', false);
+                    $('input[name="cancer-plus-chk"].none-of-above').prop('checked', false);
+                    
+                }
+
+
+                $(this).prop('checked', true);
+            }
             allCheckboxes.each(function(index, item){
-                if (item.checked){
+
+                if (item.prop('checked')){
                     noneChecked = false;
+                    
                     return false;
                 }
             });

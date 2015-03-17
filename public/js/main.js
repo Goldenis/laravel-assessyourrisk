@@ -430,11 +430,11 @@
             }
             allCheckboxes.each(function(index, item){
 
-                // if (item.prop('checked')){
-                //     noneChecked = false;
+                if (item.prop('checked')){
+                    noneChecked = false;
                     
-                //     return false;
-                // }
+                    return false;
+                }
             });
             $('#mobile-button-left').prop('disabled', noneChecked);
         });

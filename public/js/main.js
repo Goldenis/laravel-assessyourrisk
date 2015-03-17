@@ -124,6 +124,7 @@
             _lapScreen = false;
             _airScreen = true;
             minS = .8;
+            $('.assessment-facts').appendTo('.fact-overlay');
             $('.vignettes h3').eq(1).html('Know Your Normal')
             $('.vignettes h3').eq(2).html('Family & Health History')
             $('.module-hero h1').eq(1).html('Your Normal')

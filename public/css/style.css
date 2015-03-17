@@ -2136,6 +2136,10 @@ input[type="checkbox"], input[type="radio"] {
 .right-column .toggle-box .assess {
   opacity: 0.9;
 }
+.right-column .assessment-facts {
+  position: absolute;
+  top: -100%;
+}
 .right-column .fact {
   position: absolute;
   padding: 0em;

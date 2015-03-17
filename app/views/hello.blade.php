@@ -91,6 +91,11 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <div class="line"></div>
     </div>
 
+        <div class="overlay fact-overlay">
+          <button class="sub close-btn">✕</button>
+              
+        </div>
+
     <div class="overlay menu-overlay">
       <button class="sub close-btn">✕</button>
       <div class="vignettes">

@@ -1337,43 +1337,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 100px;
 }
 .fact-icon {
-  display: block;
-  z-index: 2500;
-  position: absolute;
-  top: 20px;
-  right: -2.5rem;
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: "avg_bold";
-  background-color: #ffb4aa;
-  color: #fff;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition: all 0.6s 0 ease-in-out;
-  -moz-transition: all 0.6s 0 ease-in-out;
-  -o-transition: all 0.6s 0 ease-in-out;
-  -ms-transition: all 0.6s 0 ease-in-out;
-  transition: all 0.6s 0 ease-in-out;
-  -moz-transition-duration: 0.6s;
-  -moz-transition-property: all;
-  -moz-transition-delay: 0;
-}
-.fact-icon.in {
-  opacity: 1;
-  right: 2.5rem;
-}
-.fact-icon.out {
-  right: -40px !important;
-  opacity: 0 !important;
-}
-.fact-icon.new {
-  -webkit-animation: pulsate 1s ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  animation: pulsate 1s ease-in-out;
-  animation-iteration-count: infinite;
+  display: none;
 }
 .asterisk {
   color: #f6323e;
@@ -2988,6 +2952,45 @@ footer {
   }
   .menu-icon.left .line {
     background: #fff;
+  }
+  .fact-icon {
+    display: block;
+    z-index: 2500;
+    position: absolute;
+    top: 20px;
+    right: -2.5rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "avg_bold";
+    background-color: #ffb4aa;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.6s 0 ease-in-out;
+    -moz-transition: all 0.6s 0 ease-in-out;
+    -o-transition: all 0.6s 0 ease-in-out;
+    -ms-transition: all 0.6s 0 ease-in-out;
+    transition: all 0.6s 0 ease-in-out;
+    -moz-transition-duration: 0.6s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+  }
+  .fact-icon.in {
+    opacity: 1;
+    right: 2.5rem;
+  }
+  .fact-icon.out {
+    right: -40px !important;
+    opacity: 0 !important;
+  }
+  .fact-icon.new {
+    -webkit-animation: pulsate 1s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation: pulsate 1s ease-in-out;
+    animation-iteration-count: infinite;
   }
   .dots {
     padding: 8px 10px 10px;

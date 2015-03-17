@@ -1314,39 +1314,7 @@ input[type="checkbox"], input[type="radio"] {
     width: 100px;
 }
 .fact-icon {
-    display: block;
-    z-index: 2500;
-    position: absolute;
-    top: 20px;
-    right: -2.5rem;
-    height: 30px;
-    width: 30px;
-    border-radius: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-family: "avg_bold";
-    background-color: $nude;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0;
-    @include transition(.6s, ease-in-out);
-
-    &.in {
-        opacity: 1;
-        right: 2.5rem;
-    }
-
-    &.out {
-        right: -40px !important;
-        opacity: 0 !important;   
-    }
-
-    &.new {
-        -webkit-animation: pulsate 1s ease-in-out;
-        -webkit-animation-iteration-count: infinite; 
-        animation: pulsate 1s ease-in-out;
-        animation-iteration-count: infinite; 
-    }
+    display: none;
 }
 .asterisk {
     color: $red;
@@ -2716,6 +2684,41 @@ footer {
         &.module-open{
             // opacity: 1;
             // visibility: visible;
+        }
+    }
+    .fact-icon {
+        display: block;
+        z-index: 2500;
+        position: absolute;
+        top: 20px;
+        right: -2.5rem;
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: "avg_bold";
+        background-color: $nude;
+        color: #fff;
+        cursor: pointer;
+        opacity: 0;
+        @include transition(.6s, ease-in-out);
+
+        &.in {
+            opacity: 1;
+            right: 2.5rem;
+        }
+
+        &.out {
+            right: -40px !important;
+            opacity: 0 !important;   
+        }
+
+        &.new {
+            -webkit-animation: pulsate 1s ease-in-out;
+            -webkit-animation-iteration-count: infinite; 
+            animation: pulsate 1s ease-in-out;
+            animation-iteration-count: infinite; 
         }
     }
     .dots {

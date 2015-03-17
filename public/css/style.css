@@ -420,7 +420,7 @@ button.sub:hover {
 .share .share-btn-wrapper {
   width: 12%;
 }
-.progress-overlay {
+.progress-overlay, .menu-overlay {
   overflow: hidden;
   padding: 0;
   background: #ffb4aa;
@@ -430,10 +430,10 @@ button.sub:hover {
   text-align: center;
   z-index: 2001;
 }
-.progress-overlay .close-btn {
+.progress-overlay .close-btn, .menu-overlay .close-btn {
   background: #ffb4aa;
 }
-.progress-overlay .progress {
+.progress-overlay .progress, .menu-overlay .progress {
   position: relative;
   width: 100%;
   height: 7rem;
@@ -441,7 +441,7 @@ button.sub:hover {
   left: 0;
   top: 0 !important;
 }
-.progress-overlay .progress .percentage {
+.progress-overlay .progress .percentage, .menu-overlay .progress .percentage {
   width: 6rem;
   text-align: center;
   left: 0;
@@ -451,22 +451,22 @@ button.sub:hover {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.progress-overlay .progress:nth-of-type(2) {
+.progress-overlay .progress:nth-of-type(2), .menu-overlay .progress:nth-of-type(2) {
   left: 0%;
 }
-.progress-overlay .chart {
+.progress-overlay .chart, .menu-overlay .chart {
   width: 6rem;
   height: 6rem;
   margin: 0 0 9px 0 !important;
   margin-bottom: 9px;
 }
-.progress-overlay .person {
+.progress-overlay .person, .menu-overlay .person {
   color: #d7006d;
 }
-.progress-overlay .section-title {
+.progress-overlay .section-title, .menu-overlay .section-title {
   border-color: #fff !important;
 }
-.progress-overlay .questions {
+.progress-overlay .questions, .menu-overlay .questions {
   padding: 1rem 6rem;
   margin-bottom: 6rem;
   width: 62%;
@@ -476,91 +476,91 @@ button.sub:hover {
   padding: 0;
   margin: 0;
 }
-.progress-overlay .questions .progress-question {
+.progress-overlay .questions .progress-question, .menu-overlay .questions .progress-question {
   margin-top: 50px;
 }
-.progress-overlay .questions .progress-question:last-of-type {
+.progress-overlay .questions .progress-question:last-of-type, .menu-overlay .questions .progress-question:last-of-type {
   margin-bottom: 50px;
 }
-.progress-overlay .results {
+.progress-overlay .results, .menu-overlay .results {
   width: 100%;
   padding: 0rem 5rem;
   float: left;
 }
-.progress-overlay .results h5 {
+.progress-overlay .results h5, .menu-overlay .results h5 {
   font-size: 1.3rem;
 }
-.progress-overlay .results .progress-result {
+.progress-overlay .results .progress-result, .menu-overlay .results .progress-result {
   padding-bottom: 1rem;
 }
-.progress-overlay .results .progress-result .percentage.percquiz {
+.progress-overlay .results .progress-result .percentage.percquiz, .menu-overlay .results .progress-result .percentage.percquiz {
   position: absolute;
   top: 2.4rem;
   text-align: center;
   width: 100%;
 }
-.progress-overlay .results .progress-result .chart-4 {
+.progress-overlay .results .progress-result .chart-4, .menu-overlay .results .progress-result .chart-4 {
   margin: auto !important;
 }
-.progress-overlay .results .your-risk .risk-level {
+.progress-overlay .results .your-risk .risk-level, .menu-overlay .results .your-risk .risk-level {
   color: #d7006d;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.progress-overlay .results .your-risk h2 {
+.progress-overlay .results .your-risk h2, .menu-overlay .results .your-risk h2 {
   margin: 50px 0;
 }
-.progress-overlay .results .your-risk p {
+.progress-overlay .results .your-risk p, .menu-overlay .results .your-risk p {
   font-size: 1.4rem;
   display: none;
   width: 50%;
   margin-bottom: 1rem;
 }
-.progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
+.progress-overlay .results .your-risk p a, .menu-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited, .menu-overlay .results .your-risk p a:visited {
   color: rgba(6, 6, 6, .50);
 }
-.progress-overlay .results .your-risk p.on {
+.progress-overlay .results .your-risk p.on, .menu-overlay .results .your-risk p.on {
   display: block;
 }
-.progress-overlay .results .triggered-cancer-copy {
+.progress-overlay .results .triggered-cancer-copy, .menu-overlay .results .triggered-cancer-copy {
   padding: 2rem 0;
   display: none !important;
 }
-.progress-overlay .results .triggered-cancer-copy.showable {
+.progress-overlay .results .triggered-cancer-copy.showable, .menu-overlay .results .triggered-cancer-copy.showable {
   display: block !important;
 }
-.progress-overlay .results .paragraph-wrapper {
+.progress-overlay .results .paragraph-wrapper, .menu-overlay .results .paragraph-wrapper {
   width: 100%;
   background: #fff;
   position: relative;
   display: inline-block;
   padding-bottom: 10rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box {
+.progress-overlay .results .paragraph-wrapper .paragraph-box, .menu-overlay .results .paragraph-wrapper .paragraph-box {
   width: 100%;
   float: left;
   text-align: left;
   color: #555558;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box h3 {
+.progress-overlay .results .paragraph-wrapper .paragraph-box h3, .menu-overlay .results .paragraph-wrapper .paragraph-box h3 {
   margin-bottom: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box p {
+.progress-overlay .results .paragraph-wrapper .paragraph-box p, .menu-overlay .results .paragraph-wrapper .paragraph-box p {
   font-size: 1.4rem;
   margin-bottom: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box a, .menu-overlay .results .paragraph-wrapper .paragraph-box a {
   color: #555558;
   font-size: 1.4rem;
   text-decoration: underline;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .more-results, .menu-overlay .results .paragraph-wrapper .paragraph-box .more-results {
   display: none;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
   padding-bottom: 3rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -571,33 +571,33 @@ button.sub:hover {
   padding-bottom: 5px;
   position: absolute;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
   color: #d7006d;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .column {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column, .menu-overlay .results .paragraph-wrapper .paragraph-box .column {
   float: left;
   width: 50%;
   padding: 6rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header, .menu-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
   margin-bottom: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header a {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header a, .menu-overlay .results .paragraph-wrapper .paragraph-box .column .column-header a {
   font-size: 2.8rem;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column .item, .menu-overlay .results .paragraph-wrapper .paragraph-box .column .item {
   margin-bottom: 4rem;
   display: none;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .column.positive {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .column.positive, .menu-overlay .results .paragraph-wrapper .paragraph-box .column.positive {
   background: #fff;
   color: #555558;
 }
-.progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
+.progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header, .menu-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
   padding: 6rem 6rem 0rem 6rem;
   margin-bottom: -3rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -607,7 +607,7 @@ button.sub:hover {
   padding: 3rem 6rem;
   overflow: hidden;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -622,19 +622,19 @@ button.sub:hover {
   top: -100%;
   width: 100%;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
   float: left;
   margin-right: 6rem;
   top: 6px;
   width: 33%;
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
   float: left;
   margin-top: 0;
   margin-right: 2rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel {
   padding: 16px 0 6px 0;
   margin-right: 0rem;
   border: none;
@@ -643,12 +643,12 @@ button.sub:hover {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel:hover, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel:hover {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel:hover, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor .cancel:hover, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel:hover, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user .cancel:hover {
   background: transparent;
   color: #ffb4aa;
   border-color: #ffb4aa !important;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
   padding: 10px 20px;
   margin: 0 2rem 0 0;
   float: left;
@@ -658,18 +658,18 @@ button.sub:hover {
   top: 2px;
   min-width: 200px;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button {
   border: 3px solid #fff;
   cursor: pointer;
   color: #fff;
   margin-right: 1rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
   background: #fff;
   color: #f6323e;
   border-color: #fff !important;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -682,7 +682,7 @@ button.sub:hover {
   min-height: 60px;
   top: 0;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -696,7 +696,7 @@ button.sub:hover {
   padding-top: 1.6rem;
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
   -webkit-transition: all 0.8s 0 ease-in-out;
   -moz-transition: all 0.8s 0 ease-in-out;
   -o-transition: all 0.8s 0 ease-in-out;
@@ -708,70 +708,70 @@ button.sub:hover {
   width: calc(52% - 6rem);
   text-align: left;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
   top: 4rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
   top: 20rem;
 }
-.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
+.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
   top: 4rem;
 }
-.progress-overlay .results .sub {
+.progress-overlay .results .sub, .menu-overlay .results .sub {
   background: transparent;
 }
-.progress-overlay .results-copy-moderate {
+.progress-overlay .results-copy-moderate, .menu-overlay .results-copy-moderate {
   display: none;
 }
-.progress-overlay .results-copy-moderate.on {
+.progress-overlay .results-copy-moderate.on, .menu-overlay .results-copy-moderate.on {
   display: block;
 }
-.progress-overlay .results-copy-high {
+.progress-overlay .results-copy-high, .menu-overlay .results-copy-high {
   display: none;
 }
-.progress-overlay .results-copy-high.on {
+.progress-overlay .results-copy-high.on, .menu-overlay .results-copy-high.on {
   display: block;
 }
-.progress-overlay .results-copy-average {
+.progress-overlay .results-copy-average, .menu-overlay .results-copy-average {
   display: none;
 }
-.progress-overlay .results-copy-average.on {
+.progress-overlay .results-copy-average.on, .menu-overlay .results-copy-average.on {
   display: block;
 }
-.progress-overlay .cards {
+.progress-overlay .cards, .menu-overlay .cards {
   width: 100%;
   margin-top: 40px;
   float: left;
   display: none;
 }
-.progress-overlay .cards .card-intro-text {
+.progress-overlay .cards .card-intro-text, .menu-overlay .cards .card-intro-text {
   padding: 4rem 20rem 8rem;
 }
-.progress-overlay .cards .card-intro-text p {
+.progress-overlay .cards .card-intro-text p, .menu-overlay .cards .card-intro-text p {
   font-size: 1.8rem;
 }
-.progress-overlay .cards .section-title {
+.progress-overlay .cards .section-title, .menu-overlay .cards .section-title {
   margin-bottom: 2rem;
 }
-.progress-overlay .cards h4 {
+.progress-overlay .cards h4, .menu-overlay .cards h4 {
   margin-bottom: 0.5rem;
 }
-.progress-overlay .cards .card {
+.progress-overlay .cards .card, .menu-overlay .cards .card {
   float: left;
   width: 42%;
   margin: 4%;
   padding: 4rem;
 }
-.progress-overlay .cards .card .factors-title {
+.progress-overlay .cards .card .factors-title, .menu-overlay .cards .card .factors-title {
   position: absolute;
   font-family: 'avg_bold';
   top: -60px;
@@ -779,54 +779,54 @@ button.sub:hover {
   width: 100%;
   text-align: center;
 }
-.progress-overlay .cards .card .item {
+.progress-overlay .cards .card .item, .menu-overlay .cards .card .item {
   margin-bottom: 4rem;
   display: none;
 }
-.progress-overlay .cards .card.positive {
+.progress-overlay .cards .card.positive, .menu-overlay .cards .card.positive {
   background: #fff;
   color: #555558;
 }
-.progress-overlay .cards .card.positive .section-title {
+.progress-overlay .cards .card.positive .section-title, .menu-overlay .cards .card.positive .section-title {
   border-color: #555558 !important;
 }
-.progress-overlay .cards .card.positive .factors-title {
+.progress-overlay .cards .card.positive .factors-title, .menu-overlay .cards .card.positive .factors-title {
   color: #fff;
 }
-.progress-overlay .cards .card.negative {
+.progress-overlay .cards .card.negative, .menu-overlay .cards .card.negative {
   background: #d7006d;
   color: #fff;
 }
-.progress-overlay .cards .card.negative .factors-title {
+.progress-overlay .cards .card.negative .factors-title, .menu-overlay .cards .card.negative .factors-title {
   color: #d7006d;
 }
-.progress-overlay .vignettes {
+.progress-overlay .vignettes, .menu-overlay .vignettes {
   padding: 1rem 6rem;
   width: 38%;
   float: right;
   display: none;
 }
-.progress-overlay .vignettes .sections {
+.progress-overlay .vignettes .sections, .menu-overlay .vignettes .sections {
   margin-top: 50px;
 }
-.progress-overlay .vignettes h3 {
+.progress-overlay .vignettes h3, .menu-overlay .vignettes h3 {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 0.5rem;
 }
-.progress-overlay .vignettes h3 .percent {
+.progress-overlay .vignettes h3 .percent, .menu-overlay .vignettes h3 .percent {
   color: #fdd5ce;
   font-size: 0.6rem;
   display: block;
   top: -0.5rem;
 }
-.progress-overlay .vignettes h3:hover {
+.progress-overlay .vignettes h3:hover, .menu-overlay .vignettes h3:hover {
   opacity: 0.8;
 }
-.progress-overlay .vignettes h3.done {
+.progress-overlay .vignettes h3.done, .menu-overlay .vignettes h3.done {
   color: #fdd5ce;
 }
-.progress-overlay .vignettes h3.done:after {
+.progress-overlay .vignettes h3.done:after, .menu-overlay .vignettes h3.done:after {
   content: " ";
   width: 100%;
   height: 1px;
@@ -2451,91 +2451,91 @@ footer {
   .dot:last-of-type {
     margin-right: 0;
   }
-  .progress-overlay {
+  .progress-overlay, .menu-overlay {
     padding: 0;
   }
-  .progress-overlay .results {
+  .progress-overlay .results, .menu-overlay .results {
     width: 100%;
     padding: 0;
   }
-  .progress-overlay .results .progress-result {
+  .progress-overlay .results .progress-result, .menu-overlay .results .progress-result {
     padding-bottom: 1rem;
   }
-  .progress-overlay .results .progress-result .percentage.percquiz {
+  .progress-overlay .results .progress-result .percentage.percquiz, .menu-overlay .results .progress-result .percentage.percquiz {
     position: absolute;
     top: 2.4rem;
     text-align: center;
     width: 100%;
   }
-  .progress-overlay .results .progress-result .chart-4 {
+  .progress-overlay .results .progress-result .chart-4, .menu-overlay .results .progress-result .chart-4 {
     margin: auto !important;
   }
-  .progress-overlay .results h2 {
+  .progress-overlay .results h2, .menu-overlay .results h2 {
     font-size: 3rem;
   }
-  .progress-overlay .results h3 {
+  .progress-overlay .results h3, .menu-overlay .results h3 {
     font-size: 2rem;
   }
-  .progress-overlay .results .your-risk .risk-level {
+  .progress-overlay .results .your-risk .risk-level, .menu-overlay .results .your-risk .risk-level {
     color: #d7006d;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
-  .progress-overlay .results .your-risk h2 {
+  .progress-overlay .results .your-risk h2, .menu-overlay .results .your-risk h2 {
     margin: 40px 0 30px;
   }
-  .progress-overlay .results .your-risk p {
+  .progress-overlay .results .your-risk p, .menu-overlay .results .your-risk p {
     font-size: 1.4rem;
     display: none;
     width: 100%;
     margin-bottom: 1rem;
   }
-  .progress-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited {
+  .progress-overlay .results .your-risk p a, .menu-overlay .results .your-risk p a, .progress-overlay .results .your-risk p a:visited, .menu-overlay .results .your-risk p a:visited {
     color: rgba(6, 6, 6, .50);
   }
-  .progress-overlay .results .your-risk p.on {
+  .progress-overlay .results .your-risk p.on, .menu-overlay .results .your-risk p.on {
     display: block;
   }
-  .progress-overlay .results .triggered-cancer-copy {
+  .progress-overlay .results .triggered-cancer-copy, .menu-overlay .results .triggered-cancer-copy {
     padding: 2rem 0 0;
     display: none !important;
   }
-  .progress-overlay .results .triggered-cancer-copy.showable {
+  .progress-overlay .results .triggered-cancer-copy.showable, .menu-overlay .results .triggered-cancer-copy.showable {
     display: block !important;
   }
-  .progress-overlay .results .paragraph-wrapper {
+  .progress-overlay .results .paragraph-wrapper, .menu-overlay .results .paragraph-wrapper {
     width: 96%;
     background: #fff;
     position: relative;
     display: inline-block;
     padding-bottom: 24rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box, .menu-overlay .results .paragraph-wrapper .paragraph-box {
     width: 100%;
     padding: 3rem;
     float: left;
     text-align: left;
     color: #555558;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box h3 {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box h3, .menu-overlay .results .paragraph-wrapper .paragraph-box h3 {
     margin-bottom: 2rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box p {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box p, .menu-overlay .results .paragraph-wrapper .paragraph-box p {
     font-size: 1.4rem;
     margin-bottom: 2rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box a {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box a, .menu-overlay .results .paragraph-wrapper .paragraph-box a {
     color: #555558;
     font-size: 1.4rem;
     text-decoration: underline;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .more-results, .menu-overlay .results .paragraph-wrapper .paragraph-box .more-results {
     display: none;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box {
     padding-bottom: 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more {
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -2546,116 +2546,116 @@ footer {
     padding-bottom: 5px;
     position: absolute;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a, .menu-overlay .results .paragraph-wrapper .paragraph-box .read-more-box .read-more a {
     color: #d7006d;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .column {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column, .menu-overlay .results .paragraph-wrapper .paragraph-box .column {
     width: 100%;
     padding: 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .column-header, .menu-overlay .results .paragraph-wrapper .paragraph-box .column .column-header {
     margin-bottom: 2rem;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .item {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .column .item, .menu-overlay .results .paragraph-wrapper .paragraph-box .column .item {
     margin-bottom: 4rem;
     display: none;
   }
-  .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
+  .progress-overlay .results .paragraph-wrapper .paragraph-box .warning-header, .menu-overlay .results .paragraph-wrapper .paragraph-box .warning-header {
     margin-bottom: 2rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor {
     padding: 2rem 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button {
     border: 3px solid #fff;
     cursor: pointer;
     color: #fff;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
     background: #fff;
     color: #f6323e;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     float: left;
     min-height: 20px;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-copy {
     width: 100%;
     padding-top: 1.6rem;
     padding-bottom: 2rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-pdf-btns {
     width: 100%;
     padding-top: 0;
     margin-bottom: 1rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user {
     padding: 0 3rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor h4, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user h4 {
     margin-right: 0rem;
     margin-bottom: 1rem;
     width: 100%;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor button, .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user button {
     margin-right: 1.5rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
     padding: 10px 20px;
     margin: 0 2rem 1.5rem 0;
     width: 100%;
     max-width: 300px;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button {
     margin-right: 1.5rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button:hover {
     background: #fff;
     color: #f6323e;
     border-color: #fff !important;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-copy {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor {
     top: 2.5rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-btns {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-pdf-copy {
     top: 20rem;
   }
-  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
     top: 2.5rem;
   }
-  .progress-overlay .cards {
+  .progress-overlay .cards, .menu-overlay .cards {
     padding: 2%;
   }
-  .progress-overlay .cards .card-intro-text {
+  .progress-overlay .cards .card-intro-text, .menu-overlay .cards .card-intro-text {
     padding: 2rem 2rem;
     width: 100%;
   }
-  .progress-overlay .cards .card-intro-text h2 {
+  .progress-overlay .cards .card-intro-text h2, .menu-overlay .cards .card-intro-text h2 {
     font-size: 2.5rem;
   }
-  .progress-overlay .cards .card-intro-text p {
+  .progress-overlay .cards .card-intro-text p, .menu-overlay .cards .card-intro-text p {
     font-size: 1.5rem;
   }
-  .progress-overlay .cards .card {
+  .progress-overlay .cards .card, .menu-overlay .cards .card {
     width: 100%;
     margin: 0%;
     padding: 4rem;
     margin-bottom: 4rem;
     margin-top: 10rem;
   }
-  .progress-overlay .cards .card:nth-of-type {
+  .progress-overlay .cards .card:nth-of-type, .menu-overlay .cards .card:nth-of-type {
     margin-top: 6rem;
   }
-  .progress-overlay .cards .card .factors-title {
+  .progress-overlay .cards .card .factors-title, .menu-overlay .cards .card .factors-title {
     -ms-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
@@ -2663,7 +2663,7 @@ footer {
     transform: translateY(-100%);
     top: -13px;
   }
-  .progress-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high {
+  .progress-overlay .cards .bad-gene, .menu-overlay .cards .bad-gene, .progress-overlay .cards .bmi-high, .menu-overlay .cards .bmi-high, .progress-overlay .cards .drinks-high, .menu-overlay .cards .drinks-high {
     margin-bottom: 5rem;
   }
 }
@@ -2792,12 +2792,12 @@ footer {
     background: #ccc;
     margin-bottom: 4px;
   }
-  .menu-icon.left .line {
-    background: #fff;
-  }
-  .menu-icon.module-open {
+  .menu-icon.left {
     opacity: 1;
     visibility: visible;
+  }
+  .menu-icon.left .line {
+    background: #fff;
   }
   .dots {
     padding: 8px 10px 10px;
@@ -2954,58 +2954,58 @@ footer {
     max-width: 205px;
     min-width: 80px;
   }
-  .progress-overlay {
+  .progress-overlay, .menu-overlay {
     -webkit-overflow-scrolling: touch;
   }
-  .progress-overlay .close-btn {
+  .progress-overlay .close-btn, .menu-overlay .close-btn {
     top: 0px;
     right: 10px;
     border-width: 1px;
     border-color: rgba(213, 15, 109, .2);
     padding: 0.7rem 0.8rem 0.65rem 0.9rem;
   }
-  .progress-overlay .share .share-copy {
+  .progress-overlay .share .share-copy, .menu-overlay .share .share-copy {
     width: 90%;
     left: 5%;
   }
-  .progress-overlay .share .share-btn-wrapper {
+  .progress-overlay .share .share-btn-wrapper, .menu-overlay .share .share-btn-wrapper {
     width: 100%;
   }
-  .progress-overlay .progress .chart {
+  .progress-overlay .progress .chart, .menu-overlay .progress .chart {
     margin: auto !important;
   }
-  .progress-overlay .progress .percentage {
+  .progress-overlay .progress .percentage, .menu-overlay .progress .percentage {
     width: 100%;
   }
-  .progress-overlay .questions {
+  .progress-overlay .questions, .menu-overlay .questions {
     width: 100%;
   }
-  .progress-overlay .questions .progress-question {
+  .progress-overlay .questions .progress-question, .menu-overlay .questions .progress-question {
     margin-top: 50px;
     width: 100%;
     cursor: pointer;
   }
-  .progress-overlay .questions .progress-question b {
+  .progress-overlay .questions .progress-question b, .menu-overlay .questions .progress-question b {
     font-weight: 100;
     font-family: "avg_bold";
   }
-  .progress-overlay .questions .progress-question:hover {
+  .progress-overlay .questions .progress-question:hover, .menu-overlay .questions .progress-question:hover {
     opacity: 0.8;
   }
-  .progress-overlay h3 {
+  .progress-overlay h3, .menu-overlay h3 {
     font-size: 2rem;
   }
-  .progress-overlay .vignettes {
+  .progress-overlay .vignettes, .menu-overlay .vignettes {
     padding: 3rem 2rem 3rem;
     width: 100%;
     height: auto;
     border-left: none;
     display: block;
   }
-  .progress-overlay .vignettes .sections {
+  .progress-overlay .vignettes .sections, .menu-overlay .vignettes .sections {
     margin-top: 20px;
   }
-  .progress-overlay .vignettes .sections h3 {
+  .progress-overlay .vignettes .sections h3, .menu-overlay .vignettes .sections h3 {
     font-size: 2.7rem;
     color: #d7006d;
     border-bottom: 2px solid #d7006d;

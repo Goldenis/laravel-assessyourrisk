@@ -396,13 +396,15 @@
                 $(this).prop('checked', true);
             }
             allCheckboxes.each(function(index, item){
-
+                console.log(item.checked);
                 if (item.checked){
                     noneChecked = false;
                     
                     return false;
                 }
             });
+
+
             $('#famdiag-check-btn').prop('disabled', noneChecked);
         });
 
@@ -430,11 +432,11 @@
             }
             allCheckboxes.each(function(index, item){
 
-                // if (item.prop('checked')){
-                //     noneChecked = false;
+                if (item.checked){
+                    noneChecked = false;
                     
-                //     return false;
-                // }
+                    return false;
+                }
             });
             $('#mobile-button-left').prop('disabled', noneChecked);
         });

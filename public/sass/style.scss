@@ -2460,6 +2460,8 @@ footer {
     .assessment {
         .assessment-intro{
             height: auto;
+            max-width: 90%;
+            white-space: collapse;
             max-height: calc(100% - 60px);
             top: 50%;
             margin: 60px 0;
@@ -2797,9 +2799,11 @@ footer {
             right: 3rem;
             bottom: 0px;
         }
-        &.active{
+
+        @media only screen and (orientation : landscape) {
             top: 0;
         }
+  
     }
     .border {
         border: 0px solid $light-gray;

@@ -467,7 +467,7 @@ var averageResults = {
   }   
 };
 
-var averageResultsContent = 
+var averageResultsContent =
 	'<html><body>'+
 	'<h1>YOUR BASELINE RISK IS: AVERAGE</h1>'+
 	'<p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer,'+
@@ -485,22 +485,49 @@ var averageResultsContent =
 	'<p>In addition to finding out more about risk-reduction and early detection, we also encourage '+
 	'you to print out these results or let us email them to you so that you can take them to your doctor '+
 	'and discuss creating a risk-reduction and early detection strategy together.</p>'+
-	'<h2>Working In Your Favor</h2>'+
-	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
-	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
-	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
-	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
-	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
-	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
-	'<h2>Not Working in Your Favor</h2>'+
-	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
-	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
-	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
-	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
-	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
-	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
-	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
-	'<h2>Your Assessment Answers</h2>'+
+	'<h2>Working In Your Favor</h2>';
+if (facttitle1) {
+    averageResultsContent += '<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>';
+}
+if (facttitle2) {
+    averageResultsContent += '<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>';
+}
+if (facttitle3) {
+    averageResultsContent += '<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>';
+}
+if (facttitle4) {
+    averageResultsContent += '<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>';
+}
+if (facttitle5) {
+    averageResultsContent += '<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>';
+}
+if (facttitle6) {
+    averageResultsContent += '<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>';
+}
+averageResultsContent += '<h2>Not Working in Your Favor</h2>';
+if (facttitlehigh1) {
+    averageResultsContent += '<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>';
+}
+if (facttitlehigh2) {
+    averageResultsContent += '<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>';
+}
+if (facttitlehigh3) {
+    averageResultsContent += '<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>';
+}
+if (facttitlehigh4) {
+    averageResultsContent += '<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>';
+}
+if (facttitlehigh5) {
+    averageResultsContent += '<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>';
+}
+if (facttitlehigh6) {
+    averageResultsContent += '<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>';
+}
+if (facttitlehigh7) {
+    averageResultsContent += '<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>';
+}
+averageResultsContent +=
+    '<h2>Your Assessment Answers</h2>'+
 	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
 	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
 	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+
@@ -928,22 +955,49 @@ var moderateResultsContent =
 	'offers both 1:1 and group support programs for women at increased and high risk that you may find helpful.</p>'+
 	'<p>We also encourage you to print out these results or let us email them to you so that you can take them to '+
 	'your doctor and discuss creating a risk-reduction and early detection strategy together.</p>'+
-	'<h2>Working In Your Favor</h2>'+
-	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
-	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
-	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
-	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
-	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
-	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
-	'<h2>Not Working in Your Favor</h2>'+
-	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
-	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
-	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
-	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
-	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
-	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
-	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
-	'<h2>Your Assessment Answers</h2>'+
+	'<h2>Working In Your Favor</h2>';
+if (facttitle1) {
+    moderateResultsContent += '<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>';
+}
+if (facttitle2) {
+    moderateResultsContent += '<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>';
+}
+if (facttitle3) {
+    moderateResultsContent += '<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>';
+}
+if (facttitle4) {
+    moderateResultsContent += '<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>';
+}
+if (facttitle5) {
+    moderateResultsContent += '<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>';
+}
+if (facttitle6) {
+    moderateResultsContent += '<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>';
+}
+moderateResultsContent += '<h2>Not Working in Your Favor</h2>';
+if (facttitlehigh1) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>';
+}
+if (facttitlehigh2) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>';
+}
+if (facttitlehigh3) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>';
+}
+if (facttitlehigh4) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>';
+}
+if (facttitlehigh5) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>';
+}
+if (facttitlehigh6) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>';
+}
+if (facttitlehigh7) {
+    moderateResultsContent += '<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>';
+}
+moderateResultsContent +=
+    '<h2>Your Assessment Answers</h2>'+
 	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
 	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
 	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+
@@ -1383,22 +1437,49 @@ var highResultsContent =
 	 'group support programs that you may find helpful.</p>'+
 	 '<p>We also encourage you to print out these results or let us email them to you so that you can take them to '+
 	 'your doctor and discuss creating a risk-reduction and early detection strategy together.</p>'+
-	'<h2>Working In Your Favor</h2>'+
-	'<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>'+
-	'<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>'+
-	'<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>'+
-	'<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>'+
-	'<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>'+
-	'<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>'+
-	'<h2>Not Working in Your Favor</h2>'+
-	'<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>'+
-	'<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>'+
-	'<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>'+
-	'<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>'+
-	'<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>'+
-	'<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>'+
-	'<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>'+
-	'<h2>Your Assessment Answers</h2>'+
+	'<h2>Working In Your Favor</h2>';
+if (facttitle1) {
+    highResultsContent += '<p><strong>'+facttitle1+'</strong><br>'+facthead1+'<br>'+factbody1+'</p>';
+}
+if (facttitle2) {
+    highResultsContent += '<p><strong>'+facttitle2+'</strong><br>'+facthead2+'<br>'+factbody2+'</p>';
+}
+if (facttitle3) {
+    highResultsContent += '<p><strong>'+facttitle3+'</strong><br>'+facthead3+'<br>'+factbody3+'</p>';
+}
+if (facttitle4) {
+    highResultsContent += '<p><strong>'+facttitle4+'</strong><br>'+facthead4+'<br>'+factbody4+'</p>';
+}
+if (facttitle5) {
+    highResultsContent += '<p><strong>'+facttitle5+'</strong><br>'+facthead5+'<br>'+factbody5+'</p>';
+}
+if (facttitle6) {
+    highResultsContent += '<p><strong>'+facttitle6+'</strong><br>'+facthead6+'<br>'+factbody6+'</p>';
+}
+highResultsContent += '<h2>Not Working in Your Favor</h2>';
+if (facttitlehigh1) {
+    highResultsContent += '<p><strong>'+facttitlehigh1+'</strong><br>'+factheadhigh1+'<br>'+factbodyhigh1+'</p>';
+}
+if (facttitlehigh2) {
+    highResultsContent += '<p><strong>'+facttitlehigh2+'</strong><br>'+factheadhigh2+'<br>'+factbodyhigh2+'</p>';
+}
+if (facttitlehigh3) {
+    highResultsContent += '<p><strong>'+facttitlehigh3+'</strong><br>'+factheadhigh3+'<br>'+factbodyhigh3+'</p>';
+}
+if (facttitlehigh4) {
+    highResultsContent += '<p><strong>'+facttitlehigh4+'</strong><br>'+factheadhigh4+'<br>'+factbodyhigh4+'</p>';
+}
+if (facttitlehigh5) {
+    highResultsContent += '<p><strong>'+facttitlehigh5+'</strong><br>'+factheadhigh5+'<br>'+factbodyhigh5+'</p>';
+}
+if (facttitlehigh6) {
+    highResultsContent += '<p><strong>'+facttitlehigh6+'</strong><br>'+factheadhigh6+'<br>'+factbodyhigh6+'</p>';
+}
+if (facttitlehigh7) {
+    highResultsContent += '<p><strong>'+facttitlehigh7+'</strong><br>'+factheadhigh7+'<br>'+factbodyhigh7+'</p>';
+}
+highResultsContent +=
+    '<h2>Your Assessment Answers</h2>'+
 	'<dl><dt>1.  '+q1+'</dt><dd>'+ans1+'</dd></dl>'+
 	'<dl><dt>2.  Have you ever been diagnosed with either of the following? (Breast cancer, Ovarian cancer)</dt><dd>'+ans2+'</dd></dl>'+
 	'<dl><dt>3.  Your BMI score is:</dt><dd>'+ans3+'</dd></dl>'+

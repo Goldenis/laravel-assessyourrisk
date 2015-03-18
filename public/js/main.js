@@ -788,11 +788,14 @@
                 x = e.pageX;
                 distance = 0;
             });
+            _$window.on('mouseup', function() {
+                console.log('MOUSE UP!!!');
+                _$window.off('mousemove mouseup');
+            });
         });
-        _$window.on('mouseup mouseleave touchend', function() {
-            _$window.off('mousemove touchmove');
-        });
+        
         $('.bottle').on('touchstart', function(e) {
+            console.log('TOUCH START');
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             e.preventDefault();
             var x = touch.pageX;
@@ -805,7 +808,11 @@
                 dragBottle(x, newX)
                 x = touch.pageX;
                 distance = 0;
-            })
+            });
+            _$window.on('touchend', function() {
+                console.log('TOUCH UP!!!');
+                _$window.off('touchmove touchend');
+            });
         })
         // _$window.on('touchend', function() {
         //     _$window.off('touchmove');

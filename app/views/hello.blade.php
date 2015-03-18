@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!">
-    <meta property="og:url" content="http://brightenup.sew.la" /> 
-    <meta property="og:title" content="BrightPink Assessment" />
+    <meta property="og:url" content="http://www.assessyourrisk.org" /> 
+    <meta property="og:title" content="Assess Your Risk" />
     <meta property="og:description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" /> 
     <meta property="og:image" content="http://brightenup.sew.la/img/brightpink_logo.png" /> 
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
@@ -342,14 +342,14 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
               <div class="email-fields-doctor">
                 <h4>Share results with my doctor.</h4>
                
-                <input type="text" placeholder="Your Name" id="your-name-dr" required>
+                <input type="text" placeholder="Your Full Name" id="your-name-dr" required>
                 <input type="text" placeholder="Doctor's email address" id="dr-email-address" required><button class="sub send-dr-email">SEND</button> <button class="sub cancel">Cancel</button>
                               
               </div> 
               <div class="email-fields-user">
                 <h4>Share my results with me.</h4>
                
-                <input type="text" placeholder="Your Name" id="your-name" required>
+                <input type="text" placeholder="Your Full Name" id="your-name" required>
                 <input type="text" placeholder="My email address" id="user-email-address" required><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
               </div>
             </div>
@@ -513,6 +513,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
+              <h5 class="mobile-only">Look here throughout the quiz to discover relevant info and learn more about the question.</h5> <!-- replace with new copy -->
               <h5>You and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
@@ -609,7 +610,8 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         </div>
       </div>
       <section class="assessment-intro in">
-        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your <span class="pink-text">personal level of risk</span> for breast and ovarian cancer.  By looking at your <span class="pink-text">health and family history</span> alongside some of your <span class="pink-text">lifestyle</span> choices, you’ll not only learn more about your risk, but also about <span class="pink-text">actions</span> you can take to reduce it.<br><br><i>You</i> have the power to save your life.</h4>            
+        <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your <span class="pink-text">personal level of risk</span> for breast and ovarian cancer.  By looking at your <span class="pink-text">health and family history</span> alongside some of your <span class="pink-text">lifestyle</span> choices, you’ll not only learn more about your risk, but also about <span class="pink-text">actions</span> you can take to reduce it.<br><br><i>You</i> have the power to save your life.</h4>      
+      <div class="copyright copyright-mobile">Copyright &copy; <?php echo date("Y"); ?> Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>           
         <button class="action">Let’s Go</button>
       </section>
 

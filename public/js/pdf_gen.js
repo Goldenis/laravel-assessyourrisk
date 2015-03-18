@@ -467,8 +467,8 @@ var averageResults = {
   }   
 };
 
-var averageResultsContent =
-	'<html><body>'+
+var averageResultsContent = 
+	'<html><style>body{font-size:16px;line-height:21px;font-family:Helvetica, Arial, sans-serif;font-weight:normal;}h1{font-weight:bold;font-size:24px;text-align:center;line-height:36px;margin-bottom:15px;}h2{font-weight:bold;font-size:18px;text-align:center;line-height:36px;margin-bottom:15px;}p{font-size:16px;line-height:21px;margin-bottom:15px;}dt{font-weight:bold;}dd{margin-left:0px;}</style><body>'+
 	'<h1>YOUR BASELINE RISK IS: AVERAGE</h1>'+
 	'<p>Your answers suggest that you are at average baseline risk for breast and ovarian cancer,'+
 	'just like the majority of women in the general population. This means you have a 12% chance '+
@@ -923,7 +923,7 @@ var moderateResults = {
 }
 
 var moderateResultsContent = 
-	'<html><body>'+
+	'<html><style>body{font-size:16px;line-height:21px;font-family:Helvetica, Arial, sans-serif;font-weight:normal;}h1{font-weight:bold;font-size:24px;text-align:center;line-height:36px;margin-bottom:15px;}h2{font-weight:bold;font-size:18px;text-align:center;line-height:36px;margin-bottom:15px;}p{font-size:16px;line-height:21px;margin-bottom:15px;}dt{font-weight:bold;}dd{margin-left:0px;}</style><body>'+
 	'<h1>YOUR BASELINE RISK IS: INCREASED</h1>'+
 	'<p>Your answers suggest that you are at increased baseline risk for breast and ovarian cancer, '+
 	'either because of a family history of one of these cancers, some significant event in your personal '+
@@ -1395,7 +1395,7 @@ var highResults = {
 }
 
 var highResultsContent = 
-	'<html><body>'+
+	'<html><style>body{font-size:16px;line-height:21px;font-family:Helvetica, Arial, sans-serif;font-weight:normal;}h1{font-weight:bold;font-size:24px;text-align:center;line-height:36px;margin-bottom:15px;}h2{font-weight:bold;font-size:18px;text-align:center;line-height:36px;margin-bottom:15px;}p{font-size:16px;line-height:21px;margin-bottom:15px;}dt{font-weight:bold;}dd{margin-left:0px;}</style><body>'+
 	'<h1>YOUR BASELINE RISK IS: HIGH</h1>'+
 	'<p>Your answers suggest that you are at a high baseline risk for breast and ovarian cancer, due '+
 	'either to a diagnosed gene mutation associated with a high risk of one of these cancers or, if '+

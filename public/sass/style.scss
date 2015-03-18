@@ -2080,7 +2080,7 @@ input[type="checkbox"], input[type="radio"] {
         width: 100%;
         padding: 0 10% 0.7rem;
 
-        @media only(max-width: 600px) {
+        @media only(max-width: 736px) {
             display: none;
             width: 100%;
             padding: 0.7rem 2rem;
@@ -2092,7 +2092,7 @@ input[type="checkbox"], input[type="radio"] {
             a {
                 font-size: 1rem;
 
-                @media only(min-width: 600px) {
+                @media only(min-width: 736px {
                     &:hover {
                         color: #FFF;
                     }   
@@ -2194,6 +2194,13 @@ footer {
     display: none;
 }
 
+h5.mobile-only {
+    display: none;
+}
+
+.copyright-mobile {
+    display: none;
+}
 
 ////////////////////////////////////////////////////// TABLET
 
@@ -2551,11 +2558,12 @@ footer {
 }
 ///////////////////////////////////////////// PHONE
 
-@media only(max-width: 600px) {
+@media only(max-width: 736px) {
     .logo {
         @include centerH;
         top: 1rem;
         margin-left: -4px;
+        padding-bottom: 10px;
         img {
             min-width: 160px;
             width: 160px;
@@ -2563,6 +2571,11 @@ footer {
     }
     .logo-white {
         display: none;
+    }
+    .copyright-mobile {
+        display: block;
+        margin-top: 50px;
+        font-size: 12px;
     }
     .menu-icon {
         display: block;
@@ -2706,6 +2719,10 @@ footer {
                 display: block;
             }
         }
+    }
+    h5.mobile-only {
+        display: block;
+        margin-bottom: 1.5em;
     }
     .fact-icon {
         display: block;

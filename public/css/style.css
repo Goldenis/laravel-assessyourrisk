@@ -583,7 +583,7 @@ button.sub:hover {
 }
 .progress-overlay .close-btn, .menu-overlay .close-btn {
   background: #ffb4aa;
-  z-index: 4000;
+  z-index: 9999;
 }
 .progress-overlay .progress, .menu-overlay .progress {
   position: relative;

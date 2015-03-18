@@ -89,6 +89,10 @@
     var knowingPledgeCount = 0;
     var familyPledgeCount = 0;    
 
+    $('.module').on('touchmove', function(e){
+        _scrollHandler();
+    });
+
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
         //   return;

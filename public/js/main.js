@@ -448,7 +448,40 @@
 
 
         $('input[name="mutation-sub"]').change(function(){
-            $('#mutation-sub-btn').prop('disabled', !this.checked);
+            var allCheckboxes = $('input[name="mutation-sub"]');
+            var noneChecked = true;
+            var isChecked = $(this).prop('checked');
+            if(isChecked){
+                if ($(this).hasClass('not-sure')){
+                    $(allCheckboxes).prop('checked', false);
+                }
+                else
+                {
+                    $('input[name="mutation-sub"].not-sure').prop('checked', false);                    
+                }
+
+
+                $(this).prop('checked', true);
+            }
+            allCheckboxes.each(function(index, item){
+                console.log(item.checked);
+                if (item.checked){
+                    noneChecked = false;
+                    
+                    return false;
+                }
+            });
+
+
+            // $('#famdiag-check-btn').prop('disabled', noneChecked);
+
+
+
+
+
+
+
+            $('#mutation-sub-btn').prop('disabled', noneChecked);
         });
 
         $('.testPDF, .pdf').on('click', function() {

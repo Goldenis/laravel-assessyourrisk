@@ -2305,7 +2305,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 100%;
   padding: 0 10% 0.7rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 736px) {
   .right-column .copyright {
     display: none;
     width: 100%;
@@ -2315,7 +2315,7 @@ input[type="checkbox"], input[type="radio"] {
 .right-column .copyright .legal a {
   font-size: 1rem;
 }
-@media (min-width: 600px) {
+@media only(min-width: 736px {
   .right-column .copyright .legal a:hover {
     color: #fff;
   }
@@ -2465,6 +2465,9 @@ footer {
   display: none;
 }
 h5.mobile-only {
+  display: none;
+}
+.copyright-mobile {
   display: none;
 }
 @media (max-width: 1024px) {
@@ -2793,7 +2796,7 @@ h5.mobile-only {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 736px) {
   .logo {
     left: 50%;
     -ms-transform: translateX(-50%);
@@ -2812,6 +2815,11 @@ h5.mobile-only {
   }
   .logo-white {
     display: none;
+  }
+  .copyright-mobile {
+    display: block;
+    margin-top: 50px;
+    font-size: 12px;
   }
   .menu-icon {
     display: block;
@@ -3719,12 +3727,12 @@ h5.mobile-only {
     width: 100%;
   }
 }
-@media only screen and (max-width: 600px) and (orientation: landscape) {
+@media only screen and (max-width: 736px) and (orientation: landscape) {
   .landscape-overlay {
     top: 0;
   }
 }
-@media (max-width: 600px) and (max-width: 500px) {
+@media (max-width: 736px) and (max-width: 500px) {
   .assessment .drink-slider .drink {
     margin-left: -19px;
   }

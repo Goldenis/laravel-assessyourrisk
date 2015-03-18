@@ -9,6 +9,8 @@ function createPdf($content) {
 	  'bucket' => 'brightenup',
 	  'public' => 'true',
 	  'header_html' => 'http://brightenup.sew.la/pdf/header',
+	  'header_spacing' => '12',
+	  'margin_top' => '4',
 	  'content' => $content
 	);
 

@@ -787,7 +787,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label"><i>BRCA1</i> or <i>BRCA2</i>, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" name="mutation-sub"  data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" name="mutation-sub"  data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
-            <div class="checkbox" data-answer-id="4"><input type="checkbox" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
+            <div class="checkbox" data-answer-id="4"><input type="checkbox" class="not-sure" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
           <div class="answers">

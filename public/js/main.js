@@ -99,7 +99,7 @@
     //cardsLow[0]{factbody: ''}
     //['factbody', '']
     //cardsLow[0]['factbody'] = "new string", ['facttitle'] = "new";
-    console.log(cardsLow[0]['factbody'])
+    // console.log(cardsLow[0]['factbody'])
 
     function _pageResize() {
         $('.module').scrollTop(0);

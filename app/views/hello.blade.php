@@ -91,10 +91,6 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <div class="line"></div>
     </div>
 
-    <div class="fact-icon">
-      i
-    </div>
-
         <div class="fact-overlay">
           <button class="sub close-btn">✕</button> 
           <div class="return"><div class="arrow"><img src="img/arrow_left.png"></div> <h4>Return to Assessment</h4></div>
@@ -608,6 +604,9 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <!-- <div class="section-title">Assess Your Risk</div> -->
       <div class="assessment-dots dots">
         <div class="btn-back"><img src="img/arrow_left_pink.png"></div>
+        <div class="fact-icon">
+          i
+        </div>
       </div>
       <section class="assessment-intro in">
         <h4 class="mobile-hide"><a href="http://brightpink.org">Bright Pink</a> created this tool to help you assess your <span class="pink-text">personal level of risk</span> for breast and ovarian cancer.  By looking at your <span class="pink-text">health and family history</span> alongside some of your <span class="pink-text">lifestyle</span> choices, you’ll not only learn more about your risk, but also about <span class="pink-text">actions</span> you can take to reduce it.<br><br><i>You</i> have the power to save your life.</h4>            

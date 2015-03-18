@@ -12,18 +12,15 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1344.72">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p1 {margin: 0.0px 0.0px 10.0px 0.0px; font: 12.0px Helvetica}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
     span.s1 {text-decoration: underline ; color: #4787ff}
   </style>
 </head>
 <body>
 <p class="p1">Dear {{ $userName }},</P>
-<p class="p2"><br></p>
 <p class="p1"><a href="{{ $pdf->url }}">Click here to download a copy of your results</a> from Bright Pink's breast and ovarian cancer assessment.</p>
-<p class="p2"><br></p>
 <p class="p1">You've done a powerful thing by assessing your own risk—consider sharing the tool with the women you care about so they can do the same.</p>
-<p class="p2"><br></p>
 <p class="p1"><a href="http://www.AssessYourRisk.org">www.AssessYourRisk.org</a></p>
 </body>
 </html>

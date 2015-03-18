@@ -12,7 +12,7 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1344.72">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p1 {margin: 0.0px 0.0px 10.0px 0.0px; font: 12.0px Helvetica}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
     span.s1 {text-decoration: underline ; color: #4787ff}
   </style>
@@ -21,17 +21,11 @@
 <p class="p1">Dear Doctor,</p>
 <p class="p1"> </p>
 <p class="p1">I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.</p>
-<p class="p2"><br></p>
 <p class="p1"><a href="{{ $pdf->url }}">Click here to download a copy of my results.</a></p> 
-<p class="p2"><br></p>
 <p class="p1">Thank you,</p> 
-<p class="p2"><br></p>
 <p class="p1">{{ $userName }}</p>
-<p class="p2"><br></p>
 <p class="p1"><b><i>About Bright Pink and the Assess Your Risk Quiz </i></b></p>
 <p class="p1"><a href="http://www.brightpink.org">Bright Pink</a> is the only national non-profit organization focused on the prevention and early detection of breast and ovarian cancer in young women. Visit <span class="s1">BrightPink.org</span> to learn more about the organization and <span class="s1">AssessYourRisk.org</span> to see the quiz that produced these results. Bright Pink also provides resources for physicians to support the management of patient breast and ovarian cancer risk at <span class="s1">BrightPink.org/Medical-Professionals</span>.</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
 <p class="p2"><br></p>
 </body>
 </html>

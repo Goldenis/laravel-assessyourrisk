@@ -882,7 +882,6 @@ button.sub:hover {
   -moz-transition-delay: 0;
 }
 .share-btn a {
-  margin-top: 30px;
   cursor: pointer;
 }
 .share-btn a:nth-of-type(1) {
@@ -901,7 +900,6 @@ button.sub:hover {
   top: 0.8rem;
 }
 .share-btn img {
-  width: 2rem;
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -962,7 +960,6 @@ button.sub:hover {
   top: 1.8rem;
 }
 .male-overlay .share-btn img {
-  width: 3rem;
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;

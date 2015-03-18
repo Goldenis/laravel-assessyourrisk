@@ -24,6 +24,9 @@ var height = $(document).ready(
 			TweenLite.to(heightBase, 1, {css:{top:startPos}, ease:Power3.easeOut});
 			
 			heightOverlay.mousedown (function(e) {
+				if (e.which !== 1){
+	                return;
+	            }
 				e.preventDefault();
 				moved = 0;
 				touch = e;

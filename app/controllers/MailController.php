@@ -65,6 +65,7 @@ class MailController extends \BaseController {
 			$content = Input::get ('content');
 			$isDoctor = Input::get ( 'isDoctor' );
 			$userName = Input::get ( 'userName' );
+			$pdfUrl = Input::get ( 'pdfUrl' );
 
 			// $pdfValidator = Validator::make ( 
 			// 	['content' => $content],
@@ -81,11 +82,14 @@ class MailController extends \BaseController {
 			);
 			
 			if (!$isDoctor) {
-				// Return the pdf url
-				$pdf = createPdf($content);
-				$statusCode = 200;
-				$response ['pdf_url'] = $pdf->url;
-				//return Response::json ($response, $statusCode);
+				// Return the pdf url to be opened
+				// Check if the a pdf was already created
+				if (!$pdfUrl) {
+					$pdf = createPdf($content);
+					$pdfUrl = $pdf->url;
+				}
+				$response ['pdf_url'] = $pdfUrl;
+				$response ['open_pdf'] = True;
 			} else {
 				if ($emailValidator->fails()) {
 					// Email validation failed
@@ -98,14 +102,20 @@ class MailController extends \BaseController {
 						$response ['errors'] [] = $message;
 					}
 				} else {
-					$pdf = createPdf($content);
+					// Check if a pdf was already created
+					if (!$pdfUrl) {
+						$pdf = createPdf($content);
+						$pdfUrl = $pdf->url;
+					}
+					$response ['pdf_url'] = $pdfUrl;
+					
 					$template = 'emails.user';
 					if ($isDoctor == 'true') {
 						$template = 'emails.doctor';
 					}
 					
 					Log::info ( '>> Validator passed.' );
-					Mail::send($template, array('userName' => $userName, 'pdf' => $pdf), function($message) use ($email)
+					Mail::send($template, array('userName' => $userName, 'pdfUrl' => $pdfUrl), function($message) use ($email)
 					{
 						
 						$messageSubject = "Breast & Ovarian Cancer Risk Management Strategy";

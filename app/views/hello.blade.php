@@ -82,7 +82,7 @@ I want to share something important with you.
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. 
 %0D%0A
 %0D%0A
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org ." target="_blank" class="mail-icon"><img src="img/mail.png"></a></span> this with someone you care about that does. You just might save her life.</h1>
+1 in 8 women will develop breast cancer at some point in her lifetime.  Please consider assessing your own level of risk by checking out the tool at AssessYourRisk.org." target="_blank" class="mail-icon"><img src="img/mail.png"></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
     
     <div class="menu-icon">
@@ -124,7 +124,7 @@ I want to share something important with you.
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. 
 %0D%0A
 %0D%0A
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org ." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
+1 in 8 women will develop breast cancer at some point in her lifetime.  Please consider assessing your own level of risk by checking out the tool at AssessYourRisk.org." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
         </div>
       </div>      
     </div>
@@ -147,7 +147,7 @@ I want to share something important with you.
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. 
 %0D%0A
 %0D%0A
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org ." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
+1 in 8 women will develop breast cancer at some point in her lifetime.  Please consider assessing your own level of risk by checking out the tool at AssessYourRisk.org." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
         </div>
       </div>
       
@@ -966,7 +966,7 @@ I want to share something important with you.
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. 
 %0D%0A
 %0D%0A
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org ." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
+1 in 8 women will develop breast cancer at some point in her lifetime.  Please consider assessing your own level of risk by checking out the tool at AssessYourRisk.org." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
         </div>
       </div>
     </section>
@@ -1367,7 +1367,7 @@ I want to share something important with you.
 Bright Pink—a non-profit organization focused on saving women’s lives from breast and ovarian cancer—created a tool that will help you assess your personal level of risk for these cancers.  By looking at your health and family history alongside some of your lifestyle choices, you will not only learn about your risk, but also about the actions you can take to reduce it. 
 %0D%0A
 %0D%0A
-1 in 8 women will develop breast cancer at some point in her lifetime; Please consider assessing your own level of risk by checking out the tool at http://assessyourrisk.org ." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
+1 in 8 women will develop breast cancer at some point in her lifetime.  Please consider assessing your own level of risk by checking out the tool at AssessYourRisk.org." target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
               </div>
             </div>
           </div>

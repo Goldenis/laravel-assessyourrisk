@@ -144,6 +144,7 @@
         setFontScale($('html'), 11, 16, 'px');
         setHeadlineTops();
         if(_smallScreen){
+            $('.assessment-facts').appendTo('.fact-overlay')
             $('.wheel-container').css({
                 left: Math.max(-27,((_winW - 320) + ((320-_winW)/2)-27))
             });
@@ -447,6 +448,7 @@
         });
 
         $('.testPDF, .pdf').on('click', function() {
+            $(this).attr('disabled', 'disabled');
         	woopra.track("click", {
                 intent: "getPDF",
                 type: "button"
@@ -548,6 +550,7 @@
             $('.vid-container').remove();
             overlayOpen = false;
             $('.male-overlay').removeClass("in");
+            $('.fact-icon').addClass('in');
         })
         // $('.your-risk .read-more').on('click', function() {
         //     $('.vid-container').remove();
@@ -659,6 +662,9 @@
 
         //$('.mail-icon').on('click',shareMail());
 
+        $('.fact-icon').on('click', openFactOverlay);
+        $('.fact-overlay .return').on('click', closeFactOverlay);
+        $('.menu-overlay .close-btn').on('click', closeMenuOverlay);
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
         $('.assessment-intro button, .lets-go').on('click', function() {
             $('.right-column').addClass('in2')
@@ -669,6 +675,7 @@
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
             $('.assessment-dots').addClass('active');
+            $('.fact-icon').addClass('in');
         })
         $('.ask').on('click', askHandler);
         $('.btn-calculate').on('click', function(e) {
@@ -715,9 +722,9 @@
             changeModule($(this).index());
             $('.menu-icon').addClass('module-open')
         })
-        $('.progress-overlay .vignettes h3').on('click', function() {
+        $('.menu-overlay .vignettes h3').on('click', function() {
             changeModule($('.progress-overlay .vignettes h3').index($(this)));
-            closeProgressOverlay();
+            closeMenuOverlay();
             $('.assessment').removeClass('in');
             $('.right-column').addClass('left');
             $('.menu-icon').addClass('left');
@@ -731,7 +738,14 @@
             $('.menu-icon').removeClass('left');
             $('.education').removeClass('in');
         })
-        $('.menu-icon, .btn-results').on('click', function() {
+        $('.menu-icon').on('click', function() {
+            if (!overlayOpen) {
+                openMenuOverlay();
+            } else {
+                closeMenuOverlay();
+            }
+        })
+        $('.btn-results').on('click', function() {
             if (!overlayOpen) {
                 openProgressOverlay();
             } else {
@@ -884,6 +898,29 @@
         $('.border').removeClass('white');
     }
 
+    function openMenuOverlay() {
+        $('.menu-overlay').addClass('in');
+        overlayOpen = true;
+    }
+      
+    function closeMenuOverlay() {
+        $('.menu-overlay').removeClass("in");
+        overlayOpen = false;
+    }
+
+    function openFactOverlay() {
+        $('.fact-overlay').addClass('in');
+        $('.fact-icon').removeClass('in');
+        $('.fact-icon').removeClass('new')
+        factoverlayOpen = true;
+    }
+      
+    function closeFactOverlay() {
+        $('.fact-overlay').removeClass("in");
+        $('.fact-icon').addClass('in');
+        overlayOpen = false;
+    }
+
     function openProgressOverlay() {
         $('.progress-overlay').addClass('in');
         overlayOpen = true;
@@ -986,6 +1023,7 @@
                 $('.nav').removeClass('in');
             }, 800)
         }
+        $('.fact-icon').toggleClass('out');
         $('.assessment').toggleClass('in');
         $('.right-column').toggleClass('left');
         $('.menu-icon').toggleClass('left');
@@ -1509,6 +1547,7 @@
         // }
         if(_currentQuestion == 0 && answer.html() !== "Yes"){
                 $('.male-overlay').addClass('in');
+                $('.fact-icon').removeClass('in');
                 overlayOpen = true; 
         } else {
            $('.progress-overlay .progress-question').eq(_currentQuestion).css({
@@ -1516,6 +1555,7 @@
            })
            $('.question').eq(_currentQuestion).addClass('out-up')
            $('.question').eq(_currentQuestion).removeClass('in')
+           $('.fact-icon').removeClass('new')
 
            if (!$(this).hasClass('submit-weight')) {
                handleSaveQuizAnswer(answer)
@@ -1523,7 +1563,8 @@
            var _oldQuestion = _currentQuestion;
            _currentQuestion++;
            setTimeout(function() {
-               $('.fact').eq(_currentQuestion).addClass('in');
+               $('.fact').eq(_currentQuestion).addClass('in')
+               $('.fact-icon').addClass('new')
                $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')

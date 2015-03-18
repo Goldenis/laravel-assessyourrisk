@@ -17,7 +17,35 @@ b {
   font-family: 'avg_bold';
   font-weight: normal !important;
 }
-/* CSS Document */@-webkit-keyframes fade-in {
+/* CSS Document */@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: scale(0.9, 0.9);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0.8;
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.9, 0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -387,6 +415,129 @@ button.sub:hover {
 .overlay.ie-overlay p {
   color: #fff;
   text-align: center;
+}
+.fact-overlay {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 2200;
+  background-color: #d7006d;
+  background: rgba(215, 0, 109, .9);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s 0 ease-out;
+  -moz-transition: all 1s 0 ease-out;
+  -o-transition: all 1s 0 ease-out;
+  -ms-transition: all 1s 0 ease-out;
+  transition: all 1s 0 ease-out;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  overflow: hidden;
+}
+.fact-overlay.in {
+  left: 0;
+}
+.fact-overlay.in .close-btn {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  background: transparent;
+  display: block;
+  top: 0px;
+  right: 10px;
+  border-width: 1px;
+  border-color: #fff;
+  color: #fff;
+  padding: 0.7rem 0.8rem 0.65rem 0.9rem;
+}
+.fact-overlay.ie-overlay {
+  position: absolute;
+  padding: 0;
+  border: 0px;
+}
+.fact-overlay.ie-overlay h1 {
+  text-align: center;
+}
+.fact-overlay.ie-overlay p {
+  color: #fff;
+  text-align: center;
+}
+.fact-overlay .return {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+  line-height: 60px;
+  color: #fff;
+  text-align: center;
+  background-color: #d7006d;
+  border-bottom: 1px solid #d2006a;
+  box-shadow: 0px 0px 40px #d7006d;
+  z-index: 100;
+  cursor: pointer;
+}
+.fact-overlay .return h4 {
+  font-size: 1.5rem;
+}
+.fact-overlay .return .arrow {
+  -webkit-transition: all 0.3s 0 ease-out;
+  -moz-transition: all 0.3s 0 ease-out;
+  -o-transition: all 0.3s 0 ease-out;
+  -ms-transition: all 0.3s 0 ease-out;
+  transition: all 0.3s 0 ease-out;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+  position: absolute;
+  left: 20px;
+  right: auto;
+  margin-top: 0;
+  top: 0px;
+  opacity: 0.8;
+}
+.fact-overlay .return .arrow img {
+  width: 25px;
+}
+.fact-overlay .assessment-facts {
+  padding: 100px 10% 10%;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.fact-overlay .assessment-facts .fact {
+  position: absolute;
+  padding: 0em;
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  opacity: 0;
+  top: 100px;
+  opacity: 0;
+  -webkit-transition: all 1s 0 ease-in-out;
+  -moz-transition: all 1s 0 ease-in-out;
+  -o-transition: all 1s 0 ease-in-out;
+  -ms-transition: all 1s 0 ease-in-out;
+  transition: all 1s 0 ease-in-out;
+  -moz-transition-duration: 1s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
+.fact-overlay .assessment-facts .fact.in {
+  opacity: 1;
+}
+.fact-overlay .assessment-facts .fact.out {
+  opacity: 0;
+}
+.fact-overlay .assessment-facts .fact h5 {
+  font-size: 1.1rem;
+}
+.fact-overlay .assessment-facts .fact:nth-of-type(1) {
+  display: block;
 }
 .question-stats {
   display: none;
@@ -1187,6 +1338,9 @@ input[type="checkbox"], input[type="radio"] {
   width: 100;
   height: 40px;
   width: 100px;
+}
+.fact-icon {
+  display: none;
 }
 .asterisk {
   color: #f6323e;
@@ -2808,6 +2962,45 @@ footer {
   .menu-icon.left .line {
     background: #fff;
   }
+  .fact-icon {
+    display: block;
+    z-index: 2500;
+    position: absolute;
+    top: 20px;
+    right: -2.5rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "avg_bold";
+    background-color: #ffb4aa;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.6s 0 ease-in-out;
+    -moz-transition: all 0.6s 0 ease-in-out;
+    -o-transition: all 0.6s 0 ease-in-out;
+    -ms-transition: all 0.6s 0 ease-in-out;
+    transition: all 0.6s 0 ease-in-out;
+    -moz-transition-duration: 0.6s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+  }
+  .fact-icon.in {
+    opacity: 1;
+    right: 2.5rem;
+  }
+  .fact-icon.out {
+    right: -40px !important;
+    opacity: 0 !important;
+  }
+  .fact-icon.new {
+    -webkit-animation: pulsate 1s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation: pulsate 1s ease-in-out;
+    animation-iteration-count: infinite;
+  }
   .dots {
     padding: 8px 10px 10px;
     bottom: 5rem;
@@ -3025,7 +3218,7 @@ footer {
     border: 0px solid #ffb4aa;
   }
   .male-overlay {
-    z-index: 2001;
+    z-index: 3001;
   }
   .male-overlay h1 {
     font: 3.4rem/1.5 "avg_bold";

@@ -91,6 +91,16 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
       <div class="line"></div>
     </div>
 
+    <div class="fact-icon">
+      i
+    </div>
+
+        <div class="fact-overlay">
+          <button class="sub close-btn">✕</button> 
+          <div class="return"><div class="arrow"><img src="img/arrow_left.png"></div> <h4>Return to Assessment</h4></div>
+              
+        </div>
+
     <div class="overlay menu-overlay">
       <button class="sub close-btn">✕</button>
       <div class="vignettes">
@@ -507,7 +517,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <!-- FACTS -->
           <div class="assessment-facts">
             <div class="fact">
-              <h5>You—and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
+              <h5>You and the 52 million other young women in the United States—are at risk <i>simply because</i> you have breasts and/or ovaries.</h5>
             </div>
 
             <div class="fact">
@@ -641,7 +651,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <div class="answers">
             <div class="checkbox-list">
               <div class="checkbox" data-answer-id="1"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Breast cancer</div></div>
-              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Ovarian cancer (epithelial; non-germ cell) or Fallopian tube cancer</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="cancerhistory-radio" data-answer-id="-1"><div class="label">Both</div></div>              
               <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
             </div>

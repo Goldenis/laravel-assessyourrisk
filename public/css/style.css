@@ -2315,7 +2315,7 @@ input[type="checkbox"], input[type="radio"] {
 .right-column .copyright .legal a {
   font-size: 1rem;
 }
-@media only(min-width: 736px {
+@media (min-width: 736px) {
   .right-column .copyright .legal a:hover {
     color: #fff;
   }
@@ -2813,13 +2813,13 @@ h5.mobile-only {
     min-width: 160px;
     width: 160px;
   }
-  .logo-white {
-    display: none;
-  }
   .copyright-mobile {
     display: block;
     margin-top: 50px;
     font-size: 12px;
+  }
+  .logo-white {
+    display: none;
   }
   .menu-icon {
     display: block;

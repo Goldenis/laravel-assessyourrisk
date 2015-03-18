@@ -10,7 +10,8 @@ function createPdf($content) {
 	  'public' => 'true',
 	  'header_html' => 'http://brightenup.sew.la/pdf/header',
 	  'header_spacing' => '12',
-	  'margin_top' => '4',
+	  'margin_top' => '2',
+	  'no_page_break' => 'false',
 	  'content' => $content
 	);
 

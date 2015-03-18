@@ -2194,6 +2194,10 @@ footer {
     display: none;
 }
 
+h5.mobile-only {
+    display: none;
+}
+
 
 ////////////////////////////////////////////////////// TABLET
 
@@ -2556,6 +2560,7 @@ footer {
         @include centerH;
         top: 1rem;
         margin-left: -4px;
+        padding-bottom: 10px;
         img {
             min-width: 160px;
             width: 160px;
@@ -2706,6 +2711,10 @@ footer {
                 display: block;
             }
         }
+    }
+    h5.mobile-only {
+        display: block;
+        margin-bottom: 1.5em;
     }
     .fact-icon {
         display: block;

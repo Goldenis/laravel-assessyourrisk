@@ -7,8 +7,8 @@ function createPdf($content) {
 	  'password' => 'wSTMougxX0C8ptb',
 	  'test' => 'false',
 	  'bucket' => 'brightenup',
-	  'public'=> 'true',
-	  'header_html' => '<h1>BRIGHT PINK</h1>'
+	  'public' => 'true',
+	  'header_html' => 'http://brightenup.sew.la/pdf/header',
 	  'content' => $content
 	);
 

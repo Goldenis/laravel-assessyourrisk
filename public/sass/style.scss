@@ -1250,12 +1250,15 @@ input[type="checkbox"], input[type="radio"] {
 }
 .logo {
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: 3rem;
     margin-left: 0px;
     opacity: 0;
     cursor: pointer;
     z-index: 1113;
+    background-color: #FFF;
+    padding-right: 20px;
+    padding-bottom: 20px;
     // opacity: 0 !important;
     // @include transition(.5s);
     &.out {
@@ -1357,6 +1360,14 @@ input[type="checkbox"], input[type="radio"] {
     padding-top: 6px;
     border-top: 2px solid rgba(25, 25, 25, .2);
     z-index: 2;
+}
+.ie9{
+    .intro{
+        opacity:1 !important;
+        .wheel-container{
+            opacity:1 !important;
+        }
+    }
 }
 .intro {
     width: 100%;

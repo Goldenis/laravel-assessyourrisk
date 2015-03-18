@@ -50,3 +50,7 @@ Route::get('/pledge', function()
 {
 	return View::make('pledge');
 });
+Route::get('/pdf/header', function()
+{
+	return View::make('pdf_header');
+});

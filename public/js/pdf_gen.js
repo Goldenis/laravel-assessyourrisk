@@ -1471,6 +1471,7 @@ function doPostPDF(content) {
   $.ajax({
 	type : "POST",
 	url : "/email",
+	async: false,
 	data : {
 		email : emailAddress,
 		content : content,
@@ -1481,8 +1482,8 @@ function doPostPDF(content) {
   }).done(function(msg) {
   		if (msg.pdf_url) {
   			pdfUrl = msg.pdf_url;
-  			if (msg.open_pdf) {
-				window.open(pdfUrl, 'pdf');
+  			if (isDoctorEmail === null) {
+				pdfWindow.location.href = pdfUrl;
   			}
   		}
 		isDoctorEmail = null;

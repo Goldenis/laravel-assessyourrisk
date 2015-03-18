@@ -89,7 +89,6 @@ class MailController extends \BaseController {
 					$pdfUrl = $pdf->url;
 				}
 				$response ['pdf_url'] = $pdfUrl;
-				$response ['open_pdf'] = True;
 			} else {
 				if ($emailValidator->fails()) {
 					// Email validation failed

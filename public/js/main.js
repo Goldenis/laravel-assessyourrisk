@@ -1358,6 +1358,12 @@
 
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
         //console.log(savedQuestionsAnswers[0].questionTxt)
+
+        woopra.track("Question Answered", {
+            question_number: _currentQuestion,
+            question_text: questionTxt,
+            question_answer: questionanswer
+        });
     
     }
 

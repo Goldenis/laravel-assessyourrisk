@@ -12,7 +12,7 @@
     <meta property="og:url" content="http://www.assessyourrisk.org" /> 
     <meta property="og:title" content="Assess Your Risk" />
     <meta property="og:description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" /> 
-    <meta property="og:image" content="http://brightenup.sew.la/img/brightpink_logo.png" /> 
+    <meta property="og:image" content="http://www.assessyourrisk.org/img/ayr_logo_bp.png" /> 
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>

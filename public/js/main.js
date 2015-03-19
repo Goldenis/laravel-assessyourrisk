@@ -1362,7 +1362,7 @@
         woopra.track("Question Answered", {
             question_number: _currentQuestion,
             question_text: questionTxt,
-            question_answer: questionanswer
+            question_answer: answers
         });
     
     }

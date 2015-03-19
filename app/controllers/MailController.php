@@ -26,7 +26,8 @@ function createPdf($content) {
 	$context = stream_context_create($opts);
 	$json = file_get_contents($url, false, $context);
 	$pdf = json_decode($json);
-	return $pdf;
+	$pdfUrl = str_replace('https://brightenup.s3.amazonaws.com', 'http://files.assessyourrisk.org', $pdf->url);
+	return $pdfUrl;
 }
 
 class MailController extends \BaseController {
@@ -86,8 +87,7 @@ class MailController extends \BaseController {
 				// Return the pdf url to be opened
 				// Check if the a pdf was already created
 				if (!$pdfUrl) {
-					$pdf = createPdf($content);
-					$pdfUrl = $pdf->url;
+					$pdfUrl = createPdf($content);
 				}
 				$response ['pdf_url'] = $pdfUrl;
 			} else {
@@ -104,8 +104,7 @@ class MailController extends \BaseController {
 				} else {
 					// Check if a pdf was already created
 					if (!$pdfUrl) {
-						$pdf = createPdf($content);
-						$pdfUrl = $pdf->url;
+						$pdfUrl = createPdf($content);
 					}
 					$response ['pdf_url'] = $pdfUrl;
 					

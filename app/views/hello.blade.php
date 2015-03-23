@@ -12,7 +12,7 @@
     <meta property="og:url" content="http://www.assessyourrisk.org" /> 
     <meta property="og:title" content="Assess Your Risk" />
     <meta property="og:description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" /> 
-    <meta property="og:image" content="http://www.assessyourrisk.org/img/ayr_logo_bp.png" /> 
+    <meta property="og:image" content="http://www.assessyourrisk.org/img/fb-share.png" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -73,7 +73,7 @@
     <div class="email-content"></div>
     <div class="overlay male-overlay">
       <button class="sub close-btn">✕</button>
-      <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/ayr_logo_bp.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi, 
+      <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -115,7 +115,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/ayr_logo_bp.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -138,7 +138,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/ayr_logo_bp.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+          <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -957,7 +957,7 @@ Do you know if I do%3F" target="_blank"><button class="sub ask" data-answer-id="
         </div>
         <div class="share">
           <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/ayr_logo_bp.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+          <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -1358,7 +1358,7 @@ Spencer Added 1.Spend Some Time in the Sun and 2. Eat Well-->
                 <div class="arrow"><img src="img/arrow_right.png"></div>
                 <h3>Save the life of somebody you love. Tell them to complete this experience too.</h3>
                 <br>
-                <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/education" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://www.assessyourrisk.org/img/ayr_logo_bp.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+                <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/education" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:name@email.com?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 

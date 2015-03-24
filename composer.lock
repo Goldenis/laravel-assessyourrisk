@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c76acd8feeae5de47eaf8392d25533a",
+    "hash": "5fe92948f01ae5c332701441d1f0eb47",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -195,6 +195,91 @@
                 "zf2"
             ],
             "time": "2015-02-17 15:50:31"
+        },
+        {
+            "name": "intouch/laravel-newrelic",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/In-Touch/laravel-newrelic.git",
+                "reference": "d170386537bf5bc093d37a0b4345df12b6dcf9d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/In-Touch/laravel-newrelic/zipball/d170386537bf5bc093d37a0b4345df12b6dcf9d5",
+                "reference": "d170386537bf5bc093d37a0b4345df12b6dcf9d5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.*",
+                "intouch/newrelic": ">=1.0.2",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intouch\\LaravelNewrelic": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Leckey",
+                    "email": "pleckey@intouchinsight.com"
+                }
+            ],
+            "description": "Laravel 4 NewRelic Integration",
+            "homepage": "https://github.com/In-Touch/laravel-newrelic",
+            "keywords": [
+                "laravel",
+                "new relic",
+                "newrelic"
+            ],
+            "time": "2014-06-26 13:01:42"
+        },
+        {
+            "name": "intouch/newrelic",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/In-Touch/newrelic.git",
+                "reference": "20db6cb25a9eb88e504e16829077c56828c176cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/In-Touch/newrelic/zipball/20db6cb25a9eb88e504e16829077c56828c176cc",
+                "reference": "20db6cb25a9eb88e504e16829077c56828c176cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intouch\\Newrelic": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Leckey",
+                    "email": "pleckey@intouchinsight.com"
+                }
+            ],
+            "description": "Namespaced Wrapper for NewRelic PHP Agent",
+            "homepage": "http://github.com/In-Touch/newrelic/",
+            "keywords": [
+                "new relic",
+                "newrelic"
+            ],
+            "time": "2014-08-18 12:08:45"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1263,17 +1348,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.4",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813"
+                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f75989f3ab2743a82fe0b03ded2598a2b1546813",
-                "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/70f7c8478739ad21e3deef0d977b38c77f1fb284",
+                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284",
                 "shasum": ""
             },
             "require": {
@@ -1284,6 +1369,7 @@
                 "symfony/config": "~2.0,>=2.0.5",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/expression-language": "~2.6",
+                "symfony/phpunit-bridge": "~2.7",
                 "symfony/stopwatch": "~2.3"
             },
             "suggest": {
@@ -1317,25 +1403,28 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2015-02-01 16:10:57"
+            "time": "2015-03-13 17:37:22"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.6.4",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7"
+                "reference": "fdc5f151bc2db066b51870d5bea3773d915ced0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
-                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/fdc5f151bc2db066b51870d5bea3773d915ced0b",
+                "reference": "fdc5f151bc2db066b51870d5bea3773d915ced0b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -1364,7 +1453,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 21:13:09"
+            "time": "2015-03-12 10:28:44"
         },
         {
             "name": "symfony/finder",

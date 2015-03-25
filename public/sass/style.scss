@@ -2578,6 +2578,7 @@ h5.mobile-only {
     .logo-white {
         display: none;
     }
+
     .menu-icon {
         display: block;
         position: fixed;
@@ -3184,17 +3185,27 @@ h5.mobile-only {
             .headline {
                 margin-bottom: 200px;
                 width: 100%;
+                h5{
+                    font-size: 1.3rem;
+                    line-height: 1.1;
+                }
                 h4 {
                     font-size: 2.2rem;
                 }
                 h3 {
-                    font-size: 2.75rem;
+                    font-size: 2.4rem;
+                    line-height:1;
                 }
                 h2 {
                     font-size: 3.2rem;
                     margin-bottom: 2rem;
                 }
-
+                // .btn-begin{
+                //     margin-top:10px;
+                // }
+                .scroll-dive{
+                    margin-top:2rem;
+                }
             }
             ul, p {
                 font-size: 1.4rem;

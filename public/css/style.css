@@ -3478,15 +3478,23 @@ h5.mobile-only {
     margin-bottom: 200px;
     width: 100%;
   }
+  .education .headlines .headline h5 {
+    font-size: 1.3rem;
+    line-height: 1.1;
+  }
   .education .headlines .headline h4 {
     font-size: 2.2rem;
   }
   .education .headlines .headline h3 {
-    font-size: 2.75rem;
+    font-size: 2.4rem;
+    line-height: 1;
   }
   .education .headlines .headline h2 {
     font-size: 3.2rem;
     margin-bottom: 2rem;
+  }
+  .education .headlines .headline .scroll-dive {
+    margin-top: 2rem;
   }
   .education .headlines ul, .education .headlines p {
     font-size: 1.4rem;

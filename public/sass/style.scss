@@ -3022,8 +3022,8 @@ h5.mobile-only {
             top: 10px;
             &.shrink{
                 @include transition(1s,ease-in-out);
-                -ms-transform: scale(.5) translateY(-50%) !important;
-                @include transform(scale(.5) translateY(-50px) !important);
+                -ms-transform: scale(.5) translateY(-60px) !important;
+                @include transform(scale(.5) translateY(-60px) !important);
             }
         }
         .intro-message {
@@ -3033,7 +3033,7 @@ h5.mobile-only {
             right: 0;
             left: 0;
             margin: auto;
-            top: calc(130px + 26%);
+            top: calc(130px + 28%);
             width: calc(100% - 3.8rem);
             max-width: 500px;
             padding: 1.5rem 0;
@@ -3042,7 +3042,7 @@ h5.mobile-only {
             @include animation(fade-in 1s 7.5s forwards);
         }
         p {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
         }
         #Begin {
             display: none;

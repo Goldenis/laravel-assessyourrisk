@@ -3317,12 +3317,12 @@ h5.mobile-only {
     -moz-transition-duration: 1s;
     -moz-transition-property: all;
     -moz-transition-delay: 0;
-    -ms-transform: scale(0.5) translateY(-50%) !important;
-    -ms-transform: scale(0.5) translateY(-50px) !important;
-    -webkit-transform: scale(0.5) translateY(-50px) !important;
-    -moz-transform: scale(0.5) translateY(-50px) !important;
-    -o-transform: scale(0.5) translateY(-50px) !important;
-    transform: scale(0.5) translateY(-50px) !important;
+    -ms-transform: scale(0.5) translateY(-60px) !important;
+    -ms-transform: scale(0.5) translateY(-60px) !important;
+    -webkit-transform: scale(0.5) translateY(-60px) !important;
+    -moz-transform: scale(0.5) translateY(-60px) !important;
+    -o-transform: scale(0.5) translateY(-60px) !important;
+    transform: scale(0.5) translateY(-60px) !important;
   }
   .intro .intro-message {
     position: absolute;
@@ -3335,7 +3335,7 @@ h5.mobile-only {
     right: 0;
     left: 0;
     margin: auto;
-    top: calc(130px + 26%);
+    top: calc(130px + 28%);
     width: calc(100% - 3.8rem);
     max-width: 500px;
     padding: 1.5rem 0;
@@ -3346,7 +3346,7 @@ h5.mobile-only {
     animation: fade-in 1s 7.5s forwards;
   }
   .intro p {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
   .intro #Begin {
     display: none;

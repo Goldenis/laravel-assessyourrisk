@@ -2763,6 +2763,7 @@ h5.mobile-only {
         }
     }
     .dots {
+        display:none;
         padding: 8px 10px 10px;
         bottom: 5rem;
         // left: 0;
@@ -3205,6 +3206,10 @@ h5.mobile-only {
                 // }
                 .scroll-dive{
                     margin-top:2rem;
+                }
+                &.last {
+                    margin-bottom: 0rem;
+                    padding-bottom: 0rem;
                 }
             }
             ul, p {

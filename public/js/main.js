@@ -89,16 +89,25 @@
     var knowingPledgeCount = 0;
     var familyPledgeCount = 0;    
 
-    $('.module').on('touchmove', function(e){
-        _scrollHandler();
-    });
+    
 
+    if ($('html').hasClass('touch')){
+        _showAll();
+        $('.module').on('touchmove', function(e){
+            _scrollHandler();
+        });
+    }
+  
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
         //   return;
         // }
         _scrollHandler();
     });
+
+    
+
+
 
     //cardsLow[0]{factbody: ''}
     //['factbody', '']
@@ -271,6 +280,31 @@
         $('.education .dot').eq(hNum).addClass('on');
     }
 
+    function _showAll() {
+        // $('.vignette').
+        $('.vignette .headline').addClass('active');
+
+        // for (var i = 0; i < headline_tops[_currentModule].length; i++) {
+        //     if (Math.abs(headline_tops[_currentModule][i] - scrollTop) < Math.min(Math.abs(headline_tops[_currentModule][closest] - scrollTop), Math.abs(headline_tops[_currentModule][newClosest] - scrollTop))) {
+        //         newClosest = i;
+        //     }
+        // }
+        // if (newClosest !== closest) {
+
+        //     $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
+        //     closest = newClosest;
+        //     $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
+        //     var offset = 0;
+        //     if(_currentModule == 1){
+        //         offset = $('.module').eq(0).find($('.headline')).length
+        //     }else if(_currentModule == 2){
+        //         offset = $('.module').eq(0).find($('.headline')).length + $('.module').eq(1).find($('.headline')).length
+        //     }
+        //     changeHeadline(closest + offset);
+        // }
+
+    }
+
     function _scrollHandler() {
         var scrollTop = $('.module').eq(_currentModule).scrollTop() + (_winH / 3);
         for (var i = 0; i < headline_tops[_currentModule].length; i++) {
@@ -279,7 +313,9 @@
             }
         }
         if (newClosest !== closest) {
-            $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
+            if (!$('html').hasClass('touch')){
+                $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
+            }
             closest = newClosest;
             $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
             var offset = 0;

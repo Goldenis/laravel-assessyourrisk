@@ -1260,16 +1260,21 @@
                 answers = currentGlass + "  alcohol drinks a day";            
             }
 
-                questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();           
-                questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+            questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();           
+            questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
 
-                savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
-                savedQuizProgress[String(_currentQuestion)] = ansTxt;
-                updateCharts();
+            savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
+            savedQuizProgress[String(_currentQuestion)] = ansTxt;
+            updateCharts();
 
+            woopra.track("Question Answered", {
+                question_number: _currentQuestion,
+                question_text: questionTxt,
+                question_answer: answers
+            });
               
-                return;
+            return;
         };
 
         var age = $('input[name="age-radio"]:checked');
@@ -1313,7 +1318,12 @@
             delete savedQuizProgress[8];
             var specialQ = {'questionnumber': '7', 'questionTxt' : 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?', 'questionanswer' : answers};
 
-            savedQuestionsAnswers[7] = specialQ;        
+            savedQuestionsAnswers[7] = specialQ; 
+            woopra.track("Question Answered", {
+                question_number: '7',
+                question_text: 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?',
+                question_answer: answers
+            });
         }
 
 
@@ -1556,6 +1566,11 @@
             cardsHigh[5]['factheadline'] = "";     
             cardsHigh[5]['factbody'] = "";  
         } 
+
+        woopra.track("Results", {
+            level: resultLevel
+        });
+
     }
 
     function askHandler(e) {

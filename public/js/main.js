@@ -1279,7 +1279,7 @@
   
                 answers = bmi + " BMI Result"
                 if (bmi < 18.5) {
-                    ansTxt = "-1";
+                    ansTxt = "+1";
                 } else if (bmi >= 18.5 && bmi <= 24.9) {
                     ansTxt = "+1";
                 } else if (bmi >= 25.0 && bmi <= 29.9) {

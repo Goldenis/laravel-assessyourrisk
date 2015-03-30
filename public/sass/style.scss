@@ -733,7 +733,7 @@ button {
                             }
                         }
                         input[type="text"]{
-                            padding: 10px 20px;
+                            padding: 10px 10px;
                             margin: 0 2rem 0 0;
                             float: left;
                             width: 20%;
@@ -2428,6 +2428,7 @@ h5.mobile-only {
                         }
                     }
                     &.show-fields-dr{
+                        padding: 1.5rem 3rem;
                         .email-pdf-btns{
                             top: 20rem;
                         }

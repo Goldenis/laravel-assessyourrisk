@@ -1620,7 +1620,8 @@
             setTimeout(function(){
                 openProgressOverlay();
                 if(_smallScreen){
-                    $('.progress-overlay').scrollTop(450);
+                    // $('.progress-overlay').scrollTop(450);
+                    $('.progress-overlay').scrollTop(0);
                 }
             },1000)
             $('.assessment .share').addClass('in')

@@ -681,7 +681,7 @@ button.sub:hover {
   border-color: #ffb4aa !important;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 0 2rem 0 0;
   float: left;
   width: 20%;
@@ -2673,6 +2673,9 @@ h5.mobile-only {
     background: #fff;
     color: #f6323e;
     border-color: #fff !important;
+  }
+  .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr {
+    padding: 1.5rem 3rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-pdf-btns {
     top: 20rem;

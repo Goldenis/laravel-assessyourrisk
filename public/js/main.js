@@ -1792,7 +1792,7 @@
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '.jpg';
 
-        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);
         } else if ($('html').hasClass('ie9')) {
             loadBGImg(imgSrc);

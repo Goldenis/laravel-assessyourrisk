@@ -123,9 +123,9 @@
             _airScreen = false;
             _lapScreen = false;
             minS = .7;
-            $('.module-hero h1').eq(1).html('Normal')
+            $('.module-hero h1').eq(1).html('Your Normal')
             $('.module-hero h1').eq(2).html('Family')
-            $('.vignettes h3').eq(1).html('Normal')
+            $('.vignettes h3').eq(1).html('Your Normal')
             $('.vignettes h3').eq(2).html('Family')
             if(_winW > _winH){
                 $('.landscape-overlay').addClass('active')    

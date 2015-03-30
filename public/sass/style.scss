@@ -1805,6 +1805,13 @@ input[type="checkbox"], input[type="radio"] {
                     margin: auto;
                 }
             }
+            .headlines {
+                &:hover {
+                    .arrow {
+                        top: -50px;  
+                    }
+                } 
+            }
         }
     }
     .headlines {
@@ -1953,7 +1960,7 @@ input[type="checkbox"], input[type="radio"] {
             position: absolute;
             height: 100%;
             width: 100%;
-            padding: 3rem 3rem;
+            
             background: $red;
             top: 0;
             left: 0;
@@ -1964,6 +1971,11 @@ input[type="checkbox"], input[type="radio"] {
                     left: 10px;
                 }
             }
+        }
+        .understand-contain {
+            border-right: 10px solid #fff;
+            border-bottom: 10px solid #FFF;
+            padding: 3rem;
         }
         .assess, .assess-start, .lets-go {
             position: absolute;
@@ -1989,7 +2001,8 @@ input[type="checkbox"], input[type="radio"] {
     }
     .fact {
         position: absolute;
-        padding: 0em;
+        padding: 3rem;
+        padding-top: 0;
         width: 90%;
         height: 100%;
         opacity: 0;
@@ -2200,6 +2213,8 @@ h5.mobile-only {
 
 .copyright-mobile {
     display: none;
+    margin-top: 50px;
+    font-size: 12px;
 }
 
 
@@ -2487,18 +2502,36 @@ h5.mobile-only {
         }
         .toggle-box{
             height: calc(100% - 300px);
+
+            .understand-contain {
+                border: 0;
+                padding: 0;
+            }
             .understand{
                 padding: 3rem 2rem;
             }
         }
         .fact{
-            display: none;
+            // display: none;
             width: 100%;
+            padding: 0;
+
+            h5 {
+                font-size: 12px;
+            }
         }
         &.down{
             height: 78%;
         }
     }
+    .copyright {
+        display: none;
+    }
+
+    .copyright-mobile {
+        display: block;
+    }
+
     .logo-white{
         bottom: 30px;
         img{
@@ -2763,7 +2796,6 @@ h5.mobile-only {
         }
     }
     .dots {
-        display:none;
         padding: 8px 10px 10px;
         bottom: 5rem;
         // left: 0;
@@ -3120,6 +3152,7 @@ h5.mobile-only {
     }
     .education {
         .dots {
+            display: none;
             bottom: 6rem;
             top: auto;
             width: 100%;
@@ -3154,7 +3187,7 @@ h5.mobile-only {
             padding: 1.5rem 2.5rem;
             height: calc(33.333% - 20px);
             h1 {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
         }
         .section-title {
@@ -3166,6 +3199,12 @@ h5.mobile-only {
         }
         .vignette {
             width: 100%;
+
+            &.last {
+                .share {
+                    padding-bottom: 0;
+                }
+            }
         }
         .video {
             border-left: none;
@@ -3208,8 +3247,8 @@ h5.mobile-only {
                     margin-top:2rem;
                 }
                 &.last {
-                    margin-bottom: 0rem;
-                    padding-bottom: 0rem;
+                    margin-bottom: 4rem;
+                    padding-bottom: 8rem;
                 }
             }
             ul, p {
@@ -3241,7 +3280,7 @@ h5.mobile-only {
                 right: 20px;
                 margin-top: .7rem;
                 top: 14px;
-                opacity: .8;
+                opacity: 1;
                 img{
                     width: 25px;
                 }
@@ -3268,6 +3307,10 @@ h5.mobile-only {
                 z-index: 3;
             }
             .understand{
+                .arrow  {
+                    right: 2px;
+                    top: 7px;
+                }
                 &:hover{
                     .arrow{
                         left: auto;

@@ -2,14 +2,24 @@
     var isDoctorEmail = null;
     var pdfWindow;
     var savedQuestionsAnswers = {};
-    var endCards = {};  
-    var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
+    var endCards = null;
+    var cardsLow = null;
+    var cardsHigh = null;
+
+    function resetCards(){
+        endCards = {};  
+        cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
+        cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}, {facttitle: 'PERIOD', factheadline: 'Your period started early.', factbody: 'Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen. You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.'}];
+        cancerContent = [{content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk. The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway). And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it. This testing will help determine if your cancer was likely the result of a gene mutation. If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: The recommendation above regarding genetic testing is particularly relevant to you. If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher. (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.) And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis. We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}]; 
+    }
+    // var endCards = {};  
+    // var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
 
 
-    var cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}, {facttitle: 'PERIOD', factheadline: 'Your period started early.', factbody: 'Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen. You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.'}];
+    // var cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}, {facttitle: 'PERIOD', factheadline: 'Your period started early.', factbody: 'Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen. You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.'}];
 
 
-    var cancerContent = [{content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk. The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway). And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it. This testing will help determine if your cancer was likely the result of a gene mutation. If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: The recommendation above regarding genetic testing is particularly relevant to you. If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher. (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.) And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis. We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}]; 
+    // var cancerContent = [{content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk. The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway). And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it. This testing will help determine if your cancer was likely the result of a gene mutation. If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: The recommendation above regarding genetic testing is particularly relevant to you. If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher. (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.) And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis. We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}]; 
 
 (function($, undefined) {
     var _$window;
@@ -1303,6 +1313,10 @@
             savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
             savedQuizProgress[String(_currentQuestion)] = ansTxt;
             updateCharts();
+            // addResultCopy(resultLevel);
+            addCustomResults();  
+            console.log('Object savedQuizProgress = ', savedQuizProgress)
+            console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
 
             woopra.track("Question Answered", {
                 question_number: _currentQuestion,
@@ -1398,10 +1412,9 @@
         }
 
         updateCharts();
-        addResultCopy(resultLevel);
+        // addResultCopy(resultLevel);
         addCustomResults();  
         console.log('Object savedQuizProgress = ', savedQuizProgress)
-
         console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
         //console.log(savedQuestionsAnswers[0].questionTxt)
 
@@ -1415,13 +1428,13 @@
 
 
     function addCustomResults() {
-
+        resetCards();
         // var bmiHigh = savedQuizProgress[2] == '-1';
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
         addResultCopy(resultLevel);  
-        var cardsObj;
-        var cardContent;
+        // var cardsObj = null;
+        // var cardContent = null;
 
 // BMI
 // ALCOHOL
@@ -1430,135 +1443,7 @@
 // BREASTFEEDING
 // PREGNANCY
 
-        if (savedQuizProgress[4] === '+1') { 
-            $('.item.bmi-low').css({
-                display: 'block'
-            })
-            // cardContent = $('.item.bmi-low').text();
-            //cardsHigh[0]['factbody'] = "new string";
-            cardsHigh[0]['facttitle'] = "";    
-            cardsHigh[0]['factheadline'] = "";     
-            cardsHigh[0]['factbody'] = "";    
-        }    
-        else if (savedQuizProgress[4] === '-1') { 
-            $('.item.bmi-high').css({
-                display: 'block'
-             })  
-            // cardContent = $('.item.bmi-high').text();
-            cardsLow[0]['facttitle'] = "";    
-            cardsLow[0]['factheadline'] = "";     
-            cardsLow[0]['factbody'] = "";    
-        }
-
-//drinks card
-        if (savedQuizProgress[6] <= '1') { 
-            $('.item.alcohol-low').css({
-                display: 'block'
-            })
-            cardsHigh[1]['facttitle'] = "";    
-            cardsHigh[1]['factheadline'] = "";     
-            cardsHigh[1]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[6] >= '2') { 
-            $('.item.alcohol-high').css({
-                display: 'block'
-             })            
-            cardsLow[1]['facttitle'] = "";    
-            cardsLow[1]['factheadline'] = "";     
-            cardsLow[1]['factbody'] = "";                   
-        }
-
-//exercise card
-        if (savedQuizProgress[9] === '+1') { 
-            $('.item.exercise-low').css({
-                display: 'block'
-            })
-            cardsHigh[2]['facttitle'] = "";    
-            cardsHigh[2]['factheadline'] = "";     
-            cardsHigh[2]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[9] === '-1') { 
-            $('.item.exercise-high').css({
-                display: 'block'
-             })   
-            cardsLow[2]['facttitle'] = "";    
-            cardsLow[2]['factheadline'] = "";     
-            cardsLow[2]['factbody'] = "";  
-        }
-
-//period card
-        if (savedQuizProgress[13] == '-1') { 
-            $('.item.period-high').css({
-                display: 'block'
-            })
-        } 
-        else if (savedQuizProgress[13] === '+1') {  
-            cardsHigh[6]['facttitle'] = "";    
-            cardsHigh[6]['factheadline'] = "";     
-            cardsHigh[6]['factbody'] = "";  
-        }
-
-//birth-control card
-        if (savedQuizProgress[15] === '+1') { 
-            $('.item.birth-control-low').css({
-                display: 'block'
-            })
-            cardsHigh[3]['facttitle'] = "";    
-            cardsHigh[3]['factheadline'] = "";     
-            cardsHigh[3]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[15] === '-1') {
-            $('.item.birth-control-high').css({
-                display: 'block'
-             })     
-            cardsLow[3]['facttitle'] = "";    
-            cardsLow[3]['factheadline'] = "";     
-            cardsLow[3]['factbody'] = "";  
-        }
-
-//pregnancy card
-        if (savedQuizProgress[17] === '+1') { 
-            $('.item.pregnancy-low').css({
-                display: 'block'
-            })
-            cardsHigh[5]['facttitle'] = "";    
-            cardsHigh[5]['factheadline'] = "";     
-            cardsHigh[5]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[17] === '-1') { 
-            $('.item.pregnancy-high').css({
-                display: 'block'
-             })   
-            cardsLow[5]['facttitle'] = "";    
-            cardsLow[5]['factheadline'] = "";     
-            cardsLow[5]['factbody'] = "";           
-        }
-
-//BREASTFEEDING card
-        if (savedQuizProgress[18] === '+1') { 
-            $('.item.breastfeeding-low').css({
-                display: 'block'
-            })
-            cardsHigh[4]['facttitle'] = "";    
-            cardsHigh[4]['factheadline'] = "";     
-            cardsHigh[4]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[18] === '-1') { 
-            $('.item.breastfeeding-high').css({
-                display: 'block'
-             })   
-            cardsLow[4]['facttitle'] = "";    
-            cardsLow[4]['factheadline'] = "";     
-            cardsLow[4]['factbody'] = "";           
-        }
-
-    
-//previous cancer history
-      if (savedQuizProgress[2] === '-1') { 
-            $('.triggered-cancer-copy').addClass('showable');
-        }
-
-//supress cards when 40+ is selected 
+        //supress cards when 40+ is selected 
         if (savedQuizProgress[1] === '5') { 
             
 
@@ -1601,7 +1486,197 @@
             cardsHigh[5]['facttitle'] = "";    
             cardsHigh[5]['factheadline'] = "";     
             cardsHigh[5]['factbody'] = "";  
+        }
+        else
+        {
+            $('.item.birth-control-low').css({
+                display: 'block'
+            })
+            $('.item.birth-control-high').css({
+                display: 'block'
+            })
+            $('.item.pregnancy-low').css({
+                display: 'block'
+            })
+            $('.item.pregnancy-high').css({
+                display: 'block'
+            })
+            $('.item.breastfeeding-low').css({
+                display: 'block'
+            }) 
+            $('.item.breastfeeding-high').css({
+                display: 'block'
+            })
+        }
+
+        if (savedQuizProgress[4] === '+1') { 
+            $('.item.bmi-low').css({
+                display: 'block'
+            });
+            $('.item.bmi-high').css({
+                display: 'none'
+             });
+            // cardContent = $('.item.bmi-low').text();
+            //cardsHigh[0]['factbody'] = "new string";
+            cardsHigh[0]['facttitle'] = "";    
+            cardsHigh[0]['factheadline'] = "";     
+            cardsHigh[0]['factbody'] = "";    
+        }    
+        else if (savedQuizProgress[4] === '-1') { 
+            $('.item.bmi-high').css({
+                display: 'block'
+             });
+             $('.item.bmi-low').css({
+                display: 'none'
+            }) 
+            // cardContent = $('.item.bmi-high').text();
+            cardsLow[0]['facttitle'] = "";    
+            cardsLow[0]['factheadline'] = "";     
+            cardsLow[0]['factbody'] = "";    
+        }
+
+//drinks card
+        if (savedQuizProgress[6] <= '1') { 
+            $('.item.alcohol-low').css({
+                display: 'block'
+            });
+            $('.item.alcohol-high').css({
+                display: 'none'
+             });
+            cardsHigh[1]['facttitle'] = "";    
+            cardsHigh[1]['factheadline'] = "";     
+            cardsHigh[1]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[6] >= '2') { 
+            $('.item.alcohol-high').css({
+                display: 'block'
+             });
+             $('.item.alcohol-low').css({
+                display: 'none'
+            });           
+            cardsLow[1]['facttitle'] = "";    
+            cardsLow[1]['factheadline'] = "";     
+            cardsLow[1]['factbody'] = "";                   
+        }
+
+//exercise card
+        if (savedQuizProgress[9] === '+1') { 
+            $('.item.exercise-low').css({
+                display: 'block'
+            });
+            $('.item.exercise-high').css({
+                display: 'none'
+             });
+            cardsHigh[2]['facttitle'] = "";    
+            cardsHigh[2]['factheadline'] = "";     
+            cardsHigh[2]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[9] === '-1') { 
+            $('.item.exercise-high').css({
+                display: 'block'
+             });
+             $('.item.exercise-low').css({
+                display: 'none'
+            }) 
+            cardsLow[2]['facttitle'] = "";    
+            cardsLow[2]['factheadline'] = "";     
+            cardsLow[2]['factbody'] = "";  
+        }
+
+//period card
+        if (savedQuizProgress[13] == '-1') { 
+            $('.item.period-high').css({
+                display: 'block'
+            })
         } 
+        else if (savedQuizProgress[13] === '+1') {
+            $('.item.period-high').css({
+                display: 'none'
+            })
+            cardsHigh[6]['facttitle'] = "";    
+            cardsHigh[6]['factheadline'] = "";     
+            cardsHigh[6]['factbody'] = "";  
+        }
+
+//birth-control card
+        if (savedQuizProgress[15] === '+1') { 
+            $('.item.birth-control-low').css({
+                display: 'block'
+            });
+            $('.item.birth-control-high').css({
+                display: 'none'
+             });
+            cardsHigh[3]['facttitle'] = "";    
+            cardsHigh[3]['factheadline'] = "";     
+            cardsHigh[3]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[15] === '-1') {
+            $('.item.birth-control-high').css({
+                display: 'block'
+             });
+             $('.item.birth-control-low').css({
+                display: 'none'
+            })    
+            cardsLow[3]['facttitle'] = "";    
+            cardsLow[3]['factheadline'] = "";     
+            cardsLow[3]['factbody'] = "";  
+        }
+
+//pregnancy card
+        if (savedQuizProgress[17] === '+1') { 
+            $('.item.pregnancy-low').css({
+                display: 'block'
+            });
+            $('.item.pregnancy-high').css({
+                display: 'none'
+             });
+            cardsHigh[5]['facttitle'] = "";    
+            cardsHigh[5]['factheadline'] = "";     
+            cardsHigh[5]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[17] === '-1') { 
+            $('.item.pregnancy-high').css({
+                display: 'block'
+             });
+             $('.item.pregnancy-low').css({
+                display: 'none'
+            }); 
+            cardsLow[5]['facttitle'] = "";    
+            cardsLow[5]['factheadline'] = "";     
+            cardsLow[5]['factbody'] = "";           
+        }
+
+//BREASTFEEDING card
+        if (savedQuizProgress[18] === '+1') { 
+            $('.item.breastfeeding-low').css({
+                display: 'block'
+            });
+            $('.item.breastfeeding-high').css({
+                display: 'none'
+             });
+            cardsHigh[4]['facttitle'] = "";    
+            cardsHigh[4]['factheadline'] = "";     
+            cardsHigh[4]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[18] === '-1') { 
+            $('.item.breastfeeding-high').css({
+                display: 'block'
+             });
+             $('.item.breastfeeding-low').css({
+                display: 'none'
+            }) 
+            cardsLow[4]['facttitle'] = "";    
+            cardsLow[4]['factheadline'] = "";     
+            cardsLow[4]['factbody'] = "";           
+        }
+
+    
+//previous cancer history
+      if (savedQuizProgress[2] === '-1') { 
+            $('.triggered-cancer-copy').addClass('showable');
+        }
+
+
 
         woopra.track("Results", {
             level: resultLevel
@@ -1616,7 +1691,7 @@
     function answerQuestion(answer) {
 
         if (_currentQuestion >= _totalQuestions -1) {
-            addCustomResults()
+            addCustomResults(); 
             setTimeout(function(){
                 openProgressOverlay();
                 if(_smallScreen){

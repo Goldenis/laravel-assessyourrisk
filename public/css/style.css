@@ -313,6 +313,38 @@ button.sub:hover {
 .bg-video.in {
   opacity: 1;
 }
+.share-btn {
+  font: normal normal normal 11px/normal 'Lucida Grande';
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem 1.8rem;
+  background: #d7006d;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-family: "avg_bold";
+  margin: 1rem 0.5rem 0.5rem 0;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  width: auto;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.2s 0;
+  -moz-transition: all 0.2s 0;
+  -o-transition: all 0.2s 0;
+  -ms-transition: all 0.2s 0;
+  transition: all 0.2s 0;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-property: all;
+  -moz-transition-delay: 0;
+}
 #bg-img {
   width: 100%;
   height: 100%;
@@ -682,13 +714,13 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
   padding: 10px 10px;
-  margin: 0 2rem 0 0;
+  margin: 0 2rem 2rem 0;
   float: left;
   width: 20%;
   border: none;
   font-size: 1.4rem;
   top: 2px;
-  min-width: 200px;
+  min-width: 220px;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button {
   border: 3px solid #fff;
@@ -896,8 +928,8 @@ button.sub:hover {
 }
 .share-btn a:nth-of-type(3) {
   position: absolute;
-  left: 6.9rem;
-  top: 0.8rem;
+  left: 6.6rem;
+  top: 0.7rem;
 }
 .share-btn img {
   opacity: 0;
@@ -1936,10 +1968,6 @@ input[type="checkbox"], input[type="radio"] {
 }
 .education .vignette.last .share {
   color: #fff;
-  padding-bottom: 200px;
-}
-.education .vignette.last .share .arrow {
-  margin: auto;
 }
 .education .vignette.last .headlines:hover .arrow {
   top: -50px;

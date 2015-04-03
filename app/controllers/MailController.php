@@ -117,7 +117,7 @@ class MailController extends \BaseController {
 					Mail::send($template, array('userName' => $userName, 'pdfUrl' => $pdfUrl), function($message) use ($email)
 					{
 						
-						$messageSubject = "Requesting Discussion: Breast &amp; Ovarian Cancer Risk";
+						$messageSubject = "Requesting Discussion: Breast & Ovarian Cancer Risk";
 						
 						$message->from('assessyourrisk@brightpink.org');
 						$message->to($email); //->cc("trevorobrien@theexperiment.io");

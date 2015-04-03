@@ -18,10 +18,10 @@
   </style>
 </head>
 <body>
-Hello,<br<br>
+Hello,<br>
 {{-- <p class="p1">Dear {{ $userName }},<br> --}}
-<a href="{{ $pdfUrl }}">Click here to download a copy of your results</a> from Bright Pink's breast and ovarian cancer assessment.<br><br>
-You've done a powerful thing by assessing your own risk—consider sharing the tool with the women you care about so they can do the same.<br><br>
+<a href="{{ $pdfUrl }}">Click here to download a copy of your results</a> from Bright Pink's breast and ovarian cancer assessment.<br>
+You've done a powerful thing by assessing your own risk—consider sharing the tool with the women you care about so they can do the same.<br>
 <a href="http://www.AssessYourRisk.org">www.AssessYourRisk.org</a></p>
 </body>
 </html>

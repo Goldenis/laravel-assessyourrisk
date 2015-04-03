@@ -18,7 +18,7 @@
   </style>
 </head>
 <body>
-Dear Doctor,<br>
+Hello,<br>
 I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.<br>
 <a href="{{ $pdfUrl }}">Click here to download a copy of my results.</a><br><br>
 Thank you,<br>

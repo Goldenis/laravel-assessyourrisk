@@ -2057,6 +2057,8 @@ input[type="checkbox"], input[type="radio"] {
         }
         h5 {
             font-size: 1.1rem;
+            // font-size: .9rem;
+
         }
     }
     .fact:nth-of-type(1) {
@@ -2293,6 +2295,9 @@ h5.mobile-only {
         &:last-of-type {
             margin-right: 0;
         }
+    }
+    .right-column .fact h5{
+        font-size: .9rem;
     }
     .progress-overlay, .menu-overlay {
         padding: 0;
@@ -2557,7 +2562,8 @@ h5.mobile-only {
             padding: 0;
 
             h5 {
-                font-size: 12px;
+                // font-size: 12px;
+                font-size: .9rem !important;
             }
         }
         &.down{
@@ -2628,6 +2634,7 @@ h5.mobile-only {
                 }
             }
         }
+
     }
 }
 ///////////////////////////////////////////// PHONE

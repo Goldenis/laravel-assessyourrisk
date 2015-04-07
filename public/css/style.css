@@ -2539,6 +2539,9 @@ h5.mobile-only {
   .dot:last-of-type {
     margin-right: 0;
   }
+  .right-column .fact h5 {
+    font-size: 0.9rem;
+  }
   .progress-overlay, .menu-overlay {
     padding: 0;
   }
@@ -2786,7 +2789,7 @@ h5.mobile-only {
     padding: 0;
   }
   .right-column .fact h5 {
-    font-size: 12px;
+    font-size: 0.9rem !important;
   }
   .right-column.down {
     height: 78%;

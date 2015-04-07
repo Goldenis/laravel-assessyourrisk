@@ -2241,7 +2241,7 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0;
 }
 .right-column .fact h5 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 .right-column .fact:nth-of-type(1) {
   display: block;

@@ -713,14 +713,14 @@ button.sub:hover {
   border-color: #ffb4aa !important;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
-  padding: 10px 10px;
+  padding: 14px 15px;
   margin: 0 2rem 2rem 0;
   float: left;
   width: 20%;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   top: 2px;
-  min-width: 220px;
+  min-width: 200px;
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor button, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor button {
   border: 3px solid #fff;
@@ -969,29 +969,29 @@ button.sub:hover {
   transform: translateY(-50%);
   font: 4.4rem/1.5 "avg_bold";
 }
-.male-overlay .share-btn {
+.male-overlay .share-btn-male {
   border-bottom: 6px solid #ffb4aa;
   padding: 0;
   line-height: 0.4rem;
   font-size: 1em;
   color: #ffb4aa;
 }
-.male-overlay .share-btn a:nth-of-type(1) {
+.male-overlay .share-btn-male a:nth-of-type(1) {
   position: absolute;
   left: 0.6rem;
-  top: 1.5rem;
+  top: 39%;
 }
-.male-overlay .share-btn a:nth-of-type(2) {
+.male-overlay .share-btn-male a:nth-of-type(2) {
   position: absolute;
   left: 4.7rem;
-  top: 1.5rem;
+  top: 39%;
 }
-.male-overlay .share-btn a:nth-of-type(3) {
+.male-overlay .share-btn-male a:nth-of-type(3) {
   position: absolute;
   left: 9rem;
-  top: 1.8rem;
+  top: 39%;
 }
-.male-overlay .share-btn img {
+.male-overlay .share-btn-male img {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -1002,13 +1002,13 @@ button.sub:hover {
   -moz-transition-property: all;
   -moz-transition-delay: 0;
 }
-.male-overlay .share-btn:hover {
+.male-overlay .share-btn-male:hover {
   color: transparent;
 }
-.male-overlay .share-btn:hover img {
+.male-overlay .share-btn-male:hover img {
   opacity: 1;
 }
-.male-overlay .share-btn:hover img:hover {
+.male-overlay .share-btn-male:hover img:hover {
   opacity: 0.7;
 }
 .male-overlay a:hover {
@@ -2689,7 +2689,7 @@ h5.mobile-only {
     margin-right: 1.5rem;
   }
   .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
-    padding: 10px 20px;
+    padding: 14px 20px;
     margin: 0 2rem 1.5rem 0;
     width: 100%;
     max-width: 300px;

@@ -3817,6 +3817,27 @@ h5.mobile-only {
   }
   .logo {
     position: fixed;
+    top: 0;
+    width: 86%;
+    background: #fff;
+    padding: 13px;
+    margin: 0 7%;
+    transform: none;
+    left: 0px;
+  }
+  .logo a {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    float: left;
+    margin-left: -8px;
+  }
+  .intro .intro-message {
+    top: calc(270px + 28%);
   }
   .assessment.scrollpane {
     overflow: hidden;
@@ -3830,6 +3851,14 @@ h5.mobile-only {
     margin: 0px;
     transform: none !important;
   }
+  .assessment.scrollpane .assessment-divider {
+    position: fixed;
+    z-index: 4500;
+    top: 0px;
+    margin: 73px 10% 0;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+  }
   .assessment .dots {
     position: fixed;
     bottom: 60px;
@@ -3842,7 +3871,7 @@ h5.mobile-only {
     top: 0px;
     left: 0px;
     transform: none !important;
-    padding: 6.5rem 2.5rem 0;
+    padding: 8.5rem 2.5rem 0;
     width: 100%;
     max-width: none;
   }
@@ -3853,6 +3882,7 @@ h5.mobile-only {
   }
   .assessment .question {
     display: none;
+    opacity: 0;
     overflow: hidden;
     height: 0px;
     transform: none !important;
@@ -3865,6 +3895,7 @@ h5.mobile-only {
   .assessment .question.in {
     display: block;
     overflow: visible;
+    opacity: 1;
     height: auto;
     transform: none !important;
     top: 0px;
@@ -3886,7 +3917,7 @@ h5.mobile-only {
     width: 100%;
   }
   .assessment .question.in.gif {
-    margin: 70px auto 230px;
+    margin: 90px auto 230px;
   }
   .assessment .question.in.gif .prompt {
     top: 78px;

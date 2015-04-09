@@ -605,6 +605,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
     <!-- ASSESSMENT-->
     <section class="assessment scrollpane"> 
       <!-- <div class="section-title">Assess Your Risk</div> -->
+      <div class="assessment-divider"></div>
       <div class="assessment-dots dots">
         <div class="btn-back"><img src="img/arrow_left_pink.png"></div>
         <div class="fact-icon">

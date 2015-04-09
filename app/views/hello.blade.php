@@ -621,13 +621,13 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         <div class="question" data-question-id="1">
           <div class="prompt">Do you have breasts and/or ovaries?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="0">Yes</button>
             <button data-answer-id="0">No</button>
           </div>
         </div>
 
-        <div class="question gif" data-question-id="2">
+        <div class="question gif calendar-question" data-question-id="2">
             <div class="anim-gif calendar">
                <img src="img/Calendar.gif">
             </div>
@@ -642,7 +642,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
               <div class="checkbox" data-answer-id="5"><input type="radio" name="age-radio" data-answer-id="5"><div class="label">40+</div></div>
             </div>
               <br>
-              <div class="answers">
+              <div class="answers button">
                 <button id="age-btn" disabled>Continue</button>
               </div>
           </div>
@@ -659,7 +659,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
               <div class="checkbox" data-answer-id="3"><input type="radio" name="cancerhistory-radio" data-answer-id="0"><div class="label">Neither</div></div>
             </div>
               <br>
-              <div class="answers">
+              <div class="answers button">
                 <button id="cancerhistory-btn" disabled>Continue</button>
               </div>
           </div>        
@@ -676,7 +676,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
                 </div>
               </div>
             </div>
-            <div class="answers weight-answer">
+            <div class="answers weight-answer button">
               <button class="submit-weight">Continue</button>
             </div>
           </div>
@@ -685,7 +685,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 
         <div class="question" id="height-question" data-question-id="3" data-question-name="bmi">
           <div class="bmi-result">
-            <div class="answers">
+            <div class="answers button">
               <button>Continue</button>
             </div>
           </div>
@@ -718,7 +718,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
             <div class="checkbox" data-answer-id="7"><input type="checkbox" name="famdiag-check" class="none-of-above" data-answer-id="7|0"><div class="label">None of the above</div></div>
           </div>
           <br>
-          <div class="answers">
+          <div class="answers button">
             <button id="famdiag-check-btn" disabled>Continue</button>
             <a href="mailto:?subject=Can you help me answer this%3F&body=Hello, 
 %0D%0A
@@ -778,7 +778,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
               <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>              
             </div>
               <br>
-              <div class="answers">
+              <div class="answers button">
                 <button id="mutation-btn" disabled>Continue</button>
               </div>
           </div>
@@ -794,7 +794,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="4"><input type="checkbox" class="not-sure" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
           </div>
           <br>
-          <div class="answers">
+          <div class="answers button">
             <button id="mutation-sub-btn" disabled>Continue</button>
           </div>
         </div>        
@@ -805,7 +805,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             </div>        
           <div class="prompt">Do you get an average of 30 minutes of physical activity at least five times a week?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
           </div>
@@ -830,7 +830,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="11"><input type="checkbox" class="none-of-above" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">None of the above</div></div>
           </div>     
 
-          <div class="answers">
+          <div class="answers button">
             <button id="mobile-button-left" disabled>Continue</button>
             <a href="mailto:?subject=Can you help me answer this%3F&body=Hello, 
 %0D%0A
@@ -873,7 +873,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
         <div class="question" data-question-id="8">
           <div class="prompt">Have you ever been told by a doctor that you have “dense breast tissue”?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
           </div>
@@ -882,7 +882,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
         <div class="question" data-question-id="19">
           <div class="prompt">Did you receive radiation to the chest during childhood to treat Hodgkin’s disease, non-Hodgkin’s lymphoma, or another cancer?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
           </div>
@@ -891,7 +891,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
         <div class="question" data-question-id="9">
           <div class="prompt">How old were you when you first got your period?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="-1">Under 12</button>
             <button data-answer-id="+1">12 or older</button>
           </div>
@@ -900,7 +900,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
         <div class="question" data-question-id="20">
           <div class="prompt">Do you have one or more <span class="pink-text">immediate family members</span> (parent, sibling, grandparent, aunt or uncle) that have had breast cancer <span class="pink-text">at age 50 or older</span>?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
             <a href="mailto:?subject=Can you help me answer this%3F&body=Hello, 
@@ -919,13 +919,13 @@ Do you know if I do%3F" target="_blank"><button class="sub ask" data-answer-id="
           </div>
         </div>
 
-        <div class="question gif" data-question-id="10">
+        <div class="question gif birth-question" data-question-id="10">
             <div class="anim-gif birth">
                <img src="img/BirthControl.gif">
             </div>        
           <div class="prompt">Have you taken birth control pills for five or more years — it doesn’t have to be consecutive! — during your 20s or 30s?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
           </div>
@@ -934,7 +934,7 @@ Do you know if I do%3F" target="_blank"><button class="sub ask" data-answer-id="
         <div class="question" data-question-id="21">
           <div class="prompt">Have you ever had an abnormal breast biopsy result?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="-1">Yes</button>
             <button data-answer-id="+1">No</button>
           </div>
@@ -943,7 +943,7 @@ Do you know if I do%3F" target="_blank"><button class="sub ask" data-answer-id="
         <div class="question" data-question-id="11">
           <div class="prompt">Have you ever given birth?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
           </div>
@@ -952,7 +952,7 @@ Do you know if I do%3F" target="_blank"><button class="sub ask" data-answer-id="
         <div class="question" data-question-id="12">
           <div class="prompt">Have you breastfed before or do you plan to breastfeed in the future?</div>
         
-          <div class="answers">
+          <div class="answers button">
             <button data-answer-id="+1">Yes</button>
             <button data-answer-id="-1">No</button>
           </div>

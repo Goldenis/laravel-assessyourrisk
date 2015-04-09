@@ -3803,6 +3803,117 @@ h5.mobile-only {
   .email-pdf-doctor .email-pdf-btns {
     width: 100%;
   }
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+  }
+  body {
+    min-height: 100%;
+    height: auto;
+    overflow: visible;
+    position: initial;
+  }
+  .logo {
+    position: fixed;
+  }
+  .assessment.scrollpane {
+    overflow: hidden;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+  .assessment .dots {
+    position: fixed;
+    bottom: 60px;
+  }
+  .assessment .assessment-intro {
+    overflow: visible;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: none !important;
+    padding: 6.5rem 2.5rem 0;
+    width: 100%;
+    max-width: none;
+  }
+  .assessment .assessment-wrap {
+    position: relative;
+    overflow: visible;
+    height: auto;
+  }
+  .assessment .question {
+    display: none;
+    overflow: hidden;
+    height: 0px;
+    transform: none !important;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+  }
+  .assessment .question.in {
+    display: block;
+    overflow: visible;
+    height: auto;
+    transform: none !important;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 90px auto 140px;
+    width: 80%;
+  }
+  .assessment .question.in.weight-question {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .assessment .question.in.height-question {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .assessment .question.in.gif {
+    margin: 70px auto 230px;
+  }
+  .assessment .question.in.gif .prompt {
+    top: 78px;
+  }
+  .assessment .question.in.gif .answers {
+    top: 100px;
+  }
+  .assessment .question.in.gif.calendar-question .answers.button {
+    top: initial;
+  }
+  .assessment .question.in.gif.stopwatch-question .answers.button, .assessment .question.in.gif.birth-question .answers.button {
+    top: 80px;
+  }
+  .assessment .share {
+    display: none;
+  }
+  .assessment .share.in {
+    display: block;
+    overflow: visible;
+    height: auto;
+    transform: none !important;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 90px auto 140px;
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 736px) and (orientation: landscape) {
   .landscape-overlay {

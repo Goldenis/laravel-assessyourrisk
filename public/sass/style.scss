@@ -3564,20 +3564,26 @@ h5.mobile-only {
 
 	// fix for mobile scrolling
 
+	// html{
+	// 	overflow-x: hidden;
+	// 	overflow-y: auto;
+	// 	height: auto;
+	// 	min-height: 100%;
+	// 	width:100%;
+	// 	display:block;
+	// 	// overflow:visible;
+	// }
+
 	html{
+		overflow: initial;
+
+	}
+	body{
 		overflow-x: hidden;
 		overflow-y: auto;
-		height: auto;
 		min-height: 100%;
+		height: auto;
 		// overflow:visible;
-	}
-
-	body{
-		// overflow-x: hidden;
-		// overflow-y: auto;
-		min-height: 100%;
-		height: auto;
-		overflow:visible;
 		position: initial;
 	}
 
@@ -3591,6 +3597,7 @@ h5.mobile-only {
 
 		margin: 0 7%;
 		transform: none;
+		-webkit-transform: none;
 		left: 0px;
 		a {
 			@include centerH;
@@ -3603,7 +3610,12 @@ h5.mobile-only {
 		top: calc(270px + 28%);
 	}
 
-	
+	.education{
+		width: 0px;
+		&.in{
+			width: 100%;
+		}
+	}
 
 	.assessment{
 		&.scrollpane{
@@ -3619,6 +3631,7 @@ h5.mobile-only {
 			overflow: hidden;
 			height: auto;
 			min-height: 100%;
+			width: 100%;
 			position: absolute;
 			top:0px;
 			left:0px;
@@ -3626,6 +3639,7 @@ h5.mobile-only {
 			padding: 0px;
 			margin: 0px;
 			transform:none !important;
+			-webkit-transform: none !important;
 		}
 
 		.dots{
@@ -3643,6 +3657,7 @@ h5.mobile-only {
 			top:0px;
 			left:0px;
 			transform: none !important;
+			-webkit-transform: none !important;
 			padding: 8.5rem 2.5rem 0;
 			width: 100%;
 			max-width: none;
@@ -3662,6 +3677,7 @@ h5.mobile-only {
 			overflow: hidden;
 			height: 0px;
 			transform: none !important;
+			-webkit-transform: none !important;
 			top: 0px;
 			left: 0px;
 			padding:0px;
@@ -3673,21 +3689,22 @@ h5.mobile-only {
 				opacity: 1;
 				height: auto;
 				transform: none !important;
+				-webkit-transform: none !important;
 				top: 0px;
 				left: 0px;
 				padding:0px;
 				margin: 90px auto 140px;
 				width: 80%;
 				&.weight-question{
-					position: absolute;
-					top: 0px;
-					left: 0px;
+					// position: absolute;
+					// top: 0px;
+					// left: 0px;
 					width: 100%;
 				}
 				&.height-question{
-					position: absolute;
-					top: 0px;
-					left: 0px;
+					// position: absolute;
+					// top: 0px;
+					// left: 0px;
 					width: 100%;
 				}
 				&.gif{

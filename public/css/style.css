@@ -3804,15 +3804,13 @@ h5.mobile-only {
     width: 100%;
   }
   html {
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: auto;
-    min-height: 100%;
+    overflow: initial;
   }
   body {
+    overflow-x: hidden;
+    overflow-y: auto;
     min-height: 100%;
     height: auto;
-    overflow: visible;
     position: initial;
   }
   .logo {
@@ -3823,6 +3821,7 @@ h5.mobile-only {
     padding: 13px;
     margin: 0 7%;
     transform: none;
+    -webkit-transform: none;
     left: 0px;
   }
   .logo a {
@@ -3839,10 +3838,17 @@ h5.mobile-only {
   .intro .intro-message {
     top: calc(270px + 28%);
   }
+  .education {
+    width: 0px;
+  }
+  .education.in {
+    width: 100%;
+  }
   .assessment.scrollpane {
     overflow: hidden;
     height: auto;
     min-height: 100%;
+    width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -3850,6 +3856,7 @@ h5.mobile-only {
     padding: 0px;
     margin: 0px;
     transform: none !important;
+    -webkit-transform: none !important;
   }
   .assessment.scrollpane .assessment-divider {
     position: fixed;
@@ -3871,6 +3878,7 @@ h5.mobile-only {
     top: 0px;
     left: 0px;
     transform: none !important;
+    -webkit-transform: none !important;
     padding: 8.5rem 2.5rem 0;
     width: 100%;
     max-width: none;
@@ -3886,6 +3894,7 @@ h5.mobile-only {
     overflow: hidden;
     height: 0px;
     transform: none !important;
+    -webkit-transform: none !important;
     top: 0px;
     left: 0px;
     padding: 0px;
@@ -3898,6 +3907,7 @@ h5.mobile-only {
     opacity: 1;
     height: auto;
     transform: none !important;
+    -webkit-transform: none !important;
     top: 0px;
     left: 0px;
     padding: 0px;
@@ -3905,15 +3915,9 @@ h5.mobile-only {
     width: 80%;
   }
   .assessment .question.in.weight-question {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
   }
   .assessment .question.in.height-question {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
   }
   .assessment .question.in.gif {

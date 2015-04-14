@@ -3150,6 +3150,12 @@ h5.mobile-only {
   .question .weight-header {
     margin: 1rem 0;
   }
+  .question .weight-header span {
+    font-size: 1rem;
+    max-width: 80%;
+    margin: 10px auto 0;
+    line-height: 1em;
+  }
   .question .weight-answer {
     margin: 16rem 0 0 0;
   }
@@ -4016,4 +4022,10 @@ h5.mobile-only {
 }
 .lt-ie9 .overlay.landscape-overlay {
   display: none;
+}
+.weight-header span {
+  display: block;
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1em;
 }

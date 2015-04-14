@@ -3630,7 +3630,7 @@ h5.mobile-only {
 
 			.assessment-divider{
 				position: fixed;
-				z-index: 4500;
+				// z-index: 4500;
 				top: 0px;
 				margin: 73px 10% 0;
 				width: 80%;
@@ -3675,6 +3675,7 @@ h5.mobile-only {
 			position: relative;
 			overflow: visible;
 			height: auto;
+			border-top:none;
 			// min-height: 100%;
 			// padding: 6.5rem 2.5rem 0;
 		}
@@ -3746,6 +3747,7 @@ h5.mobile-only {
 				overflow: visible;
 				height: auto;
 				transform: none !important;
+				-webkit-transform: none !important;
 				top: 0px;
 				left: 0px;
 				padding: 0px;

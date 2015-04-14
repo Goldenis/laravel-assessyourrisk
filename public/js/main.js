@@ -1687,7 +1687,8 @@
                     $('.progress-overlay').scrollTop(0);
                 }
             },1000)
-            $('.assessment .share').addClass('in')
+            $('.assessment .share').addClass('in');
+            // $('body').scrollTop(0);
             $('.results, .cards').css({
                 display: 'block'
             })

@@ -3866,7 +3866,6 @@ h5.mobile-only {
   }
   .assessment.scrollpane .assessment-divider {
     position: fixed;
-    z-index: 4500;
     top: 0px;
     margin: 73px 10% 0;
     width: 80%;
@@ -3893,6 +3892,7 @@ h5.mobile-only {
     position: relative;
     overflow: visible;
     height: auto;
+    border-top: none;
   }
   .assessment .question {
     display: none;
@@ -3948,7 +3948,7 @@ h5.mobile-only {
     display: block;
     overflow: visible;
     height: auto;
-    transform: none !important;
+    transform: initial !important;
     top: 0px;
     left: 0px;
     padding: 0px;

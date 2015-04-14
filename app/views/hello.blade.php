@@ -19,18 +19,13 @@
     <script type='application/javascript' src='/js/vendor/fastclick.js'></script>
     <script type='application/javascript' src='/js/vendor/base64.min.js'></script>
 
-    <!-- Start of Woopra Code -->
-    <script>
-    (function(){
-            var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-    })("woopra");
 
-    woopra.config({
-        domain: 'assessyourrisk.org'
-    });
-    woopra.track();
+    <script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+    analytics.load("IKYZV176GTIQXUOGX8l9EQGYD63lKUJw");
+    analytics.page()
+    }}();
     </script>
-    <!-- End of Woopra Code -->
     
     <script>
     
@@ -668,7 +663,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
         
         <div class="question weight-question" data-question-id="3">
           <div class="weight-wrapper">  
-            <div class="prompt weight-header">What is your weight?</div>
+            <div class="prompt weight-header">What is your weight? <span>Your answer will only be used to calculate your BMI, which can affect your risk.</span></div>
             <div class="visual">
               <div class="weight-container-mask">
                 <div class="weight-container">
@@ -1445,12 +1440,6 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
 
         <script type="text/javascript" src="//tfaforms.com/js/ga_crossdomain_tracking.js"></script>
 

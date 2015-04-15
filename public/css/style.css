@@ -3948,7 +3948,8 @@ h5.mobile-only {
     display: block;
     overflow: visible;
     height: auto;
-    transform: initial !important;
+    transform: none !important;
+    -webkit-transform: none !important;
     top: 0px;
     left: 0px;
     padding: 0px;

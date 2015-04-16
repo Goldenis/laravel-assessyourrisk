@@ -253,6 +253,7 @@
         var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
         console.log(numHeadlines)
         var nextHeadline = _currentHeadline.index() + 1;
+
         if (initialized && nextHeadline < numHeadlines) {
             console.log(nextHeadline, numHeadlines)
             // _currentHeadline.removeClass('active');
@@ -1829,7 +1830,7 @@
         _oldVignette = _currentVignette;
         _currentVignette++;
         // $('.headline').removeClass('active');
-        if (_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length) {
+        if (_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length || _smallScreen) {
 
             if (_currentModule + 1 >= 3) {
 

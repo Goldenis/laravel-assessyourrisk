@@ -1678,7 +1678,7 @@
     }
     
     function answerQuestion(answer) {
-
+         $(window).scrollTop(0);
         if (_currentQuestion >= _totalQuestions -1) {
             addCustomResults(); 
             setTimeout(function(){
@@ -1686,6 +1686,7 @@
                 if(_smallScreen){
                     // $('.progress-overlay').scrollTop(450);
                     $('.progress-overlay').scrollTop(0);
+                   
                 }
             },1000)
             $('.assessment .share').addClass('in');

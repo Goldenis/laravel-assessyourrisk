@@ -768,7 +768,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
           <div class="answers">
             <div class="checkbox-list cb1">
               <div class="checkbox" data-answer-id="1"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, I've tested positive for a specific gene mutation</div></div>
-              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="0"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
+              <div class="checkbox" data-answer-id="2"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">Yes, a relative has but I've tested negative for that mutation</div></div>
               <div class="checkbox" data-answer-id="3"><input type="radio" name="mutation-radio" data-answer-id="-1"><div class="label">Yes, a relative has, but I've not yet been tested</div></div>
               <div class="checkbox" data-answer-id="5"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">I don’t know</div></div>
               <div class="checkbox" data-answer-id="4"><input type="radio" name="mutation-radio" data-answer-id="+1"><div class="label">No</div></div>              

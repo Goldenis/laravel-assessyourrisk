@@ -1405,7 +1405,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="js/weight.js"></script>
     <script src="js/height.js"></script>
-    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script src="js/svg/DonutChartBuilder.js"></script>
     <script src="js/svg/SVGHelper.js"></script>
 

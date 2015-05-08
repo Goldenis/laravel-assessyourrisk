@@ -59,7 +59,7 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-      <a href="https://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png") }}></a>
+      <a href="https://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png", true) }}></a>
       
     </div>
     <div class="email-content"></div>
@@ -588,7 +588,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <h4>Assess<br>Your Risk<br></h4>
           <div class="arrow"><img src="img/arrow_left.png"></div>
           <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
-          <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png') }}></div>
+          <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png', true) }}></div>
         </div>
       </div>
       <div class="copyright">Copyright &copy; <?php echo date("Y"); ?> Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>

@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Assess Your Risk</title>
     <meta name="description" content="1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!">
-    <meta property="og:url" content="http://www.assessyourrisk.org" /> 
+    <meta property="og:url" content="https://www.assessyourrisk.org" /> 
     <meta property="og:title" content="Assess Your Risk" />
     {{-- <meta property="og:description" content="1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" />  --}}
-    <meta property="og:image" content="http://www.assessyourrisk.org/img/fb-share.png" /> 
+    <meta property="og:image" content="https://www.assessyourrisk.org/img/fb-share.png" /> 
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -39,10 +39,7 @@
     }, function( response ) {
         if ( response !== null && typeof response.post_id !== 'undefined' ) {
             console.log( response );
-            // ajax call to save response
-          // $.post( 'http://www.webniraj.com/', { 'meta': response }, function( result ) {
-          //       console.log( result );
-          //   }, 'json' );
+
         }
     } );
   
@@ -62,7 +59,7 @@
   <body>
     <div class="border"></div>
     <div class="logo">
-      <a href="http://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png") }}></a>
+      <a href="https://www.brightpink.org/" target="_blank"><img src={{ URL::asset("img/ayr_logo_bp.png") }}></a>
       
     </div>
     <div class="email-content"></div>
@@ -110,7 +107,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <div class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+          <div class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('https://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'https://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -133,7 +130,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
           <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-          <div class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
+          <div class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('https://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in her lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'https://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="mailto:?subject=Bright Pink Risk Assessment: 5 Minutes Could Save Your Life&body=Hi,
 %0D%0A
 %0D%0A
 I want to share something important with you. 
@@ -1403,9 +1400,9 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
     <script src="js/anim.js"></script>
 
      <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="js/weight.js"></script>
     <script src="js/height.js"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>

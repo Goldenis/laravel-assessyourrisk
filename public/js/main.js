@@ -41,7 +41,7 @@
     var overlayOpen;
     var initialized;
 
-    var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
+    var cloudfrontURL = "https://brightpink-videos.s3.amazonaws.com/"
     var videoURL;
     var videoType;
     var closest = 0;

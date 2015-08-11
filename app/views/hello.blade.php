@@ -781,7 +781,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
           <div class="prompt">Which gene mutation have you or your relative(s) been diagnosed with?</div>
         
           <div class="checkbox-list cb2">
-            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label"><i>BRCA1</i> or <i>BRCA2</i>, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS) or De Novo Mutation Rate</div></div>
+            <div class="checkbox" data-answer-id="1"><input type="checkbox" name="mutation-sub" data-answer-id="1|-2"><div class="label"><i>BRCA1</i> or <i>BRCA2</i>, Lynch Syndrome,  Li-Fraumeni Syndrome, Cowden Syndrome, Diffuse Gastric and Lobular Breast Cancer syndrome, Peutz-Jeghers Syndrome (PJS)</div></div>
             <div class="checkbox" data-answer-id="2"><input type="checkbox" name="mutation-sub"  data-answer-id="2|-1"><div class="label">Other specific mutation</div></div>
             <div class="checkbox" data-answer-id="3"><input type="checkbox" name="mutation-sub"  data-answer-id="3|-1"><div class="label">VUS (variant of uncertain significance) </div></div>
             <div class="checkbox" data-answer-id="4"><input type="checkbox" class="not-sure" name="mutation-sub"  data-answer-id="4|0"><div class="label">I’m not sure</div></div>
@@ -813,6 +813,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="4"><input type="checkbox" name="cancer-plus-chk" data-answer-id="4|-1"><div class="label">Uterine cancer</div></div>
             <div class="checkbox" data-answer-id="5"><input type="checkbox" name="cancer-plus-chk" data-answer-id="5|-1"><div class="label">Sarcoma</div></div>
             <div class="checkbox" data-answer-id="6"><input type="checkbox" name="cancer-plus-chk" data-answer-id="6|-1"><div class="label">Leukemia or Lymphoma</div></div>
+            <div class="checkbox" data-answer-id="13"><input type="checkbox" name="cancer-plus-chk" data-answer-id="13|-1"><div class="label">Prostate cancer</div></div>
           </div>
           <div class="checkbox-list column-right">
             <div class="checkbox" data-answer-id="7"><input type="checkbox" name="cancer-plus-chk" data-answer-id="7|-1"><div class="label">Melanoma cancer</div></div>
@@ -821,6 +822,7 @@ Do you know if anybody in the family has been diagnosed with any of these%3F" ta
             <div class="checkbox" data-answer-id="10"><input type="checkbox" name="cancer-plus-chk" data-answer-id="10|-1"><div class="label">Brain cancer</div></div>
             <div class="checkbox" data-answer-id="12"><input type="checkbox" class="not-sure" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">I’m not sure</div></div>
             <div class="checkbox" data-answer-id="11"><input type="checkbox" class="none-of-above" name="cancer-plus-chk" data-answer-id="12|0"><div class="label">None of the above</div></div>
+            <div class="checkbox">&nbsp;</div>
           </div>     
 
           <div class="answers button">
@@ -858,13 +860,15 @@ One of the questions I’d love your help answering is:
 %0D%0A
           - Brain cancer 
 %0D%0A
+          - Prostate cancer
+%0D%0A
 %0D%0A
 Do you know if anybody in the family has been diagnosed with any of these%3F" target="_blank"><button class="sub ask" data-answer-id="13">Help me ask them</button></a>
           </div>
         </div>
 
         <div class="question" data-question-id="8">
-          <div class="prompt">Have you ever been told by a doctor that you have “dense breast tissue”?</div>
+          <div class="prompt">Has a doctor told you as a result of a mammogram that you have “dense breast tissue”?</div>
         
           <div class="answers button">
             <button data-answer-id="-1">Yes</button>

@@ -109,16 +109,16 @@ class MailController extends \BaseController {
 					$response ['pdf_url'] = $pdfUrl;
 					
 					$template = 'emails.user';
+                    $messageSubject = 'Breast & Ovarian Risk Assessment Results';
+
 					if ($isDoctor == 'true') {
 						$template = 'emails.doctor';
+                        $messageSubject = "Requesting Discussion: Breast & Ovarian Cancer Risk";
 					}
 					
 					Log::info ( '>> Validator passed.' );
-					Mail::send($template, array('userName' => $userName, 'pdfUrl' => $pdfUrl), function($message) use ($email)
+					Mail::send($template, array('userName' => $userName, 'pdfUrl' => $pdfUrl), function($message) use ($email, $messageSubject)
 					{
-						
-						$messageSubject = "Requesting Discussion: Breast & Ovarian Cancer Risk";
-						
 						$message->from('assessyourrisk@brightpink.org');
 						$message->to($email); //->cc("trevorobrien@theexperiment.io");
 						$message->subject($messageSubject);	

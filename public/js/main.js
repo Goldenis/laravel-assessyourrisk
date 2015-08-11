@@ -1676,6 +1676,21 @@
     function askHandler(e) {
         e.stopPropagation();
     }
+
+    function addGAConversionPixel() {
+        console.log("Adding conversion pixel image");
+
+        var oImg = new Image(1, 1);
+        var google_conversion_id = 1033468455;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "UD3lCPjbsl4Qp_Tl7AM";
+        var google_remarketing_only = false;
+
+        oImg.src = "https://www.googleadservices.com/pagead/conversion/" + google_conversion_id + "/?label=" + google_conversion_label + "&script=0";
+        document.body.appendChild(oImg);
+    }
     
     function answerQuestion(answer) {
          $(window).scrollTop(0);
@@ -1700,6 +1715,7 @@
             analytics.track("Results", {
                 level: resultLevel
             });
+            addGAConversionPixel();
         }
         $('.fact').eq(_currentQuestion).removeClass('in');
         $('.fact').eq(_currentQuestion).addClass('out');

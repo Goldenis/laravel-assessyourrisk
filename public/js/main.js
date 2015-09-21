@@ -2,18 +2,14 @@
     var isDoctorEmail = null;
     var pdfWindow;
     var savedQuestionsAnswers = {};
-    var endCards = null;
-    var cardsLow = null;
-    var cardsHigh = null;
+    var endCards = {};  
+    var cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is within 18.5 and 24.9', factbody: 'This is within a healthy range! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
 
-    function resetCards(){
-        endCards = {};  
-        cardsLow = [{facttitle: 'BMI', factheadline: 'Your BMI is below 24.9', factbody: 'This is within the healthy range when it comes to risk! Keep up the good work.'}, {facttitle: 'ALCOHOL', factheadline: 'You have one or fewer drinks a day.', factbody: 'Something to celebrate: your cocktail consumption likely doesn’t increase your baseline risk.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You get enough exercise.', factbody: 'Your active lifestyle will benefit your health in many ways. Stick to it!'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You’ve taken birth control for at least five years.', factbody: 'You likely made this choice for other reasons, but just by taking oral contraceptives for a total of at least five years, you’ve decreased your risk of ovarian cancer by up to 50%.  That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have breastfed, or plan to in the future.', factbody: 'Breastfeeding is good for both you and your baby; doing it for a total of at least 1-2 years helps lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have given birth.', factbody: 'One of the many joys of motherhood can be risk reduction — pregnancy lowers your risk by reducing your lifetime exposure to estrogen and stabilizing your breast tissue.'}];
-        cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}, {facttitle: 'PERIOD', factheadline: 'Your period started early.', factbody: 'Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen. You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.'}];
-        cancerContent = [{content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk. The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway). And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it. This testing will help determine if your cancer was likely the result of a gene mutation. If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: The recommendation above regarding genetic testing is particularly relevant to you. If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher. (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.) And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis. We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}]; 
-    }
-    
 
+    var cardsHigh = [{facttitle: 'BMI', factheadline: 'Your BMI is outside of the healthy range.', factbody: 'Be good to yourself! Talk to your doctor or nutritionist about steps you can take to achieve a healthier BMI.'}, {facttitle: 'ALCOHOL', factheadline: 'You have more than one drink a day.', factbody: 'Consider cutting back on cocktails, as alcohol increases your baseline risk. We advise no more than one drink per day.'}, {facttitle: 'PHYSICAL ACTIVITY', factheadline: 'You’re not getting enough exercise.', factbody: 'Not moving your body enough increases your risk.  You don’t have to become a gym rat — walking counts! 30+ minutes most days is the goal to work toward.'}, {facttitle: 'BIRTH CONTROL', factheadline: 'You haven’t taken birth control for at least five years.', factbody: 'Consider talking to your doctor about whether birth control pills might be a good option for you—if you take them for a total of at least five years in your 20s and 30s, you can reduce your ovarian cancer risk by up to 50%. That’s no small feat.'}, {facttitle: 'BREASTFEEDING', factheadline: 'You have not breastfed, or do not plan to in the future.', factbody: 'Breastfeeding is a personal choice, but if it presents itself as an option in the future, just know that doing it for a total of 1-2 years can help lower your risk.'}, {facttitle: 'PREGNANCY', factheadline: 'You have not given birth.', factbody: 'If you’ve chosen not to have children, or if childbearing simply isn’t in the cards, be aware that never giving birth slightly increases your risk.'}, {facttitle: 'PERIOD', factheadline: 'Your period started early.', factbody: 'Starting your period under the age of 12 increases your risk for breast cancer later because it increases your total lifetime exposure to estrogen. You obviously can’t change this, but it’s another reason to stay proactive where other modifiable risk factors are considered, especially BMI.'}];
+
+
+    var cancerContent = [{content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: It may seem like being at “average risk” when you’ve already been diagnosed with breast or ovarian cancer seems strange, but as noted above, the majority of breast and ovarian cancers are diagnosed in women with average risk. The information below may be less relevant to you now, post-diagnosis, but we still recommend bringing it to your doctor to discuss which strategies you should still incorporate (most of these recommendations are good to keep in mind for general health anyway). And the most important thing we can recommend is talking to your doctor or a genetic counselor about pursing genetic testing, if you haven’t already had it. This testing will help determine if your cancer was likely the result of a gene mutation. If it was, your baseline risk is actually higher than average and you will need to discuss enhanced risk management strategies with your doctor. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: The recommendation above regarding genetic testing is particularly relevant to you. If you’ve not yet been tested, it’s important to rule out the involvement of a genetic mutation in your cancer and the potential that your baseline risk may actually be higher. (It may seem strange to think of yourself as not already at high risk, given your diagnosis, but keep in mind that the majority of breast and ovarian cancers occur in women with an average baseline risk.) And though some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis, we still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}, {content: 'SINCE YOU’VE BEEN DIAGNOSED WITH BREAST OR OVARIAN CANCER: Some of the risk-reduction and early detection information below may be less relevant to you now, post-diagnosis. We still recommend bringing these results to your doctor to discuss which strategies you may still need to incorporate. \n \n'}]; 
 
 (function($, undefined) {
     var _$window;
@@ -41,7 +37,7 @@
     var overlayOpen;
     var initialized;
 
-    var cloudfrontURL = "https://brightpink-videos.s3.amazonaws.com/"
+    var cloudfrontURL = "http://brightpink-videos.s3.amazonaws.com/"
     var videoURL;
     var videoType;
     var closest = 0;
@@ -93,25 +89,16 @@
     var knowingPledgeCount = 0;
     var familyPledgeCount = 0;    
 
-    
+    $('.module').on('touchmove', function(e){
+        _scrollHandler();
+    });
 
-    if ($('html').hasClass('touch')){
-        _showAll();
-        $('.module').on('touchmove', function(e){
-            _scrollHandler();
-        });
-    }
-  
     $('.module').on('scroll', function(e) {
         // if(overlayOpen){
         //   return;
         // }
         _scrollHandler();
     });
-
-    
-
-
 
     //cardsLow[0]{factbody: ''}
     //['factbody', '']
@@ -127,12 +114,12 @@
             _airScreen = false;
             _lapScreen = false;
             minS = .7;
-            $('.module-hero h1').eq(1).html('Your Normal')
+            $('.module-hero h1').eq(1).html('Normal')
             $('.module-hero h1').eq(2).html('Family')
-            $('.vignettes h3').eq(1).html('Your Normal')
+            $('.vignettes h3').eq(1).html('Normal')
             $('.vignettes h3').eq(2).html('Family')
             if(_winW > _winH){
-                $('.landscape-overlay').addClass('active')    
+                $('.landscape-overlay').addClass('active')
             }else{
                 $('.landscape-overlay').removeClass('active')
             }
@@ -253,7 +240,6 @@
         var numHeadlines = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).length;
         console.log(numHeadlines)
         var nextHeadline = _currentHeadline.index() + 1;
-
         if (initialized && nextHeadline < numHeadlines) {
             console.log(nextHeadline, numHeadlines)
             // _currentHeadline.removeClass('active');
@@ -269,10 +255,12 @@
             nextVignette();
         }
     }
-
+    var kk=0;
     function fillDot() {
+        //alert('salio');
         var hNum = $('.headline').index(_currentHeadline)
         $('.education .dots h6').removeClass('active')
+
         if(hNum < $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(0).addClass('active')
         }else if(hNum < $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
@@ -280,34 +268,40 @@
         }else if(hNum < $('.module').eq(2).find($(".headline")).length + $('.module').eq(1).find($(".headline")).length + $('.module').eq(0).find($(".headline")).length){
             $('.education .dots h6').eq(2).addClass('active')
         }
+
         $('.education .dot').removeClass('active');
-        $('.education .dot').eq(hNum).addClass('active');
-        $('.education .dot').eq(hNum).addClass('on');
-    }
+        $('.education .dot').eq(hNum).addClass('active on');
 
-    function _showAll() {
-        // $('.vignette').
-        $('.vignette .headline').addClass('active');
+        if(sessionStorage.getItem('dots_education')!=undefined){
 
-        // for (var i = 0; i < headline_tops[_currentModule].length; i++) {
-        //     if (Math.abs(headline_tops[_currentModule][i] - scrollTop) < Math.min(Math.abs(headline_tops[_currentModule][closest] - scrollTop), Math.abs(headline_tops[_currentModule][newClosest] - scrollTop))) {
-        //         newClosest = i;
-        //     }
-        // }
-        // if (newClosest !== closest) {
+            var recupero = sessionStorage.getItem('dots_education');
+            var dots_on = JSON.parse(recupero);
+           // console.log(dots_on);
 
-        //     $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
-        //     closest = newClosest;
-        //     $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
-        //     var offset = 0;
-        //     if(_currentModule == 1){
-        //         offset = $('.module').eq(0).find($('.headline')).length
-        //     }else if(_currentModule == 2){
-        //         offset = $('.module').eq(0).find($('.headline')).length + $('.module').eq(1).find($('.headline')).length
-        //     }
-        //     changeHeadline(closest + offset);
-        // }
+            $.each(dots_on,function(key,value){
+                if(value==1 && key >= 0){
+                    $('.education .dot').eq(key).addClass('on');
+                }
+            });
 
+        }else{
+            $('.education .dot').eq(hNum).addClass('on');
+        }
+
+        // esta condicional se hizpo por que al comenzar siempre marcaba "cero" (0)
+        //hNum y por lo tanto cargaba un valor como education leido (storage = dots_education)
+        if(kk==0){
+            hNum = -1;
+            createDotsOn(hNum);
+        }else{
+            createDotsOn(hNum);
+        }
+        kk++;
+
+       //alert(kk);
+
+
+        //console.log(hNum);  // este va a alimentyar un array que voy a cargar en el storage
     }
 
     function _scrollHandler() {
@@ -318,9 +312,7 @@
             }
         }
         if (newClosest !== closest) {
-            if (!$('html').hasClass('touch')){
-                $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
-            }
+            $('.module').eq(_currentModule).find($('.headline')).eq(closest).removeClass('active')
             closest = newClosest;
             $('.module').eq(_currentModule).find($('.headline')).eq(closest).addClass('active')
             var offset = 0;
@@ -368,7 +360,7 @@
     }
 
     function getUserCount() {
-        
+
         resp = $.ajax({
           type : "GET",
           cache: false,
@@ -379,10 +371,10 @@
 
         lifestylePledgeCount = data[moduleCategories[0]];
         knowingPledgeCount = data[moduleCategories[1]];
-        familyPledgeCount = data[moduleCategories[2]]; 
+        familyPledgeCount = data[moduleCategories[2]];
 
         for (i=0; i<moduleCategories.length; i++) {
-          console.log('pledges ' +data[moduleCategories[i]])
+         // console.log('pledges ' +data[moduleCategories[i]])
           if(i===0){
             pledgeMessage = "Women Have Pledged to Improve Their Lifestyles."
           }else if(i===1){
@@ -394,7 +386,7 @@
           }
 
         }).fail(function(error) {
-          console.log(error);
+        //  console.log(error);
         });
       }
 
@@ -404,14 +396,15 @@
             e.stopPropagation();
             hideIntro();
             addCharts();
-            window._currentPath = '/assessment';
-            $.address.path('/assessment');
+            //window._currentPath = '/assessment';
+            //$.address.path('/assessment');
+            $(location).attr('href','assessment');
             //$.address.path('/assessment');
             
-            analytics.track("click", {
+            /*woopra.track("click", {
                 intent: "begin",
                 type: "button"
-            });
+            });*/
         })
 
 //buttons
@@ -525,9 +518,9 @@
             $('#mutation-sub-btn').prop('disabled', noneChecked);
         });
 
-        $('.testPDF, .pdf').on('click', function() {
+       /* $('.testPDF, .pdf').on('click', function() {
             $(this).attr('disabled', 'disabled');
-        	analytics.track("click", {
+        	woopra.track("click", {
                 intent: "getPDF",
                 type: "button"
             });
@@ -535,18 +528,22 @@
             pdfWindow = window.open('', '_blank');
             pdfWindow.document.write('Loading PDF results...');
             createPinkPDF(resultLevel);
-        })
+        })*/
 
 
-        $('.facebook.lifestyle').on('click', function() {
-            console.log('clicked')
-            
-            analytics.track("click", {
-                intent: "pledge",
-                location: "lifestyle",
-                type: "button"
-            });
-            
+
+
+
+
+        /*$('.facebook.lifestyle').on('click', function() {
+            //console.log('clicked')
+
+            *//*woopra.track("click", {
+             intent: "pledge",
+             location: "lifestyle",
+             type: "button"
+             });*//*
+
             $('.lifestyle-pledge-number').text('You and ' + lifestylePledgeCount +'  women have pledged to improve your lifestyles');
 
             $('.lifestyle-pledge-number').next().text('');
@@ -556,21 +553,21 @@
             })
 
             resp = $.ajax({
-              type : "GET",
-              cache: false,
-              url : "/count/add/lifestyle",
-              dataType: 'json'
+                type : "GET",
+                cache: false,
+                url : "/count/add/lifestyle",
+                dataType: 'json'
             }).done(function(data) {
-              console.log(data);
+                console.log(data);
             }).fail(function(error) {
-              console.log(error);
+                console.log(error);
             });
-        })
+        })*/
 
         $('.facebook.knowing').on('click', function() {
-            console.log('clicked')
+           // console.log('clicked')
             
-            analytics.track("click", {
+            woopra.track("click", {
                 intent: "pledge",
                 location: "knowing",
                 type: "button"
@@ -591,16 +588,16 @@
               url : "/count/add/knowing",
               dataType: 'json'
             }).done(function(data) {
-              console.log(data);
+             // console.log(data);
             }).fail(function(error) {
-              console.log(error);
+             // console.log(error);
             });
         })
 
         $('.facebook.family').on('click', function() {
-            console.log('clicked')
+           // console.log('clicked')
             
-            analytics.track("click", {
+            woopra.track("click", {
                 intent: "pledge",
                 location: "family",
                 type: "button"
@@ -620,9 +617,9 @@
               url : "/count/add/family",
               dataType: 'json'
             }).done(function(data) {
-              console.log(data);
+           //   console.log(data);
             }).fail(function(error) {
-              console.log(error);
+           //   console.log(error);
             });
         })        
 
@@ -645,7 +642,7 @@
         $('.paragraph-box .read-more').on('click', function() {
             if($(this).html() == 'Read More'){
             	
-            	analytics.track("click", {
+            	woopra.track("click", {
                     intent: "expand",
                     location: "Read More",
                     type: "button"
@@ -657,7 +654,7 @@
                 })
             }else{
             	
-            	analytics.track("click", {
+            	woopra.track("click", {
                     intent: "collapse",
                     location: "Read More",
                     type: "button"
@@ -674,25 +671,25 @@
         $('.email-doctor').on('click', function(event) {
             event.preventDefault();     
      
-            analytics.track("click", {
+          /*  woopra.track("click", {
                 intent: "email",
                 location: "doctor",
                 type: "button"
-            });
+            });*/
             
             $('.email-pdf-doctor').addClass('show-fields-dr');
         })
 
         $('.sub.email').on('click', function(event) {
-            console.log('click my email');
+          //  console.log('click my email');
                 // cancels the form submission
              event.preventDefault();
             
-            analytics.track("click", {
-                intent: "email",
-                location: "mydelf",
-                type: "button"
-            });
+           /* woopra.track("click", {
+             intent: "email",
+             location: "mydelf",
+             type: "button"
+             });*/
             
             
             $('.email-pdf-doctor').addClass('show-fields-user');
@@ -706,34 +703,34 @@
         })        
         
         $('.sub.send-dr-email').on('click', function() {
-            console.log('drclick')
+          //  console.log('drclick')
             
-            analytics.track("click", {
+           /* woopra.track("click", {
                 intent: "complete email",
                 location: "doctor",
                 type: "button"
-            });
+            });*/
             
             isDoctorEmail = true;
-            console.log(isDoctorEmail)
-            createPinkPDF(resultLevel);
+          //  console.log(isDoctorEmail)
+           // createPinkPDF(resultLevel);
         })
         $('.sub.send-user-email').on('click', function() {
-            console.log('userclick')
+         //   console.log('userclick')
             
-            analytics.track("click", {
+           /* woopra.track("click", {
                 intent: "complete email",
                 location: "user",
                 type: "button"
-            });
+            });*/
             
             isDoctorEmail = false;
-            console.log(isDoctorEmail)
-            createPinkPDF(resultLevel);
+          //  console.log(isDoctorEmail)
+            //createPinkPDF(resultLevel);
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
-        	analytics.track("click", {
+        	woopra.track("click", {
                 intent: "share",
                 location: "social",
                 type: "button"
@@ -746,7 +743,7 @@
         $('.fact-overlay .return').on('click', closeFactOverlay);
         $('.menu-overlay .close-btn').on('click', closeMenuOverlay);
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
-        $('.assessment-intro button, .lets-go').on('click', function() {
+        $('.assessment-intro button').on('click', function() {
             $('.right-column').addClass('in2')
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
@@ -757,6 +754,22 @@
             $('.assessment-dots').addClass('active');
             $('.fact-icon').addClass('in');
         })
+
+
+
+        /*
+         $('.assessment-intro button, .lets-go').on('click', function() {
+         $('.right-column').addClass('in2')
+         $('.assessment-intro').addClass('out-up');
+         $('.assessment-intro').removeClass('in');
+         $('.question').eq(0).addClass('in');
+         $('.fact').eq(_currentQuestion).addClass('in');
+         $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+         $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+         $('.assessment-dots').addClass('active');
+         $('.fact-icon').addClass('in');
+         })
+        * */
         $('.ask').on('click', askHandler);
         $('.btn-calculate').on('click', function(e) {
             calculateWeight($(this));
@@ -778,8 +791,8 @@
         $('.asterisk').on('mouseleave', function() {
             $(this).next().removeClass("show")
         })
-        $('.assess').on('click', function() {
-        	analytics.track("click", {
+        /*  $('.assess').on('click', function() {
+        	woopra.track("click", {
                 intent: "toggle",
                 location: "assessment",
                 type: "button"
@@ -787,9 +800,9 @@
             toggleColumn();
             window._currentPath = '/assessment';
             $.address.value('/assessment');
-        })
-        $('.understand').on('click', function() {
-        	analytics.track("click", {
+        })*/
+       /* $('.understand').on('click', function() {
+        	woopra.track("click", {
                 intent: "toggle",
                 location: "education",
                 type: "button"
@@ -797,9 +810,14 @@
             toggleColumn();
             window._currentPath = '/education';
             $.address.value('/education');
-        })
+        })*/
+
+
+
+
         $('.module-hero').on('click', function() {
             changeModule($(this).index());
+            updateCharts();
             $('.menu-icon').addClass('module-open')
         })
         $('.menu-overlay .vignettes h3').on('click', function() {
@@ -836,7 +854,7 @@
             changeModule($(this).index());
         })
         $('.text-me').on('click', function() {
-        	analytics.track("click", {
+        	woopra.track("click", {
                 intent: "text me",
                 location: "reminders",
                 type: "button"
@@ -849,10 +867,12 @@
                 scrollTop: _winH
             }, 1000);
         })
-        $('.btn-continue').on('click', function(e) {
-            e.stopPropagation();
-            showNextHeadline();
-        })
+
+            $('.btn-continue').on('click', function(e) {
+                e.stopPropagation();
+                showNextHeadline();
+            })
+
         $('.bottle').on('mousedown', function(e) {
             if (e.which !== 1){
                 return;
@@ -869,13 +889,13 @@
                 distance = 0;
             });
             _$window.on('mouseup', function() {
-                console.log('MOUSE UP!!!');
+             //   console.log('MOUSE UP!!!');
                 _$window.off('mousemove mouseup');
             });
         });
         
         $('.bottle').on('touchstart', function(e) {
-            console.log('TOUCH START');
+          //  console.log('TOUCH START');
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             e.preventDefault();
             var x = touch.pageX;
@@ -890,7 +910,7 @@
                 distance = 0;
             });
             _$window.on('touchend', function() {
-                console.log('TOUCH UP!!!');
+            //    console.log('TOUCH UP!!!');
                 _$window.off('touchmove touchend');
             });
         })
@@ -919,15 +939,21 @@
             glassW = 38;
         }
         currentGlass = Math.floor((l - 5) / glassW);
+
         for (var i = 0; i < $('.drink').length; i++) {
+
             if (i <= currentGlass) {
                 $('.drink img').eq(i).css({
                     opacity: 1
                 })
+
+                sessionStorage.setItem('bottle',currentGlass);
+
             } else {
                 $('.drink img').eq(i).css({
                     opacity: 0
                 })
+
             }
         }
         $('.bottle').css({
@@ -936,7 +962,7 @@
         })
     }
 
-    function createDots() {
+   /* function createDots() {
         for (var i = 0; i < _totalQuestions; i++) {
             var dot = '<div class="dot"></div>';
             $('.assessment-dots').append(dot);
@@ -947,19 +973,19 @@
         };
         $('.percdive').html(0 + '/' + _totalHeadlines);
         $('.percquiz').html(0 + '/' + _totalQuestions);
-    }
+    }*/
 
     function hideIntro() {
     	
-    	analytics.track("click", {
+    	woopra.track("click", {
             intent: "navigate",
             location: "hide intro",
             type: "button"
         });
     	
-        console.log('hideIntro');
+      //  console.log('hideIntro');
          // $('.logo').css('opacity', 1);
-         TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
+        // TweenLite.to($('.logo'), .5, {opacity: 1, delay: 1});
 
         $('.intro').addClass('out-up')
         $('.right-column').addClass('in')
@@ -969,14 +995,14 @@
 
     function goHome(){
     	
-    	analytics.track("click", {
+    	woopra.track("click", {
             intent: "navigate",
             location: "home",
             type: "button"
         });
     	
-        console.log('goHome');
-        TweenLite.to($('.logo'), .5, {opacity: 1, delay: 0});
+      //  console.log('goHome');
+      //  TweenLite.to($('.logo'), .5, {opacity: 1, delay: 0});
         TweenLite.to($('.intro'), .5, {opacity: 1, delay: 1});
         $('.intro').removeClass('out-up')
         $('.right-column').removeClass('in')
@@ -1092,28 +1118,28 @@
     }
 
     function toggleColumn() {
-        if (_currentView == "left") {
-            _currentView = "right";
-            $('.logo').addClass('out');
-            if (_currentModule != undefined) {
-                setTimeout(function() {
-                    $('.right-column').addClass('down');
-                    $('.nav').addClass('in');
-                }, 800)
-            }
-        } else {
-            $('.logo').removeClass('out');
-            _currentView = "left"
-            setTimeout(function() {
-                $('.right-column').removeClass('down');
-                $('.nav').removeClass('in');
-            }, 800)
-        }
-        $('.fact-icon').toggleClass('out');
-        $('.assessment').toggleClass('in');
-        $('.right-column').toggleClass('left');
-        $('.menu-icon').toggleClass('left');
-        $('.education').toggleClass('in');
+        //if (_currentView == "left") {
+        //    _currentView = "right";
+        //    $('.logo').addClass('out');
+        //    if (_currentModule != undefined) {
+        //        setTimeout(function() {
+        //            $('.right-column').addClass('down');
+        //            $('.nav').addClass('in');
+        //        }, 800)
+        //    }
+        //} else {
+        //    $('.logo').removeClass('out');
+        //    _currentView = "left"
+        //    setTimeout(function() {
+        //        $('.right-column').removeClass('down');
+        //        $('.nav').removeClass('in');
+        //    }, 800)
+        //}
+        //$('.fact-icon').toggleClass('out');
+        //$('.assessment').toggleClass('in');
+        //$('.right-column').toggleClass('left');
+        //$('.menu-icon').toggleClass('left');
+        //$('.education').toggleClass('in');
     }
 
     function toggleLogo() {
@@ -1140,8 +1166,8 @@
         })
 
 
-        //    console.log("getHeightInInches:" + window.heightInInches);
-        //    console.log("weightInPounds:" + window.weightInPounds);
+           // console.log("getHeightInInches:" + window.heightInInches);
+           // console.log("weightInPounds:" + window.weightInPounds);
         // BMI = Formula: weight (lb) / [height (in)]2 x 703
         var BMI = ((window.weightInPounds / (window.heightInInches * window.heightInInches)) * 703).toPrecision(4);
         $(".bmi-result .answers").before("<h4>Your BMI result is</h4><h3>" + BMI + "</h3>");
@@ -1155,15 +1181,31 @@
         30.0 and Above  Obese
         */
     }
-
+//grafics dashboard
+    /*
+    * Esta función se actualiza cada vez que el scroll de educación baja
+    * aca voy a colocar una funcion que carga la cantidad de education vistas
+    * por medio de sessionstorage*/
     function updateCharts() {
+
         $('.dashboard').addClass('flash');
         setTimeout(function() {
             $('.dashboard').removeClass('flash');
         }, 300);
         // percquiz percdive
-        var questionsAnswered = 0;
-        for (q in savedQuizProgress) questionsAnswered++;
+        //for questions------------
+
+        if(sessionStorage.getItem('answersResult')==undefined){
+            var questionsAnswered = 0;
+        }else{
+
+
+            var recupero = sessionStorage.getItem('answersResult');
+            var datos = JSON.parse(recupero);
+            var questionsAnswered = Object.keys(datos).length;
+        }
+
+        //for (q in savedQuizProgress) questionsAnswered++;
 
         var quizProgress = questionsAnswered + '/' + _totalQuestions;
         var quizPercent = questionsAnswered / _totalQuestions;
@@ -1174,13 +1216,46 @@
         chart4.transitionToValues(5,
             8, [quizPercent, 1 - quizPercent], ['#D7006D', '#FFFFFF']);
 
-        var deepViewed = 0;
-        for (v in savedDiveProgress) deepViewed++;
-        var diveProgress = deepViewed + '/' + _totalHeadlines;
-        var divePercent = deepViewed / _totalHeadlines;
-        if (divePercent == 1) {
+
+        //for education------------
+
+
+
+       /* if(sessionStorage.getItem('educationView')!=undefined){
+            var deepViewed = sessionStorage.getItem('educationView');
+        }else{
+            var deepViewed = 0;
+        }*/
+
+        // for (v in savedDiveProgress) deepViewed++;
+
+//vamos a sumar todos los educations que han sido vistos
+//para eso vamos a utilizar el storage dots_education que es un objeto
+        if(sessionStorage.getItem('dots_education')!=undefined){
+
+            var recupero = sessionStorage.getItem('dots_education');
+            var dots_on = JSON.parse(recupero);
+            var i=0;
+
+            $.each(dots_on,function(key,value){
+                if(value==1 && key >= 0){
+                    i++;
+                }
+            });
+
+          //  console.log(i);
+            deepViewed = i;
 
         }
+
+
+
+        sessionStorage.setItem('educationView',deepViewed);
+        //  console.log(deepViewed);
+
+        var diveProgress = deepViewed + '/' + _totalHeadlines;
+        var divePercent = deepViewed / _totalHeadlines;
+
         $(".percdive").html(diveProgress);
         chart3.transitionToValues(5,
             8, [divePercent, 1 - divePercent], 4['#D7006D', '#FFFFFF']);
@@ -1202,14 +1277,44 @@
         savedDiveProgress[id] = true;
 
         lastDeepSave = id;
+        //console.log(lastDeepSave);
+
+
         updateCharts();
-//TODO         
+
+        //TODO
         // user progress the the 
-        analytics.track("progress", {
-            module: _currentModule,
-            vignette: _currentVignette,
-            headline: _currentHeadline.index()
-        });
+       /* woopra.track("progress", {
+         module: _currentModule,
+         vignette: _currentVignette,
+         headline: _currentHeadline.index()
+         });*/
+    }
+
+
+
+    function createDotsOn($eduView)
+    {
+        if(sessionStorage['dots_education']!=undefined)
+        {
+            var recupero = sessionStorage.getItem('dots_education');
+            dots_on = JSON.parse(recupero);
+        }else{
+            var educationView = sessionStorage.getItem('num_education');
+            var dots_on = {};
+
+            for(var i=0; i<educationView; i++){
+                dots_on[i]=0;
+            }
+        }
+
+        dots_on[$eduView]=1;
+
+        //convierto en string para poder guardarlo en el storage
+        dots_education =  JSON.stringify(dots_on);
+
+        //creamos el sesionstorage
+        sessionStorage.setItem('dots_education', dots_education);
     }
 
 
@@ -1220,8 +1325,7 @@
         $('.results-copy-high').removeClass('on'); 
 
         if ($.inArray("1|-2", savedQuizProgress[8]) > -1 ) {
-
-            resultLevel = 'high';   
+            resultLevel = 'high';
             $('.risk-level').html('High');
         //using result level for pdf work
             $('.results-copy-high').addClass('on'); 
@@ -1284,7 +1388,7 @@
   
                 answers = bmi + " BMI Result"
                 if (bmi < 18.5) {
-                    ansTxt = "+1";
+                    ansTxt = "-1";
                 } else if (bmi >= 18.5 && bmi <= 24.9) {
                     ansTxt = "+1";
                 } else if (bmi >= 25.0 && bmi <= 29.9) {
@@ -1301,25 +1405,16 @@
                 answers = currentGlass + "  alcohol drinks a day";            
             }
 
-            questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();           
-            questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
+                questionTxt = $('.question').eq(_currentQuestion).find('.prompt').text();           
+                questionObj = {'questionnumber': _currentQuestion, 'questionTxt' : questionTxt, 'questionanswer' : answers};
 
 
-            savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
-            savedQuizProgress[String(_currentQuestion)] = ansTxt;
-            updateCharts();
-            // addResultCopy(resultLevel);
-            addCustomResults();  
-            console.log('Object savedQuizProgress = ', savedQuizProgress)
-            console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+                savedQuestionsAnswers[String(_currentQuestion)] = questionObj;
+                savedQuizProgress[String(_currentQuestion)] = ansTxt;
+                updateCharts();
 
-            analytics.track("Question Answered", {
-                question_number: _currentQuestion,
-                question_text: questionTxt,
-                question_answer: answers
-            });
               
-            return;
+                return;
         };
 
         var age = $('input[name="age-radio"]:checked');
@@ -1327,7 +1422,6 @@
             ansTxt = age.attr("data-answer-id");
             answers = age.next().html();
         }
-
 
         var cancerHistoryCheck = $('input[name="cancerhistory-radio"]:checked');
         if (_currentQuestion == 2) {
@@ -1342,7 +1436,7 @@
                 data.push($(this).attr('data-answer-id'));
                 ans5Text.push($(this).next().html());
             });
-            console.log(ans5Text);
+           // console.log(ans5Text);
             ansTxt = data;
             answers = ans5Text;
         }
@@ -1352,7 +1446,7 @@
             ansTxt = mutationCheck.attr("data-answer-id");
             answers = mutationCheck.next().html();
         }
-          console.log(mutationCheck.attr("data-answer-id"))
+        //  console.log(mutationCheck.attr("data-answer-id"))
 
         if (_currentQuestion == 7 && ansTxt == '+1') {
             $('input[name="mutation-sub"]:checked').removeAttr('checked');
@@ -1363,14 +1457,8 @@
             delete savedQuizProgress[8];
             var specialQ = {'questionnumber': '7', 'questionTxt' : 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?', 'questionanswer' : answers};
 
-            savedQuestionsAnswers[7] = specialQ; 
-            analytics.track("Question Answered", {
-                question_number: '7',
-                question_text: 'Have you or any of your close relatives (parent, sibling, grandparent, aunt, or uncle) been diagnosed with a genetic mutation that increases breast or ovarian cancer risk?',
-                question_answer: answers
-            });
+            savedQuestionsAnswers[7] = specialQ;        
         }
-
 
         if (_currentQuestion == 8 && savedQuizProgress[7] != '+1') {
             var data = [];
@@ -1407,13 +1495,14 @@
         }
 
         updateCharts();
-        // addResultCopy(resultLevel);
+        addResultCopy(resultLevel);
         addCustomResults();  
-        console.log('Object savedQuizProgress = ', savedQuizProgress)
-        console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
+       // console.log('Object savedQuizProgress = ', savedQuizProgress);
+
+      //  console.log('Object savedQuestionsAnswers = ', savedQuestionsAnswers)
         //console.log(savedQuestionsAnswers[0].questionTxt)
 
-        analytics.track("Question Answered", {
+        woopra.track("Question Answered", {
             question_number: _currentQuestion,
             question_text: questionTxt,
             question_answer: answers
@@ -1423,13 +1512,15 @@
 
 
     function addCustomResults() {
-        resetCards();
+
+     //   console.log(savedQuizProgress);
+
         // var bmiHigh = savedQuizProgress[2] == '-1';
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
         addResultCopy(resultLevel);  
-        // var cardsObj = null;
-        // var cardContent = null;
+        var cardsObj;
+        var cardContent;
 
 // BMI
 // ALCOHOL
@@ -1438,7 +1529,135 @@
 // BREASTFEEDING
 // PREGNANCY
 
-        //supress cards when 40+ is selected 
+        if (savedQuizProgress[4] === '+1') { 
+            $('.item.bmi-low').css({
+                display: 'block'
+            })
+            // cardContent = $('.item.bmi-low').text();
+            //cardsHigh[0]['factbody'] = "new string";
+            cardsHigh[0]['facttitle'] = "";    
+            cardsHigh[0]['factheadline'] = "";     
+            cardsHigh[0]['factbody'] = "";    
+        }    
+        else if (savedQuizProgress[4] === '-1') { 
+            $('.item.bmi-high').css({
+                display: 'block'
+             })  
+            // cardContent = $('.item.bmi-high').text();
+            cardsLow[0]['facttitle'] = "";    
+            cardsLow[0]['factheadline'] = "";     
+            cardsLow[0]['factbody'] = "";    
+        }
+
+//drinks card
+        if (savedQuizProgress[6] <= '1') { 
+            $('.item.alcohol-low').css({
+                display: 'block'
+            })
+            cardsHigh[1]['facttitle'] = "";    
+            cardsHigh[1]['factheadline'] = "";     
+            cardsHigh[1]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[6] >= '2') { 
+            $('.item.alcohol-high').css({
+                display: 'block'
+             })            
+            cardsLow[1]['facttitle'] = "";    
+            cardsLow[1]['factheadline'] = "";     
+            cardsLow[1]['factbody'] = "";                   
+        }
+
+//exercise card
+        if (savedQuizProgress[9] === '+1') { 
+            $('.item.exercise-low').css({
+                display: 'block'
+            })
+            cardsHigh[2]['facttitle'] = "";    
+            cardsHigh[2]['factheadline'] = "";     
+            cardsHigh[2]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[9] === '-1') { 
+            $('.item.exercise-high').css({
+                display: 'block'
+             })   
+            cardsLow[2]['facttitle'] = "";    
+            cardsLow[2]['factheadline'] = "";     
+            cardsLow[2]['factbody'] = "";  
+        }
+
+//period card
+        if (savedQuizProgress[13] == '-1') { 
+            $('.item.period-high').css({
+                display: 'block'
+            })
+        } 
+        else if (savedQuizProgress[13] === '+1') {  
+            cardsHigh[6]['facttitle'] = "";    
+            cardsHigh[6]['factheadline'] = "";     
+            cardsHigh[6]['factbody'] = "";  
+        }
+
+//birth-control card
+        if (savedQuizProgress[15] === '+1') { 
+            $('.item.birth-control-low').css({
+                display: 'block'
+            })
+            cardsHigh[3]['facttitle'] = "";    
+            cardsHigh[3]['factheadline'] = "";     
+            cardsHigh[3]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[15] === '-1') {
+            $('.item.birth-control-high').css({
+                display: 'block'
+             })     
+            cardsLow[3]['facttitle'] = "";    
+            cardsLow[3]['factheadline'] = "";     
+            cardsLow[3]['factbody'] = "";  
+        }
+
+//pregnancy card
+        if (savedQuizProgress[17] === '+1') { 
+            $('.item.pregnancy-low').css({
+                display: 'block'
+            })
+            cardsHigh[5]['facttitle'] = "";    
+            cardsHigh[5]['factheadline'] = "";     
+            cardsHigh[5]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[17] === '-1') { 
+            $('.item.pregnancy-high').css({
+                display: 'block'
+             })   
+            cardsLow[5]['facttitle'] = "";    
+            cardsLow[5]['factheadline'] = "";     
+            cardsLow[5]['factbody'] = "";           
+        }
+
+//BREASTFEEDING card
+        if (savedQuizProgress[18] === '+1') { 
+            $('.item.breastfeeding-low').css({
+                display: 'block'
+            })
+            cardsHigh[4]['facttitle'] = "";    
+            cardsHigh[4]['factheadline'] = "";     
+            cardsHigh[4]['factbody'] = "";             
+        }    
+        else if (savedQuizProgress[18] === '-1') { 
+            $('.item.breastfeeding-high').css({
+                display: 'block'
+             })   
+            cardsLow[4]['facttitle'] = "";    
+            cardsLow[4]['factheadline'] = "";     
+            cardsLow[4]['factbody'] = "";           
+        }
+
+    
+//previous cancer history
+      if (savedQuizProgress[2] === '-1') { 
+            $('.triggered-cancer-copy').addClass('showable');
+        }
+
+//supress cards when 40+ is selected 
         if (savedQuizProgress[1] === '5') { 
             
 
@@ -1481,241 +1700,30 @@
             cardsHigh[5]['facttitle'] = "";    
             cardsHigh[5]['factheadline'] = "";     
             cardsHigh[5]['factbody'] = "";  
-        }
-        else
-        {
-            $('.item.birth-control-low').css({
-                display: 'block'
-            })
-            $('.item.birth-control-high').css({
-                display: 'block'
-            })
-            $('.item.pregnancy-low').css({
-                display: 'block'
-            })
-            $('.item.pregnancy-high').css({
-                display: 'block'
-            })
-            $('.item.breastfeeding-low').css({
-                display: 'block'
-            }) 
-            $('.item.breastfeeding-high').css({
-                display: 'block'
-            })
-        }
-
-        if (savedQuizProgress[4] === '+1') { 
-            $('.item.bmi-low').css({
-                display: 'block'
-            });
-            $('.item.bmi-high').css({
-                display: 'none'
-             });
-            // cardContent = $('.item.bmi-low').text();
-            //cardsHigh[0]['factbody'] = "new string";
-            cardsHigh[0]['facttitle'] = "";    
-            cardsHigh[0]['factheadline'] = "";     
-            cardsHigh[0]['factbody'] = "";    
-        }    
-        else if (savedQuizProgress[4] === '-1') { 
-            $('.item.bmi-high').css({
-                display: 'block'
-             });
-             $('.item.bmi-low').css({
-                display: 'none'
-            }) 
-            // cardContent = $('.item.bmi-high').text();
-            cardsLow[0]['facttitle'] = "";    
-            cardsLow[0]['factheadline'] = "";     
-            cardsLow[0]['factbody'] = "";    
-        }
-
-//drinks card
-        if (savedQuizProgress[6] <= '1') { 
-            $('.item.alcohol-low').css({
-                display: 'block'
-            });
-            $('.item.alcohol-high').css({
-                display: 'none'
-             });
-            cardsHigh[1]['facttitle'] = "";    
-            cardsHigh[1]['factheadline'] = "";     
-            cardsHigh[1]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[6] >= '2') { 
-            $('.item.alcohol-high').css({
-                display: 'block'
-             });
-             $('.item.alcohol-low').css({
-                display: 'none'
-            });           
-            cardsLow[1]['facttitle'] = "";    
-            cardsLow[1]['factheadline'] = "";     
-            cardsLow[1]['factbody'] = "";                   
-        }
-
-//exercise card
-        if (savedQuizProgress[9] === '+1') { 
-            $('.item.exercise-low').css({
-                display: 'block'
-            });
-            $('.item.exercise-high').css({
-                display: 'none'
-             });
-            cardsHigh[2]['facttitle'] = "";    
-            cardsHigh[2]['factheadline'] = "";     
-            cardsHigh[2]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[9] === '-1') { 
-            $('.item.exercise-high').css({
-                display: 'block'
-             });
-             $('.item.exercise-low').css({
-                display: 'none'
-            }) 
-            cardsLow[2]['facttitle'] = "";    
-            cardsLow[2]['factheadline'] = "";     
-            cardsLow[2]['factbody'] = "";  
-        }
-
-//period card
-        if (savedQuizProgress[13] == '-1') { 
-            $('.item.period-high').css({
-                display: 'block'
-            })
         } 
-        else if (savedQuizProgress[13] === '+1') {
-            $('.item.period-high').css({
-                display: 'none'
-            })
-            cardsHigh[6]['facttitle'] = "";    
-            cardsHigh[6]['factheadline'] = "";     
-            cardsHigh[6]['factbody'] = "";  
-        }
-
-//birth-control card
-        if (savedQuizProgress[15] === '+1') { 
-            $('.item.birth-control-low').css({
-                display: 'block'
-            });
-            $('.item.birth-control-high').css({
-                display: 'none'
-             });
-            cardsHigh[3]['facttitle'] = "";    
-            cardsHigh[3]['factheadline'] = "";     
-            cardsHigh[3]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[15] === '-1') {
-            $('.item.birth-control-high').css({
-                display: 'block'
-             });
-             $('.item.birth-control-low').css({
-                display: 'none'
-            })    
-            cardsLow[3]['facttitle'] = "";    
-            cardsLow[3]['factheadline'] = "";     
-            cardsLow[3]['factbody'] = "";  
-        }
-
-//pregnancy card
-        if (savedQuizProgress[17] === '+1') { 
-            $('.item.pregnancy-low').css({
-                display: 'block'
-            });
-            $('.item.pregnancy-high').css({
-                display: 'none'
-             });
-            cardsHigh[5]['facttitle'] = "";    
-            cardsHigh[5]['factheadline'] = "";     
-            cardsHigh[5]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[17] === '-1') { 
-            $('.item.pregnancy-high').css({
-                display: 'block'
-             });
-             $('.item.pregnancy-low').css({
-                display: 'none'
-            }); 
-            cardsLow[5]['facttitle'] = "";    
-            cardsLow[5]['factheadline'] = "";     
-            cardsLow[5]['factbody'] = "";           
-        }
-
-//BREASTFEEDING card
-        if (savedQuizProgress[18] === '+1') { 
-            $('.item.breastfeeding-low').css({
-                display: 'block'
-            });
-            $('.item.breastfeeding-high').css({
-                display: 'none'
-             });
-            cardsHigh[4]['facttitle'] = "";    
-            cardsHigh[4]['factheadline'] = "";     
-            cardsHigh[4]['factbody'] = "";             
-        }    
-        else if (savedQuizProgress[18] === '-1') { 
-            $('.item.breastfeeding-high').css({
-                display: 'block'
-             });
-             $('.item.breastfeeding-low').css({
-                display: 'none'
-            }) 
-            cardsLow[4]['facttitle'] = "";    
-            cardsLow[4]['factheadline'] = "";     
-            cardsLow[4]['factbody'] = "";          
-        }
-
-    
-//previous cancer history
-      if (savedQuizProgress[2] === '-1') { 
-            $('.triggered-cancer-copy').addClass('showable');
-        }
-
     }
 
     function askHandler(e) {
         e.stopPropagation();
     }
-
-    function addGAConversionPixel() {
-        console.log("Adding conversion pixel image");
-
-        var oImg = new Image(1, 1);
-        var google_conversion_id = 1033468455;
-        var google_conversion_language = "en";
-        var google_conversion_format = "3";
-        var google_conversion_color = "ffffff";
-        var google_conversion_label = "UD3lCPjbsl4Qp_Tl7AM";
-        var google_remarketing_only = false;
-
-        oImg.src = "https://www.googleadservices.com/pagead/conversion/" + google_conversion_id + "/?label=" + google_conversion_label + "&script=0";
-        document.body.appendChild(oImg);
-    }
     
     function answerQuestion(answer) {
-         $(window).scrollTop(0);
+
         if (_currentQuestion >= _totalQuestions -1) {
-            addCustomResults(); 
+           // addCustomResults()
             setTimeout(function(){
-                openProgressOverlay();
+                //openProgressOverlay();
                 if(_smallScreen){
-                    // $('.progress-overlay').scrollTop(450);
-                    $('.progress-overlay').scrollTop(0);
-                   
+                    $('.progress-overlay').scrollTop(450);
                 }
             },1000)
-            $('.assessment .share').addClass('in');
-            // $('body').scrollTop(0);
+            $('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'
             })
             $('.questions').css({
                 display: 'none'
             })
-            analytics.track("Results", {
-                level: resultLevel
-            });
-            addGAConversionPixel();
         }
         $('.fact').eq(_currentQuestion).removeClass('in');
         $('.fact').eq(_currentQuestion).addClass('out');
@@ -1734,9 +1742,10 @@
         //         break;
         // }
         if(_currentQuestion == 0 && answer.html() !== "Yes"){
-                $('.male-overlay').addClass('in');
-                $('.fact-icon').removeClass('in');
-                overlayOpen = true; 
+                //$('.male-overlay').addClass('in');
+                //$('.fact-icon').removeClass('in');
+                //overlayOpen = true;
+
         } else {
            $('.progress-overlay .progress-question').eq(_currentQuestion).css({
                opacity: .3
@@ -1769,7 +1778,7 @@
 
         if(_currentQuestion > 0){
 
-            console.log(savedQuizProgress[7])
+        //    console.log(savedQuizProgress[7])
             if (_currentQuestion == 9 && savedQuizProgress[7] == '+1') {
                 $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
                 
@@ -1834,7 +1843,7 @@
             if(_currentQuestion == 0){
                 $('.assessment-dots .btn-back').removeClass('active')
             }
-            console.log(_currentQuestion)
+           // console.log(_currentQuestion)
 
         }
     }
@@ -1847,7 +1856,7 @@
         _oldVignette = _currentVignette;
         _currentVignette++;
         // $('.headline').removeClass('active');
-        if (_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length || _smallScreen) {
+        if (_currentVignette == $('.module').eq(_currentModule).find($('.vignette')).length) {
 
             if (_currentModule + 1 >= 3) {
 
@@ -1878,7 +1887,7 @@
 
         var imgSrc = 'img/video_stills/' + vig.data('src') + '.jpg';
 
-        if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             loadBGImg(imgSrc);
         } else if ($('html').hasClass('ie9')) {
             loadBGImg(imgSrc);
@@ -2041,38 +2050,34 @@
         var oldPath = _currentPath;
         var newPath = event.value;
 
-        console.log('oldpath', oldPath)
-        console.log('newpath', newPath)
+      //  console.log('oldpath', oldPath)
+     //   console.log('newpath', newPath)
 
-        if (oldPath === '/education' && newPath === '/assessment' ){
-            console.log('true')
-            toggleColumn();
-            _currentPath = newPath;
-        }
-        else if (oldPath === '/assessment' && newPath === '/assessment' ){
-            console.log('true')
-            toggleColumn();
-            _currentPath = newPath;
-        }
-        else if (oldPath === '/assessment' && newPath === '/intro'){
-            toggleColumn();
-            
-        }
-        else if (oldPath === '/education' && newPath === '/intro' ){
-            console.log('true')
-            toggleColumn();
-            _currentPath = '/assessment';
-        } 
-        else if (oldPath === '/intro' && newPath === '/intro' ){
-            console.log('true')
-            toggleColumn();
-            _currentPath = '/assessment';
-        }  
-         else if (oldPath === '/intro' && newPath === '/assessment' ){
-            console.log('true')
-            // toggleColumn();
-            _currentPath = newPath;
-        }                       
+       // if (oldPath === '/education' && newPath === '/assessment' ){
+       ////     console.log('true')
+       //    // toggleColumn();
+       //  //   _currentPath = newPath;
+       // }
+       // else if (oldPath === '/assessment' && newPath === '/assessment' ){
+       ////     console.log('true')
+       //     //toggleColumn();
+       //   //  _currentPath = newPath;
+       // }
+       // else if (oldPath === '/education' && newPath === '/intro' ){
+       //   //  console.log('true')
+       //    // toggleColumn();
+       //   //  _currentPath = '/assessment';
+       // }
+       // else if (oldPath === '/intro' && newPath === '/intro' ){
+       //   //  console.log('true')
+       //  //   toggleColumn();
+       //   //  _currentPath = '/assessment';
+       // }
+       //  else if (oldPath === '/intro' && newPath === '/assessment' ){
+       //    // console.log('true')
+       //     // toggleColumn();
+       //    // _currentPath = newPath;
+       // }
         // else if (oldPath === '/education' && newPath === '/intro' ){
         //     console.log('trueintro')
         //     //toggleColumn();
@@ -2082,42 +2087,47 @@
 
 
         if (event.value == '/education') {
-            console.log(_currentView)
-            console.log('education'); 
-            //_currentView = "left";           
+           // console.log(_currentView)
+          //  console.log('education');
+            //_currentView = "left";
             hideIntro();
             addCharts();
             toggleColumn();
             _currentPath = newPath;
         } else if (event.value == '/education/lifestyle') {
-            console.log('education/lifestyle');            
+          //  console.log('education/lifestyle');
             hideIntro();
             addCharts();
             toggleColumn();
-            _currentPath = newPath;            
+            _currentPath = newPath;
         } else if (event.value == '/assessment') {
             //_currentView = "right";
-            console.log('assessment');
-            console.log(_currentView)
+         //   console.log('assessment');
+        //    console.log(_currentView)
             hideIntro();
             addCharts();
             //toggleColumn();
             _currentPath = newPath;
         } else {
-            console.log('intro view')       
-            console.log(_currentView)
+          //  console.log('intro view')
+           // console.log(_currentView)
             startIntro();
-            $.address.path('/intro');
+            $.address.path('/');
             _currentPath = newPath;
         };
         $('.vid-container').remove();
 
     });
 
+
+
+
     $(document).ready(function() {
-        _totalQuestions = $('.question').length;
-        _totalHeadlines = $('.headline').length;
-        console.log(_totalHeadlines)
+
+        _totalQuestions = sessionStorage.getItem('num_question');
+        //_totalHeadlines = $('.headline').length;
+        _totalHeadlines = sessionStorage.getItem('num_education');
+
         headline_tops = [];
         _currentHeadline = $('.module').eq(_currentModule).find($('.vignette')).eq(_currentVignette).find($('.headline')).eq(0);
         fillDot();
@@ -2125,11 +2135,11 @@
         _$window = $(window);
         _$document = $(window.document);
         createProgressOverlay();
-        createDots();
+        //createDots();
         for (var i = 0; i < _totalHeadlines; i++) {
             $('.headline').eq(i).attr('data-idx', i)
         }
-        getUserCount();
+       // getUserCount();
         _registerEventListeners();
         _pageResize();
         initialized = true;
@@ -2138,6 +2148,6 @@
             $('.wheel-container').addClass('shrink');
         },6000)
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
-
     });
+
 })(jQuery);

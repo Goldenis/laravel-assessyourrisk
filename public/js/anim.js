@@ -7,7 +7,8 @@
 
     $('.intro').removeClass('out-up');
     $('.intro').css({opacity: 1});
-    $('.right-column').removeClass('in');     
+
+    //$('.right-column').removeClass('in');
     $('.assessment').removeClass('in');
 
     //instantiate a TimelineLite    
@@ -27,7 +28,7 @@
     //   wheelScale = Math.min(1,($(window).width()/320) * .6);
     // }
     tl.to(wheel, 2, {scale:wheelScale, y: 10, ease:Expo.easeOut})
-    tl.to(logo, 1.5, {opacity:1}, "+=0");
+    //tl.to(logo, 1.5, {opacity:1}, "+=0");
 
     //add a label 0.5 seconds later to mark the placement of the next tween
     tl.add("stagger", "+=0.2")

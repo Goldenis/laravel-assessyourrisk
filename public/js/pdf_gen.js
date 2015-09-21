@@ -1569,6 +1569,7 @@ function doPostPDF(content) {
   		}
 		isDoctorEmail = null;
   });
+
   $('.testPDF, .pdf').removeAttr('disabled');
   $('.email-pdf-doctor').removeClass('show-fields-user');
   $('.email-pdf-doctor').removeClass('show-fields-dr');

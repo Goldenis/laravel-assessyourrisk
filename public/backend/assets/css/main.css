@@ -1,0 +1,43 @@
+
+/*-lista de preguntas-*/
+.list.ui-sortable li{
+    border-bottom: 1px solid #bababa;
+    background-color: #fff;
+}
+
+.section-floating-action-row {
+    position: absolute;
+    right: 24px;
+    top: inherit;
+}
+
+/*-button hover of education-*/
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+
+.badge {
+
+    min-width: 30px;
+    padding: 10px 7px;
+    font-size: 12px;
+    background-color: #D7006D;
+    border-radius: 30px;
+}
+.pagination {
+    margin: 5px 0;
+}
+.text-red{
+    color: red;
+}
+.brand-logo{
+    display: table;
+    min-height: 180px;
+    max-height: 180px;
+}
+.brand-logo img{
+    display: table-cell;
+    vertical-align: middle;
+}

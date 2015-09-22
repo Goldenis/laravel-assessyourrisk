@@ -74,7 +74,7 @@
 
         <div class="module family-history" id="family-list">
             @foreach($family_list as $familys)
-                <div class="vignette" data-src="{{$lifestyles->video}}">
+                <div class="vignette" data-src="{{$familys->video}}">
                     <div class="headlines">
                         <div class="headline">
                             <h3>{!! $familys->title !!}</h3>

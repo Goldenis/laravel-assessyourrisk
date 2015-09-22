@@ -2142,6 +2142,10 @@
        // getUserCount();
         _registerEventListeners();
         _pageResize();
+        setTimeout(function(){
+            _pageResize()
+        },1000);
+
         initialized = true;
         setTimeout(function(){
             $('.right-column').addClass('active');

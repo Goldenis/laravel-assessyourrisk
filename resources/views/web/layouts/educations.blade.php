@@ -232,7 +232,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 
 <script>
     sessionStorage.setItem('num_question',{{$num_question}});
-    sessionStorage.setItem('num_education',{{$num_education}});
+    sessionStorage.setItem('num_education',{{$num_education+2}});
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{asset('js/vendor/jquery-1.9.1.min.js')}}"><\/script>')</script>

@@ -794,7 +794,7 @@
             dialog = $( "#dialog-form" ).dialog({
                 autoOpen: false,
                 height: 500,
-                width: 450,
+                width: 350,
                 modal: true,
                 buttons: {
                     "Send e-mail": addUser

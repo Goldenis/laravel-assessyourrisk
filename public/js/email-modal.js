@@ -96,7 +96,6 @@ $(function() {
     $( "#create-modal2" ).click(function(e) {
         e.preventDefault();
         dialog.dialog( "open" );
-        alert('abrio');
     });
 
 });

@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Models\Quiz;
 use App\Models\Result;
 use App\Models\Result_level;
+use App\Models\Share;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -31,7 +32,9 @@ class AnswerController extends Controller
 
         $answers_array = Answer::where('quiz_id',$quiz_id)->lists('question_option_id');
 
-        return view('web/answers_result_final',compact('favors','no_favors','answers_array'));
+        $share = Share::find(2);
+
+        return view('web/answers_result_final',compact('share','favors','no_favors','answers_array'));
     }
 
 

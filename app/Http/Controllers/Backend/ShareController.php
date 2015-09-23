@@ -1,16 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Backend;
 
-use App\Models\Education;
-use App\Models\Pledge;
 use App\Models\Share;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class EducationController extends Controller
+class ShareController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +17,7 @@ class EducationController extends Controller
      */
     public function index()
     {
-        $lifestyle_list   = Education::where('education_category_id',1)->active()->orderAsc()->get();
-        $normal_list      = Education::where('education_category_id',2)->active()->orderAsc()->get();
-        $family_list      = Education::where('education_category_id',3)->active()->orderAsc()->get();
-        $pledge_lifestyle = Pledge::where('education_category_id',1)->count();
-        $pledge_normal    = Pledge::where('education_category_id',2)->count();
-        $pledge_family    = Pledge::where('education_category_id',3)->count();
-
-        $share = Share::find(4);
-
-        return view('web.education',compact('share','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
+        //
     }
 
     /**
@@ -60,7 +49,10 @@ class EducationController extends Controller
      */
     public function show($id)
     {
-        //
+        $shares = Share::all();
+        $sharedetail = Share::find($id);
+
+        return view('admin.share.show',compact('shares','sharedetail'));
     }
 
     /**
@@ -83,7 +75,13 @@ class EducationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $share = Share::find($id);
+        $share->title = $request['title'];
+        $share->subject = $request['subject'];
+        $share->body = $request['body'];
+        $share->update();
+
+        return redirect()->route('admin.share.show', $id);
     }
 
     /**

@@ -459,7 +459,8 @@ button.sub:hover {
   -webkit-overflow-scrolling: touch;
   border: none;
   text-align: center;
-  z-index: 3000;
+  z-index: 100;
+
 }
 .progress-overlay .close-btn, .menu-overlay .close-btn {
   background: #ffb4aa;
@@ -3844,13 +3845,78 @@ h5.mobile-only {
     left:0px;
 }
 /* ==========MODAL============= */
-.modal-text{
-    padding: 4px;
-    border-radius: 4px;
-    margin-bottom: 4px;
-    width: 100%;
-}
 
-.modal-table{
-    width: 100%;
-}
+    .modal-text{
+        padding: 4px;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        width: 100%;
+        border: 1px solid #cecece;
+    }
+
+    .modal-table{
+        width: 100%;
+    }
+
+    .ui-widget-header {
+        background: rgb(215, 0, 109);
+        color: #fff;
+        border: medium none !important;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .ui-dialog-buttonset .ui-state-default,
+    .ui-dialog-buttonset .ui-widget-content .ui-state-default,
+    .ui-dialog-buttonset .ui-widget-header .ui-state-default {
+        border: none;
+        background: #D7006D;
+        font-weight: 400;
+        color: #fff;
+        text-transform: none;
+        font-size: 15px;
+        letter-spacing: 0px;
+        margin: 10px 0 0 !important;
+    }
+
+    .ui-dialog-buttonset .ui-state-default.ui-state-hover,
+    .ui-dialog-buttonset .ui-widget-content .ui-state-default.ui-state-hover,
+    .ui-dialog-buttonset .ui-widget-header .ui-state-default.ui-state-hover {
+        background: #fff;
+        color: #D7006D;
+        box-shadow: 0 0 5px #cecece;
+    }
+
+    .ui-dialog {
+        box-shadow: 0px 3px 8px;
+        width: 50% !important;
+        transform: translate(-50%, 0) !important;
+        left: 50% !important;
+    }
+
+    .ui-widget {
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .modal-table label {
+        text-transform: uppercase;
+        line-height: 35px;
+    }
+
+    .ui-dialog .ui-dialog-content {
+        height: auto !important;
+    }
+
+    @media (max-width: 650px) {
+        .ui-dialog {
+            width: 75% !important;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .ui-dialog {
+            width: 85% !important;
+        }
+    }

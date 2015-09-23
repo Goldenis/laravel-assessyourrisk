@@ -977,11 +977,11 @@
 
     function hideIntro() {
     	
-    	/*woopra.track("click", {
+    	woopra.track("click", {
             intent: "navigate",
             location: "hide intro",
             type: "button"
-        });*/
+        });
     	
       //  console.log('hideIntro');
          // $('.logo').css('opacity', 1);
@@ -2142,10 +2142,6 @@
        // getUserCount();
         _registerEventListeners();
         _pageResize();
-        setTimeout(function(){
-            _pageResize()
-        },1000);
-
         initialized = true;
         setTimeout(function(){
             $('.right-column').addClass('active');

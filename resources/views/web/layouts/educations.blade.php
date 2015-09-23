@@ -14,6 +14,8 @@
     <meta property="og:description" content="1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!" />
     <meta property="og:image" content="http://www.assessyourrisk.org/img/fb-share.png" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.theme.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <script src="{{asset('js/vendor/modernizr-2.6.2.min.js')}}"></script>
     <script type='application/javascript' src='{{asset('/js/vendor/fastclick.js')}}'></script>
@@ -242,6 +244,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{asset('js/anim.js')}}"></script>
 
+
 <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
@@ -251,6 +254,7 @@ Bright Pink—a non-profit organization focused on saving women’s lives from b
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="{{asset('js/svg/DonutChartBuilder.js')}}"></script>
 <script src="{{asset('js/svg/SVGHelper.js')}}"></script>
+<script type='application/javascript' src='{{asset('js/jquery-ui.min.js')}}'></script>
 
 
 

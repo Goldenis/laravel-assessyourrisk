@@ -239,6 +239,15 @@
                 </li><!--end /menu-li -->
                 <!-- END EDUCATIONS -->
 
+                <!-- BEGIN EDUCATIONS -->
+                <li>
+                    <a href="{{ route('admin.share.show',1) }}">
+                        <div class="gui-icon"><i class="fa fa-share-alt"></i></i></div>
+                        <span class="title">Share email</span>
+                    </a>
+                </li><!--end /menu-li -->
+                <!-- END EDUCATIONS -->
+
 
                 <!-- RESULTS LEVEL -->
                 <li class="gui-folder">

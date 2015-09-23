@@ -28,6 +28,7 @@ class EducationController extends Controller
 
         $share = Share::find(4);
 
+
         return view('web.education',compact('share','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
     }
 

@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
     <!-- INTRO -->
 
     <section class="intro" class="flex-container vertical-container">

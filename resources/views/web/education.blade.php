@@ -2,6 +2,10 @@
 
 @section('content')
 
+
+
+
+
     <section class="education">
         <div class="fb-faces">
             <div class="faces lifestyle"></div>
@@ -85,7 +89,7 @@
             @endforeach
         </div>
 
-        
+
 
 
     </section>
@@ -94,6 +98,42 @@
     {{--formulario para cargar pldge--}}
     {!! Form::open(['route'=>['pledge.store'], 'method'=>'POST', 'id'=>'form-pledge']) !!}
     {!! Form::close() !!}
+
+    <div id="dialog-form" title="Share" style="display: none">
+
+        <form>
+            <table class="modal-table">
+                <tr>
+                    <td><label for="subject">subject</label></td>
+                    <td> <input type="text" required name="subject" id="subject" placeholder="subject"
+                                value="{{$share->subject}}" class="text modal-text ui-widget-content ui-corner-all"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" required name="email" id="email" placeholder="email" class="text modal-text ui-widget-content ui-corner-all"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" required name="name" id="name" placeholder="Name" class="text modal-text ui-widget-content ui-corner-all"></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><label for="password">Body</label></td>
+                    <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share->body}}</textarea></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><!-- Allow form submission with keyboard without duplicating the dialog button -->
+                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
 
 @endsection
 
@@ -216,6 +256,7 @@
         $('#family-list .vignette').last().addClass('last');
         $('#family-list .vignette').last().find('.headline').addClass('last');
         $('#family-list .vignette').last().find('.headline').prepend('<div class="arrow"><img src="img/arrow_right.png"></div>');
+        $('#family-list .vignette').last().find('.headline').prepend('<div class="arrow"><img src="img/arrow_right.png"></div>');
         $.get('pledge/countByCategory',{
             category:3,
             session:localStorage.getItem('session')
@@ -232,10 +273,111 @@
                 $('#family-list .vignette').last().find('.headline .family-pledge-number').prepend('{{$pledge_family}}');
                 buttons();
 
+
+
             }
-            $('#create-modal2').click(function(){
-                //alert('');
-            });
+
+            function modal_up(){
+
+                var dialog, form,
+
+                // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+                        emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                        name = $( "#name" ),
+                        email = $( "#email" ),
+
+                        allFields = $( [] ).add( name ).add( email),
+                        tips = $( ".validateTips" );
+
+                function updateTips( t ) {
+                    tips
+                            .text( t )
+                            .addClass( "ui-state-highlight" );
+                    setTimeout(function() {
+                        tips.removeClass( "ui-state-highlight", 1500 );
+                    }, 500 );
+                }
+
+                function checkLength( o, n, min, max ) {
+                    if ( o.val().length > max || o.val().length < min ) {
+                        o.addClass( "ui-state-error" );
+                        updateTips( "Length of " + n + " must be between " +
+                        min + " and " + max + "." );
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+
+                function checkRegexp( o, regexp, n ) {
+                    if ( !( regexp.test( o.val() ) ) ) {
+                        o.addClass( "ui-state-error" );
+                        updateTips( n );
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+
+                function addUser() {
+                    var valid = true;
+                    allFields.removeClass( "ui-state-error" );
+
+                    valid = valid && checkLength( name, "username", 3, 16 );
+                    valid = valid && checkLength( email, "email", 6, 80 );
+
+                    valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
+                    valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
+
+                    if ( valid ) {
+                        $( "#users tbody" ).append( "<tr>" +
+                        "<td>" + name.val() + "</td>" +
+                        "<td>" + email.val() + "</td>" +
+                        "</tr>" );
+                        dialog.dialog( "close" );
+                    }
+                    return valid;
+
+                }
+
+                dialog = $( "#dialog-form" ).dialog({
+                    autoOpen: false,
+                    height: 500,
+                    width: 350,
+                    modal: true,
+                    buttons: {
+                        "Send e-mail": addUser
+                        /*Cancel: function() {
+                         dialog.dialog( "close" );
+                         }*/
+                    },
+                    close: function() {
+                        form[ 0 ].reset();
+                        allFields.removeClass( "ui-state-error" );
+                    }
+                });
+
+                form = dialog.find( "form" ).on( "submit", function( event ) {
+                    event.preventDefault();
+                    addUser();
+                });
+
+                $( "#create-modal" ).click(function(e) {
+                    e.preventDefault();
+                    dialog.dialog( "open" );
+
+                });
+
+                //este es cuando hay dos share en la misma pagina
+                $( "#create-modal2" ).click(function(e) {
+                    e.preventDefault();
+                    dialog.dialog( "open" );
+                });
+            }
+
+
+            modal_up();
+            $('#create-modal2').click(modal_up);
         });
 
 
@@ -340,6 +482,8 @@ function buttons(){
 
 
         </script>
+    <script src="{{asset('js/email-modal.js')}}"></script>
 
 
 @endsection
+

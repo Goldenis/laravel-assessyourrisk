@@ -83,7 +83,6 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function () {
 
     Route::resource('/brand','Backend\BrandController');
 
-
     Route::resource('/metric','Backend\MetricController');
 
     Route::resource('/metricanswer','Backend\MetricAnswerController');

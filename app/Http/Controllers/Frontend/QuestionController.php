@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Question;
+use App\Models\Share;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -52,6 +53,7 @@ class QuestionController extends Controller
     {
         $question = Question::find($id);
         $count = Question::count();
+
         return view('web.question',compact('question','count'));
     }
 
@@ -101,6 +103,7 @@ class QuestionController extends Controller
         $question_renext = Question::where('order',$question->order+2)->first();
         $question_prev = Question::where('order',$question->order-1)->first();
         $question_reprev = Question::where('order',$question->order-2)->first();
+        $share = Share::find(1);// solo para el overlay male (first question)
 
 
         if($question_renext!=null){
@@ -136,6 +139,6 @@ class QuestionController extends Controller
 
         $count = Question::count();
         $text_colum = $question->text_colum;
-        return view('web.question',compact('question','count','url','url_prev','text_colum','url_renext','url_reprev'));
+        return view('web.question',compact('share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
     }
 }

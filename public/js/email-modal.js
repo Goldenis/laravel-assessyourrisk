@@ -65,6 +65,7 @@ $(function() {
     }
 
     dialog = $( "#dialog-form" ).dialog({
+
         autoOpen: false,
         height: 500,
         width: 350,
@@ -89,13 +90,20 @@ $(function() {
     $( "#create-modal" ).click(function(e) {
         e.preventDefault();
         dialog.dialog( "open" );
-        
     });
 
     //este es cuando hay dos share en la misma pagina
     $( "#create-modal2" ).click(function(e) {
         e.preventDefault();
         dialog.dialog( "open" );
+
     });
+
+    $( "#create-modal3" ).click(function(e) {
+        e.preventDefault();
+        dialog.dialog( "open" );
+
+    });
+
 
 });

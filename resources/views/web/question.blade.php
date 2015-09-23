@@ -1,8 +1,49 @@
 @extends('web.layouts.main')
 
 @section('content')
+    <div class="overlay male-overlay">
+        <button class="sub close-btn">✕</button>
+        <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="{{asset('img/twitter.png')}}"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="{{asset('img/facebook.png')}}"></a><a href="#" id="create-modal3" target="_blank" class="mail-icon"><img src="{{asset('img/mail.png')}}"></a></span> this with someone you care about that does. You just might save her life.</h1>
+    </div>
 
+    <!--formulario de primerfa pregunta-->
+    @if($question->id==17)
+        <div id="dialog-form" title="Help me ask them" style="display:none">
 
+            <form>
+                <table class="modal-table">
+                    <tr>
+                        <td><label for="subject">subject</label></td>
+                        <td> <input type="text" required name="subject" id="subject" placeholder="subject"
+                                    value="{{$share->subject}}" class="text modal-text ui-widget-content ui-corner-all"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" required name="email" id="email" placeholder="email" class="text modal-text ui-widget-content ui-corner-all"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" required name="name" id="name" placeholder="Name" class="text modal-text ui-widget-content ui-corner-all"></td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top"><label for="password">Body</label></td>
+                        <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share->body}}</textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><!-- Allow form submission with keyboard without duplicating the dialog button -->
+                            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        @endif
 
     <!-- ASSESSMENT-->
     <section class="assessment scrollpane">

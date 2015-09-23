@@ -89,7 +89,7 @@ $(function() {
     $( "#create-modal" ).click(function(e) {
         e.preventDefault();
         dialog.dialog( "open" );
-        alert('abrio');
+        
     });
 
     //este es cuando hay dos share en la misma pagina

@@ -2838,7 +2838,7 @@ h5.mobile-only {
     padding: 2.1rem 2.5rem;
     width: 7rem;
     height: 4.5rem;
-    z-index: 3000;
+    z-index: 90;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;

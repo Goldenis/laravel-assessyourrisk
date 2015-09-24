@@ -15,7 +15,7 @@
 
             <div class="share in">
                 <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-                <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal2" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
+                <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal2" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
 
 
                 <div id="dialog-form" title="Share">
@@ -75,7 +75,7 @@
                     <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
                 </div>
                 <div class="share-btn-wrapper">
-                    <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
+                    <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
                 </div>
             </div>
 
@@ -207,6 +207,22 @@
     </section>
     {!! Form::open(['route'=>['answer.store'], 'method'=>'POST', 'id'=>'form-answer']) !!}
     {!! Form::close() !!}
+
+@endsection
+
+@section('btn_mobile')
+
+
+    <div class="understand">
+        <h4>Understand<br>Your Risk<br></h4>
+        <div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
+        <!-- FACTS -->
+        <div class="assessment-facts">
+            <div class="fact in">
+
+            </div>
+        </div>
+    </div>
 
 @endsection
 

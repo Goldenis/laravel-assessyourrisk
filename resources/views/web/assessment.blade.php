@@ -11,6 +11,8 @@
                 i
             </div>
         </div>
+
+
         <section class="assessment-intro in">
 
             {!! $intro->text !!}

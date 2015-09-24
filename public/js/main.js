@@ -642,11 +642,11 @@
         $('.paragraph-box .read-more').on('click', function() {
             if($(this).html() == 'Read More'){
             	
-            	woopra.track("click", {
+            	/*woopra.track("click", {
                     intent: "expand",
                     location: "Read More",
                     type: "button"
-                });
+                });*/
             	
                 $(this).html('Read Less');
                 $('.more-results').css({
@@ -730,11 +730,11 @@
         })
 
         $('.progress-overlay .share-btn').on('click', function() {
-        	woopra.track("click", {
+        	/*woopra.track("click", {
                 intent: "share",
                 location: "social",
                 type: "button"
-            });
+            });*/
         })
 
         //$('.mail-icon').on('click',shareMail());
@@ -1726,7 +1726,7 @@
             })
         }
         $('.fact').eq(_currentQuestion).removeClass('in');
-        $('.fact').eq(_currentQuestion).addClass('out');
+       // $('.fact').eq(_currentQuestion).addClass('out');
         // switch (_currentQuestion) {
         //     case 0:
         //         if (answer.html() != "Yes") {

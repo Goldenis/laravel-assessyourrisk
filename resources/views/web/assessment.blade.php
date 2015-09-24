@@ -34,6 +34,20 @@
         <h3>Let’s Go<br></h3>
     </div>
 
+    <div class="understand">
+        <h4>Understand<br>Your Risk<br></h4>
+        <div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
+        <!-- FACTS -->
+        <div class="assessment-facts">
+            <div class="fact in">
+                <h5 class="mobile-only">Look here throughout the quiz to discover relevant info and learn more about the question.</h5>
+                @if(\Request::segment(1)=='question')
+                    {!! $text_colum !!}
+                @endif
+            </div>
+        </div>
+    </div>
+
 @endsection
 
 @section('script')
@@ -58,7 +72,7 @@
 
         $('.lets-go').addClass('left0');
 
-        $('.right-column').removeClass('in');
+        $('.right-column').addClass('in');
 
 
     </script>

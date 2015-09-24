@@ -1,9 +1,27 @@
 @extends('web.layouts.main')
 
 @section('content')
+
+    <div class="fact-overlay">
+        <button class="sub close-btn">✕</button>
+        <div class="return"><div class="arrow"><img src="{{asset('img/arrow_left.png')}}"></div> <h4>Return to Assessment</h4></div>
+
+        <div class="assessment-facts">
+            <div class="fact in">
+                @if(\Request::segment(1)=='question')
+                    {!! $text_colum !!}
+                @endif
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <div class="overlay male-overlay">
         <button class="sub close-btn">✕</button>
-        <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="{{asset('img/twitter.png')}}"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="{{asset('img/facebook.png')}}"></a><a href="#" id="create-modal3" target="_blank" class="mail-icon"><img src="{{asset('img/mail.png')}}"></a></span> this with someone you care about that does. You just might save her life.</h1>
+        <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a href="#" id="create-modal3" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a></span> this with someone you care about that does. You just might save her life.</h1>
     </div>
 
     <!--formulario de primerfa pregunta-->
@@ -50,7 +68,7 @@
         <!-- <div class="section-title">Assess Your Risk</div> -->
         <div class="assessment-dots dots active">
             <div class="btn-back"><img src="{{asset('img/arrow_left_pink.png')}}"></div>
-            <div class="fact-icon">
+            <div class="fact-icon in">
                 i
             </div>
         </div>
@@ -79,7 +97,7 @@
                 <div class="checkbox-list">
                     <form>
                         @foreach($question->questionOption as $option)
-                            <div class="checkbox">
+                            <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif">
                                 <input type="radio" name="radio" data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
                                 <div class="label">{!! $option->text !!}</div>
                             </div>
@@ -91,7 +109,7 @@
                     <button class="radio_button" disabled>{{$question->button_text}}</button>
                     @if($question->email==1)
                         {{--<a href="mailto:name@email.com?subject=Can you help" target="_blank"><button class="sub ask">Help me ask them</button></a>--}}
-                        <button id="create-modal" class="sub ask">Help me ask them</button>
+                        <button id="create-modal2" class="sub ask">Help me ask them</button>
 
 
                         <div id="dialog-form" title="Help me ask them">
@@ -152,7 +170,7 @@
             <div class="checkbox-list" data-question-id2="{{$question->id}}">
 
                 @foreach($question->questionOption as $option)
-                    <div class="checkbox" data-answer-id="1">
+                    <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif" data-answer-id="1">
                         <input name="check" type="checkbox" @if($option->unique==1) class="none-of-above" @endif data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
                         <div class="label">{!!$option->text!!}</div>
                     </div>
@@ -162,7 +180,7 @@
             <div class="answers">
                 <button class="check_box" disabled data-question-id="{{$question->id}}">{{$question->button_text}}</button>
                 @if($question->email==1)
-                    <button id="create-modal" class="sub ask">Help me ask them</button>
+                    <button id="create-modal2" class="sub ask">Help me ask them</button>
 
 
                     <div id="dialog-form" title="Help me ask them">
@@ -224,7 +242,7 @@
                         <button class="button_type" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">{{$option->button_text}}</button>
                     @endforeach
                     @if($question->email==1)
-                            <button id="create-modal" class="sub ask">Help me ask them</button>
+                            <button id="create-modal2" class="sub ask">Help me ask them</button>
 
 
                             <div id="dialog-form" title="Help me ask them">
@@ -357,7 +375,7 @@
         <!-- FACTS -->
         <div class="assessment-facts">
             <div class="fact in">
-                <h5 class="mobile-only">Look here throughout the quiz to discover relevant info and learn more about the question.</h5>
+
                 @if(\Request::segment(1)=='question')
                     {!! $text_colum !!}
                 @endif
@@ -468,8 +486,13 @@
 
             if((opcion == 55) || (opcion == 57)){
                  url_next = '{{$url}}';
+                mutation_value = 0;
+
+
             }else{
                  url_next = '{{$url_renext}}';
+                mutation_value = 1;
+
 
             }
 
@@ -494,7 +517,7 @@
            }
 
            // console.log(url_next);
-
+            sessionStorage.setItem('question_mutation',mutation_value);
             $(location).attr('href',url_next);
         });
 
@@ -675,9 +698,15 @@
             $('.assessment-dots .btn-back').addClass('active');
         }
         $('.assessment-dots .btn-back.active').click(function(){
-            //alert('hola');
-            var url_prev = '{{$url_prev}}';
+
+            if(sessionStorage.getItem('question_mutation')==1 && $('.question').data('question-id') == 36){
+                var url_prev = '{{$url_reprev}}';
+            }else{
+                var url_prev = '{{$url_prev}}';
+            }
+
             $(location).attr('href',url_prev);
+
         })
 
 

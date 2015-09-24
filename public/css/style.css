@@ -887,20 +887,20 @@ button.sub:hover {
 }
 .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 1.2rem;
-  top: 0.65rem;
+  left: 1.25rem;
+  top: 0.83rem;
 }
 .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 4rem;
-  top: 0.65rem;
+  left: 4.5rem;
+  top: 0.83rem;
 }
 .share-btn a:nth-of-type(3) {
   position: absolute;
-  left: 6.9rem;
-  top: 0.8rem;
+  left: 7.2rem;
+  top: 0.83rem;
 }
-.share-btn img {
+.share-btn img,.share-btn i {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -919,15 +919,38 @@ button.sub:hover {
 .share-btn:hover a {
   margin-top: 0;
 }
-.share-btn:hover img {
-  opacity: 0.7;
+.share-btn:hover img,.share-btn:hover i {
+  opacity: 1;
+
+}
+
 }
 .share-btn:hover img:hover {
   opacity: 1;
 }
+.share-btn:hover i:hover{
+    opacity: 1 !important;
+    z-index:900;
+    color:#f7dfdc;
+}
+
+.share-btn:hover .fa:hover{
+    opacity: 1 !important;
+    z-index:900;
+}
+
+
 .male-overlay {
   text-align: center;
 }
+.male-overlay .share-btn:hover i {
+    margin-top: 1.4rem;
+}
+
+.male-overlay .mail-icon i.fa-envelope{
+    margin-top: 1rem !important;
+}
+
 .male-overlay h1 {
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -947,20 +970,20 @@ button.sub:hover {
 }
 .male-overlay .share-btn a:nth-of-type(1) {
   position: absolute;
-  left: 0.6rem;
+  left: 0.66rem;
   top: 1.5rem;
 }
 .male-overlay .share-btn a:nth-of-type(2) {
   position: absolute;
-  left: 4.7rem;
+  left: 5.3rem;
   top: 1.5rem;
 }
 .male-overlay .share-btn a:nth-of-type(3) {
   position: absolute;
-  left: 9rem;
+  left: 9.3rem;
   top: 1.8rem;
 }
-.male-overlay .share-btn img {
+.male-overlay .share-btn img, .male-overlay .share-btn i {
   opacity: 0;
   -webkit-transition: all 0.3s 0 ;
   -moz-transition: all 0.3s 0 ;
@@ -974,10 +997,10 @@ button.sub:hover {
 .male-overlay .share-btn:hover {
   color: transparent;
 }
-.male-overlay .share-btn:hover img {
+.male-overlay .share-btn:hover img, .male-overlay .share-btn:hover i {
   opacity: 1;
 }
-.male-overlay .share-btn:hover img:hover {
+.male-overlay .share-btn:hover img:hover, .male-overlay .share-btn:hover i:hover {
   opacity: 0.7;
 }
 .male-overlay a:hover {
@@ -1132,7 +1155,7 @@ button.sub:hover {
   width: 50%;
 }
 .checkbox {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .checkbox .label {
   margin-left: 2.2rem;
@@ -3277,7 +3300,7 @@ h5.mobile-only {
   .male-overlay h1 .share-btn a:nth-of-type(3) {
     left: 7rem;
   }
-  .male-overlay h1 .share-btn img {
+  .male-overlay h1 .share-btn img, .male-overlay h1 .share-btn i {
     width: 2.5rem;
   }
   .male-overlay h1 .share-btn:hover a {
@@ -3913,6 +3936,7 @@ h5.mobile-only {
         .ui-dialog {
             width: 75% !important;
         }
+
     }
 
     @media (max-width: 500px) {
@@ -3920,3 +3944,25 @@ h5.mobile-only {
             width: 85% !important;
         }
     }
+    @media (max-width: 650px) {
+
+        .lets-go{
+            display: block !important;
+        }
+    }
+    .lets-go{
+        display:none;
+    }
+
+.column-2{
+    float: left;
+    width: 50%;
+}
+@media(max-width: 650px){
+    .column-2-not{
+        width: 100%;
+    }
+}
+
+
+

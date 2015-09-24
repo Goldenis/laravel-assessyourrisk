@@ -63,6 +63,8 @@ class QuestionController extends Controller
         $question->text_colum = $request['text_colum'];
         $question->button_text = $request['button_text'];
         $question->email = $request['email'];
+        $question->column2 = $request['column2'];
+        $question->column2_mobil = $request['column2_mobil'];
 
         $file = $request->file('gif');
         if (Input::hasFile('gif')) {
@@ -136,6 +138,8 @@ class QuestionController extends Controller
         $question->text_colum = $request['text_colum'];
         $question->button_text = $request['button_text'];
         $question->email = $request['email'];
+        $question->column2 = $request['column2'];
+        $question->column2_mobil = $request['column2_mobil'];
 
         if($request['slug']=='')
         {

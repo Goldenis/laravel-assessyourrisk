@@ -56,7 +56,7 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-3 col-md-offset-2">
+        <div class="col-md-2 col-md-offset-2">
             <div class="checkbox checkbox-styled">
                 <label>
                     {!! Form::checkbox('active', '1'); !!}
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="checkbox checkbox-styled">
                 <label>
                     {!! Form::checkbox('email', '1'); !!}
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="checkbox checkbox-styled">
                 <label>
                     {!! Form::checkbox('indelible', '1'); !!}
@@ -82,6 +82,26 @@
                 </label>
             </div>
         </div>
+
+        <div class="col-md-2">
+            <div class="checkbox checkbox-styled">
+                <label>
+                    {!! Form::checkbox('column2', '1'); !!}
+                    <span>2 Columns</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="checkbox checkbox-styled">
+                <label>
+                    {!! Form::checkbox('column2_mobil', '1'); !!}
+                    <span>2 Columns in mobil</span>
+                </label>
+            </div>
+        </div>
+
+
     </div>
 
 

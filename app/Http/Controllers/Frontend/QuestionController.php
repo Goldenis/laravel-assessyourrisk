@@ -101,6 +101,7 @@ class QuestionController extends Controller
         $question = Question::where('slug',$slug)->first();
         $question_next = Question::where('order',$question->order+1)->first();
         $question_renext = Question::where('order',$question->order+2)->first();
+
         $question_prev = Question::where('order',$question->order-1)->first();
         $question_reprev = Question::where('order',$question->order-2)->first();
         $share = Share::find(1);// solo para el overlay male (first question)

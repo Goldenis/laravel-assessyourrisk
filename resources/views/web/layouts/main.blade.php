@@ -139,11 +139,7 @@
 
         @section('btn_mobile')
 
-
-
         @show
-
-
 
     </div>
     <div class="copyright">Copyright &copy; <?php echo date("Y"); ?> Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>

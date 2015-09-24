@@ -488,17 +488,15 @@
                  url_next = '{{$url}}';
                 mutation_value = 0;
 
-
             }else{
                  url_next = '{{$url_renext}}';
                 mutation_value = 1;
-
-
             }
 
         });
     }else{
         url_next = '{{$url}}';
+            mutation_value = 1;
     }
 
 

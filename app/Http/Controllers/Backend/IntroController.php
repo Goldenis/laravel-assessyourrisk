@@ -80,7 +80,7 @@ class IntroController extends Controller
         $intro->text = $request['text'];
         $intro->button = $request['button'];
         $intro->update();
-
+        \Session::flash('message', 'The intro has been updated');
         return redirect()->route('admin.intro.show', $id);
     }
 

@@ -40,7 +40,7 @@
                         @include('admin.brand.partials.form')
 
                         <div class="modal-footer">
-                            {!! Form::submit('Create',["class"=>"btn btn-primary"]) !!}
+                            {!! Form::submit('Update',["class"=>"btn btn-primary"]) !!}
                         </div>
                         {!! Form::close() !!}
 

@@ -31,6 +31,7 @@
             </div><!--end .col -->
 
             <div class="col-lg-offset-1 col-md-8">
+                @include('admin.partials.message')
                 <div class="card">
                     <div class="card-body no-padding">
                         <ul class="list" data-sortable="true">

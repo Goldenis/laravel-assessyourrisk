@@ -54,7 +54,7 @@ class QuestionOptionController extends Controller
         $questionoption->order = 0;
         $questionoption->unique = $request['unique'];
         $questionoption->save();
-
+        \Session::flash('message', 'The question has been created');
         return redirect()->route('admin.question.show',$request['question_id']);
     }
 
@@ -100,7 +100,7 @@ class QuestionOptionController extends Controller
         $questionoption->question_id = $request['question_id'];
         $questionoption->unique = $request['unique'];
         $questionoption->update();
-
+        \Session::flash('message', 'The question has been updated');
         return redirect()->route('admin.question.show',$request['question_id']);
 
     }

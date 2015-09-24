@@ -28,7 +28,7 @@
 
             <!-- BEGIN MAIL COMPOSE -->
             <div class="col-sm-8 col-md-9 col-lg-10">
-
+                @include('admin.partials.message')
                 <div class="card card-underline">
                     <div class="card-head"><header>{{ $introdetail->title }}</header>
                         <div class="tools">

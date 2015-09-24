@@ -57,7 +57,7 @@ class ResultLevelConditionController extends Controller
     {
         $condition = new ResultLevelCondition($request->all());
         $condition->save();
-
+        \Session::flash('message', 'Has been created');
         return redirect()->route('admin.resultlevelcondition.level', $request['result_level_id']);
 
     }
@@ -102,7 +102,7 @@ class ResultLevelConditionController extends Controller
         $condition->question_option_id = $request['question_option_id'];
         $condition->active = $request['active'];
         $condition->save();
-
+        \Session::flash('message', 'Has been updated');
         return redirect()->route('admin.resultlevelcondition.level',$request['result_level_id']);
     }
 

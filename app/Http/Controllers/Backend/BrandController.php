@@ -66,7 +66,7 @@ class BrandController extends Controller
             });
             $img->save(public_path() . '/img/' . $final_name);
        }
-
+        \Session::flash('message', 'The brand has been created');
         return redirect()->route('admin.brand.index');
     }
 
@@ -128,6 +128,7 @@ class BrandController extends Controller
             });
             $img->save(public_path() . '/img/' . $final_name);
         }
+        \Session::flash('message', 'The brand has been updated');
         return redirect()->route('admin.brand.index');
     }
 

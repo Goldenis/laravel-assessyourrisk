@@ -76,7 +76,7 @@ class EducationCategoryController extends Controller
         $educatiocategory->pleged_title = $request['plegedtitle'];
         $educatiocategory->pleged_text = $request['plegedtext'];
         $educatiocategory->update();
-
+        \Session::flash('message', 'Has been updated');
         return redirect()->route('admin.education.show',$id);
 
     }

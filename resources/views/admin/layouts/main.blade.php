@@ -313,7 +313,11 @@
 <script src="{{asset("backend/assets/js/libs/select2/select2.min.js")}}"></script>
 
 {{--<script src="{{asset("backend/assets/js/core/demo/DemoDashboard.js")}}"></script>--}}
+<script>
 
+    $('div.alert').delay(3000).slideUp(300);
+
+</script>
 @section('script')
 
 @show

@@ -49,7 +49,7 @@ class EducationController extends Controller
         $education->video = $request['video'];
         $education->order = 0;
         $education->save();
-
+        \Session::flash('message', 'Has been created');
         return redirect('admin/education/'.$request["education_category_id"]);
     }
 
@@ -95,7 +95,7 @@ class EducationController extends Controller
         $education->active = $request['active'];
         $education->video = $request['video'];
         $education->update();
-
+        \Session::flash('message', 'Has been updated');
         return redirect()->route('admin.education.show', $request['education_category_id']);
     }
 

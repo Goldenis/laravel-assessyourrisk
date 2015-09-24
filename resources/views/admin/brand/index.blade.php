@@ -12,6 +12,7 @@
 
         <div class="row">
             <div class="col-lg-12">
+                @include('admin.partials.message')
                 <h4>&nbsp;</h4>
             </div><!--end .col -->
             <div class="section-floating-action-row">

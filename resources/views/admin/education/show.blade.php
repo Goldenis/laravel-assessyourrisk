@@ -33,7 +33,7 @@
              
 
                 {{--ITEMS--}}
-
+                @include('admin.partials.message')
                 <div class="card card-underline">
                     <div class="card-head"><header>Items </header>
                         <div class="tools">

@@ -60,16 +60,8 @@
 @endsection
 
 @section('script')
-    <script src="{{asset("admin/assets/js/core/demo/DemoUILists.js")}}"></script>
-    <script src="http://cdn.ckeditor.com/4.5.2/full/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace('text');
-        CKEDITOR.replace('text_colum');
 
 
-
-
-    </script>
     <script>
 
         $(document).ready(function(){

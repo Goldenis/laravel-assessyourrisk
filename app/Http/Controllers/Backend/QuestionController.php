@@ -11,6 +11,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 class QuestionController extends Controller
@@ -93,6 +94,8 @@ class QuestionController extends Controller
         $question->order = $last_question->order+1;
         $question->save();
 
+
+        \Session::flash('message', 'The question has been created');
         return redirect()->route('admin.question.index');
     }
 
@@ -172,7 +175,7 @@ class QuestionController extends Controller
             $question2->update();
 
         }
-
+        \Session::flash('message', 'The question has been updated');
         return redirect()->route('admin.question.index');
     }
 

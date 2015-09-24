@@ -14,14 +14,11 @@
             {!! Form::label('question_option_id', 'Option', ['class'=>'control-label']) !!}
         </div>
         <div class="col-sm-10" id="options">
-            {!! Form::select('question_option_id', ['select'=>''], null, ['id'=>'question_options', 'disabled','placeholder'=>'Select a option','class'=>'form-control']) !!}
+            {!! Form::select('question_option_id', ['select'=>''], null, ['id'=>'question_options','required'=>'required', 'disabled','placeholder'=>'Select a option','class'=>'form-control']) !!}
         </div>
     </div>
 
     {!! Form::hidden('active','1') !!}
     {!! Form::hidden('result_level_id' , $level_id) !!}
-
-
-
 
 </div>

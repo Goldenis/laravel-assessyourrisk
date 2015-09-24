@@ -53,7 +53,7 @@ class ResultController extends Controller
         $result->value = 0;
         $result->question_opcion_id = $request['question_opcion_id'];
         $result->save();
-
+        \Session::flash('message', 'Has been created');
         return redirect()->route('admin.result.showByQuestion',$request['question_id']);
 
     }
@@ -112,7 +112,7 @@ class ResultController extends Controller
         $result->value = $request['value'];
         $result->question_opcion_id = $request['question_opcion_id'];
         $result->update();
-
+        \Session::flash('message', 'Has been updated');
         return redirect()->route('admin.result.showByQuestion',$request['question_id']);
     }
 

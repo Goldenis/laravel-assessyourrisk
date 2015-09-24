@@ -13,10 +13,11 @@
 
 
 
-
-
         <div class="row">
             <div class="col-lg-12">
+
+
+
                 <h4>Todo Lists</h4>
             </div><!--end .col -->
             <div class="section-floating-action-row">
@@ -33,6 +34,10 @@
             </div><!--end .col -->
 
             <div class="col-md-9">
+
+                @include('admin.partials.message')
+
+
                 <div class="card">
                     <div class="card-body no-padding">
                         <ul class="list" id="education_list">
@@ -63,9 +68,11 @@
                                 <a href="{{route('admin.question.edit', $question->id)}}" class="btn btn-flat ink-reaction btn-default"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                     <i class="fa fa-pencil"></i>
                                 </a>
+                                @if($question->indelible!=1)
                                 <a href="#!" class="btn-delete btn btn-flat ink-reaction btn-default"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                     <i class="fa fa-trash"></i>
                                 </a>
+                                @endif
 
                             </li>
                             @endforeach
@@ -84,7 +91,7 @@
 @endsection
 
 @section('script')
-    <script src="{{asset("admin/assets/js/core/demo/DemoUILists.js")}}"></script>
+
 
     <script>
         $(document).ready(function(){
@@ -123,6 +130,9 @@
                     });
                 }
             });
+
+
+
         });
 
     </script>

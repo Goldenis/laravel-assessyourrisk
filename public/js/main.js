@@ -390,9 +390,12 @@
         });
       }
 
+
+
     function _registerEventListeners() {
         $('#Begin, .assess-start').on('click', function(e) {
             $('.vid-container').remove();
+
             e.stopPropagation();
             hideIntro();
             addCharts();
@@ -400,12 +403,14 @@
             //$.address.path('/assessment');
             $(location).attr('href','assessment');
             //$.address.path('/assessment');
-            
+
             /*woopra.track("click", {
                 intent: "begin",
                 type: "button"
             });*/
         })
+
+
 
 //buttons
         $('input[name="age-radio"]').change(function(){
@@ -753,6 +758,7 @@
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
             $('.assessment-dots').addClass('active');
             $('.fact-icon').addClass('in');
+            alert('hola');
         })
 
 

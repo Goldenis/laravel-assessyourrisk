@@ -49,6 +49,9 @@
         session = localStorage.getItem('session');
         $(document).ready(function(){
             $('.logo').animate({opacity: 1}, 3000);
+
+
+
         });
 
     </script>

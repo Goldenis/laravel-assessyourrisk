@@ -15,7 +15,7 @@
 
             <div class="share in">
                 <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-                <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal2" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
+                <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal2" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
 
 
                 <div id="dialog-form" title="Share">
@@ -75,10 +75,11 @@
                     <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
                 </div>
                 <div class="share-btn-wrapper">
-                    <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</button>
+                    <span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
                 </div>
             </div>
 
+            <div class="results" style="display: block;">
             <div class="results" style="display: block;">
                 <div class="your-risk">
                     <!-- Chart - Removed -->
@@ -252,7 +253,7 @@
 
 
              $('.understand').on('click', function() {
-                var url_prev = '../education';
+                var url_prev = '../../education';
                 $(location).attr('href',url_prev);
             })
 
@@ -312,10 +313,10 @@
             });
 
 
-            $( "#create-modal" ).click(function(e) {
+           /* $( "#create-modal" ).click(function(e) {
                 e.preventDefault();
                alert('hola');
-            });
+            });*/
 
 
         });

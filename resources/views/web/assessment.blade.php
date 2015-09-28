@@ -74,6 +74,9 @@
 
         $('.lets-go').addClass('left0');
 
+
+
+
         $('.right-column').addClass('in');
 
 

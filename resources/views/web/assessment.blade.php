@@ -55,6 +55,9 @@
 @section('script')
     <script>
 
+        var url_assessment ='{{Request::segment(1)}}';
+        sessionStorage.setItem('url',url_assessment);
+
 
             $('.right-column').addClass('in');
 

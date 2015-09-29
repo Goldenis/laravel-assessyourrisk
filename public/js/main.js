@@ -758,7 +758,7 @@
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
             $('.assessment-dots').addClass('active');
             $('.fact-icon').addClass('in');
-            alert('hola');
+            //alert('hola');
         })
 
 

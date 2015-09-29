@@ -6,6 +6,7 @@ use App\Models\Education;
 use App\Models\Question;
 use App\Models\Result_level;
 use App\Models\Senttype;
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -31,6 +32,10 @@ class AppServiceProvider extends ServiceProvider
 
         $result_levels = Result_level::all();
         view()->share('result_levels',$result_levels);
+
+        $date = Carbon::now();
+        $year = $date->format('Y');
+        view()->share('year',$year);
 
 
     }

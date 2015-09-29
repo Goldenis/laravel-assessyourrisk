@@ -18,7 +18,7 @@
             {!! $intro->text !!}
 
             <a href="{{route('web.question.showSlug',$first_question->slug)}}"><button class="action">{{ $intro->button  }}</button></a>
-            <div class="copyright copyright-mobile">Copyright © 2015 Bright Pink
+            <div class="copyright copyright-mobile">Copyright © {{$year}} Bright Pink
                 <div class="legal">
                     <a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a>
                     <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a>

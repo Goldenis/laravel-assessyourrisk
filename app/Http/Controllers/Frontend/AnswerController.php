@@ -94,7 +94,7 @@ class AnswerController extends Controller
         }
 
         //for BMI (especial question)
-        if($question==48){
+        if($question==49){ // 49 es para internet
             if($option_request<18.5){
                 $option_request=95;
             }else if($option_request>=18.5 && $option_request<=24.9){
@@ -105,6 +105,19 @@ class AnswerController extends Controller
                 $option_request=98;
             }
         }
+
+//este es para local host es id 48
+      /*  if($question==48){
+            if($option_request<18.5){
+                $option_request=95;
+            }else if($option_request>=18.5 && $option_request<=24.9){
+                $option_request=96;
+            }else if($option_request>=25 && $option_request<=29.9){
+                $option_request=97;
+            }else if($option_request>=30){
+                $option_request=98;
+            }
+        }*/
 
         $options = explode(',',$option_request);
 

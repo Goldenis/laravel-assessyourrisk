@@ -60,6 +60,8 @@
         var url_assessment ='{{Request::segment(1)}}';
         sessionStorage.setItem('url',url_assessment);
 
+        sessionStorage.setItem('highQuestion',1);
+
 
             $('.right-column').addClass('in');
 

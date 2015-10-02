@@ -103,6 +103,9 @@ Route::get('/',['uses'=>'Frontend\HomeController@index']);
 Route::get('/assessment',['as'=>'web.assessment','uses'=>'Frontend\HomeController@assessment']);
 
 Route::get('/question/slug/{slug}',['as'=>'web.question.showSlug','uses'=>'Frontend\QuestionController@showSlug']);
+Route::get('/question/questionloadajax',['as'=>'web.question.questionloadajax','uses'=>'Frontend\QuestionController@questionloadajax']);
+Route::get('/question/questions',['as'=>'web.question.questions','uses'=>'Frontend\QuestionController@questions']);
+Route::get('/question/questions2',['as'=>'web.question.questions2','uses'=>'Frontend\QuestionController@questions2']);
 
 Route::resource('/question','Frontend\QuestionController');
 

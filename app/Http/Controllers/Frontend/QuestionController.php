@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\View;
 
 class QuestionController extends Controller
 {
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +22,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -106,16 +109,19 @@ class QuestionController extends Controller
         $question_reprev = Question::where('order',$question->order-2)->first();
         $share = Share::find(1);// solo para el overlay male (first question)
 
-
         if($question_renext!=null){
             $url_renext = $question_renext->slug;
-        }else{
+        }
+        else
+        {
             $url_renext = "";
         }
 
         if($question_reprev!=null){
             $url_reprev = $question_reprev->slug;
-        }else{
+        }
+        else
+        {
             $url_reprev = "";
         }
 
@@ -127,7 +133,6 @@ class QuestionController extends Controller
         {
             $url = $question_next->slug;
         }
-
 
 
         if($question_prev==null){
@@ -142,4 +147,131 @@ class QuestionController extends Controller
         $text_colum = $question->text_colum;
         return view('web.question',compact('share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
     }
+
+    public function questionloadajax(Request $request)
+    {
+        $slug =  $request['slug'];
+        $question = Question::where('slug',$slug)->first();
+        $question_next = Question::where('order',$question->order+1)->first();
+        $question_renext = Question::where('order',$question->order+2)->first();
+
+        $question_prev = Question::where('order',$question->order-1)->first();
+        $question_reprev = Question::where('order',$question->order-2)->first();
+
+        $question_slug = $question->slug;
+        $share = Share::find(1);// solo para el overlay male (first question)
+
+        if($question_renext!=null){
+            $url_renext = $question_renext->slug;
+        }
+        else
+        {
+            $url_renext = "";
+        }
+
+        if($question_reprev!=null){
+            $url_reprev = $question_reprev->slug;
+        }
+        else
+        {
+            $url_reprev = "";
+        }
+
+
+        if($question_next==null){
+            $url = "../../answers/results"; //si se llego al final de las preguntas y ya no hay mas, se va a los resultados.
+        }
+        else
+        {
+            $url = $question_next->slug;
+        }
+
+
+        if($question_prev==null){
+            $url_prev = ""; //si es el comienzo de las preguntas.
+        }
+        else
+        {
+            $url_prev = $question_prev->slug;
+        }
+
+        $count = Question::count();
+        $text_colum = $question->text_colum;
+
+        return view('web.questionloadajax',compact('question_slug','share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
+
+    }
+
+    public function questions2(Request $request)
+    {
+        $questions = Question::orderAsc()->get();
+
+        $last_question = Question::OrderDesc()->first();
+
+       // dd($last_cuestion->id); die;
+
+
+        $share = Share::find(1);
+        //dd($questions); die;
+        //$slug =  $request['slug'];
+       // $question = Question::where('slug',$slug)->first();
+      /*  $question_next = Question::where('order',$question->order+1)->first();
+        $question_renext = Question::where('order',$question->order+2)->first();
+
+        $question_prev = Question::where('order',$question->order-1)->first();
+        $question_reprev = Question::where('order',$question->order-2)->first();
+
+        $question_slug = $question->slug;
+       ;// solo para el overlay male (first question)
+
+        if($question_renext!=null){
+            $url_renext = $question_renext->slug;
+        }
+        else
+        {
+            $url_renext = "";
+        }
+
+        if($question_reprev!=null){
+            $url_reprev = $question_reprev->slug;
+        }
+        else
+        {
+            $url_reprev = "";
+        }
+
+
+        if($question_next==null){
+            $url = "../../answers/results"; //si se llego al final de las preguntas y ya no hay mas, se va a los resultados.
+        }
+        else
+        {
+            $url = $question_next->slug;
+        }
+
+
+        if($question_prev==null){
+            $url_prev = ""; //si es el comienzo de las preguntas.
+        }
+        else
+        {
+            $url_prev = $question_prev->slug;
+        }*/
+
+        $count = Question::count() + 1;
+       // $text_colum = $question->text_colum;
+
+        //return view('web.questionloadajax',compact('question_slug','share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
+        return view('web.questions2',compact('last_question','questions','share','count'));
+
+    }
+
+    public function questions()
+    {
+        return view('web.questions');
+    }
+
+
+
+
 }

@@ -753,7 +753,7 @@
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
             $('.question').eq(0).addClass('in');
-            $('.fact').eq(_currentQuestion).addClass('in');
+            //$('.fact').eq(_currentQuestion).addClass('in');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
             $('.assessment-dots').addClass('active');
@@ -785,9 +785,9 @@
                 answerQuestion($(this));
             }
         })
-        $('.btn-back').on('click', function(e) { 
+       /* $('.btn-back').on('click', function(e) {
             prevQuestion();
-        })
+        })*/
         $('.asterisk').on('mouseenter', function() {
             $(this).next().addClass("show");
             $(this).next().css({
@@ -1201,20 +1201,17 @@
         // percquiz percdive
         //for questions------------
 
-        if(sessionStorage.getItem('answersResult')==undefined){
-            var questionsAnswered = 0;
-        }else{
 
-
-            var recupero = sessionStorage.getItem('answersResult');
-            var datos = JSON.parse(recupero);
-            var questionsAnswered = Object.keys(datos).length;
+        var preguntasResueltas = sessionStorage.getItem('highQuestion') - 1;
+        if(preguntasResueltas > _totalQuestions){
+            preguntasResueltas = _totalQuestions;
         }
+
 
         //for (q in savedQuizProgress) questionsAnswered++;
 
-        var quizProgress = questionsAnswered + '/' + _totalQuestions;
-        var quizPercent = questionsAnswered / _totalQuestions;
+        var quizProgress = preguntasResueltas + '/' + _totalQuestions;
+        var quizPercent = preguntasResueltas / _totalQuestions;
         $(".percquiz").html(quizProgress);
 
         chart2.transitionToValues(5,
@@ -1224,8 +1221,6 @@
 
 
         //for education------------
-
-
 
        /* if(sessionStorage.getItem('educationView')!=undefined){
             var deepViewed = sessionStorage.getItem('educationView');
@@ -1251,10 +1246,7 @@
 
           //  console.log(i);
             deepViewed = i;
-
         }
-
-
 
         sessionStorage.setItem('educationView',deepViewed);
         //  console.log(deepViewed);
@@ -1286,7 +1278,7 @@
         //console.log(lastDeepSave);
 
 
-        updateCharts();
+       updateCharts( );
 
         //TODO
         // user progress the the 
@@ -1731,7 +1723,7 @@
                 display: 'none'
             })
         }
-        $('.fact').eq(_currentQuestion).removeClass('in');
+       // $('.fact').eq(_currentQuestion).removeClass('in');
        // $('.fact').eq(_currentQuestion).addClass('out');
         // switch (_currentQuestion) {
         //     case 0:
@@ -1766,7 +1758,7 @@
            var _oldQuestion = _currentQuestion;
            _currentQuestion++;
            setTimeout(function() {
-               $('.fact').eq(_currentQuestion).addClass('in')
+              // $('.fact').eq(_currentQuestion).addClass('in')
                $('.fact-icon').addClass('new')
                $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
@@ -1782,9 +1774,12 @@
     }
     function prevQuestion(){
 
+
         if(_currentQuestion > 0){
 
-        //    console.log(savedQuizProgress[7])
+
+
+        /*//    console.log(savedQuizProgress[7])
             if (_currentQuestion == 9 && savedQuizProgress[7] == '+1') {
                 $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
                 
@@ -1826,11 +1821,11 @@
                     opacity: 0
                 })
 
-            }
+            }*/
 
 
-            $('.fact').eq(_currentQuestion).removeClass('in');
-            $('.fact').eq(_currentQuestion).addClass('out');
+            //$('.fact').eq(_currentQuestion).removeClass('in');
+            //$('.fact').eq(_currentQuestion).addClass('out');
             
             $('.question').eq(_currentQuestion).addClass('out-up')
             $('.question').eq(_currentQuestion).removeClass('in')
@@ -1838,10 +1833,11 @@
             var _oldQuestion = _currentQuestion;
             _currentQuestion--;
             setTimeout(function() {
-                $('.fact').eq(_currentQuestion).addClass('in');
+                //$('.fact').eq(_currentQuestion).addClass('in');
                 $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active')
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('active')
+
             }, 1000)
             $('.question').eq(_currentQuestion).removeClass('out-up')
             $('.question').eq(_currentQuestion).addClass('in')
@@ -2097,7 +2093,7 @@
           //  console.log('education');
             //_currentView = "left";
             hideIntro();
-            addCharts();
+           addCharts();
             toggleColumn();
             _currentPath = newPath;
         } else if (event.value == '/education/lifestyle') {
@@ -2128,6 +2124,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     $(document).ready(function() {
 
         _totalQuestions = sessionStorage.getItem('num_question');
@@ -2140,7 +2148,7 @@
         //position the header to be 90%;
         _$window = $(window);
         _$document = $(window.document);
-        createProgressOverlay();
+       // createProgressOverlay();
         //createDots();
         for (var i = 0; i < _totalHeadlines; i++) {
             $('.headline').eq(i).attr('data-idx', i)

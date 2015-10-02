@@ -215,8 +215,11 @@
 
 
     <div class="understand">
+
+        <div class="understand-contain">
         <h4>Understand<br>Your Risk<br></h4>
         <div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
+        </div>
         <!-- FACTS -->
         <div class="assessment-facts">
             <div class="fact in">
@@ -232,6 +235,9 @@
     <script>
         var level = sessionStorage.getItem('level');
         $(document).ready(function(){
+
+
+
 
             //creamos el atributo para el generador de pdf
             var atributo =  $('.pdf').parent().find('a').attr('href');

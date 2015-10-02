@@ -17,7 +17,7 @@
 
             {!! $intro->text !!}
 
-            <a href="{{route('web.question.showSlug',$first_question->slug)}}"><button class="action">{{ $intro->button  }}</button></a>
+            <a href="{{route('web.question.questions2')}}"><button class="action">{{ $intro->button  }}</button></a>
             <div class="copyright copyright-mobile">Copyright © {{$year}} Bright Pink
                 <div class="legal">
                     <a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a>
@@ -37,8 +37,10 @@
     </div>
 
     <div class="understand">
-        <h4>Understand<br>Your Risk<br></h4>
-        <div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
+        <div class="understand-contain">
+           <h4>Understand<br>Your Risk<br></h4>
+            <div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
+        </div>
         <!-- FACTS -->
         <div class="assessment-facts">
             <div class="fact in">
@@ -71,17 +73,13 @@
 
             $('.lets-go').click(function(){
 
-                var url = '{{route('web.question.showSlug',$first_question->slug)}}';
+                var url = 'question/questions2';
                 $(location).attr('href',url);
             });
 
         $('.lets-go').addClass('left0');
 
-
-
-
         $('.right-column').addClass('in');
-
 
     </script>
 @endsection

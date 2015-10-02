@@ -23,13 +23,15 @@ class PdfController extends Controller
          $favors = Result::where('result_type_id',1)->get();
          $no_favors = Result::where('result_type_id',2)->get();
 
+
+
         //answers
          $answers = Answer::where('quiz_id',$quizz)->groupBy('question_id')->orderBy('question_order','asc')->get();
 
+
+
          // para hacer la comparación de existencia para favor y no_favor en la vista
          $answers_array = Answer::where('quiz_id',$quizz)->lists('question_option_id');
-
-
 
          $texto = $textos[$level];
          $level = $levels[$level];
@@ -39,8 +41,6 @@ class PdfController extends Controller
          $pdf->loadHTML($view);
          return $pdf->stream('report.pdf');
      }
-
-
 
     public function getTextos()
     {

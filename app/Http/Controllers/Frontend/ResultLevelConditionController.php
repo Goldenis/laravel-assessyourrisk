@@ -38,15 +38,15 @@ class ResultLevelConditionController extends Controller
         }
 
         //for BMI (especial question)
-        if($question==34){
+        if($question==48){
             if($option_request<18.5){
-                $option_request=51;
+                $option_request=95;
             }else if($option_request>=18.5 && $option_request<=24.9){
-                $option_request=52;
+                $option_request=96;
             }else if($option_request>=25 && $option_request<=29.9){
-                $option_request=53;
+                $option_request=97;
             }else if($option_request>=30){
-                $option_request=54;
+                $option_request=98;
             }
         }
 

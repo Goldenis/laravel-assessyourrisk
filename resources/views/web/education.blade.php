@@ -400,8 +400,15 @@
          * botón para ir a assessment
          */
         $('.assess').on('click', function() {
-            var url_prev = sessionStorage.getItem('url');
-            $(location).attr('href',url_prev);
+
+            if(sessionStorage.getItem('quizz')!=undefined){
+                var url = 'answers/results_final/'+sessionStorage.getItem('quizz');
+            }else{
+                var url = 'question/questions2';
+            }
+
+
+            $(location).attr('href',url);
         })
 
 

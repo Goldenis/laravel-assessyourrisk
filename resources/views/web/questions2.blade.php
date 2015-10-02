@@ -177,7 +177,8 @@
                         <br>
                     </div>
 
-                @elseif($question->id == 48) {{--height--}}
+                {{--@elseif($question->id == 48) --}}{{--height  // este es solo para local  --}}
+                    @elseif($question->id == 49) {{--height--}}
 
                     <div class="question height-question" id="height-question" data-question-id="{{$question->id}}" data-question-name="bmi">
                         <div class="bmi-result">

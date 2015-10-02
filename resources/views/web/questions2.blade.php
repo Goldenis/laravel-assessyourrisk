@@ -656,7 +656,7 @@
                   //  var datos = JSON.parse(recupero);
                   //  var questionsAnswered = Object.keys(datos).length;
 
-                var preguntasResueltas = sessionStorage.getItem('highQuestion');
+                var preguntasResueltas = sessionStorage.getItem('highQuestion') - 1;
                 if(preguntasResueltas > _totalQuestions){
                     preguntasResueltas = _totalQuestions;
                 }

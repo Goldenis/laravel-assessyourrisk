@@ -84,4 +84,5 @@
         $('.right-column').addClass('in');
 
     </script>
+    <script src="{{asset('js/main.js')}}"></script>
 @endsection

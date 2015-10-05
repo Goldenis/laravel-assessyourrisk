@@ -23,6 +23,8 @@ class PledgeController extends Controller
                           ->where('session_id',$request['session'])
                           ->count();
 
+
+
         return $pledge;
     }
 

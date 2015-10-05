@@ -168,9 +168,9 @@
         $('.education .dots h6').eq(1).css({
             left: $('.module').eq(0).find($(".headline")).length * 22
         })
-        $('.education .dots h6').eq(2).css({
+        /*$('.education .dots h6').eq(2).css({
             left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * 22
-        })
+        })*/
         addCharts();
         updateCharts();
         $('.wheel-container').css({
@@ -829,7 +829,7 @@
         $('.menu-overlay .vignettes h3').on('click', function() {
             changeModule($('.menu-overlay .vignettes h3').index($(this)));
             closeMenuOverlay();
-            $('.assessment').removeClass('in');
+           $('.assessment').removeClass('in');
             $('.right-column').addClass('left');
             $('.menu-icon').addClass('left');
             $('.education').addClass('in');
@@ -1012,7 +1012,7 @@
         TweenLite.to($('.intro'), .5, {opacity: 1, delay: 1});
         $('.intro').removeClass('out-up')
         $('.right-column').removeClass('in')
-        $('.assessment').removeClass('in');
+        //$('.assessment').removeClass('in');
         $('.border').removeClass('white');
     }
 

@@ -2664,6 +2664,7 @@ input[type="checkbox"], input[type="radio"] {
     -webkit-transition-property: all;
     -webkit-transition-delay: 0;
 }
+
 .out-up {
   visibility: hidden;
   opacity: 0 !important;

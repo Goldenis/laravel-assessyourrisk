@@ -330,5 +330,6 @@
     </script>
 
     <script src="{{asset('js/email-modal.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 
 @endsection

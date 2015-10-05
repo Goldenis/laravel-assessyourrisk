@@ -94,7 +94,6 @@
 
     </section>
 
-
     {{--formulario para cargar pldge--}}
     {!! Form::open(['route'=>['pledge.store'], 'method'=>'POST', 'id'=>'form-pledge']) !!}
     {!! Form::close() !!}
@@ -181,15 +180,13 @@
                 $('#lifestyle-list .vignette').last().find('.headline h3').prepend('<span class="lifestyle-count">{{$pledge_lifestyle}}</span> ');
                 $('#lifestyle-list .vignette').last().find('.headline h3').addClass('lifestyle-pledge-number');
 
-                $('#lifestyle-list .vignette').last().find('.headline h5').after(
-                        '<button class="facebook lifestyle">Pledge</button>');
+                $('#lifestyle-list .vignette').last().find('.headline h5').after('<button class="facebook lifestyle">Pledge</button>');
 
                 buttons();
             }
         });
 
-        $('#lifestyle-list .vignette').last().find('.headline').append(
-                '<button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>');
+        $('#lifestyle-list .vignette').last().find('.headline').append('<button class="btn-continue sub">CONTINUE TO KNOW YOUR NORMAL →</button>');
 
 
 

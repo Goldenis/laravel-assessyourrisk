@@ -148,38 +148,7 @@
 <!-- ASSESSMENT-->
 
 <!-- EDUCATION -->
-<section class="education">
 
-    <div class="module normal">
-        <div class="vignette main" data-src="lifestyle">
-            <div class="headlines">
-                <div class="section-title">Understand Your Risk</div>
-                <div class="headline">
-
-                    <h6 class="scroll-dive">Scroll</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAMILY HISTORY -->
-
-    <div class="module family-history">
-        <div class="vignette main" data-src="family">
-            <div class="headlines">
-                <div class="headline">
-                    <div class="section-title">Understand Your Risk</div>
-                    <h3>The Most Important Part of Understanding Risk</h3>
-                    <h5>More than anything else, family and health history have a powerful impact on your risk level; understanding the past can help you be proactive about your future.</h5>
-                    <div class="btn-begin arrow"><img src="{{asset('img/arrow_right.png')}}"></div>
-                    <h6 class="scroll-dive">Scroll</h6>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</section>
 
 <!-- FOOTER -->
 
@@ -217,7 +186,7 @@
 <script src="{{asset('js/vendor/jquery.address-1.6.min.js')}}"></script>
 <script src="{{asset('js/vendor/jquery.placeholder.min.js')}}"></script>
 <script src="{{asset('js/plugins.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+
 <script src="{{asset('js/anim.js')}}"></script>
 <script type='application/javascript' src='{{asset('/js/jquery-ui.min.js')}}'></script>
 

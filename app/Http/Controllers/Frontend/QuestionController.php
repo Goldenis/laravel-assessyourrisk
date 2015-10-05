@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Education;
+use App\Models\Pledge;
 use App\Models\Question;
 use App\Models\Share;
 use Illuminate\Http\Request;
@@ -205,10 +207,16 @@ class QuestionController extends Controller
     public function questions2(Request $request)
     {
         $questions = Question::orderAsc()->get();
-
         $last_question = Question::OrderDesc()->first();
 
-       // dd($last_cuestion->id); die;
+        $lifestyle_list   = Education::where('education_category_id',1)->active()->orderAsc()->get();
+        $normal_list      = Education::where('education_category_id',2)->active()->orderAsc()->get();
+        $family_list      = Education::where('education_category_id',3)->active()->orderAsc()->get();
+        $pledge_lifestyle = Pledge::where('education_category_id',1)->count();
+        $pledge_normal    = Pledge::where('education_category_id',2)->count();
+        $pledge_family    = Pledge::where('education_category_id',3)->count();
+
+       // dd($pledge_lifestyle); die;
 
 
         $share = Share::find(1);
@@ -262,7 +270,7 @@ class QuestionController extends Controller
        // $text_colum = $question->text_colum;
 
         //return view('web.questionloadajax',compact('question_slug','share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
-        return view('web.questions2',compact('last_question','questions','share','count'));
+        return view('web.questions2',compact('last_question','questions','share','count','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
 
     }
 

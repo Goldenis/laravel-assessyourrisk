@@ -924,9 +924,11 @@
                         }
                     });
 
-                    //  console.log(i);
+                      console.log(i);
                     deepViewed = i;
                 }
+
+                deepViewed = sessionStorage.getItem('num_education');
 
                 sessionStorage.setItem('educationView',deepViewed);
                   console.log(deepViewed);

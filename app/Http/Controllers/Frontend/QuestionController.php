@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Education;
+use App\Models\Intro;
 use App\Models\Pledge;
 use App\Models\Question;
 use App\Models\Share;
@@ -216,6 +217,11 @@ class QuestionController extends Controller
         $pledge_normal    = Pledge::where('education_category_id',2)->count();
         $pledge_family    = Pledge::where('education_category_id',3)->count();
 
+        $intro = Intro::find(1);
+
+        $assessment_intro = Intro::find(2);
+        $first_question = Question::OrderBy('order','asc')->first();
+
        // dd($pledge_lifestyle); die;
 
 
@@ -270,7 +276,7 @@ class QuestionController extends Controller
        // $text_colum = $question->text_colum;
 
         //return view('web.questionloadajax',compact('question_slug','share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
-        return view('web.questions2',compact('last_question','questions','share','count','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
+        return view('web.index',compact('assessment_intro','intro','last_question','questions','share','count','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
 
     }
 

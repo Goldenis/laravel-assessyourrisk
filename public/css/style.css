@@ -1364,7 +1364,7 @@ input[type="checkbox"], input[type="radio"] {
 .intro .wheel-container {
   width: 373px;
   height: 373px;
-  left: 40%;
+  left: 18%;
   top: 28%;
   position: absolute;
   overflow: hidden;
@@ -1692,8 +1692,8 @@ input[type="checkbox"], input[type="radio"] {
     color:#D7006D;
 }
 .assessment .dots {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 .assessment .dots.active {
   opacity: 1;

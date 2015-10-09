@@ -15,15 +15,130 @@ use App\Http\Controllers\Controller;
 
 class AnswerController extends Controller
 {
-    public function result()
+    public function result(Request $request)
     {
-        $quiz = new Quiz();
-        $quiz->save();
+        //este el es objeto con todas las respuestas
+        $datos = $request['data'];
 
-        $questions = Question::active()->count();
+       $quiz = new Quiz();
+       $quiz->save();
 
-        return view('web/answers_result', compact('questions'));
+       //return gettype($datos);
+        foreach($datos as $key=>$value){
+
+
+            //$a = $key + 0;
+           $question_order = Question::find($key);
+           //..;
+
+
+            if(gettype($value)=='array')
+            {
+                foreach($value as $i=>$val){
+
+                    //$question_order = Question::find($key)->order;
+                    $answer = new Answer();
+                    $answer->quiz_id = $quiz->id;
+                    $answer->question_id = $key;
+
+                    if($key==33){
+                        if($val==0){
+                            $val=44;
+                        }else if($val==1){
+                            $val=45;
+                        }else if($val==2){
+                            $val=46;
+                        }else if($val==3){
+                            $val=47;
+                        }else if($val==4){
+                            $val=48;
+                        }else if($val==5){
+                            $val=49;
+                        }else if($val==6){
+                            $val=50;
+                        }
+                    }
+
+                    //for BMI (especial question)
+                    if($key==49){ // 49 es para internet
+                        if($val<18.5){
+                            $val=95;
+                        }else if($val>=18.5 && $val<=24.9){
+                            $val=96;
+                        }else if($val>=25 && $val<=29.9){
+                            $val=97;
+                        }else if($val>=30){
+                            $val=98;
+                        }
+                    }
+
+                    $answer->question_option_id = $val;
+                    $answer->question_order = $question_order['order'];
+                    $answer->save();
+                }
+            }
+            else
+            {
+                //$orden = Question::find($key)->first();
+               //var_dump($orden->id);
+
+                $answer = new Answer();
+                $answer->quiz_id = $quiz->id;
+                $answer->question_id = $key;
+
+                if($key==33){
+                    if($value==0){
+                        $value=44;
+                    }else if($value==1){
+                        $value=45;
+                    }else if($value==2){
+                        $value=46;
+                    }else if($value==3){
+                        $value=47;
+                    }else if($value==4){
+                        $value=48;
+                    }else if($value==5){
+                        $value=49;
+                    }else if($value==6){
+                        $value=50;
+                    }
+                }
+
+                //for BMI (especial question)
+                if($key==49){ // 49 es para internet
+                    if($value<18.5){
+                        $value=95;
+                    }else if($value>=18.5 && $value<=24.9){
+                        $value=96;
+                    }else if($value>=25 && $value<=29.9){
+                        $value=97;
+                    }else if($value>=30){
+                        $value=98;
+                    }
+                }
+
+                $answer->question_option_id = $value;
+                $answer->question_order = $question_order['order'];
+                $answer->save();
+            }
+        }
+
+       //return $question_order['order'];
+        return $quiz->id;
+
+
+
+      ////$questions = Question::active()->count();
+
+        //return view('web/answers_result', compact('questions'));
     }
+
+
+
+
+
+
+
 
     public function result_final($quiz_id)
     {
@@ -94,7 +209,7 @@ class AnswerController extends Controller
         }
 
         //for BMI (especial question)
-        if($question==48){ // 49 es para internet
+        if($question==49){ // 49 es para internet
             if($option_request<18.5){
                 $option_request=95;
             }else if($option_request>=18.5 && $option_request<=24.9){
@@ -106,18 +221,7 @@ class AnswerController extends Controller
             }
         }
 
-//este es para local host es id 48
-      /*  if($question==48){
-            if($option_request<18.5){
-                $option_request=95;
-            }else if($option_request>=18.5 && $option_request<=24.9){
-                $option_request=96;
-            }else if($option_request>=25 && $option_request<=29.9){
-                $option_request=97;
-            }else if($option_request>=30){
-                $option_request=98;
-            }
-        }*/
+
 
         $options = explode(',',$option_request);
 

@@ -23,12 +23,10 @@ class PdfController extends Controller
          $favors = Result::where('result_type_id',1)->get();
          $no_favors = Result::where('result_type_id',2)->get();
 
-
-
         //answers
          $answers = Answer::where('quiz_id',$quizz)->groupBy('question_id')->orderBy('question_order','asc')->get();
 
-
+        // dd($answers);
 
          // para hacer la comparación de existencia para favor y no_favor en la vista
          $answers_array = Answer::where('quiz_id',$quizz)->lists('question_option_id');
@@ -39,6 +37,7 @@ class PdfController extends Controller
          $view =  View::make('pdf.report', compact('texto','level','answers','favors','no_favors','answers_array'))->render();
          $pdf = App::make('dompdf.wrapper');
          $pdf->loadHTML($view);
+
          return $pdf->stream('report.pdf');
      }
 

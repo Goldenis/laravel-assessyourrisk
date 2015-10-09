@@ -46,7 +46,12 @@
     var _currentView = "left";
     var _currentModule = null;
     var _oldModule;
-    var _currentQuestion = 0;
+    if(sessionStorage.getItem('current_question_position')!=undefined){
+        var _currentQuestion = sessionStorage.getItem('current_question_position');
+    }else{
+        var _currentQuestion = 0;
+    }
+
     var _totalQuestions;
     var _totalHeadlines;
     var headline_tops;
@@ -752,13 +757,14 @@
             $('.right-column').addClass('in2')
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
-            $('.question').eq(0).addClass('in');
-            //$('.fact').eq(_currentQuestion).addClass('in');
+            $('.question').eq(_currentQuestion).addClass('in');
+            $('.question').eq(_currentQuestion).removeClass('out');
+            $('.facts').eq(_currentQuestion).addClass('in');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
             $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
             $('.assessment-dots').addClass('active');
             $('.fact-icon').addClass('in');
-            //alert('hola');
+
         })
 
 

@@ -63,10 +63,20 @@
             @foreach( $answers as $answer)
 
                 <li>{!!$answer->question->text!!}
-                    <?php $options = \App\Models\Answer::where('quiz_id',$answer->quiz_id)->where('question_id',$answer->question_id)->get() ?>
-                    @foreach($options as $option)
-                        {!!$option->questionoption->text!!}
-                    @endforeach
+
+                    @if($answer->question_id!=34)
+
+                        <?php $options = \App\Models\Answer::where('quiz_id',$answer->quiz_id)->where('question_id',$answer->question_id)->get() ?>
+                        @foreach($options as $option)
+                            {!!$option->questionoption->text!!}
+                        @endforeach
+
+                    @else
+
+                        {{$answer->question_option_id}}
+
+                    @endif
+
                 </li>
             @endforeach()
 

@@ -4256,6 +4256,20 @@ h5.mobile-only {
 .assessment-wrap .out{
     display:none;
 }
+.item-out{
+    display: none;
+}
+
+.item-in{
+    display: block !important;
+}
+.item-color{
+     background-color: #f00;
+ }
+    .item-color2{
+        background-color: #0f0;
+    }
+
 
     @media(min-width: 962px){
         .right-column .toggle-box .understand-contain {

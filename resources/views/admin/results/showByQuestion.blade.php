@@ -44,7 +44,7 @@
                                                           ->orderBY('result_level_id')
                                                           ->get()  ?>
 
-                            {{dd($datos)}}
+
 
                                   @foreach($datos as $dato)
 
@@ -52,7 +52,7 @@
                                         <div class="checkbox checkbox-styled tile-text">
                                             <label>
                                                 <span>
-                                                <small>{{$dato->resultLevel->name}}</small>
+                                                <small>{{--$dato->resultLevel->name--}}</small>
                                                    <h5><u>{!! $dato->subtitle !!}- {{$dato->id}}</u> </h5>
                                                     <h4>{!! $dato->title !!}</h4>
                                                     <p>{!! $dato->content !!}</p>

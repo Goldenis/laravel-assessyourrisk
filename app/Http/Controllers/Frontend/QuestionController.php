@@ -6,6 +6,7 @@ use App\Models\Education;
 use App\Models\Intro;
 use App\Models\Pledge;
 use App\Models\Question;
+use App\Models\Result;
 use App\Models\Share;
 use Illuminate\Http\Request;
 
@@ -222,10 +223,17 @@ class QuestionController extends Controller
         $assessment_intro = Intro::find(2);
         $first_question = Question::OrderBy('order','asc')->first();
 
+
+        $favors = Result::where('result_type_id',1)->get();
+        $no_favors = Result::where('result_type_id',2)->get();
+
        // dd($pledge_lifestyle); die;
 
 
         $share = Share::find(1);
+        $share_result = Share::find(2);
+        $share_result_overlay = Share::find(3);
+        $share_education = Share::find(4);
         //dd($questions); die;
         //$slug =  $request['slug'];
        // $question = Question::where('slug',$slug)->first();
@@ -275,8 +283,7 @@ class QuestionController extends Controller
         $count = Question::count() + 1;
        // $text_colum = $question->text_colum;
 
-        //return view('web.questionloadajax',compact('question_slug','share','question','count','url','url_prev','text_colum','url_renext','url_reprev'));
-        return view('web.index',compact('assessment_intro','intro','last_question','questions','share','count','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
+         return view('web.index',compact('share_education','share_result_overlay','share_result','favors','no_favors','assessment_intro','intro','last_question','questions','share','count','lifestyle_list','normal_list','family_list','pledge_lifestyle','pledge_normal','pledge_family'));
 
     }
 

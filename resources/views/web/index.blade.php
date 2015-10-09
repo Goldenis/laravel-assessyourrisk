@@ -4,6 +4,152 @@
 
 <!-- OVERLAYS -->
 
+<div class="overlay progress-overlay">
+    <div class="question-stats">
+    </div>
+    <button class="sub close-btn">✕</button>
+    <div class="share in2">
+        <div class="share-copy">
+            <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
+        </div>
+        <div class="share-btn-wrapper">
+            <span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
+        </div>
+    </div>
+
+
+
+
+    <div class="results" style="display: block;">
+        <div class="your-risk">
+            <h2>Your Baseline Risk is <span class="risk-level"></span></h2>
+        </div>
+
+
+
+        <div class="paragraph-wrapper">
+            <div class="paragraph-box">
+
+                <!-- Average -->
+                <div class="results-copy-average on">
+                    <!-- paragraph-one (left) -->
+                    <div class="column">
+                        <div class="col-izq-1"></div>
+                        <div class="col-izq-2 more-results"></div>
+
+                    </div>
+                    <!-- paragraph-two (right) -->
+                    <div class="column">
+                        <div class="col-der-1"></div>
+                        <div class="col-der-2 more-results"></div>
+
+                        <div class="read-more-box">
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Pink Email/PDF/Doctor Footer on first card -->
+            <div class="email-pdf-doctor">
+                <!-- <div class="email-pdf"><a href='mailto:?subject=Here are the results of my risk assessment&amp;body=I thought you might find this information interesting' target="_blank">Email to your Doctor</a> -->
+                <div class="email-pdf-copy">
+                    <h4>Would you like a copy of your results?</h4>
+                </div>
+                <div class="email-pdf-btns">
+                    <button class="sub email">EMAIL</button><a id="pdf-btn" href="{{URL::to('pdf/report/')}}/" target="_blank" class="pdf"><button class="pdf">PDF</button></a><button class="sub email-doctor">SHARE WITH MY DOCTOR</button>
+                </div>
+                <div class="email-fields-doctor">
+                    <h4>Share results with my doctor.</h4>
+
+                    <input type="text" placeholder="Your Full Name" id="your-name-dr" required="">
+                    <input type="text" placeholder="Doctor's email address" id="dr-email-address" required=""><button class="sub send-dr-email">SEND</button> <button class="sub cancel">Cancel</button>
+
+                </div>
+                <div class="email-fields-user">
+                    <h4>Share my results with me.</h4>
+
+                    <input type="text" placeholder="Your Full Name" id="your-name" required="">
+                    <input type="text" placeholder="My email address" id="user-email-address" required=""><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
+                </div>
+            </div>
+            <!-- paragraph wrapper close -->
+        </div>
+    </div>
+
+    <!-- End of Results div -->
+
+    <div class="cards" style="display: block;">
+
+        <div class="card-intro-text">
+            <h3>Life Affects Your Life: Understanding Your Other Risk Factors</h3><br><br>
+            <p>Your baseline risk above is your starting point.
+                The lifestyle and personal health history factors below can potentially increase or decrease that baseline risk.
+                Talk to your doctor about how these risk factors may be affecting your total risk—make it a goal to get or keep as much as you can working in your favor.
+            </p>
+
+        </div>
+
+        <br>
+
+        <!-- Positivo -->
+        <div class="card positive">
+            <div class="factors-title"><h3>Working In Your Favor</h3></div>
+
+
+
+            @foreach($favors as $favor)
+
+                {{--@if(in_array($favor->question_opcion_id,$answers_array->toArray(),true))--}}
+
+                   {{-- <span class="level">--}}
+                            <div class="item item-{{$favor->question_opcion_id}}">
+                                <div class="section-title">{{$favor->subtitle}}</div>
+                                <h4>{{$favor->title}}</h4>
+                                {!!$favor->content!!}
+                            </div>
+                      {{--  </span>--}}
+                {{--@endif--}}
+
+            @endforeach
+
+
+
+
+
+
+
+        </div>
+
+        <!-- Negative -->
+        <div class="card negative">  <div class="factors-title"><h3>Not Working in Your Favor</h3></div>
+
+            @foreach($no_favors as $no_favor)
+                {{--@if(in_array($no_favor->question_opcion_id,$answers_array->toArray(),true))--}}
+
+                   {{-- <span class="level">--}}
+                            <div class="item item-{{$no_favor->question_opcion_id}}">
+                                <div class="section-title">{{$no_favor->subtitle}}</div>
+                                <h4>{{$no_favor->title}}</h4>
+                                {!!$no_favor->content!!}
+                            </div>
+                      {{--  </span>--}}
+                {{--@endif--}}
+            @endforeach
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
     <div class="overlay menu-overlay">
         <button class="sub close-btn">✕</button>
         <div class="vignettes">
@@ -244,7 +390,7 @@
                     </div>
 
                     @elseif($question->id == 34) {{--weight--}}
-                    <div class="question weight-question" data-question-id="3">
+                    <div class="question weight-question" data-question-id="34">
                         <div class="weight-wrapper">
                             <div class="prompt weight-header">What is your weight?</div>
                             <span>Your answer will only be used to calculate your BMI,<br> which can affect your risk.</span>
@@ -296,6 +442,58 @@
                 @endif
 
             @endforeach
+
+                <div class="share result">
+                    <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
+                    <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal-result" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
+
+
+                    <div id="dialog-form" title="Share">
+                        <form>
+                            <table class="modal-table">
+                                <tr>
+                                    <td><label for="subject">subject</label></td>
+                                    <td> <input type="text" required name="subject" id="subject" placeholder="subject"
+                                                value="{{$share->subject}}" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="email">Email</label></td>
+                                    <td><input type="email" required name="email" id="email" placeholder="email" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="name">Name</label></td>
+                                    <td><input type="text" required name="name" id="name" placeholder="Name" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                </tr>
+
+                                <tr>
+                                    <td valign="top"><label for="password">Body</label></td>
+                                    <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share->body}}</textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td><!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -477,6 +675,8 @@
     <script src="{{asset('js/roulette.js')}}"></script>
     <script>
         $(document).ready(function(){
+            //localStorage.clear();
+            localStorage.clear();
            // $('.right-column').addClass('in');
             $('.logo').animate({opacity: 1}, 3000);
             //$('.question').fadeIn();
@@ -484,6 +684,14 @@
             //$('.assessment').animate({opacity: 1}, 2000);
            // $('.assessment').addClass('in');
             //$('.assessment').css('visibility','visible');
+
+
+
+            if(sessionStorage.getItem('level')==undefined){
+                sessionStorage.setItem('level',1);
+            }
+
+
             $('.dot').css('background-color','#ff0000');
             setTimeout(function(){
                // $('.assessment').addClass('in');
@@ -512,6 +720,34 @@
                 $('.assessment-intro').addClass('in');
                 $('.right-column').addClass('in');
             });
+
+            //funciones de level
+            function getlevel(question_id,question_option_id)
+            {
+                //console.log('question:' +question_id+' opcion:'+question_option_id);
+               // var obj = JSON.parse(question_option_id);
+
+                $.each( question_option_id, function( i, val ) {
+                    $.get("{{ URL::to('/resultlevelcondition/findlevel') }}",{
+                            question_id:question_id,
+                            question_option_id:val
+                    }, function(resultado)
+                        {
+                           // console.log('level: '+resultado);
+
+                            if(sessionStorage.getItem('level')!=undefined){
+
+                                if(sessionStorage.getItem('level')<resultado){
+                                    sessionStorage.setItem('level',resultado);
+                                }
+                            }
+                            else
+                            {
+                                sessionStorage.setItem('level',resultado);
+                            }
+                        }); /*get*/
+                }); /*each*/
+            }
 
 
             if(sessionStorage.getItem('current_question_position')!=undefined){
@@ -546,6 +782,8 @@
                 var dato = $(this).text();
                 var option = $(this).data('option-id');
 
+                getlevel(question_id,option); // obtiene el level
+
                 // exclusive for question id=17 / male overlay
                 if(dato == 'No' && question_id == 17){
                     $('.male-overlay').addClass('in');
@@ -553,14 +791,15 @@
                     overlayOpen = true;
                     return false;
                 }else{
-
+                    saveAnswers(question_id, option);
                     if(question_id == {{$last_question->id}} ){
                         showResult();
+                        nextQuest()
                     }else{
                         nextQuest();
                     }
 
-                    saveAnswers(question_id, option);
+
 
                     // var url_next = '{{--$url--}}';
                     // $(location).attr('href',url_next);
@@ -613,9 +852,11 @@
                 });
 
                 saveAnswers(question_id, option);
+                getlevel(question_id,option);
 
                 if(question_id == {{$last_question->id}} ){
                     showResult();
+                    nextQuest()
                 }else{
                     nextQuest();
                 }
@@ -676,12 +917,14 @@
                 $(this).parent().parent().find('.checkbox-list input:checked').each(function() {
                     options.push($(this).data('option-id'));
                 });
-              //  console.log(question_id+' | '+options);
+              // console.log(question_id+' | '+options);
 
                 saveAnswers(question_id, options);
+                getlevel(question_id, options);
 
                 if(question_id == {{$last_question->id}} ){
                     showResult();
+                    nextQuest()
                 }else{
                     nextQuest();
                 }
@@ -707,6 +950,8 @@
                 var bottle = parseInt(option);
 
                 saveAnswers(question_id, bottle);
+                getlevel(question_id,bottle);
+
 
                 nextQuest();
 
@@ -739,6 +984,7 @@
                 nextQuest();
 
                 saveAnswers(question_id, window.weightInPounds);
+                getlevel(question_id,window.weightInPounds);
 
             });
 
@@ -756,6 +1002,7 @@
 
                 bmi_int = parseFloat(bmi);
                 saveAnswers(question_id, bmi_int);
+                getlevel(question_id,bmi_int);
                 nextQuest();
             });
 
@@ -926,12 +1173,14 @@
 
                       console.log(i);
                     deepViewed = i;
+                }else{
+                    deepViewed = 0;
                 }
 
-                deepViewed = sessionStorage.getItem('num_education');
+                //deepViewed = sessionStorage.getItem('num_education');
 
                 sessionStorage.setItem('educationView',deepViewed);
-                  console.log(deepViewed);
+                //alert(deepViewed);
 
                 var diveProgress = deepViewed + '/' + _totalHeadlines;
                 var divePercent = deepViewed / _totalHeadlines;
@@ -990,6 +1239,8 @@
                     sessionStorage.setItem('current_question_position',_currentQuestion);
 
                 }
+
+                $('.share.result').removeClass('in');
             }
 
             function nextQuest(){
@@ -997,6 +1248,7 @@
                 $('.assessment .question').eq(_currentQuestion).addClass('out');
                 $('.assessment .question').eq(_currentQuestion).removeClass('in');
 
+                //esta es para la parte de mutación
                 var current_option = sessionStorage.getItem(35);
                 var current_question = sessionStorage.getItem('current_question_id');
                 if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
@@ -1012,9 +1264,9 @@
                     $('.assessment .question').eq(_currentQuestion).addClass('in')
                 },10);
 
-                sessionStorage.setItem('current_question_id',$('.assessment .question').eq(_currentQuestion).data('question-id'));
+                var question_selected = $('.assessment .question').eq(_currentQuestion).data('question-id');
+                sessionStorage.setItem('current_question_id',question_selected);
 
-               // console.log(_currentQuestion);
                 $('.facts').removeClass('in');
                 //$('.fact').eq(_currentQuestion).removeClass('out');
                 $('.facts').eq(_currentQuestion).addClass('in');
@@ -1022,8 +1274,6 @@
                 $('.facts-mobil').removeClass('in');
                 //$('.fact').eq(_currentQuestion).removeClass('out');
                 $('.facts-mobil').eq(_currentQuestion).addClass('in');
-
-
 
                 sessionStorage.setItem('current_question_position',_currentQuestion);
 
@@ -1074,7 +1324,6 @@
                 //creamos el sesionstorage
                 sessionStorage.setItem('answersResult', answersResultString);
                 sessionStorage.setItem(id_question,value);
-                // loadAnswer(value);
             }
 
             //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
@@ -1120,8 +1369,97 @@
             completeInput();
 
            function showResult(){
-               var url = '../answers/results';
-               $(location).attr('href',url);
+              // var url = '../answers/results';
+              // $(location).attr('href',url);
+               $('.question').eq(_currentQuestion).addClass('in');
+               $('.question').eq(_currentQuestion).removeClass('out');
+
+               $('.share.result').addClass('in');
+
+               function explode(){
+                   $(".progress-overlay").addClass('in');
+               }
+               setTimeout(explode, 3000);
+
+               //carga datos según el level
+               var level = sessionStorage.getItem('level');
+               $.get('{{URL::to('/resultlevel')}}/'+level,{},function(e){
+
+                   var datos = JSON.parse(e);
+
+                   $('.risk-level').html(datos.name);
+                   $('.col-izq-1').html(datos.text_less);
+                   $('.col-der-1').html(datos.text_less_col2);
+                   $('.col-izq-2').html(datos.text_more);
+                   $('.col-der-2').html(datos.text_more_col2);
+               });
+
+               //mostrando a favor y  not a favor
+
+                   var recupero = sessionStorage.getItem('answersResult');
+                   answersResult = JSON.parse(recupero);
+
+               $.each(answersResult, function(i, val){
+
+
+                   if(typeof val == 'object'){
+                       $.each(val,function(j,val2){
+                           console.log(val2);
+                           //$('.cards .item-'+val2).addClass('item-color2');
+                           $('.cards .item-'+val2).addClass('item-in');
+                       });
+                   }else{
+                       //botella
+                       if(i==33){
+                           if(val==0){
+                               val=44;
+                           }else if(val==1){
+                               val=45;
+                           }else if(val==2){
+                               val=46;
+                           }else if(val==3){
+                               val=47;
+                           }else if(val==4){
+                               val=48;
+                           }else if(val==5){
+                               val=49;
+                           }else if(val==6){
+                               val=50;
+                           }
+                       }
+
+                       //bmi
+                       if(i==49){ // 49 es para internet
+                           if(val<18.5){
+                               val=95;
+                           }else if(val>=18.5 && val<=24.9){
+                               val=96;
+                           }else if(val>=25 && val<=29.9){
+                               val=97;
+                           }else if(val>=30){
+                               val=98;
+                           }
+                       }
+
+                       //console.log(val+' numero');
+                       $('.cards .item-'+val).addClass('item-in');
+                   }
+               });
+
+               $.get('{{URL::to('answers/results')}}',{data:answersResult},function(e){
+
+                   sessionStorage.setItem('quiz',e);
+                   //creamos el atributo para el generador de pdf
+                   var atributo =  $('.pdf').parent().find('a').attr('href');
+                   var new_atributo = atributo+sessionStorage.getItem('quiz')+'/'+sessionStorage.getItem('level');
+                   $('.pdf').parent().find('a').attr('href',new_atributo);
+
+               });
+
+                  /*var property = id_question;
+
+                  //agrego una nueva propiedad al json
+                  answersResult[property] = value;*/
            }
 
 
@@ -1266,6 +1604,15 @@
                 $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
                 dialog.dialog( "open" );
             });
+
+            $( ".create-modal-result" ).click(function(e) {
+                e.preventDefault();
+                $("#dialog-form").find('textarea').html($(this).data('body'));
+                $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
+                dialog.dialog( "open" );
+            });
+
+
 
 
 
@@ -1607,6 +1954,13 @@
                     closeMenuOverlay();
                 }
             })
+
+
+
+/* LOS RESULTADOS */
+            //sacar el nivel
+
+
 
 
 

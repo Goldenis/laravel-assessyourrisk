@@ -91,6 +91,9 @@
                     <!-- Insert the TRIGGERED Text Div -->
                     <h2>Your Baseline Risk is <span class="risk-level"></span></h2>
                 </div>
+
+
+
                 <div class="paragraph-wrapper">
                     <div class="paragraph-box">
 

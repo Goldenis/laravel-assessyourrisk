@@ -13,7 +13,7 @@
             <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
         </div>
         <div class="share-btn-wrapper">
-            <span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal3" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
+            <span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a data-subject="{{$share_result_overlay->subject}}" data-body="{{$share_result_overlay->body}}" id="create-modal3" href="#" target="_blank" class="mail-icon create-modal"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
         </div>
     </div>
 
@@ -445,16 +445,20 @@
 
                 <div class="share result">
                     <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-                    <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a id="create-modal-result" href="#" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
+                    <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a class="create-modal mail-icon" data-subject="{{$share_result->subject}}" data-body="{{$share->body}}"  href="#" target="_blank" class=""><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
 
 
-                    <div id="dialog-form" title="Share">
+                    <!-- ecuando se le hace click a cualquier boton va a rremplazar el value tanto del subjet como del body,
+                    actualmente tiene caergado el de educacion por que ese boton share es cargado por medio de ajax y no se pudo cargar
+                    de otra  manera cuando se hace click el botn de share de educacion se va a ver este contenido, pero cuando se abra
+                     cualquier optro se va a reemplazar por el attributo data-subject o data-body de cada boton-->
+                    <div id="dialog-form" title="{{$share_education->title}}">
                         <form>
                             <table class="modal-table">
                                 <tr>
                                     <td><label for="subject">subject</label></td>
                                     <td> <input type="text" required name="subject" id="subject" placeholder="subject"
-                                                value="{{$share->subject}}" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                                value="{{$share_education->title}}" class="text modal-text ui-widget-content ui-corner-all"></td>
                                 </tr>
 
                                 <tr>
@@ -469,7 +473,7 @@
 
                                 <tr>
                                     <td valign="top"><label for="password">Body</label></td>
-                                    <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share->body}}</textarea></td>
+                                    <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
                                 </tr>
 
                                 <tr>
@@ -483,8 +487,6 @@
                         </form>
                     </div>
 
-
-
                 </div>
 
 
@@ -497,41 +499,9 @@
         </div>
 
 
-        <div id="dialog-form" title="Help me ask them">
 
-            <form>
-                <table class="modal-table">
-                    <tr>
-                        <td><label for="subject">subject</label></td>
-                        <td> <input type="text" required name="subject" id="subject" placeholder="subject"
-                                    value="" class="text modal-text ui-widget-content ui-corner-all"></td>
-                    </tr>
 
-                    <tr>
-                        <td><label for="email">Email</label></td>
-                        <td><input type="email" required name="email" id="email" placeholder="email" class="text modal-text ui-widget-content ui-corner-all"></td>
-                    </tr>
 
-                    <tr>
-                        <td><label for="name">Name</label></td>
-                        <td><input type="text" required name="name" id="name" placeholder="Name" class="text modal-text ui-widget-content ui-corner-all"></td>
-                    </tr>
-
-                    <tr>
-                        <td valign="top"><label for="password">Body</label></td>
-                        <td><textarea name="" id="" cols="30" rows="6" class="modal-text"></textarea></td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td><!-- Allow form submission with keyboard without duplicating the dialog button -->
-                            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-                        </td>
-                    </tr>
-
-                </table>
-            </form>
-        </div>
 
     </section>
 
@@ -1598,22 +1568,11 @@
 
 
             $( ".create-modal" ).click(function(e) {
-
                 e.preventDefault();
                 $("#dialog-form").find('textarea').html($(this).data('body'));
                 $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
                 dialog.dialog( "open" );
             });
-
-            $( ".create-modal-result" ).click(function(e) {
-                e.preventDefault();
-                $("#dialog-form").find('textarea').html($(this).data('body'));
-                $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
-                dialog.dialog( "open" );
-            });
-
-
-
 
 
             /* //este es cuando hay dos share en la misma pagina
@@ -1813,12 +1772,12 @@
                 if(result==1) {
 
                     $('#family-list .vignette').last().find('.headlines').append('<div class="headline"><h3 class="family-pledge-number">You and '+{{$pledge_family}}+' women have pledged to learn about their family history</h3></div>');
-                    $('#family-list .vignette').last().find('.headlines').append('<div class="headline last"><div class="share"><div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div><h3>Save the life of somebody you love. Tell them to complete this experience too.</h3><br><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/education" onclick="fb_share(\'http://www.assessyourrisk.org\', \'Assess Your Risk\', \'1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.\', \'http://www.assessyourrisk.org/img/fb-share.png\', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a href="#" id="create-modal" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span></div></div>');
+                    $('#family-list .vignette').last().find('.headlines').append('<div class="headline last"><div class="share"><div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div><h3>Save the life of somebody you love. Tell them to complete this experience too.</h3><br><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/education" onclick="fb_share(\'http://www.assessyourrisk.org\', \'Assess Your Risk\', \'1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.\', \'http://www.assessyourrisk.org/img/fb-share.png\', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a   href="#" id="create-modal" target="_blank" class="mail-icon create-modal"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span></div></div>');
 
 
                 }else{
                     $('#family-list .vignette').last().find('.headlines').append('<div class="headline"><h3 class="family-pledge-number"> Women Have Pledged to Collect Their Family History</h3><h5>You can join them. By clicking the pledge button below, you’ll make that number go higher.</h5><button class="facebook family">Pledge</button></div>');
-                    $('#family-list .vignette').last().find('.headlines').append('<div class="headline last"><div class="share"><div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div><h3>Save the life of somebody you love. Tell them to complete this experience too.</h3><br><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/education" onclick="fb_share(\'http://www.assessyourrisk.org\', \'Assess Your Risk\', \'1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.\', \'http://www.assessyourrisk.org/img/fb-share.png\', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a href="#" id="create-modal2" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span></div></div>');
+                    $('#family-list .vignette').last().find('.headlines').append('<div class="headline last"><div class="share"><div class="arrow"><img src="{{asset('img/arrow_right.png')}}"></div><h3>Save the life of somebody you love. Tell them to complete this experience too.</h3><br><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/education" onclick="fb_share(\'http://www.assessyourrisk.org\', \'Assess Your Risk\', \'1 in 8 women will develop breast cancer at some point in her lifetime. 1 in 67 will develop ovarian cancer.\', \'http://www.assessyourrisk.org/img/fb-share.png\', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a  href="#" id="create-modal2" target="_blank" class="mail-icon create-modal"><i class="fa fa-envelope fa-lg"></i></a>SHARE</span></div></div>');
                     $('#family-list .vignette').last().find('.headline .family-pledge-number').prepend('{{$pledge_family}}');
                     buttons();
 
@@ -1917,9 +1876,10 @@
 
                     });
 
-                    //este es cuando hay dos share en la misma pagina
-                    $( "#create-modal2" ).click(function(e) {
+                    $( ".create-modal" ).click(function(e) {
                         e.preventDefault();
+                        $("#dialog-form").find('textarea').html($(this).data('body'));
+                        $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
                         dialog.dialog( "open" );
                     });
                 }

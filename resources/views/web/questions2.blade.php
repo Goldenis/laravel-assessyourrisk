@@ -2,6 +2,7 @@
 
 @section('content')
 
+<!-- OVERLAYS -->
 
     <div class="overlay menu-overlay">
         <button class="sub close-btn">✕</button>
@@ -37,6 +38,10 @@
         <button class="sub close-btn">✕</button>
         <div class="return"><div class="arrow"><img src="{{asset('img/arrow_left.png')}}"></div> <h4>Return to Assessment</h4></div>
 
+
+
+
+
         <div class="assessment-facts">
             @foreach($questions as $question)
                 <div class="facts-mobil">
@@ -52,7 +57,42 @@
         </div>
     </div>
 
-    <!-- ASSESSMENT-->
+
+
+
+
+
+
+<!-- INTRO CON RUEDA -->
+
+
+<section class="intro" class="flex-container vertical-container">
+
+    <div class="wheel-container">
+        <!--[if lt IE 10]>
+        <img src="img/wheel_fallback.jpg">
+        <![endif]-->
+        <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
+        <div id="wheel-overlay"></div>
+    </div>
+    <div class="intro-message">
+        {!!$intro->text!!}
+        <a class="btn-desktop" href="{{route('web.assessment')}}"><button class="action lifestyle"> {{$intro->button}}</button> </a>
+
+    </div>
+</section>
+
+
+
+<!-- ASSESSMEN TEXT -->
+
+
+
+
+
+
+
+<!-- ASSESSMENT QUESTIONS -->
     <section class="assessment scrollpane">
         <!-- <div class="section-title">Assess Your Risk</div> -->
         <div class="assessment-dots dots active">
@@ -61,6 +101,7 @@
                 i
             </div>
         </div>
+
 
         <div class="assessment-wrap">
 
@@ -283,7 +324,12 @@
 
     </section>
 
-    <!-- EDUCATION -->
+
+
+
+
+
+<!-- EDUCATION -->
 
     {{--formulario para cargar pldge--}}
     {!! Form::open(['route'=>['pledge.store'], 'method'=>'POST', 'id'=>'form-pledge']) !!}
@@ -418,16 +464,16 @@
 
     <script>
         $(document).ready(function(){
-            $('.right-column').addClass('in');
+           // $('.right-column').addClass('in');
             $('.logo').animate({opacity: 1}, 3000);
             //$('.question').fadeIn();
             // $('.question').animate({opacity: 1}, 3000);
             //$('.assessment').animate({opacity: 1}, 2000);
-            $('.assessment').addClass('in');
+           // $('.assessment').addClass('in');
             //$('.assessment').css('visibility','visible');
             $('.dot').css('background-color','#ff0000');
             setTimeout(function(){
-                $('.assessment').addClass('in');
+               // $('.assessment').addClass('in');
 
             },1000)
 
@@ -861,7 +907,7 @@
                 }
 
                 sessionStorage.setItem('educationView',deepViewed);
-                //  console.log(deepViewed);
+                  console.log(deepViewed);
 
                 var diveProgress = deepViewed + '/' + _totalHeadlines;
                 var divePercent = deepViewed / _totalHeadlines;
@@ -1529,13 +1575,21 @@
 
 
 
-
+            $('.menu-icon').on('click', function() {
+                alert('a');
+                if (!overlayOpen) {
+                    openMenuOverlay();
+                } else {
+                    closeMenuOverlay();
+                }
+            })
 
 
 
         });
 
     </script>
+    <script src="{{asset('js/roulette.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
 
 @endsection

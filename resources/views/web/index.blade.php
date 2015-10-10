@@ -452,7 +452,7 @@
                     actualmente tiene caergado el de educacion por que ese boton share es cargado por medio de ajax y no se pudo cargar
                     de otra  manera cuando se hace click el botn de share de educacion se va a ver este contenido, pero cuando se abra
                      cualquier optro se va a reemplazar por el attributo data-subject o data-body de cada boton-->
-                    <div id="dialog-form" title="{{$share_education->title}}">
+                    <div id="dialog-form" title="{{$share_education->subject}}">
                         <form>
                             <table class="modal-table">
                                 <tr>

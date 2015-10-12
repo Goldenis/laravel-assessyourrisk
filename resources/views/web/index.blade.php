@@ -647,9 +647,10 @@
     <script src="{{asset('js/roulette.js')}}"></script>
     <script>
         $(document).ready(function(){
+
             //localStorage.clear();
             //localStorage.clear();
-            //sessionStorage.clear();
+            //
             _$window = $(window);
             _$document = $(window.document);
            // $('.right-column').addClass('in');
@@ -1256,6 +1257,8 @@
 
             function nextQuest(){
 
+                createQuiz();
+
                 $('.assessment .question').eq(_currentQuestion).addClass('out');
                 $('.assessment .question').eq(_currentQuestion).removeClass('in');
 
@@ -1292,6 +1295,18 @@
                 maxquestion();
                 updateDotsQuestion(_currentQuestion);
                 updateCharts();
+
+            }
+
+            function createQuiz()
+            {
+                if(sessionStorage.getItem('quiz')==undefined)
+                {
+                    $.get('{{URL::to("answers/createquiz")}}',{},function(e){
+                        sessionStorage.setItem('quiz',e);
+                    });
+
+                }
             }
 
 
@@ -1334,42 +1349,12 @@
 
                 //creamos el sesionstorage
                 sessionStorage.setItem('answersResult', answersResultString);
-                sessionStorage.setItem(id_question,value);
-                loadAnswer(value);
+               // sessionStorage.setItem(id_question,value);
+
             }
 
-            function loadAnswer(answer_id)
-            {
-                console.log('metric');
-                var session_id = localStorage.getItem('session');
-                var quiz_id = sessionStorage.getItem('quizz');
-                var question_id = $('#question_id').val();
 
-                var question_order = {{$question->order}};
 
-                if($.type(answer_id)=='array'){
-
-                    $.each(answer_id, function( index, value ) {
-
-                        $.get('../../metricanswer/load',{
-                            session_id:session_id,
-                            question_id:question_id,
-                            quiz_id:quiz_id,
-                            question_order:question_order,
-                            answer_id:value
-                        },function(){});
-                    });
-
-                }else{
-                    $.get('../../metricanswer/load',{
-                        session_id:session_id,
-                        question_id:question_id,
-                        quiz_id:quiz_id,
-                        question_order:question_order,
-                        answer_id:answer_id
-                    },function(){});
-                }
-            }
 
             //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
 
@@ -1420,6 +1405,7 @@
                $('.question').eq(_currentQuestion).removeClass('out');
 
                $('.share.result').addClass('in');
+               $('.assessment-dots').removeClass('active');
 
                function explode(){
                    $(".progress-overlay").addClass('in');
@@ -1491,9 +1477,14 @@
                    }
                });
 
-               $.get('{{URL::to('answers/results')}}',{data:answersResult},function(e){
+               $.get('{{URL::to('answers/results')}}',{
+                   data:answersResult,
+                   quiz:sessionStorage.getItem('quiz'),
+                   session:localStorage.getItem('session')
+                   //question_id:i
 
-                   sessionStorage.setItem('quiz',e);
+               },function(e){
+                   //sessionStorage.setItem('quiz',e);
                    //creamos el atributo para el generador de pdf
                    var atributo =  $('.pdf').parent().find('a').attr('href');
                    var new_atributo = atributo+sessionStorage.getItem('quiz')+'/'+sessionStorage.getItem('level');

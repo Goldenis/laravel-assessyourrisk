@@ -118,6 +118,7 @@ Route::resource('/pledge','Backend\PledgeController');
 
 Route::get('/answers/results',['as'=>'answers.results','uses'=>'Frontend\AnswerController@result']);
 Route::get('/answers/results_final/{id}',['as'=>'answers.results','uses'=>'Frontend\AnswerController@result_final']);
+Route::get('/answers/createquiz',['as'=>'answers.createquiz','uses'=>'Frontend\AnswerController@createQuiz']);
 
 Route::resource('/answer','Frontend\AnswerController');
 

@@ -894,6 +894,7 @@
 
             e.preventDefault();
             var x = e.pageX;
+
             var distance = 0;
             var l;
             _$window.off('mousemove touchmove');
@@ -908,9 +909,9 @@
                 _$window.off('mousemove mouseup');
             });
         });
-        
-        $('.bottle').on('touchstart', function(e) {
 
+        $('.bottle').on('touchstart', function(e) {
+          console.log('touch start');
           // ('TOUCH START');
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             e.preventDefault();
@@ -2167,7 +2168,8 @@
         _registerEventListeners();
         _pageResize();
         setTimeout(function(){
-            _pageResize()
+            _pageResize();
+
         },1000);
 
         initialized = true;

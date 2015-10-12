@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Answer;
+use App\Models\Metric_answer;
 use App\Models\Question;
+use App\Models\QuestionOpcion;
 use App\Models\Quiz;
 use App\Models\Result;
 use App\Models\Result_level;
@@ -19,9 +21,10 @@ class AnswerController extends Controller
     {
         //este el es objeto con todas las respuestas
         $datos = $request['data'];
+        $quiz = $request['quiz'];
 
-       $quiz = new Quiz();
-       $quiz->save();
+      // $quiz = new Quiz();
+      //  $quiz->save();
 
        //return gettype($datos);
         foreach($datos as $key=>$value){
@@ -38,7 +41,7 @@ class AnswerController extends Controller
 
                     //$question_order = Question::find($key)->order;
                     $answer = new Answer();
-                    $answer->quiz_id = $quiz->id;
+                    $answer->quiz_id = $quiz;
                     $answer->question_id = $key;
 
                     if($key==33){
@@ -75,6 +78,43 @@ class AnswerController extends Controller
                     $answer->question_option_id = $val;
                     $answer->question_order = $question_order['order'];
                     $answer->save();
+
+                    $metric_answer = new Metric_answer();
+                    $metric_answer->session_id =$request['session'];
+                    $metric_answer->quiz_id =$request['quiz'];
+                    $metric_answer->question_id =$key;
+                    $question = Question::find($key);
+                    $metric_answer->question_text = $question->text;
+                    $metric_answer->question_order = $question->order;
+                    $metric_answer->domain = $_SERVER['SERVER_NAME'];
+                    $metric_answer->answer_id =$answer->id;
+
+                    if($key==34){
+                        $metric_answer->answer_text = $value;
+
+                    }else{
+                        $answ = QuestionOpcion::find($val);
+                        $metric_answer->answer_text = $answ->text;
+                    }
+                    $metric_answer->save();
+
+
+
+
+                   /* $metric_answer->quiz_id =$request['quiz'];
+                    $metric_answer->question_id =$i;
+
+                    $question = Question::find($i);
+                    $metric_answer->question_text =$question->text;
+
+                    $answ = QuestionOpcion::find($val);
+                    $metric_answer->answer_text = $answ->text;
+
+                    $metric_answer->domain = $_SERVER['SERVER_NAME'];
+                    $metric_answer->answer_id = $answer->id;
+                    */
+
+
                 }
             }
             else
@@ -83,7 +123,7 @@ class AnswerController extends Controller
                //var_dump($orden->id);
 
                 $answer = new Answer();
-                $answer->quiz_id = $quiz->id;
+                $answer->quiz_id = $quiz;
                 $answer->question_id = $key;
 
                 if($key==33){
@@ -117,14 +157,41 @@ class AnswerController extends Controller
                     }
                 }
 
+
+
                 $answer->question_option_id = $value;
                 $answer->question_order = $question_order['order'];
                 $answer->save();
+
+
+                $metric_answer = new Metric_answer();
+                $metric_answer->session_id =$request['session'];
+                $metric_answer->quiz_id =$request['quiz'];
+                $metric_answer->question_id =$key;
+                $question = Question::find($key);
+                $metric_answer->question_text = $question->text;
+                $metric_answer->question_order = $question->order;
+                $metric_answer->domain = $_SERVER['SERVER_NAME'];
+                $metric_answer->answer_id =$answer->id;
+
+                if($key==34){
+                    $metric_answer->answer_text = $value;
+
+                }else{
+                    $answ = QuestionOpcion::find($value);
+                    $metric_answer->answer_text = $answ->text;
+                }
+
+                $metric_answer->save();
+
+
+
+
             }
         }
 
-       //return $question_order['order'];
-        return $quiz->id;
+        //return $question_order['order'];
+        return $quiz;
 
 
 
@@ -134,7 +201,13 @@ class AnswerController extends Controller
     }
 
 
+public function createQuiz()
+{
+    $quiz = new Quiz();
+    $quiz->save();
+    return $quiz->id;
 
+}
 
 
 

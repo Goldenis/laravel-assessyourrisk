@@ -398,7 +398,7 @@
 
 
     function _registerEventListeners() {
-        $('#Begin, .assess-start').on('click', function(e) {
+        $('#Begin').on('click', function(e) {
             $('.vid-container').remove();
 
             e.stopPropagation();
@@ -753,7 +753,7 @@
         $('.fact-overlay .return').on('click', closeFactOverlay);
         $('.menu-overlay .close-btn').on('click', closeMenuOverlay);
         $('.progress-overlay .close-btn').on('click', closeProgressOverlay);
-        $('.assessment-intro button').on('click', function() {
+      /*  $('.assessment-intro button').on('click', function() {
             $('.right-column').addClass('in2')
             $('.assessment-intro').addClass('out-up');
             $('.assessment-intro').removeClass('in');
@@ -765,7 +765,9 @@
             $('.assessment-dots').addClass('active');
             $('.fact-icon').addClass('in');
 
-        })
+
+
+        })*/
 
 
 
@@ -889,6 +891,7 @@
             if (e.which !== 1){
                 return;
             }
+
             e.preventDefault();
             var x = e.pageX;
             var distance = 0;
@@ -907,7 +910,8 @@
         });
         
         $('.bottle').on('touchstart', function(e) {
-          //  console.log('TOUCH START');
+
+          // ('TOUCH START');
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             e.preventDefault();
             var x = touch.pageX;

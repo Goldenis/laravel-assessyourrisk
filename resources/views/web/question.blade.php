@@ -743,6 +743,7 @@
         */
         function loadAnswer(answer_id)
         {
+            console.log('metric');
             var session_id = localStorage.getItem('session');
             var quiz_id = sessionStorage.getItem('quizz');
             var question_id = $('#question_id').val();
@@ -753,7 +754,7 @@
 
                 $.each(answer_id, function( index, value ) {
 
-                    $.get('../../metricanswer/load',{
+                    $.get('{{URL::to('metricanswer/load')}}',{
                         session_id:session_id,
                         question_id:question_id,
                         quiz_id:quiz_id,
@@ -763,7 +764,7 @@
                 });
 
            }else{
-                $.get('../../metricanswer/load',{
+                $.get('{{URL::to('metricanswer/load')}}',{
                     session_id:session_id,
                     question_id:question_id,
                     quiz_id:quiz_id,

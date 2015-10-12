@@ -87,28 +87,7 @@
 
 
 
-<div class="overlay menu-overlay">
-    <button class="sub close-btn">✕</button>
-    <div class="vignettes">
-        <!-- <div class="progress">
-          <div class="percentage percdive"></div>
-          <div class="chart chart-5"></div>
-        </div> -->
-        <div class="sections">
-            <h3>Lifestyle</h3><br>
-            <h3>Your Normal</h3><br>
-            <h3>Family & Health History</h3>
-        </div>
-    </div>
-    <div class="share">
-        <div class="share-copy">
-            <h5>Save the life of somebody you love. Tell them to complete this experience too22.</h5>
-        </div>
-        <div class="share-btn-wrapper">
-            <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="#" id="create-modal" target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
-        </div>
-    </div>
-</div>
+
 
 
 
@@ -256,7 +235,7 @@
             $.post('sessione',data,function(last_id){
                 localStorage.setItem('session',last_id);
                 //carga metricas
-                $.get('{{ route('metric.load')  }}',{session:last_id,width:width,height:height,language:language},function(){});
+               // $.get('{{ route('metric.load')  }}',{session:last_id,width:width,height:height,language:language},function(){});
             })
         }
         else

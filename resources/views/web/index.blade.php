@@ -143,35 +143,35 @@
 
 </div>
 
-
-
-
-
-
-
-
-    <div class="overlay menu-overlay">
-        <button class="sub close-btn">✕</button>
-        <div class="vignettes">
-            <!-- <div class="progress">
-              <div class="percentage percdive"></div>
-              <div class="chart chart-5"></div>
-            </div> -->
-            <div class="sections">
-                <h3>Lifestyle</h3><br>
-                <h3>Your Normal</h3><br>
-                <h3>Family & Health History</h3>
-            </div>
-        </div>
-        <div class="share">
-            <div class="share-copy">
-                <h5>Save the life of somebody you love. Tell them to complete this experience too2.</h5>
-            </div>
-            <div class="share-btn-wrapper">
-                <span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a href="#" id="create-modal" target="_blank" class="mail-icon"><i class="fa fa-envelope fa-lg"></i></a>SHARE 1</span>
-            </div>
+<div class="overlay menu-overlay">
+    <button class="sub close-btn">✕</button>
+    <div class="vignettes">
+        <!-- <div class="progress">
+          <div class="percentage percdive"></div>
+          <div class="chart chart-5"></div>
+        </div> -->
+        <div class="sections">
+            <h3>Lifestyle</h3><br>
+            <h3>Your Normal</h3><br>
+            <h3>Family & Health History</h3>
         </div>
     </div>
+    <div class="share">
+        <div class="share-copy">
+            <h5>Save the life of somebody you love. Tell them to complete this experience too.</h5>
+        </div>
+        <div class="share-btn-wrapper">
+            <button class="share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><img src="img/twitter.png"></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><img src="img/facebook.png"></a><a href="#" id="create-modal" target="_blank" class="mail-icon"><img src="img/mail.png"></a>SHARE</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -182,7 +182,9 @@
 
     <div class="fact-overlay">
         <button class="sub close-btn">✕</button>
-        <div class="return"><div class="arrow"><img src="{{asset('img/arrow_left.png')}}"></div> <h4>Return to Assessment</h4></div>
+        <div class="return">
+            <div class="arrow"><img src="{{asset('img/arrow_left.png')}}"></div>
+            <h4>Return to Assessment</h4></div>
 
 
 
@@ -195,12 +197,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="assess">
-            <h4>Assess<br>Your Risk<br></h4>
-            <div class="arrow"><img src="{{asset('img/arrow_left.png')}}"></div>
-            <!-- <div class="logo-white"><img src="img/brightpink_logo_white.png"></div> -->
-            <div class="logo-white"><img src={{ URL::asset('img/brightpink_logo_white.png') }}></div>
-        </div>
+
     </div>
 
 
@@ -616,7 +613,12 @@
 @endsection
 
 @section('btn_mobile')
-
+    <div class="assess-start">
+        <h3>Assess Your Risk<br></h3>
+    </div>
+    <div class="lets-go">
+        <h3>Let’s Go<br></h3>
+    </div>
     <div class="understand">
         <div class="understand-contain">
             <h4>Understand<br>Your Risk<br></h4>
@@ -646,7 +648,10 @@
     <script>
         $(document).ready(function(){
             //localStorage.clear();
-            localStorage.clear();
+            //localStorage.clear();
+            //sessionStorage.clear();
+            _$window = $(window);
+            _$document = $(window.document);
            // $('.right-column').addClass('in');
             $('.logo').animate({opacity: 1}, 3000);
             //$('.question').fadeIn();
@@ -654,6 +659,7 @@
             //$('.assessment').animate({opacity: 1}, 2000);
            // $('.assessment').addClass('in');
             //$('.assessment').css('visibility','visible');
+
 
 
 
@@ -684,12 +690,47 @@
 
 
             //intro boton
-            $('.action.lifestyle').click(function(){
+            $('.action.lifestyle, .assess-start').click(function(){
                 $('.assessment').addClass('in');
                 $('.intro').addClass('out-up');
                 $('.assessment-intro').addClass('in');
                 $('.right-column').addClass('in');
             });
+
+            //boton navegacvion para cel
+            $('.lets-go').click(function(){
+                $('.right-column').addClass('in2');
+                $('.assessment-intro').addClass('out-up');
+                $('.assessment-intro').removeClass('in');
+                $('.question').eq(_currentQuestion).addClass('in');
+                $('.question').eq(_currentQuestion).removeClass('out');
+                $('.facts').eq(_currentQuestion).addClass('in');
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+                $('.assessment-dots').addClass('active');
+                $('.fact-icon').addClass('in');
+
+            });
+
+            $('.assessment-intro button').on('click', function() {
+                $('.right-column').addClass('in2')
+                $('.assessment-intro').addClass('out-up');
+                $('.assessment-intro').removeClass('in');
+                $('.question').eq(_currentQuestion).addClass('in');
+                $('.question').eq(_currentQuestion).removeClass('out');
+                $('.facts').eq(_currentQuestion).addClass('in');
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+                $('.assessment-dots').addClass('active');
+                $('.fact-icon').addClass('in');
+
+
+
+            })
+
+
+
+
 
             //funciones de level
             function getlevel(question_id,question_option_id)
@@ -936,7 +977,7 @@
             var distancia = (bottle_w*num_bottles)/6;
             //console.log(num_bottles);
 
-            $('.bottle').css('left',distancia);
+           // $('.bottle').css('left',distancia);
 
             for(i=0; i<num_bottles+1; i++) {
                 $('.answers.drinks .drink img').eq(i).css({opacity: 1});
@@ -1294,6 +1335,40 @@
                 //creamos el sesionstorage
                 sessionStorage.setItem('answersResult', answersResultString);
                 sessionStorage.setItem(id_question,value);
+                loadAnswer(value);
+            }
+
+            function loadAnswer(answer_id)
+            {
+                console.log('metric');
+                var session_id = localStorage.getItem('session');
+                var quiz_id = sessionStorage.getItem('quizz');
+                var question_id = $('#question_id').val();
+
+                var question_order = {{$question->order}};
+
+                if($.type(answer_id)=='array'){
+
+                    $.each(answer_id, function( index, value ) {
+
+                        $.get('../../metricanswer/load',{
+                            session_id:session_id,
+                            question_id:question_id,
+                            quiz_id:quiz_id,
+                            question_order:question_order,
+                            answer_id:value
+                        },function(){});
+                    });
+
+                }else{
+                    $.get('../../metricanswer/load',{
+                        session_id:session_id,
+                        question_id:question_id,
+                        quiz_id:quiz_id,
+                        question_order:question_order,
+                        answer_id:answer_id
+                    },function(){});
+                }
             }
 
             //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
@@ -1906,14 +1981,14 @@
 
 
 
-            $('.menu-icon').on('click', function() {
+            /*$('.menu-icon').on('click', function() {
                 alert('a');
                 if (!overlayOpen) {
                     openMenuOverlay();
                 } else {
                     closeMenuOverlay();
                 }
-            })
+            })*/
 
 
 

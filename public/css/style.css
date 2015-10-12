@@ -476,7 +476,7 @@ button.sub:hover {
   -webkit-overflow-scrolling: touch;
   border: none;
   text-align: center;
-  z-index: 100;
+  z-index: 110;
 
 }
 .progress-overlay .close-btn, .menu-overlay .close-btn {
@@ -906,7 +906,7 @@ button.sub:hover {
   top: 3rem;
 }
 .menu-overlay {
-  z-index: 100;
+  z-index: 300;
 }
 .share-btn {
   overflow: hidden;
@@ -3061,7 +3061,7 @@ h5.mobile-only {
     padding: 2.1rem 2.5rem;
     width: 7rem;
     height: 4.5rem;
-    z-index: 90;
+    z-index: 110;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -3872,7 +3872,7 @@ h5.mobile-only {
     left: -100%;
   }
   .right-column.in .lets-go {
-    left: 100%;
+    left: 0%;
   }
     .right-column.in .lets-go.left0 {
         left: 0%;
@@ -4276,6 +4276,12 @@ h5.mobile-only {
             border-right: 10px solid #fff;
             border-bottom: 10px solid #fff;
             padding: 3rem;
+        }
+    }
+
+    @media(max-width: 650px){
+        .action.lifestyle {
+            display: none;
         }
     }
 

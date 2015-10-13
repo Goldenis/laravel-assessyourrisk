@@ -1263,7 +1263,7 @@
                 $('.assessment .question').eq(_currentQuestion).removeClass('in');
 
                 //esta es para la parte de mutación
-                var current_option = sessionStorage.getItem(35);
+                var current_option = sessionStorage.getItem('question_mutation_id');
                 var current_question = sessionStorage.getItem('current_question_id');
                 if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
                     _currentQuestion+=2;
@@ -1294,7 +1294,7 @@
                 row_back();
                 maxquestion();
                 updateDotsQuestion(_currentQuestion);
-                updateCharts();
+                //updateCharts();
 
             }
 
@@ -1354,19 +1354,12 @@
             }
 
 
-
-
             //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
 
             function completeInput(){
 
                 $('.question').each(function(i,val){
                     var question_id = $(this).find('.checkbox-list').data('question-id2');
-
-
-                    //console.log(question_id+'/'+$(this).find('.checkbox-list').data('question-id2'));
-
-
 
                     if(sessionStorage[question_id]!=undefined){
 
@@ -1404,8 +1397,14 @@
                $('.question').eq(_currentQuestion).addClass('in');
                $('.question').eq(_currentQuestion).removeClass('out');
 
-               $('.share.result').addClass('in');
+
                $('.assessment-dots').removeClass('active');
+
+               function show(){
+                   $('.share.result').addClass('in');
+               }
+               setTimeout(show,600);
+
 
                function explode(){
                    $(".progress-overlay").addClass('in');

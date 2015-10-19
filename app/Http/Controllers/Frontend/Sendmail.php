@@ -17,20 +17,28 @@ class Sendmail extends Controller
             $msj->to('gdelcarpio@gmail.com');
         });*/
 
-        $header = "From: noreply@assessyourrisk.org\nX-Mailer:PHP/".phpversion()."\nMime-Version: 1.0\nContent-Type: text/html;";
+        $email = $request['email'];
+		$myemail = $request['myemail'];
+		$name = $request['name'];
+        $subject = $request['subject'];
+        $body = $request['emailbody'];
+		echo $email;
+		echo $myemail;
+		echo $name;
+		echo $subject;
+		echo $body;
 
-        $type = $request['type'];
-        $mail = $request['mail'];
-        $quiz = $request['atributo'];
-        $level =  $request['level'];
-
-
-        $subject = 'Mensaje de envio assess';
-        $message = 'este es un mensaje para ver si esta funcionando correctamente';
-
-
-
-        mail($mail,$subject,$message,$header);
+		try {
+			Mail::raw($body, function ($message) use ($email, $subject, $myemail, $name) {
+				$message->from('brightpink@brightpink.org', 'Bright Pink');
+				$message->to($email);
+				$message->subject($subject);
+				$message->setReplyTo(array($myemail => $name));
+			});
+		} catch (Exception $e) {
+			echo 'Caught exception: ', $e->getMessage(), "\n";
+		}
+		return (false);
 
     }
     /**

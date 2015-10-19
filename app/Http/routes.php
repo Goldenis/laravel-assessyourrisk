@@ -144,7 +144,7 @@ Route::get('/metricanswer/load','Frontend\MetricAnswerController@load');
 
 
 
-//Route::resorce('/sendmail','Frontend\Sendmail');
+//Route::resource('/sendmail','Frontend\Sendmail');
 
 
 

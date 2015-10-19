@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Kyslik\ColumnSortable\Sortable;
+//use Kyslik\ColumnSortable\Sortable;
 
 class Metric extends Model
 {
-    use Sortable;
+   // use Sortable;
 
     protected $table = 'metrics';
     protected $fillable = ['session_id','browser','city','state','country','date','device','ip','language','os','pid','referrer','resolution','screen'];

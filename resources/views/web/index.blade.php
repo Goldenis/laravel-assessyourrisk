@@ -459,23 +459,23 @@
                             </tr>
 
                             <tr>
-                                <td><label for="email">Recipient Email</label></td>
-                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value="dusting@toogoodstrategy.com"></td>
+                                <td><label for="email">To</label></td>
+                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
                             </tr>
 
                             <tr>
-                                <td><label for="myemail">Recipient Email</label></td>
-                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value="Dustin DeVries"></td>
+                                <td><label for="myemail">From</label></td>
+                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
                             </tr>
 
                             <tr>
-                                <td><label for="name">Your Name</label></td>
+                                <td><label for="name">Name</label></td>
                                 <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all"></td>
                             </tr>
 
                             <tr>
                                 <td valign="top"><label for="emailbody">Body</label></td>
-                                <td><textarea name="emailbody" id="emailbody" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
+                                <td><textarea disabled name="emailbody" id="emailbody" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
                             </tr>
 
                             <tr>
@@ -1598,7 +1598,7 @@
                 }
             }
 
-            function addUser() {
+            function sendEmail() {
                 var valid = true;
                 allFields.removeClass( "ui-state-error" );
 
@@ -1626,7 +1626,7 @@
                 width: 350,
                 modal: true,
                 buttons: {
-                    "Send e-mail": addUser
+                    "Send e-mail": sendEmail
                     /*Cancel: function() {
                      dialog.dialog( "close" );
                      }*/
@@ -1639,7 +1639,7 @@
 
             form = dialog.find( "form" ).on( "submit", function( event ) {
                 event.preventDefault();
-                // addUser();
+                // sendEmail();
             });
 
 
@@ -1649,10 +1649,6 @@
                 $("#dialog-form").find('#subject').attr('value',$(this).data('subject'));
                 dialog.dialog( "open" );
             });
-
-//dusting
-            dialog.dialog("open");
-
 
             /* //este es cuando hay dos share en la misma pagina
              $( "#create-modal2" ).click(function(e) {
@@ -1909,7 +1905,7 @@
                         }
                     }
 
-                    function addUser() {
+                    function sendEmail() {
                         var valid = true;
                         allFields.removeClass( "ui-state-error" );
 
@@ -1924,6 +1920,17 @@
                         valid = valid && checkRegexp( myemail, emailRegex, "eg. ui@jquery.com" );
 
                         if ( valid ) {
+							resp = $.ajax({
+							  type : "GET",
+							  cache: false,
+							  url : "/ayr15/sendmail/mail",
+							  data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + emailbody.val()
+							}).done(function(data) {
+								alert("Email sent successfully.");
+							}).fail(function(error) {
+								alert("Email failed to send.");
+							});
+
                             $( "#users tbody" ).append( "<tr>" +
                             "<td>" + name.val() + "</td>" +
                             "<td>" + email.val() + "</td>" +
@@ -1940,7 +1947,7 @@
                         width: 350,
                         modal: true,
                         buttons: {
-                            "Send e-mail": addUser
+                            "Send e-mail": sendEmail
                             /*Cancel: function() {
                              dialog.dialog( "close" );
                              }*/
@@ -1953,7 +1960,7 @@
 
                     form = dialog.find( "form" ).on( "submit", function( event ) {
                         event.preventDefault();
-                        addUser();
+                        sendEmail();
                     });
 
                     $( "#create-modal" ).click(function(e) {

@@ -21,24 +21,27 @@ class Sendmail extends Controller
 		$myemail = $request['myemail'];
 		$name = $request['name'];
         $subject = $request['subject'];
-        $body = $request['emailbody'];
+        $emailbody = $request['emailbody'];
+        $emailbodytext = strip_tags($emailbody);
 		echo $email;
 		echo $myemail;
 		echo $name;
 		echo $subject;
-		echo $body;
+		echo $emailbody;
+		echo $emailbodytext;
 
 		try {
-			Mail::raw($body, function ($message) use ($email, $subject, $myemail, $name) {
-				$message->from('brightpink@brightpink.org', 'Bright Pink');
-				$message->to($email);
-				$message->subject($subject);
-				$message->setReplyTo(array($myemail => $name));
+			Mail::send([], [], function ($message) use ($email, $subject, $myemail, $name, $emailbody, $emailbodytext) {
+				$message->from('brightpink@brightpink.org', 'Bright Pink')
+				->to($email)
+				->subject($subject)
+				->setReplyTo(array($myemail => $name))
+				->setBody($emailbody)
+				->addPart($emailbodytext);
 			});
 		} catch (Exception $e) {
 			echo 'Caught exception: ', $e->getMessage(), "\n";
 		}
-		return (false);
 
     }
     /**

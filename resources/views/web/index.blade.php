@@ -449,28 +449,34 @@
                     actualmente tiene caergado el de educacion por que ese boton share es cargado por medio de ajax y no se pudo cargar
                     de otra  manera cuando se hace click el botn de share de educacion se va a ver este contenido, pero cuando se abra
                      cualquier optro se va a reemplazar por el attributo data-subject o data-body de cada boton-->
+<!--dustind-->
                     <div id="dialog-form" title="Share">
                         <form>
                             <table class="modal-table">
                                 <tr>
                                     <td><label for="subject">subject</label></td>
-                                    <td> <input type="text" required name="subject" id="subject" placeholder="subject"
+                                    <td> <input type="text" required name="subject" id="subject" placeholder="Subject"
                                                 value="{{$share_education->subject}}" class="text modal-text ui-widget-content ui-corner-all"></td>
                                 </tr>
 
                                 <tr>
-                                    <td><label for="email">Email</label></td>
-                                    <td><input type="email" required name="email" id="email" placeholder="email" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                    <td><label for="email">Recipient Email</label></td>
+                                    <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin@toogoodstrategy.com"></td>
                                 </tr>
 
                                 <tr>
-                                    <td><label for="name">Name</label></td>
-                                    <td><input type="text" required name="name" id="name" placeholder="Name" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                    <td><label for="myemail">Your Email</label></td>
+                                    <td><input type="text" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin.devries@gmail.com"></td>
                                 </tr>
 
                                 <tr>
-                                    <td valign="top"><label for="password">Body</label></td>
-                                    <td><textarea name="" id="" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
+                                    <td><label for="name">Your Name</label></td>
+                                    <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all" value="Dustin DeVries"></td>
+                                </tr>
+
+                                <tr>
+                                    <td valign="top"><label for="emailbody">Body</label></td>
+                                    <td><textarea name="emailbody" id="emailbody" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
                                 </tr>
 
                                 <tr>
@@ -1553,8 +1559,8 @@
                     emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
                     name = $( "#name" ),
                     email = $( "#email" ),
-                    password = $( "#password" ),
-                    allFields = $( [] ).add( name ).add( email ).add( password ),
+                    emailbody = $( "#emailbody" ),
+                    allFields = $( [] ).add( name ).add( email ).add( emailbody ).add( myemail ).add( subject ),
                     tips = $( ".validateTips" );
 
             function updateTips( t ) {
@@ -1639,6 +1645,8 @@
                 dialog.dialog( "open" );
             });
 
+			// dustind
+             dialog.dialog( "open" );
 
             /* //este es cuando hay dos share en la misma pagina
              $( "#create-modal2" ).click(function(e) {
@@ -1858,8 +1866,11 @@
                             emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
                             name = $( "#name" ),
                             email = $( "#email" ),
+                            subject = $( "#subject" ),
+                            myemail = $( "#myemail" ),
+                            emailbody = $( "#emailbody" ),
 
-                            allFields = $( [] ).add( name ).add( email),
+                            allFields = $( [] ).add( name ).add( email).add( subject ).add( myemail ).add( emailbody ),
                             tips = $( ".validateTips" );
 
                     function updateTips( t ) {
@@ -1898,9 +1909,12 @@
 
                         valid = valid && checkLength( name, "username", 3, 16 );
                         valid = valid && checkLength( email, "email", 6, 80 );
+                        valid = valid && checkLength( myemail, "myemail", 6, 80 );
+                        valid = valid && checkLength( subject, "subject", 3, 200 );
+                        valid = valid && checkLength( emailbody, "emailbody", 3, 20000 );
 
-                        valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
                         valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
+                        valid = valid && checkRegexp( myemail, emailRegex, "eg. ui@jquery.com" );
 
                         if ( valid ) {
                             $( "#users tbody" ).append( "<tr>" +

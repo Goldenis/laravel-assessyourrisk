@@ -2645,7 +2645,28 @@ input[type="checkbox"], input[type="radio"] {
     transform: perspective(1000px) translateY(-50%);
     top: 50%;
 }
-.in {
+.in{
+    visibility: visible;
+    opacity: 1 !important;
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: all 1s 0 ease-in-out;
+    -moz-transition: all 1s 0 ease-in-out;
+    -o-transition: all 1s 0 ease-in-out;
+    -ms-transition: all 1s 0 ease-in-out;
+    transition: all 1s 0 ease-in-out;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-delay: 0;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: all;
+    -webkit-transition-delay: 0;
+}
+
+.inn {
     visibility: visible;
     opacity: 1 !important;
     -ms-transform: translateY(0%);

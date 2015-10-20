@@ -3,9 +3,6 @@
 @section('content')
 
     <!-- OVERLAYS -->
-<script>
-    sessionStorage.clear();
-</script>
 
     <div class="overlay progress-overlay">
         <div class="question-stats">
@@ -209,24 +206,6 @@
 
 
 
-    <!-- INTRO CON RUEDA -->
-
-
-    <section class="intro" class="flex-container vertical-container">
-
-        <div class="wheel-container">
-            <!--[if lt IE 10]>
-            <img src="img/wheel_fallback.jpg">
-            <![endif]-->
-            <div id="wheel-base"><!-- <div class="spin">CLICK TO SPIN</div> --></div>
-            <div id="wheel-overlay"></div>
-        </div>
-        <div class="intro-message">
-            {!!$intro->text!!}
-            <button class="action lifestyle"> {{$intro->button}}</button>
-
-        </div>
-    </section>
 
 
 
@@ -240,7 +219,7 @@
 
 
     <!-- ASSESSMENT QUESTIONS -->
-    <section class="assessment scrollpane">
+    <section class="assessment scrollpane" style="    opacity: 1 !important;">
         <!-- <div class="section-title">Assess Your Risk</div> -->
         <div class="assessment-dots dots">
             <div class="btn-back"><img src="{{asset('img/arrow_left_pink.png')}}"></div>
@@ -248,200 +227,12 @@
         </div>
 
         <!-- ASSESSMEN intro   -->
-        <section class="assessment-intro">
 
-            {!! $assessment_intro->text !!}
-
-            <button class="action">{{ $assessment_intro->button  }}</button>
-            <div class="copyright copyright-mobile">Copyright © {{$year}} Bright Pink
-                <div class="legal">
-                    <a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a>
-                    <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a>
-                </div>
-            </div>
-        </section>
 
 
         <div class="assessment-wrap">
 
-            @foreach($questions as $question)
-                {!!Form::hidden('question_id',$question->id,['id'=>'question_id'])!!}
 
-                {{--RADIO BOTON--}}
-
-                @if($question->question_type_id==1)
-
-                    {{--{{dd($question)}}--}}
-
-                    <div class="question out gif" data-question-id="{{$question->id}}">
-                        @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
-                                <img src="{{asset('img/')}}/{!!$question->gif!!}">
-                            </div>
-                        @endif
-                        <div class="prompt">{!!$question->text!!}</div>
-
-                        <div class="answers-list" data-question-id2="{{$question->id}}">
-                            <div class="checkbox-list" data-question-id2="{{$question->id}}">
-                                <form>
-                                    @foreach($question->questionOption as $option)
-                                        <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif">
-                                            <input type="radio" name="radio" data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
-                                            <div class="label">{!! $option->text !!}</div>
-                                        </div>
-                                    @endforeach
-                                </form>
-                            </div>
-                            <br>
-                            <div class="answers">
-                                <button class="radio_button" disabled>{{$question->button_text}}</button>
-                                @if($question->email==1)
-                                    <button class="create-modal sub ask" data-subject="{{$question->email_subject}}" data-body="{{$question->email_body}}">Help me ask them</button>
-                                @endif
-                            </div>
-                        </div>
-
-                    </div>
-
-                @elseif($question->question_type_id==2)
-                    {{--CHECK BOX--}}
-
-                    <div class="question out"  data-question-id="{{$question->id}}">
-                        @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
-                                <img src="{{asset('img/')}}/{!!$question->gif!!}">
-                            </div>
-                        @endif
-                        <div class="prompt">{!!$question->text!!}</div>
-
-                        <div class="checkbox-list" data-question-id2="{{$question->id}}">
-
-                            @foreach($question->questionOption as $option)
-                                <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif" data-answer-id="1">
-                                    <input name="check" type="checkbox" @if($option->unique==1) class="none-of-above" @endif data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
-                                    <div class="label">{!!$option->text!!}</div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <button class="check_box" disabled data-question-id="{{$question->id}}">{{$question->button_text}}</button>
-                            @if($question->email==1)
-                                <button class="create-modal sub ask" data-subject="{{$question->email_subject}}" data-body="{{$question->email_body}}">Help me ask them</button>
-
-
-
-                            @endif
-                        </div>
-                    </div>
-
-                @elseif($question->question_type_id==3)
-                    {{--BOTON--}}
-
-
-
-                    <div class="question @if($question->gif != '' || $question->gif != null) gif @endif out" data-question-id="{{$question->id}}">
-
-                        @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
-                                <img src="{{asset('img/')}}/{!!$question->gif!!}">
-                            </div>
-                        @endif
-
-                        <div class="prompt">{!! $question->text !!}</div>
-
-                        <div class="answers button">
-                            @foreach($question->questionOption as $option)
-                                <button class="button_type" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">{{$option->button_text}}</button>
-                            @endforeach
-                            @if($question->email==1)
-                                <button class="create-modal sub ask" data-subject="{{$question->email_subject}}" data-body="{{$question->email_body}}">Help me ask them</button>
-
-
-
-                            @endif
-                        </div>
-                    </div>
-
-
-
-
-                @elseif($question->question_type_id==4)
-                    {{--ESPECIAL--}}
-
-                    @if($question->id == 33) {{--bottle--}}
-
-                    <div class="question drinks-question out"  data-question-id="{{$question->id}}">
-                        <div class="prompt">{!!$question->text!!}</div>
-                        <div class="drink-slider">
-                            <div class="bottle"><img src="{{asset('img/assessment/bottle.png')}}"></div>
-                            <div class="answers drinks">
-                                <div class="drink" data-answer-id="1"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="2"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="3"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="4"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="5"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="6"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <div class="drink" data-answer-id="7"><img src="{{asset('img/assessment/drink_fill.png')}}"></div>
-                                <br><br><br>
-                                <button class="btn-bottle" data-question-id="{{$question->id}}">Continue</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    @elseif($question->id == 34) {{--weight--}}
-                    <div class="question weight-question" data-question-id="34">
-                        <div class="weight-wrapper">
-                            <div class="prompt weight-header">What is your weight?</div>
-                            <span>Your answer will only be used to calculate your BMI,<br> which can affect your risk.</span>
-                            <div class="visual">
-                                <div class="weight-container-mask">
-                                    <div class="weight-container">
-                                        <div id="weight-base"></div>
-                                        <div id="weight-overlay"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="answers weight-answer">
-                                <button class="submit-weight">Continue</button>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-
-                    @elseif($question->id == 49) {{--height  // este es solo para local  --}}
-                    {{-- @elseif($question->id == 49) --}}{{--height--  // este es para producción--}}
-
-                    <div class="question height-question" id="height-question" data-question-id="{{$question->id}}" data-question-name="bmi">
-                        <div class="bmi-result">
-                            <div class="answers">
-                                <button id="btn-bmi">Continue</button>
-                            </div>
-                        </div>
-
-                        <div class="height-wrapper">
-                            <div class="prompt height-header">What is your height?</div>
-                            <div class="visual">
-                                <div class="height-container-mask">
-                                    <div class="height-container">
-                                        <div id="height-base"></div>
-                                        <div id="height-overlay"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn-calculate">Calculate</button>
-                        </div>
-
-
-                        <br>
-
-
-                    </div>
-                    @endif
-
-                @endif
-
-            @endforeach
 
             <div class="share result">
                 <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
@@ -494,24 +285,9 @@
 
             </div>
 
-
-
-
-
-
-
-
         </div>
 
-
-
-
-
-
     </section>
-
-
-
 
 
 
@@ -652,18 +428,18 @@
 
 
 @section('script')
-    <script src="{{asset('js/roulette.js')}}"></script>
-    <script>
 
+    <script>
         $(document).ready(function(){
 
-            //localStorage.clear();
-            //localStorage.clear();
-            //
-            _$window = $(window);
+            //sessionStorage.setItem('gonzalo',20);
+
+             _$window = $(window);
             _$document = $(window.document);
-            // $('.right-column').addClass('in');
+            $('.right-column').addClass('in');
+            $('.right-column').addClass('in2');
             $('.logo').animate({opacity: 1}, 3000);
+            $('.assessment').addClass('peru');
             //$('.question').fadeIn();
             // $('.question').animate({opacity: 1}, 3000);
             //$('.assessment').animate({opacity: 1}, 2000);
@@ -1413,9 +1189,110 @@
             completeInput();
 
             function showResult(){
-                var url = 'results';
-                $(location).attr('href',url);
+                // var url = '../answers/results';
+                // $(location).attr('href',url);
+                $('.question').eq(_currentQuestion).addClass('in');
+                $('.question').eq(_currentQuestion).removeClass('out');
+
+                $('.share.result').addClass('in');
+                $('.assessment-dots').removeClass('active');
+
+                function explode(){
+                    $(".progress-overlay").addClass('in');
+                }
+                setTimeout(explode, 3000);
+
+                //carga datos según el level
+                var level = sessionStorage.getItem('level');
+                $.get('{{URL::to('/resultlevel')}}/'+level,{},function(e){
+
+                    var datos = JSON.parse(e);
+
+                    $('.risk-level').html(datos.name);
+                    $('.col-izq-1').html(datos.text_less);
+                    $('.col-der-1').html(datos.text_less_col2);
+                    $('.col-izq-2').html(datos.text_more);
+                    $('.col-der-2').html(datos.text_more_col2);
+                });
+
+                //mostrando a favor y  not a favor
+
+                var recupero = sessionStorage.getItem('answersResult');
+                answersResult = JSON.parse(recupero);
+
+                $.each(answersResult, function(i, val){
+
+
+                    if(typeof val == 'object'){
+                        $.each(val,function(j,val2){
+                            console.log(val2);
+                            //$('.cards .item-'+val2).addClass('item-color2');
+                            $('.cards .item-'+val2).addClass('item-in');
+                        });
+                    }else{
+                        //botella
+                        if(i==33){
+                            if(val==0){
+                                val=44;
+                            }else if(val==1){
+                                val=45;
+                            }else if(val==2){
+                                val=46;
+                            }else if(val==3){
+                                val=47;
+                            }else if(val==4){
+                                val=48;
+                            }else if(val==5){
+                                val=49;
+                            }else if(val==6){
+                                val=50;
+                            }
+                        }
+
+                        //bmi
+                        if(i==49){ // 49 es para internet
+                            if(val<18.5){
+                                val=95;
+                            }else if(val>=18.5 && val<=24.9){
+                                val=96;
+                            }else if(val>=25 && val<=29.9){
+                                val=97;
+                            }else if(val>=30){
+                                val=98;
+                            }
+                        }
+
+                        //console.log(val+' numero');
+                        $('.cards .item-'+val).addClass('item-in');
+                    }
+                });
+
+                $.get('{{URL::to('answers/results')}}',{
+                    data:answersResult,
+                    quiz:sessionStorage.getItem('quiz'),
+                    session:localStorage.getItem('session')
+                    //question_id:i
+
+                },function(e){
+                    //sessionStorage.setItem('quiz',e);
+                    //creamos el atributo para el generador de pdf
+                    var atributo =  $('.pdf').parent().find('a').attr('href');
+                    var new_atributo = atributo+sessionStorage.getItem('quiz')+'/'+sessionStorage.getItem('level');
+                    $('.pdf').parent().find('a').attr('href',new_atributo);
+
+                   // var url = 'results';
+                   // $(location).attr('href',url);
+
+                });
+
+                /*var property = id_question;
+
+                 //agrego una nueva propiedad al json
+                 answersResult[property] = value;*/
             }
+
+
+           showResult();
 
 
             function toggleColumn() {
@@ -1829,16 +1706,16 @@
                         valid = valid && checkRegexp( myemail, emailRegex, "eg. ui@jquery.com" );
 
                         if ( valid ) {
-							resp = $.ajax({
-							  type : "GET",
-							  cache: false,
-							  url : "/ayr15/sendmail/mail",
-							  data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + emailbody.val()
-							}).done(function(data) {
-								alert("Email sent successfully.");
-							}).fail(function(error) {
-								alert("Email failed to send.");
-							});
+                            resp = $.ajax({
+                                type : "GET",
+                                cache: false,
+                                url : "/ayr15/sendmail/mail",
+                                data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + emailbody.val()
+                            }).done(function(data) {
+                                alert("Email sent successfully.");
+                            }).fail(function(error) {
+                                alert("Email failed to send.");
+                            });
 
                             $( "#users tbody" ).append( "<tr>" +
                             "<td>" + name.val() + "</td>" +

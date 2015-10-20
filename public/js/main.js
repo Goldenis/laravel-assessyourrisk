@@ -837,7 +837,7 @@
         $('.menu-overlay .vignettes h3').on('click', function() {
             changeModule($('.menu-overlay .vignettes h3').index($(this)));
             closeMenuOverlay();
-           $('.assessment').removeClass('in');
+            $('.assessment').removeClass('in');
             $('.right-column').addClass('left');
             $('.menu-icon').addClass('left');
             $('.education').addClass('in');

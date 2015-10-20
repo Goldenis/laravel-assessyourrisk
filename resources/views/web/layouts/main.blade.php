@@ -156,7 +156,7 @@
 
 
 <script>
-    sessionStorage.clear();
+    //sessionStorage.clear();
     //guarda en el storage el numero máximo de preguntas activas, para poder usarlo en el gráfico donut
     sessionStorage.setItem('num_question',{{$num_question}});
     sessionStorage.setItem('num_education',{{$num_education+2}});

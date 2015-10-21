@@ -7,12 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Metric extends Model
 {
-   // use Sortable;
 
     protected $table = 'metrics';
     protected $fillable = ['session_id','browser','city','state','country','date','device','ip','language','os','pid','referrer','resolution','screen'];
-    protected $sortable = ['session_id','browser','city','state','country','date','device','ip','language','os','pid','referrer','resolution','screen','created_at',
-        'updated_at'];
+   // protected $sortable = ['session_id','browser','city','state','country','date','device','ip','language','os','pid','referrer','resolution','screen','created_at',
+    //    'updated_at'];
 
 
 

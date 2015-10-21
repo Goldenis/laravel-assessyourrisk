@@ -23,12 +23,12 @@ class Sendmail extends Controller
         $subject = $request['subject'];
         $emailbody = $request['emailbody'];
         $emailbodytext = strip_tags($emailbody);
-		echo $email;
-		echo $myemail;
-		echo $name;
-		echo $subject;
-		echo $emailbody;
-		echo $emailbodytext;
+            echo $email;
+            echo $myemail;
+            echo $name;
+            echo $subject;
+            echo $emailbody;
+            echo $emailbodytext;
 
 		try {
 			Mail::send([], [], function ($message) use ($email, $subject, $myemail, $name, $emailbody, $emailbodytext) {
@@ -42,6 +42,34 @@ class Sendmail extends Controller
 		} catch (Exception $e) {
 			echo 'Caught exception: ', $e->getMessage(), "\n";
 		}
+
+    }
+
+
+    /**
+     * @param Request $request
+     */
+    public function sendpdf(Request $request)
+    {
+
+        $emaildr = $request['emaildr'];
+        $subject = $request['subject'];
+        $data['name'] = $request['name'];
+        //$data['pdf'] = $request['pdf'];
+
+        echo $to;
+        echo $from;
+        echo $subject;
+
+        try {
+            Mail::send('web.emails.doctor', $data, function ($message) use ($to, $subject, $from) {
+                $message->from('brightpink@brightpink.org', 'Bright Pink')
+                    ->to($emaildr)
+                    ->subject($subject);
+            });
+        } catch (Exception $e) {
+            echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
 
     }
     /**

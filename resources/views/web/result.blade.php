@@ -448,7 +448,6 @@
 
 
 
-
             if(sessionStorage.getItem('level')==undefined){
                 sessionStorage.setItem('level',1);
             }
@@ -516,6 +515,26 @@
 
 
 
+            $('.send-dr-email').click(function(){
+
+                var name = $('input#your-name-dr').val();
+                var emaildr = $('input#dr-email-address').val();
+                var subject ='subject del e-mail';
+               // var pdf = '{{route("sendpdf")}}';
+
+                        $.ajax({
+                            type:'GET',
+                            cache:false,
+                            url:'{{route("sendpdf")}}',
+                            data:'emaildr='+emaildr+'&name='+name+'&subject='+subject
+                        }).done(function(data){
+                            alert("Email sent successfully.");
+                        }).fail(function(error){
+                            alert('Email failed to send.');
+                        });
+
+            });
+
 
 
             //funciones de level
@@ -572,36 +591,6 @@
             $('.fact-mobil').removeClass('in');
             // $('.facts').eq(_currentQuestion).addClass('in');
 
-//boton
-
-            $('button.button_type').click(function(){
-                var question_id = $(this).parents('.question').data('question-id');
-                var dato = $(this).text();
-                var option = $(this).data('option-id');
-
-                getlevel(question_id,option); // obtiene el level
-
-                // exclusive for question id=17 / male overlay
-                if(dato == 'No' && question_id == 17){
-                    $('.male-overlay').addClass('in');
-                    $('.fact-icon').removeClass('in');
-                    overlayOpen = true;
-                    return false;
-                }else{
-                    saveAnswers(question_id, option);
-                    if(question_id == {{$last_question->id}} ){
-                        showResult();
-                        nextQuest()
-                    }else{
-                        nextQuest();
-                    }
-
-
-
-                    // var url_next = '{{--$url--}}';
-                    // $(location).attr('href',url_next);
-                }
-            });
 
 //radioboton
             // $('button.radio_button').prop('disabled', !this.checked);
@@ -609,273 +598,9 @@
             var quest =  $('.answers').data('question-id2');
             var item = sessionStorage.getItem(quest);
 
-            //var optionn = $('.answers .checkbox input').data('option-id');
 
 
 
-            //verifico si hay algun radioboton seleccionado en la pregunta
-
-            $('input[name="radio"]').change(function(i,val){
-
-                var lista = $(this).parent().parent().parent();
-
-                lista.find('.checkbox input').each(function(){
-                    if($(this).data('option-id')==item){
-                        $(this).prop("checked", "checked");
-                    }
-                });
-
-                var option = $(this).data('option-id');
-                sessionStorage.setItem('question_mutation_id',option);
-
-                //deshabilitando el boton
-                $(this).parent().parent().parent().parent().find('.radio_button').prop('disabled', !this.checked);
-            });
-
-            /*$('input[name="radio"]').each(function(i,val){
-             if($(this).prop('checked')){
-             $('button.radio_button').removeAttr("disabled");
-             }
-             });*/
-
-            $('button.radio_button').click(function(){
-
-                var question_id = $(this).parents('.question').data('question-id');
-
-                var option = [];
-
-                $(this).parent().parent().find('.checkbox-list input:checked').each(function() {
-                    option.push($(this).data('option-id'));
-                });
-
-                saveAnswers(question_id, option);
-                getlevel(question_id,option);
-
-                if(question_id == {{$last_question->id}} ){
-                    showResult();
-                    nextQuest()
-                }else{
-                    nextQuest();
-                }
-
-
-            });
-
-
-
-
-
-//check box
-
-
-
-            $('input[name="check"]').each(function(i,val){
-                if($(this).prop('checked')){
-                    $('button.check_box').removeAttr("disabled");
-                }
-            });
-
-
-            $('input[name="check"]').change(function() {
-
-                var boton = $(this).parent().parent().parent().find('.check_box');
-
-                var allCheckboxes = $(this).parent().parent().parent().find('input[name="check"]');
-                var noneChecked = true;
-                var isChecked = $(this).prop('checked');
-                if (isChecked) {
-                    if ($(this).hasClass('not-sure') || $(this).hasClass('none-of-above')) {
-                        $(allCheckboxes).prop('checked', false);
-                    }
-                    else {
-                        $('input[name="check"].not-sure').prop('checked', false);
-                        $('input[name="check"].none-of-above').prop('checked', false);
-                    }
-
-                    $(this).prop('checked', true);
-                }
-                allCheckboxes.each(function (index, item) {
-                    // console.log(item.checked);
-                    if (item.checked) {
-                        noneChecked = false;
-                        return false;
-                    }
-                });
-
-                boton.prop('disabled', noneChecked);
-            });
-
-            $('button.check_box').click(function(){
-
-                var question_id = $(this).data('question-id');
-
-                var options = [];
-
-                $(this).parent().parent().find('.checkbox-list input:checked').each(function() {
-                    options.push($(this).data('option-id'));
-                });
-                // console.log(question_id+' | '+options);
-
-                saveAnswers(question_id, options);
-                getlevel(question_id, options);
-
-                if(question_id == {{$last_question->id}} ){
-                    showResult();
-                    nextQuest()
-                }else{
-                    nextQuest();
-                }
-
-            });
-
-
-//ESPECIALES
-
-            // bottle
-            $('.btn-bottle').click(function(){
-
-                row_back();
-                maxquestion();
-                updateDotsQuestion(_currentQuestion);
-
-                var question_id = $(this).data('question-id');
-                var option = sessionStorage.getItem('bottle');
-
-                var bottle_w =  sessionStorage.setItem('bottle_w',$('.drink-slider').width());
-
-                //convertimos el string en numero
-                var bottle = parseInt(option);
-
-                saveAnswers(question_id, bottle);
-                getlevel(question_id,bottle);
-
-
-                nextQuest();
-
-            });
-
-
-            var num_bottles = sessionStorage.getItem('bottle');
-            num_bottles = num_bottles*1;
-
-            var bottle_w = sessionStorage.getItem('bottle_w');
-
-            var distancia = (bottle_w*num_bottles)/6;
-            //console.log(num_bottles);
-
-            // $('.bottle').css('left',distancia);
-
-            for(i=0; i<num_bottles+1; i++) {
-                $('.answers.drinks .drink img').eq(i).css({opacity: 1});
-            }
-
-//WEIGHT
-            $('.submit-weight').click(function(){
-                var question_id = $('.weight-question').data('question-id');
-                //  console.log(window.weightInPounds);
-                $('.weight-question').addClass('out-up');
-                $('.weight-question').removeClass('in');
-                $('#height-question').addClass('in');
-                $('#height-question').removeClass('out-up');
-
-                nextQuest();
-
-                saveAnswers(question_id, window.weightInPounds);
-                getlevel(question_id,window.weightInPounds);
-
-            });
-
-//HEIGHT
-            $('.btn-calculate').click(function(){
-                $('.height-wrapper').addClass('out-up');
-            });
-
-
-//BMI
-            $('#btn-bmi').click(function(){
-                var bmi = $('#height-question .bmi-result h3').text();
-                var question_id = $('#height-question').data('question-id');
-                var bmi_int;
-
-                bmi_int = parseFloat(bmi);
-                saveAnswers(question_id, bmi_int);
-                getlevel(question_id,bmi_int);
-                nextQuest();
-            });
-
-            function maxquestion()
-            {
-                if(sessionStorage['highQuestion']!=undefined)
-                {
-                    maxQuestion = sessionStorage.getItem('highQuestion');
-
-                }
-                else
-                {
-                    sessionStorage.setItem('highQuestion',(_currentQuestion+1));
-                    maxQuestion = 0;
-                }
-
-
-
-            }
-            maxquestion();
-
-            function maxquestionback(){
-
-            }
-
-            function createDotsQuestion() {
-
-                for (var i = 0; i < {{$count}}-1; i++) {
-
-                    if(i<maxQuestion){
-                        var dot = '<div class="dot on"></div>';
-                    }else{
-                        var dot = '<div class="dot"></div>';
-                    }
-
-                    if(i==_currentQuestion){
-                        var dot = '<div class="dot active"></div>';
-                    }
-                    $('.assessment-dots').append(dot);
-                }
-
-                for (var i = 0; i < _totalHeadlines; i++) {
-                    var dot = '<div class="dot"></div>';
-                    $('.education .dots').append(dot);
-                };
-                /*$('.percdive').html(0 + '/' + _totalHeadlines);
-                 $('.percquiz').html(0 + '/' + _totalQuestions);*/
-            }
-
-            function updateDotsQuestion(_currentQuestion) {
-
-                if(_currentQuestion>=maxQuestion)
-                {
-                    sessionStorage.setItem('highQuestion',(_currentQuestion*1+1));
-
-                }else if(_currentQuestion<maxQuestion){
-                    //sessionStorage.setItem('highQuestion',(_currentQuestion));
-
-                }
-
-
-
-                var _oldQuestion = _currentQuestion-1;
-
-                for (var i = 0; i < {{$count}}; i++) {
-
-                    if(i<=sessionStorage.getItem('highQuestion')-1){
-                        $('.assessment-dots .dot').eq(i).addClass('on');
-                        $('.assessment-dots .dot').eq(i).removeClass('active');
-                    }
-
-                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
-                }
-            }
-
-            createDotsQuestion();
 
             function addCharts() {
                 chart1 = new DonutChartBuilder('.chart-1',
@@ -995,198 +720,7 @@
             setTimeout(addCharts,800);
             setTimeout(updateCharts,1000);
 
-            //updateCharts();
 
-            function prevQuest(){
-
-                if(_currentQuestion > 0){
-                    var _oldQuestion = _currentQuestion;
-
-
-                    $('.assessment .question').eq(_currentQuestion).addClass('out');
-                    $('.assessment .question').eq(_currentQuestion).removeClass('in');
-
-                    var current_option = sessionStorage.getItem('question_mutation_id');
-                    var current_question = sessionStorage.getItem('current_question_id');
-                    if((current_question==36 && current_option==56) || (current_question==36 && current_option==58) || (current_question==36 && current_option== 59)){
-                        _currentQuestion-=2;
-                    }else{
-                        _currentQuestion--;
-                    }
-                    $('.assessment .question').eq(_currentQuestion).removeClass('out');
-                    $('.assessment .question').eq(_currentQuestion).removeClass('out-up');
-                    setTimeout(function(){
-                        $('.assessment .question').eq(_currentQuestion).addClass('in')},10)
-
-                    sessionStorage.setItem('current_question_id',$('.assessment .question').eq(_currentQuestion).data('question-id'));
-
-                    //$('.fact').removeClass('in');
-                    // $('.fact').eq(_currentQuestion).addClass('in');
-
-                    $('.facts').removeClass('in');
-                    //$('.fact').eq(_currentQuestion).removeClass('out');
-                    $('.facts').eq(_currentQuestion).addClass('in');
-
-                    $('.facts-mobil').removeClass('in');
-                    //$('.fact').eq(_currentQuestion).removeClass('out');
-                    $('.facts-mobil').eq(_currentQuestion).addClass('in');
-
-
-
-                    $('.assessment-dots .dot').eq(_oldQuestion).removeClass('active');
-                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
-                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
-
-                    //este es para saber en cual pregunta se ha quedadop, si cambia y de página y regresa va a observar la pregunta donde se quedó
-                    sessionStorage.setItem('current_question_position',_currentQuestion);
-
-                }
-
-                $('.share.result').removeClass('in');
-            }
-
-            function nextQuest(){
-                //addCharts();
-                createQuiz();
-
-                $('.assessment .question').eq(_currentQuestion).addClass('out');
-                $('.assessment .question').eq(_currentQuestion).removeClass('in');
-
-                //esta es para la parte de mutación
-                var current_option = sessionStorage.getItem(35);
-                var current_question = sessionStorage.getItem('current_question_id');
-                if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
-                    _currentQuestion+=2;
-                }else{
-                    _currentQuestion++;
-                }
-                $('.assessment .question').eq(_currentQuestion).removeClass('out');
-                $('.assessment .question').eq(_currentQuestion).removeClass('out-up');
-                //$('.assessment .question').eq(_currentQuestion).addClass('in');
-                setTimeout(function()
-                {
-                    $('.assessment .question').eq(_currentQuestion).addClass('in')
-                },10);
-
-                var question_selected = $('.assessment .question').eq(_currentQuestion).data('question-id');
-                sessionStorage.setItem('current_question_id',question_selected);
-
-                $('.facts').removeClass('in');
-                //$('.fact').eq(_currentQuestion).removeClass('out');
-                $('.facts').eq(_currentQuestion).addClass('in');
-
-                $('.facts-mobil').removeClass('in');
-                //$('.fact').eq(_currentQuestion).removeClass('out');
-                $('.facts-mobil').eq(_currentQuestion).addClass('in');
-
-                sessionStorage.setItem('current_question_position',_currentQuestion);
-
-                row_back();
-                maxquestion();
-                updateDotsQuestion(_currentQuestion);
-                updateCharts();
-
-            }
-
-            function createQuiz()
-            {
-                if(sessionStorage.getItem('quiz')==undefined)
-                {
-                    $.get('{{URL::to("answers/createquiz")}}',{},function(e){
-                        sessionStorage.setItem('quiz',e);
-                    });
-
-                }
-            }
-
-
-//boton de back de los dots
-            function row_back()
-            {
-                //la flecha : aparece / desaparece
-                if(_currentQuestion==0){
-                    $('.assessment-dots .btn-back').removeClass('active');
-                }else if(_currentQuestion>0){
-                    $('.assessment-dots .btn-back').addClass('active');
-                }
-            }
-            row_back();
-
-            $('.btn-back').on('click',function(){
-                prevQuest();
-                row_back();
-            });
-
-
-            var answersResult = {};
-
-            function saveAnswers(id_question, value)
-            {
-                //recupero el json si existe, el storage es string lo convierto a json para poder agregarle propiedades
-                if(sessionStorage['answersResult']!=undefined)
-                {
-                    var recupero = sessionStorage.getItem('answersResult');
-                    answersResult = JSON.parse(recupero);
-                }
-
-                var property = id_question;
-
-                //agrego una nueva propiedad al json
-                answersResult[property] = value;
-
-                //convierto en string para pode guardarlo en el storage
-                answersResultString =  JSON.stringify(answersResult);
-
-                //creamos el sesionstorage
-                sessionStorage.setItem('answersResult', answersResultString);
-                // sessionStorage.setItem(id_question,value);
-
-            }
-
-
-
-
-            //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
-
-            function completeInput(){
-
-                $('.question').each(function(i,val){
-                    var question_id = $(this).find('.checkbox-list').data('question-id2');
-
-
-                    //console.log(question_id+'/'+$(this).find('.checkbox-list').data('question-id2'));
-
-
-
-                    if(sessionStorage[question_id]!=undefined){
-
-                        //habilita el boton que tenga alguna respuesta y deshabilita cuando no tiene
-                        if($(this).find('.checkbox-list').data('question-id2')==question_id){
-                            $(this).find('button').eq(0).removeAttr("disabled");
-
-                        }
-
-                        var option_session = sessionStorage.getItem(question_id);
-
-                        if ($.type(option_session) == 'string') {
-                            var myArray = option_session.split(',');
-                        } else {
-                            var myArray = [];
-                        }
-
-                        $(this).find('.checkbox-list .checkbox input').each(function(){
-                            var now = $(this);
-                            $.each(myArray, function(i,val){
-                                if(now.data('option-id')==val){
-                                    now.prop("checked", "checked");
-                                }
-                            });
-                        });
-
-                    }
-                });
-            }
-            completeInput();
 
             function showResult(){
                 // var url = '../answers/results';
@@ -1798,6 +1332,7 @@
 
             /* LOS RESULTADOS */
             //sacar el nivel
+
 
 
 

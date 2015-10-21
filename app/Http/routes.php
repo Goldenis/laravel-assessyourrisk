@@ -97,17 +97,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function () {
 //Route::get('/home',function(){return view('home');});
 Route::get('/resultlevelcondition/findlevel',['as'=>'resultlevelcondition.findlevel', 'uses'=>'Frontend\ResultLevelConditionController@findlevel']);
 
-Route::get('/pruebamail',function(){
-    $data['name']='gonzalo';
 
-    //mail::pretend()
-    Mail::send('email.prueba',$data,function($mensaje){
-        $mensaje->to('gdelcarpio@gmail.com')->subject('welcome prueba');
-    });
-
-    return "Send";
-
-});
 
 
 Route::get('/',['uses'=>'Frontend\QuestionController@questions2']);
@@ -138,6 +128,7 @@ Route::resource('/resultlevel','Frontend\ResultLevelController');
 Route::get('/pdf/report/{quizz}/{level}', ['as'=>'pdf.report','uses'=>'Frontend\PdfController@report']);
 
 Route::get('/sendmail/mail','Frontend\Sendmail@send');
+Route::get('/sendmail/sendpdf',['as'=>'sendpdf','uses'=>'Frontend\Sendmail@sendpdf']);
 
 Route::resource('/results','Frontend\ResultController@index');
 

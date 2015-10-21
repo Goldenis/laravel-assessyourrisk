@@ -65,14 +65,12 @@
                     </div>
                     <div class="email-fields-doctor">
                         <h4>Share results with my doctor.</h4>
-
                         <input type="text" placeholder="Your Full Name" id="your-name-dr" required="">
                         <input type="text" placeholder="Doctor's email address" id="dr-email-address" required=""><button class="sub send-dr-email">SEND</button> <button class="sub cancel">Cancel</button>
 
                     </div>
                     <div class="email-fields-user">
                         <h4>Share my results with me.</h4>
-
                         <input type="text" placeholder="Your Full Name" id="your-name" required="">
                         <input type="text" placeholder="My email address" id="user-email-address" required=""><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
                     </div>
@@ -1924,7 +1922,7 @@
 
 
 
-
+            
 
         });
 

@@ -22,13 +22,10 @@
         </div>
 
 
-
-
         <div class="results" style="display: block;">
             <div class="your-risk">
                 <h2>Your Baseline Risk is <span class="risk-level"></span></h2>
             </div>
-
 
 
             <div class="paragraph-wrapper">
@@ -1276,7 +1273,7 @@
                 $('.assessment .question').eq(_currentQuestion).removeClass('in');
 
                 //esta es para la parte de mutación
-                var current_option = sessionStorage.getItem(35);
+                var current_option = sessionStorage.getItem('question_mutation_id');
                 var current_question = sessionStorage.getItem('current_question_id');
                 if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
                     _currentQuestion+=2;

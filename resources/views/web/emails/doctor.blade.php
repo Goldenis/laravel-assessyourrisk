@@ -4,9 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title></title>
-  <meta name="Author" content="Rachel Hochhauser">
-  <meta name="LastAuthor" content="Rachel Hochhauser">
-  <meta name="Company" content="Sew">
+  <meta name="Author" content="Catarxis">
+  <meta name="LastAuthor" content="Catarxis">
+  <meta name="Company" content="Catarxis">
   <meta name="CreationTime" content="2015-03-04T14:43:00Z">
   <meta name="ModificationTime" content="2015-03-04T14:43:00Z">
   <meta name="Generator" content="Cocoa HTML Writer">
@@ -21,7 +21,7 @@
 <p class="p1">Dear Doctor,</p>
 <p class="p1"> </p>
 <p class="p1">I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.</p>
-<p class="p1"><a href="#">Click here to download a copy of my results.</a></p>
+<p class="p1"><a href="{{$pdf}}">Click here to download a copy of my results.</a></p>
 <p class="p1">Thank you,</p> 
 <p class="p1">{{ $name }}</p>
 <p class="p1"><b><i>About Bright Pink and the Assess Your Risk Quiz </i></b></p>

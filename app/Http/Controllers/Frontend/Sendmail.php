@@ -52,23 +52,17 @@ class Sendmail extends Controller
     public function sendpdf(Request $request)
     {
 
-        /*$emaildr = $request['emaildr'];
+        $email = $request['emaildr'];
+        $data['name'] = $request['name'];
+        $data['pdf'] = $request['pdf'];
         $subject = $request['subject'];
-        $data['name'] = $request['name'];*/
 
-        $emaildr = 'gdelcarpio@gmail.com';
-        $subject = 'envio de web';
-        $data['name'] = 'gonzalo';
-
-        //$data['pdf'] = $request['pdf'];
-
-        //echo $emaildr;
-        //echo $subject;
+        $view = 'web.emails.doctor';
 
         try {
-            Mail::send('web.emails.doctor', $data, function ($message) use ($emaildr, $subject) {
+            Mail::send($view, $data, function ($message) use ($email, $subject) {
                 $message->from('brightpink@brightpink.org', 'Bright Pink')
-                    ->to($emaildr)
+                    ->to($email)
                     ->subject($subject);
             });
         } catch (Exception $e) {

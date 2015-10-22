@@ -517,16 +517,15 @@
 
             $('.send-dr-email').click(function(){
 
+                var pdf = $('#pdf-btn').attr('href');
                 var name = $('input#your-name-dr').val();
                 var emaildr = $('input#dr-email-address').val();
                 var subject ='subject del e-mail';
-               // var pdf = '{{route("sendpdf")}}';
-
                         $.ajax({
                             type:'GET',
                             cache:false,
                             url:'{{route("sendpdf")}}',
-                            data:'emaildr='+emaildr+'&name='+name+'&subject='+subject
+                            data:'emaildr='+emaildr+'&name='+name+'&subject='+subject+'&pdf='+pdf
                         }).done(function(data){
                             alert("Email sent successfully.");
                         }).fail(function(error){

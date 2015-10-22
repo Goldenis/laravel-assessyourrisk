@@ -56,7 +56,7 @@ class Sendmail extends Controller
         $subject = $request['subject'];
         $data['name'] = $request['name'];*/
 
-        $emaildr = 'doc@doc.com';
+        $emaildr = 'gdelcarpio@gmail.com';
         $subject = 'envio de web';
         $data['name'] = 'gonzalo';
 

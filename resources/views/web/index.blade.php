@@ -7,7 +7,6 @@
     sessionStorage.clear();
 </script>
 
-    <div>prueba 2 </div>
 
     <div class="overlay progress-overlay">
         <div class="question-stats">

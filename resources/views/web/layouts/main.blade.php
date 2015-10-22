@@ -236,7 +236,7 @@
             $.post('sessione',data,function(last_id){
                 localStorage.setItem('session',last_id);
                 //carga metricas
-               // $.get('{{ route('metric.load')  }}',{session:last_id,width:width,height:height,language:language},function(){});
+                 $.get('{{ route('metric.load')  }}',{session:last_id,width:width,height:height,language:language},function(){});
             })
         }
         else

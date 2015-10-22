@@ -64,14 +64,14 @@
                         <h4>Share results with my doctor.</h4>
 
                         <input type="text" placeholder="Your Full Name" id="your-name-dr" required="">
-                        <input type="text" placeholder="Doctor's email address" id="dr-email-address" required=""><button class="sub send-dr-email">SEND</button> <button class="sub cancel">Cancel</button>
+                        <input type="email" placeholder="Doctor's email address" id="dr-email-address" required=""><button class="sub send-dr-email">SEND</button> <button class="sub cancel">Cancel</button>
 
                     </div>
                     <div class="email-fields-user">
                         <h4>Share my results with me.</h4>
 
                         <input type="text" placeholder="Your Full Name" id="your-name" required="">
-                        <input type="text" placeholder="My email address" id="user-email-address" required=""><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
+                        <input type="email" placeholder="My email address" id="user-email-address" required=""><button class="sub send-user-email">SEND</button><button class="sub cancel">Cancel</button>
                     </div>
                 </div>
                 <!-- paragraph wrapper close -->
@@ -519,19 +519,37 @@
 
                 var pdf = $('#pdf-btn').attr('href');
                 var name = $('input#your-name-dr').val();
-                var emaildr = $('input#dr-email-address').val();
-                var subject ='subject del e-mail';
+                var email = $('input#dr-email-address').val();
+                var type = 1;
                         $.ajax({
                             type:'GET',
                             cache:false,
                             url:'{{route("sendpdf")}}',
-                            data:'emaildr='+emaildr+'&name='+name+'&subject='+subject+'&pdf='+pdf
+                            data:'email='+email+'&name='+name+'&pdf='+pdf+'&type='+type
                         }).done(function(data){
                             alert("Email sent successfully.");
                         }).fail(function(error){
                             alert('Email failed to send.');
                         });
+            });
 
+
+            $('.send-user-email').click(function(){
+
+                var pdf = $('#pdf-btn').attr('href');
+                var name = $('input#your-name').val();
+                var email = $('input#user-email-address').val();
+                var type = 2;
+                $.ajax({
+                    type:'GET',
+                    cache:false,
+                    url:'{{route("sendpdf")}}',
+                    data:'email='+email+'&name='+name+'&pdf='+pdf+'&type='+type
+                }).done(function(data){
+                    alert("Email sent successfully.");
+                }).fail(function(error){
+                    alert('Email failed to send.');
+                });
             });
 
 

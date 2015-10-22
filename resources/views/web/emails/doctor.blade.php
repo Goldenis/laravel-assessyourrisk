@@ -18,8 +18,8 @@
   </style>
 </head>
 <body>
-<p class="p1">Dear Doctor,</p>
-<p class="p1"> </p>
+<p class="p1"><strong>Dear Doctor,</strong></p>
+
 <p class="p1">I've just taken a breast and ovarian risk assessment quiz developed by Bright Pink and I'm sharing my results. I'd like to discuss them with you and develop a breast and ovarian cancer risk management strategy that's appropriate for me.</p>
 <p class="p1"><a href="{{$pdf}}">Click here to download a copy of my results.</a></p>
 <p class="p1">Thank you,</p> 

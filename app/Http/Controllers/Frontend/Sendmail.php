@@ -52,12 +52,23 @@ class Sendmail extends Controller
     public function sendpdf(Request $request)
     {
 
-        $email = $request['emaildr'];
+        $email = $request['email'];
         $data['name'] = $request['name'];
         $data['pdf'] = $request['pdf'];
-        $subject = $request['subject'];
+        $type = $request['type'];
 
-        $view = 'web.emails.doctor';
+        if($type==1)//doctor
+        {
+            $subject = 'Requesting Discussion: Breast & Ovarian Cancer Risk';
+            $view = 'web.emails.doctor';
+        }
+        else//user
+        {
+            $subject = 'Breast & Ovarian Risk Assessment Results';
+            $view = 'web.emails.user';
+        }
+
+
 
         try {
             Mail::send($view, $data, function ($message) use ($email, $subject) {

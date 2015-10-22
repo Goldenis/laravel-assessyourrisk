@@ -18,8 +18,8 @@
   </style>
 </head>
 <body>
-<p class="p1">Dear {{ $user }},</P>
-<p class="p1"><a href="#">Click here to download a copy of your results</a> from Bright Pink's breast and ovarian cancer assessment.</p>
+<p class="p1">Dear {{ $name }},</P>
+<p class="p1"><a href="{{ $pdf }}">Click here to download a copy of your results</a> from Bright Pink's breast and ovarian cancer assessment.</p>
 <p class="p1">You've done a powerful thing by assessing your own risk—consider sharing the tool with the women you care about so they can do the same.</p>
 <p class="p1"><a href="http://www.AssessYourRisk.org">www.AssessYourRisk.org</a></p>
 </body>

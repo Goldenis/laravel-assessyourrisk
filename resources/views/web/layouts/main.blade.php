@@ -195,7 +195,7 @@
             version    : 'v2.2'
         });
 
-        // Additional initialization code such as adding Event Listeners goes here
+        // Additional initialization code such as adding Event Listeners goes here-
     };
 
     // Load the SDK asynchronously
@@ -227,7 +227,25 @@
         var language = x=window.navigator.language||navigator.browserLanguage;//detectamos el lenguaje
 
 
-       
+        if(localStorage.getItem('session')==undefined || localStorage.getItem('session')=='')
+        {
+            var form = $('#form-session');
+            var data = form.serialize();
+            var token = form.find('#token').val();
+
+            $.post('sessione',data,function(last_id){
+                localStorage.setItem('session',last_id);
+                //carga metricas
+                 $.get('{{ route('metric.load')  }}',{session:last_id,width:width,height:height,language:language},function(){});
+            })
+        }
+        else
+        {
+            //numSession es el numero de id de la session del usuario
+            var numSession = localStorage.getItem('session');
+            //carga metricas
+            $.get('{{ route('metric.load')  }}',{session:numSession,width:width,height:height,language:language},function(){});
+        }
     });
 
 

@@ -653,6 +653,19 @@
                         10, [1, 1, 1, 1, 1, 1, 1, 1], ['#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#D7006D']);
             }
 
+            function createDotsQuestion() {
+
+
+
+                for (var i = 0; i < _totalHeadlines; i++) {
+                    var dot = '<div class="dot"></div>';
+                    $('.education .dots').append(dot);
+                };
+                /*$('.percdive').html(0 + '/' + _totalHeadlines);
+                 $('.percquiz').html(0 + '/' + _totalQuestions);*/
+            }
+            createDotsQuestion();
+
             function updateCharts() {
 
                 $('.dashboard').addClass('flash');

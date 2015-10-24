@@ -4,7 +4,7 @@
 
     <!-- OVERLAYS -->
 <script>
-    sessionStorage.clear();
+  //sessionStorage.clear();
 </script>
 
 
@@ -260,6 +260,8 @@
 
         <div class="assessment-wrap">
 
+
+
             @foreach($questions as $question)
                 {!!Form::hidden('question_id',$question->id,['id'=>'question_id'])!!}
 
@@ -440,8 +442,8 @@
             @endforeach
 
             <div class="share result">
-                <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
-                <h4 class="save-share">Save the life of somebody you love. Tell them to complete this experience too.</h4><span class="btn share-btn"><a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+http%3A%2F%2FAssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess you personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a class="create-modal mail-icon" data-subject="{{$share_result->subject}}" data-body="{{$share->body}}"  href="#" target="_blank" class=""><i class="fa fa-envelope fa-lg"></i></a>SHARE</span>
+                <button class="my-results">VIEW YOUR RESULTS</button><br><br>
+
 
 
                 <!-- ecuando se le hace click a cualquier boton va a rremplazar el value tanto del subjet como del body,
@@ -653,6 +655,8 @@
 
         $(document).ready(function(){
 
+
+
             //localStorage.clear();
             //localStorage.clear();
             //
@@ -697,6 +701,7 @@
 
             //intro boton
             $('.action.lifestyle, .assess-start').click(function(){
+
                 $('.assessment').addClass('in');
                 $('.intro').addClass('out-up');
                 $('.assessment-intro').addClass('in');
@@ -719,20 +724,39 @@
             });
 
             $('.assessment-intro button').on('click', function() {
-                $('.right-column').addClass('in2')
-                $('.assessment-intro').addClass('out-up');
-                $('.assessment-intro').removeClass('in');
-                $('.question').eq(_currentQuestion).addClass('in');
-                $('.question').eq(_currentQuestion).removeClass('out');
-                $('.facts').eq(_currentQuestion).addClass('in');
-                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
-                $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
-                $('.assessment-dots').addClass('active');
-                $('.fact-icon').addClass('in');
+
+
+                if(sessionStorage.getItem('current_question_id')=='null'){
+
+                    //alert('nullo');
+                    $('.share.result').addClass('in');
+                    $('.assessment-dots').addClass('active');
+                    $('.assessment-intro').addClass('out-up');
+                    $('.question').eq(_currentQuestion).removeClass('out');
+
+                }else{
+                    $('.right-column').addClass('in2')
+                    $('.assessment-intro').addClass('out-up');
+                    $('.assessment-intro').removeClass('in');
+                    $('.question').eq(_currentQuestion).addClass('in');
+                    $('.question').eq(_currentQuestion).removeClass('out');
+                    $('.facts').eq(_currentQuestion).addClass('in');
+                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+                    $('.assessment-dots').addClass('active');
+                    $('.fact-icon').addClass('in');
+                }
 
 
 
-            })
+
+
+            });
+
+            //este es si regresa que cargue defrente los resultados
+
+
+
 
 
 
@@ -810,8 +834,8 @@
                 }else{
                     saveAnswers(question_id, option);
                     if(question_id == {{$last_question->id}} ){
+                        nextQuest();
                         showResult();
-                        nextQuest()
                     }else{
                         nextQuest();
                     }
@@ -821,6 +845,10 @@
                     // var url_next = '{{--$url--}}';
                     // $(location).attr('href',url_next);
                 }
+            });
+//envio del boton de resultados finally
+            $('.my-results').click(function(){
+                showResult();
             });
 
 //radioboton
@@ -872,8 +900,10 @@
                 getlevel(question_id,option);
 
                 if(question_id == {{$last_question->id}} ){
+
+                    nextQuest();
                     showResult();
-                    nextQuest()
+
                 }else{
                     nextQuest();
                 }
@@ -940,8 +970,9 @@
                 getlevel(question_id, options);
 
                 if(question_id == {{$last_question->id}} ){
+
+                    nextQuest();
                     showResult();
-                    nextQuest()
                 }else{
                     nextQuest();
                 }
@@ -968,7 +999,6 @@
 
                 saveAnswers(question_id, bottle);
                 getlevel(question_id,bottle);
-
 
                 nextQuest();
 
@@ -1041,9 +1071,7 @@
             }
             maxquestion();
 
-            function maxquestionback(){
 
-            }
 
             function createDotsQuestion() {
 
@@ -1154,8 +1182,8 @@
 
                 //for (q in savedQuizProgress) questionsAnswered++;
 
-                var quizProgress = preguntasResueltas + '/' + _totalQuestions;
-                var quizPercent = preguntasResueltas / _totalQuestions;
+                var quizProgress =preguntasResueltas + '/' + _totalQuestions;
+                var quizPercent =preguntasResueltas / _totalQuestions;
                 $(".percquiz").html(quizProgress);
 
                 chart2.transitionToValues(5,
@@ -1285,7 +1313,7 @@
                 //$('.assessment .question').eq(_currentQuestion).addClass('in');
                 setTimeout(function()
                 {
-                    $('.assessment .question').eq(_currentQuestion).addClass('in')
+                   $('.assessment .question').eq(_currentQuestion).addClass('in')
                 },10);
 
                 var question_selected = $('.assessment .question').eq(_currentQuestion).data('question-id');
@@ -1409,9 +1437,20 @@
             completeInput();
 
             function showResult(){
+
+                //$('.share.result').addClass('in');
                 var url = 'results';
                 $(location).attr('href',url);
             }
+
+            function cargaresultinicial()
+            {
+                if(sessionStorage.getItem('current_question_id')==null){
+                    $('.share.result').addClass('in');
+                    alert('nulleo');
+                }
+            }
+
 
 
             function toggleColumn() {
@@ -1643,6 +1682,8 @@
             }
 
             buttons();
+
+
 
 
 
@@ -1918,6 +1959,28 @@
             /* LOS RESULTADOS */
             //sacar el nivel
 
+
+            if(sessionStorage.getItem('current_question_id')=='null'){
+                if(sessionStorage.getItem('current_question_id')=='null'){
+                    $('.right-column').addClass('in2')
+                    $('.assessment-intro').addClass('out-up');
+
+                    $('.question').eq(_currentQuestion).addClass('in');
+                    $('.question').eq(_currentQuestion).removeClass('out');
+                    $('.facts').eq(_currentQuestion).addClass('in');
+                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
+                    $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
+                    $('.assessment-dots').addClass('active');
+                    $('.fact-icon').addClass('in');
+                    $('.share.result').addClass('in');
+                    $('.question').eq(_currentQuestion).removeClass('out');
+                    $('.assessment').addClass('in');
+                    $('section.intro').addClass('out-up2');
+                    $('.assessment-intro').addClass('in');
+                    $('.right-column').addClass('in');
+                    $('.assessment.scrollpane').addClass('inn');
+                }
+            }
 
 
 

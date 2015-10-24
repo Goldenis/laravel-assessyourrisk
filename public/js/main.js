@@ -173,9 +173,9 @@
         $('.education .dots h6').eq(1).css({
             left: $('.module').eq(0).find($(".headline")).length * 22
         })
-        /*$('.education .dots h6').eq(2).css({
+        $('.education .dots h6').eq(2).css({
             left: $('.education h6').eq(1).position().left + $('.module').eq(1).find($(".headline")).length * 22
-        })*/
+        })
         addCharts();
         updateCharts();
         $('.wheel-container').css({
@@ -1726,7 +1726,7 @@
                     $('.progress-overlay').scrollTop(450);
                 }
             },1000)
-            $('.assessment .share').addClass('in')
+            //$('.assessment .share').addClass('in')
             $('.results, .cards').css({
                 display: 'block'
             })
@@ -1734,22 +1734,7 @@
                 display: 'none'
             })
         }
-       // $('.fact').eq(_currentQuestion).removeClass('in');
-       // $('.fact').eq(_currentQuestion).addClass('out');
-        // switch (_currentQuestion) {
-        //     case 0:
-        //         if (answer.html() != "Yes") {
-        //             $('.male-overlay').addClass('in');
-        //             overlayOpen = true;
-        //         }
-        //         break;
-        //     case 1:
-        //         if (answer.html() == "Yes") {
-        //             $('.male-overlay').addClass('in');
-        //             overlayOpen = true;
-        //         }
-        //         break;
-        // }
+
         if(_currentQuestion == 0 && answer.html() !== "Yes"){
                 //$('.male-overlay').addClass('in');
                 //$('.fact-icon').removeClass('in');
@@ -1790,53 +1775,7 @@
 
 
 
-        /*//    console.log(savedQuizProgress[7])
-            if (_currentQuestion == 9 && savedQuizProgress[7] == '+1') {
-                $('.assessment-dots .dot').eq(_currentQuestion).removeClass('active')
-                
-                $('.fact').eq(_currentQuestion).removeClass('in');
-                $('.fact').eq(_currentQuestion).addClass('out');
-   
-                $('.question').eq(_currentQuestion).addClass('out-up')
-                $('.question').eq(_currentQuestion).removeClass('in')
 
-                _currentQuestion = 8;
-                $('.assessment-dots .dot').eq(_currentQuestion).addClass('on')
-            }
-
-            if (_currentQuestion == 4) {
-
-
-                $('.bmi-result.answers').css({
-                    opacity: 0
-                })   
-
-                $('.question').eq(_currentQuestion).addClass('out-up')
-                $('.question').eq(_currentQuestion).removeClass('in')
-
-                $('.fact').eq(_currentQuestion).removeClass('in');
-                $('.fact').eq(_currentQuestion).addClass('out');
-         
-              
-                $('.bmi-result h4, h3').remove();
-
-                $('.btn-calculate').css({
-                    visibility: 'visible'
-                })
-
-                $('.height-wrapper').css({
-                    display: "block"
-                })
-
-               $('.bmi-result').css({
-                    opacity: 0
-                })
-
-            }*/
-
-
-            //$('.fact').eq(_currentQuestion).removeClass('in');
-            //$('.fact').eq(_currentQuestion).addClass('out');
             
             $('.question').eq(_currentQuestion).addClass('out-up')
             $('.question').eq(_currentQuestion).removeClass('in')
@@ -1852,7 +1791,7 @@
             }, 1000)
             $('.question').eq(_currentQuestion).removeClass('out-up')
             $('.question').eq(_currentQuestion).addClass('in')
-            $('.assessment .share').removeClass('in')
+           // $('.assessment .share').removeClass('in')
             if(_currentQuestion == 0){
                 $('.assessment-dots .btn-back').removeClass('active')
             }
@@ -2178,6 +2117,7 @@
             $('.wheel-container').addClass('shrink');
         },6000)
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
+
     });
 
 })(jQuery);

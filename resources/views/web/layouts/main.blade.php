@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery-ui.theme.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}?cversion=1">
     <script src="{{asset('js/vendor/modernizr-2.6.2.min.js')}}"></script>
     <script type='application/javascript' src='{{asset('/js/vendor/fastclick.js')}}'></script>
     <script type='application/javascript' src='{{asset('/js/vendor/base64.min.js')}}'></script>
@@ -171,12 +171,12 @@
 <script type='application/javascript' src='{{asset('/js/jquery-ui.min.js')}}'></script>
 
 <!--CDN links for the latest TweenLite, CSSPlugin, and EasePack-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="{{asset('js/weight.js')}}"></script>
 <script src="{{asset('js/height.js')}}"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="{{asset('js/svg/DonutChartBuilder.js')}}"></script>
 <script src="{{asset('js/svg/SVGHelper.js')}}"></script>
 

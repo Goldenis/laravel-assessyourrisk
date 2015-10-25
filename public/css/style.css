@@ -1212,7 +1212,7 @@ button.sub:hover {
     width: 50%;
 }
 .checkbox {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 .checkbox .label {
     margin-left: 2.2rem;
@@ -2517,7 +2517,7 @@ input[type="checkbox"], input[type="radio"] {
     width: 100%;
     padding: 0 10% 0.7rem;
 }
-@media (max-width: 736px) {
+@media (max-width: 770px) {
     .right-column .copyright {
         display: none;
         width: 100%;
@@ -3387,7 +3387,7 @@ h5.mobile-only {
         left: 10%;
         width: 80%;
         text-align: center;
-        font-family: 'avg_bold';
+        font-family: 'avg_bold'!important;
         font-size: 2.3rem;
         line-height: 3.2rem;
         z-index: 30;
@@ -3395,6 +3395,12 @@ h5.mobile-only {
     .question .weight-header {
         margin: 1rem 0;
     }
+	.question .weight-header span {
+		font-size: 1rem;
+		max-width: 80%;
+		margin: 10px auto 0;
+		line-height: 1em;
+	}
     .question .weight-answer {
         margin: 16rem 0 0 0;
     }
@@ -3975,7 +3981,6 @@ h5.mobile-only {
         height: calc(100% - 62px);
     }
 
-    @media (max-width: 736px)
         .assessment .assessment-wrap {
             position: relative;
             overflow: visible;
@@ -4222,8 +4227,8 @@ h5.mobile-only {
 
     .ui-widget {
         font-family: inherit;
-        font-size: 15px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 300;
     }
 
     .modal-table label {
@@ -4333,4 +4338,9 @@ h5.mobile-only {
 
 
 
-
+.weight-header span {
+  display: block;
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1em;
+}

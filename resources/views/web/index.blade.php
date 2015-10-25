@@ -271,7 +271,7 @@
 
                     {{--{{dd($question)}}--}}
 
-                    <div class="question out gif" data-question-id="{{$question->id}}">
+                    <div class="question out @if($question->gif != '' || $question->gif != null) gif @endif" data-question-id="{{$question->id}}">
                         @if($question->gif != '' || $question->gif != null)
                             <div class="anim-gif calendar">
                                 <img src="{{asset('img/')}}/{!!$question->gif!!}">
@@ -390,8 +390,9 @@
                     @elseif($question->id == 34) {{--weight--}}
                     <div class="question weight-question" data-question-id="34">
                         <div class="weight-wrapper">
-                            <div class="prompt weight-header">What is your weight?</div>
-                            <span>Your answer will only be used to calculate your BMI,<br> which can affect your risk.</span>
+                            <div class="prompt weight-header">What is your weight?
+                            <span>Your answer will only be used to calculate your BMI, which can affect your risk.</span>
+							</div>
                             <div class="visual">
                                 <div class="weight-container-mask">
                                     <div class="weight-container">
@@ -634,7 +635,7 @@
         <div class="assessment-facts">
             @foreach($questions as $question)
                 <div class="facts">
-                    {!! $question->text_colum !!}
+                    <h5>{!! $question->text_colum !!}</h5>
                 </div>
             @endforeach
         </div>
@@ -1447,7 +1448,7 @@
             {
                 if(sessionStorage.getItem('current_question_id')==null){
                     $('.share.result').addClass('in');
-                    alert('nulleo');
+                    //alert('nulleo');
                 }
             }
 
@@ -1989,6 +1990,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/main.js')}}?cversion=1"></script>
 
 @endsection

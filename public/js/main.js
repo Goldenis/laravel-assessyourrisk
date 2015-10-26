@@ -2117,6 +2117,7 @@
             $('.wheel-container').addClass('shrink');
         },6000)
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
+		$("div[data-question-id='42'] .anim-gif").removeClass("calendar").addClass("birth")
 
     });
 

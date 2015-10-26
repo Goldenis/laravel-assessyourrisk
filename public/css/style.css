@@ -1272,7 +1272,7 @@ input[type="checkbox"], input[type="radio"] {
     top: 0;
 }
 .anim-gif.calendar img {
-    width: 8rem;
+    width: 12rem;
     max-width: 205;
     min-width: 60px;
 }
@@ -3430,6 +3430,7 @@ h5.mobile-only {
         -webkit-transition-duration: 1s;
         -webkit-transition-property: all;
         -webkit-transition-delay: 0;
+		margin-top: 105px;
     }
     .question #famdiag-check-btn {
         margin: 2rem 0;
@@ -3676,7 +3677,7 @@ h5.mobile-only {
         animation: fade-in 1s 7.5s forwards;
     }
     .intro p {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
     .intro #Begin {
         display: none;
@@ -3995,7 +3996,6 @@ h5.mobile-only {
             height: auto;
             width: 100%;
             padding: 2rem 0 5rem;
-            overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
         .question .prompt {
@@ -4092,6 +4092,20 @@ h5.mobile-only {
         .email-pdf-doctor .email-pdf-btns {
             width: 100%;
         }
+  .assessment .question.in.gif .answers {
+    top: 100px;
+  }
+  .assessment .question.in.gif.calendar-question .answers.button {
+    top: initial;
+  }
+  .assessment.scrollpane .assessment-divider {
+    position: fixed;
+    top: 0px;
+    margin: 73px 10% 0;
+	margin-left: 0;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+  }
     }
     @media only screen and (max-width: 736px) and (orientation: landscape) {
         .landscape-overlay {

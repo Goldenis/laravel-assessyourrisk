@@ -238,6 +238,7 @@
     <!-- ASSESSMENT QUESTIONS -->
     <section class="assessment scrollpane">
         <!-- <div class="section-title">Assess Your Risk</div> -->
+		<div class="assessment-divider"></div>
         <div class="assessment-dots dots">
             <div class="btn-back"><img src="{{asset('img/arrow_left_pink.png')}}"></div>
             <div class="fact-icon"> i </div>
@@ -273,7 +274,7 @@
 
                     <div class="question out @if($question->gif != '' || $question->gif != null) gif @endif" data-question-id="{{$question->id}}">
                         @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
+                            <div class="anim-gif @if ($question->slug == 'birth_control') birth @else calendar @endif">
                                 <img src="{{asset('img/')}}/{!!$question->gif!!}">
                             </div>
                         @endif
@@ -306,7 +307,7 @@
 
                     <div class="question out"  data-question-id="{{$question->id}}">
                         @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
+                            <div class="anim-gif @if ($question->slug == 'have_you_ever_given_birth') birth @else calendar @endif">
                                 <img src="{{asset('img/')}}/{!!$question->gif!!}">
                             </div>
                         @endif
@@ -341,7 +342,7 @@
                     <div class="question @if($question->gif != '' || $question->gif != null) gif @endif out" data-question-id="{{$question->id}}">
 
                         @if($question->gif != '' || $question->gif != null)
-                            <div class="anim-gif calendar">
+                            <div class="anim-gif @if ($question->slug == 'have_you_ever_given_birth') birth @else calendar @endif">
                                 <img src="{{asset('img/')}}/{!!$question->gif!!}">
                             </div>
                         @endif

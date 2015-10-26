@@ -239,7 +239,7 @@ h3 {
     font-size: 2.8rem;
 }
 h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 h5 {
     font-size: 1.5rem;
@@ -1272,7 +1272,7 @@ input[type="checkbox"], input[type="radio"] {
     top: 0;
 }
 .anim-gif.calendar img {
-    width: 12rem;
+    width: 8rem;
     max-width: 205;
     min-width: 60px;
 }
@@ -2523,6 +2523,10 @@ input[type="checkbox"], input[type="radio"] {
         width: 100%;
         padding: 0.7rem 2rem;
     }
+.right-column .toggle-box .assessment-facts
+{
+    padding: 0;
+}
 }
 .right-column .copyright .legal a {
     font-size: 1rem;
@@ -2747,7 +2751,28 @@ h5.mobile-only {
     margin-top: 50px;
     font-size: 12px;
 }
+	.nsgc-logo {
+		width: 100%;
+		height: 150px;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.nsgc-logo img {
+		height: 150px;
+	}
+
+
 @media (max-width: 1024px) {
+	.nsgc-logo {
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.nsgc-logo img {
+		height: 100px;
+	}
+
     .intro .wheel-container {
         left: 20%;
         top: calc(50% - 200px);
@@ -3014,7 +3039,6 @@ h5.mobile-only {
         padding: 3rem 2rem;
     }
     .right-column .facts, .right-column .facts-mobil {
-        display: none;
         width: 100%;
     }
     .right-column.down {
@@ -3272,6 +3296,11 @@ h5.mobile-only {
     .fact-overlay .assessment-facts .facts:nth-of-type(1) {
         display: block;
     }
+	.right-column .toggle-box .assessment-facts
+	{
+		padding: 0;
+	}
+
     h5.mobile-only {
         display: block;
         margin-bottom: 1.5em;
@@ -4342,6 +4371,7 @@ h5.mobile-only {
             border-bottom: 10px solid #fff;
             padding: 3rem;
         }
+
     }
 
     @media(max-width: 650px){

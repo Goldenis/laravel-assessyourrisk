@@ -121,7 +121,9 @@
         @show
 
     </div>
-    <div class="copyright">Copyright &copy; {{$year}} Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>
+	<div class="copyright">
+		<div class="nsgc-logo"><img src="{{ URL::asset("img/nsgc-approved-logo.png") }}" class="nsgc-logo-img"></div>
+Copyright &copy; {{$year}} Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>
 </div>
 
 <!-- ASSESSMENT-->

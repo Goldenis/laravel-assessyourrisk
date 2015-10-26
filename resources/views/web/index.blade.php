@@ -1511,6 +1511,8 @@
                     name = $( "#name" ),
                     email = $( "#email" ),
                     emailbody = $( "#emailbody" ),
+                    myemail = $( "#myemail" ),
+                    subject = $( "#subject" ),
                     allFields = $( [] ).add( name ).add( email ).add( emailbody).add( myemail ).add( subject ),
                     tips = $( ".validateTips" );
 

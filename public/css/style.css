@@ -2523,10 +2523,10 @@ input[type="checkbox"], input[type="radio"] {
         width: 100%;
         padding: 0.7rem 2rem;
     }
+}
 .right-column .toggle-box .assessment-facts
 {
     padding: 0;
-}
 }
 .right-column .copyright .legal a {
     font-size: 1rem;
@@ -2751,32 +2751,31 @@ h5.mobile-only {
     margin-top: 50px;
     font-size: 12px;
 }
+
 .left .nsgc-logo {
-	display: none;
+    display: none;
 }
 
 .nsgc-logo {
-	width: 100%;
-	height: 150px;
-	text-align: center;
-	margin-bottom: 15px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .nsgc-logo img {
-	height: 150px;
+    height: 150px;
 }
 
-
 @media (max-width: 1024px) {
-	.nsgc-logo {
-		width: 100%;
-		height: 100px;
-		text-align: center;
-		margin-bottom: 15px;
-	}
-	.nsgc-logo img {
-		height: 100px;
-	}
-
+    .nsgc-logo {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .nsgc-logo img {
+        height: 100px;
+    }
     .intro .wheel-container {
         left: 20%;
         top: calc(50% - 200px);
@@ -3043,6 +3042,7 @@ h5.mobile-only {
         padding: 3rem 2rem;
     }
     .right-column .facts, .right-column .facts-mobil {
+        display: none;
         width: 100%;
     }
     .right-column.down {
@@ -3300,11 +3300,10 @@ h5.mobile-only {
     .fact-overlay .assessment-facts .facts:nth-of-type(1) {
         display: block;
     }
-	.right-column .toggle-box .assessment-facts
-	{
-		padding: 0;
-	}
-
+    .right-column .toggle-box .assessment-facts
+    {
+        padding: 0;
+    }
     h5.mobile-only {
         display: block;
         margin-bottom: 1.5em;
@@ -3448,7 +3447,7 @@ h5.mobile-only {
         color: #d7006d;
         position: absolute;
         width: 100%;
-        top: 50%;
+        top: 90px;
         height: auto;
         text-align: center;
         -webkit-transition: all 1s 0 ;
@@ -3463,7 +3462,7 @@ h5.mobile-only {
         -webkit-transition-duration: 1s;
         -webkit-transition-property: all;
         -webkit-transition-delay: 0;
-		margin-top: 105px;
+		/*margin-top: 105px;*/
     }
     .question #famdiag-check-btn {
         margin: 2rem 0;
@@ -3472,7 +3471,19 @@ h5.mobile-only {
         margin: 2rem 0;
     }
     .question.in {
+       /* display: block;
+        overflow: visible;
+        opacity: 1;
+        height: auto;
+        transform: none !important;
+        -webkit-transform: none !important;
+        top: 0px;
+        left: 0px;
+        padding: 0px;
+        margin: 90px auto 140px;
+        width: 80%;*/
         visibility: visible;
+
         opacity: 1 !important;
         -ms-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -3796,7 +3807,7 @@ h5.mobile-only {
         z-index: 3;
         text-align: center;
         padding: 0;
-		display: none;
+        display: none;
     }
     .education .dots h6 {
         display: none;
@@ -4021,6 +4032,19 @@ h5.mobile-only {
             overflow: visible;
             height: auto;
             border-top: none;
+        }
+
+        .question.in{
+            position: relative;
+            transform: translate(0, 0)  !important;
+            overflow: auto !important;
+            /*height: 480px !important;*/
+
+            transition: transform 0s;
+            -moz-transition: transform 0s;
+            -webkit-transition: transform 0s;
+            -ms-transition: transform 0s;
+            -o-transition: transform 0s;
         }
 
 
@@ -4376,7 +4400,6 @@ h5.mobile-only {
             border-bottom: 10px solid #fff;
             padding: 3rem;
         }
-
     }
 
     @media(max-width: 650px){

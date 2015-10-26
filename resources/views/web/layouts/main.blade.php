@@ -121,9 +121,9 @@
         @show
 
     </div>
-	<div class="copyright">
-		<div class="nsgc-logo"><img src="{{ URL::asset("img/nsgc-approved-logo.png") }}" class="nsgc-logo-img"></div>
-Copyright &copy; {{$year}} Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>
+    <div class="copyright">
+        <div class="nsgc-logo"><img src="{{ URL::asset("img/nsgc-approved-logo.png") }}" class="nsgc-logo-img"></div>
+        Copyright &copy; {{$year}} Bright Pink <div class="legal"><a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a> <a href="http://www.brightpink.org/disclaimer/" target="_bank">Terms and Conditions</a></div></div>
 </div>
 
 <!-- ASSESSMENT-->
@@ -181,6 +181,7 @@ Copyright &copy; {{$year}} Bright Pink <div class="legal"><a href="http://www.br
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="{{asset('js/svg/DonutChartBuilder.js')}}"></script>
 <script src="{{asset('js/svg/SVGHelper.js')}}"></script>
+
 
 
 <script src='{{asset('js/pdf_gen.js')}}'></script>

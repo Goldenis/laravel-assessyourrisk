@@ -8,6 +8,7 @@
 </script>
 
 
+
     <div class="overlay progress-overlay">
         <div class="question-stats">
         </div>
@@ -1978,6 +1979,7 @@
                     $('.fact-icon').addClass('in');
                     $('.share.result').addClass('in');
                     $('.question').eq(_currentQuestion).removeClass('out');
+                    $('.question').eq(_currentQuestion).removeClass('out');
                     $('.assessment').addClass('in');
                     $('section.intro').addClass('out-up2');
                     $('.assessment-intro').addClass('in');
@@ -1985,6 +1987,28 @@
                     $('.assessment.scrollpane').addClass('inn');
                 }
             }
+
+
+
+            function calculate_heigth(){
+                var window2 = $(window).height();
+                var content = window2-150;
+                console.log(content);
+                $('.assessment-wrap .question').css('height',content);
+            }
+
+
+            var ancho = $(window).width();
+            if(ancho<736){
+                calculate_heigth(); 
+            }
+
+
+
+
+
+
+
 
 
 

@@ -100,7 +100,7 @@ Route::get('/resultlevelcondition/findlevel',['as'=>'resultlevelcondition.findle
 
 
 
-Route::get('/',['uses'=>'Frontend\QuestionController@questions2']);
+Route::get('/',['as'=>'index','uses'=>'Frontend\QuestionController@questions2']);
 Route::get('/assessment',['as'=>'web.assessment','uses'=>'Frontend\HomeController@assessment']);
 
 Route::get('/question/slug/{slug}',['as'=>'web.question.showSlug','uses'=>'Frontend\QuestionController@showSlug']);

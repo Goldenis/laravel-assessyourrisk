@@ -188,9 +188,6 @@
             <h4>Return to Assessment</h4></div>
 
 
-
-
-
         <div class="assessment-facts">
             @foreach($questions as $question)
                 <div class="facts-mobil">
@@ -203,37 +200,25 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- ASSESSMENT QUESTIONS -->
     <section class="assessment scrollpane" style="    opacity: 1 !important;">
         <!-- <div class="section-title">Assess Your Risk</div> -->
         <div class="assessment-dots dots">
-            <div class="btn-back"><img src="{{asset('img/arrow_left_pink.png')}}"></div>
+            <div class="btn-back">
+                <a href="{{Route('index')}}">
+                    <img src="{{asset('img/arrow_left_pink.png')}}">
+                </a>
+            </div>
             <div class="fact-icon"> i </div>
         </div>
+
+
 
         <!-- ASSESSMEN intro   -->
 
 
 
         <div class="assessment-wrap">
-
-
 
             <div class="share result">
                 <button class="btn-results">VIEW YOUR RESULTS</button><br><br>
@@ -652,10 +637,42 @@
                 chart1.transitionToValues(5,
                         10, [1, 1, 1, 1, 1, 1, 1, 1], ['#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#D7006D']);
             }
+            function maxquestion()
+            {
+                if(sessionStorage['highQuestion']!=undefined)
+                {
+                    maxQuestion = sessionStorage.getItem('highQuestion');
 
+                }
+                else
+                {
+                    sessionStorage.setItem('highQuestion',(_currentQuestion+1));
+                    maxQuestion = 0;
+                }
+            }
+            maxquestion();
             function createDotsQuestion() {
 
 
+
+                for (var i = 0; i < {{$count}}-1; i++) {
+
+                    if(i<maxQuestion){
+                        var dot = '<div class="dot on"></div>';
+                    }else{
+                        var dot = '<div class="dot"></div>';
+                    }
+
+                    if(i==_currentQuestion){
+                        var dot = '<div class="dot active"></div>';
+                    }
+                    $('.assessment-dots').append(dot);
+
+
+                }
+
+                $('.assessment-dots').addClass('active');
+                $('.btn-back').addClass('in');
 
                 for (var i = 0; i < _totalHeadlines; i++) {
                     var dot = '<div class="dot"></div>';
@@ -667,6 +684,7 @@
 
             createDotsQuestion();
 
+
             function updateCharts() {
 
                 $('.dashboard').addClass('flash');
@@ -677,18 +695,12 @@
                 //for questions------------
 
 
-                // var recupero = sessionStorage.getItem('answersResult');
-                //  var datos = JSON.parse(recupero);
-                //  var questionsAnswered = Object.keys(datos).length;
 
                 var preguntasResueltas = sessionStorage.getItem('highQuestion') - 1;
                 if(preguntasResueltas > _totalQuestions){
                     preguntasResueltas = _totalQuestions;
                 }
 
-
-
-                //for (q in savedQuizProgress) questionsAnswered++;
 
                 var quizProgress = preguntasResueltas + '/' + _totalQuestions;
                 var quizPercent = preguntasResueltas / _totalQuestions;
@@ -700,15 +712,7 @@
                         8, [quizPercent, 1 - quizPercent], ['#D7006D', '#FFFFFF']);
 
 
-                //for education------------
 
-                /* if(sessionStorage.getItem('educationView')!=undefined){
-                 var deepViewed = sessionStorage.getItem('educationView');
-                 }else{
-                 var deepViewed = 0;
-                 }*/
-
-                // for (v in savedDiveProgress) deepViewed++;
 
 //vamos a sumar todos los educations que han sido vistos
 //para eso vamos a utilizar el storage dots_education que es un objeto
@@ -754,13 +758,11 @@
 
 
             function showResult(){
-                // var url = '../answers/results';
-                // $(location).attr('href',url);
+
                 $('.question').eq(_currentQuestion).addClass('in');
                 $('.question').eq(_currentQuestion).removeClass('out');
 
                 $('.share.result').addClass('in');
-                $('.assessment-dots').removeClass('active');
 
                 function explode(){
                     $(".progress-overlay").addClass('in');

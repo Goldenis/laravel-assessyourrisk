@@ -167,14 +167,6 @@
     </div>
 
 
-
-
-
-
-
-
-
-
     <div class="overlay male-overlay">
         <button class="sub close-btn">✕</button>
         <h1>Then <span class="share-btn">share<a href="https://twitter.com/intent/tweet?text=Check+out+Bright+Pink%27s+%23AssessYourRisk+tool+to+assess+and+reduce+your+risk+for+breast+and+ovarian+cancer.+AssessYourRisk.org" target="_blank"><i class="fa fa-twitter fa-lg"></i></a><a href="#/assessment" onclick="fb_share('http://www.assessyourrisk.org', 'Assess Your Risk', '1 in 8 women will develop breast cancer in their lifetime. 1 in 67 will develop ovarian cancer. Bright Pink created a tool to help you assess your personal level of risk for breast and ovarian cancer and reduce your chances of being that 1. Learn more and #AssessYourRisk!', 'http://www.assessyourrisk.org/img/fb-share.png', 520, 350)"><i class="fa fa-facebook fa-lg"></i></a><a href="#" id="create-modal3" target="_blank" class="create-modal mail-icon" data-subject="{{$share->subject}}" data-body="{{$share->body}}"><i class="fa fa-envelope fa-lg"></i></a></span> this with someone you care about that does. You just might save her life.</h1>
@@ -658,23 +650,15 @@
 
         $(document).ready(function(){
 
+            //cuando se recarga la página siempre comienza de la primera pregunta
+            //nota: si se comenta la linea de abajo, comenzaria en la ultima pregunta donde se quedó
+            sessionStorage.setItem('current_question_position',0);
 
 
-            //localStorage.clear();
-            //localStorage.clear();
-            //
             _$window = $(window);
             _$document = $(window.document);
-            // $('.right-column').addClass('in');
+
             $('.logo').animate({opacity: 1}, 3000);
-            //$('.question').fadeIn();
-            // $('.question').animate({opacity: 1}, 3000);
-            //$('.assessment').animate({opacity: 1}, 2000);
-            // $('.assessment').addClass('in');
-            //$('.assessment').css('visibility','visible');
-
-
-
 
             if(sessionStorage.getItem('level')==undefined){
                 sessionStorage.setItem('level',1);
@@ -691,12 +675,9 @@
             var _currentModule = null;
 
             $('.module-hero').on('click', function() {
-                // changeModule($(this).index());
-
                 _currentModule = $(this).index();
-                // updateCharts();
                 $('.menu-icon').addClass('module-open')
-            })
+            });
 
             var _totalQuestions = sessionStorage.getItem('num_question');
             var _totalHeadlines = sessionStorage.getItem('num_education');
@@ -713,11 +694,20 @@
 
             //boton navegacvion para cel
             $('.lets-go').click(function(){
+
+                //alert('a');
                 $('.right-column').addClass('in2');
                 $('.assessment-intro').addClass('out-up');
                 $('.assessment-intro').removeClass('in');
+
+                //con este codigo recargas la pagina en la pregunta que te quedaste
                 $('.question').eq(_currentQuestion).addClass('in');
                 $('.question').eq(_currentQuestion).removeClass('out');
+
+                //con este codigo recargas de la pregunta 1
+                /*$('.question').eq(0).addClass('in');
+                $('.question').eq(0).removeClass('out');*/
+
                 $('.facts').eq(_currentQuestion).addClass('in');
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('on');
                 $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
@@ -728,8 +718,7 @@
 
             $('.assessment-intro button').on('click', function() {
 
-
-                if(sessionStorage.getItem('current_question_id')=='null'){
+               /* if(sessionStorage.getItem('current_question_id')=='null'){
 
                     //alert('nullo');
                     $('.share.result').addClass('in');
@@ -737,7 +726,7 @@
                     $('.assessment-intro').addClass('out-up');
                     $('.question').eq(_currentQuestion).removeClass('out');
 
-                }else{
+                }else{*/
                     $('.right-column').addClass('in2')
                     $('.assessment-intro').addClass('out-up');
                     $('.assessment-intro').removeClass('in');
@@ -748,28 +737,15 @@
                     $('.assessment-dots .dot').eq(_currentQuestion).addClass('active');
                     $('.assessment-dots').addClass('active');
                     $('.fact-icon').addClass('in');
-                }
-
-
-
-
-
+               // }
             });
 
-            //este es si regresa que cargue defrente los resultados
 
-
-
-
-
-
-
+    //este es si regresa que cargue de frente los resultados
 
             //funciones de level
             function getlevel(question_id,question_option_id)
             {
-                //console.log('question:' +question_id+' opcion:'+question_option_id);
-                // var obj = JSON.parse(question_option_id);
 
                 $.each( question_option_id, function( i, val ) {
                     $.get("{{ URL::to('/resultlevelcondition/findlevel') }}",{
@@ -811,13 +787,10 @@
 
 
             $('.assessment .question').eq(_currentQuestion).removeClass('out');
-            // $('.assessment .question').eq(_currentQuestion).addClass('in');
 
             $('.fact').removeClass('in');
-            //$('.facts').eq(_currentQuestion).addClass('in');
 
             $('.fact-mobil').removeClass('in');
-            // $('.facts').eq(_currentQuestion).addClass('in');
 
 //boton
 
@@ -1056,21 +1029,21 @@
                 nextQuest();
             });
 
+
+
+
+
             function maxquestion()
             {
                 if(sessionStorage['highQuestion']!=undefined)
                 {
                     maxQuestion = sessionStorage.getItem('highQuestion');
-
                 }
                 else
                 {
                     sessionStorage.setItem('highQuestion',(_currentQuestion+1));
                     maxQuestion = 0;
                 }
-
-
-
             }
             maxquestion();
 
@@ -1172,10 +1145,6 @@
                 //for questions------------
 
 
-                // var recupero = sessionStorage.getItem('answersResult');
-                //  var datos = JSON.parse(recupero);
-                //  var questionsAnswered = Object.keys(datos).length;
-
                 var preguntasResueltas = sessionStorage.getItem('highQuestion') - 1;
                 if(preguntasResueltas > _totalQuestions){
                     preguntasResueltas = _totalQuestions;
@@ -1194,16 +1163,6 @@
                 chart4.transitionToValues(5,
                         8, [quizPercent, 1 - quizPercent], ['#D7006D', '#FFFFFF']);
 
-
-                //for education------------
-
-                /* if(sessionStorage.getItem('educationView')!=undefined){
-                 var deepViewed = sessionStorage.getItem('educationView');
-                 }else{
-                 var deepViewed = 0;
-                 }*/
-
-                // for (v in savedDiveProgress) deepViewed++;
 
 //vamos a sumar todos los educations que han sido vistos
 //para eso vamos a utilizar el storage dots_education que es un objeto
@@ -1306,18 +1265,24 @@
                 //esta es para la parte de mutación
                 var current_option = sessionStorage.getItem('question_mutation_id');
                 var current_question = sessionStorage.getItem('current_question_id');
-                if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
-                    _currentQuestion+=2;
-                }else{
-                    _currentQuestion++;
-                }
+                    if((current_question==35 && current_option==56) || (current_question==35 && current_option==58) || (current_question==35 && current_option== 59)){
+                        _currentQuestion+=2;
+                    }else{
+                        _currentQuestion++;
+                    }
                 $('.assessment .question').eq(_currentQuestion).removeClass('out');
-                $('.assessment .question').eq(_currentQuestion).removeClass('out-up');
+
+
                 //$('.assessment .question').eq(_currentQuestion).addClass('in');
                 setTimeout(function()
                 {
                    $('.assessment .question').eq(_currentQuestion).addClass('in')
                 },10);
+
+                setTimeout(function()
+                {
+                    $('.assessment .question').eq(_currentQuestion).removeClass('out-up');
+                },50);
 
                 var question_selected = $('.assessment .question').eq(_currentQuestion).data('question-id');
                 sessionStorage.setItem('current_question_id',question_selected);
@@ -1400,24 +1365,18 @@
 
 
 
-            //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
+           //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
 
             function completeInput(){
 
                 $('.question').each(function(i,val){
                     var question_id = $(this).find('.checkbox-list').data('question-id2');
 
-
-                    //console.log(question_id+'/'+$(this).find('.checkbox-list').data('question-id2'));
-
-
-
                     if(sessionStorage[question_id]!=undefined){
 
                         //habilita el boton que tenga alguna respuesta y deshabilita cuando no tiene
                         if($(this).find('.checkbox-list').data('question-id2')==question_id){
                             $(this).find('button').eq(0).removeAttr("disabled");
-
                         }
 
                         var option_session = sessionStorage.getItem(question_id);
@@ -1447,14 +1406,6 @@
                 //$('.share.result').addClass('in');
                 var url = 'results';
                 $(location).attr('href',url);
-            }
-
-            function cargaresultinicial()
-            {
-                if(sessionStorage.getItem('current_question_id')==null){
-                    $('.share.result').addClass('in');
-                    //alert('nulleo');
-                }
             }
 
 
@@ -1506,7 +1457,7 @@
         });
 
 
-        // modal
+// modal
         $(function() {
             var dialog, form,
 
@@ -1602,27 +1553,6 @@
                 dialog.dialog( "open" );
             });
 
-            /* //este es cuando hay dos share en la misma pagina
-             $( "#create-modal2" ).click(function(e) {
-             e.preventDefault();
-             dialog.dialog( "open" );
-
-             });
-
-             $( "#create-modal3" ).click(function(e) {
-             e.preventDefault();
-             dialog.dialog( "open" );
-
-             });*/
-
-
-
-
-
-
-
-
-
             function buttons(){
 
                 $('.facebook.lifestyle').click(function() {
@@ -1696,7 +1626,7 @@
 
 
 
-            //EDUCATION
+ //EDUCATION-----------------------------
 
 //lifestyle
             $('#lifestyle-list .vignette').first().addClass('main');
@@ -1938,30 +1868,6 @@
 
 
 
-            /*function closeModule(num) {
-             $('.module').eq(num).removeClass('in');
-
-             if (num < _currentModule) {
-             $('.module').eq(num).addClass('left');
-             } else {
-             $('.module').eq(num).removeClass('left');
-             }
-
-
-             }*/
-
-
-
-
-            /*$('.menu-icon').on('click', function() {
-             alert('a');
-             if (!overlayOpen) {
-             openMenuOverlay();
-             } else {
-             closeMenuOverlay();
-             }
-             })*/
-
 
 
             /* LOS RESULTADOS */
@@ -2000,22 +1906,21 @@
                 $('.assessment-wrap .question').css('height',content);
             }
 
+            function firts_factmobil()
+            {
+               // $('.right-column .facts-mobil').eq(0).css('opacity',1);
+                $('.assessment-facts .facts-mobil').eq(0).addClass('in');
+            }
+
+
 
         if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             var ancho = $(window).height();
             if(ancho<736){
-                calculate_height(); 
+                calculate_height();
+                firts_factmobil();
             }
 		}
-
-
-
-
-
-
-
-
-
 
 
         });

@@ -2412,7 +2412,7 @@ input[type="checkbox"], input[type="radio"] {
     font-size: 0.9rem;
     width: 90%;
 }
-.right-column .facts:nth-of-type(1) {
+.right-column .facts:nth-of-type(n) {
     display: block;
     /*opacity: 1;*/
 }
@@ -3069,7 +3069,7 @@ h5.mobile-only {
         height: 78%;
     }
     .logo-white {
-        bottom: 30px;
+       /* bottom: 30px;*/
     }
     .logo-white img {
         width: 80%;
@@ -4498,4 +4498,16 @@ h5.mobile-only {
   color: #666;
   font-size: 1.2rem;
   line-height: 1em;
+}
+
+@media(max-width: 736px){
+
+}
+
+@media(max-width: 960px){
+    .right-column .facts, .right-column .facts-mobil {
+
+        padding: 0em;
+        padding: 0rem;
+    }
 }

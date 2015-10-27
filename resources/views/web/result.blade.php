@@ -785,11 +785,14 @@
 				console.log(recupero);
                 answersResult = JSON.parse(recupero);
 
+				console.log(answersResult);
 				if (answersResult) {
                 $.each(answersResult, function(i, val){
+					console.log(i);
+					console.log(val);
 
 
-                    if(typeof val == 'object'){
+                    if(typeof val == 'object' && val){
                         $.each(val,function(j,val2){
                             console.log(val2);
                             //$('.cards .item-'+val2).addClass('item-color2');

@@ -678,6 +678,10 @@
         })   
 
 
+		$('.quiz-start').click(function() {
+			$('.nsgc-logo').hide();
+		});
+
         $('.email-doctor').on('click', function(event) {
             event.preventDefault();     
      
@@ -1718,6 +1722,9 @@
     
     function answerQuestion(answer) {
 
+		if (_currentQuestion == 0) {
+			$('.copyright .nsgc-logo').hide();
+		}
         if (_currentQuestion >= _totalQuestions -1) {
            // addCustomResults()
             setTimeout(function(){
@@ -2118,6 +2125,7 @@
         },6000)
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
 		$("div[data-question-id='42'] .anim-gif").removeClass("calendar").addClass("birth")
+		$("div[data-question-id='18'] .anim-gif").removeClass("calendar").addClass("calendar2")
 
     });
 

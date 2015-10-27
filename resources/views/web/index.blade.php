@@ -250,7 +250,7 @@
 
             {!! $assessment_intro->text !!}
 
-            <button class="action">{{ $assessment_intro->button  }}</button>
+            <button class="action quiz-start">{{ $assessment_intro->button  }}</button>
             <div class="copyright copyright-mobile">Copyright © {{$year}} Bright Pink
                 <div class="legal">
                     <a href="http://www.brightpink.org/privacy-policy/" target="_blank">Privacy Policy</a>
@@ -691,6 +691,7 @@
             var _currentModule = null;
 
             $('.module-hero').on('click', function() {
+				alert("HI");
                 // changeModule($(this).index());
 
                 _currentModule = $(this).index();
@@ -1446,7 +1447,6 @@
 
                 //$('.share.result').addClass('in');
                 var url = 'results';
-				window.open('/ayr15/' + url);
                 $(location).attr('href',url);
             }
 

@@ -71,16 +71,17 @@ b {
 }
 /* =============================================================================
  HTML5 Boilerplate CSS: h5bp.com/css
- ========================================================================== */* {
-                                                                                  -o-box-sizing: border-box;
-                                                                                  -moz-box-sizing: border-box;
-                                                                                  -webkit-box-sizing: border-box;
-                                                                                  box-sizing: border-box;
-                                                                                  position: relative;
-                                                                                  margin: 0;
-                                                                                  padding: 0;
-                                                                                  -webkit-font-smoothing: antialiased;
-                                                                              }
+ ========================================================================== */
+* {
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
 html {
     font-size: 100%;
     width: 100%;
@@ -3121,18 +3122,80 @@ h5.mobile-only {
     }
 }
 @media (max-width: 736px) {
-    .logo {
-        left: 50%;
-        -ms-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-        top: 1rem;
-        margin-left: -4px;
-        padding-bottom: 10px;
-    }
+	.logo {
+		position: fixed;
+		top: 0;
+		width: 86%;
+		background: #fff;
+		padding: 13px;
+		margin: 0 7%;
+		transform: none;
+		-webkit-transform: none;
+		left: 0px;
+	}
+	.logo a {
+		left: 50%;
+		-ms-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		float: left;
+		margin-left: -8px;
+	}
+	.assessment .question.in.gif .answers.button, .assessment .question.in.gif.birth-question .answers.button {
+		top: 80px;
+	}
+	.assessment .dots {
+		position: fixed;
+		bottom: 60px;
+	}
+	.assessment .question.in.gif .answers-list {
+		top: 100px;
+	}
+	.assessment .question.in.gif .prompt {
+		top: 78px;
+	}
+	.assessment.scrollpane {
+		overflow: hidden;
+		height: auto;
+		min-height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		float: left;
+		padding: 0px;
+		margin: 0px;
+		transform: none !important;
+		-webkit-transform: none !important;
+	}
+	.assessment .share.in {
+		display: block;
+		overflow: visible;
+		height: auto;
+		transform: none !important;
+		-webkit-transform: none !important;
+		top: 0px;
+		left: 0px;
+		padding: 0px;
+		margin: 90px auto 140px;
+		width: 80%;
+	}
+
+	.assessment.scrollpane .assessment-divider {
+		position: fixed;
+		top: 0px;
+		margin: 73px 10% 0;
+		width: 80%;
+		border-bottom: 1px solid #ccc;
+	}
+	.question.gif .anim-gif.calendar2 img {
+		width: 60px;
+		min-width: 60px;
+		top: 5px;
+	}
     .logo img {
         min-width: 160px;
         width: 160px;
@@ -3489,42 +3552,29 @@ h5.mobile-only {
     .question #mobile-button-left {
         margin: 2rem 0;
     }
-    .question.in {
-       /* display: block;
-        overflow: visible;
-        opacity: 1;
-        height: auto;
-        transform: none !important;
-        -webkit-transform: none !important;
-        top: 0px;
-        left: 0px;
-        padding: 0px;
-        margin: 90px auto 140px;
-        width: 80%;*/
-        visibility: visible;
-
-        opacity: 1 !important;
-        -ms-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: all 1s 0.5s ease-out;
-        -moz-transition: all 1s 0.5s ease-out;
-        -o-transition: all 1s 0.5s ease-out;
-        -ms-transition: all 1s 0.5s ease-out;
-        transition: all 1s 0.5s ease-out;
-        -moz-transition-duration: 1s;
-        -moz-transition-property: all;
-        -moz-transition-delay: 0.5s;
-
-        -webkit-transition-duration: 1s;
-        -webkit-transition-property: all;
-        -webkit-transition-delay: 0.5s;
-        top: 50%;
-        pointer-events: auto;
-    }
+	.question.in {
+		visibility: visible;
+		opacity: 1 !important;
+		-ms-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-transition: all 1s 0.5s ease-out;
+		-moz-transition: all 1s 0.5s ease-out;
+		-o-transition: all 1s 0.5s ease-out;
+		-ms-transition: all 1s 0.5s ease-out;
+		transition: all 1s 0.5s ease-out;
+		-moz-transition-duration: 1s;
+		-moz-transition-property: all;
+		-moz-transition-delay: 0.5s;
+		top: 50%;
+		pointer-events: auto;
+	}
+	.assessment .question.in.gif {
+		margin: 90px auto 230px;
+	}
     .question.out-up {
         -ms-transform: perspective(1000px) translateY(-50%);
         -webkit-transform: perspective(1000px) translateY(-50%);
@@ -3544,6 +3594,11 @@ h5.mobile-only {
     }
     .anim-gif.calendar img {
         width: 6rem;
+        max-width: 205px;
+        min-width: 60px;
+    }
+    .anim-gif.calendar img {
+        width: 4rem;
         max-width: 205px;
         min-width: 60px;
     }
@@ -4053,19 +4108,39 @@ h5.mobile-only {
             border-top: none;
         }
 
-        .question.in{
-            position: relative;
-            transform: translate(0, 0)  !important;
-            overflow: auto !important;
-            /*height: 480px !important;*/
-
-            transition: transform 0s;
-            -moz-transition: transform 0s;
-            -webkit-transition: transform 0s;
-            -ms-transition: transform 0s;
-            -o-transition: transform 0s;
-        }
-
+  .assessment .assessment-wrap {
+    position: relative;
+    overflow: auto;
+    height: auto;
+    border-top: none;
+  }
+  .assessment .question {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    height: 0px;
+    transform: none !important;
+    -webkit-transform: none !important;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+  }
+  .assessment .question.in {
+    display: block;
+    overflow: auto;
+    opacity: 1;
+    height: auto;
+    transform: none !important;
+    -webkit-transform: none !important;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 90px auto 140px;
+    width: 80%;
+	padding-bottom: 75px;
+  }
 
 
         .question {
@@ -4101,9 +4176,6 @@ h5.mobile-only {
             -moz-transform: scale(0.9);
             -o-transform: scale(0.9);
             transform: scale(0.9);
-        }
-        .question.gif {
-            padding-top: 7.5rem;
         }
         .question.gif .anim-gif.calendar img {
             width: 60px;
@@ -4170,18 +4242,9 @@ h5.mobile-only {
             width: 100%;
         }
   .assessment .question.in.gif .answers {
-    top: 100px;
   }
   .assessment .question.in.gif.calendar-question .answers.button {
     top: initial;
-  }
-  .assessment.scrollpane .assessment-divider {
-    position: fixed;
-    top: 0px;
-    margin: 73px 10% 0;
-	margin-left: 0;
-    width: 80%;
-    border-bottom: 1px solid #ccc;
   }
     }
     @media only screen and (max-width: 736px) and (orientation: landscape) {
@@ -4199,17 +4262,18 @@ h5.mobile-only {
     }
     /* =============================================================================
  Non-Semantic Helper Classes
- ========================================================================== */.ir {
-                                                                                      display: block;
-                                                                                      border: 0;
-                                                                                      text-indent: -999rem;
-                                                                                      overflow: hidden;
-                                                                                      background-color: transparent;
-                                                                                      background-repeat: no-repeat;
-                                                                                      text-align: left;
-                                                                                      direction: ltr;
-                                                                                      *line-height: 0;
-                                                                                  }
+ ========================================================================== */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999rem;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+	line-height: 0;
+}
     .ir br {
         display: none;
     }
@@ -4246,7 +4310,7 @@ h5.mobile-only {
         clear: both;
     }
     .clearfix {
-        *zoom: 1;
+        zoom: 1;
     }
     .lt-ie9 .overlay.landscape-overlay {
         display: none;

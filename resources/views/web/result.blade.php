@@ -32,6 +32,7 @@
 
                     <!-- Average -->
                     <div class="results-copy-average on">
+						<h5 class="warning-header pink-text">There is potential that you may be High Risk. Read on.</h5>
                         <!-- paragraph-one (left) -->
                         <div class="column">
                             <div class="col-izq-1"></div>
@@ -921,6 +922,8 @@
                     name = $( "#name" ),
                     email = $( "#email" ),
                     emailbody = $( "#emailbody" ),
+                    myemail = $( "#myemail" ),
+                    subject = $( "#subject" ),
                     allFields = $( [] ).add( name ).add( email ).add( emailbody).add( myemail ).add( subject ),
                     tips = $( ".validateTips" );
 

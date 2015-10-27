@@ -1331,7 +1331,7 @@
     }
 
 
-    function addResultCopy (level){
+    function addResultCopy (){
 
         $('.results-copy-average').removeClass('on'); 
         $('.results-copy-moderate').removeClass('on'); 
@@ -1508,7 +1508,7 @@
         }
 
         updateCharts();
-        addResultCopy(resultLevel);
+        addResultCopy();
         addCustomResults();  
        // console.log('Object savedQuizProgress = ', savedQuizProgress);
 
@@ -1531,7 +1531,7 @@
         // var bmiHigh = savedQuizProgress[2] == '-1';
         // var drinksHigh = savedQuizProgress[3] > 3;
         // var badGene = $.inArray("1|-2", savedQuizProgress[2]);
-        addResultCopy(resultLevel);  
+        addResultCopy();  
         var cardsObj;
         var cardContent;
 
@@ -2079,20 +2079,6 @@
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $(document).ready(function() {
 
         _totalQuestions = sessionStorage.getItem('num_question');
@@ -2126,6 +2112,7 @@
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
 		$("div[data-question-id='42'] .anim-gif").removeClass("calendar").addClass("birth")
 		$("div[data-question-id='18'] .anim-gif").removeClass("calendar").addClass("calendar2")
+		$("div[data-question-id='36'] .anim-gif").removeClass("calendar").addClass("stopwatch")
 
     });
 

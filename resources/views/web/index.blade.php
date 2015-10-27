@@ -691,7 +691,6 @@
             var _currentModule = null;
 
             $('.module-hero').on('click', function() {
-				alert("HI");
                 // changeModule($(this).index());
 
                 _currentModule = $(this).index();
@@ -1728,7 +1727,7 @@
                     $('#lifestyle-list .vignette').last().find('.headline h5').after('<h3 class="lifestyle-pledge-number">You and '+{{$pledge_lifestyle}}+' women have pledged to improve your lifestyles</h3>');
 
                 }else{
-                    $('#lifestyle-list .vignette').last().find('.headline h3').prepend('<span class="lifestyle-count">{{$pledge_lifestyle}}</span>');
+                    $('#lifestyle-list .vignette').last().find('.headline h3').prepend('<span class="lifestyle-count">{{$pledge_lifestyle}}</span> ');
                     $('#lifestyle-list .vignette').last().find('.headline h3').addClass('lifestyle-pledge-number');
 
                     $('#lifestyle-list .vignette').last().find('.headline h5').after('<button class="facebook lifestyle">Pledge</button>');
@@ -1994,7 +1993,7 @@
 
 
 
-            function calculate_heigth(){
+            function calculate_height(){
                 var window2 = $(window).height();
                 var content = window2-150;
                 console.log(content);
@@ -2002,10 +2001,12 @@
             }
 
 
-            var ancho = $(window).width();
+        if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            var ancho = $(window).height();
             if(ancho<736){
-                calculate_heigth(); 
+                calculate_height(); 
             }
+		}
 
 
 
@@ -2021,6 +2022,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=1"></script>
+    <script src="{{asset('js/main.js')}}?cversion=2"></script>
 
 @endsection

@@ -1373,10 +1373,12 @@
 
             function saveAnswers(id_question, value)
             {
+				console.log("Saving answer");
                 //recupero el json si existe, el storage es string lo convierto a json para poder agregarle propiedades
                 if(sessionStorage['answersResult']!=undefined)
                 {
                     var recupero = sessionStorage.getItem('answersResult');
+					console.log(recupero);
                     answersResult = JSON.parse(recupero);
                 }
 
@@ -1387,6 +1389,7 @@
 
                 //convierto en string para pode guardarlo en el storage
                 answersResultString =  JSON.stringify(answersResult);
+				console.log(answersResultString);
 
                 //creamos el sesionstorage
                 sessionStorage.setItem('answersResult', answersResultString);
@@ -1443,6 +1446,7 @@
 
                 //$('.share.result').addClass('in');
                 var url = 'results';
+				window.open('/ayr15/' + url);
                 $(location).attr('href',url);
             }
 

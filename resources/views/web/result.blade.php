@@ -618,7 +618,6 @@
 
 
 
-
             function addCharts() {
                 chart1 = new DonutChartBuilder('.chart-1',
                         10,
@@ -664,6 +663,7 @@
                 /*$('.percdive').html(0 + '/' + _totalHeadlines);
                  $('.percquiz').html(0 + '/' + _totalQuestions);*/
             }
+
             createDotsQuestion();
 
             function updateCharts() {
@@ -782,8 +782,10 @@
                 //mostrando a favor y  not a favor
 
                 var recupero = sessionStorage.getItem('answersResult');
+				console.log(recupero);
                 answersResult = JSON.parse(recupero);
 
+				if (answersResult) {
                 $.each(answersResult, function(i, val){
 
 
@@ -830,6 +832,7 @@
                         $('.cards .item-'+val).addClass('item-in');
                     }
                 });
+				}
 
                 $.get('{{URL::to('answers/results')}}',{
                     data:answersResult,

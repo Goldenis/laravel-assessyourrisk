@@ -1290,7 +1290,7 @@ input[type="checkbox"], input[type="radio"] {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     width: 11rem;
-    max-width: 205px;
+    max-width: 180px;
     min-width: 100px;
 }
 .anim-gif.stopwatch img {

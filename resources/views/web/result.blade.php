@@ -777,6 +777,12 @@
                     $('.col-der-1').html(datos.text_less_col2);
                     $('.col-izq-2').html(datos.text_more);
                     $('.col-der-2').html(datos.text_more_col2);
+					if (datos.name == "Increased") {
+						$('.results-copy-average .warning-header').show();
+					}
+					else {
+						$('.results-copy-average .warning-header').hide();
+					}
                 });
 
                 //mostrando a favor y  not a favor
@@ -1380,6 +1386,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/main.js')}}?cversion=3"></script>
 
 @endsection

@@ -1951,6 +1951,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=2"></script>
+    <script src="{{asset('js/main.js')}}?cversion=3"></script>
 
 @endsection

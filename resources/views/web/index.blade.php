@@ -4,7 +4,7 @@
 
     <!-- OVERLAYS -->
 <script>
-  //sessionStorage.clear();
+  sessionStorage.clear();
 </script>
 
 
@@ -1426,6 +1426,8 @@
             function showResult(){
 
                 //$('.share.result').addClass('in');
+
+                sessionStorage.setItem('test_final','result');
                 var url = 'results';
                 $(location).attr('href',url);
             }

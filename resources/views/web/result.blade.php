@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+
+
     <!-- OVERLAYS -->
 
     <div class="overlay progress-overlay">
@@ -416,11 +419,16 @@
 @section('script')
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
 
-            //sessionStorage.setItem('gonzalo',20);
+            if (sessionStorage.getItem('test_final') == undefined) {
 
-             _$window = $(window);
+                var url = 'index.php';
+                $(location).attr('href', url);
+            } else {
+
+
+            _$window = $(window);
             _$document = $(window.document);
             $('.right-column').addClass('in');
             $('.right-column').addClass('in2');
@@ -433,22 +441,21 @@
             //$('.assessment').css('visibility','visible');
 
 
-
-            if(sessionStorage.getItem('level')==undefined){
-                sessionStorage.setItem('level',1);
+            if (sessionStorage.getItem('level') == undefined) {
+                sessionStorage.setItem('level', 1);
             }
 
 
-            $('.dot').css('background-color','#ff0000');
-            setTimeout(function(){
+            $('.dot').css('background-color', '#ff0000');
+            setTimeout(function () {
                 // $('.assessment').addClass('in');
 
-            },1000)
+            }, 1000)
 
             var _currentView = "left";
             var _currentModule = null;
 
-            $('.module-hero').on('click', function() {
+            $('.module-hero').on('click', function () {
                 // changeModule($(this).index());
 
                 _currentModule = $(this).index();
@@ -461,7 +468,7 @@
 
 
             //intro boton
-            $('.action.lifestyle, .assess-start').click(function(){
+            $('.action.lifestyle, .assess-start').click(function () {
                 $('.assessment').addClass('in');
                 $('.intro').addClass('out-up');
                 $('.assessment-intro').addClass('in');
@@ -469,7 +476,7 @@
             });
 
             //boton navegacvion para cel
-            $('.lets-go').click(function(){
+            $('.lets-go').click(function () {
                 $('.right-column').addClass('in2');
                 $('.assessment-intro').addClass('out-up');
                 $('.assessment-intro').removeClass('in');
@@ -483,7 +490,7 @@
 
             });
 
-            $('.assessment-intro button').on('click', function() {
+            $('.assessment-intro button').on('click', function () {
                 $('.right-column').addClass('in2')
                 $('.assessment-intro').addClass('out-up');
                 $('.assessment-intro').removeClass('in');
@@ -496,93 +503,89 @@
                 $('.fact-icon').addClass('in');
 
 
-
             })
 
 
-
-            $('.send-dr-email').click(function(){
+            $('.send-dr-email').click(function () {
 
                 var pdf = $('#pdf-btn').attr('href');
                 var name = $('input#your-name-dr').val();
                 var email = $('input#dr-email-address').val();
                 var type = 1;
-                        $.ajax({
-                            type:'GET',
-                            cache:false,
-                            url:'{{route("sendpdf")}}',
-                            data:'email='+email+'&name='+name+'&pdf='+pdf+'&type='+type
-                        }).done(function(data){
-                            alert("Email sent successfully.");
-                        }).fail(function(error){
-                            alert('Email failed to send.');
-                        });
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    url: '{{route("sendpdf")}}',
+                    data: 'email=' + email + '&name=' + name + '&pdf=' + pdf + '&type=' + type
+                }).done(function (data) {
+                    alert("Email sent successfully.");
+                }).fail(function (error) {
+                    alert('Email failed to send.');
+                });
             });
 
 
-            $('.send-user-email').click(function(){
+            $('.send-user-email').click(function () {
 
                 var pdf = $('#pdf-btn').attr('href');
                 var name = $('input#your-name').val();
                 var email = $('input#user-email-address').val();
                 var type = 2;
                 $.ajax({
-                    type:'GET',
-                    cache:false,
-                    url:'{{route("sendpdf")}}',
-                    data:'email='+email+'&name='+name+'&pdf='+pdf+'&type='+type
-                }).done(function(data){
+                    type: 'GET',
+                    cache: false,
+                    url: '{{route("sendpdf")}}',
+                    data: 'email=' + email + '&name=' + name + '&pdf=' + pdf + '&type=' + type
+                }).done(function (data) {
                     alert("Email sent successfully.");
-                }).fail(function(error){
+                }).fail(function (error) {
                     alert('Email failed to send.');
                 });
             });
 
 
-
             //funciones de level
-            function getlevel(question_id,question_option_id)
-            {
+            function getlevel(question_id, question_option_id) {
                 //console.log('question:' +question_id+' opcion:'+question_option_id);
                 // var obj = JSON.parse(question_option_id);
 
-                $.each( question_option_id, function( i, val ) {
-                    $.get("{{ URL::to('/resultlevelcondition/findlevel') }}",{
-                        question_id:question_id,
-                        question_option_id:val
-                    }, function(resultado)
-                    {
+                $.each(question_option_id, function (i, val) {
+                    $.get("{{ URL::to('/resultlevelcondition/findlevel') }}", {
+                        question_id: question_id,
+                        question_option_id: val
+                    }, function (resultado) {
                         // console.log('level: '+resultado);
 
-                        if(sessionStorage.getItem('level')!=undefined){
+                        if (sessionStorage.getItem('level') != undefined) {
 
-                            if(sessionStorage.getItem('level')<resultado){
-                                sessionStorage.setItem('level',resultado);
+                            if (sessionStorage.getItem('level') < resultado) {
+                                sessionStorage.setItem('level', resultado);
                             }
                         }
-                        else
-                        {
-                            sessionStorage.setItem('level',resultado);
+                        else {
+                            sessionStorage.setItem('level', resultado);
                         }
-                    }); /*get*/
-                }); /*each*/
+                    });
+                    /*get*/
+                });
+                /*each*/
             }
 
 
-            if(sessionStorage.getItem('current_question_position')!=undefined){
+            if (sessionStorage.getItem('current_question_position') != undefined) {
                 _currentQuestion = sessionStorage.getItem('current_question_position');
                 var current_question_id = $('.question').eq(_currentQuestion).data('question-id');
 
-                sessionStorage.setItem('current_question_id',current_question_id);
-            }else{
-                sessionStorage.setItem('current_question_position',0);
+                sessionStorage.setItem('current_question_id', current_question_id);
+            } else {
+                sessionStorage.setItem('current_question_position', 0);
                 _currentQuestion = 0;
-                sessionStorage.setItem('current_question_id',0);
+                sessionStorage.setItem('current_question_id', 0);
             }
 
             // console.log(_currentQuestion);
 
-            sessionStorage.setItem('question_mutation_id',0);
+            sessionStorage.setItem('question_mutation_id', 0);
 
 
             $('.assessment .question').eq(_currentQuestion).removeClass('out');
@@ -598,10 +601,8 @@
 //radioboton
             // $('button.radio_button').prop('disabled', !this.checked);
 
-            var quest =  $('.answers').data('question-id2');
+            var quest = $('.answers').data('question-id2');
             var item = sessionStorage.getItem(quest);
-
-
 
 
             function addCharts() {
@@ -637,33 +638,31 @@
                 chart1.transitionToValues(5,
                         10, [1, 1, 1, 1, 1, 1, 1, 1], ['#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#FFB4AA', '#D7006D']);
             }
-            function maxquestion()
-            {
-                if(sessionStorage['highQuestion']!=undefined)
-                {
+
+            function maxquestion() {
+                if (sessionStorage['highQuestion'] != undefined) {
                     maxQuestion = sessionStorage.getItem('highQuestion');
 
                 }
-                else
-                {
-                    sessionStorage.setItem('highQuestion',(_currentQuestion+1));
+                else {
+                    sessionStorage.setItem('highQuestion', (_currentQuestion + 1));
                     maxQuestion = 0;
                 }
             }
+
             maxquestion();
             function createDotsQuestion() {
 
 
-
                 for (var i = 0; i < {{$count}}-1; i++) {
 
-                    if(i<maxQuestion){
+                    if (i < maxQuestion) {
                         var dot = '<div class="dot on"></div>';
-                    }else{
+                    } else {
                         var dot = '<div class="dot"></div>';
                     }
 
-                    if(i==_currentQuestion){
+                    if (i == _currentQuestion) {
                         var dot = '<div class="dot active"></div>';
                     }
                     $('.assessment-dots').append(dot);
@@ -677,7 +676,8 @@
                 for (var i = 0; i < _totalHeadlines; i++) {
                     var dot = '<div class="dot"></div>';
                     $('.education .dots').append(dot);
-                };
+                }
+                ;
                 /*$('.percdive').html(0 + '/' + _totalHeadlines);
                  $('.percquiz').html(0 + '/' + _totalQuestions);*/
             }
@@ -688,16 +688,15 @@
             function updateCharts() {
 
                 $('.dashboard').addClass('flash');
-                setTimeout(function() {
+                setTimeout(function () {
                     $('.dashboard').removeClass('flash');
                 }, 300);
                 // percquiz percdive
                 //for questions------------
 
 
-
                 var preguntasResueltas = sessionStorage.getItem('highQuestion') - 1;
-                if(preguntasResueltas > _totalQuestions){
+                if (preguntasResueltas > _totalQuestions) {
                     preguntasResueltas = _totalQuestions;
                 }
 
@@ -712,31 +711,29 @@
                         8, [quizPercent, 1 - quizPercent], ['#D7006D', '#FFFFFF']);
 
 
-
-
 //vamos a sumar todos los educations que han sido vistos
 //para eso vamos a utilizar el storage dots_education que es un objeto
-                if(sessionStorage.getItem('dots_education')!=undefined){
+                if (sessionStorage.getItem('dots_education') != undefined) {
 
                     var recupero = sessionStorage.getItem('dots_education');
                     var dots_on = JSON.parse(recupero);
-                    var i=0;
+                    var i = 0;
 
-                    $.each(dots_on,function(key,value){
-                        if(value==1 && key >= 0){
+                    $.each(dots_on, function (key, value) {
+                        if (value == 1 && key >= 0) {
                             i++;
                         }
                     });
 
 
                     deepViewed = i;
-                }else{
+                } else {
                     deepViewed = 0;
                 }
 
                 //deepViewed = sessionStorage.getItem('num_education');
 
-                sessionStorage.setItem('educationView',deepViewed);
+                sessionStorage.setItem('educationView', deepViewed);
                 //alert(deepViewed);
 
                 var diveProgress = deepViewed + '/' + _totalHeadlines;
@@ -748,30 +745,30 @@
                 chart5.transitionToValues(5,
                         8, [divePercent, 1 - divePercent], 4['#D7006D', '#FFFFFF']);
 
-                console.log(divePercent+'/index/ '+divePercent);
+                console.log(divePercent + '/index/ ' + divePercent);
             }
 
             //addCharts();
-            setTimeout(addCharts,800);
-            setTimeout(updateCharts,1000);
+            setTimeout(addCharts, 800);
+            setTimeout(updateCharts, 1000);
 
 
-
-            function showResult(){
+            function showResult() {
 
                 $('.question').eq(_currentQuestion).addClass('in');
                 $('.question').eq(_currentQuestion).removeClass('out');
 
                 $('.share.result').addClass('in');
 
-                function explode(){
+                function explode() {
                     $(".progress-overlay").addClass('in');
                 }
+
                 setTimeout(explode, 3000);
 
                 //carga datos según el level
                 var level = sessionStorage.getItem('level');
-                $.get('{{URL::to('/resultlevel')}}/'+level,{},function(e){
+                $.get('{{URL::to('/resultlevel')}}/' + level, {}, function (e) {
 
                     var datos = JSON.parse(e);
 
@@ -785,76 +782,76 @@
                 //mostrando a favor y  not a favor
 
                 var recupero = sessionStorage.getItem('answersResult');
-				console.log(recupero);
+                console.log(recupero);
                 answersResult = JSON.parse(recupero);
 
-				console.log(answersResult);
-				if (answersResult) {
-                $.each(answersResult, function(i, val){
-					console.log(i);
-					console.log(val);
+                console.log(answersResult);
+                if (answersResult) {
+                    $.each(answersResult, function (i, val) {
+                        console.log(i);
+                        console.log(val);
 
 
-                    if(typeof val == 'object' && val){
-                        $.each(val,function(j,val2){
-                            console.log(val2);
-                            //$('.cards .item-'+val2).addClass('item-color2');
-                            $('.cards .item-'+val2).addClass('item-in');
-                        });
-                    }else{
-                        //botella
-                        if(i==33){
-                            if(val==0){
-                                val=44;
-                            }else if(val==1){
-                                val=45;
-                            }else if(val==2){
-                                val=46;
-                            }else if(val==3){
-                                val=47;
-                            }else if(val==4){
-                                val=48;
-                            }else if(val==5){
-                                val=49;
-                            }else if(val==6){
-                                val=50;
+                        if (typeof val == 'object' && val) {
+                            $.each(val, function (j, val2) {
+                                console.log(val2);
+                                //$('.cards .item-'+val2).addClass('item-color2');
+                                $('.cards .item-' + val2).addClass('item-in');
+                            });
+                        } else {
+                            //botella
+                            if (i == 33) {
+                                if (val == 0) {
+                                    val = 44;
+                                } else if (val == 1) {
+                                    val = 45;
+                                } else if (val == 2) {
+                                    val = 46;
+                                } else if (val == 3) {
+                                    val = 47;
+                                } else if (val == 4) {
+                                    val = 48;
+                                } else if (val == 5) {
+                                    val = 49;
+                                } else if (val == 6) {
+                                    val = 50;
+                                }
                             }
-                        }
 
-                        //bmi
-                        if(i==49){ // 49 es para internet
-                            if(val<18.5){
-                                val=95;
-                            }else if(val>=18.5 && val<=24.9){
-                                val=96;
-                            }else if(val>=25 && val<=29.9){
-                                val=97;
-                            }else if(val>=30){
-                                val=98;
+                            //bmi
+                            if (i == 49) { // 49 es para internet
+                                if (val < 18.5) {
+                                    val = 95;
+                                } else if (val >= 18.5 && val <= 24.9) {
+                                    val = 96;
+                                } else if (val >= 25 && val <= 29.9) {
+                                    val = 97;
+                                } else if (val >= 30) {
+                                    val = 98;
+                                }
                             }
+
+                            //console.log(val+' numero');
+                            $('.cards .item-' + val).addClass('item-in');
                         }
+                    });
+                }
 
-                        //console.log(val+' numero');
-                        $('.cards .item-'+val).addClass('item-in');
-                    }
-                });
-				}
-
-                $.get('{{URL::to('answers/results')}}',{
-                    data:answersResult,
-                    quiz:sessionStorage.getItem('quiz'),
-                    session:localStorage.getItem('session')
+                $.get('{{URL::to('answers/results')}}', {
+                    data: answersResult,
+                    quiz: sessionStorage.getItem('quiz'),
+                    session: localStorage.getItem('session')
                     //question_id:i
 
-                },function(e){
+                }, function (e) {
                     //sessionStorage.setItem('quiz',e);
                     //creamos el atributo para el generador de pdf
-                    var atributo =  $('.pdf').parent().find('a').attr('href');
-                    var new_atributo = atributo+sessionStorage.getItem('quiz')+'/'+sessionStorage.getItem('level');
-                    $('.pdf').parent().find('a').attr('href',new_atributo);
+                    var atributo = $('.pdf').parent().find('a').attr('href');
+                    var new_atributo = atributo + sessionStorage.getItem('quiz') + '/' + sessionStorage.getItem('level');
+                    $('.pdf').parent().find('a').attr('href', new_atributo);
 
-                   // var url = 'results';
-                   // $(location).attr('href',url);
+                    // var url = 'results';
+                    // $(location).attr('href',url);
 
                 });
 
@@ -865,18 +862,17 @@
             }
 
 
-           showResult();
+            showResult();
 
 
             function toggleColumn() {
-
 
 
                 if (_currentView == "left") {
                     _currentView = "right";
                     $('.logo').addClass('out');
                     if (_currentModule != undefined) {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $('.right-column').addClass('down');
                             $('.nav').addClass('in');
                         }, 800)
@@ -884,7 +880,7 @@
                 } else {
                     $('.logo').removeClass('out');
                     _currentView = "left"
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('.right-column').removeClass('down');
                         $('.nav').removeClass('in');
                     }, 800)
@@ -897,20 +893,21 @@
             }
 
 
-
-            $('.understand').on('click', function() {
+            $('.understand').on('click', function () {
                 toggleColumn();
 
                 // var url = '../education';
                 //$(location).attr('href',url);
             })
 
-            $('.assess').on('click', function() {
+            $('.assess').on('click', function () {
 
                 toggleColumn();
                 // window._currentPath = '/assessment';
                 // $.address.value('/assessment');
             })
+
+        }/*este es el final de la condicional para regresar al inicio o quedarse si es que no hay datos en session storage*/
 
         });
 

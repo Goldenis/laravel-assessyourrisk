@@ -746,14 +746,13 @@
             //funciones de level
             function getlevel(question_id,question_option_id)
             {
-
                 $.each( question_option_id, function( i, val ) {
                     $.get("{{ URL::to('/resultlevelcondition/findlevel') }}",{
                         question_id:question_id,
                         question_option_id:val
                     }, function(resultado)
                     {
-                        // console.log('level: '+resultado);
+                        console.log('level: '+resultado);
 
                         if(sessionStorage.getItem('level')!=undefined){
 
@@ -767,6 +766,31 @@
                         }
                     }); /*get*/
                 }); /*each*/
+            }
+
+
+            function getlevelBoton(question_id,question_option_id)
+            {
+
+                    $.get("{{ URL::to('/resultlevelcondition/findlevel') }}",{
+                        question_id:question_id,
+                        question_option_id:question_option_id
+                    }, function(resultado)
+                    {
+                        console.log('level: '+resultado);
+
+                        if(sessionStorage.getItem('level')!=undefined){
+
+                            if(sessionStorage.getItem('level')<resultado){
+                                sessionStorage.setItem('level',resultado);
+                            }
+                        }
+                        else
+                        {
+                            sessionStorage.setItem('level',resultado);
+                        }
+                    }); /*get*/
+
             }
 
 
@@ -799,7 +823,7 @@
                 var dato = $(this).text();
                 var option = $(this).data('option-id');
 
-                getlevel(question_id,option); // obtiene el level
+                getlevelBoton(question_id,option); // obtiene el level
 
                 // exclusive for question id=17 / male overlay
                 if(dato == 'No' && question_id == 17){
@@ -815,8 +839,6 @@
                     }else{
                         nextQuest();
                     }
-
-
 
                     // var url_next = '{{--$url--}}';
                     // $(location).attr('href',url_next);
@@ -1198,7 +1220,7 @@
                 chart5.transitionToValues(5,
                         8, [divePercent, 1 - divePercent], 4['#D7006D', '#FFFFFF']);
 
-                console.log(divePercent+'/index/ '+divePercent);
+
             }
 
             //addCharts();

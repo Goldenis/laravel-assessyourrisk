@@ -858,6 +858,17 @@
 
                     // var url = 'results';
                     // $(location).attr('href',url);
+            	if ($.inArray(answersResult[19][0], [29, 30, 31]) > -1) {
+					console.log("Showing triggered-cancer-copy");
+					console.log($('.triggered-cancer-copy').attr('class'));
+					$('.triggered-cancer-copy').addClass('showable')
+					console.log($('.triggered-cancer-copy').attr('class'));
+				}
+				else {
+					console.log(answersResult[19][0] + " is not in [29, 30, 31]");
+				}
+
+
 
                 });
 
@@ -865,7 +876,7 @@
 
                  //agrego una nueva propiedad al json
                  answersResult[property] = value;*/
-            }
+}
 
 
             showResult();
@@ -1376,7 +1387,6 @@
 
             /* LOS RESULTADOS */
             //sacar el nivel
-
 
 
 

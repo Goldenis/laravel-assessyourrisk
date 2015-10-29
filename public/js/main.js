@@ -664,11 +664,11 @@
                 })
             }else{
             	
-            	woopra.track("click", {
+/*            	woopra.track("click", {
                     intent: "collapse",
                     location: "Read More",
                     type: "button"
-                });
+                });*/
             	
                 $(this).html('Read More');
                 $('.more-results').css({

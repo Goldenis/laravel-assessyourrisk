@@ -653,6 +653,7 @@
             //cuando se recarga la página siempre comienza de la primera pregunta
             //nota: si se comenta la linea de abajo, comenzaria en la ultima pregunta donde se quedó
             sessionStorage.setItem('current_question_position',0);
+            sessionStorage.setItem('bottle',0);
 
 
             _$window = $(window);

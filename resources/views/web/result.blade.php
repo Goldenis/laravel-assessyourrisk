@@ -843,7 +843,7 @@
                     });
                 }
 
-               /* $.get('{{URL::to('answers/results')}}', {
+               /* $.get('{{--URL::to('answers/results')--}}', {
                     data: answersResult,
                     quiz: sessionStorage.getItem('quiz'),
                     session: localStorage.getItem('session')
@@ -852,12 +852,14 @@
                 }, function (e) {*/
                         //sessionStorage.setItem('quiz',e);
                         //creamos el atributo para el generador de pdf
-                        var atributo = $('.pdf').parent().find('a').attr('href');
-                        var new_atributo = atributo + sessionStorage.getItem('quiz') + '/' + sessionStorage.getItem('level');
-                        $('.pdf').parent().find('a').attr('href', new_atributo);
+                    var atributo = $('.pdf').parent().find('a').attr('href');
+                    var new_atributo = atributo + sessionStorage.getItem('quiz') + '/' + sessionStorage.getItem('level');
+                    $('.pdf').parent().find('a').attr('href', new_atributo);
 
                         // var url = 'results';
                         // $(location).attr('href',url);
+
+                function copycancer(){
                     if ($.inArray(answersResult[19][0], [29, 30, 31]) > -1) {
                         console.log("Showing triggered-cancer-copy");
                         console.log($('.triggered-cancer-copy').attr('class'));
@@ -867,6 +869,12 @@
                     else {
                         console.log(answersResult[19][0] + " is not in [29, 30, 31]");
                     }
+                }
+
+                setTimeout(copycancer,2000);
+
+
+
 
 
 

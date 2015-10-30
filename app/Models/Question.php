@@ -18,7 +18,7 @@ class Question extends Model
 
     public function questionOption()
     {
-        return $this->hasMany('App\Models\QuestionOpcion','question_id','id');
+        return $this->hasMany('App\Models\QuestionOpcion','question_id','id')->orderBy('order','asc');
     }
 
     public function ResultLevelCondition()

@@ -764,7 +764,7 @@
                     $(".progress-overlay").addClass('in');
                 }
 
-                setTimeout(explode, 3000);
+                setTimeout(explode, 100);
 
                 //carga datos según el level
                 var level = sessionStorage.getItem('level');

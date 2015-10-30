@@ -51,6 +51,9 @@ class MetricController extends Controller
         //session
         $session = $request['session'];
 
+        //pid
+
+
         //bpref
 
 
@@ -68,8 +71,8 @@ class MetricController extends Controller
             $metric->ip = $_SERVER["REMOTE_ADDR"];
             $metric->language = $lan;
             $metric->os = $browser->osFamily;
-            $metric->pid = sha1($session);
-            $metric->referrer = 0;
+            $metric->pid = md5($session);
+            $metric->referrer = $_SERVER['HTTP_REFERER'];
             $metric->bpref = $bpref;
             $metric->resolution = 0;
             $metric->screen = $screen;

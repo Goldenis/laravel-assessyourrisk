@@ -1961,7 +1961,7 @@
             var height = $(window).height();//alto de ventana
             var language = x=window.navigator.language||navigator.browserLanguage;//detectamos el lenguaje
 
-            var bpref = "<?php if(isset($_GET['bpref'])){ echo $_GET['bpref'];}else{ echo '';} ?>";
+            var bpref = "<?php if(isset($_GET['bpref'])){ echo $_GET['bpref'];}else{ echo '0';} ?>";
 
 
            // if(localStorage.getItem('session')==undefined || localStorage.getItem('session')=='')
@@ -1970,8 +1970,11 @@
                 var data = form.serialize();
                 var token = form.find('#token').val();
 
+
+
                 $.post('sessione',data,function(last_id){
                     localStorage.setItem('session',last_id);
+
                     //carga metricas
                     $.get('{{ route('metric.load')  }}',{session:last_id,bpref:bpref,width:width,height:height,language:language},function(){});
                 })

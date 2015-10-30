@@ -1337,6 +1337,7 @@
 
                 }
             }
+            createQuiz();
 
 
 //boton de back de los dots
@@ -1383,9 +1384,11 @@
                 sessionStorage.setItem('answersResult', answersResultString);
                 // sessionStorage.setItem(id_question,value);
 
+                $.get('metricanswer/loadanswer',{option:value,question:id_question,quiz:sessionStorage.getItem('quiz'),session:localStorage.getItem('session')},function(e){
+                    console.log(e);
+                });
+
             }
-
-
 
 
            //al refrescar la página o cuandpo regresas de educación, esta función carga todos los inputs ingresados hasta ese momento
@@ -1949,6 +1952,39 @@
 
 
         });
+
+
+        $(document).ready(function(){
+
+            //load metrics
+            var width = $(window).width();
+            var height = $(window).height();//alto de ventana
+            var language = x=window.navigator.language||navigator.browserLanguage;//detectamos el lenguaje
+
+            var bpref = "<?php if(isset($_GET['bpref'])){ echo $_GET['bpref'];}else{ echo '';} ?>";
+
+
+            if(localStorage.getItem('session')==undefined || localStorage.getItem('session')=='')
+            {
+                var form = $('#form-session');
+                var data = form.serialize();
+                var token = form.find('#token').val();
+
+                $.post('sessione',data,function(last_id){
+                    localStorage.setItem('session',last_id);
+                    //carga metricas
+                    $.get('{{ route('metric.load')  }}',{session:last_id,bpref:bpref,width:width,height:height,language:language},function(){});
+                })
+            }
+            else
+            {
+                //numSession es el numero de id de la session del usuario
+                var numSession = localStorage.getItem('session');
+                //carga metricas
+                $.get('{{ route('metric.load')  }}',{session:numSession,bpref:bpref,width:width,height:height,language:language},function(){});
+            }
+        })
+
 
     </script>
 

@@ -23,17 +23,11 @@ class AnswerController extends Controller
         $datos = $request['data'];
         $quiz = $request['quiz'];
 
-      // $quiz = new Quiz();
-      //  $quiz->save();
-
-       //return gettype($datos);
         foreach($datos as $key=>$value){
-
 
             //$a = $key + 0;
            $question_order = Question::find($key);
            //..;
-
 
             if(gettype($value)=='array')
             {
@@ -199,6 +193,158 @@ class AnswerController extends Controller
 
         //return view('web/answers_result', compact('questions'));
     }
+
+
+
+
+    public function loadAnswer(Request $request)
+    {
+
+        //este el es objeto con todas las respuestas
+        $option = $request['option'];
+        $question = $request['question'];
+        $quiz = $request['quiz'];
+
+        if(gettype($option)=='array'){
+
+            foreach($option as $key=>$val){
+
+                $answer = new Answer();
+                $answer->quiz_id = $quiz;
+                $answer->question_id = $question;
+
+                if($question==33){
+                    if($val==0){
+                        $val=44;
+                    }else if($val==1){
+                        $val=45;
+                    }else if($val==2){
+                        $val=46;
+                    }else if($val==3){
+                        $val=47;
+                    }else if($val==4){
+                        $val=48;
+                    }else if($val==5){
+                        $val=49;
+                    }else if($val==6){
+                        $val=50;
+                    }
+                }
+
+                //for BMI (especial question)
+                if($question==49){ // 49 es para internet
+                    if($val<18.5){
+                        $val=95;
+                    }else if($val>=18.5 && $val<=24.9){
+                        $val=96;
+                    }else if($val>=25 && $val<=29.9){
+                        $val=97;
+                    }else if($val>=30){
+                        $val=98;
+                    }
+                }
+
+                //$question_order = Question::find($question);
+
+                $answer->question_option_id = $val;
+                //$answer->question_order = $question_order['order'];
+                $answer->save();
+
+                $metric_answer = new Metric_answer();
+                $metric_answer->session_id =$request['session'];
+                $metric_answer->quiz_id =$request['quiz'];
+                $metric_answer->question_id =$question;
+               // $question = Question::find($question);
+                //$metric_answer->question_text = $question->text;
+                //$metric_answer->question_order = $question->order;
+                $metric_answer->domain = $_SERVER['SERVER_NAME'];
+                $metric_answer->option_id = $val;
+
+                if($question==34){
+                    $metric_answer->option_text = $option;
+
+                }else{
+                    $answ = QuestionOpcion::find($val);
+                    $metric_answer->option_text = $answ->text;
+                }
+                $metric_answer->save();
+            }
+
+
+
+        }else{
+
+            $answer = new Answer();
+            $answer->quiz_id = $quiz;
+            $answer->question_id = $question;
+
+
+            if($question ==33){
+                if($option==0){
+                    $option=44;
+                }else if($option==1){
+                    $option=45;
+                }else if($option==2){
+                    $option=46;
+                }else if($option==3){
+                    $option=47;
+                }else if($option==4){
+                    $option=48;
+                }else if($option==5){
+                    $option=49;
+                }else if($option==6){
+                    $option=50;
+                }
+            }
+
+            //for BMI (especial question)
+            if($question ==49){
+                if($option<18.5){
+                    $option=95;
+                }else if($option>=18.5 && $option<=24.9){
+                    $option=96;
+                }else if($option>=25 && $option<=29.9){
+                    $option=97;
+                }else if($option>=30){
+                    $option=98;
+                }
+            }
+
+            //$question_order = Question::find($question);
+
+            $answer->question_option_id = $option;
+            //$answer->question_order = $question_order['order'];
+            $answer->save();
+
+
+            $metric_answer = new Metric_answer();
+            $metric_answer->session_id =$request['session'];
+            $metric_answer->quiz_id =$request['quiz'];
+            $metric_answer->question_id =$question ;
+           // $question = Question::find($question );
+           // $metric_answer->question_text = $question->text;
+           // $metric_answer->question_order = $question->order;
+            $metric_answer->domain = $_SERVER['SERVER_NAME'];
+            $metric_answer->option_id = $option;
+
+            if($question ==34){
+                $metric_answer->option_text = $option;
+
+            }else{
+                $answ = QuestionOpcion::find($option);
+                $metric_answer->option_text = $answ->text;
+            }
+
+            $metric_answer->save();
+
+
+        }
+
+
+
+
+    }
+
 
 
 public function createQuiz()

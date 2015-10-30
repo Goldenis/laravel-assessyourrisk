@@ -121,6 +121,9 @@ Route::get('/answers/results',['as'=>'answers.results','uses'=>'Frontend\AnswerC
 Route::get('/answers/results_final/{id}',['as'=>'answers.results','uses'=>'Frontend\AnswerController@result_final']);
 Route::get('/answers/createquiz',['as'=>'answers.createquiz','uses'=>'Frontend\AnswerController@createQuiz']);
 
+//metric answer
+Route::get('/metricanswer/loadanswer',['as'=>'metricanswer.loadAnswer', 'uses'=>'Frontend\AnswerController@loadAnswer']);
+
 Route::resource('/answer','Frontend\AnswerController');
 
 Route::resource('/resultlevel','Frontend\ResultLevelController');
@@ -141,8 +144,11 @@ Route::get('/result_final2',function(){
 
 //========metrica=============
 
+
 Route::get('/metric/load',['as'=>'metric.load','uses'=>'Frontend\MetricController@load']);
 Route::resource('/metric','Frontend\MetricController');
+
+
 
 Route::get('/metricanswer/load','Frontend\MetricAnswerController@load');
 

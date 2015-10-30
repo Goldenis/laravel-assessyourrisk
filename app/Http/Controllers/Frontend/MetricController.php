@@ -20,6 +20,8 @@ class MetricController extends Controller
      */
     public function load(Request $request)
     {
+        $bpref = $request['bpref'];
+
         $location = Location::get($_SERVER["REMOTE_ADDR"]);
        // $location = Location::get('190.43.15.242');
         $browser = \BrowserDetect::detect();
@@ -49,10 +51,13 @@ class MetricController extends Controller
         //session
         $session = $request['session'];
 
-        $session_metric = Metric::where('session_id',$session)->get();
-        $array = $session_metric->toArray();
-        if($array==[])
-        {
+        //bpref
+
+
+        //$session_metric = Metric::where('session_id',$session)->get();
+        //$array = $session_metric->toArray();
+        // if($array==[])
+       // {
             $metric = new Metric();
             $metric->session_id = $session;
             $metric->browser = $browser->browserFamily;
@@ -63,21 +68,22 @@ class MetricController extends Controller
             $metric->ip = $_SERVER["REMOTE_ADDR"];
             $metric->language = $lan;
             $metric->os = $browser->osFamily;
-            $metric->pid = 1;
+            $metric->pid = sha1($session);
             $metric->referrer = 0;
+            $metric->bpref = $bpref;
             $metric->resolution = 0;
             $metric->screen = $screen;
             $metric->save();
 
-        }
-        else
+       // }
+       /* else
         {
             $metric = Metric::where('session_id',$session)->get();
             $pid = $metric[0]->pid;
 
             Metric::where('session_id',$session)->update(['pid'=>($pid+1)]);
 
-        }
+        }*/
 
 
        ;

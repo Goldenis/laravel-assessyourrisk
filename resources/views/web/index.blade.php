@@ -1964,8 +1964,8 @@
             var bpref = "<?php if(isset($_GET['bpref'])){ echo $_GET['bpref'];}else{ echo '';} ?>";
 
 
-            if(localStorage.getItem('session')==undefined || localStorage.getItem('session')=='')
-            {
+           // if(localStorage.getItem('session')==undefined || localStorage.getItem('session')=='')
+            //{
                 var form = $('#form-session');
                 var data = form.serialize();
                 var token = form.find('#token').val();
@@ -1975,14 +1975,14 @@
                     //carga metricas
                     $.get('{{ route('metric.load')  }}',{session:last_id,bpref:bpref,width:width,height:height,language:language},function(){});
                 })
-            }
+           /* }
             else
             {
                 //numSession es el numero de id de la session del usuario
                 var numSession = localStorage.getItem('session');
                 //carga metricas
                 $.get('{{ route('metric.load')  }}',{session:numSession,bpref:bpref,width:width,height:height,language:language},function(){});
-            }
+            }*/
         })
 
 

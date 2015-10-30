@@ -244,19 +244,18 @@ class AnswerController extends Controller
                     }
                 }
 
-                //$question_order = Question::find($question);
+                $question_order = Question::find($question);
 
                 $answer->question_option_id = $val;
-                //$answer->question_order = $question_order['order'];
+                $answer->question_order = $question_order['order'];
                 $answer->save();
 
                 $metric_answer = new Metric_answer();
                 $metric_answer->session_id =$request['session'];
                 $metric_answer->quiz_id =$request['quiz'];
                 $metric_answer->question_id =$question;
-               // $question = Question::find($question);
-                //$metric_answer->question_text = $question->text;
-                //$metric_answer->question_order = $question->order;
+                $metric_answer->question_text = $question_order['text'];
+                $metric_answer->question_order = $question_order['order'];
                 $metric_answer->domain = $_SERVER['SERVER_NAME'];
                 $metric_answer->option_id = $val;
 
@@ -310,10 +309,10 @@ class AnswerController extends Controller
                 }
             }
 
-            //$question_order = Question::find($question);
+            $question_order = Question::find($question);
 
             $answer->question_option_id = $option;
-            //$answer->question_order = $question_order['order'];
+            $answer->question_order = $question_order['order'];
             $answer->save();
 
 
@@ -321,9 +320,8 @@ class AnswerController extends Controller
             $metric_answer->session_id =$request['session'];
             $metric_answer->quiz_id =$request['quiz'];
             $metric_answer->question_id =$question ;
-           // $question = Question::find($question );
-           // $metric_answer->question_text = $question->text;
-           // $metric_answer->question_order = $question->order;
+            $metric_answer->question_text = $question_order['text'];
+            $metric_answer->question_order = $question_order['order'];
             $metric_answer->domain = $_SERVER['SERVER_NAME'];
             $metric_answer->option_id = $option;
 

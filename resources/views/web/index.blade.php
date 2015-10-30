@@ -471,7 +471,7 @@
 
                             <tr>
                                 <td valign="top"><label for="emailbody">Body</label></td>
-                                <td><textarea disabled name="emailbody" id="emailbody" cols="30" rows="6" class="modal-text">{{$share_education->body}}</textarea></td>
+                                <td><textarea disabled name="emailbody" id="emailbody" cols="30" rows="6" class="modal-text" wrap="hard">{{$share_education->body}}</textarea></td>
                             </tr>
 
                             <tr>

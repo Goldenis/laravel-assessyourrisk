@@ -6,7 +6,7 @@
 <script>
   sessionStorage.clear();
 </script>
-<div>AYR</div>
+<!-- 30/10/2015 07:20 PM -->
 
 
     <div class="overlay progress-overlay">

@@ -11,6 +11,18 @@
 |
 */
 
+
+
+/* SCRIPT IMPORTACION */
+
+Route::get('/import', [
+    'as' => 'import',
+    'uses' => 'Frontend\LabController@importFiles'
+]);
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });

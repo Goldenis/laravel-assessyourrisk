@@ -476,7 +476,7 @@
 
                             <tr>
                                 <td></td>
-                                <td><!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                <td><!-- Allow form submission with keyboard without duplicating the f button -->
                                     <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
                                 </td>
                             </tr>
@@ -1385,7 +1385,7 @@
                 // sessionStorage.setItem(id_question,value);
 
                 $.get('metricanswer/loadanswer',{option:value,question:id_question,quiz:sessionStorage.getItem('quiz'),session:localStorage.getItem('session')},function(e){
-                    console.log(e);
+                    console.log('este es metric: '+e);
                 });
 
             }
@@ -1984,7 +1984,7 @@
                 //numSession es el numero de id de la session del usuario
                 var numSession = localStorage.getItem('session');
                 //carga metricas
-                $.get('{{ route('metric.load')  }}',{session:numSession,bpref:bpref,width:width,height:height,language:language},function(){});
+                $.get('{{-- route('metric.load')  --}}',{session:numSession,bpref:bpref,width:width,height:height,language:language},function(){});
             }*/
         })
 

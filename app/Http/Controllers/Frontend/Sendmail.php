@@ -23,12 +23,14 @@ class Sendmail extends Controller
         $subject = $request['subject'];
         $emailbody = $request['emailbody'];
         $emailbodytext = strip_tags($emailbody);
+		/*
             echo $email;
             echo $myemail;
             echo $name;
             echo $subject;
             echo $emailbody;
-            echo $emailbodytext;
+			echo $emailbodytext;
+		 */
 
 		try {
 			Mail::send([], [], function ($message) use ($email, $subject, $myemail, $name, $emailbody, $emailbodytext) {
@@ -36,8 +38,8 @@ class Sendmail extends Controller
 				->to($email)
 				->subject($subject)
 				->setReplyTo(array($myemail => $name))
-				->setBody($emailbody)
-				->addPart($emailbodytext);
+				->setBody($emailbody);
+//				->addPart($emailbodytext);
 			});
 		} catch (Exception $e) {
 			echo 'Caught exception: ', $e->getMessage(), "\n";

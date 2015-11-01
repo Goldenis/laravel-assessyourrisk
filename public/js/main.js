@@ -2112,6 +2112,7 @@
         $('input, textarea').placeholder(); // Initialize jquery-placeholder
 		$("div[data-question-id='42'] .anim-gif").removeClass("calendar").addClass("birth")
 		$("div[data-question-id='18'] .anim-gif").removeClass("calendar").addClass("calendar2")
+		$("div[data-question-id='18'] .ch-radio").addClass("cal-radio")
 		$("div[data-question-id='36'] .anim-gif").removeClass("calendar").addClass("stopwatch")
 
     });

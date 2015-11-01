@@ -243,17 +243,17 @@
 
                             <tr>
                                 <td><label for="email">To</label></td>
-                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
+                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin@toogoodstrategy.com"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="myemail">From</label></td>
-                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
+                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin.devries@gmail.com"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="name">Name</label></td>
-                                <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all"></td>
+                                <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all" value="Dustin"></td>
                             </tr>
 
                             <tr>
@@ -1307,7 +1307,7 @@
                                 type : "GET",
                                 cache: false,
                                 url : "/ayr15/sendmail/mail",
-                                data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + emailbody.val()
+                                data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + encodeURIComponent(emailbody.val())
                             }).done(function(data) {
                                 alert("Email sent successfully.");
                             }).fail(function(error) {

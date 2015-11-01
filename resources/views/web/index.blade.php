@@ -277,7 +277,7 @@
                             <div class="checkbox-list" data-question-id2="{{$question->id}}">
                                 <form>
                                     @foreach($question->questionOption as $option)
-                                        <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif">
+                                        <div class="checkbox ch-radio @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif">
                                             <input type="radio" name="radio" data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
                                             <div class="label">{!! $option->text !!}</div>
                                         </div>
@@ -1836,7 +1836,7 @@
 							  type : "GET",
 							  cache: false,
 							  url : "/ayr15/sendmail/mail",
-							  data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + emailbody.val()
+							  data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + encodeURIComponent(emailbody.val())
 							}).done(function(data) {
 								alert("Email sent successfully.");
 							}).fail(function(error) {

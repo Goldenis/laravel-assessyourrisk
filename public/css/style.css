@@ -1191,6 +1191,7 @@ button.sub:hover {
     margin: 1rem 0 0;
     width: auto;
     max-width: 70%;
+//	left: 35px;
     text-align: left;
     display: inline-block;
 }
@@ -1213,8 +1214,13 @@ button.sub:hover {
     width: 50%;
 }
 .checkbox {
-    margin: 0.8rem 0;
-	margin-bottom: 0;
+    margin: 1rem 0 0;
+}
+.ch-radio {
+	margin-bottom: 1rem;
+}
+.cal-radio {
+	left: 35px;
 }
 .checkbox .label {
     margin-left: 2.2rem;

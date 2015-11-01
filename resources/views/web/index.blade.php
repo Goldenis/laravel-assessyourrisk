@@ -1991,6 +1991,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=4"></script>
+    <script src="{{asset('js/main.js')}}?cversion=5"></script>
 
 @endsection

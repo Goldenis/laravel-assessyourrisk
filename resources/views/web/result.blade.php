@@ -243,17 +243,17 @@
 
                             <tr>
                                 <td><label for="email">To</label></td>
-                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin@toogoodstrategy.com"></td>
+                                <td><input type="email" required name="email" id="email" placeholder="Recipient Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
                             </tr>
 
                             <tr>
                                 <td><label for="myemail">From</label></td>
-                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value="dustin.devries@gmail.com"></td>
+                                <td><input type="email" required name="myemail" id="myemail" placeholder="Your Email" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
                             </tr>
 
                             <tr>
                                 <td><label for="name">Name</label></td>
-                                <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all" value="Dustin"></td>
+                                <td><input type="text" required name="name" id="name" placeholder="Your Name" class="text modal-text ui-widget-content ui-corner-all" value=""></td>
                             </tr>
 
                             <tr>
@@ -1404,6 +1404,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=4"></script>
+    <script src="{{asset('js/main.js')}}?cversion=5"></script>
 
 @endsection

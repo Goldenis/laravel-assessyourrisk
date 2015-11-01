@@ -706,7 +706,7 @@ button.sub:hover {
 }
 .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-doctor input[type="text"], .progress-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"], .menu-overlay .results .paragraph-wrapper .email-pdf-doctor .email-fields-user input[type="text"] {
     padding: 10px 20px;
-    margin: 0 2rem 0 0;
+    margin: 0 2rem 2rem 0;
     float: left;
     width: 20%;
     border: none;
@@ -3126,6 +3126,11 @@ h5.mobile-only {
     }
 }
 @media (max-width: 736px) {
+    .progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-dr .email-fields-doctor,
+	.progress-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user, .menu-overlay .results .paragraph-wrapper .email-pdf-doctor.show-fields-user .email-fields-user {
+		height: 100%;
+		background: #d7006d;
+    }
 .cal-radio {
 	left: 20px;
 }

@@ -4431,6 +4431,10 @@ h5.mobile-only {
 
     .column-2{
         float: left;
+        width: 50%;
+    }
+    .column-2-checkbox{
+        float: left;
         width: 100%;
     }
     .column-2css{
@@ -4440,7 +4444,11 @@ h5.mobile-only {
     }
     @media(max-width: 650px){
         .column-2-not{
-            width: 100%;
+            width: 50%;
+        }
+
+        .column-2-not-checkbox{
+           width: 100%;
         }
 
         .column-2css{

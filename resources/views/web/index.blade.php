@@ -309,7 +309,7 @@
                         <div class="checkbox-list @if($question->column2 == 1)  column-2css @endif" data-question-id2="{{$question->id}}">
 
                             @foreach($question->questionOption as $option)
-                                <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif" data-answer-id="1">
+                                <div class="checkbox @if($question->column2 == 1) column-2-checkbox @endif @if($question->column2_mobil == 0) column-2-not-checkbox @endif" data-answer-id="1">
                                     <input name="check" type="checkbox" @if($option->unique==1) class="none-of-above" @endif data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
                                     <div class="label">{!!$option->text!!}</div>
                                 </div>

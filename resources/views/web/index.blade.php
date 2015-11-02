@@ -306,7 +306,7 @@
                         @endif
                         <div class="prompt">{!!$question->text!!}</div>
 
-                        <div class="checkbox-list" data-question-id2="{{$question->id}}">
+                        <div class="checkbox-list @if($question->column2 == 1)  column-2css @endif" data-question-id2="{{$question->id}}">
 
                             @foreach($question->questionOption as $option)
                                 <div class="checkbox @if($question->column2 == 1) column-2 @endif @if($question->column2_mobil == 0) column-2-not @endif" data-answer-id="1">

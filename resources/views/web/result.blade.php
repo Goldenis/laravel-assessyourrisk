@@ -1404,6 +1404,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=5"></script>
+    <script src="{{asset('js/main.js')}}?cversion=6"></script>
 
 @endsection

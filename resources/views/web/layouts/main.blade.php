@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery-ui.theme.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}?cversion=5">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}?cversion=6">
     <script src="{{asset('js/vendor/modernizr-2.6.2.min.js')}}"></script>
     <script type='application/javascript' src='{{asset('/js/vendor/fastclick.js')}}'></script>
     <script type='application/javascript' src='{{asset('/js/vendor/base64.min.js')}}'></script>

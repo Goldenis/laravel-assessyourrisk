@@ -4444,7 +4444,7 @@ h5.mobile-only {
     }
     @media(max-width: 650px){
         .column-2-not{
-            width: 50%;
+            width: 100%;
         }
 
         .column-2-not-checkbox{

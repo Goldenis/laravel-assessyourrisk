@@ -22,8 +22,15 @@ class MetricController extends Controller
     {
         $bpref = $request['bpref'];
 
-        $location = Location::get($_SERVER["REMOTE_ADDR"]);
-       // $location = Location::get('190.43.15.242');
+        //$location = Location::get($_SERVER["REMOTE_ADDR"]);
+        //$location = Location::get('127.0.0.1');
+
+            if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != '') {
+                $location = Location::get($_SERVER['HTTP_X_FORWARDED_FOR']);
+            } else {
+                $location = Location::get($_SERVER['REMOTE_ADDR']);
+            }
+
         $browser = \BrowserDetect::detect();
        // dd($browser);
 

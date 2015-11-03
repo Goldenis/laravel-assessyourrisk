@@ -72,7 +72,11 @@ class MetricController extends Controller
             $metric->language = $lan;
             $metric->os = $browser->osFamily;
             $metric->pid = md5($session);
-            $metric->referrer = $_SERVER['HTTP_REFERER'];
+	    if (array_key_exists('HTTP_REFERER', $_SERVER)) {
+		    $metric->referrer = $_SERVER['HTTP_REFERER'];
+	    } else {
+		    $metric->referrer = '';
+	    }
             $metric->bpref = $bpref;
             $metric->resolution = 0;
             $metric->screen = $screen;

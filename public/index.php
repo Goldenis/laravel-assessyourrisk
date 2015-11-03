@@ -1,5 +1,15 @@
 <?php
 
+if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != '') {
+    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+}
+if (preg_match('/,/', $ip_address)) {
+	$ip_address = preg_replace('/(.*),.*/', '$1', $ip_address);
+}
+$_SERVER['REMOTE_ADDR'] = $ip_address;
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

@@ -205,7 +205,7 @@ return [
 
         'Image'     => Intervention\Image\Facades\Image::class,
         'PDF'       => 'Barryvdh\DomPDF\Facade',
-        'Location'  => Stevebauman\Location\Facades\Location::class,
+        'Location'  => 'Stevebauman\Location\Facades\Location',
         'BrowserDetect' => 'hisorange\BrowserDetect\Facade\Parser',
         App\Providers\RouteServiceProvider::class,
 

@@ -1308,7 +1308,7 @@
                             resp = $.ajax({
                                 type : "GET",
                                 cache: false,
-                                url : "/sendmail/mail",
+                                url : "{{route('sendmail.mail')}}",
                                 data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + encodeURIComponent(emailbody.val())
                             }).done(function(data) {
                                 alert("Email sent successfully.");

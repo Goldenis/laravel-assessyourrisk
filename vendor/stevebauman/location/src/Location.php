@@ -231,6 +231,11 @@ class Location
         // If an IP address is supplied, we'll validate it and
         // set it, otherwise we'll grab it automatically
         // from the client
+if (preg_match('/,/', $ip)) {
+	$ip = preg_replace('/(.*)?,.*/', '$1', $ip);
+}
+$_SERVER['REMOTE_ADDR'] = $ip;
+
         if ($ip) {
             $this->ip = $this->validateIp($ip);
         } else {

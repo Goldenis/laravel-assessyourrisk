@@ -837,8 +837,10 @@
                                 }
                             }
 
-                            //console.log(val+' numero');
-                            $('.cards .item-' + val).addClass('item-in');
+                            if ( i != 34) {
+                                //console.log(val+' numero');
+                                $('.cards .item-' + val).addClass('item-in');
+                            }
                         }
                     });
                 }
@@ -1404,6 +1406,6 @@
 
     </script>
 
-    <script src="{{asset('js/main.js')}}?cversion=6"></script>
+    <script src="{{asset('js/main.js')}}?cversion=7"></script>
 
 @endsection

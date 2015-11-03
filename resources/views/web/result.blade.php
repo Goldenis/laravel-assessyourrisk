@@ -837,7 +837,7 @@
                                 }
                             }
 
-                            if ( i != 34) {
+                            if ( i != 34 ) {
                                 //console.log(val+' numero');
                                 $('.cards .item-' + val).addClass('item-in');
                             }

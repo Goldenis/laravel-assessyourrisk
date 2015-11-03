@@ -1835,7 +1835,8 @@
 							resp = $.ajax({
 							  type : "GET",
 							  cache: false,
-							  url : "/sendmail/mail",
+							  //url : "/sendmail/mail",
+							  url : "{{route('sendmail.mail')}}",
 							  data : 'name=' + name.val() + '&email=' + email.val() + '&myemail=' + myemail.val() + '&subject=' + subject.val() + '&emailbody=' + encodeURIComponent(emailbody.val())
 							}).done(function(data) {
 								alert("Email sent successfully.");
@@ -1955,6 +1956,8 @@
 
 
         $(document).ready(function(){
+
+            console.log('{{route('sendmail.mail')}}');
 
             //load metrics
             var width = $(window).width();

@@ -142,7 +142,7 @@ Route::resource('/resultlevel','Frontend\ResultLevelController');
 
 Route::get('/pdf/report/{quizz}/{level}', ['as'=>'pdf.report','uses'=>'Frontend\PdfController@report']);
 
-Route::get('/sendmail/mail','Frontend\Sendmail@send');
+Route::get('/sendmail/mail',['as'=>'sendmail.mail','uses'=>'Frontend\Sendmail@send']);
 Route::get('/sendmail/sendpdf',['as'=>'sendpdf','uses'=>'Frontend\Sendmail@sendpdf']);
 
 Route::resource('/results','Frontend\ResultController@index');

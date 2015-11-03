@@ -421,6 +421,8 @@
     <script>
         $(document).ready(function() {
 
+            console.log('{{route('sendmail.mail')}}');
+
             if (sessionStorage.getItem('test_final') == undefined) {
 
                 var url = 'index.php';

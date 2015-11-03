@@ -8,7 +8,7 @@
 </script>
 <!-- 30/10/2015 07:20 PM -->
 
-
+    {{route('sendmail.mail')}}
     <div class="overlay progress-overlay">
         <div class="question-stats">
         </div>

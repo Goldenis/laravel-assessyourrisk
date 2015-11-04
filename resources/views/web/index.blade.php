@@ -649,6 +649,9 @@
     <script>
 
         $(document).ready(function(){
+
+
+
 if (typeof localStorage === 'object') {
     try {
         localStorage.setItem('localStorage', 1);
@@ -1959,6 +1962,12 @@ if (typeof localStorage === 'object') {
                 firts_factmobil();
             }
 		}
+
+            if(/webOS|iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+                $('.male-overlay .share-btn').click(function(){
+                    console.log('iphone');
+                });
+            }
 
 
         });

@@ -1336,8 +1336,13 @@ if (typeof localStorage === 'object') {
                 maxquestion();
                 updateDotsQuestion(_currentQuestion);
                 updateCharts();
-
+				if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					var content = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) -200;
+					console.log("Setting question height to content");
+					$('.assessment-wrap .question').css('height',content);
+				}
             }
+
 
             function createQuiz()
             {

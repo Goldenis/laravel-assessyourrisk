@@ -420,6 +420,15 @@
 
     <script>
         $(document).ready(function() {
+if (typeof localStorage === 'object') {
+    try {
+        localStorage.setItem('localStorage', 1);
+        localStorage.removeItem('localStorage');
+    } catch (e) {
+        Storage.prototype._setItem = Storage.prototype.setItem;
+        Storage.prototype.setItem = function() {};
+    }
+}
 
             console.log('{{route('sendmail.mail')}}');
 

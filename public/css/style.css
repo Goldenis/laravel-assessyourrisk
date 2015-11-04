@@ -3170,9 +3170,10 @@ h5.mobile-only {
 		top: 78px;
 	}
 	.assessment.scrollpane {
-		overflow: hidden;
-		height: auto;
-		min-height: 100%;
+	//	overflow: hidden;
+    //    overflow-y: auto;
+	//	height: auto;
+	//	min-height: 100%;
 		width: 100%;
 		position: absolute;
 		top: 0px;
@@ -4125,6 +4126,7 @@ h5.mobile-only {
     overflow: auto;
     height: auto;
     border-top: none;
+    overflow-y: auto;
   }
   .assessment .question {
     display: none;
@@ -4142,6 +4144,7 @@ h5.mobile-only {
   .assessment .question.in {
     display: block;
     overflow: auto;
+    overflow-y: auto;
     opacity: 1;
     height: auto;
     transform: none !important;

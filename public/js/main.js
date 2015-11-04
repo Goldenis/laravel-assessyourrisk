@@ -2081,6 +2081,15 @@
 
     $(document).ready(function() {
 
+if (typeof localStorage === 'object') {
+    try {
+        localStorage.setItem('localStorage', 1);
+        localStorage.removeItem('localStorage');
+    } catch (e) {
+        Storage.prototype._setItem = Storage.prototype.setItem;
+        Storage.prototype.setItem = function() {};
+    }
+}
         _totalQuestions = sessionStorage.getItem('num_question');
         //_totalHeadlines = $('.headline').length;
         _totalHeadlines = sessionStorage.getItem('num_education');

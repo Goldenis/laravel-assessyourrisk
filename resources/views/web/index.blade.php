@@ -649,6 +649,15 @@
     <script>
 
         $(document).ready(function(){
+if (typeof localStorage === 'object') {
+    try {
+        localStorage.setItem('localStorage', 1);
+        localStorage.removeItem('localStorage');
+    } catch (e) {
+        Storage.prototype._setItem = Storage.prototype.setItem;
+        Storage.prototype.setItem = function() {};
+    }
+}
 
             //cuando se recarga la página siempre comienza de la primera pregunta
             //nota: si se comenta la linea de abajo, comenzaria en la ultima pregunta donde se quedó
@@ -1930,7 +1939,7 @@
 
             function calculate_height(){
                 var window2 = $(window).height();
-                var content = window2-150;
+                var content = window2-200;
                 console.log(content);
                 $('.assessment-wrap .question').css('height',content);
             }
@@ -1956,12 +1965,24 @@
 
 
         $(document).ready(function(){
+if (typeof localStorage === 'object') {
+    try {
+        localStorage.setItem('localStorage', 1);
+        localStorage.removeItem('localStorage');
+    } catch (e) {
+        Storage.prototype._setItem = Storage.prototype.setItem;
+        Storage.prototype.setItem = function() {};
+    }
+}
 
             console.log('{{route('sendmail.mail')}}');
 
             //load metrics
             var width = $(window).width();
             var height = $(window).height();//alto de ventana
+            console.log("Width: " + width);
+            console.log("Height: " + height);
+        
             var language = x=window.navigator.language||navigator.browserLanguage;//detectamos el lenguaje
 
             var bpref = "<?php if(isset($_GET['bpref'])){ echo $_GET['bpref'];}else{ echo '0';} ?>";

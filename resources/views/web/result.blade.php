@@ -933,6 +933,10 @@ if (typeof localStorage === 'object') {
 
             $('.understand').on('click', function () {
                 toggleColumn();
+                console.log('salio');
+
+                $('.assessment-dots.dots').removeClass('active');
+
 
                 // var url = '../education';
                 //$(location).attr('href',url);
@@ -941,6 +945,8 @@ if (typeof localStorage === 'object') {
             $('.assess').on('click', function () {
 
                 toggleColumn();
+                setTimeout(function(){ $('.assessment-dots.dots').addClass('active');},600);
+
                 // window._currentPath = '/assessment';
                 // $.address.value('/assessment');
             })

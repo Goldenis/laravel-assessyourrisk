@@ -577,11 +577,13 @@
         $('.facebook.knowing').on('click', function() {
            // console.log('clicked')
             
+/*
             woopra.track("click", {
                 intent: "pledge",
                 location: "knowing",
                 type: "button"
             });
+*/
             
             $('.knowing-pledge-number').text('You and ' + knowingPledgeCount +'  women have pledged to know your normal')
 
@@ -607,11 +609,13 @@
         $('.facebook.family').on('click', function() {
            // console.log('clicked')
             
+/*
             woopra.track("click", {
                 intent: "pledge",
                 location: "family",
                 type: "button"
             });
+*/
             
             $('.family-pledge-number').text('You and ' + familyPledgeCount +'  women have pledged to learn about their family history')
 

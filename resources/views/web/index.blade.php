@@ -2013,8 +2013,11 @@ if (typeof localStorage === 'object') {
                 $.post('sessione',data,function(last_id){
                     localStorage.setItem('session',last_id);
 
-                    //carga metricas
-                    $.get('{{ route('metric.load')  }}',{session:last_id,bpref:bpref,width:width,height:height,language:language},function(){});
+                    //carga métricas
+
+                    var referer = "{{URL::previous()}}";
+                    $.get('{{ route('metric.load')}}',{referer:referer,session:last_id,bpref:bpref,width:width,height:height,language:language},function(){});
+
                 })
            /* }
             else

@@ -3170,10 +3170,10 @@ h5.mobile-only {
 		top: 78px;
 	}
 	.assessment.scrollpane {
-	//	overflow: hidden;
-    //    overflow-y: auto;
-	//	height: auto;
-	//	min-height: 100%;
+        /*	overflow: hidden;
+          overflow-y: auto;
+            height: auto;
+        	min-height: 100%;*/
 		width: 100%;
 		position: absolute;
 		top: 0px;
@@ -4441,11 +4441,16 @@ h5.mobile-only {
         width: 100%;
     }
     .column-2css{
-        -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        -moz-column-count: 2; /* Firefox */
-        column-count: 2;
+        display: inline-block;
+        vertical-align: top;
+       width: 49%;
     }
+
+
+
     @media(max-width: 650px){
+
+
         .column-2-not{
             width: 100%;
         }
@@ -4455,9 +4460,9 @@ h5.mobile-only {
         }
 
         .column-2css{
-            -webkit-column-count: 1; /* Chrome, Safari, Opera */
-            -moz-column-count: 1; /* Firefox */
-            column-count: 1;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
         }
     }
 
@@ -4535,7 +4540,9 @@ h5.mobile-only {
 }
 
 @media(max-width: 736px){
-
+    .assessment.scrollpane {
+       /* overflow: auto;*/
+    }
 }
 
 @media(max-width: 960px){

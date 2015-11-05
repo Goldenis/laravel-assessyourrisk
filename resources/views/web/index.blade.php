@@ -5,6 +5,7 @@
     <!-- OVERLAYS -->
 <script>
   sessionStorage.clear();
+
 </script>
 <!-- 30/10/2015 07:20 PM -->
 
@@ -259,7 +260,7 @@
             @foreach($questions as $question)
                 {!!Form::hidden('question_id',$question->id,['id'=>'question_id'])!!}
 
-                {{--RADIO BOTON--}}
+{{--RADIO BOTON--}}
 
                 @if($question->question_type_id==1)
 
@@ -296,7 +297,8 @@
                     </div>
 
                 @elseif($question->question_type_id==2)
-                    {{--CHECK BOX--}}
+{{--CHECK BOX--}}
+
 
                     <div class="question out"  data-question-id="{{$question->id}}">
                         @if($question->gif != '' || $question->gif != null)
@@ -306,30 +308,72 @@
                         @endif
                         <div class="prompt">{!!$question->text!!}</div>
 
-                        <div class="checkbox-list @if($question->column2 == 1)  column-2css @endif" data-question-id2="{{$question->id}}">
+                        <div class="checkbox-list " data-question-id2="{{$question->id}}">
 
-                            @foreach($question->questionOption as $option)
-                                <div class="checkbox @if($question->column2 == 1) column-2-checkbox @endif @if($question->column2_mobil == 0) column-2-not-checkbox @endif" data-answer-id="1">
-                                    <input name="check" type="checkbox" @if($option->unique==1) class="none-of-above" @endif data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
-                                    <div class="label">{!!$option->text!!}</div>
+                            @if($question->column2 == 1) <!--para dos columnas-->
+
+                                <?php $i=0; $data=[];?>
+                                @foreach($question->questionOption as $option)
+                                        <?php
+                                            $data[$i]= ["option"=>$option->id,'unique'=>$option->unique, 'question' => $question->id, 'text'=>$option->text, 'value'=>$option->value ];
+                                            $i++;
+                                        ?>
+                                @endforeach
+
+                                <?php
+                                 $n = count($data);
+                                 $col1 = ceil($n/2);
+                                 $col2 = $n-$col1;
+                                ?>
+
+                                <div class="column-2css">
+                                    @for($x=0; $x < $col1; $x++ )
+
+                                        <div class="checkbox" data-answer-id="1">
+                                            <input name="check" type="checkbox" @if($data[$x]['option']==1) class="none-of-above" @endif data-question-id="{{$data[$x]['question']}}" data-option-id="{{$data[$x]['option']}}" data-option-value="{{$data[$x]['value']}}">
+                                            <div class="label">{!!$data[$x]['text']!!}</div>
+                                        </div>
+                                    @endfor
                                 </div>
-                            @endforeach
+
+                                <div class="column-2css">
+                                    @for($x=$col1; $x < $n; $x++ )
+                                        <div class="checkbox" data-answer-id="1">
+                                            <input name="check" type="checkbox" @if($data[$x]['option']==1) class="none-of-above" @endif data-question-id="{{$data[$x]['question']}}" data-option-id="{{$data[$x]['option']}}" data-option-value="{{$data[$x]['value']}}">
+                                            <div class="label">{!!$data[$x]['text']!!}</div>
+                                        </div>
+                                    @endfor
+                                </div>
+
+                            @else <!-- para una columna  -->
+
+                                @foreach($question->questionOption as $option)
+
+                                    <div class="checkbox @if($question->column2 == 1) column-2-checkbox @endif @if($question->column2_mobil == 0) column-2-not-checkbox @endif" data-answer-id="1">
+                                        <input name="check" type="checkbox" @if($option->unique==1) class="none-of-above" @endif data-question-id="{{$question->id}}" data-option-id="{{$option->id}}" data-option-value="{{$option->value}}">
+                                        <div class="label">{!!$option->text!!}</div>
+                                    </div>
+
+                                    <?php
+                                        $data[$i]= ["option"=>$option->id,'unique'=>$option->unique, 'question' => $question->id, 'text'=>$option->text, 'value'=>$option->value ];
+                                        $i++;
+                                    ?>
+
+                                @endforeach
+                            @endif
+
                         </div>
                         <br>
                         <div class="answers">
                             <button class="check_box" disabled data-question-id="{{$question->id}}">{{$question->button_text}}</button>
                             @if($question->email==1)
                                 <button class="create-modal sub ask" data-subject="{{$question->email_subject}}" data-body="{{$question->email_body}}">Help me ask them</button>
-
-
-
                             @endif
                         </div>
                     </div>
 
                 @elseif($question->question_type_id==3)
-                    {{--BOTON--}}
-
+{{--BOTON--}}
 
 
                     <div class="question @if($question->gif != '' || $question->gif != null) gif @endif out" data-question-id="{{$question->id}}">
@@ -650,6 +694,8 @@
 
         $(document).ready(function(){
 
+            var ventana_ancho = $(window).width();
+
 
 
 if (typeof localStorage === 'object') {
@@ -931,6 +977,7 @@ if (typeof localStorage === 'object') {
 
 
             $('input[name="check"]').each(function(i,val){
+
                 if($(this).prop('checked')){
                     $('button.check_box').removeAttr("disabled");
                 }
@@ -939,7 +986,7 @@ if (typeof localStorage === 'object') {
 
             $('input[name="check"]').change(function() {
 
-                var boton = $(this).parent().parent().parent().find('.check_box');
+                var boton = $(this).parents('.question').find('.check_box');
 
                 var allCheckboxes = $(this).parent().parent().parent().find('input[name="check"]');
                 var noneChecked = true;

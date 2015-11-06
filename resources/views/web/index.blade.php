@@ -310,6 +310,7 @@
 
                         <div class="checkbox-list " data-question-id2="{{$question->id}}">
 
+<?php $i = 0; ?>
                             @if($question->column2 == 1) <!--para dos columnas-->
 
                                 <?php $i=0; $data=[];?>

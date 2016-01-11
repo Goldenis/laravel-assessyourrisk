@@ -10,7 +10,7 @@
         "laravelcollective/html": "~5.0",
       "intervention/image": "dev-master",
       "barryvdh/laravel-dompdf": "0.6.*",
-      "stevebauman/location": "1.2.*",
+      "stevebauman/location": "1.3.*",
       "hisorange/browser-detect": "2.*",
         "wildbit/laravel-postmark-provider": "^1.0"
 

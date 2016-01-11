@@ -38,14 +38,6 @@ return [
 
         ],
 
-        'Telize' => [
-
-            'class' => Stevebauman\Location\Drivers\Telize::class,
-
-            'url' => 'https://www.telize.com/geoip/',
-
-        ],
-
         'MaxMind' => [
 
             'class' => Stevebauman\Location\Drivers\MaxMind::class,
@@ -71,7 +63,7 @@ return [
     |
     */
 
-    'selected_driver' => 'Telize',
+    'selected_driver' => 'FreeGeoIp',
 
     /*
     |--------------------------------------------------------------------------

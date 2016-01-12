@@ -29,8 +29,13 @@ return [
         'region' => 'us-east-1',
     ],
 
-	'postmark' => 'efd34dc3-0cb0-46d8-8a2b-e0738484e402',
+//  Heroku postmark sender
+//	'postmark' => 'efd34dc3-0cb0-46d8-8a2b-e0738484e402',
+
+// postmark test account
 //	'postmark' => '19e2a587-1752-42e9-8f13-3945ad8b50d0',
+
+	'postmark' => '5f415bef-aa7c-422e-92ab-8bb69a78b78d',
 
     'stripe' => [
         'model'  => App\User::class,

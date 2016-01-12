@@ -1426,10 +1426,6 @@ if (typeof localStorage === 'object') {
     <script src="{{asset('js/main.js')}}?cversion=7"></script>
 
 <script type="text/javascript">
-var google_tag_params = {
-start: "yes",
-finish: "yes"
-};
 
 /* <![CDATA[ */
 var google_conversion_id = 1033468455;
